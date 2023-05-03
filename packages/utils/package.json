@@ -20,5 +20,6 @@
     "check:type": "tsc --noEmit",
     "test": "jest --config ../../jest.config.js",
     "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js"
-  }
+  },
+  "gitHead": "d88c7ce00e61ed69a5159bd3e2d5d2d9f487e551"
 }
