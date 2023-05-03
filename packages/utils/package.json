@@ -12,6 +12,12 @@
   ],
   "exports": {
     ".": {
+      "require": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
+  "publishConfig": {
+    ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./esm/index.js"
