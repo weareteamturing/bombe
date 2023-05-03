@@ -1,6 +1,6 @@
 {
   "name": "@teamturing/utils",
-  "version": "1.0.6-alpha.0",
+  "version": "1.0.7-alpha.0",
   "description": "Fundamental utility functions for any Javascript/Typescript environment",
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
   "homepage": "",
