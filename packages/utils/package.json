@@ -11,13 +11,13 @@
     "esm"
   ],
   "exports": {
-    ".": {
-      "require": "./src/index.ts",
-      "import": "./src/index.ts"
-    }
+    "require": "./src/index.ts",
+    "import": "./src/index.ts"
   },
   "publishConfig": {
-    ".": {
+    "main": "./dist/index.js",
+    "module": "./esm/index.js",
+    "exports": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./esm/index.js"
