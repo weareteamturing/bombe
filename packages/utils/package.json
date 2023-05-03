@@ -1,0 +1,23 @@
+{
+  "name": "@teamturing/utils",
+  "version": "0.0.0",
+  "description": "Fundamental utility functions for any Javascript/Typescript environment",
+  "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
+  "homepage": "",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "dist",
+    "esm"
+  ],
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.js",
+    "import": "./esm/index.js"
+  },
+  "scripts": {
+    "check:lint": "eslint ./src --cache",
+    "check:type": "tsc --noEmit",
+    "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js"
+  }
+}
