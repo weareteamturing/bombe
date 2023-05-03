@@ -2,6 +2,12 @@
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "packages": ["packages/*"]
+  "packages": ["packages/*"],
+  "command": {
+    "version": {
+      "message": "chore(release): Publish libraries",
+      "allowBranch": "main"
+    }
+  }
 }
 
