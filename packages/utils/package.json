@@ -18,6 +18,7 @@
   "scripts": {
     "check:lint": "eslint ./src --cache",
     "check:type": "tsc --noEmit",
+    "test": "jest --config ../../jest.config.js",
     "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js"
   }
 }
