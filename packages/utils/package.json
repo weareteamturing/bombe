@@ -11,9 +11,11 @@
     "esm"
   ],
   "exports": {
-    "types": "./dist/index.d.ts",
-    "require": "./dist/index.js",
-    "import": "./esm/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./esm/index.js"
+    }
   },
   "scripts": {
     "check:lint": "eslint ./src --cache",
