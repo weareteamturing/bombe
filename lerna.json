@@ -5,7 +5,7 @@
   "packages": ["packages/*"],
   "command": {
     "version": {
-      "message": "chore(release): Publish libraries",
+      "message": "chore(release): publish libraries",
       "allowBranch": "main",
       "conventionalCommits": true
     },
