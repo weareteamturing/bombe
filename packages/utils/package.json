@@ -11,8 +11,9 @@
     "esm"
   ],
   "exports": {
-    "require": "./src/index.ts",
-    "import": "./src/index.ts"
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "import": "./esm/index.js"
   },
   "scripts": {
     "check:lint": "eslint ./src --cache",
