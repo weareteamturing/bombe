@@ -6,7 +6,8 @@
   "command": {
     "version": {
       "message": "chore(release): Publish libraries",
-      "allowBranch": "main"
+      "allowBranch": "main",
+      "conventionalCommits": true
     },
     "publish": {
       "graphType": "all",
