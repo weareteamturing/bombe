@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    // Type Checking: https://www.typescriptlang.org/tsconfig#Type_Checking_6248
+    "strict": true,
+
+    // Modules: https://www.typescriptlang.org/tsconfig#Modules_6244
+    "module": "CommonJS",
+    "moduleResolution": "nodenext",
+
+    // Emit: https://www.typescriptlang.org/tsconfig#Emit_6246
+    "declaration": true,
+    "downlevelIteration": true,
+
+    // Language and Environment: https://www.typescriptlang.org/tsconfig#Language_and_Environment_6254
+    "target": "ES6"
+  }
+}

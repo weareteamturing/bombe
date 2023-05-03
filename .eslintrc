@@ -1,0 +1,53 @@
+{
+  "root": true,
+
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
+    "jsx": true,
+    "useJSXTextNode": true
+  },
+
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint", "import", "prettier"],
+
+  "rules": {
+    "prettier/prettier": "error",
+    "semi": "error",
+
+    "no-implicit-coercion": "off",
+    "no-undef": "off",
+    "indent": "off",
+
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": "off",
+    "no-extra-boolean-cast": "off",
+
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-parameter-properties": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": false,
+          "order": "asc"
+        },
+        "newlines-between": "always"
+      }
+    ]
+  }
+}
