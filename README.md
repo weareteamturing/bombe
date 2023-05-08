@@ -1,3 +1,3 @@
 # Bombe
 
-TBD
+Typescript/Javascript packages for TURING
