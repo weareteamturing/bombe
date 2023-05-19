@@ -1,6 +1,6 @@
 {
   "name": "@teamturing/validators",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Validation functions for string, number or object",
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
   "homepage": "https://github.com/weareteamturing/bombe#readme",
