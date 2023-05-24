@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@0.1.0...@teamturing/icons@0.2.0) (2023-05-24)
+
+### Features
+
+- **icons:** add youtube, facebook icon ([f3e35c4](https://github.com/weareteamturing/bombe/commit/f3e35c4ef9e558fc07a3ccf84215fa1adf4903d4))
+
 # 0.1.0 (2023-05-08)
 
 ### Features
