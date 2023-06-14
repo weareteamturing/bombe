@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@0.3.0...@teamturing/icons@0.4.0) (2023-06-14)
+
+### Features
+
+- **icons:** update export name with suffix Icon ([7e3adda](https://github.com/weareteamturing/bombe/commit/7e3addae3749f7e73c75a7fd5f93f6c4c10bcf30))
+
 # [0.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@0.2.0...@teamturing/icons@0.3.0) (2023-05-24)
 
 ### Features
