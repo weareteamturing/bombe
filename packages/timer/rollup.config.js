@@ -16,9 +16,14 @@ module.exports = {
       preserveModules: true,
     },
   ],
+  external: ['react'],
   plugins: [
-    nodeResolve({ extensions: ['.ts', '.js'] }),
+    nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     commonjs(),
-    babel({ extensions: ['.ts', '.js'], babelHelpers: 'bundled', rootMode: 'upward' }),
+    babel({
+      extensions: ['.ts', '.tsx', '.js', '.jsx'],
+      babelHelpers: 'bundled',
+      rootMode: 'upward',
+    }),
   ],
 };
