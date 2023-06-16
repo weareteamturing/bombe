@@ -1,5 +1,5 @@
 {
-  "name": "timer",
+  "name": "@teamturing/timer",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
@@ -27,5 +27,8 @@
   },
   "bugs": {
     "url": "https://github.com/weareteamturing/bombe/issues"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   }
 }
