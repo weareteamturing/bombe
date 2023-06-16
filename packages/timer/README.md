@@ -23,5 +23,4 @@
 | `dueDate`       | `string`                                              | ISO8601 형태의 미래 시각을 의미하는 문자열                         |            |
 | `secondsFormat` | `SecondFormats?`                                      |                                                                    | `due_date` |
 | `children`      | `(result: string, remainSec: number) => ReactElement` | 포매팅된 시간 문자열을 인자로 전달받아 렌더링 하는 함수            |            |
-| `formatResult`  | `(string) => string`                                  | 포매팅된 시간 문자열을 한 번 더 변환, e.g.) `str => str + ' 남음'` | `(text) => text`           |
 

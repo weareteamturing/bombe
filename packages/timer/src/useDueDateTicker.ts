@@ -3,16 +3,10 @@ import { useState, useCallback } from 'react';
 import { SecondsFormatter, SecondsFormats } from './SecondsFormatter';
 import { useReverseTicker } from './internal/useReverseTicker';
 
-const defaultTextFormatter = (text: string) => text;
-
 export type DueDateTickerProps = {
   secondsFormat?: SecondsFormats;
-  formatResult?: (result: string) => string;
 };
-export function useDueDateTicker({
-  formatResult = defaultTextFormatter,
-  secondsFormat = 'due_date',
-}: DueDateTickerProps = {}) {
+export function useDueDateTicker({ secondsFormat = 'due_date' }: DueDateTickerProps = {}) {
   const [isExpired, setExpired] = useState(false);
   const { startTicker: _startTicker, tickSec, status } = useReverseTicker({});
 
@@ -40,7 +34,7 @@ export function useDueDateTicker({
   );
 
   return {
-    dueDateText: formatResult(SecondsFormatter.format(tickSec, secondsFormat)),
+    dueDateText: SecondsFormatter.format(tickSec, secondsFormat),
     startTickerWithTargetUnixSec,
     startTickerWithTargetDateTimeString: startTickerWithTargetISO8601,
     isExpired: isExpired || status === 'complete',
