@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 
 import { SecondsFormatter, SecondsFormats } from './SecondsFormatter';
-import { useReverseTicker } from './internal/useReverseTicker';
+import { useReverseTicker } from './useReverseTicker';
 
 export type DueDateTickerProps = {
   secondsFormat?: SecondsFormats;
