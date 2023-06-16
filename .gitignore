@@ -6,3 +6,6 @@ esm/
 
 # eslint
 .eslintcache
+
+# Intellij
+.idea/
