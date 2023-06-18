@@ -33,7 +33,7 @@ const Suites: { type: SecondsFormats; sec: any; expect: string }[] = [
   {
     type: 'm:ss',
     sec: H + M + 59,
-    expect: '1:59',
+    expect: '61:59',
   },
   {
     type: 'mm:ss',
@@ -48,7 +48,7 @@ const Suites: { type: SecondsFormats; sec: any; expect: string }[] = [
   {
     type: 'hh:mm:ss',
     sec: D,
-    expect: '00:00:00',
+    expect: '24:00:00',
   },
   {
     type: 'hh:mm:ss',

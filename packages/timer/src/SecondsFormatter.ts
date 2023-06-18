@@ -8,20 +8,20 @@ export type SecondsFormats = LogicalFormats | GeneralFormats;
 
 const Formatters: Record<SecondsFormats, Formatter> = {
   'm:ss': (totalSecond) => {
-    const { onlyMinute, onlySecond } = parseSeconds(totalSecond);
-    return `${onlyMinute}:${lz(onlySecond)}`;
+    const { totalMinute, onlySecond } = parseSeconds(totalSecond);
+    return `${totalMinute}:${lz(onlySecond)}`;
   },
   'mm:ss': (totalSecond) => {
-    const { onlyMinute, onlySecond } = parseSeconds(totalSecond);
-    return `${lz(onlyMinute)}:${lz(onlySecond)}`;
+    const { totalMinute, onlySecond } = parseSeconds(totalSecond);
+    return `${lz(totalMinute)}:${lz(onlySecond)}`;
   },
   'hh:mm:ss': (totalSecond) => {
-    const { onlyMinute, onlySecond, onlyHour } = parseSeconds(totalSecond);
-    return `${lz(onlyHour)}:${lz(onlyMinute)}:${lz(onlySecond)}`;
+    const { onlyMinute, onlySecond, totalHour } = parseSeconds(totalSecond);
+    return `${lz(totalHour)}:${lz(onlyMinute)}:${lz(onlySecond)}`;
   },
   'h:mm:ss': (totalSecond) => {
-    const { onlyMinute, onlySecond, onlyHour } = parseSeconds(totalSecond);
-    return `${onlyHour}:${lz(onlyMinute)}:${lz(onlySecond)}`;
+    const { onlyMinute, onlySecond, totalHour } = parseSeconds(totalSecond);
+    return `${totalHour}:${lz(onlyMinute)}:${lz(onlySecond)}`;
   },
   'due_date': (totalSecond) => {
     const { totalDay, totalHour, totalMinute } = parseSeconds(totalSecond);
