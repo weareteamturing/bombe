@@ -1,8 +1,8 @@
 import { useState, useCallback, useRef } from 'react';
 
 import { Ticker } from './Ticker';
-import { useLifecycle } from './useLifecycle';
-import { useUnmount } from './useUnmount';
+import { useLifecycle } from './internal/useLifecycle';
+import { useUnmount } from './internal/useUnmount';
 
 type Status = 'initial' | 'run_pause' | 'run_progress' | 'complete';
 type Params = {
