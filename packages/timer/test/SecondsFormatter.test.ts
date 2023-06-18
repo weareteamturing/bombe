@@ -1,4 +1,4 @@
-import { SecondsFormatter, SecondsFormats } from '../src';
+import { SecondsFormatter, SecondsFormats } from '../src/SecondsFormatter';
 
 const D = 60 * 60 * 24;
 const H = 60 * 60;
@@ -41,16 +41,6 @@ const Suites: { type: SecondsFormats; sec: any; expect: string }[] = [
     expect: '02:03',
   },
   {
-    type: 'mm:ss_total_min',
-    sec: 100 * M + 3,
-    expect: '100:03',
-  },
-  {
-    type: 'mm:ss_total_min',
-    sec: 61 * M + 3,
-    expect: '61:03',
-  },
-  {
     type: 'hh:mm:ss',
     sec: 2 * H,
     expect: '02:00:00',
@@ -64,16 +54,6 @@ const Suites: { type: SecondsFormats; sec: any; expect: string }[] = [
     type: 'hh:mm:ss',
     sec: M + 1,
     expect: '00:01:01',
-  },
-  {
-    type: 'hh:mm:ss_total_hour',
-    sec: H * 25 + M + 1,
-    expect: '25:01:01',
-  },
-  {
-    type: 'hh:mm:ss_total_hour',
-    sec: H * 1000 + M + 1,
-    expect: '1000:01:01',
   },
   {
     type: 'h:mm:ss',

@@ -3,7 +3,7 @@ import { parseSeconds } from './internal/parseSeconds';
 type Formatter = (totalSecond: number) => string;
 
 type LogicalFormats = 'due_date' | 'due_date_hh:mm:ss' | 'study_duration';
-type GeneralFormats = 'mm:ss_total_min' | 'mm:ss' | 'm:ss' | 'hh:mm:ss_total_hour' | 'hh:mm:ss' | 'h:mm:ss';
+type GeneralFormats = 'mm:ss' | 'm:ss' | 'hh:mm:ss' | 'h:mm:ss';
 export type SecondsFormats = LogicalFormats | GeneralFormats;
 
 const Formatters: Record<SecondsFormats, Formatter> = {
@@ -15,17 +15,9 @@ const Formatters: Record<SecondsFormats, Formatter> = {
     const { onlyMinute, onlySecond } = parseSeconds(totalSecond);
     return `${lz(onlyMinute)}:${lz(onlySecond)}`;
   },
-  'mm:ss_total_min': (totalSecond) => {
-    const { totalMinute, onlySecond } = parseSeconds(totalSecond);
-    return `${lz(totalMinute)}:${lz(onlySecond)}`;
-  },
   'hh:mm:ss': (totalSecond) => {
     const { onlyMinute, onlySecond, onlyHour } = parseSeconds(totalSecond);
     return `${lz(onlyHour)}:${lz(onlyMinute)}:${lz(onlySecond)}`;
-  },
-  'hh:mm:ss_total_hour': (totalSecond) => {
-    const { onlyMinute, onlySecond, totalHour } = parseSeconds(totalSecond);
-    return `${lz(totalHour)}:${lz(onlyMinute)}:${lz(onlySecond)}`;
   },
   'h:mm:ss': (totalSecond) => {
     const { onlyMinute, onlySecond, onlyHour } = parseSeconds(totalSecond);
@@ -69,8 +61,6 @@ const InvalidateIntervalSeconds: Record<SecondsFormats, number> = {
   'due_date': 60,
   'due_date_hh:mm:ss': 1,
   'study_duration': 1,
-  'mm:ss_total_min': 1,
-  'hh:mm:ss_total_hour': 1,
 };
 
 // Append leading zeros
