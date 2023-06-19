@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@0.4.1...@teamturing/icons@1.0.0) (2023-06-19)
+
+### Features
+
+- **icons:** run svgr script to generate brand new icon files ([b69f61e](https://github.com/weareteamturing/bombe/commit/b69f61e05296cd09a9007a2e5d86fe82e04f4ab6))
+- **icons:** update svgr packages and fix index template ([f0923fa](https://github.com/weareteamturing/bombe/commit/f0923fa7b4bfed56ab05dc17ee040c9aea38fd93))
+
+### BREAKING CHANGES
+
+- **icons:** update svgr package from 7 to 8, index-template.js need some change
+
 ## [0.4.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@0.4.0...@teamturing/icons@0.4.1) (2023-06-19)
 
 **Note:** Version bump only for package @teamturing/icons
