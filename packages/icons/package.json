@@ -15,6 +15,8 @@
     "url": "git+https://github.com/weareteamturing/bombe.git"
   },
   "scripts": {
+    "check:lint": "eslint ./src --cache",
+    "check:type": "tsc --noEmit",
     "svgr": "svgr --index-template ./template/index-template.js --icon --typescript --replace-attr-values '#8D94A0=currentColor' -d src assets",
     "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist --jsx react-jsx && rollup --config rollup.config.js"
   },
