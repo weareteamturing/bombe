@@ -1,4 +1,4 @@
-import { parseSeconds } from './internal/parseSeconds';
+import { parseSecond } from './internal/parseSecond';
 
 type Formatter = (totalSecond: number) => string;
 
@@ -8,23 +8,23 @@ export type SecondsFormats = LogicalFormats | GeneralFormats;
 
 const Formatters: Record<SecondsFormats, Formatter> = {
   'm:ss': (totalSecond) => {
-    const { totalMinute, onlySecond } = parseSeconds(totalSecond);
+    const { totalMinute, onlySecond } = parseSecond(totalSecond);
     return `${totalMinute}:${lz(onlySecond)}`;
   },
   'mm:ss': (totalSecond) => {
-    const { totalMinute, onlySecond } = parseSeconds(totalSecond);
+    const { totalMinute, onlySecond } = parseSecond(totalSecond);
     return `${lz(totalMinute)}:${lz(onlySecond)}`;
   },
   'hh:mm:ss': (totalSecond) => {
-    const { onlyMinute, onlySecond, totalHour } = parseSeconds(totalSecond);
+    const { onlyMinute, onlySecond, totalHour } = parseSecond(totalSecond);
     return `${lz(totalHour)}:${lz(onlyMinute)}:${lz(onlySecond)}`;
   },
   'h:mm:ss': (totalSecond) => {
-    const { onlyMinute, onlySecond, totalHour } = parseSeconds(totalSecond);
+    const { onlyMinute, onlySecond, totalHour } = parseSecond(totalSecond);
     return `${totalHour}:${lz(onlyMinute)}:${lz(onlySecond)}`;
   },
   'due_date': (totalSecond) => {
-    const { totalDay, totalHour, totalMinute } = parseSeconds(totalSecond);
+    const { totalDay, totalHour, totalMinute } = parseSecond(totalSecond);
     if (totalDay >= 1) {
       return `${totalDay}일`;
     }
@@ -34,7 +34,7 @@ const Formatters: Record<SecondsFormats, Formatter> = {
     return `${Math.max(0, totalMinute)}분`;
   },
   'due_date_hh:mm:ss': (totalSecond) => {
-    const { totalDay } = parseSeconds(totalSecond);
+    const { totalDay } = parseSecond(totalSecond);
 
     if (totalDay >= 1) {
       return `${totalDay}일`;
@@ -42,7 +42,7 @@ const Formatters: Record<SecondsFormats, Formatter> = {
     return Formatters['hh:mm:ss'](totalSecond);
   },
   'study_duration': (totalSecond) => {
-    const { totalHour, onlyMinute } = parseSeconds(totalSecond);
+    const { totalHour, onlyMinute } = parseSecond(totalSecond);
 
     if (totalHour >= 1) {
       return `${totalHour}시간 ${onlyMinute}분`;

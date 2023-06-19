@@ -19,7 +19,7 @@ const fallback: Result = {
   totalMinute: 0,
 };
 
-export function parseSeconds(totalSecond?: number): Result {
+export function parseSecond(totalSecond?: number): Result {
   if (typeof totalSecond !== 'number' || isNaN(totalSecond)) return fallback;
   totalSecond = Math.max(0, totalSecond);
 
