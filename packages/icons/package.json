@@ -24,8 +24,8 @@
     "url": "https://github.com/weareteamturing/bombe/issues"
   },
   "devDependencies": {
-    "@svgr/cli": "^7.0.0",
-    "@svgr/rollup": "^7.0.0",
+    "@svgr/cli": "^8.0.1",
+    "@svgr/rollup": "^8.0.1",
     "@types/react": "^18.2.6",
     "react": "^18.2.0"
   },
