@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@0.3.3...@teamturing/timer@0.3.4) (2023-06-19)
+
+### Bug Fixes
+
+- **timer:** add missing jest.config.js ([60dc81b](https://github.com/weareteamturing/bombe/commit/60dc81b2ad0badaf1f0111eec7d907e8b04c8309))
+
 ## [0.3.3](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@0.3.2...@teamturing/timer@0.3.3) (2023-06-19)
 
 **Note:** Version bump only for package @teamturing/timer
