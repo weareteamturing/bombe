@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 
-import useTicker from './useTicker';
+import { useTicker } from './useTicker';
 
 export function useReverseTicker({ onComplete }: { onComplete?: () => void }) {
   const {

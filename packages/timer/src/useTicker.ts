@@ -8,7 +8,7 @@ type Status = 'initial' | 'run_pause' | 'run_progress' | 'complete';
 type Params = {
   onComplete?: () => void;
 };
-export default function useTicker({ onComplete }: Params) {
+export function useTicker({ onComplete }: Params) {
   const { checkUnmounted } = useLifecycle();
 
   const onCompleteRef = useRef<Function>();
