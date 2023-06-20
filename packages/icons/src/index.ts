@@ -86,7 +86,6 @@ export { default as LinkIcon } from './Link';
 export { default as LockIcon } from './Lock';
 export { default as LockColorIcon } from './LockColor';
 export { default as LogoColorIcon } from './LogoColor';
-export { default as MathIcon } from './Math';
 export { default as MaxsizeIcon } from './Maxsize';
 export { default as MinsizeIcon } from './Minsize';
 export { default as MinusIcon } from './Minus';
