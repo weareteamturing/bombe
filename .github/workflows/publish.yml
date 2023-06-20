@@ -1,12 +1,14 @@
 name: Publish
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - main
 
 jobs:
   check-eslint-and-typescript:
+    if: github.event.pull_request.merged == true
     name: Check ESLint & Typescript
     runs-on: ubuntu-latest
     steps:
