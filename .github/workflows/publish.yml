@@ -82,6 +82,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Versioning
+        run: lerna version --yes
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
+
       - name: Run publish
         run: lerna publish from-package --yes
         env:
