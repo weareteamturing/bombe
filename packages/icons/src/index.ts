@@ -1,3 +1,5 @@
+export { default as AiIcon } from './Ai';
+export { default as AiSadIcon } from './AiSad';
 export { default as AimPointIcon } from './AimPoint';
 export { default as AlarmIcon } from './Alarm';
 export { default as AppleColorIcon } from './AppleColor';
