@@ -3,7 +3,7 @@
   "version": "1.0.6",
   "description": "Fundamental utility functions for any Javascript/Typescript environment",
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
-  "homepage": "",
+  "homepage": "https://github.com/weareteamturing/bombe#readme",
   "license": "MIT",
   "main": "./dist/index.js",
   "files": [
@@ -14,6 +14,10 @@
     "require": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "import": "./esm/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weareteamturing/bombe.git"
   },
   "scripts": {
     "check:lint": "eslint ./src --cache",
