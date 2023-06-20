@@ -84,6 +84,7 @@ export { default as LetterHeartColorIcon } from './LetterHeartColor';
 export { default as LineThreeIcon } from './LineThree';
 export { default as LinkIcon } from './Link';
 export { default as LockIcon } from './Lock';
+export { default as LockColorIcon } from './LockColor';
 export { default as LogoColorIcon } from './LogoColor';
 export { default as MathIcon } from './Math';
 export { default as MaxsizeIcon } from './Maxsize';
