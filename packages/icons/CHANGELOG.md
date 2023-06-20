@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.2.0...@teamturing/icons@1.3.0) (2023-06-20)
+
+### Features
+
+- **icons:** add Ai, AiSad icons ([d6610e3](https://github.com/weareteamturing/bombe/commit/d6610e3e76ac443980b6e5f0fe21ef570a307c76))
+
+# [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.1.0...@teamturing/icons@1.2.0) (2023-06-20)
+
+### Features
+
+- **icons:** remove unused MathIcon ([dc308b7](https://github.com/weareteamturing/bombe/commit/dc308b7b59616d40343e413ce908d557dd025a80))
+
 # [1.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.0.1...@teamturing/icons@1.1.0) (2023-06-20)
 
 ### Features

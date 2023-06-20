@@ -43,32 +43,10 @@ jobs:
       - name: Check Typescript
         run: lerna run check:type
 
-  build-packages:
-    name: Build Packages
-    runs-on: ubuntu-latest
-    needs: check-eslint-and-typescript
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          ref: main
-          fetch-depth: '0'
-
-      - name: Set node version
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.15.0
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Run build
-        run: lerna run build
-
   publish-packages:
     name: Publish packages to NPM
     runs-on: ubuntu-latest
-    needs: build-packages
+    needs: check-eslint-and-typescript
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -81,10 +59,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.15.0
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
+      
       - name: Set git config
         run: |
           git config user.name "${{ github.actor }}"
@@ -98,8 +73,14 @@ jobs:
         env:
           NPM_AUTOMATION_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
 
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: lerna run build
+
       - name: Versioning
         run: lerna version --yes
 
-      - name: Run publish
+      - name: Publish
         run: lerna publish from-package --yes
