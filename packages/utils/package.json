@@ -1,6 +1,6 @@
 {
   "name": "@teamturing/utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Fundamental utility functions for any Javascript/Typescript environment",
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
   "homepage": "https://github.com/weareteamturing/bombe#readme",
