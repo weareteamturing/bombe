@@ -28,7 +28,7 @@ export function parseSecond(totalSecond?: number): Result {
   const totalMinute = Math.floor(totalSecond / aMinute);
   const onlyHour = Math.floor(totalSecond / aHour) % 24;
   const onlyMinute = Math.floor(totalSecond / aMinute) % 60;
-  const onlySecond = totalSecond % 60;
+  const onlySecond = Math.floor(totalSecond % 60);
 
   return {
     totalDay,
