@@ -1,4 +1,4 @@
-import { SecondsFormatter, SecondsFormats } from '../src/SecondsFormatter';
+import { SecondsFormatter, SecondsFormats } from '../src';
 
 const D = 60 * 60 * 24;
 const H = 60 * 60;
@@ -9,6 +9,16 @@ const Suites: { type: SecondsFormats; sec: any; expect: string }[] = [
     type: 'm:ss',
     sec: 2 * M + 3,
     expect: '2:03',
+  },
+  {
+    type: 'm:ss',
+    sec: 15.5,
+    expect: '0:15',
+  },
+  {
+    type: 'm:ss',
+    sec: 155.55555,
+    expect: '2:35',
   },
   {
     type: 'm:ss',
