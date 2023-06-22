@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.1.0...@teamturing/timer@1.2.0) (2023-06-22)
+
+### Features
+
+- **timer:** add tickMillis option to Ticker ([16518f2](https://github.com/weareteamturing/bombe/commit/16518f2d40e880bdb40deae4ee2b7d29b5ffed8a))
+
 # [1.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.0.1...@teamturing/timer@1.1.0) (2023-06-22)
 
 ### Features
