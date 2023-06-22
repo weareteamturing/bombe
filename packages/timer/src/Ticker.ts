@@ -1,3 +1,5 @@
+import { setIntervalWithTimeout } from './setIntervalWithTimeout';
+
 function currentUnixMs(): number {
   return Date.now();
 }
@@ -25,12 +27,9 @@ export class Ticker {
   resume() {
     this.status = 'progress';
     this.lastStartedUnixMs = currentUnixMs();
-    const handler = setInterval(() => {
+    this.clear = setIntervalWithTimeout(() => {
       this.callHandler();
     }, this.intervalSec * 1000);
-    this.clear = () => {
-      clearInterval(handler);
-    };
   }
 
   pause() {
