@@ -13,10 +13,10 @@ export class Ticker {
 
   handler?: TickerHandler;
 
-  constructor(private internalSec = 1) {}
+  constructor(private intervalSec = 1) {}
 
   start({ handler, intervalSec = 1 }: { handler: TickerHandler; intervalSec?: number }) {
-    this.internalSec = intervalSec;
+    this.intervalSec = intervalSec;
     this.handler = handler;
     this.reset();
     this.resume();
@@ -27,7 +27,7 @@ export class Ticker {
     this.lastStartedUnixMs = currentUnixMs();
     const handler = setInterval(() => {
       this.callHandler();
-    }, this.internalSec * 1000);
+    }, this.intervalSec * 1000);
     this.clear = () => {
       clearInterval(handler);
     };
