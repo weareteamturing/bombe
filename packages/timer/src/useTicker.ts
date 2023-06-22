@@ -8,7 +8,8 @@ type Status = 'initial' | 'run_pause' | 'run_progress' | 'complete';
 type Params = {
   onComplete?: () => void;
 };
-export function useTicker({ onComplete }: Params) {
+const inf = 99999999;
+export function useTicker({ onComplete }: Params = {}) {
   const { checkUnmounted } = useLifecycle();
 
   const onCompleteRef = useRef<Function>();
@@ -28,7 +29,7 @@ export function useTicker({ onComplete }: Params) {
   }, [checkUnmounted, ticker]);
 
   const startTicker = useCallback(
-    ({ durationSec, intervalSec }: { durationSec: number; intervalSec?: number } = { durationSec: 999999999 }) => {
+    ({ durationSec = inf, intervalSec }: { durationSec?: number; intervalSec?: number } = { durationSec: inf }) => {
       resetTicker();
 
       setStatus('run_progress');
