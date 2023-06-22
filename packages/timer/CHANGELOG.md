@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.0.1...@teamturing/timer@1.1.0) (2023-06-22)
+
+### Features
+
+- **timer:** replace Ticker interval logic with setTimeout from setInterval ([aad55ec](https://github.com/weareteamturing/bombe/commit/aad55ecee5f63aa71ca48e50c07fa93473c86d02))
+
 ## [1.0.1](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.0.0...@teamturing/timer@1.0.1) (2023-06-21)
 
 ### Bug Fixes
