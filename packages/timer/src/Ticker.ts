@@ -15,10 +15,19 @@ export class Ticker {
 
   handler?: TickerHandler;
 
-  constructor(private intervalSec = 1) {}
+  constructor(private intervalSec = 1, private tickMillis = 1000) {}
 
-  start({ handler, intervalSec = 1 }: { handler: TickerHandler; intervalSec?: number }) {
+  start({
+    handler,
+    intervalSec = 1,
+    tickMillis = 1000,
+  }: {
+    handler: TickerHandler;
+    intervalSec?: number;
+    tickMillis?: number;
+  }) {
     this.intervalSec = intervalSec;
+    this.tickMillis = tickMillis;
     this.handler = handler;
     this.reset();
     this.resume();
@@ -47,6 +56,6 @@ export class Ticker {
 
   private callHandler() {
     const elapsedFromLastStarted = currentUnixMs() - this.lastStartedUnixMs;
-    this.handler?.(Math.floor((this.accumulatedMs + elapsedFromLastStarted) / 1000));
+    this.handler?.(Math.floor((this.accumulatedMs + elapsedFromLastStarted) / (this.tickMillis || 1000)));
   }
 }
