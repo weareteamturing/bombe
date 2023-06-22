@@ -29,7 +29,13 @@ export function useTicker({ onComplete }: Params = {}) {
   }, [checkUnmounted, ticker]);
 
   const startTicker = useCallback(
-    ({ durationSec = inf, intervalSec }: { durationSec?: number; intervalSec?: number } = { durationSec: inf }) => {
+    (
+      {
+        durationSec = inf,
+        intervalSec,
+        tickMillis,
+      }: { durationSec?: number; intervalSec?: number; tickMillis?: number } = { durationSec: inf },
+    ) => {
       resetTicker();
 
       setStatus('run_progress');
@@ -45,6 +51,7 @@ export function useTicker({ onComplete }: Params = {}) {
           }
         },
         intervalSec,
+        tickMillis,
       });
     },
     [resetTicker, ticker],
