@@ -13,10 +13,10 @@ export function useReverseTicker({ onComplete }: { onComplete?: () => void }) {
   const [duration, setDuration] = useState(0);
 
   const startTicker = useCallback(
-    ({ durationSec, intervalSec }: { durationSec: number; intervalSec?: number }) => {
+    ({ durationSec, intervalSec, tickMillis }: { durationSec: number; intervalSec?: number; tickMillis?: number }) => {
       if (durationSec >= 0) {
         setDuration(durationSec);
-        _startTicker({ durationSec, intervalSec });
+        _startTicker({ durationSec, intervalSec, tickMillis });
       }
     },
     [_startTicker],
