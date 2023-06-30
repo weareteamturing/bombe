@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.4.0...@teamturing/icons@1.5.0) (2023-06-30)
+
+### Features
+
+- **icons:** delete icons for react native animation ([7e37b59](https://github.com/weareteamturing/bombe/commit/7e37b59bb0353b58bd34183399a84a47c308df91))
+
 # [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.3.0...@teamturing/icons@1.4.0) (2023-06-30)
 
 ### Features
