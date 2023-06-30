@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.3.0...@teamturing/icons@1.4.0) (2023-06-30)
+
+### Features
+
+- **icons:** add curriculum icon ([1102b9d](https://github.com/weareteamturing/bombe/commit/1102b9d459e6cde345f88bd76866da277c600331))
+- **icons:** include svg assets and rename dir, asset -> svg ([1d5dd72](https://github.com/weareteamturing/bombe/commit/1d5dd72e82832b9fa378fee4e5e9c1a55cc8dc4d))
+
 # [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.2.0...@teamturing/icons@1.3.0) (2023-06-20)
 
 ### Features
