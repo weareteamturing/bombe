@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.5.0...@teamturing/icons@1.5.1) (2023-07-12)
+
+### Bug Fixes
+
+- **icons:** update star, char_bubble_question icon ([a3afbd2](https://github.com/weareteamturing/bombe/commit/a3afbd2c623cad43ecfc811b2b82167c7171cc2d))
+
 # [1.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.4.0...@teamturing/icons@1.5.0) (2023-06-30)
 
 ### Features
