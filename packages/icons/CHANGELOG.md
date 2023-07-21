@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.5.1...@teamturing/icons@1.6.0) (2023-07-21)
+
+### Features
+
+- **icons:** add raffle_color, test_upload_color icons ([d710354](https://github.com/weareteamturing/bombe/commit/d710354520bf5967fc1ba5271197edbe518d1b2a))
+
 ## [1.5.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.5.0...@teamturing/icons@1.5.1) (2023-07-12)
 
 ### Bug Fixes
