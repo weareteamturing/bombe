@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.5.1...@teamturing/icons@1.6.0) (2023-07-21)
+
+### Features
+
+- **icons:** add raffle_color, test_upload_color icons ([d710354](https://github.com/weareteamturing/bombe/commit/d710354520bf5967fc1ba5271197edbe518d1b2a))
+
+## [1.5.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.5.0...@teamturing/icons@1.5.1) (2023-07-12)
+
+### Bug Fixes
+
+- **icons:** update star, char_bubble_question icon ([a3afbd2](https://github.com/weareteamturing/bombe/commit/a3afbd2c623cad43ecfc811b2b82167c7171cc2d))
+
+# [1.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.4.0...@teamturing/icons@1.5.0) (2023-06-30)
+
+### Features
+
+- **icons:** delete icons for react native animation ([7e37b59](https://github.com/weareteamturing/bombe/commit/7e37b59bb0353b58bd34183399a84a47c308df91))
+
+# [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.3.0...@teamturing/icons@1.4.0) (2023-06-30)
+
+### Features
+
+- **icons:** add curriculum icon ([1102b9d](https://github.com/weareteamturing/bombe/commit/1102b9d459e6cde345f88bd76866da277c600331))
+- **icons:** include svg assets and rename dir, asset -> svg ([1d5dd72](https://github.com/weareteamturing/bombe/commit/1d5dd72e82832b9fa378fee4e5e9c1a55cc8dc4d))
+
 # [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.2.0...@teamturing/icons@1.3.0) (2023-06-20)
 
 ### Features

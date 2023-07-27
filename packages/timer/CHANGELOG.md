@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.1.0...@teamturing/timer@1.2.0) (2023-06-22)
+
+### Features
+
+- **timer:** add tickMillis option to Ticker ([16518f2](https://github.com/weareteamturing/bombe/commit/16518f2d40e880bdb40deae4ee2b7d29b5ffed8a))
+
+# [1.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.0.1...@teamturing/timer@1.1.0) (2023-06-22)
+
+### Features
+
+- **timer:** replace Ticker interval logic with setTimeout from setInterval ([aad55ec](https://github.com/weareteamturing/bombe/commit/aad55ecee5f63aa71ca48e50c07fa93473c86d02))
+
+## [1.0.1](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.0.0...@teamturing/timer@1.0.1) (2023-06-21)
+
+### Bug Fixes
+
+- **timer:** fix seconds formatter trip floating points ([5789b08](https://github.com/weareteamturing/bombe/commit/5789b089f4e43273558c1503d61f4bd35518f408))
+
 # [1.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@0.3.4...@teamturing/timer@1.0.0) (2023-06-20)
 
 **Note:** Version bump only for package @teamturing/timer
