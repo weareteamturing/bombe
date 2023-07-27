@@ -1,1 +1,1 @@
-export * from './formatSubjectiveAnswer';
+export * from './produceSubjectiveAnswer';
