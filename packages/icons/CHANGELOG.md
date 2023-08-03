@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.6.0...@teamturing/icons@1.7.0) (2023-08-03)
+
+### Features
+
+- **icons:** add plug, plug_color icons ([4862a5b](https://github.com/weareteamturing/bombe/commit/4862a5bb6d704a1ffc054c985f22a4c3e01b54a1))
+
 # [1.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.5.1...@teamturing/icons@1.6.0) (2023-07-21)
 
 ### Features
