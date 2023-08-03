@@ -11,6 +11,8 @@ export { default as ArrowLeftRightIcon } from './ArrowLeftRight';
 export { default as ArrowRightIcon } from './ArrowRight';
 export { default as ArrowRightCircleIcon } from './ArrowRightCircle';
 export { default as ArrowRightLimitIcon } from './ArrowRightLimit';
+export { default as PlugIcon } from './Plug';
+export { default as PlugColorIcon } from './PlugColor';
 export { default as ArrowUpIcon } from './ArrowUp';
 export { default as ArrowUpDownIcon } from './ArrowUpDown';
 export { default as ArrowUpLimitIcon } from './ArrowUpLimit';
