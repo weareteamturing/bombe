@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.7.1...@teamturing/icons@1.8.0) (2023-08-07)
+
+### Features
+
+- **icons:** add paper_check icon ([ca88cd7](https://github.com/weareteamturing/bombe/commit/ca88cd75bc1d01a7d6bf00483d71cde3df2bf340))
+
 ## [1.7.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.7.0...@teamturing/icons@1.7.1) (2023-08-07)
 
 ### Bug Fixes
