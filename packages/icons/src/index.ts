@@ -143,6 +143,7 @@ export { default as ShieldCheckIcon } from './ShieldCheck';
 export { default as SirenIcon } from './Siren';
 export { default as SkipbackIcon } from './Skipback';
 export { default as SkipforwardIcon } from './Skipforward';
+export { default as SoundOffIcon } from './SoundOff';
 export { default as SpeakerIcon } from './Speaker';
 export { default as StackupIcon } from './Stackup';
 export { default as StarIcon } from './Star';
