@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.8.0...@teamturing/icons@1.9.0) (2023-08-08)
+
+### Features
+
+- **icons:** add sound_off icon ([49d376a](https://github.com/weareteamturing/bombe/commit/49d376addd277ba453c9bf60a887b09558233e99))
+
 # [1.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.7.1...@teamturing/icons@1.8.0) (2023-08-07)
 
 ### Features
