@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.11.0...@teamturing/icons@1.12.0) (2023-08-09)
+
+### Features
+
+- **icons:** add emoji, frame, hair, set, ticket, top icons ([6b934b5](https://github.com/weareteamturing/bombe/commit/6b934b5a86660e558d4e7fc3ff184860600fede8))
+
 # [1.11.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.10.0...@teamturing/icons@1.11.0) (2023-08-08)
 
 ### Features
