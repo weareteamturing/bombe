@@ -176,5 +176,6 @@ export { default as VideoColorIcon } from './VideoColor';
 export { default as VoteColorIcon } from './VoteColor';
 export { default as WarningIcon } from './Warning';
 export { default as WifiIcon } from './Wifi';
+export { default as WorkbookColorIcon } from './WorkbookColor';
 export { default as WrongIcon } from './Wrong';
 export { default as YoutubeIcon } from './Youtube';
