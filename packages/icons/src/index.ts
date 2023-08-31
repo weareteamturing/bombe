@@ -79,6 +79,7 @@ export { default as GunColorIcon } from './GunColor';
 export { default as HairIcon } from './Hair';
 export { default as HeadphoneIcon } from './Headphone';
 export { default as HeartIcon } from './Heart';
+export { default as InfiniteIcon } from './Infinite';
 export { default as InfoInCircleIcon } from './InfoInCircle';
 export { default as InstagramIcon } from './Instagram';
 export { default as KakaoColorIcon } from './KakaoColor';
