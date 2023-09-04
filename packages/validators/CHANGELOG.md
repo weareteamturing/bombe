@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/validators@1.0.0...@teamturing/validators@1.1.0) (2023-09-04)
+
+### Features
+
+- **validators:** add isEmail validator ([c71185f](https://github.com/weareteamturing/bombe/commit/c71185fa0261bf8be0306882cb9ba4dc4950d088))
+
 # [1.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/validators@0.1.1...@teamturing/validators@1.0.0) (2023-06-20)
 
 **Note:** Version bump only for package @teamturing/validators
