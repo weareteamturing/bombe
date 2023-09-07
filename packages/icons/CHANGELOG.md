@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.15.0...@teamturing/icons@1.16.0) (2023-09-07)
+
+### Features
+
+- **icons:** add face_happy, face_sad, new, my_bubble icon ([e72d629](https://github.com/weareteamturing/bombe/commit/e72d6290f1406beb0a6ade15462a0e73f0bccccc))
+
 # [1.15.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.14.0...@teamturing/icons@1.15.0) (2023-08-31)
 
 ### Features
