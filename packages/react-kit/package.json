@@ -28,18 +28,22 @@
     "url": "https://github.com/weareteamturing/bombe/issues"
   },
   "dependencies": {
-    "@teamturing/token-studio": "workspace:^"
+    "@teamturing/token-studio": "workspace:^",
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@styled-system/css": "^5.1.5",
+    "@types/lodash-es": "^4.17.9",
     "@types/styled-system": "^5.1.17",
     "@types/styled-system__css": "^5.0.17",
+    "styled-components": "^6.0.7",
     "styled-system": "^5.1.5"
   },
   "peerDependencies": {
     "@styled-system/css": "^5.1.5",
     "@types/styled-system": "^5.1.17",
     "@types/styled-system__css": "^5.0.17",
+    "styled-components": "*",
     "styled-system": "^5.1.5"
   }
 }

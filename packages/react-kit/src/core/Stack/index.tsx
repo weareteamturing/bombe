@@ -1,0 +1,59 @@
+import { SpaceKey, space } from '@teamturing/token-studio';
+import { ComponentProps, PropsWithChildren, Ref, forwardRef } from 'react';
+import styled from 'styled-components';
+import { ResponsiveValue, variant } from 'styled-system';
+
+import { BetterSystemStyleObject, forcePixelValue } from '../../utils';
+import View, { ViewProps } from '../View';
+
+type Props = {
+  gapX?: ResponsiveValue<SpaceKey>;
+  gapY?: ResponsiveValue<SpaceKey>;
+} & Pick<ViewProps, 'alignItems' | 'justifyContent' | 'sx'> &
+  Pick<ComponentProps<typeof View>, 'as'>;
+
+const Stack = (
+  { gapX = 0, gapY = 0, children, alignItems = 'center', ...props }: PropsWithChildren<Props>,
+  ref: Ref<HTMLDivElement>,
+) => (
+  <BaseStack ref={ref} alignItems={alignItems} gapX={gapX} gapY={gapY} {...props}>
+    {children}
+  </BaseStack>
+);
+
+const BaseStack = styled(View)<Props>(
+  {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  variant({
+    prop: 'gapX',
+    variants: Object.fromEntries(
+      Object.entries(space).map(([key, value]) => {
+        const styleValue: BetterSystemStyleObject = {
+          '& > *': { px: forcePixelValue(value / 2) },
+          'mx': forcePixelValue(-value / 2),
+        };
+        return [key, styleValue];
+      }),
+    ),
+  }),
+  variant({
+    prop: 'gapY',
+    variants: Object.fromEntries(
+      Object.entries(space).map(([key, value]) => {
+        const styleValue: BetterSystemStyleObject = {
+          '& > *': { mt: forcePixelValue(value) },
+          'mt': forcePixelValue(-value),
+        };
+        return [key, styleValue];
+      }),
+    ),
+  }),
+);
+
+const Item = ({ children, ...props }: PropsWithChildren<ViewProps>) => <View {...props}>{children}</View>;
+
+export default Object.assign(forwardRef(Stack), { Item });
+export type { Props as StackProps };
