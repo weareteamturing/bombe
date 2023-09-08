@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.16.0...@teamturing/icons@1.17.0) (2023-09-08)
+
+
+### Features
+
+* **icons:** add glasses icon ([9cb0198](https://github.com/weareteamturing/bombe/commit/9cb01988524050f5f3f2d8a71c24ed3f14ea1fc5))
+
+
+
+
+
 # [1.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.15.0...@teamturing/icons@1.16.0) (2023-09-07)
 
 ### Features
