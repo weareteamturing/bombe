@@ -28,6 +28,7 @@
     "url": "https://github.com/weareteamturing/bombe/issues"
   },
   "dependencies": {
+    "@teamturing/icons": "workspace:^",
     "@teamturing/token-studio": "workspace:^"
   },
   "devDependencies": {
