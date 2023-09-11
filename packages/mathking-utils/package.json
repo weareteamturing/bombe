@@ -1,6 +1,6 @@
 {
   "name": "@teamturing/mathking-utils",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Fundamental business related utility functions for Mathking service",
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
   "homepage": "https://github.com/weareteamturing/bombe#readme",
