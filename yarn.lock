@@ -3256,7 +3256,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@teamturing/icons@workspace:packages/icons":
+"@teamturing/icons@workspace:^, @teamturing/icons@workspace:packages/icons":
   version: 0.0.0-use.local
   resolution: "@teamturing/icons@workspace:packages/icons"
   dependencies:
@@ -3280,6 +3280,7 @@ __metadata:
   resolution: "@teamturing/react-kit@workspace:packages/react-kit"
   dependencies:
     "@styled-system/css": ^5.1.5
+    "@teamturing/icons": "workspace:^"
     "@teamturing/token-studio": "workspace:^"
     "@types/lodash-es": ^4.17.9
     "@types/styled-system": ^5.1.17
