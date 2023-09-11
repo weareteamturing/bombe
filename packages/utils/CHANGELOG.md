@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.0.7...@teamturing/utils@1.0.8) (2023-09-11)
+
+### Bug Fixes
+
+- **utils:** update package.json for publishConfig ([3e0d4d4](https://github.com/weareteamturing/bombe/commit/3e0d4d4a51b7f0fd1fca3eaa94ef5ac3b2019612))
+
 ## [1.0.7](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.0.6...@teamturing/utils@1.0.7) (2023-06-20)
 
 ### Bug Fixes

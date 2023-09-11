@@ -3,16 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.16.0...@teamturing/icons@1.17.0) (2023-09-08)
+## [1.17.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.0...@teamturing/icons@1.17.1) (2023-09-11)
 
+### Bug Fixes
+
+- **icons:** update package.json for publishConfig ([0c539d3](https://github.com/weareteamturing/bombe/commit/0c539d3cb720d34b73db6066be20ae50a073e427))
+
+# [1.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.16.0...@teamturing/icons@1.17.0) (2023-09-08)
 
 ### Features
 
-* **icons:** add glasses icon ([9cb0198](https://github.com/weareteamturing/bombe/commit/9cb01988524050f5f3f2d8a71c24ed3f14ea1fc5))
-
-
-
-
+- **icons:** add glasses icon ([9cb0198](https://github.com/weareteamturing/bombe/commit/9cb01988524050f5f3f2d8a71c24ed3f14ea1fc5))
 
 # [1.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.15.0...@teamturing/icons@1.16.0) (2023-09-07)
 

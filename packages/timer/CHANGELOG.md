@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.2.0...@teamturing/timer@1.2.1) (2023-09-11)
+
+### Bug Fixes
+
+- **timer:** update package.json for publishConfig ([8373425](https://github.com/weareteamturing/bombe/commit/83734253ef862a22c25d43573a75695a46522d68))
+
 # [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.1.0...@teamturing/timer@1.2.0) (2023-06-22)
 
 ### Features
