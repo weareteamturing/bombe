@@ -43,7 +43,6 @@
     "@styled-system/css": "^5.1.5",
     "@types/styled-system": "^5.1.17",
     "@types/styled-system__css": "^5.0.17",
-    "styled-components": "*",
     "styled-system": "^5.1.5"
   }
 }
