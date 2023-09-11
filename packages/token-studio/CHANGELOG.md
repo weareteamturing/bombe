@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.1.4...@teamturing/token-studio@1.1.5) (2023-09-11)
+
+### Bug Fixes
+
+- update all packages ([a552466](https://github.com/weareteamturing/bombe/commit/a552466e5d12adb1b3b7ead61817aa7f94ea762c))
+
 ## [1.1.4](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.1.3...@teamturing/token-studio@1.1.4) (2023-09-11)
 
 **Note:** Version bump only for package @teamturing/token-studio

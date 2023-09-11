@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/weareteamturing/bombe/compare/@teamturing/validators@1.1.2...@teamturing/validators@1.1.3) (2023-09-11)
+
+### Bug Fixes
+
+- update all packages ([a552466](https://github.com/weareteamturing/bombe/commit/a552466e5d12adb1b3b7ead61817aa7f94ea762c))
+
 ## [1.1.2](https://github.com/weareteamturing/bombe/compare/@teamturing/validators@1.1.1...@teamturing/validators@1.1.2) (2023-09-11)
 
 **Note:** Version bump only for package @teamturing/validators
