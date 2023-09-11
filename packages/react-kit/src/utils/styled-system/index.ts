@@ -12,11 +12,11 @@ type CSSSelectorObject = {
 };
 
 type BetterSystemStyleObject = SystemStyleObject | CSSCustomProperties | CSSSelectorObject;
+type AsProp = { as?: any | undefined };
 
 export interface SxProp {
   sx?: BetterSystemStyleObject;
 }
-
 const sx = (props: SxProp) => css(props.sx);
 
 type TextDecorationProps<ThemeType extends Theme = RequiredTheme> = {
@@ -35,4 +35,4 @@ type WordBreakProps<ThemeType extends Theme = RequiredTheme> = {
 const wordBreak = system({ wordBreak: { property: 'wordBreak', scale: 'wordBreak' } });
 
 export { sx, textDecoration, whiteSpace, wordBreak };
-export type { BetterSystemStyleObject, TextDecorationProps, WhiteSpaceProps, WordBreakProps };
+export type { BetterSystemStyleObject, AsProp, TextDecorationProps, WhiteSpaceProps, WordBreakProps };

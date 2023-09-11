@@ -1,11 +1,10 @@
 import { SpaceKey, space } from '@teamturing/token-studio';
-import { isArray } from 'lodash-es';
-import { PropsWithChildren, Ref, forwardRef, ComponentProps } from 'react';
+import { PropsWithChildren, Ref, forwardRef } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
-import { BetterSystemStyleObject, forcePixelValue } from '../../utils';
-import { isNullable } from '../../utils/isNullable';
+import { isNullable, forcePixelValue, isArray } from '../../utils';
+import { AsProp, BetterSystemStyleObject } from '../../utils/styled-system';
 import View, { ViewProps } from '../View';
 
 type Props = {
@@ -13,74 +12,72 @@ type Props = {
   gapY?: ResponsiveValue<SpaceKey>;
   wrap?: ResponsiveValue<boolean>;
 } & Pick<ViewProps, 'alignItems' | 'justifyContent' | 'sx'> &
-  Pick<ComponentProps<typeof View>, 'as'>;
+  AsProp;
 
-const Grid = (
-  { children, wrap: propWrap = true, gapX = 0, gapY = 0, ...props }: PropsWithChildren<Props>,
-  ref: Ref<HTMLDivElement>,
-) => {
-  const wrap = isArray(propWrap)
-    ? propWrap.map((value) => (value === true ? 'true' : 'false'))
-    : propWrap === true
-    ? 'true'
-    : 'false';
+const Grid = forwardRef<HTMLDivElement, PropsWithChildren<Props>>(
+  (
+    { children, wrap: propWrap = true, gapX = 0, gapY = 0, as, ...props }: PropsWithChildren<Props>,
+    ref: Ref<HTMLDivElement>,
+  ) => {
+    const wrap = Array.isArray(propWrap)
+      ? propWrap.map((value) => (value === true ? 'true' : 'false'))
+      : propWrap === true
+      ? 'true'
+      : 'false';
 
-  return (
-    <BaseGrid ref={ref} gapX={gapX} gapY={gapY} wrap={wrap} {...props}>
-      {children}
-    </BaseGrid>
-  );
-};
+    return (
+      <BaseGrid ref={ref} gapX={gapX} gapY={gapY} wrap={wrap} as={as} {...props}>
+        {children}
+      </BaseGrid>
+    );
+  },
+);
 
-const BaseGrid = styled(View)(
+const BaseGrid = styled(View)<Omit<Props, 'wrap'> & { wrap?: ResponsiveValue<'true' | 'false'> }>(
   {
     display: 'flex',
     flexDirection: 'row',
   },
-  () =>
-    variant({
-      prop: 'gapX',
-      variants: Object.fromEntries(
-        Object.entries(space).map(([key, value]) => {
-          const styleValue: BetterSystemStyleObject = {
-            '& > *': { px: forcePixelValue(value / 2) },
-            'mx': forcePixelValue(-value / 2),
-          };
-          return [key, styleValue];
-        }),
-      ),
-    }),
-  () =>
-    variant({
-      prop: 'gapY',
-      variants: Object.fromEntries(
-        Object.entries(space).map(([key, value]) => {
-          const styleValue: BetterSystemStyleObject = {
-            '& > *': { mt: forcePixelValue(value) },
-            'mt': forcePixelValue(-value),
-          };
-          return [key, styleValue];
-        }),
-      ),
-    }),
-  () =>
-    variant<BetterSystemStyleObject>({
-      prop: 'wrap',
-      variants: {
-        true: {
-          flexWrap: 'wrap',
-        },
-        false: {
-          flexWrap: 'nowrap',
-        },
+  variant({
+    prop: 'gapX',
+    variants: Object.fromEntries(
+      Object.entries(space).map(([key, value]) => {
+        const styleValue: BetterSystemStyleObject = {
+          '& > *': { px: forcePixelValue(value / 2) },
+          'mx': forcePixelValue(-value / 2),
+        };
+        return [key, styleValue];
+      }),
+    ),
+  }),
+  variant({
+    prop: 'gapY',
+    variants: Object.fromEntries(
+      Object.entries(space).map(([key, value]) => {
+        const styleValue: BetterSystemStyleObject = {
+          '& > *': { mt: forcePixelValue(value) },
+          'mt': forcePixelValue(-value),
+        };
+        return [key, styleValue];
+      }),
+    ),
+  }),
+  variant<BetterSystemStyleObject>({
+    prop: 'wrap',
+    variants: {
+      true: {
+        flexWrap: 'wrap',
       },
-    }),
+      false: {
+        flexWrap: 'nowrap',
+      },
+    },
+  }),
 );
 
 type UnitSizeType = 'min' | 'max' | number;
 
-type GridUnitProps = { size: ResponsiveValue<UnitSizeType> } & Pick<ViewProps, 'order' | 'sx'> &
-  Pick<ComponentProps<typeof View>, 'as'>;
+type GridUnitProps = { size: ResponsiveValue<UnitSizeType> } & Pick<ViewProps, 'order' | 'sx'> & AsProp;
 
 const mapValueToResponsiveValueProps = <T,>(
   value: ResponsiveValue<T>,
@@ -134,5 +131,5 @@ const Unit = ({ size, as, children, ...props }: PropsWithChildren<GridUnitProps>
   );
 };
 
-export default Object.assign(forwardRef(Grid), { Unit });
+export default Object.assign(Grid, { Unit });
 export type { Props as GridProps };
