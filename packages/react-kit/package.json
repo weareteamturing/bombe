@@ -27,15 +27,12 @@
   "bugs": {
     "url": "https://github.com/weareteamturing/bombe/issues"
   },
-  "dependencies": {
-    "@teamturing/icons": "workspace:^",
-    "@teamturing/token-studio": "workspace:^"
-  },
   "devDependencies": {
     "@styled-system/css": "^5.1.5",
     "@types/lodash-es": "^4.17.9",
     "@types/styled-system": "^5.1.17",
     "@types/styled-system__css": "^5.0.17",
+    "csstype": "^3.1.2",
     "react": "^18.2.0",
     "styled-components": "^6.0.7",
     "styled-system": "^5.1.5"
@@ -46,5 +43,9 @@
     "@types/styled-system__css": "^5.0.17",
     "react": "*",
     "styled-system": "^5.1.5"
+  },
+  "dependencies": {
+    "@teamturing/icons": "workspace:^",
+    "@teamturing/token-studio": "workspace:^"
   }
 }
