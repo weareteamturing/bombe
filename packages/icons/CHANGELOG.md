@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.3](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.2...@teamturing/icons@1.17.3) (2023-09-11)
+
+### Bug Fixes
+
+- **icon:** publish test ([77de4e3](https://github.com/weareteamturing/bombe/commit/77de4e36feccbee3fc70cdad840e3df7cd2b722f))
+
 ## [1.17.2](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.1...@teamturing/icons@1.17.2) (2023-09-11)
 
 ### Bug Fixes
