@@ -5,12 +5,15 @@
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
   "homepage": "https://github.com/weareteamturing/bombe#readme",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "./src/index.ts",
   "files": [
     "dist",
-    "esm",
-    "svg"
+    "esm"
   ],
+  "exports": {
+    "require": "./src/index.ts",
+    "import": "./src/index.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/weareteamturing/bombe.git"
@@ -32,5 +35,18 @@
   },
   "peerDependencies": {
     "react": "^18.2.0"
+  },
+  "publishConfig": {
+    "main": "./dist/index.js",
+    "files": [
+      "dist",
+      "esm",
+      "svg"
+    ],
+    "exports": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./esm/index.js"
+    }
   }
 }

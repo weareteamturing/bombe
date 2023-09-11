@@ -21,7 +21,7 @@ jobs:
       - name: Set node version
         uses: actions/setup-node@v3
         with:
-          node-version: 16.15.0
+          node-version: 18
 
       - name: Cache dependencies
         id: cache
@@ -35,7 +35,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Check ESLint
         run: lerna run check:lint
@@ -58,8 +58,8 @@ jobs:
       - name: Set node version
         uses: actions/setup-node@v3
         with:
-          node-version: 16.15.0
-      
+          node-version: 18
+
       - name: Set git config
         run: |
           git config user.name "${{ github.actor }}"
@@ -74,7 +74,7 @@ jobs:
           NPM_AUTOMATION_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Build
         run: lerna run build
