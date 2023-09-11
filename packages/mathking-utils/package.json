@@ -5,7 +5,7 @@
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
   "homepage": "https://github.com/weareteamturing/bombe#readme",
   "license": "MIT",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
   "files": [
     "dist",
     "esm"
@@ -26,13 +26,5 @@
   },
   "bugs": {
     "url": "https://github.com/weareteamturing/bombe/issues"
-  },
-  "publishConfig": {
-    "main": "./dist/index.js",
-    "exports": {
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts",
-      "import": "./esm/index.js"
-    }
   }
 }
