@@ -3083,7 +3083,7 @@ __metadata:
     "@types/styled-system": ^5.1.17
     "@types/styled-system__css": ^5.0.17
     react: "*"
-    styled-system: ^5.1.5
+    styled-component: "*"
   languageName: unknown
   linkType: soft
 
