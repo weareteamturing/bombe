@@ -1,6 +1,6 @@
 {
   "name": "@teamturing/timer",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Timer related hooks, component to use in teamturing react project",
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
   "homepage": "https://github.com/weareteamturing/bombe#readme",

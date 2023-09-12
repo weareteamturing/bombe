@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.6](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.5...@teamturing/icons@1.17.6) (2023-09-12)
+
+### Bug Fixes
+
+- update all package.json in bombe ([79052f1](https://github.com/weareteamturing/bombe/commit/79052f13406a1bd8baf4660b475755835bda8daf))
+
 ## [1.17.5](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.4...@teamturing/icons@1.17.5) (2023-09-11)
 
 **Note:** Version bump only for package @teamturing/icons
