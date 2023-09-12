@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.1.6...@teamturing/react-kit@1.2.0) (2023-09-12)
+
+### Features
+
+- **react-kit:** add Button component ([ad69d33](https://github.com/weareteamturing/bombe/commit/ad69d33c82f93042d001d87e8c44810d4106f2e1))
+
 ## [1.1.6](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.1.5...@teamturing/react-kit@1.1.6) (2023-09-12)
 
 ### Bug Fixes
