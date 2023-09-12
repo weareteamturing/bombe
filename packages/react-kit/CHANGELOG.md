@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.2.3...@teamturing/react-kit@1.2.4) (2023-09-12)
+
+### Bug Fixes
+
+- **react-kit:** update styled-component related config ([d081933](https://github.com/weareteamturing/bombe/commit/d081933d18cde428546a2b0ad73b7be93df59aa2))
+
 ## [1.2.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.2.2...@teamturing/react-kit@1.2.3) (2023-09-12)
 
 ### Bug Fixes
