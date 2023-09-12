@@ -17,7 +17,7 @@ module.exports = {
       preserveModulesRoot: 'src',
     },
   ],
-  external: ['react'],
+  external: ['react', 'styled-components'],
   plugins: [
     nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     commonjs(),
@@ -25,6 +25,7 @@ module.exports = {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
       babelHelpers: 'bundled',
       rootMode: 'upward',
+      plugins: ['babel-plugin-styled-components'],
       presets: [
         [
           '@babel/preset-react',
