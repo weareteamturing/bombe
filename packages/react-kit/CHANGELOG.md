@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.2.2...@teamturing/react-kit@1.2.3) (2023-09-12)
+
+### Bug Fixes
+
+- **react-kit:** update dependency structure ([a3eee71](https://github.com/weareteamturing/bombe/commit/a3eee718247b0045ec598da2dd72ac1cb4a669d5))
+
 ## [1.2.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.2.1...@teamturing/react-kit@1.2.2) (2023-09-12)
 
 ### Bug Fixes
