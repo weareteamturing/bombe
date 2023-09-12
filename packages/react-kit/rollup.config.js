@@ -10,11 +10,13 @@ module.exports = {
     {
       dir: 'dist',
       format: 'cjs',
+      interop: 'auto',
       globals: { 'styled-components': 'styled' },
     },
     {
       dir: 'esm',
       format: 'esm',
+      interop: 'auto',
       preserveModules: true,
       preserveModulesRoot: 'src',
       globals: { 'styled-components': 'styled' },
