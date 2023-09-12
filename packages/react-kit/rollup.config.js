@@ -25,6 +25,14 @@ module.exports = {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
       babelHelpers: 'bundled',
       rootMode: 'upward',
+      presets: [
+        [
+          '@babel/preset-react',
+          {
+            runtime: 'automatic',
+          },
+        ],
+      ],
     }),
   ],
 };
