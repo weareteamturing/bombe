@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.2.0...@teamturing/react-kit@1.2.1) (2023-09-12)
+
+### Bug Fixes
+
+- **react-kit:** fix rollup config ([abe6856](https://github.com/weareteamturing/bombe/commit/abe6856fb2002e06479017a581c0299beec6a206))
+
 # [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.1.6...@teamturing/react-kit@1.2.0) (2023-09-12)
 
 ### Features
