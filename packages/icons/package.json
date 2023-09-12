@@ -12,8 +12,9 @@
     "svg"
   ],
   "exports": {
-    "require": "./src/index.ts",
-    "import": "./src/index.ts"
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "import": "./esm/index.js"
   },
   "repository": {
     "type": "git",
