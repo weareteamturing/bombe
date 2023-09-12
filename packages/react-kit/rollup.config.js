@@ -10,12 +10,14 @@ module.exports = {
     {
       dir: 'dist',
       format: 'cjs',
+      globals: { 'styled-components': 'styled' },
     },
     {
       dir: 'esm',
       format: 'esm',
       preserveModules: true,
       preserveModulesRoot: 'src',
+      globals: { 'styled-components': 'styled' },
     },
   ],
   external: ['react', 'styled-components'],
