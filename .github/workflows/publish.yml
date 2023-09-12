@@ -83,7 +83,7 @@ jobs:
         run: lerna run build
 
       - name: Versioning
-        run: lerna version --yes
+        run: lerna version --yes --ignore-changes
 
       - name: Publish
         run: lerna publish from-package --yes
