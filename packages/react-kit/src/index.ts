@@ -1,3 +1,4 @@
+export { default as Button } from './core/Button';
 export { default as Chip } from './core/Chip';
 export { default as GradientText } from './core/GradientText';
 export { default as Grid } from './core/Grid';
