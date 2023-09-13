@@ -36,3 +36,6 @@ export type { TextProps } from './core/Text';
 
 export { default as View } from './core/View';
 export type { ViewProps } from './core/View';
+
+export { default as UnstyledButton } from './core/_UnstyledButton';
+export type { UnstyledButtonProps } from './core/_UnstyledButton';
