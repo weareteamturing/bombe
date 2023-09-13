@@ -39,3 +39,13 @@ export type { ViewProps } from './core/View';
 
 export { default as UnstyledButton } from './core/_UnstyledButton';
 export type { UnstyledButtonProps } from './core/_UnstyledButton';
+
+export { default as useDevice } from './hook/useDevice';
+
+export { default as useOutsideClick } from './hook/useOutsideClick';
+
+export { default as useProvidedOrCreatedRef } from './hook/useProvidedOrCreatedRef';
+
+export { default as useResize } from './hook/useResize';
+
+export { default as useToggleHandler } from './hook/useToggleHandler';
