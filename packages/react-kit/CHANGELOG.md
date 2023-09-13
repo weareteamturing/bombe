@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.2.7...@teamturing/react-kit@1.3.0) (2023-09-13)
+
+### Bug Fixes
+
+- **react-kit:** export type with component ([e2498f2](https://github.com/weareteamturing/bombe/commit/e2498f2a6e6c36c8121e2bfb14a4a48dc04851aa))
+
+### Features
+
+- **react-kit:** add hooks ([81e27d2](https://github.com/weareteamturing/bombe/commit/81e27d27e3c98d03f7380e14a4cb1c9f4cb96773))
+- **react-kit:** export UnstyledButton ([9f301e6](https://github.com/weareteamturing/bombe/commit/9f301e61520be11f99febc8e4e9ae297245b73a5))
+
 ## [1.2.7](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.2.6...@teamturing/react-kit@1.2.7) (2023-09-12)
 
 ### Bug Fixes
