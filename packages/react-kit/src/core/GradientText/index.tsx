@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 import Text from '../Text';
+import type { TextProps } from '../Text';
 
-const GradientText = styled(Text)`
+type Props = {} & TextProps;
+
+const GradientText = styled(Text)<Props>`
   background: ${({ theme }) => `linear-gradient(${theme.gradients['text/accent']})`};
   background-clip: text;
   -webkit-background-clip: text;
@@ -10,3 +13,4 @@ const GradientText = styled(Text)`
 `;
 
 export default GradientText;
+export type { Props as GradientTextProps };
