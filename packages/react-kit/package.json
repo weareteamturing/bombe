@@ -32,6 +32,8 @@
   "devDependencies": {
     "@styled-system/css": "^5.1.5",
     "@types/lodash-es": "^4.17.9",
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/lodash.throttle": "^4.1.7",
     "@types/styled-system": "^5.1.17",
     "@types/styled-system__css": "^5.0.17",
     "csstype": "^3.1.2",
@@ -49,6 +51,8 @@
   "dependencies": {
     "@teamturing/icons": "workspace:^",
     "@teamturing/token-studio": "workspace:^",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
     "styled-system": "^5.1.5"
   }
 }

@@ -20,3 +20,4 @@ const StyledIcon = ({ icon: Icon, sx, ...props }: Props) => (
 );
 
 export default StyledIcon;
+export type { Props as StyledIconProps };
