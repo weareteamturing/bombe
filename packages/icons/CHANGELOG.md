@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.18.0...@teamturing/icons@1.19.0) (2023-09-19)
+
+### Features
+
+- **icons:** add pin_color_red ([6a0bead](https://github.com/weareteamturing/bombe/commit/6a0beade73add91178acb4dbcf4528954115985c))
+
 # [1.18.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.6...@teamturing/icons@1.18.0) (2023-09-18)
 
 ### Features
