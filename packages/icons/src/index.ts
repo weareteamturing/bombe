@@ -130,6 +130,7 @@ export { default as PenIcon } from './Pen';
 export { default as PercentInCircleIcon } from './PercentInCircle';
 export { default as PictureIcon } from './Picture';
 export { default as PinIcon } from './Pin';
+export { default as PinColorRedIcon } from './PinColorRed';
 export { default as PlayIcon } from './Play';
 export { default as PlugIcon } from './Plug';
 export { default as PlugColorIcon } from './PlugColor';
