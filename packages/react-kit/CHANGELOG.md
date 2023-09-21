@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.4.0...@teamturing/react-kit@2.0.0) (2023-09-21)
+
+### Bug Fixes
+
+- **react-kit:** update type in enigma ([77427e2](https://github.com/weareteamturing/bombe/commit/77427e2efd41091ee93f1c06d97f3445c4feaf72))
+
+### Features
+
+- **react-kit:** add EnigmaUI component ([4165339](https://github.com/weareteamturing/bombe/commit/41653392ebac22a38fa05278e72c2867bef81085))
+- **react-kit:** add Image component ([07f0a85](https://github.com/weareteamturing/bombe/commit/07f0a85c3929a0a9c310c5fb8d20bde0184b6e78))
+
+### BREAKING CHANGES
+
+- **react-kit:** add EnigmaUI component
+
 # [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.3.2...@teamturing/react-kit@1.4.0) (2023-09-21)
 
 ### Features
