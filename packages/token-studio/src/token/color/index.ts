@@ -17,7 +17,7 @@ const textColor = {
   'text/success': palette.green500,
   'text/warning': palette.yellow500,
   'text/danger': palette.red500,
-  'text/selected/neutral': palette.gray900,
+  'text/selected': palette.gray900,
 } as const;
 
 const bgColor = {
@@ -49,17 +49,17 @@ const bgColor = {
 
   'bg/input': palette.white,
 
+  'bg/accent/blue/subtlest': palette.blue50,
   'bg/accent/green/subtlest': palette.green50,
   'bg/accent/yellow/subtlest': palette.yellow50,
   'bg/accent/red/subtlest': palette.red50,
   'bg/accent/red/subtle': palette.red400,
   'bg/accent/red': palette.red500,
   'bg/accent/gray/subtlest': palette.gray200,
-  'bg/accent/blue/subtlest': palette.blue50,
 
   'bg/selected/violet': palette.violet500,
-  'bg/selected/neutral': palette.gray900,
-  'bg/selected/neutral/subtle': palette.gray100,
+  'bg/selected': palette.gray900,
+  'bg/selected/subtle': palette.gray100,
 
   'bg/inverse': palette.black,
   'bg/inverse/subtlest': palette.white10A,
@@ -82,6 +82,7 @@ const borderColor = {
   'border/neutral/bolder': palette.gray300,
   'border/input': palette.gray200,
   'border/inverse': palette.white10A,
+  'border/selected': palette.gray900,
   'border/disabled': palette.gray100,
   'border/primary': palette.violet500,
   'border/hovered': palette.blue300,
@@ -103,10 +104,10 @@ const iconColor = {
   'icon/inverse': palette.white,
   'icon/disabled': palette.gray300,
   'icon/disabled/subtler': palette.gray200,
-  'icon/selected/primary': palette.violet500,
-  'icon/selected/neutral': palette.gray900,
-  'icon/primary': palette.violet500,
+  'icon/selected/violet': palette.violet500,
+  'icon/selected': palette.gray900,
   'icon/primary/subtle': palette.violet300,
+  'icon/primary': palette.violet500,
   'icon/primary/bold': palette.violet700,
   'icon/success': palette.green500,
   'icon/warning': palette.yellow500,
