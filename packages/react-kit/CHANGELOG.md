@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.0.0...@teamturing/react-kit@2.0.1) (2023-09-21)
+
+### Bug Fixes
+
+- **react-kit:** update IconToggleButton color ([48b0488](https://github.com/weareteamturing/bombe/commit/48b0488b6de68fcf6e24361c0f5bed00f8a1c832))
+
 # [2.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.4.0...@teamturing/react-kit@2.0.0) (2023-09-21)
 
 ### Bug Fixes

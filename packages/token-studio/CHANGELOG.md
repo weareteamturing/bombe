@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.1.6...@teamturing/token-studio@1.1.7) (2023-09-21)
+
+### Bug Fixes
+
+- **token-studio:** remove wrong generated files ([a898020](https://github.com/weareteamturing/bombe/commit/a89802085935f9ff773e58f0ab9957a2d09499cf))
+- **token-studio:** update color token ([2996079](https://github.com/weareteamturing/bombe/commit/29960793a93d22ddf732e521cf5007a1ee6594e4))
+
 ## [1.1.6](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.1.5...@teamturing/token-studio@1.1.6) (2023-09-12)
 
 ### Bug Fixes
