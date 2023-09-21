@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.3.2...@teamturing/react-kit@1.4.0) (2023-09-21)
+
+### Features
+
+- **react-kit:** add useMediaQuery hook ([e8aca46](https://github.com/weareteamturing/bombe/commit/e8aca46ce994849b91e5c240374a916e82353b28))
+
 ## [1.3.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@1.3.1...@teamturing/react-kit@1.3.2) (2023-09-19)
 
 **Note:** Version bump only for package @teamturing/react-kit
