@@ -47,6 +47,11 @@ export { default as UnstyledButton } from './core/_UnstyledButton';
 export type { UnstyledButtonProps } from './core/_UnstyledButton';
 
 /**
+ * enigma component
+ */
+export { default as EnigmaUI } from './enigma/EnigmaUI';
+
+/**
  * hooks
  */
 export { default as useDevice } from './hook/useDevice';
