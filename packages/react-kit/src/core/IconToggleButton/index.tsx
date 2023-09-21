@@ -111,7 +111,7 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
           backgroundColor: color['bg/neutral/subtler'],
           ...(selected
             ? {
-                color: color['icon/selected/primary'],
+                color: color['icon/selected/violet'],
               }
             : {
                 color: color['icon/neutral'],
