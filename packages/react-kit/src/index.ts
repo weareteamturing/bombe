@@ -1,3 +1,6 @@
+/**
+ * core components
+ */
 export { default as Button } from './core/Button';
 export type { ButtonProps } from './core/Button';
 
@@ -15,6 +18,9 @@ export type { IconButtonProps } from './core/IconButton';
 
 export { default as IconToggleButton } from './core/IconToggleButton';
 export type { IconToggleButtonProps } from './core/IconToggleButton';
+
+export { default as Image } from './core/Image';
+export type { ImageProps } from './core/Image';
 
 export { default as ItemList } from './core/ItemList';
 export type { ItemListProps } from './core/ItemList';
@@ -40,6 +46,9 @@ export type { ViewProps } from './core/View';
 export { default as UnstyledButton } from './core/_UnstyledButton';
 export type { UnstyledButtonProps } from './core/_UnstyledButton';
 
+/**
+ * hooks
+ */
 export { default as useDevice } from './hook/useDevice';
 
 export { default as useOutsideClick } from './hook/useOutsideClick';
