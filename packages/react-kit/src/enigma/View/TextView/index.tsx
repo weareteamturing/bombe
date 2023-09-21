@@ -1,7 +1,7 @@
 import Text from '../../../core/Text';
-import { TextView } from '../../types';
+import { TextView as TextViewType } from '../../types';
 
-type Props = { view: TextView };
+type Props = { view: TextViewType };
 
 const TextView = ({ view: { text, textProps } }: Props) => <Text {...textProps}>{text}</Text>;
 
