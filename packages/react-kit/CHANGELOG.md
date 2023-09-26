@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.1.0...@teamturing/react-kit@2.1.1) (2023-09-26)
+
+### Bug Fixes
+
+- **react-kit:** update theme structure ([291c482](https://github.com/weareteamturing/bombe/commit/291c4828d30970eaf45454dccd68299b71d5e9da))
+
 # [2.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.0.1...@teamturing/react-kit@2.1.0) (2023-09-26)
 
 ### Bug Fixes
