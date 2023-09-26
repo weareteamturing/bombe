@@ -62,7 +62,7 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
     'transition': 'background-color 100ms, color 100ms',
     '& svg': { display: 'block' },
     'cursor': $disabled ? 'not-allowed' : 'pointer',
-    ':focus-visible': {
+    '&:focus-visible': {
       outlineColor: color['border/focused'],
       outlineStyle: 'solid',
       outlineWidth: 2,

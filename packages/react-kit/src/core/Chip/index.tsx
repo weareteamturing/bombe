@@ -113,7 +113,7 @@ const BaseChip = styled.span<Props & SxProp>(
         'backgroundColor': color['bg/neutral/subtler'],
         'color': color['text/primary'],
         '& svg': { color: color['icon/primary'] },
-        ':after': {
+        '&:after': {
           content: '""',
           position: 'absolute',
           top: 0,
@@ -131,7 +131,7 @@ const BaseChip = styled.span<Props & SxProp>(
         'backgroundColor': color['bg/neutral/subtler'],
         'color': color['text/neutral/subtle'],
         '& svg': { color: color['icon/neutral/bolder'] },
-        ':after': {
+        '&:after': {
           content: '""',
           position: 'absolute',
           top: 0,
