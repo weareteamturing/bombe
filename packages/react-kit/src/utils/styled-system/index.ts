@@ -34,5 +34,10 @@ type WordBreakProps<ThemeType extends Theme = RequiredTheme> = {
 };
 const wordBreak = system({ wordBreak: { property: 'wordBreak', scale: 'wordBreak' } });
 
-export { sx, textDecoration, whiteSpace, wordBreak };
-export type { BetterSystemStyleObject, AsProp, TextDecorationProps, WhiteSpaceProps, WordBreakProps };
+type LineClampProps<ThemeType extends Theme = RequiredTheme> = {
+  lineClamp?: ResponsiveValue<CSS.Property.LineClamp, ThemeType> | undefined;
+};
+const lineClamp = system({ lineClamp: { property: 'WebkitLineClamp', scale: 'WebkitLineClamp' } });
+
+export { sx, textDecoration, whiteSpace, wordBreak, lineClamp };
+export type { BetterSystemStyleObject, AsProp, TextDecorationProps, WhiteSpaceProps, WordBreakProps, LineClampProps };
