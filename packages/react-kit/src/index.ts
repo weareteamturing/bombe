@@ -40,6 +40,8 @@ export type { StyledIconProps } from './core/StyledIcon';
 export { default as Text } from './core/Text';
 export type { TextProps } from './core/Text';
 
+export { default as ThemeProvider } from './core/ThemeProvider';
+
 export { default as View } from './core/View';
 export type { ViewProps } from './core/View';
 
@@ -63,3 +65,8 @@ export { default as useProvidedOrCreatedRef } from './hook/useProvidedOrCreatedR
 export { default as useResize } from './hook/useResize';
 
 export { default as useToggleHandler } from './hook/useToggleHandler';
+
+/**
+ * theme
+ */
+export { default as theme } from './theme';
