@@ -70,3 +70,8 @@ export { default as useToggleHandler } from './hook/useToggleHandler';
  * theme
  */
 export { default as theme } from './theme';
+
+/**
+ * styled-system utils
+ */
+export * from './utils/styled-system';
