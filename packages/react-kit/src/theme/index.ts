@@ -18,7 +18,7 @@ const theme = {
   fontSizes,
   lineHeights,
   radii,
-  colors: { ...color, surfaceElevation },
+  colors: { ...color, ...surfaceElevation },
   gradients: gradient,
   shadows: { ...shadowElevation },
 };
