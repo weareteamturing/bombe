@@ -4,6 +4,7 @@ import { ComponentType } from 'react';
 import useMediaQuery from '../../hook/useMediaQuery';
 import { SingleColumnLayout } from '../Layout';
 import { ImageView, TextView } from '../View';
+import ChipGroupView from '../View/ChipGroupView';
 import {
   ILayoutContainer,
   ISection,
@@ -63,6 +64,7 @@ const getViewComponent: (viewContainer: IViewContainer) => ComponentType<any> = 
   const renderableViewComponent: Record<ViewComponentType, ComponentType<any>> = {
     TextView: TextView,
     ImageView: ImageView,
+    ChipGroupView: ChipGroupView,
   };
   const ViewComponent = renderableViewComponent[viewContainer.viewComponentType];
 
