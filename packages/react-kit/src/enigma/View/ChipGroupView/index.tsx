@@ -5,8 +5,8 @@ type Props = {
   view: ChipGroupView;
 };
 
-const ChipGroupView = ({ view: { size = 'm', chips = [] } }: Props) => (
-  <Stack gapX={1} gapY={1}>
+const ChipGroupView = ({ view: { size = 'm', gapX = 1, gapY = 1, chips = [] } }: Props) => (
+  <Stack gapX={gapX} gapY={gapY}>
     <ItemList
       items={chips}
       renderItem={({ text, variant }) => (

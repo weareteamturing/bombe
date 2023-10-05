@@ -1,4 +1,4 @@
-import { ChipProps } from '../..';
+import { ChipProps, StackProps } from '../..';
 
 /**
  * Default Types
@@ -21,6 +21,8 @@ export type ImageView = {
 };
 export type ChipGroupView = {
   size: ChipProps['size'];
+  gapX: StackProps['gapX'];
+  gapY: StackProps['gapY'];
   chips: Array<{ text: string; variant: ChipProps['variant'] }>;
 };
 
