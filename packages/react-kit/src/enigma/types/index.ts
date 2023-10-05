@@ -26,7 +26,7 @@ export type ChipGroupView = {
   chips: Array<{ text: string; variant: ChipProps['variant'] }>;
 };
 
-export type View = TextView | ImageView;
+export type View = TextView | ImageView | ChipGroupView;
 export type ViewComponentType = 'TextView' | 'ImageView' | 'ChipGroupView';
 
 export interface IViewContainer {

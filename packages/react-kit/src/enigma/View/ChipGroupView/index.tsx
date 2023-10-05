@@ -1,8 +1,8 @@
 import { Stack, Chip, ItemList } from '../../..';
-import { ChipGroupView } from '../../types';
+import { ChipGroupView as ChipGroupViewType } from '../../types';
 
 type Props = {
-  view: ChipGroupView;
+  view: ChipGroupViewType;
 };
 
 const ChipGroupView = ({ view: { size = 'm', gapX = 1, gapY = 1, chips = [] } }: Props) => (
