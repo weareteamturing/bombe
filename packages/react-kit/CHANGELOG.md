@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.2.0...@teamturing/react-kit@2.3.0) (2023-10-05)
+
+### Bug Fixes
+
+- **react-kit:** add gapX, gapY to ChipGroupView in EnigmaUI ([64cbb9d](https://github.com/weareteamturing/bombe/commit/64cbb9d065e4cfc0431225176581a0a329c7222b))
+- **react-kit:** update types ([da7b593](https://github.com/weareteamturing/bombe/commit/da7b59394fefbe6cf2fc905c3974eb5ff7646b61))
+
+### Features
+
+- **react-kit:** add ChipGroupView to EnigmaUI ([22e4a9e](https://github.com/weareteamturing/bombe/commit/22e4a9e570a1554778971b54b55ba21778d973f1))
+
 # [2.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.1.1...@teamturing/react-kit@2.2.0) (2023-09-26)
 
 ### Features
