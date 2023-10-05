@@ -1,3 +1,5 @@
+import { ChipProps, StackProps } from '../..';
+
 /**
  * Default Types
  */
@@ -17,9 +19,15 @@ export type ImageView = {
   width: number;
   height: number;
 };
+export type ChipGroupView = {
+  size: ChipProps['size'];
+  gapX: StackProps['gapX'];
+  gapY: StackProps['gapY'];
+  chips: Array<{ text: string; variant: ChipProps['variant'] }>;
+};
 
-export type View = TextView | ImageView;
-export type ViewComponentType = 'TextView' | 'ImageView';
+export type View = TextView | ImageView | ChipGroupView;
+export type ViewComponentType = 'TextView' | 'ImageView' | 'ChipGroupView';
 
 export interface IViewContainer {
   id: string;
