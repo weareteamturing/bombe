@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.5.0...@teamturing/react-kit@2.6.0) (2023-10-06)
+
+### Features
+
+- **react-kit:** add TextInput, Textarea components ([0489905](https://github.com/weareteamturing/bombe/commit/048990599f02216d928f9c7e172ead27b513b1d6))
+
 # [2.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.4.0...@teamturing/react-kit@2.5.0) (2023-10-06)
 
 ### Features
