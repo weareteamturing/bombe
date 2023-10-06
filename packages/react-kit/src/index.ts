@@ -7,6 +7,11 @@ export type { ButtonProps } from './core/Button';
 export { default as Chip } from './core/Chip';
 export type { ChipProps } from './core/Chip';
 
+export { default as Dialog } from './core/Dialog';
+export type { DialogProps } from './core/Dialog';
+
+export { default as DialogHandler } from './core/DialogHandler';
+
 export { default as GradientText } from './core/GradientText';
 export type { GradientTextProps } from './core/GradientText';
 
@@ -24,6 +29,8 @@ export type { ImageProps } from './core/Image';
 
 export { default as ItemList } from './core/ItemList';
 export type { ItemListProps } from './core/ItemList';
+
+export { default as MotionView } from './core/MotionView';
 
 export { default as Space } from './core/Space';
 export type { SpaceProps } from './core/Space';
