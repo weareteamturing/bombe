@@ -1,10 +1,4 @@
-import { ChipProps, StackProps } from '../..';
-
-/**
- * Default Types
- */
-type TextProps = any;
-type SpaceProps = any;
+import { ChipProps, StackProps, TextProps, SpaceProps } from '../..';
 
 /**
  * View Related Model
