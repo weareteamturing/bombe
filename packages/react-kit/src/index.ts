@@ -7,6 +7,11 @@ export type { ButtonProps } from './core/Button';
 export { default as Chip } from './core/Chip';
 export type { ChipProps } from './core/Chip';
 
+export { default as Dialog } from './core/Dialog';
+export type { DialogProps } from './core/Dialog';
+
+export { default as DialogHandler } from './core/DialogHandler';
+
 export { default as GradientText } from './core/GradientText';
 export type { GradientTextProps } from './core/GradientText';
 
