@@ -47,6 +47,12 @@ export type { StyledIconProps } from './core/StyledIcon';
 export { default as Text } from './core/Text';
 export type { TextProps } from './core/Text';
 
+export { default as Textarea } from './core/Textarea';
+export type { TextareaProps } from './core/Textarea';
+
+export { default as TextInput } from './core/TextInput';
+export type { TextInputProps } from './core/TextInput';
+
 export { default as ThemeProvider } from './core/ThemeProvider';
 
 export { default as View } from './core/View';
