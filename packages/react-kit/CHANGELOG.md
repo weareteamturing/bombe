@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.3.0...@teamturing/react-kit@2.3.1) (2023-10-06)
+
+### Bug Fixes
+
+- **react-kit:** add use client denotes ([38ce6ef](https://github.com/weareteamturing/bombe/commit/38ce6efdf9aff9db2bfb0c3b9b9ab2b45a7dcbed))
+- **react-kit:** remove circular dependency ([ed307d9](https://github.com/weareteamturing/bombe/commit/ed307d940ede8db7811ccfc8c03ebd81ee69e6a8))
+- **react-kit:** remove use client denotes ([8f346d7](https://github.com/weareteamturing/bombe/commit/8f346d7aacdc88abdea8afed95b407b864fc1d61))
+- **react-kit:** update types for EnigmaUI ([ae495ff](https://github.com/weareteamturing/bombe/commit/ae495ff104eceffbf5fee0dcc67c4c89c7d45d7f))
+
 # [2.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.2.0...@teamturing/react-kit@2.3.0) (2023-10-05)
 
 ### Bug Fixes
