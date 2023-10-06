@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.4.0...@teamturing/react-kit@2.5.0) (2023-10-06)
+
+### Features
+
+- **react-kit:** add Dialog related components ([611b8bb](https://github.com/weareteamturing/bombe/commit/611b8bb2783a172194e0cb4f5cff8890f15f03d0))
+- **react-kit:** add MotionView component ([f90e7a4](https://github.com/weareteamturing/bombe/commit/f90e7a4250414ddad3a845397aa42503949a809c))
+
 # [2.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.3.1...@teamturing/react-kit@2.4.0) (2023-10-06)
 
 ### Features
