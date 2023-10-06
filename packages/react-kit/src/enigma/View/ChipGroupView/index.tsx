@@ -1,4 +1,6 @@
-import { Stack, Chip, ItemList } from '../../..';
+import Chip from '../../../core/Chip';
+import ItemList from '../../../core/ItemList';
+import Stack from '../../../core/Stack';
 import { ChipGroupView as ChipGroupViewType } from '../../types';
 
 type Props = {
