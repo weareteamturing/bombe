@@ -15,6 +15,9 @@
     "esModuleInterop": true,
 
     // Language and Environment: https://www.typescriptlang.org/tsconfig#Language_and_Environment_6254
-    "target": "ES6"
+    "target": "ES6",
+
+    // Completeness :https://www.typescriptlang.org/tsconfig#Completeness_6257
+    "skipLibCheck": true
   }
 }
