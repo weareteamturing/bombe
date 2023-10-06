@@ -71,4 +71,4 @@ const getViewComponent: (viewContainer: IViewContainer) => ComponentType<any> = 
   return ViewComponent;
 };
 
-export default EnigmaUI;
+export default Object.assign(EnigmaUI, { TextView, ImageView, ChipGroupViewType });
