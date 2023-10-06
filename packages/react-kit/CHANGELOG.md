@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.3.1...@teamturing/react-kit@2.4.0) (2023-10-06)
+
+### Features
+
+- **react-kit:** add compound components to EnigmaUI ([bc52c1d](https://github.com/weareteamturing/bombe/commit/bc52c1da03f5926b8c9f9a6cd905f40b10f36abb))
+
 ## [2.3.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.3.0...@teamturing/react-kit@2.3.1) (2023-10-06)
 
 ### Bug Fixes
