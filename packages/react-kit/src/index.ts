@@ -25,6 +25,8 @@ export type { ImageProps } from './core/Image';
 export { default as ItemList } from './core/ItemList';
 export type { ItemListProps } from './core/ItemList';
 
+export { default as MotionView } from './core/MotionView';
+
 export { default as Space } from './core/Space';
 export type { SpaceProps } from './core/Space';
 

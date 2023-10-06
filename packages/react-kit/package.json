@@ -51,6 +51,7 @@
   "dependencies": {
     "@teamturing/icons": "workspace:^",
     "@teamturing/token-studio": "workspace:^",
+    "framer-motion": "^10.16.4",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "styled-system": "^5.1.5"
