@@ -3089,6 +3089,7 @@ __metadata:
     "@teamturing/token-studio": "workspace:^"
     "@types/lodash.debounce": ^4.0.7
     "@types/lodash.throttle": ^4.1.7
+    "@types/react-is": ^18.2.2
     "@types/styled-system": ^5.1.17
     "@types/styled-system__css": ^5.0.17
     csstype: ^3.1.2
@@ -3096,6 +3097,7 @@ __metadata:
     lodash.debounce: ^4.0.8
     lodash.throttle: ^4.1.1
     react: ^18.2.0
+    react-is: ^18.2.0
     rollup-plugin-postcss: ^4.0.2
     styled-components: ^6.0.7
     styled-system: ^5.1.5
@@ -3363,6 +3365,26 @@ __metadata:
   version: 15.7.5
   resolution: "@types/prop-types@npm:15.7.5"
   checksum: 5b43b8b15415e1f298243165f1d44390403bb2bd42e662bca3b5b5633fdd39c938e91b7fce3a9483699db0f7a715d08cef220c121f723a634972fdf596aec980
+  languageName: node
+  linkType: hard
+
+"@types/react-is@npm:^18.2.2":
+  version: 18.2.2
+  resolution: "@types/react-is@npm:18.2.2"
+  dependencies:
+    "@types/react": "*"
+  checksum: b7b9ccdb1cfdd3c0341759abc5acc6cf356be27e8d0d7824072d2dbe4f8e3aa000ac3a6516f4c55420ea1a3adef8e3d189db7800e49486bb144aca69edf0e31d
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:*":
+  version: 18.2.25
+  resolution: "@types/react@npm:18.2.25"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 177515cd44135d56191ec6c5c10edd490c96c175d37624d9c37bc2007c3abcf6cc2d2137d2a073d692cdc5129d5d5785bd60a6ddd315f695da5d8b989fa2afc5
   languageName: node
   linkType: hard
 
@@ -10376,7 +10398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^18.0.0":
+"react-is@npm:^18.0.0, react-is@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
