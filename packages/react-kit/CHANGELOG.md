@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.7.1...@teamturing/react-kit@2.7.2) (2023-10-11)
+
+### Bug Fixes
+
+- **react-kit:** add missing key to EnigmaUI GridView ([b231ad7](https://github.com/weareteamturing/bombe/commit/b231ad772098edad0428ccd6a677dd9f67b1cc75))
+
 ## [2.7.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.7.0...@teamturing/react-kit@2.7.1) (2023-10-11)
 
 ### Bug Fixes
