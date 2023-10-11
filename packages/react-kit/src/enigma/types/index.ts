@@ -1,25 +1,35 @@
+import icons from '@teamturing/icons';
 import { ImgHTMLAttributes } from 'react';
 
-import { ChipProps, StackProps, TextProps, SpaceProps } from '../..';
+import { ChipProps, StackProps, TextProps, SpaceProps, GridProps, GridUnitProps, StyledIconProps } from '../..';
 
 /**
  * View Related Model
  */
 export type TextView = {
   text: string;
-  textProps?: TextProps;
+  textProps?: Omit<TextProps, 'sx'>;
 };
 export type ImageView = Pick<ImgHTMLAttributes<HTMLImageElement>, 'src' | 'alt' | 'width' | 'height' | 'loading'>;
-
+export type IconView = {
+  icon: keyof typeof icons;
+  iconProps: Omit<StyledIconProps, 'sx' | 'icon'>;
+};
 export type ChipGroupView = {
-  size: ChipProps['size'];
-  gapX: StackProps['gapX'];
-  gapY: StackProps['gapY'];
   chips: Array<{ text: string; variant: ChipProps['variant'] }>;
+  chipGroupProps: {
+    size: ChipProps['size'];
+    gapX: StackProps['gapX'];
+    gapY: StackProps['gapY'];
+  };
+};
+export type GridView = {
+  units: Array<{ view: IViewContainer; unitProps: Omit<GridUnitProps, 'sx'> }>;
+  gridProps: Omit<GridProps, 'sx' | 'as'>;
 };
 
-export type View = TextView | ImageView | ChipGroupView;
-export type ViewComponentType = 'TextView' | 'ImageView' | 'ChipGroupView';
+export type View = TextView | ImageView | IconView | ChipGroupView | GridView;
+export type ViewComponentType = 'TextView' | 'ImageView' | 'IconView' | 'ChipGroupView' | 'GridView';
 
 export interface IViewContainer {
   id: string;
