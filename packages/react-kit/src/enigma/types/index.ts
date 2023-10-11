@@ -24,7 +24,7 @@ export type ChipGroupView = {
   };
 };
 export type GridView = {
-  units: Array<{ view: IViewContainer; unitProps: Omit<GridUnitProps, 'sx'> }>;
+  units: Array<{ views: IViewContainer[]; unitProps: Omit<GridUnitProps, 'sx'> }>;
   gridProps: Omit<GridProps, 'sx' | 'as'>;
 };
 

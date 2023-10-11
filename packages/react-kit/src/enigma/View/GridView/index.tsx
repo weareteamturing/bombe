@@ -1,5 +1,4 @@
 import Grid from '../../../core/Grid';
-import ItemList from '../../../core/ItemList';
 import { getViewComponent } from '../../EnigmaUI';
 import { GridView as GridViewType } from '../../types';
 
@@ -9,17 +8,18 @@ type Props = {
 
 const GridView = ({ view: { units = [], gridProps } }: Props) => (
   <Grid {...gridProps}>
-    <ItemList
-      items={units}
-      renderItem={({ view: viewContainer, unitProps }) => {
-        const ViewComponent = getViewComponent(viewContainer);
-        return (
-          <Grid.Unit key={viewContainer.id} {...unitProps}>
-            <ViewComponent view={viewContainer.view} />
-          </Grid.Unit>
-        );
-      }}
-    />
+    {units.map(({ views: viewContainers, unitProps }) => {
+      const unitKeySeperator = '_';
+      const unitKey = viewContainers.map(({ id }) => id).join(unitKeySeperator);
+      return (
+        <Grid.Unit key={unitKey} {...unitProps}>
+          {viewContainers.map((viewContainer) => {
+            const ViewComponent = getViewComponent(viewContainer);
+            return <ViewComponent view={viewContainer.view} />;
+          })}
+        </Grid.Unit>
+      );
+    })}
   </Grid>
 );
 
