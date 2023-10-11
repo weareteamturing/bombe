@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.6.1...@teamturing/react-kit@2.7.0) (2023-10-11)
+
+### Bug Fixes
+
+- **react-kit:** update gridview ([c1fac2f](https://github.com/weareteamturing/bombe/commit/c1fac2f70ae6fa2ca6738cad5a7f20e5c163f7f2))
+- **react-kit:** update icon import logic ([e3ea230](https://github.com/weareteamturing/bombe/commit/e3ea230fe26ebcd501bf507d8d9cebb2ac7b9d4b))
+
+### Features
+
+- **react-kit:** update Enigma with Icon, Grid, ChipGroup ([5dc73d7](https://github.com/weareteamturing/bombe/commit/5dc73d7095e363426be5998fa23a1283df9d646b))
+
 ## [2.6.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.6.0...@teamturing/react-kit@2.6.1) (2023-10-11)
 
 ### Bug Fixes
