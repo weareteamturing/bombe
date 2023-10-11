@@ -1,19 +1,33 @@
 import icons from '@teamturing/icons';
-import { ImgHTMLAttributes } from 'react';
 
-import { ChipProps, StackProps, TextProps, SpaceProps, GridProps, GridUnitProps, StyledIconProps } from '../..';
+import {
+  ChipProps,
+  StackProps,
+  TextProps,
+  SpaceProps,
+  GridProps,
+  GridUnitProps,
+  StyledIconProps,
+  ImageProps,
+} from '../..';
 
 /**
  * View Related Model
  */
 export type TextView = {
   text: string;
-  textProps?: Omit<TextProps, 'sx'>;
+  textProps?: TextProps;
 };
-export type ImageView = Pick<ImgHTMLAttributes<HTMLImageElement>, 'src' | 'alt' | 'width' | 'height' | 'loading'>;
+export type ImageView = {
+  src: ImageProps['src'];
+  alt: ImageProps['alt'];
+  width: ImageProps['width'];
+  height: ImageProps['height'];
+  imageProps: Omit<ImageProps, 'src' | 'alt' | 'width' | 'height'>;
+};
 export type IconView = {
   icon: keyof typeof icons;
-  iconProps: Omit<StyledIconProps, 'sx' | 'icon'>;
+  iconProps: Omit<StyledIconProps, 'icon'>;
 };
 export type ChipGroupView = {
   chips: Array<{ text: string; variant: ChipProps['variant'] }>;
