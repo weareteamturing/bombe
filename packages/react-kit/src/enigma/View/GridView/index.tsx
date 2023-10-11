@@ -1,4 +1,5 @@
-import { Grid, ItemList } from '../../..';
+import Grid from '../../../core/Grid';
+import ItemList from '../../../core/ItemList';
 import { getViewComponent } from '../../EnigmaUI';
 import { GridView as GridViewType } from '../../types';
 

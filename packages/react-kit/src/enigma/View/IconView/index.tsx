@@ -1,6 +1,6 @@
-import icons from '@teamturing/icons';
+import * as icons from '@teamturing/icons';
 
-import { StyledIcon } from '../../..';
+import StyledIcon from '../../../core/StyledIcon';
 import { IconView as IconViewType } from '../../types';
 
 type Props = {
