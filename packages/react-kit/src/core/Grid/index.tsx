@@ -132,4 +132,4 @@ const Unit = ({ size, as, children, ...props }: PropsWithChildren<GridUnitProps>
 };
 
 export default Object.assign(Grid, { Unit });
-export type { Props as GridProps };
+export type { Props as GridProps, GridUnitProps };
