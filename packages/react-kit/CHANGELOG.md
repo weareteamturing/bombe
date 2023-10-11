@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.6.0...@teamturing/react-kit@2.6.1) (2023-10-11)
+
+### Bug Fixes
+
+- **react-kit:** update ImageView in Enigma ([8a5e4bb](https://github.com/weareteamturing/bombe/commit/8a5e4bb5f3042435f2e15c9522e4f30f3bf03125))
+
 # [2.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.5.0...@teamturing/react-kit@2.6.0) (2023-10-06)
 
 ### Features
