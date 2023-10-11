@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.7.0...@teamturing/react-kit@2.7.1) (2023-10-11)
+
+### Bug Fixes
+
+- **react-kit:** open sx props to base enigma view ([a21037c](https://github.com/weareteamturing/bombe/commit/a21037cdd0639ca1a26c86a9fb7407c9829edaa9))
+
 # [2.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.6.1...@teamturing/react-kit@2.7.0) (2023-10-11)
 
 ### Bug Fixes
