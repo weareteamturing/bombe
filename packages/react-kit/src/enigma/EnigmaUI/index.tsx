@@ -3,8 +3,7 @@ import { ComponentType } from 'react';
 
 import useMediaQuery from '../../hook/useMediaQuery';
 import { SingleColumnLayout } from '../Layout';
-import { ImageView, TextView } from '../View';
-import ChipGroupViewType from '../View/ChipGroupView';
+import { ImageView, TextView, IconView, ChipGroupView, GridView } from '../View';
 import {
   ILayoutContainer,
   ISection,
@@ -47,7 +46,7 @@ const EnigmaUI = ({ section: { views, responsiveLayout } }: Props) => {
   return <LayoutComponent layout={layout} viewsObject={viewsObject} viewComponentsObject={viewComponentsObject} />;
 };
 
-const getLayoutComponent: (layoutContainer: ILayoutContainer) => ComponentType<{
+export const getLayoutComponent: (layoutContainer: ILayoutContainer) => ComponentType<{
   layout: Layout;
   viewsObject: { [k: string]: View };
   viewComponentsObject: { [k: string]: ComponentType<any> };
@@ -60,15 +59,17 @@ const getLayoutComponent: (layoutContainer: ILayoutContainer) => ComponentType<{
   return LayoutComponent;
 };
 
-const getViewComponent: (viewContainer: IViewContainer) => ComponentType<any> = (viewContainer) => {
+export const getViewComponent: (viewContainer: IViewContainer) => ComponentType<any> = (viewContainer) => {
   const renderableViewComponent: Record<ViewComponentType, ComponentType<any>> = {
     TextView: TextView,
     ImageView: ImageView,
-    ChipGroupView: ChipGroupViewType,
+    IconView: IconView,
+    ChipGroupView: ChipGroupView,
+    GridView: GridView,
   };
   const ViewComponent = renderableViewComponent[viewContainer.viewComponentType];
 
   return ViewComponent;
 };
 
-export default Object.assign(EnigmaUI, { TextView, ImageView, ChipGroupViewType });
+export default Object.assign(EnigmaUI, { TextView, ImageView, IconView, ChipGroupView, GridView });

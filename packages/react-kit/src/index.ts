@@ -16,7 +16,7 @@ export { default as GradientText } from './core/GradientText';
 export type { GradientTextProps } from './core/GradientText';
 
 export { default as Grid } from './core/Grid';
-export type { GridProps } from './core/Grid';
+export type { GridProps, GridUnitProps } from './core/Grid';
 
 export { default as IconButton } from './core/IconButton';
 export type { IconButtonProps } from './core/IconButton';
