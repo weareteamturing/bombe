@@ -1,3 +1,5 @@
+import { ImgHTMLAttributes } from 'react';
+
 import { ChipProps, StackProps, TextProps, SpaceProps } from '../..';
 
 /**
@@ -7,12 +9,8 @@ export type TextView = {
   text: string;
   textProps?: TextProps;
 };
-export type ImageView = {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-};
+export type ImageView = Pick<ImgHTMLAttributes<HTMLImageElement>, 'src' | 'alt' | 'width' | 'height' | 'loading'>;
+
 export type ChipGroupView = {
   size: ChipProps['size'];
   gapX: StackProps['gapX'];
