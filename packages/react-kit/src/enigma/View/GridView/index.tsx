@@ -15,7 +15,7 @@ const GridView = ({ view: { units = [], gridProps } }: Props) => (
         <Grid.Unit key={unitKey} {...unitProps}>
           {viewContainers.map((viewContainer) => {
             const ViewComponent = getViewComponent(viewContainer);
-            return <ViewComponent view={viewContainer.view} />;
+            return <ViewComponent key={viewContainer.id} view={viewContainer.view} />;
           })}
         </Grid.Unit>
       );
