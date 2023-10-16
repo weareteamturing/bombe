@@ -44,6 +44,9 @@ export type { StackProps } from './core/Stack';
 export { default as StyledIcon } from './core/StyledIcon';
 export type { StyledIconProps } from './core/StyledIcon';
 
+export { default as Tab } from './core/Tab';
+export type { TabProps } from './core/Tab';
+
 export { default as Text } from './core/Text';
 export type { TextProps } from './core/Text';
 
@@ -54,6 +57,12 @@ export { default as TextInput } from './core/TextInput';
 export type { TextInputProps } from './core/TextInput';
 
 export { default as ThemeProvider } from './core/ThemeProvider';
+
+export { default as Toast } from './core/Toast';
+export type { ToastProps } from './core/Toast';
+
+export { default as Tooltip } from './core/Tooltip';
+export type { TooptipProps } from './core/Tooltip';
 
 export { default as View } from './core/View';
 export type { ViewProps } from './core/View';
