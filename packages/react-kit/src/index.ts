@@ -55,6 +55,9 @@ export type { TextInputProps } from './core/TextInput';
 
 export { default as ThemeProvider } from './core/ThemeProvider';
 
+export { default as Tooltip } from './core/Tooltip';
+export type { TooptipProps } from './core/Tooltip';
+
 export { default as View } from './core/View';
 export type { ViewProps } from './core/View';
 
