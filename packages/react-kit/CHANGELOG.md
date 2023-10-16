@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.7.2...@teamturing/react-kit@2.8.0) (2023-10-16)
+
+### Features
+
+- **react-kit:** add Tab component ([ecd5b53](https://github.com/weareteamturing/bombe/commit/ecd5b531c288fe7043cd83cdbae5445cc374b189))
+- **react-kit:** add Toast component ([e1c87f8](https://github.com/weareteamturing/bombe/commit/e1c87f8f471ee8274c5cb3b2dbf60822fefcb102))
+- **react-kit:** add Tooltip component ([72c21f7](https://github.com/weareteamturing/bombe/commit/72c21f78b2be4121dbe3765802939effb33c350e))
+
 ## [2.7.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.7.1...@teamturing/react-kit@2.7.2) (2023-10-11)
 
 ### Bug Fixes
