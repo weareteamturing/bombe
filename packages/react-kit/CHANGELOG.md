@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.8.1...@teamturing/react-kit@2.9.0) (2023-10-17)
+
+### Features
+
+- **react-kit:** add Breadcrumbs component ([6d35702](https://github.com/weareteamturing/bombe/commit/6d35702fcacf203abccc63659a68f72683b1b05e))
+
 ## [2.8.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.8.0...@teamturing/react-kit@2.8.1) (2023-10-17)
 
 ### Bug Fixes
