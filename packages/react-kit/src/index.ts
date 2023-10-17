@@ -1,6 +1,9 @@
 /**
  * core components
  */
+export { default as Breadcrumbs } from './core/Breadcrumbs';
+export type { BreadcrumbsProps } from './core/Breadcrumbs';
+
 export { default as Button } from './core/Button';
 export type { ButtonProps } from './core/Button';
 
