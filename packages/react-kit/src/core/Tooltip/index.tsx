@@ -2,6 +2,7 @@ import { HTMLAttributes, PropsWithChildren } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { forcePixelValue } from '../../utils';
+import { SxProp, sx } from '../../utils/styled-system';
 
 type Props = {
   /**
@@ -20,13 +21,20 @@ type Props = {
    * Tooltip의 텍스트를 정의합니다.
    */
   text?: string;
-} & Pick<HTMLAttributes<HTMLSpanElement>, 'className'>;
+} & SxProp &
+  Pick<HTMLAttributes<HTMLSpanElement>, 'className'>;
 
-const Tooltip = ({ children, direction = 'top-center', text, className: propClassName }: PropsWithChildren<Props>) => {
+const Tooltip = ({
+  children,
+  direction = 'top-center',
+  text,
+  className: propClassName,
+  sx,
+}: PropsWithChildren<Props>) => {
   const className = [propClassName, `tooltip-direction-${direction}`].join(' ');
 
   return (
-    <BaseTooltip role={'tooltip'} aria-label={text} className={className}>
+    <BaseTooltip role={'tooltip'} aria-label={text} className={className} sx={sx}>
       {children}
     </BaseTooltip>
   );
@@ -42,7 +50,7 @@ const tooltipAppear = keyframes`
   }
 `;
 
-const BaseTooltip = styled.span`
+const BaseTooltip = styled.span<SxProp>`
   display: inline-block;
   position: relative;
 
@@ -218,6 +226,8 @@ const BaseTooltip = styled.span`
   &.tooltip-direction-right::after {
     right: 100%;
   }
+
+  ${sx}
 `;
 
 export default Tooltip;
