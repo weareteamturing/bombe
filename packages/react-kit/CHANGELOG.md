@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.8.0...@teamturing/react-kit@2.8.1) (2023-10-17)
+
+### Bug Fixes
+
+- **react-kit:** add sx props to Tooltip component ([b6b116d](https://github.com/weareteamturing/bombe/commit/b6b116d60fd4439cd26854959df819804cf296cf))
+
 # [2.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.7.2...@teamturing/react-kit@2.8.0) (2023-10-16)
 
 ### Features
