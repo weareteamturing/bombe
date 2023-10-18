@@ -1,10 +1,10 @@
 import Image from '../../../core/Image';
-import { ImageView as ImageViewType } from '../../types';
+import { ImageViewType } from '../../types';
 
 type Props = { view: ImageViewType };
 
-const ImageView = ({ view: { imageProps, ...props } }: Props) => (
-  <Image loading={'lazy'} display={'block'} {...props} {...imageProps} />
+const ImageView = ({ view: { spaceProps, ...props } }: Props) => (
+  <Image loading={'lazy'} display={'block'} {...props} sx={{ ...spaceProps }} />
 );
 
 export default ImageView;

@@ -5,17 +5,17 @@ import useMediaQuery from '../../hook/useMediaQuery';
 import { SingleColumnLayout } from '../Layout';
 import { ImageView, TextView, IconView, ChipGroupView, GridView } from '../View';
 import {
-  ILayoutContainer,
-  ISection,
-  IViewContainer,
-  Layout,
+  LayoutContainerType,
+  EnigmaSectionType,
+  ViewContainerType,
+  LayoutType,
   LayoutComponentType,
-  View,
+  ViewType,
   ViewComponentType,
 } from '../types';
 
 type Props = {
-  section: ISection;
+  section: EnigmaSectionType;
 };
 
 const EnigmaUI = ({ section: { views, responsiveLayout } }: Props) => {
@@ -46,9 +46,9 @@ const EnigmaUI = ({ section: { views, responsiveLayout } }: Props) => {
   return <LayoutComponent layout={layout} viewsObject={viewsObject} viewComponentsObject={viewComponentsObject} />;
 };
 
-export const getLayoutComponent: (layoutContainer: ILayoutContainer) => ComponentType<{
-  layout: Layout;
-  viewsObject: { [k: string]: View };
+export const getLayoutComponent: (layoutContainer: LayoutContainerType) => ComponentType<{
+  layout: LayoutType;
+  viewsObject: { [k: string]: ViewType };
   viewComponentsObject: { [k: string]: ComponentType<any> };
 }> = (layoutContainer) => {
   const renderableLayoutComponent: Record<LayoutComponentType, ComponentType<any>> = {
@@ -59,7 +59,7 @@ export const getLayoutComponent: (layoutContainer: ILayoutContainer) => Componen
   return LayoutComponent;
 };
 
-export const getViewComponent: (viewContainer: IViewContainer) => ComponentType<any> = (viewContainer) => {
+export const getViewComponent: (viewContainer: ViewContainerType) => ComponentType<any> = (viewContainer) => {
   const renderableViewComponent: Record<ViewComponentType, ComponentType<any>> = {
     TextView: TextView,
     ImageView: ImageView,
