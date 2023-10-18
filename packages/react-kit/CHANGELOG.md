@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.10.0...@teamturing/react-kit@2.10.1) (2023-10-18)
+
+### Bug Fixes
+
+- **react-kit:** update Enigma json schema ([51de07c](https://github.com/weareteamturing/bombe/commit/51de07c29d1ee68d31185e877d12c7ac8a1da941))
+- **react-kit:** update json schema ([72adc43](https://github.com/weareteamturing/bombe/commit/72adc4337c2d74ff0f1a9356bdf895b6b9a847b2))
+
 # [2.10.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.9.0...@teamturing/react-kit@2.10.0) (2023-10-18)
 
 ### Features
