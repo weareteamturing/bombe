@@ -25,7 +25,7 @@
     "check:lint": "eslint ./src --cache",
     "check:type": "tsc --noEmit",
     "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js",
-    "generate-enigma-json-schema": "typescript-json-schema ./tsconfig.json EnigmaSectionType --aliasRefs --topRef --out ./src/enigma/schema/generated.json"
+    "generate-enigma-json-schema": "typescript-json-schema ./tsconfig.json EnigmaSectionType --include=./src/enigma/types/index.ts --aliasRefs --topRef --include=EnigmaSectionType --out ./src/enigma/schema/generated.json"
   },
   "bugs": {
     "url": "https://github.com/weareteamturing/bombe/issues"
