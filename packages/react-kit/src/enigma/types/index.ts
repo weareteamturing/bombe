@@ -9,6 +9,7 @@ import {
   GridUnitProps,
   StyledIconProps,
   ImageProps,
+  AsProp,
 } from '../..';
 
 /**
@@ -16,7 +17,7 @@ import {
  */
 export type TextViewType = {
   text: string;
-  textProps?: {} & Pick<TextProps, 'typography' | 'textAlign' | 'color'>;
+  textProps?: {} & Pick<TextProps, 'typography' | 'textAlign' | 'color'> & AsProp;
   spaceProps?: Omit<SpaceProps, 'sx'>;
 };
 export type ImageViewType = {
