@@ -14,76 +14,76 @@ import {
 /**
  * View Related Model
  */
-export type TextView = {
+export type TextViewType = {
   text: string;
-  textProps?: TextProps;
+  textProps?: {} & Pick<TextProps, 'typography' | 'textAlign' | 'color'>;
+  spaceProps?: Omit<SpaceProps, 'sx'>;
 };
-export type ImageView = {
+export type ImageViewType = {
   src: ImageProps['src'];
   alt: ImageProps['alt'];
   width: ImageProps['width'];
   height: ImageProps['height'];
-  imageProps: Omit<ImageProps, 'src' | 'alt' | 'width' | 'height'>;
+  spaceProps?: Omit<SpaceProps, 'sx'>;
 };
-export type IconView = {
+export type IconViewType = {
   icon: keyof typeof icons;
-  iconProps: Omit<StyledIconProps, 'icon'>;
+  iconProps?: {} & Pick<StyledIconProps, 'size' | 'color'>;
+  spaceProps?: Omit<SpaceProps, 'sx'>;
 };
-export type ChipGroupView = {
+export type ChipGroupViewType = {
   chips: Array<{ text: string; variant: ChipProps['variant'] }>;
-  chipGroupProps: {
-    size: ChipProps['size'];
-    gapX: StackProps['gapX'];
-    gapY: StackProps['gapY'];
-  };
+  chipGroupProps?: {} & Pick<ChipProps, 'size'> & Pick<StackProps, 'gapX' | 'gapY'>;
+  spaceProps?: Omit<SpaceProps, 'sx'>;
 };
-export type GridView = {
-  units: Array<{ views: IViewContainer[]; unitProps: Omit<GridUnitProps, 'sx'> }>;
-  gridProps: Omit<GridProps, 'sx' | 'as'>;
+export type GridViewType = {
+  units: Array<{ views: ViewContainerType[]; unitProps: Pick<GridUnitProps, 'size' | 'order'> }>;
+  gridProps?: Pick<GridProps, 'gapX' | 'gapY' | 'alignItems' | 'justifyContent' | 'wrap'>;
+  spaceProps?: Omit<SpaceProps, 'sx'>;
 };
 
-export type View = TextView | ImageView | IconView | ChipGroupView | GridView;
+export type ViewType = TextViewType | ImageViewType | IconViewType | ChipGroupViewType | GridViewType;
 export type ViewComponentType = 'TextView' | 'ImageView' | 'IconView' | 'ChipGroupView' | 'GridView';
 
-export interface IViewContainer {
+export interface ViewContainerType {
   id: string;
   viewComponentType: ViewComponentType;
-  view: View;
+  view: ViewType;
 }
 
 /**
  * Layout Related Model
  */
-export interface IViewContainerDetail {
+export interface ViewContainerDetailType {
   viewContainerId: string;
-  spaceProps: SpaceProps;
+  spaceProps?: Omit<SpaceProps, 'sx'>;
 }
 
-export type SingleColumnLayout = {
-  main: IViewContainerDetail[];
+export type SingleColumnLayoutType = {
+  main: ViewContainerDetailType[];
 };
 
-export type Layout = SingleColumnLayout;
+export type LayoutType = SingleColumnLayoutType;
 export type LayoutComponentType = 'SingleColumnLayout';
 
-export interface ILayoutContainer {
+export interface LayoutContainerType {
   layoutComponentType: LayoutComponentType;
-  layout: Layout;
+  layout: LayoutType;
 }
 
-export interface IResponsiveLayoutContainer {
-  mobile: ILayoutContainer;
-  tablet?: ILayoutContainer;
-  desktop?: ILayoutContainer;
+export interface ResponsiveLayoutContainerType {
+  mobile: LayoutContainerType;
+  tablet?: LayoutContainerType;
+  desktop?: LayoutContainerType;
 }
 
 /**
  * Section Related Model
  */
-export interface ISection {
+export interface EnigmaSectionType {
   id: string;
-  views: IViewContainer[];
-  responsiveLayout: IResponsiveLayoutContainer;
+  views: ViewContainerType[];
+  responsiveLayout: ResponsiveLayoutContainerType;
 }
 
 // const section: ISection = {

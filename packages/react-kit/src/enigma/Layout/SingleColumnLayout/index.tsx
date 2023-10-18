@@ -1,6 +1,6 @@
 import ItemList from '../../../core/ItemList';
 import Space from '../../../core/Space';
-import { SingleColumnLayout as SingleColumnLayoutType } from '../../types';
+import { SingleColumnLayoutType as SingleColumnLayoutType } from '../../types';
 
 type Props = { layout: SingleColumnLayoutType; viewsObject: any; viewComponentsObject: any };
 
