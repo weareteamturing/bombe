@@ -24,7 +24,8 @@
   "scripts": {
     "check:lint": "eslint ./src --cache",
     "check:type": "tsc --noEmit",
-    "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js"
+    "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js",
+    "generate-enigma-json-schema": "typescript-json-schema ./tsconfig.json EnigmaSectionType --aliasRefs --topRef --out ./src/enigma/schema/generated.json"
   },
   "bugs": {
     "url": "https://github.com/weareteamturing/bombe/issues"
@@ -39,7 +40,8 @@
     "csstype": "^3.1.2",
     "react": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
-    "styled-components": "^6.0.7"
+    "styled-components": "^6.0.7",
+    "typescript-json-schema": "^0.62.0"
   },
   "peerDependencies": {
     "@styled-system/css": "^5.1.5",
