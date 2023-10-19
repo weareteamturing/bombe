@@ -3,7 +3,7 @@ import { ComponentType } from 'react';
 
 import useMediaQuery from '../../hook/useMediaQuery';
 import { SingleColumnLayout } from '../Layout';
-import { ImageView, TextView, IconView, ChipGroupView, GridView } from '../View';
+import { ImageView, TextView, IconView, ChipGroupView, GridView, HorizontalDividerView } from '../View';
 import {
   LayoutContainerType,
   EnigmaSectionType,
@@ -66,6 +66,7 @@ export const getViewComponent: (viewContainer: ViewContainerType) => ComponentTy
     IconView: IconView,
     ChipGroupView: ChipGroupView,
     GridView: GridView,
+    HorizontalDividerView: HorizontalDividerView,
   };
   const ViewComponent = renderableViewComponent[viewContainer.viewComponentType];
 
