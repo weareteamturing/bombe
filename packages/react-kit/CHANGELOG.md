@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.10.1...@teamturing/react-kit@2.11.0) (2023-10-19)
+
+### Bug Fixes
+
+- **react-kit:** update HorizontalDivider props ([ca854b0](https://github.com/weareteamturing/bombe/commit/ca854b0f7110efa89afd94d8fdeebe646aca7c85))
+
+### Features
+
+- **react-kit:** add AnimatedPresence component ([8e7c6d8](https://github.com/weareteamturing/bombe/commit/8e7c6d8c83316a899bf9d65797c60003043b1248))
+- **react-kit:** add HorizontalDivider component ([85cd89b](https://github.com/weareteamturing/bombe/commit/85cd89be75656f0835eef5e463202c5c9d87f1c5))
+- **react-kit:** add HorizontalDividerView to EnigmaUI ([6d8dca4](https://github.com/weareteamturing/bombe/commit/6d8dca45a644c8fec515f85124f6bddc9d742571))
+
 ## [2.10.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.10.0...@teamturing/react-kit@2.10.1) (2023-10-18)
 
 ### Bug Fixes
