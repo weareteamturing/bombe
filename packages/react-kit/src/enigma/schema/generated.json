@@ -32,7 +32,7 @@
             "items": {
                 "properties": {
                     "unitProps": {
-                        "$ref": "#/definitions/Pick_1"
+                        "$ref": "#/definitions/Pick"
                     },
                     "views": {
                         "items": {
@@ -46,7 +46,7 @@
             "type": "array"
         },
         "ChipGroupViewType": {
-            "$ref": "#/definitions/__type_5"
+            "$ref": "#/definitions/__type"
         },
         "EnigmaSectionType": {
             "description": "Section Related Model",
@@ -67,13 +67,16 @@
             "type": "object"
         },
         "GridViewType": {
-            "$ref": "#/definitions/__type_6"
+            "$ref": "#/definitions/__type_2"
+        },
+        "HorizontalDividerViewType": {
+            "$ref": "#/definitions/__type_9"
         },
         "IconViewType": {
-            "$ref": "#/definitions/__type_3"
+            "$ref": "#/definitions/__type_7"
         },
         "ImageViewType": {
-            "$ref": "#/definitions/__type"
+            "$ref": "#/definitions/__type_6"
         },
         "LayoutComponentType": {
             "const": "SingleColumnLayout",
@@ -94,7 +97,7 @@
             "$ref": "#/definitions/LayoutContainerType"
         },
         "LayoutType": {
-            "$ref": "#/definitions/__type_9"
+            "$ref": "#/definitions/__type_11"
         },
         "Omit": {
             "$ref": "#/definitions/Omit_1"
@@ -102,13 +105,19 @@
         "Omit_1": {
             "$ref": "#/definitions/__type_1"
         },
+        "Omit_2": {
+            "$ref": "#/definitions/Omit_3"
+        },
+        "Omit_3": {
+            "$ref": "#/definitions/__type_10"
+        },
         "Pick": {
-            "$ref": "#/definitions/__type_4"
+            "$ref": "#/definitions/__type_3"
         },
         "Pick<ChipProps,\"size\">": {
             "properties": {
                 "size": {
-                    "$ref": "#/definitions/ResponsiveValue_1",
+                    "$ref": "#/definitions/ResponsiveValue",
                     "description": "크기를 정의합니다.\n반응형 디자인이 적용됩니다."
                 }
             },
@@ -117,10 +126,10 @@
         "Pick<StackProps,\"gapX\"|\"gapY\">": {
             "properties": {
                 "gapX": {
-                    "$ref": "#/definitions/ResponsiveValue_2"
+                    "$ref": "#/definitions/ResponsiveValue_1"
                 },
                 "gapY": {
-                    "$ref": "#/definitions/ResponsiveValue_2"
+                    "$ref": "#/definitions/ResponsiveValue_1"
                 }
             },
             "type": "object"
@@ -587,16 +596,16 @@
                     "description": "The text-align CSS property specifies the horizontal alignment of an inline or table-cell box.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)"
                 },
                 "typography": {
-                    "$ref": "#/definitions/ResponsiveValue"
+                    "$ref": "#/definitions/ResponsiveValue_4"
                 }
             },
             "type": "object"
         },
         "Pick_1": {
-            "$ref": "#/definitions/__type_7"
+            "$ref": "#/definitions/Pick_2"
         },
         "Pick_2": {
-            "$ref": "#/definitions/Pick_3"
+            "$ref": "#/definitions/__type_4"
         },
         "Pick_3": {
             "$ref": "#/definitions/__type_8"
@@ -616,119 +625,6 @@
             "type": "object"
         },
         "ResponsiveValue": {
-            "anyOf": [
-                {
-                    "items": {
-                        "anyOf": [
-                            {
-                                "enum": [
-                                    "display1",
-                                    "display2",
-                                    "display3",
-                                    "display4",
-                                    "l",
-                                    "l/bold",
-                                    "l/regular",
-                                    "m",
-                                    "m/bold",
-                                    "m/regular",
-                                    "s",
-                                    "s/bold",
-                                    "s/regular",
-                                    "xl",
-                                    "xl/bold",
-                                    "xl/regular",
-                                    "xs",
-                                    "xs/bold",
-                                    "xs/regular",
-                                    "xxl",
-                                    "xxl/bold",
-                                    "xxl/regular",
-                                    "xxs",
-                                    "xxs/bold",
-                                    "xxs/regular"
-                                ],
-                                "type": "string"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ]
-                    },
-                    "type": "array"
-                },
-                {
-                    "additionalProperties": false,
-                    "patternProperties": {
-                        "^[0-9]+$": {
-                            "enum": [
-                                "display1",
-                                "display2",
-                                "display3",
-                                "display4",
-                                "l",
-                                "l/bold",
-                                "l/regular",
-                                "m",
-                                "m/bold",
-                                "m/regular",
-                                "s",
-                                "s/bold",
-                                "s/regular",
-                                "xl",
-                                "xl/bold",
-                                "xl/regular",
-                                "xs",
-                                "xs/bold",
-                                "xs/regular",
-                                "xxl",
-                                "xxl/bold",
-                                "xxl/regular",
-                                "xxs",
-                                "xxs/bold",
-                                "xxs/regular"
-                            ],
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                },
-                {
-                    "enum": [
-                        "display1",
-                        "display2",
-                        "display3",
-                        "display4",
-                        "l",
-                        "l/bold",
-                        "l/regular",
-                        "m",
-                        "m/bold",
-                        "m/regular",
-                        "s",
-                        "s/bold",
-                        "s/regular",
-                        "xl",
-                        "xl/bold",
-                        "xl/regular",
-                        "xs",
-                        "xs/bold",
-                        "xs/regular",
-                        "xxl",
-                        "xxl/bold",
-                        "xxl/regular",
-                        "xxs",
-                        "xxs/bold",
-                        "xxs/regular"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ]
-        },
-        "ResponsiveValue_1": {
             "anyOf": [
                 {
                     "items": {
@@ -775,7 +671,7 @@
                 }
             ]
         },
-        "ResponsiveValue_2": {
+        "ResponsiveValue_1": {
             "anyOf": [
                 {
                     "items": {
@@ -957,7 +853,7 @@
                 }
             ]
         },
-        "ResponsiveValue_3": {
+        "ResponsiveValue_2": {
             "anyOf": [
                 {
                     "items": {
@@ -1014,7 +910,7 @@
                 }
             ]
         },
-        "ResponsiveValue_4": {
+        "ResponsiveValue_3": {
             "anyOf": [
                 {
                     "items": {
@@ -1042,13 +938,127 @@
                 }
             ]
         },
+        "ResponsiveValue_4": {
+            "anyOf": [
+                {
+                    "items": {
+                        "anyOf": [
+                            {
+                                "enum": [
+                                    "display1",
+                                    "display2",
+                                    "display3",
+                                    "display4",
+                                    "l",
+                                    "l/bold",
+                                    "l/regular",
+                                    "m",
+                                    "m/bold",
+                                    "m/regular",
+                                    "s",
+                                    "s/bold",
+                                    "s/regular",
+                                    "xl",
+                                    "xl/bold",
+                                    "xl/regular",
+                                    "xs",
+                                    "xs/bold",
+                                    "xs/regular",
+                                    "xxl",
+                                    "xxl/bold",
+                                    "xxl/regular",
+                                    "xxs",
+                                    "xxs/bold",
+                                    "xxs/regular"
+                                ],
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ]
+                    },
+                    "type": "array"
+                },
+                {
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[0-9]+$": {
+                            "enum": [
+                                "display1",
+                                "display2",
+                                "display3",
+                                "display4",
+                                "l",
+                                "l/bold",
+                                "l/regular",
+                                "m",
+                                "m/bold",
+                                "m/regular",
+                                "s",
+                                "s/bold",
+                                "s/regular",
+                                "xl",
+                                "xl/bold",
+                                "xl/regular",
+                                "xs",
+                                "xs/bold",
+                                "xs/regular",
+                                "xxl",
+                                "xxl/bold",
+                                "xxl/regular",
+                                "xxs",
+                                "xxs/bold",
+                                "xxs/regular"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                {
+                    "enum": [
+                        "display1",
+                        "display2",
+                        "display3",
+                        "display4",
+                        "l",
+                        "l/bold",
+                        "l/regular",
+                        "m",
+                        "m/bold",
+                        "m/regular",
+                        "s",
+                        "s/bold",
+                        "s/regular",
+                        "xl",
+                        "xl/bold",
+                        "xl/regular",
+                        "xs",
+                        "xs/bold",
+                        "xs/regular",
+                        "xxl",
+                        "xxl/bold",
+                        "xxl/regular",
+                        "xxs",
+                        "xxs/bold",
+                        "xxs/regular"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
         "TextViewType": {
-            "$ref": "#/definitions/__type_2"
+            "$ref": "#/definitions/__type_5"
         },
         "ViewComponentType": {
             "enum": [
                 "ChipGroupView",
                 "GridView",
+                "HorizontalDividerView",
                 "IconView",
                 "ImageView",
                 "TextView"
@@ -1084,317 +1094,43 @@
         "ViewType": {
             "anyOf": [
                 {
-                    "$ref": "#/definitions/ImageViewType"
+                    "$ref": "#/definitions/ChipGroupViewType"
+                },
+                {
+                    "$ref": "#/definitions/GridViewType"
                 },
                 {
                     "$ref": "#/definitions/TextViewType",
                     "description": "View Related Model"
                 },
                 {
+                    "$ref": "#/definitions/ImageViewType"
+                },
+                {
                     "$ref": "#/definitions/IconViewType"
                 },
                 {
-                    "$ref": "#/definitions/ChipGroupViewType"
-                },
-                {
-                    "$ref": "#/definitions/GridViewType"
+                    "$ref": "#/definitions/HorizontalDividerViewType"
                 }
             ]
         },
         "__type": {
             "properties": {
-                "alt": {
-                    "type": "string"
-                },
-                "height": {
-                    "anyOf": [
+                "chipGroupProps": {
+                    "allOf": [
                         {
-                            "allOf": [
-                                {
-                                    "items": {
-                                        "anyOf": [
-                                            {
-                                                "allOf": [
-                                                    {
-                                                        "properties": {},
-                                                        "type": "object"
-                                                    },
-                                                    {
-                                                        "type": "string"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": [
-                                                    "null",
-                                                    "string",
-                                                    "number"
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    "type": "array"
-                                },
-                                {
-                                    "type": "string"
-                                }
-                            ]
+                            "$ref": "#/definitions/Pick<ChipProps,\"size\">"
                         },
                         {
-                            "allOf": [
-                                {
-                                    "additionalProperties": false,
-                                    "patternProperties": {
-                                        "^[0-9]+$": {
-                                            "anyOf": [
-                                                {
-                                                    "allOf": [
-                                                        {
-                                                            "properties": {},
-                                                            "type": "object"
-                                                        },
-                                                        {
-                                                            "type": "string"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": [
-                                                        "string",
-                                                        "number"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "type": "object"
-                                },
-                                {
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        {
-                            "allOf": [
-                                {
-                                    "items": {
-                                        "anyOf": [
-                                            {
-                                                "allOf": [
-                                                    {
-                                                        "properties": {},
-                                                        "type": "object"
-                                                    },
-                                                    {
-                                                        "type": "string"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": [
-                                                    "null",
-                                                    "string",
-                                                    "number"
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    "type": "array"
-                                },
-                                {
-                                    "type": "number"
-                                }
-                            ]
-                        },
-                        {
-                            "allOf": [
-                                {
-                                    "additionalProperties": false,
-                                    "patternProperties": {
-                                        "^[0-9]+$": {
-                                            "anyOf": [
-                                                {
-                                                    "allOf": [
-                                                        {
-                                                            "properties": {},
-                                                            "type": "object"
-                                                        },
-                                                        {
-                                                            "type": "string"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": [
-                                                        "string",
-                                                        "number"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "type": "object"
-                                },
-                                {
-                                    "type": "number"
-                                }
-                            ]
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number"
-                            ]
+                            "$ref": "#/definitions/Pick<StackProps,\"gapX\"|\"gapY\">"
                         }
                     ]
+                },
+                "chips": {
+                    "$ref": "#/definitions/Array"
                 },
                 "spaceProps": {
                     "$ref": "#/definitions/Omit"
-                },
-                "src": {
-                    "type": "string"
-                },
-                "width": {
-                    "anyOf": [
-                        {
-                            "allOf": [
-                                {
-                                    "items": {
-                                        "anyOf": [
-                                            {
-                                                "allOf": [
-                                                    {
-                                                        "properties": {},
-                                                        "type": "object"
-                                                    },
-                                                    {
-                                                        "type": "string"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": [
-                                                    "null",
-                                                    "string",
-                                                    "number"
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    "type": "array"
-                                },
-                                {
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        {
-                            "allOf": [
-                                {
-                                    "additionalProperties": false,
-                                    "patternProperties": {
-                                        "^[0-9]+$": {
-                                            "anyOf": [
-                                                {
-                                                    "allOf": [
-                                                        {
-                                                            "properties": {},
-                                                            "type": "object"
-                                                        },
-                                                        {
-                                                            "type": "string"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": [
-                                                        "string",
-                                                        "number"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "type": "object"
-                                },
-                                {
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        {
-                            "allOf": [
-                                {
-                                    "items": {
-                                        "anyOf": [
-                                            {
-                                                "allOf": [
-                                                    {
-                                                        "properties": {},
-                                                        "type": "object"
-                                                    },
-                                                    {
-                                                        "type": "string"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": [
-                                                    "null",
-                                                    "string",
-                                                    "number"
-                                                ]
-                                            }
-                                        ]
-                                    },
-                                    "type": "array"
-                                },
-                                {
-                                    "type": "number"
-                                }
-                            ]
-                        },
-                        {
-                            "allOf": [
-                                {
-                                    "additionalProperties": false,
-                                    "patternProperties": {
-                                        "^[0-9]+$": {
-                                            "anyOf": [
-                                                {
-                                                    "allOf": [
-                                                        {
-                                                            "properties": {},
-                                                            "type": "object"
-                                                        },
-                                                        {
-                                                            "type": "string"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": [
-                                                        "string",
-                                                        "number"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "type": "object"
-                                },
-                                {
-                                    "type": "number"
-                                }
-                            ]
-                        },
-                        {
-                            "type": [
-                                "string",
-                                "number"
-                            ]
-                        }
-                    ]
                 }
             },
             "type": "object"
@@ -6528,7 +6264,948 @@
             },
             "type": "object"
         },
+        "__type_10": {
+            "properties": {
+                "color": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "anyOf": [
+                                    {
+                                        "enum": [
+                                            "bg/accent/blue/subtlest",
+                                            "bg/accent/gray/subtlest",
+                                            "bg/accent/green/subtlest",
+                                            "bg/accent/red",
+                                            "bg/accent/red/subtle",
+                                            "bg/accent/red/subtlest",
+                                            "bg/accent/yellow/subtlest",
+                                            "bg/danger",
+                                            "bg/danger/bold",
+                                            "bg/danger/bold/hovered",
+                                            "bg/danger/bold/pressed",
+                                            "bg/disabled",
+                                            "bg/disabled/subtlest",
+                                            "bg/input",
+                                            "bg/inverse",
+                                            "bg/inverse/subtlest",
+                                            "bg/neutral",
+                                            "bg/neutral/bold",
+                                            "bg/neutral/bold/hovered",
+                                            "bg/neutral/bold/pressed",
+                                            "bg/neutral/bolder",
+                                            "bg/neutral/bolder/hovered",
+                                            "bg/neutral/bolder/pressed",
+                                            "bg/neutral/hovered",
+                                            "bg/neutral/pressed",
+                                            "bg/neutral/subtle",
+                                            "bg/neutral/subtle/hovered",
+                                            "bg/neutral/subtle/pressed",
+                                            "bg/neutral/subtler",
+                                            "bg/neutral/subtler/hovered",
+                                            "bg/neutral/subtler/pressed",
+                                            "bg/primary",
+                                            "bg/primary/hovered",
+                                            "bg/primary/pressed",
+                                            "bg/secondary",
+                                            "bg/secondary/hovered",
+                                            "bg/secondary/pressed",
+                                            "bg/selected",
+                                            "bg/selected/subtle",
+                                            "bg/selected/violet",
+                                            "bg/success",
+                                            "bg/success/bold",
+                                            "bg/warning",
+                                            "bg/warning/bold",
+                                            "border/danger",
+                                            "border/disabled",
+                                            "border/focused",
+                                            "border/hovered",
+                                            "border/input",
+                                            "border/inverse",
+                                            "border/neutral",
+                                            "border/neutral/bolder",
+                                            "border/neutral/subtle",
+                                            "border/primary",
+                                            "border/selected",
+                                            "border/success",
+                                            "dim",
+                                            "icon/accent/blue",
+                                            "icon/accent/blue/bold",
+                                            "icon/accent/gray",
+                                            "icon/accent/green",
+                                            "icon/accent/red",
+                                            "icon/accent/yellow",
+                                            "icon/danger",
+                                            "icon/disabled",
+                                            "icon/disabled/subtler",
+                                            "icon/inverse",
+                                            "icon/neutral",
+                                            "icon/neutral/bold",
+                                            "icon/neutral/bolder",
+                                            "icon/primary",
+                                            "icon/primary/bold",
+                                            "icon/primary/subtle",
+                                            "icon/selected",
+                                            "icon/selected/violet",
+                                            "icon/success",
+                                            "icon/warning",
+                                            "link",
+                                            "link/disabled",
+                                            "link/hovered",
+                                            "link/neutral",
+                                            "link/neutral/bold",
+                                            "link/neutral/bold/hovered",
+                                            "link/neutral/bold/pressed",
+                                            "link/neutral/hovered",
+                                            "link/neutral/pressed",
+                                            "link/pressed",
+                                            "scale/violet/0",
+                                            "scale/violet/1",
+                                            "scale/violet/2",
+                                            "scale/violet/3",
+                                            "scale/violet/4",
+                                            "scale/violet/5",
+                                            "scale/violet/6",
+                                            "scale/violet/7",
+                                            "scale/violet/8",
+                                            "scale/violet/9",
+                                            "surface",
+                                            "surface/overlay",
+                                            "text/accent/blue",
+                                            "text/accent/green",
+                                            "text/accent/red",
+                                            "text/accent/yellow",
+                                            "text/danger",
+                                            "text/disabled",
+                                            "text/inverse",
+                                            "text/inverse/subtle",
+                                            "text/inverse/subtler",
+                                            "text/neutral",
+                                            "text/neutral/subtle",
+                                            "text/neutral/subtler",
+                                            "text/neutral/subtlest",
+                                            "text/primary",
+                                            "text/selected",
+                                            "text/success",
+                                            "text/warning"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "additionalProperties": false,
+                            "patternProperties": {
+                                "^[0-9]+$": {
+                                    "enum": [
+                                        "bg/accent/blue/subtlest",
+                                        "bg/accent/gray/subtlest",
+                                        "bg/accent/green/subtlest",
+                                        "bg/accent/red",
+                                        "bg/accent/red/subtle",
+                                        "bg/accent/red/subtlest",
+                                        "bg/accent/yellow/subtlest",
+                                        "bg/danger",
+                                        "bg/danger/bold",
+                                        "bg/danger/bold/hovered",
+                                        "bg/danger/bold/pressed",
+                                        "bg/disabled",
+                                        "bg/disabled/subtlest",
+                                        "bg/input",
+                                        "bg/inverse",
+                                        "bg/inverse/subtlest",
+                                        "bg/neutral",
+                                        "bg/neutral/bold",
+                                        "bg/neutral/bold/hovered",
+                                        "bg/neutral/bold/pressed",
+                                        "bg/neutral/bolder",
+                                        "bg/neutral/bolder/hovered",
+                                        "bg/neutral/bolder/pressed",
+                                        "bg/neutral/hovered",
+                                        "bg/neutral/pressed",
+                                        "bg/neutral/subtle",
+                                        "bg/neutral/subtle/hovered",
+                                        "bg/neutral/subtle/pressed",
+                                        "bg/neutral/subtler",
+                                        "bg/neutral/subtler/hovered",
+                                        "bg/neutral/subtler/pressed",
+                                        "bg/primary",
+                                        "bg/primary/hovered",
+                                        "bg/primary/pressed",
+                                        "bg/secondary",
+                                        "bg/secondary/hovered",
+                                        "bg/secondary/pressed",
+                                        "bg/selected",
+                                        "bg/selected/subtle",
+                                        "bg/selected/violet",
+                                        "bg/success",
+                                        "bg/success/bold",
+                                        "bg/warning",
+                                        "bg/warning/bold",
+                                        "border/danger",
+                                        "border/disabled",
+                                        "border/focused",
+                                        "border/hovered",
+                                        "border/input",
+                                        "border/inverse",
+                                        "border/neutral",
+                                        "border/neutral/bolder",
+                                        "border/neutral/subtle",
+                                        "border/primary",
+                                        "border/selected",
+                                        "border/success",
+                                        "dim",
+                                        "icon/accent/blue",
+                                        "icon/accent/blue/bold",
+                                        "icon/accent/gray",
+                                        "icon/accent/green",
+                                        "icon/accent/red",
+                                        "icon/accent/yellow",
+                                        "icon/danger",
+                                        "icon/disabled",
+                                        "icon/disabled/subtler",
+                                        "icon/inverse",
+                                        "icon/neutral",
+                                        "icon/neutral/bold",
+                                        "icon/neutral/bolder",
+                                        "icon/primary",
+                                        "icon/primary/bold",
+                                        "icon/primary/subtle",
+                                        "icon/selected",
+                                        "icon/selected/violet",
+                                        "icon/success",
+                                        "icon/warning",
+                                        "link",
+                                        "link/disabled",
+                                        "link/hovered",
+                                        "link/neutral",
+                                        "link/neutral/bold",
+                                        "link/neutral/bold/hovered",
+                                        "link/neutral/bold/pressed",
+                                        "link/neutral/hovered",
+                                        "link/neutral/pressed",
+                                        "link/pressed",
+                                        "scale/violet/0",
+                                        "scale/violet/1",
+                                        "scale/violet/2",
+                                        "scale/violet/3",
+                                        "scale/violet/4",
+                                        "scale/violet/5",
+                                        "scale/violet/6",
+                                        "scale/violet/7",
+                                        "scale/violet/8",
+                                        "scale/violet/9",
+                                        "surface",
+                                        "surface/overlay",
+                                        "text/accent/blue",
+                                        "text/accent/green",
+                                        "text/accent/red",
+                                        "text/accent/yellow",
+                                        "text/danger",
+                                        "text/disabled",
+                                        "text/inverse",
+                                        "text/inverse/subtle",
+                                        "text/inverse/subtler",
+                                        "text/neutral",
+                                        "text/neutral/subtle",
+                                        "text/neutral/subtler",
+                                        "text/neutral/subtlest",
+                                        "text/primary",
+                                        "text/selected",
+                                        "text/success",
+                                        "text/warning"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "enum": [
+                                "bg/accent/blue/subtlest",
+                                "bg/accent/gray/subtlest",
+                                "bg/accent/green/subtlest",
+                                "bg/accent/red",
+                                "bg/accent/red/subtle",
+                                "bg/accent/red/subtlest",
+                                "bg/accent/yellow/subtlest",
+                                "bg/danger",
+                                "bg/danger/bold",
+                                "bg/danger/bold/hovered",
+                                "bg/danger/bold/pressed",
+                                "bg/disabled",
+                                "bg/disabled/subtlest",
+                                "bg/input",
+                                "bg/inverse",
+                                "bg/inverse/subtlest",
+                                "bg/neutral",
+                                "bg/neutral/bold",
+                                "bg/neutral/bold/hovered",
+                                "bg/neutral/bold/pressed",
+                                "bg/neutral/bolder",
+                                "bg/neutral/bolder/hovered",
+                                "bg/neutral/bolder/pressed",
+                                "bg/neutral/hovered",
+                                "bg/neutral/pressed",
+                                "bg/neutral/subtle",
+                                "bg/neutral/subtle/hovered",
+                                "bg/neutral/subtle/pressed",
+                                "bg/neutral/subtler",
+                                "bg/neutral/subtler/hovered",
+                                "bg/neutral/subtler/pressed",
+                                "bg/primary",
+                                "bg/primary/hovered",
+                                "bg/primary/pressed",
+                                "bg/secondary",
+                                "bg/secondary/hovered",
+                                "bg/secondary/pressed",
+                                "bg/selected",
+                                "bg/selected/subtle",
+                                "bg/selected/violet",
+                                "bg/success",
+                                "bg/success/bold",
+                                "bg/warning",
+                                "bg/warning/bold",
+                                "border/danger",
+                                "border/disabled",
+                                "border/focused",
+                                "border/hovered",
+                                "border/input",
+                                "border/inverse",
+                                "border/neutral",
+                                "border/neutral/bolder",
+                                "border/neutral/subtle",
+                                "border/primary",
+                                "border/selected",
+                                "border/success",
+                                "dim",
+                                "icon/accent/blue",
+                                "icon/accent/blue/bold",
+                                "icon/accent/gray",
+                                "icon/accent/green",
+                                "icon/accent/red",
+                                "icon/accent/yellow",
+                                "icon/danger",
+                                "icon/disabled",
+                                "icon/disabled/subtler",
+                                "icon/inverse",
+                                "icon/neutral",
+                                "icon/neutral/bold",
+                                "icon/neutral/bolder",
+                                "icon/primary",
+                                "icon/primary/bold",
+                                "icon/primary/subtle",
+                                "icon/selected",
+                                "icon/selected/violet",
+                                "icon/success",
+                                "icon/warning",
+                                "link",
+                                "link/disabled",
+                                "link/hovered",
+                                "link/neutral",
+                                "link/neutral/bold",
+                                "link/neutral/bold/hovered",
+                                "link/neutral/bold/pressed",
+                                "link/neutral/hovered",
+                                "link/neutral/pressed",
+                                "link/pressed",
+                                "scale/violet/0",
+                                "scale/violet/1",
+                                "scale/violet/2",
+                                "scale/violet/3",
+                                "scale/violet/4",
+                                "scale/violet/5",
+                                "scale/violet/6",
+                                "scale/violet/7",
+                                "scale/violet/8",
+                                "scale/violet/9",
+                                "surface",
+                                "surface/overlay",
+                                "text/accent/blue",
+                                "text/accent/green",
+                                "text/accent/red",
+                                "text/accent/yellow",
+                                "text/danger",
+                                "text/disabled",
+                                "text/inverse",
+                                "text/inverse/subtle",
+                                "text/inverse/subtler",
+                                "text/neutral",
+                                "text/neutral/subtle",
+                                "text/neutral/subtler",
+                                "text/neutral/subtlest",
+                                "text/primary",
+                                "text/selected",
+                                "text/success",
+                                "text/warning"
+                            ],
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "variant": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "anyOf": [
+                                    {
+                                        "enum": [
+                                            "-moz-initial",
+                                            "dashed",
+                                            "dotted",
+                                            "double",
+                                            "groove",
+                                            "hidden",
+                                            "inherit",
+                                            "initial",
+                                            "inset",
+                                            "none",
+                                            "outset",
+                                            "revert",
+                                            "revert-layer",
+                                            "ridge",
+                                            "solid",
+                                            "unset"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "additionalProperties": false,
+                            "patternProperties": {
+                                "^[0-9]+$": {
+                                    "enum": [
+                                        "-moz-initial",
+                                        "dashed",
+                                        "dotted",
+                                        "double",
+                                        "groove",
+                                        "hidden",
+                                        "inherit",
+                                        "initial",
+                                        "inset",
+                                        "none",
+                                        "outset",
+                                        "revert",
+                                        "revert-layer",
+                                        "ridge",
+                                        "solid",
+                                        "unset"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "enum": [
+                                "-moz-initial",
+                                "dashed",
+                                "dotted",
+                                "double",
+                                "groove",
+                                "hidden",
+                                "inherit",
+                                "initial",
+                                "inset",
+                                "none",
+                                "outset",
+                                "revert",
+                                "revert-layer",
+                                "ridge",
+                                "solid",
+                                "unset"
+                            ],
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "width": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": [
+                                    "null",
+                                    "string",
+                                    "number",
+                                    "object"
+                                ]
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "additionalProperties": false,
+                            "patternProperties": {
+                                "^[0-9]+$": {
+                                    "type": [
+                                        "string",
+                                        "number",
+                                        "object"
+                                    ]
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "type": [
+                                "null",
+                                "string",
+                                "number",
+                                "object"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "__type_11": {
+            "properties": {
+                "main": {
+                    "items": {
+                        "$ref": "#/definitions/ViewContainerDetailType"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
         "__type_2": {
+            "properties": {
+                "gridProps": {
+                    "$ref": "#/definitions/Pick_1"
+                },
+                "spaceProps": {
+                    "$ref": "#/definitions/Omit"
+                },
+                "units": {
+                    "$ref": "#/definitions/Array_1"
+                }
+            },
+            "type": "object"
+        },
+        "__type_3": {
+            "properties": {
+                "order": {
+                    "anyOf": [
+                        {
+                            "allOf": [
+                                {
+                                    "properties": {},
+                                    "type": "object"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "properties": {},
+                                    "type": "object"
+                                },
+                                {
+                                    "type": "number"
+                                }
+                            ]
+                        },
+                        {
+                            "items": {
+                                "anyOf": [
+                                    {
+                                        "allOf": [
+                                            {
+                                                "properties": {},
+                                                "type": "object"
+                                            },
+                                            {
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "allOf": [
+                                            {
+                                                "properties": {},
+                                                "type": "object"
+                                            },
+                                            {
+                                                "type": "number"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "enum": [
+                                            "-moz-initial",
+                                            "inherit",
+                                            "initial",
+                                            "revert",
+                                            "revert-layer",
+                                            "unset"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "additionalProperties": false,
+                            "patternProperties": {
+                                "^[0-9]+$": {
+                                    "anyOf": [
+                                        {
+                                            "allOf": [
+                                                {
+                                                    "properties": {},
+                                                    "type": "object"
+                                                },
+                                                {
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "allOf": [
+                                                {
+                                                    "properties": {},
+                                                    "type": "object"
+                                                },
+                                                {
+                                                    "type": "number"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "enum": [
+                                                "-moz-initial",
+                                                "inherit",
+                                                "initial",
+                                                "revert",
+                                                "revert-layer",
+                                                "unset"
+                                            ],
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "enum": [
+                                "-moz-initial",
+                                "inherit",
+                                "initial",
+                                "revert",
+                                "revert-layer",
+                                "unset"
+                            ],
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The order CSS property sets the order to lay out an item in a flex or grid container. Items in a container\nare sorted by ascending order value and then by their source code order.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/order)"
+                },
+                "size": {
+                    "$ref": "#/definitions/ResponsiveValue_2"
+                }
+            },
+            "type": "object"
+        },
+        "__type_4": {
+            "properties": {
+                "alignItems": {
+                    "anyOf": [
+                        {
+                            "allOf": [
+                                {
+                                    "properties": {},
+                                    "type": "object"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "items": {
+                                "anyOf": [
+                                    {
+                                        "allOf": [
+                                            {
+                                                "properties": {},
+                                                "type": "object"
+                                            },
+                                            {
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "enum": [
+                                            "-moz-initial",
+                                            "baseline",
+                                            "center",
+                                            "end",
+                                            "flex-end",
+                                            "flex-start",
+                                            "inherit",
+                                            "initial",
+                                            "normal",
+                                            "revert",
+                                            "revert-layer",
+                                            "self-end",
+                                            "self-start",
+                                            "start",
+                                            "stretch",
+                                            "unset"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "additionalProperties": false,
+                            "patternProperties": {
+                                "^[0-9]+$": {
+                                    "anyOf": [
+                                        {
+                                            "allOf": [
+                                                {
+                                                    "properties": {},
+                                                    "type": "object"
+                                                },
+                                                {
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "enum": [
+                                                "-moz-initial",
+                                                "baseline",
+                                                "center",
+                                                "end",
+                                                "flex-end",
+                                                "flex-start",
+                                                "inherit",
+                                                "initial",
+                                                "normal",
+                                                "revert",
+                                                "revert-layer",
+                                                "self-end",
+                                                "self-start",
+                                                "start",
+                                                "stretch",
+                                                "unset"
+                                            ],
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "enum": [
+                                "-moz-initial",
+                                "baseline",
+                                "center",
+                                "end",
+                                "flex-end",
+                                "flex-start",
+                                "inherit",
+                                "initial",
+                                "normal",
+                                "revert",
+                                "revert-layer",
+                                "self-end",
+                                "self-start",
+                                "start",
+                                "stretch",
+                                "unset"
+                            ],
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The CSS align-items property sets the align-self value on all direct children as a group. The align-self\nproperty sets the alignment of an item within its containing block.\n\nIn Flexbox it controls the alignment of items on the Cross Axis, in Grid Layout it controls the alignment\nof items on the Block Axis within their grid area.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)"
+                },
+                "gapX": {
+                    "$ref": "#/definitions/ResponsiveValue_1"
+                },
+                "gapY": {
+                    "$ref": "#/definitions/ResponsiveValue_1"
+                },
+                "justifyContent": {
+                    "anyOf": [
+                        {
+                            "allOf": [
+                                {
+                                    "properties": {},
+                                    "type": "object"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "items": {
+                                "anyOf": [
+                                    {
+                                        "allOf": [
+                                            {
+                                                "properties": {},
+                                                "type": "object"
+                                            },
+                                            {
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "enum": [
+                                            "-moz-initial",
+                                            "center",
+                                            "end",
+                                            "flex-end",
+                                            "flex-start",
+                                            "inherit",
+                                            "initial",
+                                            "left",
+                                            "normal",
+                                            "revert",
+                                            "revert-layer",
+                                            "right",
+                                            "space-around",
+                                            "space-between",
+                                            "space-evenly",
+                                            "start",
+                                            "stretch",
+                                            "unset"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ]
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "additionalProperties": false,
+                            "patternProperties": {
+                                "^[0-9]+$": {
+                                    "anyOf": [
+                                        {
+                                            "allOf": [
+                                                {
+                                                    "properties": {},
+                                                    "type": "object"
+                                                },
+                                                {
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "enum": [
+                                                "-moz-initial",
+                                                "center",
+                                                "end",
+                                                "flex-end",
+                                                "flex-start",
+                                                "inherit",
+                                                "initial",
+                                                "left",
+                                                "normal",
+                                                "revert",
+                                                "revert-layer",
+                                                "right",
+                                                "space-around",
+                                                "space-between",
+                                                "space-evenly",
+                                                "start",
+                                                "stretch",
+                                                "unset"
+                                            ],
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "enum": [
+                                "-moz-initial",
+                                "center",
+                                "end",
+                                "flex-end",
+                                "flex-start",
+                                "inherit",
+                                "initial",
+                                "left",
+                                "normal",
+                                "revert",
+                                "revert-layer",
+                                "right",
+                                "space-around",
+                                "space-between",
+                                "space-evenly",
+                                "start",
+                                "stretch",
+                                "unset"
+                            ],
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The CSS justify-content property defines how the browser distributes space between and around content items\nalong the main-axis of a flex container, and the inline axis of a grid container.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)"
+                },
+                "wrap": {
+                    "$ref": "#/definitions/ResponsiveValue_3"
+                }
+            },
+            "type": "object"
+        },
+        "__type_5": {
             "description": "View Related Model",
             "properties": {
                 "spaceProps": {
@@ -6553,7 +7230,305 @@
             },
             "type": "object"
         },
-        "__type_3": {
+        "__type_6": {
+            "properties": {
+                "alt": {
+                    "type": "string"
+                },
+                "height": {
+                    "anyOf": [
+                        {
+                            "allOf": [
+                                {
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "allOf": [
+                                                    {
+                                                        "properties": {},
+                                                        "type": "object"
+                                                    },
+                                                    {
+                                                        "type": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": [
+                                                    "null",
+                                                    "string",
+                                                    "number"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "anyOf": [
+                                                {
+                                                    "allOf": [
+                                                        {
+                                                            "properties": {},
+                                                            "type": "object"
+                                                        },
+                                                        {
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": [
+                                                        "string",
+                                                        "number"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "allOf": [
+                                                    {
+                                                        "properties": {},
+                                                        "type": "object"
+                                                    },
+                                                    {
+                                                        "type": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": [
+                                                    "null",
+                                                    "string",
+                                                    "number"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "type": "number"
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "anyOf": [
+                                                {
+                                                    "allOf": [
+                                                        {
+                                                            "properties": {},
+                                                            "type": "object"
+                                                        },
+                                                        {
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": [
+                                                        "string",
+                                                        "number"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "type": "number"
+                                }
+                            ]
+                        },
+                        {
+                            "type": [
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                },
+                "spaceProps": {
+                    "$ref": "#/definitions/Omit"
+                },
+                "src": {
+                    "type": "string"
+                },
+                "width": {
+                    "anyOf": [
+                        {
+                            "allOf": [
+                                {
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "allOf": [
+                                                    {
+                                                        "properties": {},
+                                                        "type": "object"
+                                                    },
+                                                    {
+                                                        "type": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": [
+                                                    "null",
+                                                    "string",
+                                                    "number"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "anyOf": [
+                                                {
+                                                    "allOf": [
+                                                        {
+                                                            "properties": {},
+                                                            "type": "object"
+                                                        },
+                                                        {
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": [
+                                                        "string",
+                                                        "number"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "allOf": [
+                                                    {
+                                                        "properties": {},
+                                                        "type": "object"
+                                                    },
+                                                    {
+                                                        "type": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": [
+                                                    "null",
+                                                    "string",
+                                                    "number"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "type": "number"
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^[0-9]+$": {
+                                            "anyOf": [
+                                                {
+                                                    "allOf": [
+                                                        {
+                                                            "properties": {},
+                                                            "type": "object"
+                                                        },
+                                                        {
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": [
+                                                        "string",
+                                                        "number"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                {
+                                    "type": "number"
+                                }
+                            ]
+                        },
+                        {
+                            "type": [
+                                "string",
+                                "number"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "__type_7": {
             "properties": {
                 "icon": {
                     "enum": [
@@ -6754,7 +7729,7 @@
                     "type": "string"
                 },
                 "iconProps": {
-                    "$ref": "#/definitions/Pick"
+                    "$ref": "#/definitions/Pick_3"
                 },
                 "spaceProps": {
                     "$ref": "#/definitions/Omit"
@@ -6762,7 +7737,7 @@
             },
             "type": "object"
         },
-        "__type_4": {
+        "__type_8": {
             "properties": {
                 "color": {
                     "anyOf": [
@@ -7228,451 +8203,13 @@
             },
             "type": "object"
         },
-        "__type_5": {
-            "properties": {
-                "chipGroupProps": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/Pick<ChipProps,\"size\">"
-                        },
-                        {
-                            "$ref": "#/definitions/Pick<StackProps,\"gapX\"|\"gapY\">"
-                        }
-                    ]
-                },
-                "chips": {
-                    "$ref": "#/definitions/Array"
-                },
-                "spaceProps": {
-                    "$ref": "#/definitions/Omit"
-                }
-            },
-            "type": "object"
-        },
-        "__type_6": {
-            "properties": {
-                "gridProps": {
-                    "$ref": "#/definitions/Pick_2"
-                },
-                "spaceProps": {
-                    "$ref": "#/definitions/Omit"
-                },
-                "units": {
-                    "$ref": "#/definitions/Array_1"
-                }
-            },
-            "type": "object"
-        },
-        "__type_7": {
-            "properties": {
-                "order": {
-                    "anyOf": [
-                        {
-                            "allOf": [
-                                {
-                                    "properties": {},
-                                    "type": "object"
-                                },
-                                {
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        {
-                            "allOf": [
-                                {
-                                    "properties": {},
-                                    "type": "object"
-                                },
-                                {
-                                    "type": "number"
-                                }
-                            ]
-                        },
-                        {
-                            "items": {
-                                "anyOf": [
-                                    {
-                                        "allOf": [
-                                            {
-                                                "properties": {},
-                                                "type": "object"
-                                            },
-                                            {
-                                                "type": "string"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "allOf": [
-                                            {
-                                                "properties": {},
-                                                "type": "object"
-                                            },
-                                            {
-                                                "type": "number"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "enum": [
-                                            "-moz-initial",
-                                            "inherit",
-                                            "initial",
-                                            "revert",
-                                            "revert-layer",
-                                            "unset"
-                                        ],
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "null"
-                                    }
-                                ]
-                            },
-                            "type": "array"
-                        },
-                        {
-                            "additionalProperties": false,
-                            "patternProperties": {
-                                "^[0-9]+$": {
-                                    "anyOf": [
-                                        {
-                                            "allOf": [
-                                                {
-                                                    "properties": {},
-                                                    "type": "object"
-                                                },
-                                                {
-                                                    "type": "string"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "allOf": [
-                                                {
-                                                    "properties": {},
-                                                    "type": "object"
-                                                },
-                                                {
-                                                    "type": "number"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "enum": [
-                                                "-moz-initial",
-                                                "inherit",
-                                                "initial",
-                                                "revert",
-                                                "revert-layer",
-                                                "unset"
-                                            ],
-                                            "type": "string"
-                                        }
-                                    ]
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "enum": [
-                                "-moz-initial",
-                                "inherit",
-                                "initial",
-                                "revert",
-                                "revert-layer",
-                                "unset"
-                            ],
-                            "type": "string"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "description": "The order CSS property sets the order to lay out an item in a flex or grid container. Items in a container\nare sorted by ascending order value and then by their source code order.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/order)"
-                },
-                "size": {
-                    "$ref": "#/definitions/ResponsiveValue_3"
-                }
-            },
-            "type": "object"
-        },
-        "__type_8": {
-            "properties": {
-                "alignItems": {
-                    "anyOf": [
-                        {
-                            "allOf": [
-                                {
-                                    "properties": {},
-                                    "type": "object"
-                                },
-                                {
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        {
-                            "items": {
-                                "anyOf": [
-                                    {
-                                        "allOf": [
-                                            {
-                                                "properties": {},
-                                                "type": "object"
-                                            },
-                                            {
-                                                "type": "string"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "enum": [
-                                            "-moz-initial",
-                                            "baseline",
-                                            "center",
-                                            "end",
-                                            "flex-end",
-                                            "flex-start",
-                                            "inherit",
-                                            "initial",
-                                            "normal",
-                                            "revert",
-                                            "revert-layer",
-                                            "self-end",
-                                            "self-start",
-                                            "start",
-                                            "stretch",
-                                            "unset"
-                                        ],
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "null"
-                                    }
-                                ]
-                            },
-                            "type": "array"
-                        },
-                        {
-                            "additionalProperties": false,
-                            "patternProperties": {
-                                "^[0-9]+$": {
-                                    "anyOf": [
-                                        {
-                                            "allOf": [
-                                                {
-                                                    "properties": {},
-                                                    "type": "object"
-                                                },
-                                                {
-                                                    "type": "string"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "enum": [
-                                                "-moz-initial",
-                                                "baseline",
-                                                "center",
-                                                "end",
-                                                "flex-end",
-                                                "flex-start",
-                                                "inherit",
-                                                "initial",
-                                                "normal",
-                                                "revert",
-                                                "revert-layer",
-                                                "self-end",
-                                                "self-start",
-                                                "start",
-                                                "stretch",
-                                                "unset"
-                                            ],
-                                            "type": "string"
-                                        }
-                                    ]
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "enum": [
-                                "-moz-initial",
-                                "baseline",
-                                "center",
-                                "end",
-                                "flex-end",
-                                "flex-start",
-                                "inherit",
-                                "initial",
-                                "normal",
-                                "revert",
-                                "revert-layer",
-                                "self-end",
-                                "self-start",
-                                "start",
-                                "stretch",
-                                "unset"
-                            ],
-                            "type": "string"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "description": "The CSS align-items property sets the align-self value on all direct children as a group. The align-self\nproperty sets the alignment of an item within its containing block.\n\nIn Flexbox it controls the alignment of items on the Cross Axis, in Grid Layout it controls the alignment\nof items on the Block Axis within their grid area.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)"
-                },
-                "gapX": {
-                    "$ref": "#/definitions/ResponsiveValue_2"
-                },
-                "gapY": {
-                    "$ref": "#/definitions/ResponsiveValue_2"
-                },
-                "justifyContent": {
-                    "anyOf": [
-                        {
-                            "allOf": [
-                                {
-                                    "properties": {},
-                                    "type": "object"
-                                },
-                                {
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        {
-                            "items": {
-                                "anyOf": [
-                                    {
-                                        "allOf": [
-                                            {
-                                                "properties": {},
-                                                "type": "object"
-                                            },
-                                            {
-                                                "type": "string"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "enum": [
-                                            "-moz-initial",
-                                            "center",
-                                            "end",
-                                            "flex-end",
-                                            "flex-start",
-                                            "inherit",
-                                            "initial",
-                                            "left",
-                                            "normal",
-                                            "revert",
-                                            "revert-layer",
-                                            "right",
-                                            "space-around",
-                                            "space-between",
-                                            "space-evenly",
-                                            "start",
-                                            "stretch",
-                                            "unset"
-                                        ],
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "null"
-                                    }
-                                ]
-                            },
-                            "type": "array"
-                        },
-                        {
-                            "additionalProperties": false,
-                            "patternProperties": {
-                                "^[0-9]+$": {
-                                    "anyOf": [
-                                        {
-                                            "allOf": [
-                                                {
-                                                    "properties": {},
-                                                    "type": "object"
-                                                },
-                                                {
-                                                    "type": "string"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "enum": [
-                                                "-moz-initial",
-                                                "center",
-                                                "end",
-                                                "flex-end",
-                                                "flex-start",
-                                                "inherit",
-                                                "initial",
-                                                "left",
-                                                "normal",
-                                                "revert",
-                                                "revert-layer",
-                                                "right",
-                                                "space-around",
-                                                "space-between",
-                                                "space-evenly",
-                                                "start",
-                                                "stretch",
-                                                "unset"
-                                            ],
-                                            "type": "string"
-                                        }
-                                    ]
-                                }
-                            },
-                            "type": "object"
-                        },
-                        {
-                            "enum": [
-                                "-moz-initial",
-                                "center",
-                                "end",
-                                "flex-end",
-                                "flex-start",
-                                "inherit",
-                                "initial",
-                                "left",
-                                "normal",
-                                "revert",
-                                "revert-layer",
-                                "right",
-                                "space-around",
-                                "space-between",
-                                "space-evenly",
-                                "start",
-                                "stretch",
-                                "unset"
-                            ],
-                            "type": "string"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "description": "The CSS justify-content property defines how the browser distributes space between and around content items\nalong the main-axis of a flex container, and the inline axis of a grid container.\n\n[MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)"
-                },
-                "wrap": {
-                    "$ref": "#/definitions/ResponsiveValue_4"
-                }
-            },
-            "type": "object"
-        },
         "__type_9": {
             "properties": {
-                "main": {
-                    "items": {
-                        "$ref": "#/definitions/ViewContainerDetailType"
-                    },
-                    "type": "array"
+                "horizontalDividerProps": {
+                    "$ref": "#/definitions/Omit_2"
+                },
+                "spaceProps": {
+                    "$ref": "#/definitions/Omit"
                 }
             },
             "type": "object"
