@@ -1,6 +1,9 @@
 /**
  * core components
  */
+export { default as AnimatePresence } from './core/AnimatePresence';
+export type { AnimatePresenceProps } from './core/AnimatePresence';
+
 export { default as Breadcrumbs } from './core/Breadcrumbs';
 export type { BreadcrumbsProps } from './core/Breadcrumbs';
 
