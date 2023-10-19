@@ -1,6 +1,9 @@
 /**
  * core components
  */
+export { default as AnimatePresence } from './core/AnimatePresence';
+export type { AnimatePresenceProps } from './core/AnimatePresence';
+
 export { default as Breadcrumbs } from './core/Breadcrumbs';
 export type { BreadcrumbsProps } from './core/Breadcrumbs';
 
@@ -20,6 +23,9 @@ export type { GradientTextProps } from './core/GradientText';
 
 export { default as Grid } from './core/Grid';
 export type { GridProps, GridUnitProps } from './core/Grid';
+
+export { default as HorizontalDivider } from './core/HorizontalDivider';
+export type { HorizontalDividerProps } from './core/HorizontalDivider';
 
 export { default as IconButton } from './core/IconButton';
 export type { IconButtonProps } from './core/IconButton';

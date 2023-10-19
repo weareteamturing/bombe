@@ -10,6 +10,7 @@ import {
   StyledIconProps,
   ImageProps,
   AsProp,
+  HorizontalDividerProps,
 } from '../..';
 
 /**
@@ -42,9 +43,25 @@ export type GridViewType = {
   gridProps?: Pick<GridProps, 'gapX' | 'gapY' | 'alignItems' | 'justifyContent' | 'wrap'>;
   spaceProps?: Omit<SpaceProps, 'sx'>;
 };
+export type HorizontalDividerViewType = {
+  horizontalDividerProps?: Omit<HorizontalDividerProps, 'sx'>;
+  spaceProps?: Omit<SpaceProps, 'sx'>;
+};
 
-export type ViewType = TextViewType | ImageViewType | IconViewType | ChipGroupViewType | GridViewType;
-export type ViewComponentType = 'TextView' | 'ImageView' | 'IconView' | 'ChipGroupView' | 'GridView';
+export type ViewType =
+  | TextViewType
+  | ImageViewType
+  | IconViewType
+  | ChipGroupViewType
+  | GridViewType
+  | HorizontalDividerViewType;
+export type ViewComponentType =
+  | 'TextView'
+  | 'ImageView'
+  | 'IconView'
+  | 'ChipGroupView'
+  | 'GridView'
+  | 'HorizontalDividerView';
 
 export interface ViewContainerType {
   id: string;

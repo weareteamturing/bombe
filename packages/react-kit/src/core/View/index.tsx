@@ -18,6 +18,7 @@ import {
   ShadowProps,
   BorderRadiusProps,
   Theme,
+  BorderColorProps,
 } from 'styled-system';
 
 import { SxProp, sx } from '../../utils/styled-system';
@@ -28,6 +29,7 @@ type Props = {} & SxProp &
   FlexboxProps &
   BackgroundProps &
   BorderProps &
+  BorderColorProps<Theme, ColorKey | SurfaceElevationKey> &
   PositionProps &
   ShadowProps<Theme> &
   BorderRadiusProps<Theme, RadiiKey>;
