@@ -18,7 +18,7 @@ type Props = {
    * 색을 정의합니다.
    * hover, active, focused, disabled, loading 등의 모든 상황에 관여합니다.
    */
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'outlined' | 'plain' | 'danger';
+  variant?: 'primary' | 'secondary' | 'neutral' | 'outlined' | 'plain' | 'danger';
   /**
    * 감싸고 있는 컨테이너의 너비를 채웁니다.
    */
@@ -205,7 +205,7 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
               }
             : {}),
         },
-        tertiary: {
+        neutral: {
           'backgroundColor': color['bg/neutral'],
           'color': color['text/neutral'],
           '& svg': { color: color['icon/accent/gray'] },
@@ -354,7 +354,7 @@ const BaseSpinner = styled(Spinner)<Pick<Props, 'size' | 'variant'>>(
       secondary: {
         color: color['icon/primary'],
       },
-      tertiary: {
+      neutral: {
         color: color['icon/accent/gray'],
       },
       outlined: {
