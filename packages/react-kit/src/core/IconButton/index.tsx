@@ -21,7 +21,7 @@ type Props = {
    * 색을 정의합니다.
    * hover, active, focused, disabled, loading 등의 모든 상황에 관여합니다.
    */
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'outlined' | 'plain-bold' | 'plain' | 'plain-subtle' | 'danger';
+  variant?: 'primary' | 'secondary' | 'neutral' | 'outlined' | 'plain-bold' | 'plain' | 'plain-subtle' | 'danger';
   /**
    * 비활성화 상태를 정의합니다.
    */
@@ -122,7 +122,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
               }
             : {}),
         },
-        'tertiary': {
+        'neutral': {
           'backgroundColor': color['bg/neutral'],
           'color': color['icon/accent/gray'],
           '&:hover:not(:disabled)': {
