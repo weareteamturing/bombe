@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.11.0...@teamturing/react-kit@2.12.0) (2023-10-20)
+
+### Features
+
+- **react-kit:** update Button, IconButton variant tertiary to neutral ([1efd65d](https://github.com/weareteamturing/bombe/commit/1efd65db4cfb1c7bdbb18415cbec149575c7ad51))
+
 # [2.11.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.10.1...@teamturing/react-kit@2.11.0) (2023-10-19)
 
 ### Bug Fixes
