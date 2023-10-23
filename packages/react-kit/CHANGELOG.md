@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.12.0...@teamturing/react-kit@2.13.0) (2023-10-23)
+
+### Bug Fixes
+
+- **react-kit:** update Dialog with useFocusTrap hook ([8aed040](https://github.com/weareteamturing/bombe/commit/8aed040a1c472f1034e2856f0b8ac5e170870424))
+- **react-kit:** update import path ([116f373](https://github.com/weareteamturing/bombe/commit/116f37383ec6dd9339ee7c80082ad5adea702d4f))
+
+### Features
+
+- **react-kit:** add OverlayPopper component ([1ba560b](https://github.com/weareteamturing/bombe/commit/1ba560b6be904add78ecf1605f946627184e32bf))
+- **react-kit:** create Overlay component ([83734c5](https://github.com/weareteamturing/bombe/commit/83734c5923ad30a3159c3748339e872318384796))
+- **react-kit:** create useFocusZone, useFocusTrap hooks ([3992ce6](https://github.com/weareteamturing/bombe/commit/3992ce618958995327e3f85f205ea117cbbf779e))
+
 # [2.12.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.11.0...@teamturing/react-kit@2.12.0) (2023-10-20)
 
 ### Features
