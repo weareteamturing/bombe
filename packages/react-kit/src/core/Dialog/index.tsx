@@ -4,9 +4,9 @@ import { AnimatePresence, cubicBezier } from 'framer-motion';
 import { forwardRef, PropsWithChildren, Ref, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
 import styled from 'styled-components';
 
-import { useFocusTrap } from '../..';
 import IconButton from '../../core/IconButton';
 import View from '../../core/View';
+import useFocusTrap from '../../hook/useFocusTrap';
 import { SxProp, sx } from '../../utils/styled-system';
 import MotionView from '../MotionView';
 
