@@ -41,6 +41,12 @@ export type { ItemListProps } from './core/ItemList';
 
 export { default as MotionView } from './core/MotionView';
 
+export { default as Overlay } from './core/Overlay';
+export type { OverlayProps } from './core/Overlay';
+
+export { default as OverlayPopper } from './core/OverlayPopper';
+export type { OverlayPopperProps } from './core/OverlayPopper';
+
 export { default as Space } from './core/Space';
 export type { SpaceProps } from './core/Space';
 
@@ -88,6 +94,14 @@ export { default as EnigmaUI } from './enigma/EnigmaUI';
  * hooks
  */
 export { default as useDevice } from './hook/useDevice';
+
+export { default as useDialogHandler } from './hook/useDialogHandler';
+
+export { default as useFocusTrap } from './hook/useFocusTrap';
+
+export { default as useFocusZone } from './hook/useFocusZone';
+
+export { default as useMediaQuery } from './hook/useMediaQuery';
 
 export { default as useOutsideClick } from './hook/useOutsideClick';
 
