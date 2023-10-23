@@ -4,19 +4,11 @@ import { AnimatePresence, cubicBezier } from 'framer-motion';
 import { forwardRef, PropsWithChildren, Ref, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
 import styled from 'styled-components';
 
+import { useFocusTrap } from '../..';
 import IconButton from '../../core/IconButton';
 import View from '../../core/View';
 import { SxProp, sx } from '../../utils/styled-system';
 import MotionView from '../MotionView';
-
-function visible(el: HTMLInputElement) {
-  return !el.hidden && (!el.type || el.type !== 'hidden') && (el.offsetWidth > 0 || el.offsetHeight > 0);
-}
-
-function focusable(el: Element) {
-  const inputEl = el as HTMLInputElement;
-  return inputEl.tabIndex >= 0 && !inputEl.disabled && visible(inputEl);
-}
 
 type Props = {
   isOpen?: boolean;
@@ -50,45 +42,10 @@ const Dialog = ({ children, isOpen, onDismiss, size, sx }: PropsWithChildren<Pro
     },
     [handleDismiss, dialogRef, overlayRef],
   );
-  const getFocusableItem = useCallback(
-    (e: React.KeyboardEvent, movement: number) => {
-      if (dialogRef.current) {
-        const items = Array.from(dialogRef.current.querySelectorAll('*')).filter(focusable);
 
-        if (items.length === 0) return;
-        e.preventDefault();
-        const focusedElement = document.activeElement;
-        if (!focusedElement) {
-          return;
-        }
-
-        const index = items.indexOf(focusedElement);
-        const offsetIndex = index + movement;
-        const fallbackIndex = movement === 1 ? 0 : items.length - 1;
-        const focusableItem = items[offsetIndex] || items[fallbackIndex];
-        return focusableItem as HTMLElement;
-      }
-    },
-    [dialogRef],
-  );
-  const handleTab = useCallback(
-    (e: React.KeyboardEvent) => {
-      const movement = e.shiftKey ? -1 : 1;
-      const focusableItem = getFocusableItem(e, movement);
-      if (!focusableItem) {
-        return;
-      }
-
-      focusableItem.focus();
-    },
-    [getFocusableItem],
-  );
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
       switch (event.key) {
-        case 'Tab':
-          handleTab(event);
-          break;
         case 'Escape':
           handleDismiss?.();
           event.stopPropagation();
@@ -97,6 +54,8 @@ const Dialog = ({ children, isOpen, onDismiss, size, sx }: PropsWithChildren<Pro
     },
     [handleDismiss],
   );
+
+  useFocusTrap({ containerRef: dialogRef, initialFocusRef: closeButtonRef, disabled: !isOpen });
 
   useEffect(() => {
     if (isOpen) {
@@ -139,7 +98,7 @@ const Dialog = ({ children, isOpen, onDismiss, size, sx }: PropsWithChildren<Pro
             zIndex: 9999,
           }}
         >
-          <Overlay ref={overlayRef} />
+          <Blanket ref={overlayRef} />
           <BaseDialog
             ref={dialogRef}
             aria-modal={'true'}
@@ -185,7 +144,7 @@ const Dialog = ({ children, isOpen, onDismiss, size, sx }: PropsWithChildren<Pro
   );
 };
 
-const Overlay = styled.span`
+const Blanket = styled.span`
   &:before {
     position: fixed;
     top: 0;
