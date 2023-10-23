@@ -44,6 +44,9 @@ export { default as MotionView } from './core/MotionView';
 export { default as Overlay } from './core/Overlay';
 export type { OverlayProps } from './core/Overlay';
 
+export { default as OverlayPopper } from './core/OverlayPopper';
+export type { OverlayPopperProps } from './core/OverlayPopper';
+
 export { default as Space } from './core/Space';
 export type { SpaceProps } from './core/Space';
 
