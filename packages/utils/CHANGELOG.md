@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.0.11...@teamturing/utils@1.1.0) (2023-10-26)
+
+### Features
+
+- **utils:** add toKoreanNumberUnitString ([4812468](https://github.com/weareteamturing/bombe/commit/4812468b85db3ec9115b2b3a62e0d6f5560c2b0c))
+
 ## [1.0.11](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.0.10...@teamturing/utils@1.0.11) (2023-09-12)
 
 ### Bug Fixes

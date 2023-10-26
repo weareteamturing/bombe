@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.14.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.13.0...@teamturing/react-kit@2.14.0) (2023-10-26)
+
+### Bug Fixes
+
+- **react-kit:** update type for Pagination component ([751e5b3](https://github.com/weareteamturing/bombe/commit/751e5b3ee363f595318664bc94c285e3c68ae190))
+
+### Features
+
+- **react-kit:** create Pagination component ([92644da](https://github.com/weareteamturing/bombe/commit/92644da64027ce186ea6d8fbce95556fe5dc59db))
+- **react-kit:** create Pill component ([76ef1f6](https://github.com/weareteamturing/bombe/commit/76ef1f6a1ca9faa690b4b3dab0d2e6f23c17e714))
+
 # [2.13.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.12.0...@teamturing/react-kit@2.13.0) (2023-10-23)
 
 ### Bug Fixes
