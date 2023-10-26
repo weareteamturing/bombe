@@ -180,7 +180,7 @@ const PaginationPage = styled(UnstyledButton)<PaginationPageProps>`
         `}
 `;
 
-type PaginationPageDirectionProps = UnstyledButtonProps;
+type PaginationPageDirectionProps = Pick<UnstyledButtonProps, 'onClick' | 'disabled'>;
 const PaginationPageDirection = styled(UnstyledButton)`
   transition: background-color 100ms;
 
