@@ -47,6 +47,12 @@ export type { OverlayProps } from './core/Overlay';
 export { default as OverlayPopper } from './core/OverlayPopper';
 export type { OverlayPopperProps } from './core/OverlayPopper';
 
+export { default as Pagination } from './core/Pagination';
+export type { PaginationProps, PaginationPageProps, PaginationPageDirectionProps } from './core/Pagination';
+
+export { default as Pill } from './core/Pill';
+export type { PillProps } from './core/Pill';
+
 export { default as Space } from './core/Space';
 export type { SpaceProps } from './core/Space';
 
