@@ -13,6 +13,9 @@ export type { ButtonProps } from './core/Button';
 export { default as Chip } from './core/Chip';
 export type { ChipProps } from './core/Chip';
 
+export { default as DescriptionList } from './core/DescriptionList';
+export type { DescriptionListProps } from './core/DescriptionList';
+
 export { default as Dialog } from './core/Dialog';
 export type { DialogProps } from './core/Dialog';
 
