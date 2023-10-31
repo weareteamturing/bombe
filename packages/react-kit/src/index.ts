@@ -13,6 +13,9 @@ export type { BreadcrumbsProps } from './core/Breadcrumbs';
 export { default as Button } from './core/Button';
 export type { ButtonProps } from './core/Button';
 
+export { default as Checkbox } from './core/Checkbox';
+export type { CheckboxProps } from './core/Checkbox';
+
 export { default as Chip } from './core/Chip';
 export type { ChipProps } from './core/Chip';
 
