@@ -70,7 +70,7 @@ const TextInput = forwardRef<HTMLInputElement, Props>(
             'fontSize': 'xxs',
             'fontWeight': 'medium',
             'color': color['text/neutral'],
-            '& > svg': { display: 'block', width: 24, height: 24, color: color['icon/neutral/bold'] },
+            '& > svg': { display: 'block', width: 20, height: 20, color: color['icon/neutral/bold'] },
           }}
         >
           {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
@@ -124,7 +124,7 @@ const TextInputWrapper = styled.div<TextInputWrapperProps>`
   width: ${forcePixelValue('100%')};
   border-width: ${forcePixelValue(1)};
   border-style: solid;
-  border-radius: ${({ theme }) => forcePixelValue(theme.radii.s)};
+  border-radius: ${({ theme }) => forcePixelValue(theme.radii.xs)};
   border-color: ${({ theme }) => theme.colors['border/input']};
   background-color: ${({ theme }) => theme.colors['bg/input']};
   cursor: text;
@@ -148,7 +148,7 @@ const TextInputWrapper = styled.div<TextInputWrapperProps>`
     left: ${forcePixelValue(-1)};
 
     border: ${forcePixelValue(2)} solid transparent;
-    border-radius: ${({ theme }) => forcePixelValue(theme.radii.s)};
+    border-radius: ${({ theme }) => forcePixelValue(theme.radii.xs)};
     pointer-events: none;
   }
 

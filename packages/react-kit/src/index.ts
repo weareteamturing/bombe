@@ -4,14 +4,32 @@
 export { default as AnimatePresence } from './core/AnimatePresence';
 export type { AnimatePresenceProps } from './core/AnimatePresence';
 
+export { default as Avatar } from './core/Avatar';
+export type { AvatarProps } from './core/Avatar';
+
 export { default as Breadcrumbs } from './core/Breadcrumbs';
 export type { BreadcrumbsProps } from './core/Breadcrumbs';
 
 export { default as Button } from './core/Button';
 export type { ButtonProps } from './core/Button';
 
+export { default as Checkbox } from './core/Checkbox';
+export type { CheckboxProps } from './core/Checkbox';
+
 export { default as Chip } from './core/Chip';
 export type { ChipProps } from './core/Chip';
+
+export { default as Datagrid } from './core/Datagrid';
+export type {
+  DatagridProps,
+  DatagridBodyProps,
+  DatagridCellProps,
+  DatagridHeaderProps,
+  DatagridRowProps,
+} from './core/Datagrid';
+
+export { default as DescriptionList } from './core/DescriptionList';
+export type { DescriptionListProps } from './core/DescriptionList';
 
 export { default as Dialog } from './core/Dialog';
 export type { DialogProps } from './core/Dialog';
@@ -52,6 +70,9 @@ export type { PaginationProps, PaginationPageProps, PaginationPageDirectionProps
 
 export { default as Pill } from './core/Pill';
 export type { PillProps } from './core/Pill';
+
+export { default as Select } from './core/Select';
+export type { SelectProps } from './core/Select';
 
 export { default as Space } from './core/Space';
 export type { SpaceProps } from './core/Space';
@@ -112,6 +133,8 @@ export { default as useMediaQuery } from './hook/useMediaQuery';
 export { default as useOutsideClick } from './hook/useOutsideClick';
 
 export { default as useProvidedOrCreatedRef } from './hook/useProvidedOrCreatedRef';
+
+export { default as useRelocation } from './hook/useRelocation';
 
 export { default as useResize } from './hook/useResize';
 
