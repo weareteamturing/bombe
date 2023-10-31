@@ -37,7 +37,7 @@ const TextareaWrapper = styled.div<Pick<Props, 'validationStatus'> & { disabled?
   width: ${forcePixelValue('100%')};
   border-width: ${forcePixelValue(1)};
   border-style: solid;
-  border-radius: ${({ theme }) => forcePixelValue(theme.radii.s)};
+  border-radius: ${({ theme }) => forcePixelValue(theme.radii.xs)};
   border-color: ${({ theme }) => theme.colors['border/input']};
   background-color: ${({ theme }) => theme.colors['bg/input']};
   cursor: text;
@@ -68,7 +68,7 @@ const TextareaWrapper = styled.div<Pick<Props, 'validationStatus'> & { disabled?
     left: ${forcePixelValue(-1)};
 
     border: ${forcePixelValue(2)} solid transparent;
-    border-radius: ${({ theme }) => forcePixelValue(theme.radii.s)};
+    border-radius: ${({ theme }) => forcePixelValue(theme.radii.xs)};
     pointer-events: none;
   }
 
