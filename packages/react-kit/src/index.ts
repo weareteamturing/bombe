@@ -19,6 +19,15 @@ export type { CheckboxProps } from './core/Checkbox';
 export { default as Chip } from './core/Chip';
 export type { ChipProps } from './core/Chip';
 
+export { default as Datagrid } from './core/Datagrid';
+export type {
+  DatagridProps,
+  DatagridBodyProps,
+  DatagridCellProps,
+  DatagridHeaderProps,
+  DatagridRowProps,
+} from './core/Datagrid';
+
 export { default as DescriptionList } from './core/DescriptionList';
 export type { DescriptionListProps } from './core/DescriptionList';
 
@@ -124,6 +133,8 @@ export { default as useMediaQuery } from './hook/useMediaQuery';
 export { default as useOutsideClick } from './hook/useOutsideClick';
 
 export { default as useProvidedOrCreatedRef } from './hook/useProvidedOrCreatedRef';
+
+export { default as useRelocation } from './hook/useRelocation';
 
 export { default as useResize } from './hook/useResize';
 
