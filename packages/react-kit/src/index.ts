@@ -62,6 +62,9 @@ export type { PaginationProps, PaginationPageProps, PaginationPageDirectionProps
 export { default as Pill } from './core/Pill';
 export type { PillProps } from './core/Pill';
 
+export { default as Select } from './core/Select';
+export type { SelectProps } from './core/Select';
+
 export { default as Space } from './core/Space';
 export type { SpaceProps } from './core/Space';
 
