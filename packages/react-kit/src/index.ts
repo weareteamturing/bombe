@@ -4,6 +4,9 @@
 export { default as AnimatePresence } from './core/AnimatePresence';
 export type { AnimatePresenceProps } from './core/AnimatePresence';
 
+export { default as Avatar } from './core/Avatar';
+export type { AvatarProps } from './core/Avatar';
+
 export { default as Breadcrumbs } from './core/Breadcrumbs';
 export type { BreadcrumbsProps } from './core/Breadcrumbs';
 
