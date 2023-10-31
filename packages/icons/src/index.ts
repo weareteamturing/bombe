@@ -74,6 +74,7 @@ export { default as FacebookIcon } from './Facebook';
 export { default as FacebookColorIcon } from './FacebookColor';
 export { default as FilterIcon } from './Filter';
 export { default as FireIcon } from './Fire';
+export { default as FolderIcon } from './Folder';
 export { default as FrameIcon } from './Frame';
 export { default as GlassesIcon } from './Glasses';
 export { default as GraphIcon } from './Graph';
