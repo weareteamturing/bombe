@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.19.0...@teamturing/icons@1.20.0) (2023-10-31)
+
+### Features
+
+- **icons:** add folder icon with clean up ([0cbbe43](https://github.com/weareteamturing/bombe/commit/0cbbe4347626c3443d8ebb2d68c92e1ce7454f9e))
+
 # [1.19.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.18.0...@teamturing/icons@1.19.0) (2023-09-19)
 
 ### Features
