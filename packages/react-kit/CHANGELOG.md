@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.15.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.14.1...@teamturing/react-kit@2.15.0) (2023-10-31)
+
+### Bug Fixes
+
+- **react-kit:** update Pill default property ([4876720](https://github.com/weareteamturing/bombe/commit/48767206bb8d8018dac62ffbc3cc53c3d1e5c5e4))
+- **react-kit:** update Textarea style ([d6e8856](https://github.com/weareteamturing/bombe/commit/d6e8856e5440612f524b810a0f2f5c938bee3eea))
+- **react-kit:** update TextInput component style ([2c149bb](https://github.com/weareteamturing/bombe/commit/2c149bbae4f8e61ef6930ac5957bf73ddceb38ba))
+
+### Features
+
+- **react-kit:** add Avatar component ([0e81091](https://github.com/weareteamturing/bombe/commit/0e8109110661a745a8c087c33ba7e0b8091560fd))
+- **react-kit:** add Datagrid component ([f8e2565](https://github.com/weareteamturing/bombe/commit/f8e2565c51637517afebff06e7066321a7424ede))
+- **react-kit:** add DescriptionList component ([c695362](https://github.com/weareteamturing/bombe/commit/c695362bd1add97e17bc2f06bce90fda76725c80))
+- **react-kit:** create Checkbox component ([83aec3a](https://github.com/weareteamturing/bombe/commit/83aec3a27fd2c665cd5a2298a09c175a393569a8))
+- **react-kit:** create Select component ([b5c5291](https://github.com/weareteamturing/bombe/commit/b5c5291906c8ac72ec44f53f62744b8e3dd0a0a2))
+
 ## [2.14.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.14.0...@teamturing/react-kit@2.14.1) (2023-10-31)
 
 **Note:** Version bump only for package @teamturing/react-kit
