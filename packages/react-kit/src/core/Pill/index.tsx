@@ -1,5 +1,5 @@
 import { CloseIcon } from '@teamturing/icons';
-import { ElementType, ReactNode, Ref, forwardRef } from 'react';
+import { ComponentType, ElementType, ReactNode, Ref, SVGProps, forwardRef } from 'react';
 import { isValidElementType } from 'react-is';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
@@ -26,13 +26,25 @@ type Props = {
    */
   leadingVisual?: ElementType | ReactNode;
   /**
-   * 없앨 수 있을 때 onRemove를 넘기면 X 버튼이 trailingVisual 자리에 생깁니다.
+   * 없앨 수 있을 때 onRemove를 넘기면 삭제 버튼이 trailingVisual 자리에 생깁니다.
    */
   onRemove?: () => void;
+  /**
+   * onRemove가 undefined가 아닐 때 나오는 삭제 버튼의 아이콘을 정의합니다.
+   */
+  removeIcon?: ComponentType<SVGProps<SVGSVGElement>>;
 } & SxProp;
 
 const Pill = (
-  { text, size = 'm', variant = 'secondary', leadingVisual: LeadingVisual, onRemove, ...props }: Props,
+  {
+    text,
+    size = 'm',
+    variant = 'secondary',
+    leadingVisual: LeadingVisual,
+    onRemove,
+    removeIcon: RemoveIcon = CloseIcon,
+    ...props
+  }: Props,
   ref: Ref<HTMLSpanElement>,
 ) => (
   <BasePill
@@ -48,10 +60,10 @@ const Pill = (
     ) : (
       (LeadingVisual as ReactNode)
     )}
-    {text}
+    <span title={text}>{text}</span>
     {onRemove ? (
       <UnstyledButton type={'button'} onClick={onRemove} aria-label={'Remove Pill'}>
-        <CloseIcon />
+        <RemoveIcon />
       </UnstyledButton>
     ) : null}
   </BasePill>
@@ -62,6 +74,13 @@ const BasePill = styled.span<Omit<Props, 'leadingVisual'> & { hasLeadingVisual: 
   align-items: center;
   border-radius: ${({ theme }) => forcePixelValue(theme.radii.xxs)};
 
+  & span {
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+    word-break: break-all;
+  }
   & > button {
     display: flex;
     transition: background-color 100ms;
@@ -80,7 +99,7 @@ const BasePill = styled.span<Omit<Props, 'leadingVisual'> & { hasLeadingVisual: 
           'fontWeight': theme.fontWeights.medium,
           'lineHeight': theme.lineHeights[2],
           'columnGap': 1,
-          '& svg': { width: 16, height: 16, color: theme.colors['icon/primary'] },
+          '& svg': { minWidth: 16, height: 16, color: theme.colors['icon/primary'] },
           '& button': { p: 1 },
         },
         m: {
@@ -91,7 +110,7 @@ const BasePill = styled.span<Omit<Props, 'leadingVisual'> & { hasLeadingVisual: 
           'fontWeight': theme.fontWeights.medium,
           'lineHeight': theme.lineHeights[2],
           'columnGap': 0.5,
-          '& svg': { width: 16, height: 16, color: theme.colors['icon/primary'] },
+          '& svg': { minWidth: 16, height: 16, color: theme.colors['icon/primary'] },
           '& button': { p: 0.5 },
         },
         s: {
@@ -102,7 +121,7 @@ const BasePill = styled.span<Omit<Props, 'leadingVisual'> & { hasLeadingVisual: 
           'fontWeight': theme.fontWeights.medium,
           'lineHeight': theme.lineHeights[2],
           'columnGap': 0.5,
-          '& svg': { width: 12, height: 12, color: theme.colors['icon/primary'] },
+          '& svg': { minWidth: 12, height: 12, color: theme.colors['icon/primary'] },
           '& button': { p: 0.5 },
         },
       },
