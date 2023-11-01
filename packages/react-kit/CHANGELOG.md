@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.15.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.15.0...@teamturing/react-kit@2.15.1) (2023-11-01)
+
+### Bug Fixes
+
+- **react-kit:** update Checkbox useLayoutEffect ([2083b51](https://github.com/weareteamturing/bombe/commit/2083b51d15fd95a10e3aa822e5e72bee5d0bb42c))
+
 # [2.15.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.14.1...@teamturing/react-kit@2.15.0) (2023-10-31)
 
 ### Bug Fixes
