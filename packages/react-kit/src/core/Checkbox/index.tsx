@@ -1,7 +1,8 @@
-import { InputHTMLAttributes, Ref, forwardRef, useLayoutEffect } from 'react';
+import { InputHTMLAttributes, Ref, forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
+import useSafeLayoutEffect from '../../hook/useSafeLayoutEffect';
 import { forcePixelValue } from '../../utils/forcePixelValue';
 import { SxProp, sx } from '../../utils/styled-system';
 
@@ -17,7 +18,7 @@ const Checkbox = (
 ) => {
   const checkboxRef = useProvidedOrCreatedRef(ref as React.RefObject<HTMLInputElement>);
 
-  useLayoutEffect(() => {
+  useSafeLayoutEffect(() => {
     if (checkboxRef.current) {
       checkboxRef.current.indeterminate = indeterminate || false;
     }
