@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.16.2...@teamturing/react-kit@2.16.3) (2023-11-02)
+
+### Bug Fixes
+
+- **react-kit:** add maxHeight to Overlay ([c810fff](https://github.com/weareteamturing/bombe/commit/c810fff02bf2e6611347bad59049058b0958ed45))
+
 ## [2.16.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.16.1...@teamturing/react-kit@2.16.2) (2023-11-02)
 
 ### Bug Fixes
