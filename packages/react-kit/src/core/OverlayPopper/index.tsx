@@ -5,10 +5,11 @@ import { Children, HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, R
 import useFocusTrap, { FocusTrapHookSettings } from '../../hook/useFocusTrap';
 import useFocusZone, { FocusZoneHookSettings } from '../../hook/useFocusZone';
 import useToggleHandler from '../../hook/useToggleHandler';
-import Overlay from '../Overlay';
+import Overlay, { OverlayProps } from '../Overlay';
 
 type Props = {
   renderOverlay: ({ isOpen, closeOverlay }: { isOpen: boolean; closeOverlay: () => void }) => ReactNode;
+  overlayProps?: OverlayProps;
   placement?: Placement;
   focusZoneSettings?: Partial<FocusZoneHookSettings>;
   focusTrapSettings?: Partial<FocusTrapHookSettings>;
@@ -17,6 +18,7 @@ type Props = {
 const OverlayPopper = ({
   children: propChildren,
   renderOverlay,
+  overlayProps,
   placement = 'bottom-start',
   focusZoneSettings,
   focusTrapSettings,
@@ -29,6 +31,12 @@ const OverlayPopper = ({
   });
 
   const { state: isOpen, toggle: toggleOverlay, off: closeOverlay } = useToggleHandler({ initialState: false });
+
+  const handleDismiss = () => {
+    overlayProps?.onDismiss?.();
+
+    closeOverlay();
+  };
 
   const children = Children.map(propChildren, (child) =>
     cloneElement(child as ReactElement<HTMLAttributes<HTMLElement>>, {
@@ -51,10 +59,11 @@ const OverlayPopper = ({
       <Overlay
         ref={refs.setFloating}
         isOpen={isOpen}
-        onDismiss={closeOverlay}
         dismissFocusRef={refs.reference as RefObject<HTMLElement>}
         ignoreOutsideClickRefs={[refs.reference as RefObject<HTMLElement>]}
+        {...overlayProps}
         style={floatingStyles}
+        onDismiss={handleDismiss}
       >
         {renderOverlay({ isOpen, closeOverlay })}
       </Overlay>
