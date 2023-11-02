@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.16.1...@teamturing/react-kit@2.16.2) (2023-11-02)
+
+### Bug Fixes
+
+- **react-kit:** update overlay size ([bb26de6](https://github.com/weareteamturing/bombe/commit/bb26de60f8329c2238fbabefee3bb910be1f6156))
+
 ## [2.16.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.16.0...@teamturing/react-kit@2.16.1) (2023-11-02)
 
 ### Bug Fixes
