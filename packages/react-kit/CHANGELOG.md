@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.15.1...@teamturing/react-kit@2.16.0) (2023-11-02)
+
+### Bug Fixes
+
+- **react-kit:** add dismissFocusRef to Overlay ([8cac615](https://github.com/weareteamturing/bombe/commit/8cac6151b86e127349def394f6230937f32f5f70))
+
+### Features
+
+- **react-kit:** add ActionList component ([b570cb6](https://github.com/weareteamturing/bombe/commit/b570cb6f7bea69e7df453f90e5d712cc7038a842))
+
 ## [2.15.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.15.0...@teamturing/react-kit@2.15.1) (2023-11-01)
 
 ### Bug Fixes
