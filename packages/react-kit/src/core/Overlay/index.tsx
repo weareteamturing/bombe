@@ -21,16 +21,33 @@ type Props = {
   onDismiss?: () => void;
   size?: ResponsiveValue<'m'>;
   ignoreOutsideClickRefs?: RefObject<HTMLElement>[];
+  dismissFocusRef?: RefObject<HTMLElement>;
 } & HTMLAttributes<HTMLElement>;
 
 const Overlay = (
-  { children, isOpen, onDismiss, size = 'm', ignoreOutsideClickRefs = [], ...props }: PropsWithChildren<Props>,
+  {
+    children,
+    isOpen,
+    onDismiss,
+    size = 'm',
+    ignoreOutsideClickRefs = [],
+    dismissFocusRef,
+    ...props
+  }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
 ) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   useImperativeHandle<HTMLDivElement | null, HTMLDivElement | null>(ref, () => overlayRef.current);
 
-  const handleDismiss = useCallback(() => onDismiss?.(), [onDismiss]);
+  const handleDismiss = useCallback(() => {
+    if (dismissFocusRef && dismissFocusRef.current) {
+      setTimeout(() => {
+        dismissFocusRef.current?.focus();
+      }, 0);
+    }
+
+    onDismiss?.();
+  }, [onDismiss]);
 
   const handleOutsideClick = useCallback(
     (e: MouseEvent) => {
