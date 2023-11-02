@@ -11,7 +11,7 @@ import {
   useRef,
 } from 'react';
 import styled from 'styled-components';
-import { ResponsiveValue, variant } from 'styled-system';
+import { MaxHeightProps, ResponsiveValue, maxHeight, variant } from 'styled-system';
 
 import { forcePixelValue } from '../../utils';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
@@ -23,7 +23,9 @@ type Props = {
   size?: ResponsiveValue<OverlaySizeType>;
   ignoreOutsideClickRefs?: RefObject<HTMLElement>[];
   dismissFocusRef?: RefObject<HTMLElement>;
-} & HTMLAttributes<HTMLElement>;
+} & MaxHeightProps &
+  SxProp &
+  HTMLAttributes<HTMLElement>;
 
 const Overlay = (
   {
@@ -33,6 +35,7 @@ const Overlay = (
     size = 'm',
     ignoreOutsideClickRefs = [],
     dismissFocusRef,
+    maxHeight = forcePixelValue(600),
     ...props
   }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
@@ -101,13 +104,13 @@ const Overlay = (
   }, [isOpen, handleOutsideClick]);
 
   return isOpen ? (
-    <BaseOverlay ref={overlayRef} size={size} {...props} role={'dialog'}>
+    <BaseOverlay ref={overlayRef} size={size} maxHeight={maxHeight} {...props} role={'dialog'}>
       {children}
     </BaseOverlay>
   ) : null;
 };
 
-const BaseOverlay = styled.div<SxProp & Props>`
+const BaseOverlay = styled.div<Props>`
   position: absolute;
   box-shadow: ${({ theme }) => theme.shadows['shadow/overlay']};
   background-color: ${({ theme }) => theme.colors['surface/overlay']};
@@ -130,6 +133,8 @@ const BaseOverlay = styled.div<SxProp & Props>`
       },
     },
   })}
+
+  ${maxHeight}
   ${sx}
 `;
 
