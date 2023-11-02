@@ -16,10 +16,11 @@ import { ResponsiveValue, variant } from 'styled-system';
 import { forcePixelValue } from '../../utils';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 
+type OverlaySizeType = 's' | 'm' | 'l';
 type Props = {
   isOpen?: boolean;
   onDismiss?: () => void;
-  size?: ResponsiveValue<'m'>;
+  size?: ResponsiveValue<OverlaySizeType>;
   ignoreOutsideClickRefs?: RefObject<HTMLElement>[];
   dismissFocusRef?: RefObject<HTMLElement>;
 } & HTMLAttributes<HTMLElement>;
@@ -100,7 +101,7 @@ const Overlay = (
   }, [isOpen, handleOutsideClick]);
 
   return isOpen ? (
-    <BaseOverlay ref={overlayRef} size={size} {...props}>
+    <BaseOverlay ref={overlayRef} size={size} {...props} role={'dialog'}>
       {children}
     </BaseOverlay>
   ) : null;
@@ -115,11 +116,17 @@ const BaseOverlay = styled.div<SxProp & Props>`
   margin: auto;
   z-index: 99999;
 
-  ${variant<BetterSystemStyleObject>({
+  ${variant<BetterSystemStyleObject, OverlaySizeType, 'size'>({
     prop: 'size',
     variants: {
+      s: {
+        width: forcePixelValue(256),
+      },
       m: {
-        width: forcePixelValue(180),
+        width: forcePixelValue(320),
+      },
+      l: {
+        width: forcePixelValue(480),
       },
     },
   })}
