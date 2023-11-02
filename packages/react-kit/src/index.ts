@@ -1,6 +1,14 @@
 /**
  * core components
  */
+export { default as ActionList } from './core/ActionList';
+export type {
+  ActionListProps,
+  ActionListItemProps,
+  ActionListSectionDividerProps,
+  ActionListSectionHeaderProps,
+} from './core/ActionList';
+
 export { default as AnimatePresence } from './core/AnimatePresence';
 export type { AnimatePresenceProps } from './core/AnimatePresence';
 
