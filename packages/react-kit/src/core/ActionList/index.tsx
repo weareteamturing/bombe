@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import { SxProp, sx } from '../../utils/styled-system';
 
-import ActionListItem from './ActionListItem';
-import ActionListSectionDivider from './ActionListSectionDivider';
-import ActionListSectionHeader from './ActionListSectionHeader';
+import ActionListItem, { ActionListItemProps } from './ActionListItem';
+import ActionListSectionDivider, { ActionListSectionDividerProps } from './ActionListSectionDivider';
+import ActionListSectionHeader, { ActionListSectionHeaderProps } from './ActionListSectionHeader';
 
 type Props = {
   /**
@@ -42,4 +42,10 @@ export default Object.assign(ActionList, {
   SectionHeader: ActionListSectionHeader,
 });
 export { ActionListContext };
-export type { Props as ActionListProps, ActionListContextValue };
+export type {
+  Props as ActionListProps,
+  ActionListContextValue,
+  ActionListItemProps,
+  ActionListSectionDividerProps,
+  ActionListSectionHeaderProps,
+};
