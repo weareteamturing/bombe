@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.16.0...@teamturing/react-kit@2.16.1) (2023-11-02)
+
+### Bug Fixes
+
+- **react-kit:** add missing export ([42201f2](https://github.com/weareteamturing/bombe/commit/42201f2a815a284d4f4b61677957766e3000b4d4))
+
 # [2.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.15.1...@teamturing/react-kit@2.16.0) (2023-11-02)
 
 ### Bug Fixes
