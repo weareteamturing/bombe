@@ -52,6 +52,7 @@ const OverlayPopper = ({
         ref={refs.setFloating}
         isOpen={isOpen}
         onDismiss={closeOverlay}
+        dismissFocusRef={refs.reference as RefObject<HTMLElement>}
         ignoreOutsideClickRefs={[refs.reference as RefObject<HTMLElement>]}
         style={floatingStyles}
       >
