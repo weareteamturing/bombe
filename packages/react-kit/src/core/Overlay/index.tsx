@@ -16,7 +16,7 @@ import { MaxHeightProps, ResponsiveValue, maxHeight, variant } from 'styled-syst
 import { forcePixelValue } from '../../utils';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 
-type OverlaySizeType = 's' | 'm' | 'l';
+type OverlaySizeType = 's' | 'm' | 'l' | 'auto';
 type Props = {
   isOpen?: boolean;
   onDismiss?: () => void;
@@ -123,13 +123,16 @@ const BaseOverlay = styled.div<Props>`
     prop: 'size',
     variants: {
       s: {
-        width: forcePixelValue(256),
+        width: forcePixelValue(180),
       },
       m: {
-        width: forcePixelValue(320),
+        width: forcePixelValue(256),
       },
       l: {
-        width: forcePixelValue(480),
+        width: forcePixelValue(320),
+      },
+      auto: {
+        width: 'auto',
       },
     },
   })}
