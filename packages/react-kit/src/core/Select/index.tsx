@@ -59,7 +59,7 @@ const Select = (
           'fontSize': 'xxs',
           'fontWeight': 'medium',
           'color': 'text/neutral',
-          '& > svg': { display: 'block', width: 20, height: 20, color: 'icon/neutral/bold' },
+          '& > svg': { display: 'block', width: 16, height: 16, color: 'icon/neutral/bold' },
         }}
       >
         {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
@@ -195,7 +195,7 @@ const SelectWrapper = styled.div<SelectWrapperProps>`
     css`
       padding-left: ${forcePixelValue(props.theme.space[5])};
       select {
-        padding-left: ${forcePixelValue(props.theme.space[3])};
+        padding-left: ${forcePixelValue(props.theme.space[2])};
       }
     `}
 

@@ -14,8 +14,12 @@ import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
-import { forcePixelValue, isFunction, isNullable } from '../../utils';
+import { forcePixelValue } from '../../utils/forcePixelValue';
+import { isFunction } from '../../utils/isFunction';
+import { isNullable } from '../../utils/isNullable';
 import View from '../View';
+
+import TextInputTrailingAction from './TextInputTrailingAction';
 
 type Props = {
   /**
@@ -36,81 +40,79 @@ type Props = {
   trailingAction?: React.ReactElement<HTMLProps<HTMLButtonElement>>;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-const TextInput = forwardRef<HTMLInputElement, Props>(
-  (
-    {
-      type = 'text',
-      disabled,
-      validationStatus,
-      leadingVisual: LeadingVisual,
-      trailingVisual: TrailingVisual,
-      trailingAction,
-      ...props
-    }: Props,
-    ref: Ref<HTMLInputElement>,
-  ) => {
-    const inputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLInputElement>);
+const TextInput = (
+  {
+    type = 'text',
+    disabled,
+    validationStatus,
+    leadingVisual: LeadingVisual,
+    trailingVisual: TrailingVisual,
+    trailingAction,
+    ...props
+  }: Props,
+  ref: Ref<HTMLInputElement>,
+) => {
+  const inputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLInputElement>);
 
-    const focusInput = () => {
-      inputRef.current?.focus();
-    };
+  const focusInput = () => {
+    inputRef.current?.focus();
+  };
 
-    return (
-      <TextInputWrapper
-        disabled={disabled}
-        onClick={focusInput}
-        hasLeadingVisual={!isNullable(LeadingVisual)}
-        hasTrailingVisual={!isNullable(TrailingVisual)}
-        hasTrailingAction={!isNullable(trailingAction)}
-        validationStatus={validationStatus}
+  return (
+    <TextInputWrapper
+      disabled={disabled}
+      onClick={focusInput}
+      hasLeadingVisual={!isNullable(LeadingVisual)}
+      hasTrailingVisual={!isNullable(TrailingVisual)}
+      hasTrailingAction={!isNullable(trailingAction)}
+      validationStatus={validationStatus}
+    >
+      <View
+        sx={{
+          'flexShrink': 0,
+          'fontSize': 'xxs',
+          'fontWeight': 'medium',
+          'color': color['text/neutral'],
+          '& > svg': { display: 'block', width: 16, height: 16, color: color['icon/neutral/bold'] },
+        }}
       >
-        <View
-          sx={{
-            'flexShrink': 0,
-            'fontSize': 'xxs',
-            'fontWeight': 'medium',
-            'color': color['text/neutral'],
-            '& > svg': { display: 'block', width: 20, height: 20, color: color['icon/neutral/bold'] },
-          }}
-        >
-          {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
-            <LeadingVisual />
-          ) : (
-            (LeadingVisual as ReactNode)
-          )}
-        </View>
-        <BaseInput
-          ref={(e) => {
-            isFunction(ref) ? ref(e) : null;
-            (inputRef as MutableRefObject<HTMLInputElement | null>).current = e;
-          }}
-          type={type}
-          disabled={disabled}
-          {...props}
-        />
-        <View
-          sx={{
-            'display': 'flex',
-            'alignItems': 'center',
-            'columnGap': 2,
-            'flexShrink': 0,
-            'fontSize': 'xxs',
-            'fontWeight': 'medium',
-            'color': color['text/neutral'],
-            '& > svg': { display: 'block', width: 24, height: 24, color: color['icon/neutral/bold'] },
-          }}
-        >
-          {typeof TrailingVisual !== 'string' && isValidElementType(TrailingVisual) ? (
-            <TrailingVisual />
-          ) : (
-            (TrailingVisual as ReactNode)
-          )}
-          {trailingAction ? cloneElement(trailingAction, { disabled: disabled }) : null}
-        </View>
-      </TextInputWrapper>
-    );
-  },
-);
+        {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
+          <LeadingVisual />
+        ) : (
+          (LeadingVisual as ReactNode)
+        )}
+      </View>
+      <BaseInput
+        ref={(e) => {
+          isFunction(ref) ? ref(e) : null;
+          (inputRef as MutableRefObject<HTMLInputElement | null>).current = e;
+        }}
+        type={type}
+        disabled={disabled}
+        {...props}
+      />
+      <View
+        sx={{
+          'display': 'flex',
+          'alignItems': 'center',
+          'columnGap': 2,
+          'flexShrink': 0,
+          'fontSize': 'xxs',
+          'fontWeight': 'medium',
+          'color': color['text/neutral'],
+          '& > svg': { display: 'block', width: 16, height: 16, color: color['icon/neutral/bold'] },
+        }}
+      >
+        {typeof TrailingVisual !== 'string' && isValidElementType(TrailingVisual) ? (
+          <TrailingVisual />
+        ) : (
+          (TrailingVisual as ReactNode)
+        )}
+        {trailingAction ? cloneElement(trailingAction, { disabled: disabled }) : null}
+      </View>
+    </TextInputWrapper>
+  );
+};
 
 type TextInputWrapperProps = {
   isInputFocused?: boolean;
@@ -202,18 +204,30 @@ const TextInputWrapper = styled.div<TextInputWrapperProps>`
     css`
       padding-left: ${forcePixelValue(props.theme.space[5])};
       input {
-        padding-left: ${forcePixelValue(props.theme.space[3])};
+        padding-left: ${forcePixelValue(props.theme.space[2])};
       }
+    `}
+
+  ${(props) =>
+    props.hasTrailingVisual &&
+    css`
+      padding-right: ${forcePixelValue(props.theme.space[5])};
+    `}
+
+  ${(props) =>
+    props.hasTrailingAction &&
+    css`
+      padding-right: ${forcePixelValue(props.theme.space[3])};
     `}
 
   ${(props) =>
     (props.hasTrailingVisual || props.hasTrailingAction) &&
     css`
-      padding-right: ${forcePixelValue(props.theme.space[3])};
       input {
-        padding-right: ${forcePixelValue(props.theme.space[3])};
+        padding-right: ${forcePixelValue(props.theme.space[2])};
       }
     `}
+
 
   transition: color 100ms, background-color 100ms;
   &:after {
@@ -240,10 +254,10 @@ const UnstyledInput = styled.input`
 
 const BaseInput = styled(UnstyledInput)`
   padding-top: ${({ theme }) => forcePixelValue(theme.space['4'])};
-  padding-right: ${({ theme }) => forcePixelValue(theme.space['4'])};
+  padding-right: ${({ theme }) => forcePixelValue(theme.space['5'])};
   padding-bottom: ${({ theme }) => forcePixelValue(theme.space['4'])};
   padding-left: ${({ theme }) => forcePixelValue(theme.space['5'])};
 `;
 
-export default TextInput;
+export default Object.assign(forwardRef(TextInput), { TrailingAction: TextInputTrailingAction });
 export type { Props as TextInputProps };
