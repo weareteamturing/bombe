@@ -10,7 +10,7 @@ type Props = { theme?: Theme };
 const ThemeProvider = ({ theme: propTheme, ...props }: PropsWithChildren<Props>) => {
   const theme = propTheme ?? defaultTheme;
 
-  return <StyledComponentsThemeProvider theme={theme} {...props} />;
+  return <StyledComponentsThemeProvider theme={theme as any} {...props} />;
 };
 
 export default ThemeProvider;
