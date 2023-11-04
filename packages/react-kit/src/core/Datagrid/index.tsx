@@ -9,6 +9,7 @@ import DatagridBody, { DatagridBodyProps } from './DatagridBody';
 import DatagridCell, { DatagridCellProps } from './DatagridCell';
 import DatagridHeader, { DatagridHeaderProps } from './DatagridHeader';
 import DatagridRow, { DatagridRowProps } from './DatagridRow';
+import DatagridSubheader from './DatagridSubheader';
 
 type Props = {} & HTMLAttributes<HTMLDivElement> & SxProp;
 
@@ -17,12 +18,14 @@ const Datagrid = ({ children, sx, ...props }: PropsWithChildren<Props>) => {
     children,
     config: {
       header: DatagridHeader,
+      subHeader: DatagridSubheader,
     },
   });
 
   return (
     <DatagridWrapper sx={sx}>
       {relocatableComponentsObject.header}
+      {relocatableComponentsObject.subHeader}
       <BaseDatagrid {...props}>{restConmponents}</BaseDatagrid>
     </DatagridWrapper>
   );
@@ -47,6 +50,7 @@ const BaseDatagrid = styled.div`
 
 export default Object.assign(Datagrid, {
   Header: DatagridHeader,
+  Subheader: DatagridSubheader,
   Body: DatagridBody,
   Row: DatagridRow,
   Cell: DatagridCell,
