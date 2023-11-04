@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.16.3...@teamturing/react-kit@2.17.0) (2023-11-04)
+
+### Bug Fixes
+
+- **react-kit:** add Subheader to Datagrid with missing style ([9b3a54a](https://github.com/weareteamturing/bombe/commit/9b3a54a4626d7b1ab17c4e93d24e4b7c14e8f05f))
+- **react-kit:** fix typescript error ([d70996d](https://github.com/weareteamturing/bombe/commit/d70996d5d80e6df2e1c0604bf28a18c37c9a37b5))
+- **react-kit:** update import path ([f33163e](https://github.com/weareteamturing/bombe/commit/f33163e002c9fce509649d03df80a1800bdf53a0))
+- **react-kit:** update Pill import path ([ed03930](https://github.com/weareteamturing/bombe/commit/ed03930ef8d4b8bcc291959f72cf6bef28edd3f6))
+- **react-kit:** update TextInput, Select style ([d338085](https://github.com/weareteamturing/bombe/commit/d338085406b387af39ddb97d31d24cb7d0241c8c))
+
+### Features
+
+- **react-kit:** update overlay size ([bf463b4](https://github.com/weareteamturing/bombe/commit/bf463b459ecea06a5c378666165b76193a0ae66f))
+- **react-kit:** update Pill with brand new design ([7d957a2](https://github.com/weareteamturing/bombe/commit/7d957a243942d97cab37d7061537888264421c79))
+
 ## [2.16.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.16.2...@teamturing/react-kit@2.16.3) (2023-11-02)
 
 ### Bug Fixes
