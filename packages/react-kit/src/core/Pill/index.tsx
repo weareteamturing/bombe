@@ -1,5 +1,4 @@
 import { CloseIcon } from '@teamturing/icons';
-import { BetterSystemStyleObject, SxProp, sx } from '@teamturing/react-kit';
 import {
   ComponentType,
   ElementType,
@@ -19,6 +18,7 @@ import { ResponsiveValue, variant } from 'styled-system';
 
 import { forcePixelValue } from '../../utils/forcePixelValue';
 import { isNullable } from '../../utils/isNullable';
+import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import UnstyledButton from '../_UnstyledButton';
 
 type Props = {
