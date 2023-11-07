@@ -94,6 +94,7 @@ const OverlaySelectInput = (
             value={''}
             onChange={noop}
             {...props}
+            autoComplete={'off'}
             tabIndex={-1}
             onClick={(e) => {
               popperProps.onClick?.(e);
