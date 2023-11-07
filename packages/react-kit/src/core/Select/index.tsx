@@ -90,7 +90,7 @@ const Select = (
           }
         }}
       >
-        <option label={placeholder} value={PLACEHOLDER_VALUE} />
+        <SelectOption label={placeholder} value={PLACEHOLDER_VALUE} />
         {children}
       </BaseSelect>
       <StyledIcon
