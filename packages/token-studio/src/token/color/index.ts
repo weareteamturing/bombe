@@ -142,6 +142,16 @@ const scaleColor = {
   'scale/violet/7': palette.violet700,
   'scale/violet/8': palette.violet800,
   'scale/violet/9': palette.violet900,
+  'scale/gray/0': palette.gray50,
+  'scale/gray/1': palette.gray100,
+  'scale/gray/2': palette.gray200,
+  'scale/gray/3': palette.gray300,
+  'scale/gray/4': palette.gray400,
+  'scale/gray/5': palette.gray500,
+  'scale/gray/6': palette.gray600,
+  'scale/gray/7': palette.gray700,
+  'scale/gray/8': palette.gray800,
+  'scale/gray/9': palette.gray900,
 };
 
 const color = {
