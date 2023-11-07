@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.1...@teamturing/react-kit@2.19.2) (2023-11-07)
+
+### Bug Fixes
+
+- **react-kit:** update OverlaySelectInput default props ([7d910c2](https://github.com/weareteamturing/bombe/commit/7d910c2bd7eedb575891734846f4574718e3c468))
+- **react-kit:** update Select default color ([a2ac4f8](https://github.com/weareteamturing/bombe/commit/a2ac4f8f277144de7214359ea6401af3f08f1e6c))
+
 ## [2.19.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.0...@teamturing/react-kit@2.19.1) (2023-11-07)
 
 ### Bug Fixes

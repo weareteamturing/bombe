@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.1.7...@teamturing/token-studio@1.1.8) (2023-11-07)
+
+### Bug Fixes
+
+- **token-studio:** add scale gray token ([da5e1c7](https://github.com/weareteamturing/bombe/commit/da5e1c739d0255b648e5fb0b9a3e3123155a28bc))
+
 ## [1.1.7](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.1.6...@teamturing/token-studio@1.1.7) (2023-09-21)
 
 ### Bug Fixes
