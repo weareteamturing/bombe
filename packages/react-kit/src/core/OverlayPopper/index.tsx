@@ -1,15 +1,26 @@
 import { useFloating, autoUpdate, offset, flip, shift, Placement } from '@floating-ui/react-dom';
 import { space } from '@teamturing/token-studio';
-import { Children, HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, RefObject, cloneElement } from 'react';
+import {
+  Children,
+  ForwardedRef,
+  HTMLAttributes,
+  PropsWithChildren,
+  ReactElement,
+  ReactNode,
+  RefObject,
+  cloneElement,
+} from 'react';
 
 import useFocusTrap, { FocusTrapHookSettings } from '../../hook/useFocusTrap';
 import useFocusZone, { FocusZoneHookSettings } from '../../hook/useFocusZone';
 import useToggleHandler from '../../hook/useToggleHandler';
-import Overlay, { OverlayProps } from '../Overlay';
+import { OverlayProps } from '../Overlay';
 
 type Props = {
-  renderOverlay: ({ isOpen, closeOverlay }: { isOpen: boolean; closeOverlay: () => void }) => ReactNode;
-  overlayProps?: OverlayProps;
+  renderOverlay: (
+    overlayProps: OverlayProps & { ref?: ForwardedRef<HTMLDivElement> },
+    { isOpen, closeOverlay }: { isOpen: boolean; closeOverlay: () => void },
+  ) => ReactNode;
   placement?: Placement;
   focusZoneSettings?: Partial<FocusZoneHookSettings>;
   focusTrapSettings?: Partial<FocusTrapHookSettings>;
@@ -18,7 +29,6 @@ type Props = {
 const OverlayPopper = ({
   children: propChildren,
   renderOverlay,
-  overlayProps,
   placement = 'bottom-start',
   focusZoneSettings,
   focusTrapSettings,
@@ -33,8 +43,6 @@ const OverlayPopper = ({
   const { state: isOpen, toggle: toggleOverlay, off: closeOverlay } = useToggleHandler({ initialState: false });
 
   const handleDismiss = () => {
-    overlayProps?.onDismiss?.();
-
     closeOverlay();
   };
 
@@ -56,17 +64,17 @@ const OverlayPopper = ({
   return (
     <>
       {children}
-      <Overlay
-        ref={refs.setFloating}
-        isOpen={isOpen}
-        dismissFocusRef={refs.reference as RefObject<HTMLElement>}
-        ignoreOutsideClickRefs={[refs.reference as RefObject<HTMLElement>]}
-        {...overlayProps}
-        style={floatingStyles}
-        onDismiss={handleDismiss}
-      >
-        {renderOverlay({ isOpen, closeOverlay })}
-      </Overlay>
+      {renderOverlay(
+        {
+          ref: refs.setFloating,
+          isOpen,
+          dismissFocusRef: refs.reference as RefObject<HTMLElement>,
+          ignoreOutsideClickRefs: [refs.reference as RefObject<HTMLElement>],
+          style: { ...floatingStyles },
+          onDismiss: handleDismiss,
+        },
+        { isOpen, closeOverlay },
+      )}
     </>
   );
 };
