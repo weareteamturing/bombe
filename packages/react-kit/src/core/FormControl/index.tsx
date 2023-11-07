@@ -33,7 +33,7 @@ type Props = {
    *
    * FormControl이 허용하는 Input 컴포넌트를 추가로 정의합니다.
    */
-  additionalInputComponentCandidates: any[];
+  additionalInputComponentCandidates?: any[];
 };
 
 type FormControlFieldProps = {
@@ -46,7 +46,7 @@ type FormControlContextValue = {} & Omit<Props, 'additionalInputComponentCandida
 const FormControlContext = createContext<FormControlContextValue>({});
 
 const FormControl = (
-  { children: propChildren, id, disabled, required, additionalInputComponentCandidates }: PropsWithChildren<Props>,
+  { children: propChildren, id, disabled, required, additionalInputComponentCandidates = [] }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
 ) => {
   const [relocatableComponentsObject, restComponents] = useRelocation({
