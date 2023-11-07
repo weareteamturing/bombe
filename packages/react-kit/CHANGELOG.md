@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.18.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.17.0...@teamturing/react-kit@2.18.0) (2023-11-07)
+
+### Features
+
+- **react-kit:** create EmptyState component ([08c46b9](https://github.com/weareteamturing/bombe/commit/08c46b9ef38c21031790a0ee5abac92f4c5c3f86))
+- **react-kit:** update OverlayPopper structure ([d951ca5](https://github.com/weareteamturing/bombe/commit/d951ca57c775d25e9be0a7305177f8e89a3e8ef9))
+- **react-kit:** update Select, OverlaySelectInput, Overlay, OverlayPopper ([a93b4c5](https://github.com/weareteamturing/bombe/commit/a93b4c5083f562f47eb85fc0c92bcca751360da1))
+
 # [2.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.16.3...@teamturing/react-kit@2.17.0) (2023-11-04)
 
 ### Bug Fixes
