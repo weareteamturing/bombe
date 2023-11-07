@@ -122,7 +122,7 @@ const SelectWrapper = styled.div<SelectWrapperProps>`
   font-size: ${({ theme }) => forcePixelValue(theme.fontSizes.xs)};
   font-weight: ${({ theme }) => theme.fontWeights.medium};
   line-height: ${({ theme }) => theme.lineHeights[2]};
-  color: ${({ theme }) => theme.colors['text/neutral/subtle']};
+  color: ${({ theme }) => theme.colors['text/neutral']};
 
   /**
    * placeholder style
