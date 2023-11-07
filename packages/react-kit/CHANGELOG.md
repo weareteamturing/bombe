@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.18.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.18.0...@teamturing/react-kit@2.18.1) (2023-11-07)
+
+### Bug Fixes
+
+- **react-kit:** update Select option problem in safari mobile ([924f3ce](https://github.com/weareteamturing/bombe/commit/924f3ce9fbbdb519aab85e49d0d5ba343bbef94a))
+
 # [2.18.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.17.0...@teamturing/react-kit@2.18.0) (2023-11-07)
 
 ### Features
