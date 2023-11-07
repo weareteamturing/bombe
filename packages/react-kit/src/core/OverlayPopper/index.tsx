@@ -1,25 +1,24 @@
-import { useFloating, autoUpdate, offset, flip, shift, Placement } from '@floating-ui/react-dom';
+import { useFloating, autoUpdate, offset, flip, shift, Placement, UseFloatingReturn } from '@floating-ui/react-dom';
 import { space } from '@teamturing/token-studio';
-import {
-  Children,
-  ForwardedRef,
-  HTMLAttributes,
-  PropsWithChildren,
-  ReactElement,
-  ReactNode,
-  RefObject,
-  cloneElement,
-} from 'react';
+import { Children, ForwardedRef, HTMLAttributes, ReactElement, ReactNode, RefObject, cloneElement } from 'react';
 
 import useFocusTrap, { FocusTrapHookSettings } from '../../hook/useFocusTrap';
 import useFocusZone, { FocusZoneHookSettings } from '../../hook/useFocusZone';
 import useToggleHandler from '../../hook/useToggleHandler';
+import { isFunction } from '../../utils/isFunction';
 import { OverlayProps } from '../Overlay';
 
 type Props = {
+  children:
+    | ReactNode
+    | ((
+        popperProps: HTMLAttributes<HTMLElement>,
+        { isOpen, openOverlay }: { isOpen: boolean; openOverlay: () => void },
+      ) => ReactNode);
   renderOverlay: (
     overlayProps: OverlayProps & { ref?: ForwardedRef<HTMLDivElement> },
     { isOpen, closeOverlay }: { isOpen: boolean; closeOverlay: () => void },
+    { elements }: { elements: UseFloatingReturn['elements'] },
   ) => ReactNode;
   placement?: Placement;
   focusZoneSettings?: Partial<FocusZoneHookSettings>;
@@ -32,27 +31,38 @@ const OverlayPopper = ({
   placement = 'bottom-start',
   focusZoneSettings,
   focusTrapSettings,
-}: PropsWithChildren<Props>) => {
-  const { refs, floatingStyles, isPositioned } = useFloating({
+}: Props) => {
+  const { refs, elements, floatingStyles, isPositioned } = useFloating({
     placement,
     whileElementsMounted: autoUpdate,
     middleware: [offset(space[1]), flip(), shift()],
     strategy: 'fixed',
   });
 
-  const { state: isOpen, toggle: toggleOverlay, off: closeOverlay } = useToggleHandler({ initialState: false });
+  const {
+    state: isOpen,
+    toggle: toggleOverlay,
+    on: openOverlay,
+    off: closeOverlay,
+  } = useToggleHandler({ initialState: false });
 
   const handleDismiss = () => {
     closeOverlay();
   };
 
-  const children = Children.map(propChildren, (child) =>
-    cloneElement(child as ReactElement<HTMLAttributes<HTMLElement>>, {
-      onClick: toggleOverlay,
-      tabIndex: 0,
-      ...{ ref: refs.setReference },
-    }),
-  );
+  const defaultPopperProps: HTMLAttributes<HTMLElement> = {
+    onClick: toggleOverlay,
+    tabIndex: 0,
+    ...{ ref: refs.setReference },
+  };
+
+  const children = isFunction(propChildren)
+    ? propChildren({ ...defaultPopperProps }, { isOpen, openOverlay })
+    : Children.map(propChildren, (child) =>
+        cloneElement(child as ReactElement<HTMLAttributes<HTMLElement>>, {
+          ...defaultPopperProps,
+        }),
+      );
 
   useFocusZone({
     containerRef: refs.floating,
@@ -74,6 +84,7 @@ const OverlayPopper = ({
           onDismiss: handleDismiss,
         },
         { isOpen, closeOverlay },
+        { elements },
       )}
     </>
   );

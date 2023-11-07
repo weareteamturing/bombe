@@ -13,7 +13,7 @@ import {
 import styled from 'styled-components';
 import { MaxHeightProps, ResponsiveValue, maxHeight, variant } from 'styled-system';
 
-import { forcePixelValue } from '../../utils';
+import { forcePixelValue } from '../../utils/forcePixelValue';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 
 type OverlaySizeType = 's' | 'm' | 'l' | 'auto';
@@ -69,11 +69,9 @@ const Overlay = (
   );
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
-      switch (event.key) {
-        case 'Escape':
-          handleDismiss?.();
-          event.stopPropagation();
-          break;
+      if (event.key === 'Escape') {
+        handleDismiss?.();
+        event.stopPropagation();
       }
     },
     [handleDismiss],
