@@ -1,13 +1,14 @@
 import { ChevronDownIcon } from '@teamturing/icons';
+import { noop } from '@teamturing/utils';
 import {
   ElementType,
-  SelectHTMLAttributes,
+  InputHTMLAttributes,
   MutableRefObject,
+  PropsWithChildren,
   ReactNode,
   Ref,
   RefObject,
   forwardRef,
-  useState,
 } from 'react';
 import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
@@ -16,10 +17,10 @@ import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 import { forcePixelValue } from '../../utils/forcePixelValue';
 import { isFunction } from '../../utils/isFunction';
 import { isNullable } from '../../utils/isNullable';
+import Overlay from '../Overlay';
+import OverlayPopper from '../OverlayPopper';
 import StyledIcon from '../StyledIcon';
 import View from '../View';
-
-import SelectOption, { SelectOptionProps } from './SelectOption';
 
 type Props = {
   /**
@@ -30,85 +31,93 @@ type Props = {
    * 입력 창 앞에 보여질 시각적 요소를 정의합니다. Icon, Text, Image 등이 될 수 있습니다.
    */
   leadingVisual?: ElementType | ReactNode;
-} & SelectHTMLAttributes<HTMLSelectElement>;
+} & InputHTMLAttributes<HTMLInputElement>;
 
-const Select = (
-  { children, disabled, validationStatus, leadingVisual: LeadingVisual, placeholder = '옵션 선택', ...props }: Props,
-  ref: Ref<HTMLSelectElement>,
+const OverlaySelectInput = (
+  { validationStatus, leadingVisual: LeadingVisual, children, ...props }: PropsWithChildren<Props>,
+  ref: Ref<HTMLInputElement>,
 ) => {
-  const PLACEHOLDER_VALUE = '';
+  const inputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLInputElement>);
 
-  const selectRef = useProvidedOrCreatedRef(ref as RefObject<HTMLSelectElement>);
-  const [isValueEmpty, setIsValueEmpty] = useState<boolean>(
-    isNullable(props.value) || props.value === PLACEHOLDER_VALUE,
-  );
-
-  const focusSelect = () => {
-    selectRef.current?.focus();
+  const focusInput = () => {
+    inputRef.current?.focus();
   };
 
-  return (
-    <SelectWrapper
-      disabled={disabled}
-      onClick={focusSelect}
-      hasLeadingVisual={!isNullable(LeadingVisual)}
-      validationStatus={validationStatus}
-      isValueEmpty={isValueEmpty}
-    >
-      <View
-        sx={{
-          'flexShrink': 0,
-          'fontSize': 'xxs',
-          'fontWeight': 'medium',
-          'color': 'text/neutral',
-          '& > svg': { display: 'block', width: 16, height: 16, color: 'icon/neutral/bold' },
-        }}
-      >
-        {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
-          <LeadingVisual />
-        ) : (
-          (LeadingVisual as ReactNode)
-        )}
-      </View>
-      <BaseSelect
-        ref={(e) => {
-          isFunction(ref) ? ref(e) : null;
-          (selectRef as MutableRefObject<HTMLSelectElement | null>).current = e;
-        }}
-        placeholder={placeholder}
-        disabled={disabled}
-        {...props}
-        onChange={(e) => {
-          props.onChange?.(e);
+  const { disabled } = props;
 
-          if (!e.defaultPrevented) {
-            if (e.target.value === PLACEHOLDER_VALUE) {
-              setIsValueEmpty(true);
-            } else {
-              setIsValueEmpty(false);
+  return (
+    <OverlayPopper
+      renderOverlay={(overlayProps, _, { elements }) => (
+        <Overlay
+          {...overlayProps}
+          style={{ ...overlayProps.style, width: elements?.reference?.getBoundingClientRect().width }}
+        >
+          {children}
+        </Overlay>
+      )}
+    >
+      {(popperProps, { openOverlay }) => (
+        <TextInputWrapper
+          {...popperProps}
+          tabIndex={disabled ? -1 : 0}
+          disabled={disabled}
+          onClick={focusInput}
+          hasLeadingVisual={!isNullable(LeadingVisual)}
+          validationStatus={validationStatus}
+          onKeyDown={(e) => {
+            if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
+              e.preventDefault();
+              openOverlay();
             }
-          }
-        }}
-      >
-        <option label={placeholder} value={PLACEHOLDER_VALUE} />
-        {children}
-      </BaseSelect>
-      <StyledIcon
-        sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', right: 5, pointerEvents: 'none' }}
-        icon={ChevronDownIcon}
-        color={disabled ? 'icon/disabled' : 'icon/neutral/bolder'}
-        size={16}
-      />
-    </SelectWrapper>
+          }}
+        >
+          <View
+            sx={{
+              'flexShrink': 0,
+              'fontSize': 'xxs',
+              'fontWeight': 'medium',
+              'color': 'text/neutral',
+              '& > svg': { display: 'block', width: 16, height: 16, color: 'icon/neutral/bold' },
+            }}
+          >
+            {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
+              <LeadingVisual />
+            ) : (
+              (LeadingVisual as ReactNode)
+            )}
+          </View>
+          <BaseInput
+            ref={(e) => {
+              isFunction(ref) ? ref(e) : null;
+              (inputRef as MutableRefObject<HTMLInputElement | null>).current = e;
+            }}
+            value={''}
+            onChange={noop}
+            {...props}
+            tabIndex={-1}
+            onClick={(e) => {
+              popperProps.onClick?.(e);
+
+              props.onClick?.(e);
+            }}
+          />
+          <StyledIcon
+            sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', right: 5, pointerEvents: 'none' }}
+            icon={ChevronDownIcon}
+            color={disabled ? 'icon/disabled' : 'icon/neutral/bolder'}
+            size={16}
+          />
+        </TextInputWrapper>
+      )}
+    </OverlayPopper>
   );
 };
 
-type SelectWrapperProps = {
-  isValueEmpty?: boolean;
+type TextInputWrapperProps = {
   hasLeadingVisual?: boolean;
-} & Pick<Props, 'value' | 'validationStatus' | 'disabled'>;
+} & Pick<Props, 'validationStatus' | 'disabled'>;
 
-const SelectWrapper = styled.div<SelectWrapperProps>`
+const TextInputWrapper = styled.div<TextInputWrapperProps>`
   position: relative;
   width: ${forcePixelValue('100%')};
   border-width: ${forcePixelValue(1)};
@@ -116,23 +125,20 @@ const SelectWrapper = styled.div<SelectWrapperProps>`
   border-radius: ${({ theme }) => forcePixelValue(theme.radii.xs)};
   border-color: ${({ theme }) => theme.colors['border/input']};
   background-color: ${({ theme }) => theme.colors['bg/input']};
+  cursor: default;
+  input {
+    cursor: default;
+  }
   display: inline-flex;
   align-items: center;
 
   font-size: ${({ theme }) => forcePixelValue(theme.fontSizes.xs)};
   font-weight: ${({ theme }) => theme.fontWeights.medium};
   line-height: ${({ theme }) => theme.lineHeights[2]};
-  color: ${({ theme }) => theme.colors['text/neutral/subtle']};
-
-  /**
-   * placeholder style
-   */
-  ${({ theme, isValueEmpty }) =>
-    isValueEmpty
-      ? css`
-          color: ${theme.colors['text/neutral/subtlest']};
-        `
-      : null}
+  color: ${({ theme }) => theme.colors['text/neutral']};
+  input::placeholder {
+    color: ${({ theme }) => theme.colors['text/neutral/subtlest']};
+  }
 
   &:after {
     content: '';
@@ -168,6 +174,7 @@ const SelectWrapper = styled.div<SelectWrapperProps>`
 
   ${(props) =>
     props.validationStatus !== 'error' &&
+    !props.disabled &&
     css`
       &:focus-within {
         &:after {
@@ -183,11 +190,11 @@ const SelectWrapper = styled.div<SelectWrapperProps>`
       background-color: ${props.theme.colors['bg/disabled']};
       color: ${props.theme.colors['text/disabled']};
 
-      select::placeholder {
+      input::placeholder {
         color: ${props.theme.colors['text/disabled']};
       }
 
-      select {
+      input {
         cursor: not-allowed;
       }
     `};
@@ -196,18 +203,18 @@ const SelectWrapper = styled.div<SelectWrapperProps>`
     props.hasLeadingVisual &&
     css`
       padding-left: ${forcePixelValue(props.theme.space[5])};
-      select {
+      input {
         padding-left: ${forcePixelValue(props.theme.space[2])};
       }
     `}
 
-  transition: background-color 100ms;
+  transition: color 100ms, background-color 100ms;
   &:after {
     transition: border-color 100ms;
   }
 `;
 
-const UnstyledSelect = styled.select`
+const UnstyledInput = styled.input`
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
@@ -222,21 +229,14 @@ const UnstyledSelect = styled.select`
   &:focus {
     outline: 0;
   }
-
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 `;
 
-const BaseSelect = styled(UnstyledSelect)`
+const BaseInput = styled(UnstyledInput)`
   padding-top: ${({ theme }) => forcePixelValue(theme.space['4'])};
-  padding-right: ${({ theme }) => forcePixelValue(theme.space['12'])};
+  padding-right: ${({ theme }) => forcePixelValue(theme.space['5'])};
   padding-bottom: ${({ theme }) => forcePixelValue(theme.space['4'])};
   padding-left: ${({ theme }) => forcePixelValue(theme.space['5'])};
-
-  white-space: pre;
-  text-overflow: ellipsis;
 `;
 
-export default Object.assign(forwardRef(Select), { Option: SelectOption });
-export type { Props as SelectProps, SelectOptionProps };
+export default forwardRef(OverlaySelectInput);
+export type { Props as OverlaySelectInputProps };
