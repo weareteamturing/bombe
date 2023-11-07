@@ -47,6 +47,16 @@ export { default as DialogHandler } from './core/DialogHandler';
 export { default as EmptyState } from './core/EmptyState';
 export type { EmptyStateProps } from './core/EmptyState';
 
+export { default as FormControl } from './core/FormControl';
+export type {
+  FormControlProps,
+  FormControlFieldProps,
+  FormControlCaptionProps,
+  FormControlErrorMessageProps,
+  FormControlLabelProps,
+  FormControlSuccessMessageProps,
+} from './core/FormControl';
+
 export { default as GradientText } from './core/GradientText';
 export type { GradientTextProps } from './core/GradientText';
 
