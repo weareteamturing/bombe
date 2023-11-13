@@ -133,7 +133,7 @@ const Dialog = ({ children, isOpen, onDismiss, size, sx }: PropsWithChildren<Pro
             }}
             onKeyDown={handleKeyDown}
           >
-            <View sx={{ position: 'absolute', top: 4, right: 4 }}>
+            <View sx={{ position: 'absolute', top: 3, right: 3 }}>
               <IconButton ref={closeButtonRef} icon={CloseIcon} variant={'plain'} size={'m'} onClick={handleDismiss} />
             </View>
             {children}
