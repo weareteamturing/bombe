@@ -15,6 +15,9 @@ export type { AnimatePresenceProps } from './core/AnimatePresence';
 export { default as Avatar } from './core/Avatar';
 export type { AvatarProps } from './core/Avatar';
 
+export { default as BadgeAttacher } from './core/BadgeAttacher';
+export type { BadgeAttacherProps } from './core/BadgeAttacher';
+
 export { default as Breadcrumbs } from './core/Breadcrumbs';
 export type { BreadcrumbsProps } from './core/Breadcrumbs';
 
@@ -26,6 +29,9 @@ export type { CheckboxProps } from './core/Checkbox';
 
 export { default as Chip } from './core/Chip';
 export type { ChipProps } from './core/Chip';
+
+export { default as CounterBadge } from './core/CounterBadge';
+export type { CounterBadgeProps } from './core/CounterBadge';
 
 export { default as Datagrid } from './core/Datagrid';
 export type {
