@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.2...@teamturing/react-kit@2.19.3) (2023-11-13)
+
+### Bug Fixes
+
+- **react-kit:** add CounterBadge, BadgeAttacher component ([4305ade](https://github.com/weareteamturing/bombe/commit/4305adedd9a75dec73be34db434a2f8b99bb02d6))
+
 ## [2.19.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.1...@teamturing/react-kit@2.19.2) (2023-11-07)
 
 ### Bug Fixes
