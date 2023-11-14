@@ -10,16 +10,26 @@ import useFocusTrap from '../../hook/useFocusTrap';
 import { SxProp, sx } from '../../utils/styled-system';
 import MotionView from '../MotionView';
 
+import DialogBody, { DialogBodyProps } from './DialogBody';
+import DialogFooter, { DialogFooterProps } from './DialogFooter';
+import DialogHeader, { DialogHeaderProps } from './DialogHeader';
+import DialogHeaderSubtitle, { DialogHeaderSubtitleProps } from './DialogHeaderSubtitle';
+import DialogHeaderTitle, { DialogHeaderTitleProps } from './DialogHeaderTitle';
+import UnstyledDialogBody, { UnstyledDialogBodyProps } from './_UnstyledDialogBody';
+import UnstyledDialogFooter, { UnstyledDialogFooterProps } from './_UnstyledDialogFooter';
+import UnstyledDialogHeader, { UnstyledDialogHeaderProps } from './_UnstyledDialogHeader';
+
+type DialogSizeType = 'l' | 'm' | 's';
 type Props = {
   isOpen?: boolean;
   onDismiss?: () => void;
-  size?: 'l' | 's';
+  size?: DialogSizeType;
 } & SxProp;
 
-const Dialog = ({ children, isOpen, onDismiss, size, sx }: PropsWithChildren<Props>, ref: Ref<HTMLDivElement>) => {
-  const dialogRoot = typeof document !== 'undefined' ? document.getElementById('dialog_root') : null;
-  if (dialogRoot === null) return null;
-
+const Dialog = (
+  { children, isOpen, onDismiss, size = 'm', sx }: PropsWithChildren<Props>,
+  ref: Ref<HTMLDivElement>,
+) => {
   const handleDismiss = useCallback(() => onDismiss?.(), [onDismiss]);
 
   const overlayRef = useRef<HTMLSpanElement>(null);
@@ -66,14 +76,6 @@ const Dialog = ({ children, isOpen, onDismiss, size, sx }: PropsWithChildren<Pro
     }
   }, [isOpen, handleOutsideClick]);
 
-  useEffect(() => {
-    if (isOpen) {
-      if (closeButtonRef && closeButtonRef.current) {
-        closeButtonRef.current.focus();
-      }
-    }
-  }, [isOpen, closeButtonRef]);
-
   return (
     <AnimatePresence>
       {isOpen ? (
@@ -107,21 +109,33 @@ const Dialog = ({ children, isOpen, onDismiss, size, sx }: PropsWithChildren<Pro
             sx={{
               ...(size === 's'
                 ? {
-                    maxHeight: 'calc(100vh - 32px)',
+                    maxHeight: 'calc(100vh - 64px)',
 
-                    width: ['100%', 400, 400],
-                    marginX: [8, 'auto', 'auto'],
+                    width: ['calc(100% - 64px)', 400, 400],
+                    marginX: 'auto',
                     marginY: 'auto',
 
                     borderRadius: 'l',
                   }
-                : size === 'l'
+                : size === 'm'
                 ? {
-                    maxHeight: '100vh',
+                    maxHeight: ['100%', '100%', 'calc(100vh - 64px)'],
                     height: ['100%', '100%', 'auto'],
                     minHeight: ['-webkit-fill-available', '-webkit-fill-available', 'auto'],
 
-                    width: ['100%', '100%', 820],
+                    width: ['100%', '100%', 640],
+                    marginX: [0, 0, 'auto'],
+                    marginY: 'auto',
+
+                    borderRadius: ['none', 'none', 'l'],
+                  }
+                : size === 'l'
+                ? {
+                    maxHeight: ['100%', '100%', 'calc(100vh - 64px)'],
+                    height: ['100%', '100%', 'auto'],
+                    minHeight: ['-webkit-fill-available', '-webkit-fill-available', 'auto'],
+
+                    width: ['100%', '100%', 860],
                     marginX: [0, 0, 'auto'],
                     marginY: 'auto',
 
@@ -133,7 +147,7 @@ const Dialog = ({ children, isOpen, onDismiss, size, sx }: PropsWithChildren<Pro
             }}
             onKeyDown={handleKeyDown}
           >
-            <View sx={{ position: 'absolute', top: 4, right: 4 }}>
+            <View sx={{ position: 'absolute', top: 3, right: 3 }}>
               <IconButton ref={closeButtonRef} icon={CloseIcon} variant={'plain'} size={'m'} onClick={handleDismiss} />
             </View>
             {children}
@@ -160,6 +174,8 @@ const Blanket = styled.span`
 
 const BaseDialog = styled.div<SxProp>(
   () => ({
+    display: 'flex',
+    flexDirection: 'column',
     position: 'relative',
     boxShadow: elevation['shadow/overlay'],
     backgroundColor: elevation['surface/overlay'],
@@ -170,5 +186,24 @@ const BaseDialog = styled.div<SxProp>(
   sx,
 );
 
-export default forwardRef(Dialog);
-export type { Props as DialogProps };
+export default Object.assign(forwardRef(Dialog), {
+  UnstyledHeader: UnstyledDialogHeader,
+  UnstyledBody: UnstyledDialogBody,
+  UnstyledFooter: UnstyledDialogFooter,
+  Header: DialogHeader,
+  HeaderTitle: DialogHeaderTitle,
+  HeaderSubtitle: DialogHeaderSubtitle,
+  Body: DialogBody,
+  Footer: DialogFooter,
+});
+export type {
+  Props as DialogProps,
+  UnstyledDialogHeaderProps,
+  UnstyledDialogBodyProps,
+  UnstyledDialogFooterProps,
+  DialogHeaderProps,
+  DialogHeaderTitleProps,
+  DialogHeaderSubtitleProps,
+  DialogBodyProps,
+  DialogFooterProps,
+};

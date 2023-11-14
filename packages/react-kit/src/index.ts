@@ -46,7 +46,17 @@ export { default as DescriptionList } from './core/DescriptionList';
 export type { DescriptionListProps } from './core/DescriptionList';
 
 export { default as Dialog } from './core/Dialog';
-export type { DialogProps } from './core/Dialog';
+export type {
+  DialogProps,
+  UnstyledDialogHeaderProps,
+  UnstyledDialogBodyProps,
+  UnstyledDialogFooterProps,
+  DialogHeaderProps,
+  DialogHeaderTitleProps,
+  DialogHeaderSubtitleProps,
+  DialogBodyProps,
+  DialogFooterProps,
+} from './core/Dialog';
 
 export { default as DialogHandler } from './core/DialogHandler';
 
