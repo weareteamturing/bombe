@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.3...@teamturing/react-kit@2.19.4) (2023-11-14)
+
+### Bug Fixes
+
+- **react-kit:** enhance Dialog component ([21b31d6](https://github.com/weareteamturing/bombe/commit/21b31d686dfba4340a5b11c949fc0a388a5ec494))
+- **react-kit:** update position of close button in dialog ([9fab682](https://github.com/weareteamturing/bombe/commit/9fab682f2c0ec04d20db8065f882a81e2a277237))
+
 ## [2.19.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.2...@teamturing/react-kit@2.19.3) (2023-11-13)
 
 ### Bug Fixes
