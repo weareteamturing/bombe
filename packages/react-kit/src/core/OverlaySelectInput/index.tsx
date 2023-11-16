@@ -240,7 +240,6 @@ const BaseInput = styled(UnstyledInput)`
 
   white-space: pre;
   text-overflow: ellipsis;
-  pointer-events: none;
 `;
 
 export default forwardRef(OverlaySelectInput);
