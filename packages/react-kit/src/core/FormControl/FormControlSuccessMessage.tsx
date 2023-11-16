@@ -11,7 +11,7 @@ const FormControlSuccessMessage = ({ children }: PropsWithChildren<Props>) => {
   const { id } = useContext(FormControlContext);
 
   return (
-    <StyledText id={id} typography={'xs'} color={'text/success'}>
+    <StyledText id={id} typography={'xxs'} color={'text/success'}>
       {children}
     </StyledText>
   );

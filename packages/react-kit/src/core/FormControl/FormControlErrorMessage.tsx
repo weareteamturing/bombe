@@ -11,7 +11,7 @@ const FormControlErrorMessage = ({ children }: PropsWithChildren<Props>) => {
   const { id } = useContext(FormControlContext);
 
   return (
-    <StyledText id={id} typography={'xs'} color={'text/danger'}>
+    <StyledText id={id} typography={'xxs'} color={'text/danger'}>
       {children}
     </StyledText>
   );
