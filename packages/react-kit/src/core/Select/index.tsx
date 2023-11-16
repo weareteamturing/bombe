@@ -94,7 +94,7 @@ const Select = (
         {children}
       </BaseSelect>
       <StyledIcon
-        sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', right: 5, pointerEvents: 'none' }}
+        sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', right: 4, pointerEvents: 'none' }}
         icon={ChevronDownIcon}
         color={disabled ? 'icon/disabled' : 'icon/neutral/bolder'}
         size={16}
@@ -195,7 +195,7 @@ const SelectWrapper = styled.div<SelectWrapperProps>`
   ${(props) =>
     props.hasLeadingVisual &&
     css`
-      padding-left: ${forcePixelValue(props.theme.space[5])};
+      padding-left: ${forcePixelValue(props.theme.space[4])};
       select {
         padding-left: ${forcePixelValue(props.theme.space[2])};
       }
@@ -229,10 +229,10 @@ const UnstyledSelect = styled.select`
 `;
 
 const BaseSelect = styled(UnstyledSelect)`
-  padding-top: ${({ theme }) => forcePixelValue(theme.space['4'])};
-  padding-right: ${({ theme }) => forcePixelValue(theme.space['12'])};
-  padding-bottom: ${({ theme }) => forcePixelValue(theme.space['4'])};
-  padding-left: ${({ theme }) => forcePixelValue(theme.space['5'])};
+  padding-top: ${({ theme }) => forcePixelValue(theme.space[3])};
+  padding-right: ${({ theme }) => forcePixelValue(theme.space[10])};
+  padding-bottom: ${({ theme }) => forcePixelValue(theme.space[3])};
+  padding-left: ${({ theme }) => forcePixelValue(theme.space[4])};
 
   white-space: pre;
   text-overflow: ellipsis;
