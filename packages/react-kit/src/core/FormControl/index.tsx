@@ -75,7 +75,7 @@ const FormControl = (
       {isHorizontalLayoutNeeded ? (
         <View ref={ref} display={'flex'} sx={{ columnGap: 2 }}>
           <View>{cloneElement(InputComponent as ReactElement, { id, disabled, required })}</View>
-          <View sx={{ '& > span': { mt: 0 } }}>
+          <View sx={{ '& > span': { mt: 0.5 } }}>
             {relocatableComponentsObject.label}
             {relocatableComponentsObject.caption}
             {relocatableComponentsObject.errorMessage}
