@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.20.0...@teamturing/icons@1.21.0) (2023-11-16)
+
+### Features
+
+- **icons:** add cart, chevron_down_two ([2b6816b](https://github.com/weareteamturing/bombe/commit/2b6816b000f272bb35a6a13132336f7c96a63eea))
+
 # [1.20.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.19.0...@teamturing/icons@1.20.0) (2023-10-31)
 
 ### Features
