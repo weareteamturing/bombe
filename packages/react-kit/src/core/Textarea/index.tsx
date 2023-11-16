@@ -44,10 +44,10 @@ const TextareaWrapper = styled.div<Pick<Props, 'validationStatus'> & { disabled?
   display: inline-flex;
   align-items: center;
 
-  padding-top: ${({ theme }) => forcePixelValue(theme.space['4'])};
+  padding-top: ${({ theme }) => forcePixelValue(theme.space['3'])};
   padding-right: ${({ theme }) => forcePixelValue(theme.space['4'])};
-  padding-bottom: ${({ theme }) => forcePixelValue(theme.space['4'])};
-  padding-left: ${({ theme }) => forcePixelValue(theme.space['5'])};
+  padding-bottom: ${({ theme }) => forcePixelValue(theme.space['3'])};
+  padding-left: ${({ theme }) => forcePixelValue(theme.space['4'])};
 
   font-size: ${({ theme }) => forcePixelValue(theme.fontSizes.xs)};
   font-weight: ${({ theme }) => theme.fontWeights.medium};
