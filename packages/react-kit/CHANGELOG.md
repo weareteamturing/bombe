@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.7](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.6...@teamturing/react-kit@2.19.7) (2023-11-16)
+
+### Bug Fixes
+
+- **react-kit:** update OverlaySelectInput ([a82cd51](https://github.com/weareteamturing/bombe/commit/a82cd5175a1e07efa7597d842e3b64599face302))
+
 ## [2.19.6](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.5...@teamturing/react-kit@2.19.6) (2023-11-16)
 
 ### Bug Fixes
