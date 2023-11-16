@@ -202,7 +202,7 @@ const TextInputWrapper = styled.div<TextInputWrapperProps>`
   ${(props) =>
     props.hasLeadingVisual &&
     css`
-      padding-left: ${forcePixelValue(props.theme.space[5])};
+      padding-left: ${forcePixelValue(props.theme.space[4])};
       input {
         padding-left: ${forcePixelValue(props.theme.space[2])};
       }
@@ -211,13 +211,13 @@ const TextInputWrapper = styled.div<TextInputWrapperProps>`
   ${(props) =>
     props.hasTrailingVisual &&
     css`
-      padding-right: ${forcePixelValue(props.theme.space[5])};
+      padding-right: ${forcePixelValue(props.theme.space[4])};
     `}
 
   ${(props) =>
     props.hasTrailingAction &&
     css`
-      padding-right: ${forcePixelValue(props.theme.space[3])};
+      padding-right: ${forcePixelValue(props.theme.space[2])};
     `}
 
   ${(props) =>
@@ -253,10 +253,10 @@ const UnstyledInput = styled.input`
 `;
 
 const BaseInput = styled(UnstyledInput)`
-  padding-top: ${({ theme }) => forcePixelValue(theme.space['4'])};
-  padding-right: ${({ theme }) => forcePixelValue(theme.space['5'])};
-  padding-bottom: ${({ theme }) => forcePixelValue(theme.space['4'])};
-  padding-left: ${({ theme }) => forcePixelValue(theme.space['5'])};
+  padding-top: ${({ theme }) => forcePixelValue(theme.space[3])};
+  padding-right: ${({ theme }) => forcePixelValue(theme.space[4])};
+  padding-bottom: ${({ theme }) => forcePixelValue(theme.space[3])};
+  padding-left: ${({ theme }) => forcePixelValue(theme.space[4])};
 `;
 
 export default Object.assign(forwardRef(TextInput), { TrailingAction: TextInputTrailingAction });
