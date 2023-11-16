@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.4...@teamturing/react-kit@2.19.5) (2023-11-16)
+
+### Bug Fixes
+
+- **react-kit:** update OverlaySelectInput design ([6cfbafc](https://github.com/weareteamturing/bombe/commit/6cfbafcc9f8706c9caefa10ca584760ceeaa33b7))
+- **react-kit:** update Select design ([9489275](https://github.com/weareteamturing/bombe/commit/9489275d7707459448a95b716c96884c25b8325a))
+- **react-kit:** update Textarea design ([36dfd31](https://github.com/weareteamturing/bombe/commit/36dfd31e7028fefbc591859076a05291c5d6ff07))
+- **react-kit:** update TextInput design ([18fc405](https://github.com/weareteamturing/bombe/commit/18fc405109cc7b43147683c9fd14b139586eca52))
+
 ## [2.19.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.3...@teamturing/react-kit@2.19.4) (2023-11-14)
 
 ### Bug Fixes
