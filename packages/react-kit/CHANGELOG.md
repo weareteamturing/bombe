@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.9](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.8...@teamturing/react-kit@2.19.9) (2023-11-17)
+
+### Bug Fixes
+
+- **react-kit:** add pill variant secondary ([688c0c8](https://github.com/weareteamturing/bombe/commit/688c0c85b2d4f8aeebd2877ccbd8acc814d96b39))
+- **utils:** update utils ([86f2543](https://github.com/weareteamturing/bombe/commit/86f25435df4550a0fcfd8170384a8b6592c91b23))
+
 ## [2.19.8](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.7...@teamturing/react-kit@2.19.8) (2023-11-16)
 
 **Note:** Version bump only for package @teamturing/react-kit
