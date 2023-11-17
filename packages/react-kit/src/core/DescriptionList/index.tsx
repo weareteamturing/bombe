@@ -1,8 +1,8 @@
 import { SpaceKey } from '@teamturing/token-studio';
+import { isNullable } from '@teamturing/utils';
 import { ComponentType, ReactNode, SVGProps } from 'react';
 import { ResponsiveValue } from 'styled-system';
 
-import { isNullable } from '../../utils/isNullable';
 import Grid, { GridProps, GridUnitProps } from '../Grid';
 import ItemList, { ItemListProps } from '../ItemList';
 import StyledIcon from '../StyledIcon';

@@ -1,7 +1,7 @@
+import { forcePixelValue } from '@teamturing/utils';
 import { AnchorHTMLAttributes, useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 
-import { forcePixelValue } from '../../utils';
 import { AsProp } from '../../utils/styled-system';
 import Tooltip from '../Tooltip';
 

@@ -1,9 +1,9 @@
 import { typography } from '@teamturing/token-studio';
+import { scrollIntoView } from '@teamturing/utils';
 import { ComponentType, PropsWithChildren, SVGProps, useContext, useRef } from 'react';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
-import { scrollIntoView } from '../../utils/scrollIntoView';
 import { BetterSystemStyleObject } from '../../utils/styled-system';
 import View from '../View';
 import UnstyledButton, { UnstyledButtonProps } from '../_UnstyledButton';

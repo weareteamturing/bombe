@@ -1,4 +1,5 @@
 import { color } from '@teamturing/token-studio';
+import { forcePixelValue, isFunction, isNullable } from '@teamturing/utils';
 import {
   ElementType,
   HTMLProps,
@@ -14,9 +15,6 @@ import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
-import { forcePixelValue } from '../../utils/forcePixelValue';
-import { isFunction } from '../../utils/isFunction';
-import { isNullable } from '../../utils/isNullable';
 import View from '../View';
 
 import TextInputTrailingAction from './TextInputTrailingAction';

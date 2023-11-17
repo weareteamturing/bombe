@@ -1,11 +1,11 @@
 import { useFloating, autoUpdate, offset, flip, shift, Placement, UseFloatingReturn } from '@floating-ui/react-dom';
 import { space } from '@teamturing/token-studio';
+import { isFunction } from '@teamturing/utils';
 import { Children, ForwardedRef, HTMLAttributes, ReactElement, ReactNode, RefObject, cloneElement } from 'react';
 
 import useFocusTrap, { FocusTrapHookSettings } from '../../hook/useFocusTrap';
 import useFocusZone, { FocusZoneHookSettings } from '../../hook/useFocusZone';
 import useToggleHandler from '../../hook/useToggleHandler';
-import { isFunction } from '../../utils/isFunction';
 import { OverlayProps } from '../Overlay';
 
 type Props = {

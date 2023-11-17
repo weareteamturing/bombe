@@ -1,8 +1,8 @@
+import { forcePixelValue } from '@teamturing/utils';
 import { ElementType, HTMLAttributes, ReactElement, ReactNode } from 'react';
 import { isValidElementType } from 'react-is';
 import styled from 'styled-components';
 
-import { forcePixelValue } from '../../utils/forcePixelValue';
 import { SxProp, sx } from '../../utils/styled-system';
 import View from '../View';
 

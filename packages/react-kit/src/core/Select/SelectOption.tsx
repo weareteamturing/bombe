@@ -1,7 +1,6 @@
+import { isNullable } from '@teamturing/utils';
 import { OptionHTMLAttributes } from 'react';
 import styled from 'styled-components';
-
-import { isNullable } from '../../utils';
 
 type Props = {} & OptionHTMLAttributes<HTMLOptionElement>;
 

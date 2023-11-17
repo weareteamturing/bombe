@@ -1,8 +1,8 @@
+import { forcePixelValue } from '@teamturing/utils';
 import { Ref, forwardRef } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
-import { forcePixelValue } from '../../utils/forcePixelValue';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import Image, { ImageProps } from '../Image';
 

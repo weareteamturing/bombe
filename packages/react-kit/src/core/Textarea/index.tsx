@@ -1,9 +1,8 @@
+import { forcePixelValue, isFunction } from '@teamturing/utils';
 import { MutableRefObject, Ref, RefObject, TextareaHTMLAttributes, forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
-import { forcePixelValue } from '../../utils';
-import { isFunction } from '../../utils/isFunction';
 
 type Props = {
   validationStatus?: 'error' | 'success' | undefined;

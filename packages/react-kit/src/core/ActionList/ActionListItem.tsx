@@ -1,5 +1,5 @@
 import { CheckIcon } from '@teamturing/icons';
-import { noop } from '@teamturing/utils';
+import { forcePixelValue, isNullable, noop } from '@teamturing/utils';
 import {
   ElementType,
   PropsWithChildren,
@@ -13,8 +13,6 @@ import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
 import { variant } from 'styled-system';
 
-import { forcePixelValue } from '../../utils/forcePixelValue';
-import { isNullable } from '../../utils/isNullable';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import { CheckboxProps } from '../Checkbox';
 import Grid from '../Grid';

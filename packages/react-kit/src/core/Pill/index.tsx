@@ -1,4 +1,5 @@
 import { CloseIcon } from '@teamturing/icons';
+import { forcePixelValue, isNullable } from '@teamturing/utils';
 import {
   ComponentType,
   ElementType,
@@ -16,22 +17,22 @@ import { isValidElementType } from 'react-is';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
-import { forcePixelValue } from '../../utils/forcePixelValue';
-import { isNullable } from '../../utils/isNullable';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import UnstyledButton from '../_UnstyledButton';
 
+type PillSizeType = 'm';
+type PillVariantType = 'outlined' | 'secondary';
 type Props = {
   /**
    * 크기를 정의합니다.
    * 반응형 디자인이 적용됩니다.
    */
-  size?: ResponsiveValue<'m'>;
+  size?: ResponsiveValue<PillSizeType>;
   /**
    * 색을 정의합니다.
    * hover, active, focused, disabled, loading 등의 모든 상황에 관여합니다.
    */
-  variant?: ResponsiveValue<'outlined'>;
+  variant?: ResponsiveValue<PillVariantType>;
   /**
    *
    */
@@ -179,7 +180,7 @@ const BasePill = styled(UnstyledButton)<
   }
 
   ${({ theme, hasRemoveButton }) =>
-    variant<BetterSystemStyleObject>({
+    variant<BetterSystemStyleObject, PillSizeType, 'size'>({
       prop: 'size',
       variants: {
         m: {
@@ -196,7 +197,7 @@ const BasePill = styled(UnstyledButton)<
       },
     })}
   ${({ theme, disabled }) =>
-    variant<BetterSystemStyleObject>({
+    variant<BetterSystemStyleObject, PillVariantType, 'variant'>({
       prop: 'variant',
       variants: {
         outlined: {
@@ -216,6 +217,32 @@ const BasePill = styled(UnstyledButton)<
 
           '&:active': {
             backgroundColor: theme.colors['bg/neutral/subtler/pressed'],
+          },
+
+          ...(disabled
+            ? {
+                'cursor': 'not-allowed',
+                'backgroundColor': theme.colors['bg/disabled'],
+                'color': theme.colors['text/disabled'],
+                '& svg': {
+                  color: theme.colors['icon/disabled'],
+                },
+              }
+            : {}),
+        },
+        secondary: {
+          'backgroundColor': theme.colors['bg/secondary'],
+
+          'color': theme.colors['text/primary'],
+
+          '& svg': { color: theme.colors['icon/primary'] },
+
+          '&:hover': {
+            backgroundColor: theme.colors['bg/secondary/hovered'],
+          },
+
+          '&:active': {
+            backgroundColor: theme.colors['bg/secondary/pressed'],
           },
 
           ...(disabled

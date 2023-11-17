@@ -1,7 +1,7 @@
+import { forcePixelValue } from '@teamturing/utils';
 import { HTMLAttributes, PropsWithChildren } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { forcePixelValue } from '../../utils';
 import { SxProp, sx } from '../../utils/styled-system';
 
 type Props = {

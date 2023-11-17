@@ -1,9 +1,9 @@
 import { SpaceKey, space } from '@teamturing/token-studio';
+import { forcePixelValue } from '@teamturing/utils';
 import { PropsWithChildren, Ref, forwardRef } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
-import { forcePixelValue } from '../../utils';
 import { AsProp, BetterSystemStyleObject, SxProp } from '../../utils/styled-system';
 import View, { ViewProps } from '../View';
 
