@@ -1,3 +1,4 @@
+import { isFunction } from '@teamturing/utils';
 import {
   Children,
   cloneElement,
@@ -8,7 +9,6 @@ import {
 } from 'react';
 
 import useDialogHandler from '../../hook/useDialogHandler';
-import { isFunction } from '../../utils';
 
 type Props<Element extends HTMLElement> = {
   renderDialog: ({ isOpen, closeDialog }: { isOpen: boolean; closeDialog: () => void }) => React.ReactNode;

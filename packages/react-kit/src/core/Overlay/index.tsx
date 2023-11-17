@@ -1,4 +1,5 @@
 import { iterateFocusableElements } from '@primer/behaviors/utils';
+import { forcePixelValue } from '@teamturing/utils';
 import {
   HTMLAttributes,
   PropsWithChildren,
@@ -13,7 +14,6 @@ import {
 import styled from 'styled-components';
 import { MaxHeightProps, ResponsiveValue, maxHeight, variant } from 'styled-system';
 
-import { forcePixelValue } from '../../utils/forcePixelValue';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 
 type OverlaySizeType = 's' | 'm' | 'l' | 'auto';

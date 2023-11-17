@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from '@teamturing/icons';
-import { noop } from '@teamturing/utils';
+import { forcePixelValue, isFunction, isNullable, noop } from '@teamturing/utils';
 import {
   ElementType,
   InputHTMLAttributes,
@@ -14,9 +14,6 @@ import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
-import { forcePixelValue } from '../../utils/forcePixelValue';
-import { isFunction } from '../../utils/isFunction';
-import { isNullable } from '../../utils/isNullable';
 import Overlay from '../Overlay';
 import OverlayPopper from '../OverlayPopper';
 import StyledIcon from '../StyledIcon';

@@ -1,9 +1,9 @@
+import { forcePixelValue } from '@teamturing/utils';
 import { InputHTMLAttributes, Ref, forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 import useSafeLayoutEffect from '../../hook/useSafeLayoutEffect';
-import { forcePixelValue } from '../../utils/forcePixelValue';
 import { SxProp, sx } from '../../utils/styled-system';
 
 type Props = {

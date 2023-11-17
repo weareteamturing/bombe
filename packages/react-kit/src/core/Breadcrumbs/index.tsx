@@ -1,7 +1,6 @@
+import { forcePixelValue } from '@teamturing/utils';
 import { Children, PropsWithChildren, useState } from 'react';
 import styled from 'styled-components';
-
-import { forcePixelValue } from '../../utils';
 
 import BreadcrumbsItem from './BreadcrumbsItem';
 

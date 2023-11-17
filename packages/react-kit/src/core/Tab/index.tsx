@@ -1,11 +1,11 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@teamturing/icons';
 import { SpaceKey, elevation, gradient } from '@teamturing/token-studio';
+import { forcePixelValue } from '@teamturing/utils';
 import throttle from 'lodash.throttle';
 import { PropsWithChildren, RefObject, createContext, useEffect, useRef, useState } from 'react';
 import { ResponsiveValue } from 'styled-system';
 
 import useResize from '../../hook/useResize';
-import { forcePixelValue } from '../../utils/forcePixelValue';
 import IconButton, { IconButtonProps } from '../IconButton';
 import View from '../View';
 

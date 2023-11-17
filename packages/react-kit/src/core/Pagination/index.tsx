@@ -1,10 +1,9 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@teamturing/icons';
-import { noop } from '@teamturing/utils';
+import { forcePixelValue, noop } from '@teamturing/utils';
 import { Fragment, ReactNode, useCallback } from 'react';
 import styled, { css } from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
-import { forcePixelValue } from '../../utils';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import UnstyledButton, { UnstyledButtonProps } from '../_UnstyledButton';
 
