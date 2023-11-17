@@ -139,7 +139,11 @@ const BasePagination = styled.nav<PaginationTypeProps & SxProp>`
   ${variant<BetterSystemStyleObject>({
     prop: 'type',
     variants: {
-      default: {},
+      default: {
+        '& > *:not(:first-child):not(:last-child)': {
+          display: 'inline-block !important',
+        },
+      },
       simple: {
         '& > *:not(:first-child):not(:last-child)': {
           display: 'none !important',
