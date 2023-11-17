@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.10](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.9...@teamturing/react-kit@2.19.10) (2023-11-17)
+
+### Bug Fixes
+
+- **react-kit:** fix Pagination type responsive ([8242ef0](https://github.com/weareteamturing/bombe/commit/8242ef0f06ae2b9228c2ec4c94142cbe8a8ea0e8))
+
 ## [2.19.9](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.8...@teamturing/react-kit@2.19.9) (2023-11-17)
 
 ### Bug Fixes
