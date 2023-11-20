@@ -58,8 +58,6 @@ export type {
   DialogFooterProps,
 } from './core/Dialog';
 
-export { default as DialogHandler } from './core/DialogHandler';
-
 export { default as EmptyState } from './core/EmptyState';
 export type { EmptyStateProps } from './core/EmptyState';
 
@@ -161,8 +159,6 @@ export { default as EnigmaUI } from './enigma/EnigmaUI';
  * hooks
  */
 export { default as useDevice } from './hook/useDevice';
-
-export { default as useDialogHandler } from './hook/useDialogHandler';
 
 export { default as useFocusTrap } from './hook/useFocusTrap';
 
