@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.11](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.10...@teamturing/react-kit@2.19.11) (2023-11-20)
+
+### Bug Fixes
+
+- **react-kit:** update Dialog interface ([9d0c3e1](https://github.com/weareteamturing/bombe/commit/9d0c3e1c6cb70aa05c82776025f9c747e497059b))
+
 ## [2.19.10](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.9...@teamturing/react-kit@2.19.10) (2023-11-17)
 
 ### Bug Fixes
