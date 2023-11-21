@@ -23,6 +23,8 @@ type Props = {
   placement?: Placement;
   focusZoneSettings?: Partial<FocusZoneHookSettings>;
   focusTrapSettings?: Partial<FocusTrapHookSettings>;
+  onOpen?: () => void;
+  onClose?: () => void;
 };
 
 const OverlayPopper = ({
@@ -31,6 +33,8 @@ const OverlayPopper = ({
   placement = 'bottom-start',
   focusZoneSettings,
   focusTrapSettings,
+  onOpen,
+  onClose,
 }: Props) => {
   const { refs, elements, floatingStyles, isPositioned } = useFloating({
     placement,
@@ -45,19 +49,35 @@ const OverlayPopper = ({
     on: openOverlay,
     off: closeOverlay,
   } = useToggleHandler({ initialState: false });
+  const handleOverlayToggle = () => {
+    if (!isOpen) onOpen?.();
+    else onClose?.();
 
-  const handleDismiss = () => {
+    toggleOverlay();
+  };
+  const handleOverlayOpen = () => {
+    onOpen?.();
+
+    openOverlay();
+  };
+  const handleOverlayClose = () => {
+    onClose?.();
+
     closeOverlay();
   };
 
+  const handleDismiss = () => {
+    handleOverlayClose();
+  };
+
   const defaultPopperProps: HTMLAttributes<HTMLElement> = {
-    onClick: toggleOverlay,
+    onClick: handleOverlayToggle,
     tabIndex: 0,
     ...{ ref: refs.setReference },
   };
 
   const children = isFunction(propChildren)
-    ? propChildren({ ...defaultPopperProps }, { isOpen, openOverlay })
+    ? propChildren({ ...defaultPopperProps }, { isOpen, openOverlay: handleOverlayOpen })
     : Children.map(propChildren, (child) =>
         cloneElement(child as ReactElement<HTMLAttributes<HTMLElement>>, {
           ...defaultPopperProps,
@@ -83,7 +103,7 @@ const OverlayPopper = ({
           style: { ...floatingStyles },
           onDismiss: handleDismiss,
         },
-        { isOpen, closeOverlay },
+        { isOpen, closeOverlay: handleOverlayClose },
         { elements },
       )}
     </>
