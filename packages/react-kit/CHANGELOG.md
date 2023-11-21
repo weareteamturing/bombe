@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.14](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.13...@teamturing/react-kit@2.19.14) (2023-11-21)
+
+### Bug Fixes
+
+- **react-kit:** update OverlayPopper interface ([ecf692c](https://github.com/weareteamturing/bombe/commit/ecf692ca1e209fb9aad8713efc079fed80f9fe19))
+- **react-kit:** update OverlaySelectInput interface ([962bfce](https://github.com/weareteamturing/bombe/commit/962bfce3bf66bb9710b1ee8a47e05c583e60cdf9))
+
 ## [2.19.13](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.12...@teamturing/react-kit@2.19.13) (2023-11-20)
 
 ### Bug Fixes
