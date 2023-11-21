@@ -4,22 +4,22 @@ import {
   ElementType,
   InputHTMLAttributes,
   MutableRefObject,
-  PropsWithChildren,
   ReactNode,
   Ref,
   RefObject,
   forwardRef,
+  useRef,
 } from 'react';
 import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 import Overlay from '../Overlay';
-import OverlayPopper from '../OverlayPopper';
+import OverlayPopper, { OverlayPopperProps } from '../OverlayPopper';
 import StyledIcon from '../StyledIcon';
 import View from '../View';
 
-type Props = {
+type Props<T extends { label: string; value: string | number | readonly string[] }> = {
   /**
    * TODO asdf
    */
@@ -28,28 +28,61 @@ type Props = {
    * 입력 창 앞에 보여질 시각적 요소를 정의합니다. Icon, Text, Image 등이 될 수 있습니다.
    */
   leadingVisual?: ElementType | ReactNode;
-} & InputHTMLAttributes<HTMLInputElement>;
+  children: ({ handleSelect }: { handleSelect: (item: T) => void }) => ReactNode;
+  onChange?: (item: T) => void;
+} & Pick<OverlayPopperProps, 'focusTrapSettings' | 'focusZoneSettings' | 'onClose' | 'onOpen'> &
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'id' | 'disabled' | 'onClick' | 'placeholder'>;
 
-const OverlaySelectInput = (
-  { validationStatus, leadingVisual: LeadingVisual, children, ...props }: PropsWithChildren<Props>,
+const OverlaySelectInput = <T extends { label: string; value: string | number | readonly string[] }>(
+  {
+    validationStatus,
+    leadingVisual: LeadingVisual,
+    children,
+    onChange,
+    focusTrapSettings,
+    focusZoneSettings,
+    onOpen,
+    onClose,
+    ...props
+  }: Props<T>,
   ref: Ref<HTMLInputElement>,
 ) => {
-  const inputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLInputElement>);
+  const valueInputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLInputElement>);
+  const labelInputRef = useRef<HTMLInputElement>(null);
 
   const focusInput = () => {
-    inputRef.current?.focus();
+    labelInputRef.current?.focus();
   };
 
-  const { disabled } = props;
+  const { id, disabled, placeholder } = props;
+
+  const handleSelect = (item: T) => {
+    if (labelInputRef.current && valueInputRef.current) {
+      labelInputRef.current.setAttribute('value', item.label);
+
+      /**
+       * ! valueInput의 native onChange를 trigger하려고 했으나 작동하지 않음.
+       * ! 일단 Custom onChange를 만들어서 해결.
+       */
+      const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')?.set;
+      nativeInputValueSetter?.call(valueInputRef.current, item.value.toString());
+
+      onChange?.(item);
+    }
+  };
 
   return (
     <OverlayPopper
+      focusTrapSettings={focusTrapSettings}
+      focusZoneSettings={focusZoneSettings}
+      onOpen={onOpen}
+      onClose={onClose}
       renderOverlay={(overlayProps, _, { elements }) => (
         <Overlay
           {...overlayProps}
           style={{ ...overlayProps.style, width: elements?.reference?.getBoundingClientRect().width }}
         >
-          {children}
+          {children?.({ handleSelect })}
         </Overlay>
       )}
     >
@@ -84,26 +117,29 @@ const OverlaySelectInput = (
             )}
           </View>
           <BaseInput
-            ref={(e) => {
-              isFunction(ref) ? ref(e) : null;
-              (inputRef as MutableRefObject<HTMLInputElement | null>).current = e;
-            }}
-            value={''}
+            id={id}
+            ref={labelInputRef}
             onChange={noop}
-            {...props}
             autoComplete={'off'}
             tabIndex={-1}
             onClick={(e) => {
               popperProps.onClick?.(e);
-
               props.onClick?.(e);
             }}
+            placeholder={placeholder}
           />
           <StyledIcon
             sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', right: 4, pointerEvents: 'none' }}
             icon={ChevronDownIcon}
             color={disabled ? 'icon/disabled' : 'icon/neutral/bolder'}
             size={16}
+          />
+          <BaseInput
+            ref={(e) => {
+              isFunction(ref) ? ref(e) : null;
+              (valueInputRef as MutableRefObject<HTMLInputElement | null>).current = e;
+            }}
+            type={'hidden'}
           />
         </TextInputWrapper>
       )}
@@ -113,7 +149,7 @@ const OverlaySelectInput = (
 
 type TextInputWrapperProps = {
   hasLeadingVisual?: boolean;
-} & Pick<Props, 'validationStatus' | 'disabled'>;
+} & Pick<Props<any>, 'validationStatus' | 'disabled'>;
 
 const TextInputWrapper = styled.div<TextInputWrapperProps>`
   position: relative;
@@ -239,5 +275,9 @@ const BaseInput = styled(UnstyledInput)`
   text-overflow: ellipsis;
 `;
 
-export default forwardRef(OverlaySelectInput);
+export default forwardRef(OverlaySelectInput) as <
+  T extends { label: string; value: string | number | readonly string[] },
+>(
+  props: Props<T> & { ref?: Ref<HTMLInputElement> },
+) => ReturnType<typeof OverlaySelectInput>;
 export type { Props as OverlaySelectInputProps };
