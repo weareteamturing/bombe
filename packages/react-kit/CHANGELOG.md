@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.15](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.14...@teamturing/react-kit@2.19.15) (2023-11-22)
+
+### Bug Fixes
+
+- **react-kit:** create SearchSelectInput with refactor other components ([9997477](https://github.com/weareteamturing/bombe/commit/9997477fb20052b4ebc033d63f850f6d84277c07))
+- **react-kit:** update Dialog interface ([9601c1e](https://github.com/weareteamturing/bombe/commit/9601c1e03e97855a472aef6529d4a47c4a332fac))
+- **react-kit:** update SearchSelectInput css ([858eb37](https://github.com/weareteamturing/bombe/commit/858eb37399795b6fe6d31cf56dfe897bc3165168))
+
 ## [2.19.14](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.13...@teamturing/react-kit@2.19.14) (2023-11-21)
 
 ### Bug Fixes
