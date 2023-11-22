@@ -271,7 +271,7 @@ const TextInputWrapper = styled.div<TextInputWrapperProps>`
 
     flex: 1;
   }
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   font-size: ${({ theme }) => forcePixelValue(theme.fontSizes.xs)};
