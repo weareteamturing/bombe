@@ -1,6 +1,15 @@
 import { CloseIcon } from '@teamturing/icons';
 import { color, elevation } from '@teamturing/token-studio';
-import { forwardRef, PropsWithChildren, Ref, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
+import {
+  forwardRef,
+  PropsWithChildren,
+  Ref,
+  RefObject,
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 import styled from 'styled-components';
 
 import IconButton from '../../core/IconButton';
@@ -22,10 +31,11 @@ type Props = {
   isOpen?: boolean;
   onDismiss?: () => void;
   size?: DialogSizeType;
+  initialFocusRef?: RefObject<HTMLElement>;
 } & SxProp;
 
 const Dialog = (
-  { children, isOpen, onDismiss, size = 'm', sx }: PropsWithChildren<Props>,
+  { children, isOpen, onDismiss, size = 'm', initialFocusRef, sx }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
 ) => {
   const handleDismiss = useCallback(() => onDismiss?.(), [onDismiss]);
@@ -63,7 +73,7 @@ const Dialog = (
     [handleDismiss],
   );
 
-  useFocusTrap({ containerRef: dialogRef, initialFocusRef: closeButtonRef, disabled: !isOpen });
+  useFocusTrap({ containerRef: dialogRef, initialFocusRef: initialFocusRef || closeButtonRef, disabled: !isOpen });
 
   useEffect(() => {
     if (isOpen) {
