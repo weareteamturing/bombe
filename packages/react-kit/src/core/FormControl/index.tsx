@@ -2,7 +2,7 @@ import { PropsWithChildren, ReactElement, Ref, cloneElement, createContext, forw
 
 import useRelocation from '../../hook/useRelocation';
 import Checkbox from '../Checkbox';
-import OverlaySelectInput from '../OverlaySelectInput';
+import SearchSelectInput from '../SearchSelectInput';
 import Select from '../Select';
 import TextInput from '../TextInput';
 import View from '../View';
@@ -29,7 +29,7 @@ type Props = {
   required?: boolean;
 
   /**
-   * @default TextInput, Select, OverlaySelectInput, Checkbox
+   * @default TextInput, Select, SearchSelectInput, Checkbox
    *
    * FormControl이 허용하는 Input 컴포넌트를 추가로 정의합니다.
    */
@@ -61,7 +61,7 @@ const FormControl = (
   const inputComponentCandidates = [
     TextInput,
     Select,
-    OverlaySelectInput,
+    SearchSelectInput,
     Checkbox,
     ...additionalInputComponentCandidates,
   ];

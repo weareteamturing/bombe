@@ -104,6 +104,7 @@ const Pill = (
       hasRemoveButton={!isNullable(propOnRemove)}
       disabled={disabled}
       {...props}
+      type={'button'}
     >
       {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
         <LeadingVisual />

@@ -49,7 +49,7 @@ const Pagination = <T extends { label: string }>({
   onNextClick = noop,
 
   renderPage = (page, i) => (
-    <PaginationPage onClick={() => onPageClick(page, i)} selected={i === currentPageIndex}>
+    <PaginationPage type={'button'} onClick={() => onPageClick(page, i)} selected={i === currentPageIndex}>
       {page.label}
     </PaginationPage>
   ),
@@ -88,6 +88,7 @@ const Pagination = <T extends { label: string }>({
     <BasePagination type={type} sx={sx}>
       {renderPreviousPageDirection({
         previousPageDirectionProps: {
+          type: 'button',
           onClick: () => onPreviousClick(currentPageIndex),
           disabled: currentPageIndex === 0,
         },
@@ -121,6 +122,7 @@ const Pagination = <T extends { label: string }>({
           ]}
       {renderNextPageDirection({
         nextPageDirectionProps: {
+          type: 'button',
           onClick: () => onNextClick(currentPageIndex),
           disabled: currentPageIndex === totalPageCount - 1,
         },
@@ -183,7 +185,7 @@ const PaginationPage = styled(UnstyledButton)<PaginationPageProps>`
         `}
 `;
 
-type PaginationPageDirectionProps = Pick<UnstyledButtonProps, 'onClick' | 'disabled'>;
+type PaginationPageDirectionProps = Pick<UnstyledButtonProps, 'onClick' | 'disabled' | 'type'>;
 const PaginationPageDirection = styled(UnstyledButton)`
   transition: background-color 100ms;
 

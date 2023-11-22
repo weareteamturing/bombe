@@ -1,5 +1,5 @@
-import { ChevronDownIcon } from '@teamturing/icons';
-import { forcePixelValue, isFunction, isNullable, noop } from '@teamturing/utils';
+import { ChevronDownIcon, SearchIcon } from '@teamturing/icons';
+import { forcePixelValue, isFunction, isNullable, noop, scrollIntoView } from '@teamturing/utils';
 import {
   ElementType,
   InputHTMLAttributes,
@@ -11,15 +11,18 @@ import {
   useRef,
 } from 'react';
 import { isValidElementType } from 'react-is';
-import styled, { css } from 'styled-components';
+import styled, { css, useTheme } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
+import HorizontalDivider from '../HorizontalDivider';
 import Overlay from '../Overlay';
 import OverlayPopper, { OverlayPopperProps } from '../OverlayPopper';
+import Space from '../Space';
 import StyledIcon from '../StyledIcon';
+import TextInput, { TextInputProps } from '../TextInput';
 import View from '../View';
 
-type Props<T extends { label: string; value: string | number | readonly string[] }> = {
+type Props<T extends { label: string; value?: string | number | readonly string[] }> = {
   /**
    * TODO asdf
    */
@@ -28,12 +31,17 @@ type Props<T extends { label: string; value: string | number | readonly string[]
    * 입력 창 앞에 보여질 시각적 요소를 정의합니다. Icon, Text, Image 등이 될 수 있습니다.
    */
   leadingVisual?: ElementType | ReactNode;
-  children: ({ handleSelect }: { handleSelect: (item: T) => void }) => ReactNode;
+  children: (
+    selectionHandler: { handleSelect: (item: T) => void },
+    overlayHandler: { isOpen: boolean; closeOverlay: () => void },
+  ) => ReactNode;
   onChange?: (item: T) => void;
+  searchInputProps?: Pick<TextInputProps, 'placeholder' | 'trailingVisual' | 'trailingAction' | 'onChange'>;
+  renderValue?: (value: T['value']) => ReactNode;
 } & Pick<OverlayPopperProps, 'focusTrapSettings' | 'focusZoneSettings' | 'onClose' | 'onOpen'> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'id' | 'disabled' | 'onClick' | 'placeholder'>;
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'id' | 'disabled' | 'onClick' | 'placeholder' | 'value'>;
 
-const OverlaySelectInput = <T extends { label: string; value: string | number | readonly string[] }>(
+const SearchSelectInput = <T extends { label: string; value: string | number | readonly string[] }>(
   {
     validationStatus,
     leadingVisual: LeadingVisual,
@@ -43,10 +51,17 @@ const OverlaySelectInput = <T extends { label: string; value: string | number | 
     focusZoneSettings,
     onOpen,
     onClose,
+    searchInputProps,
+    value,
+    renderValue = (value) => value?.toString(),
     ...props
   }: Props<T>,
   ref: Ref<HTMLInputElement>,
 ) => {
+  const theme = useTheme();
+
+  const hasLeadingVisual = !isNullable(LeadingVisual);
+
   const valueInputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLInputElement>);
   const labelInputRef = useRef<HTMLInputElement>(null);
 
@@ -58,8 +73,6 @@ const OverlaySelectInput = <T extends { label: string; value: string | number | 
 
   const handleSelect = (item: T) => {
     if (labelInputRef.current && valueInputRef.current) {
-      labelInputRef.current.setAttribute('value', item.label);
-
       /**
        * ! valueInput의 native onChange를 trigger하려고 했으나 작동하지 않음.
        * ! 일단 Custom onChange를 만들어서 해결.
@@ -71,18 +84,78 @@ const OverlaySelectInput = <T extends { label: string; value: string | number | 
     }
   };
 
+  const listContainerRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const activeDescendantRef = useRef<HTMLElement>();
+
   return (
     <OverlayPopper
-      focusTrapSettings={focusTrapSettings}
-      focusZoneSettings={focusZoneSettings}
+      focusTrapSettings={{ initialFocusRef: searchInputRef, restoreFocusOnCleanUp: true, ...focusTrapSettings }}
+      focusZoneSettings={{
+        containerRef: listContainerRef,
+        activeDescendantFocus: searchInputRef,
+        focusOutBehavior: 'stop',
+        onActiveDescendantChanged: (current, previous) => {
+          activeDescendantRef.current = current;
+          if (current && listContainerRef.current) {
+            current.style.backgroundColor = theme.colors['bg/selected/subtle'];
+
+            scrollIntoView({
+              childrenRef: current,
+              scrollContainerRef: listContainerRef.current,
+              options: { behavior: 'auto', direction: 'vertical', offset: 0 },
+            });
+          }
+          if (previous && current !== previous) {
+            previous.style.backgroundColor = '';
+          }
+        },
+        focusableElementFilter: (elem) => {
+          return elem instanceof HTMLElement;
+        },
+        ...focusZoneSettings,
+      }}
       onOpen={onOpen}
       onClose={onClose}
-      renderOverlay={(overlayProps, _, { elements }) => (
+      renderOverlay={(overlayProps, overlayHandler, { elements }) => (
         <Overlay
           {...overlayProps}
+          maxHeight={200}
+          sx={{ display: 'flex', flexDirection: 'column' }}
           style={{ ...overlayProps.style, width: elements?.reference?.getBoundingClientRect().width }}
         >
-          {children?.({ handleSelect })}
+          <Space
+            p={2}
+            sx={{
+              flexGrow: 0,
+              flexShrink: 0,
+              flexBasis: 'auto',
+            }}
+          >
+            <TextInput
+              ref={searchInputRef}
+              leadingVisual={SearchIcon}
+              onKeyDown={(e) => {
+                if (e.code === 'Enter' && activeDescendantRef.current) {
+                  const activeDescendantEvent = new KeyboardEvent(e.type, e.nativeEvent);
+                  activeDescendantRef.current?.dispatchEvent(activeDescendantEvent);
+                }
+              }}
+              {...(searchInputProps as any)}
+            />
+          </Space>
+          <HorizontalDivider />
+          <View
+            ref={listContainerRef}
+            sx={{
+              flexGrow: 1,
+              flexShrink: 1,
+              flexBasis: 'auto',
+              overflowY: 'auto',
+            }}
+          >
+            {children?.({ handleSelect }, overlayHandler)}
+          </View>
         </Overlay>
       )}
     >
@@ -92,13 +165,15 @@ const OverlaySelectInput = <T extends { label: string; value: string | number | 
           tabIndex={disabled ? -1 : 0}
           disabled={disabled}
           onClick={focusInput}
-          hasLeadingVisual={!isNullable(LeadingVisual)}
+          hasLeadingVisual={hasLeadingVisual}
           validationStatus={validationStatus}
           onKeyDown={(e) => {
             if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
               e.preventDefault();
               openOverlay();
             }
+
+            e.stopPropagation();
           }}
         >
           <View
@@ -116,18 +191,48 @@ const OverlaySelectInput = <T extends { label: string; value: string | number | 
               (LeadingVisual as ReactNode)
             )}
           </View>
-          <BaseInput
-            id={id}
-            ref={labelInputRef}
-            onChange={noop}
-            autoComplete={'off'}
-            tabIndex={-1}
+          <View
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              paddingTop: 3,
+              paddingRight: 10,
+              paddingBottom: 3,
+              paddingLeft: hasLeadingVisual ? 2 : 4,
+              whiteSpace: 'pre',
+              textOverflow: 'ellipsis',
+              width: '100%',
+            }}
             onClick={(e) => {
               popperProps.onClick?.(e);
-              props.onClick?.(e);
             }}
-            placeholder={placeholder}
-          />
+          >
+            {!isNullable(renderValue(value as T['value'])) ? (
+              <View
+                sx={{
+                  flex: '0 1 auto',
+                  maxWidth: '100%',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'pre',
+                  overflow: 'hidden',
+                }}
+              >
+                {renderValue(value as T['value'])}
+              </View>
+            ) : null}
+            <BaseInput
+              id={id}
+              ref={labelInputRef}
+              readOnly
+              onChange={noop}
+              autoComplete={'off'}
+              tabIndex={-1}
+              onClick={(e) => {
+                props.onClick?.(e);
+              }}
+              placeholder={!isNullable(renderValue(value as T['value'])) ? '' : placeholder}
+            />
+          </View>
           <StyledIcon
             sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', right: 4, pointerEvents: 'none' }}
             icon={ChevronDownIcon}
@@ -140,6 +245,7 @@ const OverlaySelectInput = <T extends { label: string; value: string | number | 
               (valueInputRef as MutableRefObject<HTMLInputElement | null>).current = e;
             }}
             type={'hidden'}
+            defaultValue={value}
           />
         </TextInputWrapper>
       )}
@@ -162,8 +268,10 @@ const TextInputWrapper = styled.div<TextInputWrapperProps>`
   cursor: default;
   input {
     cursor: default;
+
+    flex: 1;
   }
-  display: inline-flex;
+  display: flex;
   align-items: center;
 
   font-size: ${({ theme }) => forcePixelValue(theme.fontSizes.xs)};
@@ -237,9 +345,6 @@ const TextInputWrapper = styled.div<TextInputWrapperProps>`
     props.hasLeadingVisual &&
     css`
       padding-left: ${forcePixelValue(props.theme.space[4])};
-      input {
-        padding-left: ${forcePixelValue(props.theme.space[2])};
-      }
     `}
 
   transition: color 100ms, background-color 100ms;
@@ -256,28 +361,24 @@ const UnstyledInput = styled.input`
   border-radius: inherit;
   color: inherit;
   transition: inherit;
+  width: 100%;
 
   border: 0;
+  padding: 0;
   background-color: transparent;
-  width: 100%;
   &:focus {
     outline: 0;
   }
 `;
 
 const BaseInput = styled(UnstyledInput)`
-  padding-top: ${({ theme }) => forcePixelValue(theme.space[3])};
-  padding-right: ${({ theme }) => forcePixelValue(theme.space[10])};
-  padding-bottom: ${({ theme }) => forcePixelValue(theme.space[3])};
-  padding-left: ${({ theme }) => forcePixelValue(theme.space[4])};
-
   white-space: pre;
   text-overflow: ellipsis;
 `;
 
-export default forwardRef(OverlaySelectInput) as <
+export default forwardRef(SearchSelectInput) as <
   T extends { label: string; value: string | number | readonly string[] },
 >(
   props: Props<T> & { ref?: Ref<HTMLInputElement> },
-) => ReturnType<typeof OverlaySelectInput>;
-export type { Props as OverlaySelectInputProps };
+) => ReturnType<typeof SearchSelectInput>;
+export type { Props as SearchSelectInputProps };
