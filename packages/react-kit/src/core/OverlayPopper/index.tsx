@@ -72,6 +72,14 @@ const OverlayPopper = ({
 
   const defaultPopperProps: HTMLAttributes<HTMLElement> = {
     onClick: handleOverlayToggle,
+    onKeyDown: (e) => {
+      if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
+        e.preventDefault();
+        openOverlay();
+      }
+
+      e.stopPropagation();
+    },
     tabIndex: 0,
     ...{ ref: refs.setReference },
   };
