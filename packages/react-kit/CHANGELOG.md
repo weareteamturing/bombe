@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.16](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.15...@teamturing/react-kit@2.19.16) (2023-11-23)
+
+### Bug Fixes
+
+- **react-kit:** update TabItem default type ([81901ac](https://github.com/weareteamturing/bombe/commit/81901ac62846d014f91b1957f1cbded822077c42))
+
 ## [2.19.15](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.14...@teamturing/react-kit@2.19.15) (2023-11-22)
 
 ### Bug Fixes
