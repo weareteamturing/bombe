@@ -5,7 +5,7 @@ import { SxProp, sx } from '../utils/styled-system';
 
 type Props = {} & ButtonHTMLAttributes<HTMLButtonElement> & SxProp;
 
-const UnstyledButton = styled.button.attrs({ type: 'button' })<Props>`
+const UnstyledButton = styled.button<Props>`
   background: none;
   border: 0;
   padding: 0;
@@ -14,6 +14,8 @@ const UnstyledButton = styled.button.attrs({ type: 'button' })<Props>`
 
   ${sx}
 `;
+
+UnstyledButton.defaultProps = { type: 'button' };
 
 export default UnstyledButton;
 export type { Props as UnstyledButtonProps };
