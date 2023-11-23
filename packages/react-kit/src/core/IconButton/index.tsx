@@ -34,13 +34,12 @@ type Props = {
 
 const IconButton = forwardRef<HTMLButtonElement, Props>(
   (
-    { icon: Icon, size = 'm', variant = 'primary', disabled = false, loading = false, type = 'button', ...props },
+    { icon: Icon, size = 'm', variant = 'primary', disabled = false, loading = false, ...props },
     ref: Ref<HTMLButtonElement>,
   ) => {
     return (
       <BaseIconButton
         ref={ref}
-        type={type}
         icon={Icon}
         size={size}
         variant={variant}

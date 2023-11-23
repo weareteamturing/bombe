@@ -44,6 +44,7 @@ type Props = {
 const Button = forwardRef<HTMLButtonElement, PropsWithChildren<Props>>(
   (
     {
+      type = 'button',
       size = 'm',
       variant = 'primary',
       fillWidth = false,
@@ -59,6 +60,7 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<Props>>(
     return (
       <BaseButton
         ref={ref}
+        type={type}
         size={size}
         disabled={disabled || loading}
         $disabled={disabled}
