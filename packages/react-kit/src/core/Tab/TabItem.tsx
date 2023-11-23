@@ -45,6 +45,7 @@ const TabItem = ({
 
   return (
     <BaseTabItem
+      type={'button'}
       role={'tab'}
       ref={ref}
       variant={variant}
