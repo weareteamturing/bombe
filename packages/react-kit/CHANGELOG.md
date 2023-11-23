@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.18](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.17...@teamturing/react-kit@2.19.18) (2023-11-23)
+
+### Bug Fixes
+
+- **react-kit:** update UnstyledButton defaultProps ([2d29462](https://github.com/weareteamturing/bombe/commit/2d294621aa42f7d1a3a62a3e92a7fdc0cc275849))
+
 ## [2.19.17](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.16...@teamturing/react-kit@2.19.17) (2023-11-23)
 
 ### Bug Fixes
