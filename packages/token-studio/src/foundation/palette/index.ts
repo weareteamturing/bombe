@@ -84,6 +84,58 @@ const shade = {
   black60A: '#00000099',
 } as const;
 
+const fuchsiaPink = {
+  fuchsiaPink50: '#FCF2FD',
+  fuchsiaPink100: '#F5D6F8',
+  fuchsiaPink200: '#F0C2F4',
+  fuchsiaPink300: '#E9A7EF',
+  fuchsiaPink400: '#E595EC',
+  fuchsiaPink500: '#DE7BE7',
+  fuchsiaPink600: '#CA70D2',
+  fuchsiaPink700: '#9E57A4',
+  fuchsiaPink800: '#7A447F',
+  fuchsiaPink900: '#5D3461',
+};
+
+const skyBlue = {
+  skyBlue50: '#EFF9FD',
+  skyBlue100: '#CFEDF8',
+  skyBlue200: '#B7E4F5',
+  skyBlue300: '#96D8F1',
+  skyBlue400: '#82D1EE',
+  skyBlue500: '#63C5EA',
+  skyBlue600: '#5AB3D5',
+  skyBlue700: '#468CA6',
+  skyBlue800: '#366C81',
+  skyBlue900: '#2A5362',
+};
+
+const indianRed = {
+  indianRed50: '#632A2A',
+  indianRed100: '#823838',
+  indianRed200: '#A84848',
+  indianRed300: '#D75C5C',
+  indianRed400: '#EC6565',
+  indianRed500: '#F08484',
+  indianRed600: '#F29898',
+  indianRed700: '#F6B8B8',
+  indianRed800: '#F9CFCF',
+  indianRed900: '#FDF0F0',
+};
+
+const mustardYellow = {
+  mustardYellow50: '#675025',
+  mustardYellow100: '#876931',
+  mustardYellow200: '#AE883F',
+  mustardYellow300: '#DFAE51',
+  mustardYellow400: '#F5BF59',
+  mustardYellow500: '#F7CC7A',
+  mustardYellow600: '#F8D490',
+  mustardYellow700: '#FAE2B3',
+  mustardYellow800: '#FCEBCC',
+  mustardYellow900: '#FEF9EE',
+};
+
 const palette = {
   ...gray,
   ...violet,
@@ -92,7 +144,11 @@ const palette = {
   ...red,
   ...blue,
   ...shade,
+  ...fuchsiaPink,
+  ...skyBlue,
+  ...indianRed,
+  ...mustardYellow,
 };
 
 export default palette;
-export { gray, violet, green, yellow, red, blue, shade };
+export { gray, violet, green, yellow, red, blue, shade, fuchsiaPink, skyBlue, indianRed, mustardYellow };
