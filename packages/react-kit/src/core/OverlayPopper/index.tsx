@@ -75,7 +75,7 @@ const OverlayPopper = ({
     onKeyDown: (e) => {
       if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
         e.preventDefault();
-        openOverlay();
+        handleOverlayOpen();
       }
 
       e.stopPropagation();
