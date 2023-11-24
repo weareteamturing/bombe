@@ -48,7 +48,7 @@ const ActionListItem = ({
   children,
   sx,
 }: PropsWithChildren<Props>) => {
-  const { selectionVariant } = useContext(ActionListContext);
+  const { selectionVariant, onSelect: defaultOnSelect } = useContext(ActionListContext);
 
   if (!selectionVariant && selected) {
     throw new Error('To use selected props in ActionList.Item, ActionList selectionVariant props should be defined.');
@@ -56,6 +56,7 @@ const ActionListItem = ({
 
   const handleSelect = useCallback(
     (event: ReactMouseEvent<HTMLLIElement> | ReactKeyboardEvent<HTMLLIElement>) => {
+      defaultOnSelect?.(event);
       propOnSelect?.(event);
     },
     [propOnSelect],
