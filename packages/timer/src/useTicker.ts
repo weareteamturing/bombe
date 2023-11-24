@@ -71,9 +71,10 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
       startTicker();
     } else if (status !== 'run_pause') {
       return;
+    } else {
+      setStatus('run_progress');
+      ticker.resume();
     }
-    setStatus('run_progress');
-    ticker.resume();
   }, [status, ticker]);
 
   useUnmount(() => {
