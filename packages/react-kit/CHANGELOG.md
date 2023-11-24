@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.19](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.18...@teamturing/react-kit@2.19.19) (2023-11-24)
+
+### Bug Fixes
+
+- **react-kit:** update OverlayPopper onOpen bug ([da0890d](https://github.com/weareteamturing/bombe/commit/da0890de9782397d9f4f0d4408c761902a66f977))
+
 ## [2.19.18](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.17...@teamturing/react-kit@2.19.18) (2023-11-23)
 
 ### Bug Fixes
