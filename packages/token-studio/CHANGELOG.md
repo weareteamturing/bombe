@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.2.0...@teamturing/token-studio@1.2.1) (2023-11-24)
+
+### Bug Fixes
+
+- **token-studio:** add bg/neutral/subtlest related token ([040abd1](https://github.com/weareteamturing/bombe/commit/040abd1636e795b72ba72d96cb43a08f9b96d8ef))
+
 # [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.1.8...@teamturing/token-studio@1.2.0) (2023-11-24)
 
 ### Features
