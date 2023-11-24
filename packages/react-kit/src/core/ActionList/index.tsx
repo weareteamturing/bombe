@@ -1,4 +1,9 @@
-import { PropsWithChildren, createContext } from 'react';
+import {
+  PropsWithChildren,
+  createContext,
+  MouseEvent as ReactMouseEvent,
+  KeyboardEvent as ReactKeyboardEvent,
+} from 'react';
 import styled from 'styled-components';
 
 import { SxProp, sx } from '../../utils/styled-system';
@@ -15,14 +20,15 @@ type Props = {
    * `multiple`: 모든 아이템에 Checkbox를 표시합니다.
    */
   selectionVariant?: 'single' | 'multiple';
+  onSelect?: (event: ReactMouseEvent<HTMLLIElement> | ReactKeyboardEvent<HTMLLIElement>) => void;
 } & SxProp;
 
-type ActionListContextValue = {} & Pick<Props, 'selectionVariant'>;
+type ActionListContextValue = {} & Pick<Props, 'selectionVariant' | 'onSelect'>;
 const ActionListContext = createContext<ActionListContextValue>({});
 
-const ActionList = ({ ...props }: PropsWithChildren<Props>) => {
+const ActionList = ({ selectionVariant, onSelect, ...props }: PropsWithChildren<Props>) => {
   return (
-    <ActionListContext.Provider value={{ selectionVariant: props.selectionVariant }}>
+    <ActionListContext.Provider value={{ selectionVariant, onSelect }}>
       <BaseActionList role={'menu'} {...props} />
     </ActionListContext.Provider>
   );
