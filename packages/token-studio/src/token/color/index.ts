@@ -28,6 +28,9 @@ const bgColor = {
   'bg/primary/hovered': palette.violet700,
   'bg/primary/pressed': palette.violet700,
 
+  'bg/neutral/subtlest': palette.transparent,
+  'bg/neutral/subtlest/hovered': palette.gray50,
+  'bg/neutral/subtlest/pressed': palette.gray50,
   'bg/neutral/subtler': palette.transparent,
   'bg/neutral/subtler/hovered': palette.gray100,
   'bg/neutral/subtler/pressed': palette.gray100,
