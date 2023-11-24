@@ -1,9 +1,14 @@
 import { useState, useCallback } from 'react';
 
-import { useTicker, UseTickerParams } from './useTicker';
+import { useTicker } from './useTicker';
 
-export function useReverseTicker(params: UseTickerParams) {
-  const { startTicker: _startTicker, tickSec: _tickSec, resetTicker: _resetTicker, ...rest } = useTicker(params);
+export function useReverseTicker({ onComplete }: { onComplete?: () => void }) {
+  const {
+    startTicker: _startTicker,
+    tickSec: _tickSec,
+    resetTicker: _resetTicker,
+    ...rest
+  } = useTicker({ onComplete });
 
   const [duration, setDuration] = useState(0);
 

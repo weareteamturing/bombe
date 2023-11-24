@@ -5,12 +5,11 @@ import { useLifecycle } from './internal/useLifecycle';
 import { useUnmount } from './internal/useUnmount';
 
 type Status = 'initial' | 'run_pause' | 'run_progress' | 'complete';
-export type UseTickerParams = {
+type Params = {
   onComplete?: () => void;
-  startAtResumeIfNeeded?: boolean;
 };
 const inf = 99999999;
-export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams = {}) {
+export function useTicker({ onComplete }: Params = {}) {
   const { checkUnmounted } = useLifecycle();
 
   const onCompleteRef = useRef<Function>();
@@ -59,9 +58,7 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
   );
 
   const pauseTicker = useCallback(() => {
-    if (status === 'initial' && startAtResumeIfNeeded) {
-      startTicker();
-    } else if (status !== 'run_progress') {
+    if (status !== 'run_progress') {
       return;
     }
     setStatus('run_pause');
