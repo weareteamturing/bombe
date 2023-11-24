@@ -59,9 +59,7 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
   );
 
   const pauseTicker = useCallback(() => {
-    if (status === 'initial' && startAtResumeIfNeeded) {
-      startTicker();
-    } else if (status !== 'run_progress') {
+    if (status !== 'run_progress') {
       return;
     }
     setStatus('run_pause');
@@ -69,7 +67,9 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
   }, [status, ticker]);
 
   const resumeTicker = useCallback(() => {
-    if (status !== 'run_pause') {
+    if (status === 'initial' && startAtResumeIfNeeded) {
+      startTicker();
+    } else if (status !== 'run_pause') {
       return;
     }
     setStatus('run_progress');
