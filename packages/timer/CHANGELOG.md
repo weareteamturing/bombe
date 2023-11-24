@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.2.4...@teamturing/timer@1.3.0) (2023-11-24)
+
+### Features
+
+- **timer:** add `startAtResumeIfNeeded` options into `useTicker` hook ([e7a9781](https://github.com/weareteamturing/bombe/commit/e7a978126647f2642c745ade0dbfbcd99e2c82b0))
+
 ## [1.2.4](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.2.3...@teamturing/timer@1.2.4) (2023-09-12)
 
 ### Bug Fixes
