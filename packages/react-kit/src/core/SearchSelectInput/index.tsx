@@ -69,6 +69,12 @@ const SearchSelectInput = <T extends { label: string; value: string | number | r
     labelInputRef.current?.focus();
   };
 
+  const handleClose = () => {
+    focusInput();
+
+    onClose?.();
+  };
+
   const { id, disabled, placeholder } = props;
 
   const handleSelect = (item: T) => {
@@ -116,7 +122,7 @@ const SearchSelectInput = <T extends { label: string; value: string | number | r
         ...focusZoneSettings,
       }}
       onOpen={onOpen}
-      onClose={onClose}
+      onClose={handleClose}
       renderOverlay={(overlayProps, overlayHandler, { elements }) => (
         <Overlay
           {...overlayProps}
