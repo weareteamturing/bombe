@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.23](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.22...@teamturing/react-kit@2.19.23) (2023-11-25)
+
+### Bug Fixes
+
+- **react-kit:** update SerachSelectInput onClose behavior ([476066f](https://github.com/weareteamturing/bombe/commit/476066fc845c36cf4d5eb0f41a629345aade2aa4))
+
 ## [2.19.22](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.21...@teamturing/react-kit@2.19.22) (2023-11-24)
 
 ### Bug Fixes
