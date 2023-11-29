@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/weareteamturing/bombe/compare/@teamturing/validators@1.1.5...@teamturing/validators@1.1.6) (2023-11-29)
+
+### Bug Fixes
+
+- **validators:** update isKoreanName ([1e64f89](https://github.com/weareteamturing/bombe/commit/1e64f89c01be22ae1ba1cd3bb03ff9c2c5b59e7b))
+
 ## [1.1.5](https://github.com/weareteamturing/bombe/compare/@teamturing/validators@1.1.4...@teamturing/validators@1.1.5) (2023-11-29)
 
 ### Bug Fixes
