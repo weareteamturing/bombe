@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.25](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.24...@teamturing/react-kit@2.19.25) (2023-11-30)
+
+### Bug Fixes
+
+- **react-kit:** update Pill design ([b3d3ba0](https://github.com/weareteamturing/bombe/commit/b3d3ba003e416184190ef549aaa1f29d2b07db59))
+
 ## [2.19.24](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.23...@teamturing/react-kit@2.19.24) (2023-11-30)
 
 ### Bug Fixes
