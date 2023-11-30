@@ -7,6 +7,7 @@ describe('isMobilePhoneNumber은', () => {
   });
 
   it('핸드폰 번호가 아닌 경우, false를 반환한다', () => {
+    expect(isMobilePhoneNumber('010-2345678')).toEqual(false);
     expect(isMobilePhoneNumber('0212345678')).toEqual(false);
     expect(isMobilePhoneNumber('03112345678')).toEqual(false);
     expect(isMobilePhoneNumber('05312345678')).toEqual(false);
