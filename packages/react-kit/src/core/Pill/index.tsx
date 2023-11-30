@@ -20,7 +20,7 @@ import { ResponsiveValue, variant } from 'styled-system';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import UnstyledButton from '../_UnstyledButton';
 
-type PillSizeType = 'm';
+type PillSizeType = 's' | 'm';
 type PillVariantType = 'outlined' | 'secondary';
 type Props = {
   /**
@@ -149,7 +149,6 @@ const BasePill = styled(UnstyledButton)<
 >`
   display: inline-flex;
   align-items: center;
-  border-radius: ${({ theme }) => forcePixelValue(theme.radii.xs)};
   column-gap: ${({ theme }) => forcePixelValue(theme.space[2])};
 
   transition: background-color 100ms;
@@ -184,10 +183,23 @@ const BasePill = styled(UnstyledButton)<
     variant<BetterSystemStyleObject, PillSizeType, 'size'>({
       prop: 'size',
       variants: {
+        s: {
+          'pl': 2,
+          'pr': !hasRemoveButton ? 2 : 0.25,
+          'height': forcePixelValue(20),
+          'borderRadius': 'xxs',
+          'fontSize': theme.fontSizes.xxs,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
+          'columnGap': 0.25,
+          '& svg': { minWidth: 12, height: 12 },
+          '& > div': { p: 1 },
+        },
         m: {
           'pl': 3,
           'pr': !hasRemoveButton ? 3 : 1,
           'height': forcePixelValue(32),
+          'borderRadius': 'xs',
           'fontSize': theme.fontSizes.xxs,
           'fontWeight': theme.fontWeights.medium,
           'lineHeight': theme.lineHeights[2],
