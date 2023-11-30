@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/weareteamturing/bombe/compare/@teamturing/validators@1.1.6...@teamturing/validators@1.1.7) (2023-11-30)
+
+### Bug Fixes
+
+- **validators:** update isMobilePhoneNumber ([d322ea0](https://github.com/weareteamturing/bombe/commit/d322ea028d139236a46e2240ca1ac6b0e57b544d))
+
 ## [1.1.6](https://github.com/weareteamturing/bombe/compare/@teamturing/validators@1.1.5...@teamturing/validators@1.1.6) (2023-11-29)
 
 ### Bug Fixes
