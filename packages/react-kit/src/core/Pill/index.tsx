@@ -214,23 +214,9 @@ const BasePill = styled(UnstyledButton)<
       prop: 'variant',
       variants: {
         outlined: {
-          'backgroundColor': theme.colors['bg/neutral/subtler'],
-
-          'borderWidth': 1,
-          'borderStyle': 'solid',
-          'borderColor': theme.colors['border/neutral'],
-
-          'color': 'text/neutral/subtle',
-
-          '& svg': { color: theme.colors['icon/neutral/bolder'] },
-
-          '&:hover': {
-            backgroundColor: theme.colors['bg/neutral/subtler/hovered'],
-          },
-
-          '&:active': {
-            backgroundColor: theme.colors['bg/neutral/subtler/pressed'],
-          },
+          borderWidth: 1,
+          borderStyle: 'solid',
+          borderColor: theme.colors['border/neutral'],
 
           ...(disabled
             ? {
@@ -241,23 +227,21 @@ const BasePill = styled(UnstyledButton)<
                   color: theme.colors['icon/disabled'],
                 },
               }
-            : {}),
+            : {
+                'backgroundColor': theme.colors['bg/neutral/subtler'],
+                'color': 'text/neutral/subtle',
+                '& svg': { color: theme.colors['icon/neutral/bolder'] },
+
+                '&:hover': {
+                  backgroundColor: theme.colors['bg/neutral/subtler/hovered'],
+                },
+
+                '&:active': {
+                  backgroundColor: theme.colors['bg/neutral/subtler/pressed'],
+                },
+              }),
         },
         secondary: {
-          'backgroundColor': theme.colors['bg/secondary'],
-
-          'color': theme.colors['text/primary'],
-
-          '& svg': { color: theme.colors['icon/primary'] },
-
-          '&:hover': {
-            backgroundColor: theme.colors['bg/secondary/hovered'],
-          },
-
-          '&:active': {
-            backgroundColor: theme.colors['bg/secondary/pressed'],
-          },
-
           ...(disabled
             ? {
                 'cursor': 'not-allowed',
@@ -267,7 +251,19 @@ const BasePill = styled(UnstyledButton)<
                   color: theme.colors['icon/disabled'],
                 },
               }
-            : {}),
+            : {
+                'backgroundColor': theme.colors['bg/secondary'],
+                'color': theme.colors['text/primary'],
+                '& svg': { color: theme.colors['icon/primary'] },
+
+                '&:hover': {
+                  backgroundColor: theme.colors['bg/secondary/hovered'],
+                },
+
+                '&:active': {
+                  backgroundColor: theme.colors['bg/secondary/pressed'],
+                },
+              }),
         },
       },
     })}
