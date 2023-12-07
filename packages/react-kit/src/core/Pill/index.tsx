@@ -111,7 +111,8 @@ const Pill = (
       ) : (
         (LeadingVisual as ReactNode)
       )}
-      <span title={children?.toString()}>{children}</span>
+      {/*<span title={children?.toString()}>{children}</span>*/}
+      <span>{children}</span>
       {typeof TrailingVisual !== 'string' && isValidElementType(TrailingVisual) ? (
         <TrailingVisual />
       ) : (
