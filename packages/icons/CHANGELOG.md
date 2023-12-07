@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.21.0...@teamturing/icons@1.22.0) (2023-12-07)
+
+### Features
+
+- **icons:** add icons ([8b3c207](https://github.com/weareteamturing/bombe/commit/8b3c207abf46b2ad8ded65949cad473e8aaef385))
+
 # [1.21.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.20.0...@teamturing/icons@1.21.0) (2023-11-16)
 
 ### Features

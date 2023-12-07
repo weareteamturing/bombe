@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.26](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.25...@teamturing/react-kit@2.19.26) (2023-12-07)
+
+### Bug Fixes
+
+- **react-kit:** delete title attribute of Pill ([106ac50](https://github.com/weareteamturing/bombe/commit/106ac5037cf008e3a431535a9c183443aa66b3fd))
+
 ## [2.19.25](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.24...@teamturing/react-kit@2.19.25) (2023-11-30)
 
 ### Bug Fixes
