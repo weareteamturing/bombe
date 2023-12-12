@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.27](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.26...@teamturing/react-kit@2.19.27) (2023-12-12)
+
+### Bug Fixes
+
+- **react-kit:** fix backgroundColor of plain button ([c65fb06](https://github.com/weareteamturing/bombe/commit/c65fb06e422513215e50dad8f8702d03e809b039))
+
 ## [2.19.26](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.25...@teamturing/react-kit@2.19.26) (2023-12-07)
 
 ### Bug Fixes
