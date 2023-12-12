@@ -295,7 +295,7 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
           },
           ...($disabled
             ? {
-                'backgroundColor': color['bg/disabled'],
+                'backgroundColor': color['bg/disabled/subtlest'],
                 'color': color['text/disabled'],
                 '& svg': { color: color['icon/disabled'] },
               }
