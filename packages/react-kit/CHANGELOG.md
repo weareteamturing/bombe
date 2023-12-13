@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.29](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.28...@teamturing/react-kit@2.19.29) (2023-12-13)
+
+### Bug Fixes
+
+- **react-kit:** update rollup config with react-textarea-autosize ([ecc8f28](https://github.com/weareteamturing/bombe/commit/ecc8f28005b872c3b2de6e484041e24570e181b7))
+
 ## [2.19.28](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.27...@teamturing/react-kit@2.19.28) (2023-12-13)
 
 ### Bug Fixes
