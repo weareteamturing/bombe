@@ -34,6 +34,7 @@
     "@styled-system/css": "^5.1.5",
     "@types/lodash.debounce": "^4.0.7",
     "@types/lodash.throttle": "^4.1.7",
+    "@types/lodash.toarray": "^4.4.9",
     "@types/react-is": "^18.2.2",
     "@types/styled-system": "^5.1.17",
     "@types/styled-system__css": "^5.0.17",
@@ -59,7 +60,9 @@
     "framer-motion": "^10.16.4",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
+    "lodash.toarray": "^4.4.0",
     "react-is": "^18.2.0",
+    "react-textarea-autosize": "^8.5.3",
     "styled-system": "^5.1.5"
   }
 }

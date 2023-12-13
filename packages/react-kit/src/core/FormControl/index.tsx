@@ -5,6 +5,7 @@ import Checkbox from '../Checkbox';
 import SearchSelectInput from '../SearchSelectInput';
 import Select from '../Select';
 import TextInput from '../TextInput';
+import Textarea from '../Textarea';
 import View from '../View';
 
 import FormControlCaption, { FormControlCaptionProps } from './FormControlCaption';
@@ -60,6 +61,7 @@ const FormControl = (
   });
   const inputComponentCandidates = [
     TextInput,
+    Textarea,
     Select,
     SearchSelectInput,
     Checkbox,
