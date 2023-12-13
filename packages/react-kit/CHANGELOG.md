@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.28](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.27...@teamturing/react-kit@2.19.28) (2023-12-13)
+
+### Bug Fixes
+
+- **react-kit:** update FormControl to accept Textarea ([d359d10](https://github.com/weareteamturing/bombe/commit/d359d10065439118b687f704bbfae802cee7d45d))
+- **react-kit:** update import path ([646d7d1](https://github.com/weareteamturing/bombe/commit/646d7d1314ecb6da5e3d065a9b391f3ddbbfd0ec))
+- **react-kit:** update textarea ([1534880](https://github.com/weareteamturing/bombe/commit/15348802f268b9aa33323eb7675ea1df7ca74bf9))
+
 ## [2.19.27](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.26...@teamturing/react-kit@2.19.27) (2023-12-12)
 
 ### Bug Fixes
