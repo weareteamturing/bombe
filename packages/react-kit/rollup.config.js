@@ -22,7 +22,7 @@ module.exports = {
       globals: { 'styled-components': 'styled' },
     },
   ],
-  external: ['react', 'styled-components'],
+  external: ['react', 'styled-components', 'react-textarea-autosize'],
   plugins: [
     nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     commonjs(),
