@@ -1,9 +1,10 @@
-import { useProvidedOrCreatedRef } from '@teamturing/react-kit';
 import { commaizeNumber, forcePixelValue, isFunction } from '@teamturing/utils';
 import toArray from 'lodash.toarray';
 import { MutableRefObject, Ref, RefObject, forwardRef, useEffect, useState } from 'react';
 import ReactTextareaAutosize, { TextareaAutosizeProps } from 'react-textarea-autosize';
 import styled, { css } from 'styled-components';
+
+import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 
 type Props = {
   validationStatus?: 'error' | 'success' | undefined;
