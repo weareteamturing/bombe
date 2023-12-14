@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.32](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.31...@teamturing/react-kit@2.19.32) (2023-12-14)
+
+### Bug Fixes
+
+- **react-kit:** add Radio component ([dd292d1](https://github.com/weareteamturing/bombe/commit/dd292d1d5aded9709d09073b97f6811d06d698ec))
+
 ## [2.19.31](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.30...@teamturing/react-kit@2.19.31) (2023-12-14)
 
 ### Bug Fixes
