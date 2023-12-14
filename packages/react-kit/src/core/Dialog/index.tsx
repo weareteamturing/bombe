@@ -26,16 +26,25 @@ import UnstyledDialogBody, { UnstyledDialogBodyProps } from './_UnstyledDialogBo
 import UnstyledDialogFooter, { UnstyledDialogFooterProps } from './_UnstyledDialogFooter';
 import UnstyledDialogHeader, { UnstyledDialogHeaderProps } from './_UnstyledDialogHeader';
 
-type DialogSizeType = 'l' | 'm' | 's';
+type DialogSizeType = 'full' | 'l' | 'm' | 's';
 type Props = {
   isOpen?: boolean;
   onDismiss?: () => void;
+  isOutsideClickDismissable?: boolean;
   size?: DialogSizeType;
   initialFocusRef?: RefObject<HTMLElement>;
 } & SxProp;
 
 const Dialog = (
-  { children, isOpen, onDismiss, size = 'm', initialFocusRef, sx }: PropsWithChildren<Props>,
+  {
+    children,
+    isOpen,
+    onDismiss,
+    isOutsideClickDismissable = true,
+    size = 'm',
+    initialFocusRef,
+    sx,
+  }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
 ) => {
   const handleDismiss = useCallback(() => onDismiss?.(), [onDismiss]);
@@ -76,13 +85,13 @@ const Dialog = (
   useFocusTrap({ containerRef: dialogRef, initialFocusRef: initialFocusRef || closeButtonRef, disabled: !isOpen });
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && isOutsideClickDismissable) {
       document.addEventListener('click', handleOutsideClick);
       return () => {
         document.removeEventListener('click', handleOutsideClick);
       };
     }
-  }, [isOpen, handleOutsideClick]);
+  }, [isOpen, isOutsideClickDismissable, handleOutsideClick]);
 
   return isOpen ? (
     <View
@@ -132,6 +141,16 @@ const Dialog = (
                 minHeight: ['-webkit-fill-available', '-webkit-fill-available', 'auto'],
 
                 width: ['100%', '100%', 860],
+                marginX: [0, 0, 'auto'],
+                marginY: 'auto',
+
+                borderRadius: ['none', 'none', 'l'],
+              }
+            : size === 'full'
+            ? {
+                height: ['100%', '100%', 'calc(100vh - 40px)'],
+
+                width: ['100%', '100%', 'calc(100vw - 40px)'],
                 marginX: [0, 0, 'auto'],
                 marginY: 'auto',
 
