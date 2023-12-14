@@ -79,7 +79,9 @@ const FormControl = (
     <FormControlContext.Provider value={{ id, disabled, required }}>
       {isHorizontalLayoutNeeded ? (
         <View ref={ref} display={'flex'} sx={{ columnGap: 2 }}>
-          <View>{cloneElement(InputComponent as ReactElement, { id, disabled, required })}</View>
+          <View display={'inline-flex'}>
+            {cloneElement(InputComponent as ReactElement, { id, disabled, required })}
+          </View>
           <View sx={{ '& > span': { mt: 0.5 } }}>
             {relocatableComponentsObject.label}
             {relocatableComponentsObject.caption}
