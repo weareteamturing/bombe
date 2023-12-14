@@ -1,18 +1,23 @@
-import { WarningIcon } from '@teamturing/icons';
+import { InfoInCircleIcon } from '@teamturing/icons';
 import { forcePixelValue } from '@teamturing/utils';
-import { PropsWithChildren } from 'react';
+import { ComponentType, PropsWithChildren, SVGProps } from 'react';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 
-type FlashVariantType = 'danger';
-type Props = { variant?: FlashVariantType } & SxProp;
+type FlashVariantType = 'neutral' | 'danger';
+type Props = { variant?: FlashVariantType; icon?: ComponentType<SVGProps<SVGSVGElement>> } & SxProp;
 
-const Flash = ({ variant = 'danger', children, ...props }: PropsWithChildren<Props>) => {
+const Flash = ({
+  variant = 'neutral',
+  icon: Icon = InfoInCircleIcon,
+  children,
+  ...props
+}: PropsWithChildren<Props>) => {
   return (
     <BaseFlash variant={variant} {...props}>
-      {variant === 'danger' ? <WarningIcon /> : null}
+      <Icon />
       {children}
     </BaseFlash>
   );
@@ -30,6 +35,21 @@ const BaseFlash = styled.div<Props>`
   ${variant<BetterSystemStyleObject, FlashVariantType, 'variant'>({
     prop: 'variant',
     variants: {
+      neutral: {
+        'display': 'flex',
+        'flexDirection': 'row',
+        'alignItems': 'center',
+        'padding': 4,
+
+        'fontSize': 'xs',
+        'fontWeight': 'medium',
+        'lineHeight': 2,
+        'color': 'text/neutral',
+        'backgroundColor': 'bg/neutral',
+        '& > svg': {
+          color: 'icon/neutral/bold',
+        },
+      },
       danger: {
         'display': 'flex',
         'flexDirection': 'row',
