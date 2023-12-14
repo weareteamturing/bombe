@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.31](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.30...@teamturing/react-kit@2.19.31) (2023-12-14)
+
+### Bug Fixes
+
+- **react-kit:** update Flash interface ([955221e](https://github.com/weareteamturing/bombe/commit/955221e99ec637ce3591029effc9ebe87a5a6400))
+
 ## [2.19.30](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.29...@teamturing/react-kit@2.19.30) (2023-12-14)
 
 ### Bug Fixes
