@@ -2,6 +2,7 @@ import { PropsWithChildren, ReactElement, Ref, cloneElement, createContext, forw
 
 import useRelocation from '../../hook/useRelocation';
 import Checkbox from '../Checkbox';
+import Radio from '../Radio';
 import SearchSelectInput from '../SearchSelectInput';
 import Select from '../Select';
 import TextInput from '../TextInput';
@@ -65,12 +66,14 @@ const FormControl = (
     Select,
     SearchSelectInput,
     Checkbox,
+    Radio,
     ...additionalInputComponentCandidates,
   ];
   const InputComponent = restComponents.find((component) =>
     inputComponentCandidates.some((candidate) => isValidElement(component) && component.type === candidate),
   );
-  const isHorizontalLayoutNeeded = isValidElement(InputComponent) && InputComponent.type === Checkbox;
+  const isHorizontalLayoutNeeded =
+    isValidElement(InputComponent) && (InputComponent.type === Checkbox || InputComponent.type === Radio);
 
   return (
     <FormControlContext.Provider value={{ id, disabled, required }}>

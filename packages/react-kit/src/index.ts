@@ -109,6 +109,9 @@ export type { PaginationProps, PaginationPageProps, PaginationPageDirectionProps
 export { default as Pill } from './core/Pill';
 export type { PillProps } from './core/Pill';
 
+export { default as Radio } from './core/Radio';
+export type { RadioProps } from './core/Radio';
+
 export { default as SearchSelectInput } from './core/SearchSelectInput';
 export type { SearchSelectInputProps } from './core/SearchSelectInput';
 
