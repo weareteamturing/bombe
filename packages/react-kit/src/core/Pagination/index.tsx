@@ -90,7 +90,7 @@ const Pagination = <T extends { label: string }>({
         previousPageDirectionProps: {
           type: 'button',
           onClick: () => onPreviousClick(currentPageIndex),
-          disabled: currentPageIndex === 0,
+          disabled: pages.length === 0 || currentPageIndex === 0,
         },
       })}
       {!isTruncationNeeded
@@ -124,7 +124,7 @@ const Pagination = <T extends { label: string }>({
         nextPageDirectionProps: {
           type: 'button',
           onClick: () => onNextClick(currentPageIndex),
-          disabled: currentPageIndex === totalPageCount - 1,
+          disabled: pages.length === 0 || currentPageIndex === totalPageCount - 1,
         },
       })}
     </BasePagination>
