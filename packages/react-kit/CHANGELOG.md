@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.35](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.34...@teamturing/react-kit@2.19.35) (2023-12-18)
+
+### Bug Fixes
+
+- **react-kit:** update Pagination component button disabled status ([1119f64](https://github.com/weareteamturing/bombe/commit/1119f64512d70f597563b9507fdb1d46c9fd4d56))
+
 ## [2.19.34](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.33...@teamturing/react-kit@2.19.34) (2023-12-15)
 
 **Note:** Version bump only for package @teamturing/react-kit
