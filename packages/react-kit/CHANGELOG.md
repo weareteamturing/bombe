@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.36](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.35...@teamturing/react-kit@2.19.36) (2023-12-19)
+
+### Bug Fixes
+
+- **react-kit:** update Stack sx props ([ebbc904](https://github.com/weareteamturing/bombe/commit/ebbc90438c6543e67e65a449c09415f6d20e680d))
+
 ## [2.19.35](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.34...@teamturing/react-kit@2.19.35) (2023-12-18)
 
 ### Bug Fixes
