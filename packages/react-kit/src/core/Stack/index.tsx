@@ -4,21 +4,22 @@ import { PropsWithChildren, Ref, forwardRef } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
-import { AsProp, BetterSystemStyleObject, SxProp } from '../../utils/styled-system';
+import { AsProp, BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import View, { ViewProps } from '../View';
 
 type Props = {
   gapX?: ResponsiveValue<SpaceKey>;
   gapY?: ResponsiveValue<SpaceKey>;
-} & Pick<ViewProps, 'alignItems' | 'justifyContent' | 'sx'> &
+} & Pick<ViewProps, 'alignItems' | 'justifyContent'> &
+  SxProp &
   AsProp;
 
 const Stack = forwardRef<HTMLDivElement, PropsWithChildren<Props>>(
   (
-    { gapX = 0, gapY = 0, children, alignItems = 'center', ...props }: PropsWithChildren<Props>,
+    { gapX = 0, gapY = 0, children, alignItems = 'center', sx, ...props }: PropsWithChildren<Props>,
     ref: Ref<HTMLDivElement>,
   ) => (
-    <BaseStack ref={ref} alignItems={alignItems} gapX={gapX} gapY={gapY} {...props}>
+    <BaseStack ref={ref} alignItems={alignItems} gapX={gapX} gapY={gapY} sx={sx} {...props}>
       {children}
     </BaseStack>
   ),
@@ -54,6 +55,7 @@ const BaseStack = styled(View)<Props>(
       }),
     ),
   }),
+  sx,
 );
 
 const Item = ({ children, ...props }: PropsWithChildren<SxProp>) => <View {...props}>{children}</View>;
