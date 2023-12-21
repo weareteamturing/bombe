@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.38](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.37...@teamturing/react-kit@2.19.38) (2023-12-21)
+
+### Bug Fixes
+
+- **react-kit:** update button props with as ([9657ceb](https://github.com/weareteamturing/bombe/commit/9657ceb7434cbd2298872a01034a97e3aa7daeb1))
+
 ## [2.19.37](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.36...@teamturing/react-kit@2.19.37) (2023-12-21)
 
 ### Bug Fixes
