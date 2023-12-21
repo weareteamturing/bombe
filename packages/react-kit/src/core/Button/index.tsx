@@ -3,7 +3,7 @@ import { ComponentType, PropsWithChildren, Ref, SVGProps, forwardRef } from 'rea
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
-import { BetterSystemStyleObject } from '../../utils/styled-system';
+import { AsProp, BetterSystemStyleObject } from '../../utils/styled-system';
 import Spinner from '../Spinner';
 import View from '../View';
 import UnstyledButton, { UnstyledButtonProps } from '../_UnstyledButton';
@@ -39,7 +39,8 @@ type Props = {
    * 텍스트 뒤에 보여질 아이콘을 정의합니다.
    */
   trailingIcon?: ComponentType<SVGProps<SVGSVGElement>>;
-} & UnstyledButtonProps;
+} & UnstyledButtonProps &
+  AsProp;
 
 const Button = forwardRef<HTMLButtonElement, PropsWithChildren<Props>>(
   (
