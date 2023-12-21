@@ -1,5 +1,5 @@
 import { forcePixelValue } from '@teamturing/utils';
-import { HTMLAttributes, PropsWithChildren } from 'react';
+import { forwardRef, HTMLAttributes, PropsWithChildren, Ref } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { SxProp, sx } from '../../utils/styled-system';
@@ -24,17 +24,14 @@ type Props = {
 } & SxProp &
   Pick<HTMLAttributes<HTMLSpanElement>, 'className'>;
 
-const Tooltip = ({
-  children,
-  direction = 'top-center',
-  text,
-  className: propClassName,
-  sx,
-}: PropsWithChildren<Props>) => {
+const Tooltip = (
+  { children, direction = 'top-center', text, className: propClassName, sx }: PropsWithChildren<Props>,
+  ref: Ref<HTMLSpanElement>,
+) => {
   const className = [propClassName, `tooltip-direction-${direction}`].join(' ');
 
   return (
-    <BaseTooltip role={'tooltip'} aria-label={text} className={className} sx={sx}>
+    <BaseTooltip ref={ref} role={'tooltip'} aria-label={text} className={className} sx={sx}>
       {children}
     </BaseTooltip>
   );
@@ -230,5 +227,5 @@ const BaseTooltip = styled.span<SxProp>`
   ${sx}
 `;
 
-export default Tooltip;
+export default forwardRef(Tooltip);
 export type { Props as TooptipProps };
