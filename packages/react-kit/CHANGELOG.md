@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.37](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.36...@teamturing/react-kit@2.19.37) (2023-12-21)
+
+### Bug Fixes
+
+- **react-kit:** add ref to Tooltip ([50c8191](https://github.com/weareteamturing/bombe/commit/50c81919ac6ded647529c1c3d90722411662a220))
+
 ## [2.19.36](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.35...@teamturing/react-kit@2.19.36) (2023-12-19)
 
 ### Bug Fixes
