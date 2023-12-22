@@ -49,7 +49,7 @@ const VisuallyHidden = styled.span<{ isVisible?: boolean } & SxProp>`
 `;
 
 const LabelWrapper = styled(View)<SxProp & FormControlContextValue>`
-  display: block;
+  display: inline-block;
   align-self: flex-start;
 
   font-size: ${({ theme }) => forcePixelValue(theme.fontSizes.xs)};
