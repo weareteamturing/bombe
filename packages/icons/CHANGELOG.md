@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.24.0...@teamturing/icons@1.25.0) (2024-01-11)
+
+### Features
+
+- **icons:** add ai_color icon ([13b6f83](https://github.com/weareteamturing/bombe/commit/13b6f836ada51a06f435f9af54bbb3c90dcaee3a))
+
 # [1.24.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.23.2...@teamturing/icons@1.24.0) (2024-01-11)
 
 ### Features
