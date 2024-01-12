@@ -3,16 +3,106 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.16.0...@teamturing/icons@1.17.0) (2023-09-08)
-
+# [1.25.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.24.0...@teamturing/icons@1.25.0) (2024-01-11)
 
 ### Features
 
-* **icons:** add glasses icon ([9cb0198](https://github.com/weareteamturing/bombe/commit/9cb01988524050f5f3f2d8a71c24ed3f14ea1fc5))
+- **icons:** add ai_color icon ([13b6f83](https://github.com/weareteamturing/bombe/commit/13b6f836ada51a06f435f9af54bbb3c90dcaee3a))
 
+# [1.24.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.23.2...@teamturing/icons@1.24.0) (2024-01-11)
 
+### Features
 
+- **icons:** add ai_color icon ([67474bf](https://github.com/weareteamturing/bombe/commit/67474bfd7ea227272d1bd415ae855e297ff0f1a0))
 
+## [1.23.2](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.23.1...@teamturing/icons@1.23.2) (2024-01-11)
+
+### Bug Fixes
+
+- **icons:** add AiColorIcon ([fe80d42](https://github.com/weareteamturing/bombe/commit/fe80d42efa25cc93830f35bf066c984cbcde3b98))
+
+## [1.23.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.23.0...@teamturing/icons@1.23.1) (2024-01-03)
+
+### Bug Fixes
+
+- **icons:** update Ai, AiSad icon ([0299586](https://github.com/weareteamturing/bombe/commit/029958655282bff29317c9885a7fb9a87fe80da9))
+
+# [1.23.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.22.0...@teamturing/icons@1.23.0) (2023-12-15)
+
+### Features
+
+- **icons:** add WorkbookIcon ([da1803a](https://github.com/weareteamturing/bombe/commit/da1803a84e4e7dc6cc34f29f3ec036a2a4f46686))
+
+# [1.22.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.21.0...@teamturing/icons@1.22.0) (2023-12-07)
+
+### Features
+
+- **icons:** add icons ([8b3c207](https://github.com/weareteamturing/bombe/commit/8b3c207abf46b2ad8ded65949cad473e8aaef385))
+
+# [1.21.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.20.0...@teamturing/icons@1.21.0) (2023-11-16)
+
+### Features
+
+- **icons:** add cart, chevron_down_two ([2b6816b](https://github.com/weareteamturing/bombe/commit/2b6816b000f272bb35a6a13132336f7c96a63eea))
+
+# [1.20.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.19.0...@teamturing/icons@1.20.0) (2023-10-31)
+
+### Features
+
+- **icons:** add folder icon with clean up ([0cbbe43](https://github.com/weareteamturing/bombe/commit/0cbbe4347626c3443d8ebb2d68c92e1ce7454f9e))
+
+# [1.19.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.18.0...@teamturing/icons@1.19.0) (2023-09-19)
+
+### Features
+
+- **icons:** add pin_color_red ([6a0bead](https://github.com/weareteamturing/bombe/commit/6a0beade73add91178acb4dbcf4528954115985c))
+
+# [1.18.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.6...@teamturing/icons@1.18.0) (2023-09-18)
+
+### Features
+
+- **icons:** add icons ([56dafb7](https://github.com/weareteamturing/bombe/commit/56dafb7791e17acb1c6825baf1da4ccab7633aa3))
+- **icons:** add logo icons ([6cdca6a](https://github.com/weareteamturing/bombe/commit/6cdca6a0c5aae155a3400c7d19fee6c40372930a))
+
+## [1.17.6](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.5...@teamturing/icons@1.17.6) (2023-09-12)
+
+### Bug Fixes
+
+- update all package.json in bombe ([79052f1](https://github.com/weareteamturing/bombe/commit/79052f13406a1bd8baf4660b475755835bda8daf))
+
+## [1.17.5](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.4...@teamturing/icons@1.17.5) (2023-09-11)
+
+**Note:** Version bump only for package @teamturing/icons
+
+## [1.17.4](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.3...@teamturing/icons@1.17.4) (2023-09-11)
+
+### Bug Fixes
+
+- **icons:** publish testing ([fa37000](https://github.com/weareteamturing/bombe/commit/fa37000ec7539ba8d4412dbc505976ab6c01471c))
+
+## [1.17.3](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.2...@teamturing/icons@1.17.3) (2023-09-11)
+
+### Bug Fixes
+
+- **icon:** publish test ([77de4e3](https://github.com/weareteamturing/bombe/commit/77de4e36feccbee3fc70cdad840e3df7cd2b722f))
+
+## [1.17.2](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.1...@teamturing/icons@1.17.2) (2023-09-11)
+
+### Bug Fixes
+
+- **icons:** update publish config ([8372aa2](https://github.com/weareteamturing/bombe/commit/8372aa2b2198ac9688b583bc0d9d051e9c4781bd))
+
+## [1.17.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.17.0...@teamturing/icons@1.17.1) (2023-09-11)
+
+### Bug Fixes
+
+- **icons:** update package.json for publishConfig ([0c539d3](https://github.com/weareteamturing/bombe/commit/0c539d3cb720d34b73db6066be20ae50a073e427))
+
+# [1.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.16.0...@teamturing/icons@1.17.0) (2023-09-08)
+
+### Features
+
+- **icons:** add glasses icon ([9cb0198](https://github.com/weareteamturing/bombe/commit/9cb01988524050f5f3f2d8a71c24ed3f14ea1fc5))
 
 # [1.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.15.0...@teamturing/icons@1.16.0) (2023-09-07)
 

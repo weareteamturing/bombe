@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.3.1...@teamturing/timer@1.3.2) (2023-11-24)
+
+**Note:** Version bump only for package @teamturing/timer
+
+## [1.3.1](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.3.0...@teamturing/timer@1.3.1) (2023-11-24)
+
+### Bug Fixes
+
+- **timer:** fix `startAtResumeIfNeeded` logic ([31ed611](https://github.com/weareteamturing/bombe/commit/31ed6112b8eb2141524e34fb21c57334858d4f60))
+
+# [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.2.4...@teamturing/timer@1.3.0) (2023-11-24)
+
+### Features
+
+- **timer:** add `startAtResumeIfNeeded` options into `useTicker` hook ([e7a9781](https://github.com/weareteamturing/bombe/commit/e7a978126647f2642c745ade0dbfbcd99e2c82b0))
+
+## [1.2.4](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.2.3...@teamturing/timer@1.2.4) (2023-09-12)
+
+### Bug Fixes
+
+- update all package.json in bombe ([79052f1](https://github.com/weareteamturing/bombe/commit/79052f13406a1bd8baf4660b475755835bda8daf))
+
+## [1.2.3](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.2.2...@teamturing/timer@1.2.3) (2023-09-11)
+
+### Bug Fixes
+
+- update all packages ([a552466](https://github.com/weareteamturing/bombe/commit/a552466e5d12adb1b3b7ead61817aa7f94ea762c))
+
+## [1.2.2](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.2.1...@teamturing/timer@1.2.2) (2023-09-11)
+
+**Note:** Version bump only for package @teamturing/timer
+
+## [1.2.1](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.2.0...@teamturing/timer@1.2.1) (2023-09-11)
+
+### Bug Fixes
+
+- **timer:** update package.json for publishConfig ([8373425](https://github.com/weareteamturing/bombe/commit/83734253ef862a22c25d43573a75695a46522d68))
+
 # [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.1.0...@teamturing/timer@1.2.0) (2023-06-22)
 
 ### Features

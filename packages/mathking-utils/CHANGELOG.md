@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/weareteamturing/bombe/compare/@teamturing/mathking-utils@1.2.4...@teamturing/mathking-utils@1.2.5) (2023-09-12)
+
+### Bug Fixes
+
+- update all package.json in bombe ([79052f1](https://github.com/weareteamturing/bombe/commit/79052f13406a1bd8baf4660b475755835bda8daf))
+
+## [1.2.4](https://github.com/weareteamturing/bombe/compare/@teamturing/mathking-utils@1.2.3...@teamturing/mathking-utils@1.2.4) (2023-09-11)
+
+### Bug Fixes
+
+- update all packages ([a552466](https://github.com/weareteamturing/bombe/commit/a552466e5d12adb1b3b7ead61817aa7f94ea762c))
+
+## [1.2.3](https://github.com/weareteamturing/bombe/compare/@teamturing/mathking-utils@1.2.2...@teamturing/mathking-utils@1.2.3) (2023-09-11)
+
+**Note:** Version bump only for package @teamturing/mathking-utils
+
+## [1.2.2](https://github.com/weareteamturing/bombe/compare/@teamturing/mathking-utils@1.2.1...@teamturing/mathking-utils@1.2.2) (2023-09-11)
+
+### Bug Fixes
+
+- **mathking-utils:** update package.json for publishConfig ([4e80230](https://github.com/weareteamturing/bombe/commit/4e80230235c6a1db16d0505ade261cd45582590d))
+
 ## [1.2.1](https://github.com/weareteamturing/bombe/compare/@teamturing/mathking-utils@1.2.0...@teamturing/mathking-utils@1.2.1) (2023-07-27)
 
 ### Bug Fixes
