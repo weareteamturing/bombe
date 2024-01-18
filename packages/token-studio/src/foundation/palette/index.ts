@@ -95,7 +95,7 @@ const fuchsiaPink = {
   fuchsiaPink700: '#9E57A4',
   fuchsiaPink800: '#7A447F',
   fuchsiaPink900: '#5D3461',
-};
+} as const;
 
 const skyBlue = {
   skyBlue50: '#EFF9FD',
@@ -108,7 +108,7 @@ const skyBlue = {
   skyBlue700: '#468CA6',
   skyBlue800: '#366C81',
   skyBlue900: '#2A5362',
-};
+} as const;
 
 const indianRed = {
   indianRed50: '#632A2A',
@@ -121,7 +121,7 @@ const indianRed = {
   indianRed700: '#F6B8B8',
   indianRed800: '#F9CFCF',
   indianRed900: '#FDF0F0',
-};
+} as const;
 
 const mustardYellow = {
   mustardYellow50: '#675025',
@@ -134,7 +134,7 @@ const mustardYellow = {
   mustardYellow700: '#FAE2B3',
   mustardYellow800: '#FCEBCC',
   mustardYellow900: '#FEF9EE',
-};
+} as const;
 
 const palette = {
   ...gray,
