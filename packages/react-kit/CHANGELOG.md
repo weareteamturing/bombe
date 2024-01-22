@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.45](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.44...@teamturing/react-kit@2.19.45) (2024-01-22)
+
+### Bug Fixes
+
+- **react-kit:** update Select with react ([b0cf4aa](https://github.com/weareteamturing/bombe/commit/b0cf4aa9edce9182cdd425e7ad402f0b885138c7))
+
 ## [2.19.44](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.43...@teamturing/react-kit@2.19.44) (2024-01-18)
 
 **Note:** Version bump only for package @teamturing/react-kit

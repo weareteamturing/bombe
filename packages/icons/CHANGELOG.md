@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.25.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.25.0...@teamturing/icons@1.25.1) (2024-01-22)
+
+### Bug Fixes
+
+- **icons:** fix unusual file structure ([ac42e89](https://github.com/weareteamturing/bombe/commit/ac42e89199fadce0842ab89e2dae469904c69700))
+
 # [1.25.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.24.0...@teamturing/icons@1.25.0) (2024-01-11)
 
 ### Features
