@@ -28,6 +28,7 @@ type Props = {
    * 입력 창 앞에 보여질 시각적 요소를 정의합니다. Icon, Text, Image 등이 될 수 있습니다.
    */
   leadingVisual?: ElementType | ReactNode;
+  placeholder?: string;
 } & SelectHTMLAttributes<HTMLSelectElement>;
 
 const Select = (
@@ -73,7 +74,7 @@ const Select = (
           isFunction(ref) ? ref(e) : null;
           (selectRef as MutableRefObject<HTMLSelectElement | null>).current = e;
         }}
-        placeholder={placeholder}
+        aria-placeholder={placeholder}
         disabled={disabled}
         {...props}
         onChange={(e) => {
