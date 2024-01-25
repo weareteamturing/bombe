@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.46](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.45...@teamturing/react-kit@2.19.46) (2024-01-25)
+
+### Bug Fixes
+
+- **react-kit:** update Textarea interface ([f70b580](https://github.com/weareteamturing/bombe/commit/f70b580bb4ddb52e2ef736f3de3351308719915b))
+
 ## [2.19.45](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.44...@teamturing/react-kit@2.19.45) (2024-01-22)
 
 ### Bug Fixes
