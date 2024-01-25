@@ -37,13 +37,13 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
     return (
       <TextareaWrapper disabled={disabled} onClick={focusInput} validationStatus={validationStatus}>
         <ReactTextareaAutosize
+          minRows={1}
           {...props}
           ref={(e) => {
             isFunction(ref) ? ref(e) : null;
             (inputRef as MutableRefObject<HTMLTextAreaElement | null>).current = e;
           }}
           disabled={disabled}
-          minRows={7}
           onChange={handleChange}
         />
         <TextareaCount>{commaizeNumber(count)}자</TextareaCount>
