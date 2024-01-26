@@ -20,6 +20,7 @@ module.exports = {
     {
       dir: 'iife',
       format: 'iife',
+      name: 'KatexUtil',
     },
   ],
   plugins: [
