@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.2.0...@teamturing/katex-utils@2.3.0) (2024-01-26)
+
+### Features
+
+- **katex-utils:** iife ([5ba7a99](https://github.com/weareteamturing/bombe/commit/5ba7a9947dc531e55657b4ccfe71132d96f95b58))
+
 # [2.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.1.0...@teamturing/katex-utils@2.2.0) (2024-01-26)
 
 ### Features
