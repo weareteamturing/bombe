@@ -1,5 +1,4 @@
 import katex from 'katex';
-import { flow } from 'lodash';
 import { parse, NodeType, HTMLElement } from 'node-html-parser';
 
 import { choiceSelector } from './internal/choiceSelector';
@@ -121,7 +120,7 @@ const convertTableMarkToHTML = (rootText: string) => {
   function convertRowTextToHtml(text: string) {
     if (isInvalidRowText(text)) return '';
 
-    return renderToStringWithDollarPreProcessing(text.slice(1, text.length - 1))
+    return renderToStringWithDollar(text.slice(1, text.length - 1))
       .split(cellSeparator)
       .map(decorateCellHtml)
       .join('');
@@ -166,7 +165,7 @@ const convertTableMarkToHTML = (rootText: string) => {
   }
 };
 
-const renderToStringWithDollarPreProcessing = (text: string) => {
+const renderToStringWithDollar = (text: string) => {
   let dollarMode = false;
   let startIndex = 0;
   let endIndex = 0;
@@ -277,16 +276,20 @@ const injectPhantomBoxAnnotations = (html: string) => {
   return root.toString();
 };
 
-export const formatKatexToHtmlString = flow([
-  convertBoxMarkToHTML,
-  convertConditionMarkToHTML,
-  convertChoiceMarkToHTML,
-  excludeAnswerTagLine,
-  convertIndentMarkToHTML,
-  convertTableMarkToHTML,
-  excludeNewLineFollowingImgTag,
-  convertNewLineToHTMLTag,
-  renderToStringWithDollarPreProcessing,
-  injectPhantomBoxAnnotations,
-  injectHtmlToContentFrame,
-]);
+export function formatKatexToHtmlString(tex: string): string {
+  return injectHtmlToContentFrame(
+    injectPhantomBoxAnnotations(
+      renderToStringWithDollar(
+        convertNewLineToHTMLTag(
+          excludeNewLineFollowingImgTag(
+            convertTableMarkToHTML(
+              convertIndentMarkToHTML(
+                excludeAnswerTagLine(convertChoiceMarkToHTML(convertConditionMarkToHTML(convertBoxMarkToHTML(tex)))),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
