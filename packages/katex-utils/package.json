@@ -33,6 +33,7 @@
     "node-html-parser": "^6.1.12"
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "@types/katex": "^0.16.7"
   }
 }
