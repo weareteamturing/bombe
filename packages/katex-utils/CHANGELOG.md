@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.0.1...@teamturing/katex-utils@2.1.0) (2024-01-26)
+
+### Features
+
+- **katex-utils:** minify Build + Remove lodash dependency ([70d6069](https://github.com/weareteamturing/bombe/commit/70d6069b6572d4bfdf88aa36ef8b49f13032dc4a))
+
 ## [2.0.1](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.0.0...@teamturing/katex-utils@2.0.1) (2024-01-15)
 
 ### Bug Fixes
