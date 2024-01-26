@@ -17,6 +17,10 @@ module.exports = {
       preserveModules: true,
       preserveModulesRoot: 'src',
     },
+    {
+      dir: 'iife',
+      format: 'iife',
+    },
   ],
   plugins: [
     nodeResolve({ extensions: ['.ts', '.js'] }),
