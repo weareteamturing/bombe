@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.5.0...@teamturing/timer@1.6.0) (2024-01-29)
+
+### Features
+
+- **timer:** disableTickSecUpdate options ([9eba23a](https://github.com/weareteamturing/bombe/commit/9eba23a14b3e7f8cf518570314e53a4293326d91))
+
 # [1.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.4.0...@teamturing/timer@1.5.0) (2024-01-29)
 
 ### Features
