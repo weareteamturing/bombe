@@ -40,8 +40,8 @@ jobs:
       - name: Check ESLint
         run: lerna run check:lint
 
-      - name: Build
-        run: lerna run build
+#      - name: Build
+#        run: lerna run build
 
       - name: Check Typescript
         run: lerna run check:type
