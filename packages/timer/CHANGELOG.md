@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.3.2...@teamturing/timer@1.4.0) (2024-01-29)
+
+### Features
+
+- **timer:** add util for useTicker ([3895fed](https://github.com/weareteamturing/bombe/commit/3895fed450f1ebd885efece86848a182d1b2b0e4))
+- **timer:** fix lint ([4d1da34](https://github.com/weareteamturing/bombe/commit/4d1da346fad6188414f0dc6ced6f35aece7c9a7b))
+
 ## [1.3.2](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.3.1...@teamturing/timer@1.3.2) (2023-11-24)
 
 **Note:** Version bump only for package @teamturing/timer
