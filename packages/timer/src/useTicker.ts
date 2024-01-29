@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, ReactElement } from 'react';
+import { useState, useCallback, useRef, ReactElement } from 'react';
 
 import { Ticker } from './Ticker';
 import { useLifecycle } from './internal/useLifecycle';
@@ -77,7 +77,12 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
     }
   }, [status, ticker]);
 
-  const renderWithStates = (({tickSec, status}: {tickSec: number; status: Status}) => ReactElement | null) => {}
+  const renderWithStates = useCallback(
+    (fn: ({ tickSec, status }: { tickSec: number; status: Status }) => ReactElement | null | undefined) => {
+      return fn({ status, tickSec });
+    },
+    [status, tickSec],
+  );
 
   useUnmount(() => {
     resetTicker();
@@ -90,5 +95,6 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
     resetTicker,
     pauseTicker,
     resumeTicker,
+    renderWithStates,
   };
 }
