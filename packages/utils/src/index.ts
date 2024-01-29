@@ -1,3 +1,4 @@
+export * from './clipboard';
 export * from './commaizeNumber';
 export * from './decommaizeNumber';
 export * from './first';
