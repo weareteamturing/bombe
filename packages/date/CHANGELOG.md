@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/date@1.1.0...@teamturing/date@1.2.0) (2024-01-29)
+
+### Features
+
+- **date:** enhance `getDateDistanceFromNow` ([f91a495](https://github.com/weareteamturing/bombe/commit/f91a4951006621f05def5c50a3883f9423d7c99e))
+
 # 1.1.0 (2024-01-29)
 
 ### Bug Fixes
