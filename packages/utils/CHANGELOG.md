@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.1.1...@teamturing/utils@1.2.0) (2024-01-29)
+
+### Features
+
+- **utils:** add clipboard feature ([09c0bc7](https://github.com/weareteamturing/bombe/commit/09c0bc7a7f887afbe44b7563909d627200d61c30))
+
 ## [1.1.1](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.1.0...@teamturing/utils@1.1.1) (2023-11-17)
 
 ### Bug Fixes
