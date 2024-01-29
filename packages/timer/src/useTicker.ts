@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, ReactElement } from 'react';
+import { useState, useCallback, useRef, ReactElement, useMemo, useEffect } from 'react';
 
 import { Ticker } from './Ticker';
 import { useLifecycle } from './internal/useLifecycle';
@@ -19,7 +19,12 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
   const [status, setStatus] = useState<Status>('initial');
   const ticker = useRef<Ticker>(new Ticker()).current;
 
-  const [tickSec, setTickSec] = useState(0);
+  const tickSecListeners = useRef<((tickSec: number) => void)[]>([]);
+  const [tickSec, _setTickSec] = useState(0);
+  const setTickSec = useCallback((tickSec: number) => {
+    _setTickSec(tickSec);
+    tickSecListeners.current?.forEach((listener) => listener(tickSec));
+  }, []);
 
   const resetTicker = useCallback(() => {
     if (!checkUnmounted()) {
@@ -77,11 +82,20 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
     }
   }, [status, ticker]);
 
-  const renderWithStates = useCallback(
-    (fn: ({ tickSec, status }: { tickSec: number; status: Status }) => ReactElement | null | undefined) => {
-      return fn({ status, tickSec });
-    },
-    [status, tickSec],
+  const TickerComponent = useMemo(
+    () =>
+      ({ children }: { children: ({ tickSec }: { tickSec: number }) => ReactElement | null | undefined }) => {
+        const [tick, setTick] = useState(0);
+        const listener = useMemo(() => setTick, []);
+        useEffect(() => {
+          tickSecListeners.current.push(listener);
+          return () => {
+            tickSecListeners.current = tickSecListeners.current.filter((fn) => fn !== listener);
+          };
+        }, []);
+        return children({ tickSec: tick });
+      },
+    [],
   );
 
   useUnmount(() => {
@@ -95,6 +109,6 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
     resetTicker,
     pauseTicker,
     resumeTicker,
-    renderWithStates,
+    TickerComponent,
   };
 }
