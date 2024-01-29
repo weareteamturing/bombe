@@ -3186,6 +3186,7 @@ __metadata:
     "@styled-system/css": ^5.1.5
     "@teamturing/icons": "workspace:^"
     "@teamturing/token-studio": "workspace:^"
+    "@teamturing/utils": "workspace:^"
     "@types/lodash.debounce": ^4.0.7
     "@types/lodash.throttle": ^4.1.7
     "@types/lodash.toarray": ^4.4.9
@@ -3228,7 +3229,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@teamturing/utils@workspace:packages/utils":
+"@teamturing/utils@workspace:^, @teamturing/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@teamturing/utils@workspace:packages/utils"
   languageName: unknown
