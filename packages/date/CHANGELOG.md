@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2024-01-29)
+
+### Bug Fixes
+
+- **date:** update README ([b653d57](https://github.com/weareteamturing/bombe/commit/b653d57ef0b475f2c93d0df7974f571fccba83ba))
+
+### Features
+
+- **date:** create date package ([69bf979](https://github.com/weareteamturing/bombe/commit/69bf97924cef1f0daaadeb04b29c1a2cb15f39bd))
+- **date:** update getDateDistanceFromNow ([0cc5a81](https://github.com/weareteamturing/bombe/commit/0cc5a81e8e313055069542c952b40a31a3cf1220))
+
 ## [1.1.1](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.1.0...@teamturing/utils@1.1.1) (2023-11-17)
 
 ### Bug Fixes
