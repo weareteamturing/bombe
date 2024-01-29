@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.4.0...@teamturing/timer@1.5.0) (2024-01-29)
+
+### Features
+
+- **timer:** add TickerComponent ([52beb21](https://github.com/weareteamturing/bombe/commit/52beb2154c675c164640661707c1ce8a6c7b4428))
+
 # [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.3.2...@teamturing/timer@1.4.0) (2024-01-29)
 
 ### Features
