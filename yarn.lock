@@ -3141,6 +3141,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@teamturing/date@workspace:packages/date":
+  version: 0.0.0-use.local
+  resolution: "@teamturing/date@workspace:packages/date"
+  languageName: unknown
+  linkType: soft
+
 "@teamturing/icons@workspace:^, @teamturing/icons@workspace:packages/icons":
   version: 0.0.0-use.local
   resolution: "@teamturing/icons@workspace:packages/icons"
