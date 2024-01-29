@@ -8,9 +8,10 @@ type Status = 'initial' | 'run_pause' | 'run_progress' | 'complete';
 export type UseTickerParams = {
   onComplete?: () => void;
   startAtResumeIfNeeded?: boolean;
+  disableTickSecUpdate?: boolean;
 };
 const inf = 99999999;
-export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams = {}) {
+export function useTicker({ onComplete, startAtResumeIfNeeded, disableTickSecUpdate }: UseTickerParams = {}) {
   const { checkUnmounted } = useLifecycle();
 
   const onCompleteRef = useRef<Function>();
@@ -21,15 +22,15 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
 
   const tickSecListeners = useRef<((tickSec: number) => void)[]>([]);
   const [tickSec, _setTickSec] = useState(0);
-  const setTickSec = useCallback((tickSec: number) => {
-    _setTickSec(tickSec);
+  const propagateTickSec = useCallback((tickSec: number) => {
+    if (!disableTickSecUpdate) _setTickSec(tickSec);
     tickSecListeners.current?.forEach((listener) => listener(tickSec));
   }, []);
 
   const resetTicker = useCallback(() => {
     if (!checkUnmounted()) {
       setStatus('initial');
-      setTickSec(0);
+      propagateTickSec(0);
     }
     ticker.reset();
   }, [checkUnmounted, ticker]);
@@ -47,7 +48,7 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
       setStatus('run_progress');
       ticker.start({
         handler: (tickSec) => {
-          setTickSec(tickSec);
+          propagateTickSec(tickSec);
           if (tickSec >= durationSec) {
             setStatus('complete');
             ticker.reset();
@@ -84,8 +85,14 @@ export function useTicker({ onComplete, startAtResumeIfNeeded }: UseTickerParams
 
   const TickerComponent = useMemo(
     () =>
-      ({ children }: { children: ({ tickSec }: { tickSec: number }) => ReactElement | null | undefined }) => {
-        const [tick, setTick] = useState(0);
+      ({
+        children,
+        initialTickSec,
+      }: {
+        children: ({ tickSec }: { tickSec: number }) => ReactElement | null | undefined;
+        initialTickSec?: number;
+      }) => {
+        const [tick, setTick] = useState(initialTickSec ?? 0);
         const listener = useMemo(() => setTick, []);
         useEffect(() => {
           tickSecListeners.current.push(listener);
