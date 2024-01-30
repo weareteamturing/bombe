@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.4.0...@teamturing/katex-utils@2.5.0) (2024-01-30)
+
+### Features
+
+- **katex-utils:** flattenPhantomBoxClassNameIndice ([2b271c0](https://github.com/weareteamturing/bombe/commit/2b271c0956aa10744a0a3afe748dcd13fab170d5))
+
 # [2.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.3.0...@teamturing/katex-utils@2.4.0) (2024-01-30)
 
 ### Features
