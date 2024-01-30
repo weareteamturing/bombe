@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.5.0...@teamturing/katex-utils@2.6.0) (2024-01-30)
+
+### Features
+
+- **katex-utils:** add markups ([c39c98d](https://github.com/weareteamturing/bombe/commit/c39c98d13658f6a7acc310e96e6a4f5caf37d1c5))
+
 # [2.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.4.0...@teamturing/katex-utils@2.5.0) (2024-01-30)
 
 ### Features
