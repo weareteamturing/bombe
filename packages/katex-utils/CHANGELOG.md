@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.7.0...@teamturing/katex-utils@2.8.0) (2024-01-30)
+
+### Features
+
+- **katex-utils:** fix image tag front of the 들여쓰기끝 ([4f0300e](https://github.com/weareteamturing/bombe/commit/4f0300e157e85dab7974d0c94ea2fd22fd6a6f22))
+
 # [2.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.6.0...@teamturing/katex-utils@2.7.0) (2024-01-30)
 
 ### Features
