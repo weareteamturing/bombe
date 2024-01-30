@@ -333,16 +333,15 @@ export function formatKatexToHtmlStringWithOptions(
   // \n을 변환하는 위치는 중요하다. mark up convert에서 실행되는 [들여쓰기] 같은 경우,
   // 정규식에서 ^$ 를 써서 새로운 줄의 시작 위치냐 아니냐가 중요하기 때문에 항상 Tex->Html과정 바로 전에
   // \n을 변환하는 위치를 고정시키도록 한다.
-  const renderTexToHtml = (tex: string) => renderToStringWithDollar(convertNewLineToHTMLTag(tex));
+  const renderTexToHtml = (tex: string) =>
+    renderToStringWithDollar(convertNewLineToHTMLTag(excludeNewLineFollowingImgTag(tex)));
 
   return injectHtmlToContentFrame(
     phantomBoxClassesInjectionPipe(
       renderTexToHtml(
         markUpConvertPipe(
-          excludeNewLineFollowingImgTag(
-            tableConvertPipe(
-              excludeAnswerTagLine(convertChoiceMarkToHTML(convertConditionMarkToHTML(convertBoxMarkToHTML(tex)))),
-            ),
+          tableConvertPipe(
+            excludeAnswerTagLine(convertChoiceMarkToHTML(convertConditionMarkToHTML(convertBoxMarkToHTML(tex)))),
           ),
         ),
       ),
