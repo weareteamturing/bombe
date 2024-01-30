@@ -321,6 +321,8 @@ export function formatKatexToHtmlString(
 
   return injectHtmlToContentFrame(
     phantomBoxTransform(
+      // 이 때를 기점으로 파이프라인 이전 부분은 tex를 다루고(하지만 마크업처럼 미리 html화 된 것들도 있다.)
+      // 위 부분은 html을 다루므로 성능상 유의가 필요하다.
       renderToStringWithDollar(
         markUpTransform(
           convertNewLineToHTMLTag(
