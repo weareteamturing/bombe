@@ -74,14 +74,6 @@ const convertChoiceMarkToHTML = (text: string) => {
   return text.replace(/^\[선지\s*\d*\](\r?\n)?(.*)/gms, () => choiceHtml);
 };
 
-const convertIndentMarkToHTML = (text: string) => {
-  return text.replace(/^\[들여쓰기(\d*)\]$(\r?\n)(.*?)^\[들여쓰기(\d*)끝\]$/gms, (match, p1, p2, p3, p4) => {
-    return p1 === p4
-      ? `<div class="_cms_indent-box" style="margin-left: ${1.3 * p1}rem; text-indent: -1.3rem">${p3}</div>`
-      : match;
-  });
-};
-
 // ex)
 // [테이블]
 // |{"rowSpan": 2} 성적(점) |{"colSpan": 2} 상대도수 |
@@ -223,8 +215,8 @@ const renderToStringWithDollar = (text: string) => {
  * https://www.notion.so/teamturing2/Tex-Phantom-Box-8cd1e4dc61d1442080b136b811d61fab?pvs=4
  */
 
-const injectPhantomBoxAnnotations = (html: string) => {
-  const root = parse(html);
+const injectPhantomBoxClasses = (html: string) => {
+  const root = parse(html, { voidTag: { closingSlash: true } });
   const boxCandidates = root
     .querySelectorAll('.boxpad')
     .filter(
@@ -309,39 +301,60 @@ const convertMarkUpsToHTML = (tex: string) => {
     tex = tex.replace(markUpPairs[i][0], markUpPairs[i][1] as string);
   }
 
-  return tex;
+  return tex.replace(/^\[들여쓰기(\d*)\]$(\r?\n)(.*?)^\[들여쓰기(\d*)끝\]$/gms, (match, p1, p2, p3, p4) => {
+    return p1 === p4
+      ? `<div class="_cms_indent-box" style="margin-left: ${1.3 * p1}rem; text-indent: -1.3rem">${p3}</div>`
+      : match;
+  });
 };
 
-export function formatKatexToHtmlString(
+export type FormatKaTexOptions = {
+  convertMarkUp?: boolean;
+  convertTable?: boolean;
+  injectPhantomBoxClasses?: boolean;
+};
+export function formatKatexToHtmlStringWithOptions(
   tex: string,
-  { convertMarkUp, convertPhantomBox }: { convertMarkUp?: boolean; convertPhantomBox?: boolean } = {
+  { convertMarkUp, injectPhantomBoxClasses: injectPhantomBoxClassesOption, convertTable }: FormatKaTexOptions = {
     convertMarkUp: false,
-    convertPhantomBox: false,
+    injectPhantomBoxClasses: false,
+    convertTable: false,
   },
 ): string {
   if (!isNotEmptyString(tex)) return '';
   const dummyTransform = (str: string) => str;
 
-  const markUpTransform = convertMarkUp ? convertMarkUpsToHTML : dummyTransform;
-  const phantomBoxTransform = convertPhantomBox ? injectPhantomBoxAnnotations : dummyTransform;
+  const markUpConvertPipe = convertMarkUp ? convertMarkUpsToHTML : dummyTransform;
+  const tableConvertPipe = convertTable ? convertTableMarkToHTML : dummyTransform;
+  const phantomBoxClassesInjectionPipe = injectPhantomBoxClassesOption ? injectPhantomBoxClasses : dummyTransform;
+
+  // 이 때를 기점으로 파이프라인 이전 부분은 tex를 다루고(하지만 마크업처럼 미리 html화 된 것들도 있다.)
+  // 이후 부분은 html을 다루므로 성능상, 로직상 유의가 필요하다.
+  // \n을 변환하는 위치는 중요하다. mark up convert에서 실행되는 [들여쓰기] 같은 경우,
+  // 정규식에서 ^$ 를 써서 새로운 줄의 시작 위치냐 아니냐가 중요하기 때문에 항상 Tex->Html과정 바로 전에
+  // \n을 변환하는 위치를 고정시키도록 한다.
+  const renderTexToHtml = (tex: string) => renderToStringWithDollar(convertNewLineToHTMLTag(tex));
 
   return injectHtmlToContentFrame(
-    phantomBoxTransform(
-      // 이 때를 기점으로 파이프라인 이전 부분은 tex를 다루고(하지만 마크업처럼 미리 html화 된 것들도 있다.)
-      // 위 부분은 html을 다루므로 성능상 유의가 필요하다.
-      renderToStringWithDollar(
-        markUpTransform(
-          convertNewLineToHTMLTag(
-            excludeNewLineFollowingImgTag(
-              convertTableMarkToHTML(
-                convertIndentMarkToHTML(
-                  excludeAnswerTagLine(convertChoiceMarkToHTML(convertConditionMarkToHTML(convertBoxMarkToHTML(tex)))),
-                ),
-              ),
+    phantomBoxClassesInjectionPipe(
+      renderTexToHtml(
+        markUpConvertPipe(
+          excludeNewLineFollowingImgTag(
+            tableConvertPipe(
+              excludeAnswerTagLine(convertChoiceMarkToHTML(convertConditionMarkToHTML(convertBoxMarkToHTML(tex)))),
             ),
           ),
         ),
       ),
     ),
   );
+}
+
+const allTrueOption: Required<FormatKaTexOptions> = {
+  convertMarkUp: true,
+  injectPhantomBoxClasses: true,
+  convertTable: true,
+};
+export function formatKatexToHtmlString(tex: string) {
+  return formatKatexToHtmlStringWithOptions(tex, allTrueOption);
 }
