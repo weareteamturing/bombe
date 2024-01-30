@@ -1,6 +1,7 @@
 import katex from 'katex';
 import { parse, NodeType, HTMLElement } from 'node-html-parser';
 
+import { injectHtmlToContentFrame } from './injectHtmlToContentFrame';
 import { choiceSelector } from './internal/choiceSelector';
 import { isNullable, isValidJSON, isNotEmptyString } from './internal/is';
 
@@ -216,13 +217,6 @@ const renderToStringWithDollar = (text: string) => {
 };
 
 /**
- * 결과 html을 class가 '_cms_content-frame'인 div에 넣고 반환
- */
-const injectHtmlToContentFrame = (html: string) => {
-  return `<div class="_cms_content-frame">${html}</div>`;
-};
-
-/**
  * html의 phantom box로 처리되어야 하는 Element들에 class를 추가한다.
  * Phantom Box를 활용하는 개념집을 렌더링하는 것이 아니라면 파이프라인에 포함하지 않는것이 성능에 유리하다.
  *
@@ -296,10 +290,11 @@ const convertMarkUpsToHTML = (tex: string) => {
 <path d="M11.1016 0.652588H9.41992V5.36938H8.28516V0.980713H6.6582V12.5471H8.28516V6.76392H9.41992V13.094H11.1016V0.652588ZM0.21875 9.33423L1.23047 10.5374C4.7373 8.50024 5.77637 5.65649 5.7832 2.18384H0.847656V3.57837H4.08105C3.84863 6.0188 2.75488 7.84399 0.21875 9.33423ZM14.9434 1.18579H13.1797V7.62524H14.1777C16.0918 7.63208 17.6709 7.55688 19.4277 7.24243L19.25 5.87524C17.7803 6.10083 16.4473 6.1897 14.9434 6.21021V1.18579ZM14.6699 12.9573H22.9551V8.43188H14.6699V12.9573ZM16.3789 11.5627V9.81274H21.2324V11.5627H16.3789ZM18.1699 5.27368H21.2188V7.92603H22.9551V0.652588H21.2188V1.80103H18.1699V3.09985H21.2188V3.96118H18.1699V5.27368ZM27.877 3.63306H30.9121V11.8362H32.9492V3.63306H35.9844V1.93774H27.877V3.63306ZM39.3066 1.93774H37.2559V11.8362H39.3066V1.93774ZM40.9746 11.8362H43.0254V8.60962H44.8027C47.0859 8.60962 48.3984 7.24927 48.3984 5.27368C48.3984 3.32544 47.1064 1.93774 44.8574 1.93774H40.9746V11.8362ZM43.0254 6.95532V3.61938H44.4746C45.6914 3.62622 46.2861 4.28931 46.2793 5.27368C46.2861 6.27173 45.6914 6.95532 44.4746 6.95532H43.0254Z" fill="#8D94A0"/>
 </svg><br/>`,
     ],
+    [/\[개념집제목\](.*?)\[개념집제목끝\]/g, '$1'],
   ];
 
   for (let i = 0; i < markUpPairs.length; i++) {
-    tex = tex.replace(markUpPairs[i][0], markUpPairs[i][1]);
+    tex = tex.replace(markUpPairs[i][0], markUpPairs[i][1] as string);
   }
 
   return tex;
