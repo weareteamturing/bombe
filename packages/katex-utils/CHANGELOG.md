@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.3.0...@teamturing/katex-utils@2.4.0) (2024-01-30)
+
+### Features
+
+- **katex-util:** fix build ([ee74715](https://github.com/weareteamturing/bombe/commit/ee747159222bd3f1e2479ed357e6e0a01dd1cd39))
+- **katex-utils:** deploy ([ad03ef9](https://github.com/weareteamturing/bombe/commit/ad03ef9da4f4b250638b96ee4896d8350cdd7874))
+- **katex-utils:** fix lint ([bd6cf65](https://github.com/weareteamturing/bombe/commit/bd6cf65b12af34ed38d0b1d98cc5fe377f0ee3ec))
+- **katex-utils:** katex-util ([7fa22d4](https://github.com/weareteamturing/bombe/commit/7fa22d491d02ec26eaf206df2c210c622044dd34))
+
 # [2.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.2.0...@teamturing/katex-utils@2.3.0) (2024-01-26)
 
 ### Features
