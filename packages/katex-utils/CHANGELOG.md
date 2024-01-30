@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.6.0...@teamturing/katex-utils@2.7.0) (2024-01-30)
+
+### Features
+
+- **katex-utils:** format Tex Test + Optimize tex -> html performance ([326e5c3](https://github.com/weareteamturing/bombe/commit/326e5c34bc26d107c72bac63a2d455c08a20caf8))
+
 # [2.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.5.0...@teamturing/katex-utils@2.6.0) (2024-01-30)
 
 ### Features
