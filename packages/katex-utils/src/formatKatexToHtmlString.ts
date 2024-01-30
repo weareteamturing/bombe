@@ -1,9 +1,8 @@
-import { isEmptyString } from '@teamturing/validators';
 import katex from 'katex';
 import { parse, NodeType, HTMLElement } from 'node-html-parser';
 
 import { choiceSelector } from './internal/choiceSelector';
-import { isNullable, isValidJSON } from './internal/is';
+import { isNullable, isValidJSON, isNotEmptyString } from './internal/is';
 
 /**
  * [보기], [박스] 에 해당하는 div frame을 의미하는 html을 반환
@@ -313,7 +312,7 @@ export function formatKatexToHtmlString(
     convertPhantomBox: false,
   },
 ): string {
-  if (!tex || isEmptyString(tex)) return '';
+  if (!isNotEmptyString(tex)) return '';
   const dummyTransform = (str: string) => str;
 
   const markUpTransform = convertMarkUp ? convertMarkUpsToHTML : dummyTransform;
