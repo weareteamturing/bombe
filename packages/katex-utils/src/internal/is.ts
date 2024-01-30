@@ -8,5 +8,5 @@ export const isValidJSON = (value: string) => {
   return true;
 };
 export const isNotEmptyString = (candidate?: string): candidate is string => {
-  return  typeof candidate === 'string' && candidate.length > 0
-}
+  return typeof candidate === 'string' && candidate.length > 0;
+};
