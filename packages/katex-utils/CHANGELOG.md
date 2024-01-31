@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.1](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.8.0...@teamturing/katex-utils@2.8.1) (2024-01-31)
+
+### Bug Fixes
+
+- **katex-utils:** fix markup bug ([eb4d549](https://github.com/weareteamturing/bombe/commit/eb4d5491760f6812193f55bd6b1cbe85c9a1a703))
+
 # [2.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.7.0...@teamturing/katex-utils@2.8.0) (2024-01-30)
 
 ### Features
