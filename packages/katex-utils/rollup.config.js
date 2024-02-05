@@ -14,7 +14,6 @@ module.exports = {
     {
       dir: 'esm',
       format: 'esm',
-      preserveModules: true,
       preserveModulesRoot: 'src',
     },
     {
