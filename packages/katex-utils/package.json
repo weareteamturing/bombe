@@ -1,6 +1,6 @@
 {
   "name": "@teamturing/katex-utils",
-  "version": "2.8.1",
+  "version": "2.8.2",
   "description": "Fundamental KaTex utility functions for Mathking service",
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
   "homepage": "https://github.com/weareteamturing/bombe#readme",

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.2](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.8.1...@teamturing/katex-utils@2.8.2) (2024-02-05)
+
+### Bug Fixes
+
+- **katex-utils:** esm build option fix ([5524a1d](https://github.com/weareteamturing/bombe/commit/5524a1d31a97e29d04d211100f94580d02c20674))
+
 ## [2.8.1](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.8.0...@teamturing/katex-utils@2.8.1) (2024-01-31)
 
 ### Bug Fixes
