@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.9.0...@teamturing/katex-utils@2.10.0) (2024-02-18)
+
+### Features
+
+- **katex-utils:** fix css ([4b13b8e](https://github.com/weareteamturing/bombe/commit/4b13b8e7c5d8581f8dc43b29dd02ae72a67ae414))
+
 # [2.9.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.8.2...@teamturing/katex-utils@2.9.0) (2024-02-18)
 
 ### Features
