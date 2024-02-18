@@ -1,3 +1,5 @@
+import './mathking-katex.css';
+
 export * from './countAnswerChoice';
 export * from './decideAnswerTypeObjectiveFromKatex';
 export * from './extractAnswerFromKatex';
