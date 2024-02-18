@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { resolve } = require('path');
-
 const babel = require('@rollup/plugin-babel');
 const commonjs = require('@rollup/plugin-commonjs');
 const nodeResolve = require('@rollup/plugin-node-resolve');
 const terser = require('@rollup/plugin-terser');
+const copy = require('rollup-plugin-copy');
 const postcss = require('rollup-plugin-postcss');
 
 module.exports = [
@@ -30,6 +29,14 @@ module.exports = [
       nodeResolve({ extensions: ['.ts', '.js'] }),
       commonjs(),
       babel({ extensions: ['.ts', '.js'], babelHelpers: 'bundled', rootMode: 'upward' }),
+      copy({
+        targets: [
+          {
+            src: 'fonts/*',
+            dest: ['dist/fonts', 'esm/fonts', 'iife/fonts'],
+          },
+        ],
+      }),
       postcss({
         include: 'src/mathking-katex.css',
         extract: 'mathking-katex.css',

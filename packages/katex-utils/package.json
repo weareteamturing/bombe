@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
-    "@types/katex": "^0.16.7"
+    "@types/katex": "^0.16.7",
+    "rollup-plugin-copy": "^3.5.0"
   }
 }
