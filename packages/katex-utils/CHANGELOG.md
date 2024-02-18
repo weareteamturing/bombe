@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.11.0...@teamturing/katex-utils@2.12.0) (2024-02-18)
+
+### Features
+
+- **katex-utils:** fix font bundle ([2654919](https://github.com/weareteamturing/bombe/commit/26549190825c0d755173f5f6752580a3da094bb9))
+
 # [2.11.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.10.0...@teamturing/katex-utils@2.11.0) (2024-02-18)
 
 ### Features
