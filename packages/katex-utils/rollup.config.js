@@ -36,6 +36,8 @@ module.exports = [
             dest: ['dist/fonts', 'esm/fonts', 'iife/fonts'],
           },
         ],
+        hook: 'buildEnd',
+        errorOnExist: true,
       }),
       postcss({
         include: 'src/mathking-katex.css',
