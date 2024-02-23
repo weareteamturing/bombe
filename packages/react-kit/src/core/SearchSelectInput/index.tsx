@@ -1,5 +1,5 @@
 import { ChevronDownIcon, SearchIcon } from '@teamturing/icons';
-import { forcePixelValue, isFunction, isNullable, noop, scrollIntoView } from '@teamturing/utils';
+import { forcePixelValue, isArray, isFunction, isNullable, noop, scrollIntoView } from '@teamturing/utils';
 import {
   ElementType,
   InputHTMLAttributes,
@@ -15,14 +15,14 @@ import styled, { css, useTheme } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 import HorizontalDivider from '../HorizontalDivider';
-import Overlay from '../Overlay';
+import Overlay, { OverlayProps } from '../Overlay';
 import OverlayPopper, { OverlayPopperProps } from '../OverlayPopper';
 import Space from '../Space';
 import StyledIcon from '../StyledIcon';
 import TextInput, { TextInputProps } from '../TextInput';
 import View from '../View';
 
-type Props<T extends { label: string; value?: string | number | readonly string[] }> = {
+type Props<T> = {
   /**
    * TODO asdf
    */
@@ -31,35 +31,48 @@ type Props<T extends { label: string; value?: string | number | readonly string[
    * 입력 창 앞에 보여질 시각적 요소를 정의합니다. Icon, Text, Image 등이 될 수 있습니다.
    */
   leadingVisual?: ElementType | ReactNode;
+  /**
+   * 입력 창 뒤에 보여질 시각적 요소를 정의합니다. Icon, Text, Image 등이 될 수 있습니다.
+   * Default: chevron down icon
+   */
+  trailingVisual?: ElementType | ReactNode;
   children: (
     selectionHandler: { handleSelect: (item: T) => void },
     overlayHandler: { isOpen: boolean; closeOverlay: () => void },
   ) => ReactNode;
-  onChange?: (item: T) => void;
+  overlayProps?: Pick<OverlayProps, 'size' | 'maxHeight'>;
   searchInputProps?: Pick<TextInputProps, 'placeholder' | 'trailingVisual' | 'trailingAction' | 'onChange'>;
-  renderValue?: (value: T['value']) => ReactNode;
+  value?: T;
+  renderValue?: (value: T) => ReactNode;
+  onChange?: (item: T) => void;
 } & Pick<OverlayPopperProps, 'focusTrapSettings' | 'focusZoneSettings' | 'onClose' | 'onOpen'> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'id' | 'disabled' | 'onClick' | 'placeholder' | 'value'>;
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'id' | 'disabled' | 'onClick' | 'placeholder'>;
 
-const SearchSelectInput = <T extends { label: string; value: string | number | readonly string[] }>(
+const SearchSelectInput = <T,>(
   {
     validationStatus,
     leadingVisual: LeadingVisual,
+    trailingVisual: TrailingVisual,
     children,
-    onChange,
     focusTrapSettings,
     focusZoneSettings,
     onOpen,
     onClose,
+    overlayProps: propOverlayProps,
     searchInputProps,
     value,
-    renderValue = (value) => value?.toString(),
+    renderValue = (value) => <>{value}</>,
+    onChange,
     ...props
   }: Props<T>,
   ref: Ref<HTMLInputElement>,
 ) => {
   const theme = useTheme();
 
+  const isVisibleValueExist =
+    value && isArray(value) && !isNullable(renderValue(value))
+      ? value.length > 0
+      : value && !isNullable(renderValue(value));
   const hasLeadingVisual = !isNullable(LeadingVisual);
 
   const valueInputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLInputElement>);
@@ -84,7 +97,7 @@ const SearchSelectInput = <T extends { label: string; value: string | number | r
        * ! 일단 Custom onChange를 만들어서 해결.
        */
       const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')?.set;
-      nativeInputValueSetter?.call(valueInputRef.current, item.value.toString());
+      nativeInputValueSetter?.call(valueInputRef.current, item);
 
       onChange?.(item);
     }
@@ -125,10 +138,17 @@ const SearchSelectInput = <T extends { label: string; value: string | number | r
       onClose={handleClose}
       renderOverlay={(overlayProps, overlayHandler, { elements }) => (
         <Overlay
+          {...propOverlayProps}
           {...overlayProps}
-          maxHeight={200}
+          maxHeight={300}
           sx={{ display: 'flex', flexDirection: 'column' }}
           style={{ ...overlayProps.style, width: elements?.reference?.getBoundingClientRect().width }}
+          onKeyDown={(e) => {
+            if (e.code === 'Escape') {
+              e.stopPropagation();
+              overlayHandler.closeOverlay();
+            }
+          }}
         >
           <Space
             p={2}
@@ -145,6 +165,7 @@ const SearchSelectInput = <T extends { label: string; value: string | number | r
                 if (e.code === 'Enter' && activeDescendantRef.current) {
                   const activeDescendantEvent = new KeyboardEvent(e.type, e.nativeEvent);
                   activeDescendantRef.current?.dispatchEvent(activeDescendantEvent);
+                  e.preventDefault();
                 }
               }}
               {...(searchInputProps as any)}
@@ -165,22 +186,21 @@ const SearchSelectInput = <T extends { label: string; value: string | number | r
         </Overlay>
       )}
     >
-      {(popperProps, { openOverlay }) => (
+      {(popperProps) => (
         <TextInputWrapper
-          {...popperProps}
-          tabIndex={disabled ? -1 : 0}
+          {...(disabled
+            ? {}
+            : {
+                ...popperProps,
+                onClick: (e) => {
+                  focusInput();
+                  popperProps.onClick?.(e);
+                },
+              })}
+          tabIndex={-1}
           disabled={disabled}
-          onClick={focusInput}
           hasLeadingVisual={hasLeadingVisual}
           validationStatus={validationStatus}
-          onKeyDown={(e) => {
-            if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
-              e.preventDefault();
-              openOverlay();
-            }
-
-            e.stopPropagation();
-          }}
         >
           <View
             sx={{
@@ -208,12 +228,10 @@ const SearchSelectInput = <T extends { label: string; value: string | number | r
               whiteSpace: 'pre',
               textOverflow: 'ellipsis',
               width: '100%',
-            }}
-            onClick={(e) => {
-              popperProps.onClick?.(e);
+              cursor: disabled ? 'not-allowed' : 'default',
             }}
           >
-            {!isNullable(renderValue(value as T['value'])) ? (
+            {isVisibleValueExist ? (
               <View
                 sx={{
                   flex: '0 1 auto',
@@ -223,7 +241,7 @@ const SearchSelectInput = <T extends { label: string; value: string | number | r
                   overflow: 'hidden',
                 }}
               >
-                {renderValue(value as T['value'])}
+                {value && renderValue(value)}
               </View>
             ) : null}
             <BaseInput
@@ -232,26 +250,37 @@ const SearchSelectInput = <T extends { label: string; value: string | number | r
               readOnly
               onChange={noop}
               autoComplete={'off'}
-              tabIndex={-1}
+              disabled={disabled}
               onClick={(e) => {
                 props.onClick?.(e);
               }}
-              placeholder={!isNullable(renderValue(value as T['value'])) ? '' : placeholder}
+              placeholder={isVisibleValueExist ? '' : placeholder}
             />
           </View>
-          <StyledIcon
-            sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', right: 4, pointerEvents: 'none' }}
-            icon={ChevronDownIcon}
-            color={disabled ? 'icon/disabled' : 'icon/neutral/bolder'}
-            size={16}
-          />
+          <View
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              right: 4,
+              pointerEvents: 'none',
+            }}
+          >
+            {typeof TrailingVisual !== 'string' && isValidElementType(TrailingVisual) ? (
+              <TrailingVisual />
+            ) : TrailingVisual ? (
+              (TrailingVisual as ReactNode)
+            ) : (
+              <StyledIcon icon={ChevronDownIcon} color={disabled ? 'icon/disabled' : 'icon/neutral/bolder'} size={16} />
+            )}
+          </View>
           <BaseInput
             ref={(e) => {
               isFunction(ref) ? ref(e) : null;
               (valueInputRef as MutableRefObject<HTMLInputElement | null>).current = e;
             }}
             type={'hidden'}
-            defaultValue={value}
+            defaultValue={value as string}
           />
         </TextInputWrapper>
       )}
@@ -382,9 +411,7 @@ const BaseInput = styled(UnstyledInput)`
   text-overflow: ellipsis;
 `;
 
-export default forwardRef(SearchSelectInput) as <
-  T extends { label: string; value: string | number | readonly string[] },
->(
+export default forwardRef(SearchSelectInput) as <T>(
   props: Props<T> & { ref?: Ref<HTMLInputElement> },
 ) => ReturnType<typeof SearchSelectInput>;
 export type { Props as SearchSelectInputProps };
