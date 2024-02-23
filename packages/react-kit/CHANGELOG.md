@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.20.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.20.0...@teamturing/react-kit@2.20.1) (2024-02-23)
+
+### Bug Fixes
+
+- **react-kit:** update SearchSelectInput component ([dd8c8eb](https://github.com/weareteamturing/bombe/commit/dd8c8eb3c2bd707a0c32686b9e43fd0de7333fad))
+
 # [2.20.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.19.46...@teamturing/react-kit@2.20.0) (2024-01-29)
 
 ### Features
