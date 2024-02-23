@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.25.1...@teamturing/icons@1.26.0) (2024-02-23)
+
+### Features
+
+- **icons:** remove UnlimitedTicket related icons with add Touch icon ([a1053b3](https://github.com/weareteamturing/bombe/commit/a1053b3b36700207a873aea5f5ad819bf6b9ddd4))
+
 ## [1.25.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.25.0...@teamturing/icons@1.25.1) (2024-01-22)
 
 ### Bug Fixes
