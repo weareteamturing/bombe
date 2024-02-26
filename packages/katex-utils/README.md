@@ -24,17 +24,21 @@
 
 `check:tex` 커맨드가 그것을 도와줄 것이다.
 
-1. `all.json`에 있는 json 형식대로 DB에서 문제들의 정보를 조회하여 json파일 형식으로 준비한다.
+1. `lerna run build` 로 프로젝트를 빌드하여 `packages/katex-utils/dist` 에 현재 소스코드로 빌드된 결과물을 준비시킨다.
+
+2. tool/data에 `all.json`을 준비한다. `all.json`에 있는 json 형식대로 DB에서 문제들의 정보를 조회하여 json파일 형식으로 준비한다.
 
 ```sql
 select id,
        sequence as task_id,
        problem_tex,
-       solution_tex
+       solution_tex,
+       answer,
+       answer_type
 from problems_problem p
 where problem_tex != ''
 order by id asc
 limit 1000000;
 ```
 
-2. `check:tex`를 실행시켜 `result.json`의 결과를 확인한다.
+3. `check:tex`를 실행시켜 `result.json`의 결과를 확인한다.

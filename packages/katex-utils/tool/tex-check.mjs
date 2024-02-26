@@ -1,5 +1,5 @@
 #!/usr/bin/env zx
-/* eslint-disable max-len */
+/* eslint-disable max-len, no-console */
 
 // region ZX Util
 $.verbose = false;
@@ -112,42 +112,93 @@ const HEADING = `// @ts-nocheck
 
 // start
 
-const json = require('./data/all.json');
-const KaTeXUtil = require('../dist/index.js');
+const cw_original = console.warn;
+console.warn = (...args) => {
+  if (typeof args[0] === 'string') {
+    if (args[0].startsWith('No character metrics for ')) return;
+  }
+  cw_original(...args);
+};
 
-printSuccess(json.length);
+/** @type {{id: number; task_id: number; problem_tex: string; solution_tex: string; answer: number; answer_type: string;}[]}  */
+const problems = require('./data/all.json');
 
+const util = require('../dist/index.js');
+
+printSuccess(problems.length);
+
+// problems.splice(10);
+
+/** @type {{problem_id: number; task_id; number; type: 'problem' | 'solution'; msg: string}[]} */
 const errors = [];
-for (const { id, task_id, problem_tex, solution_tex } of json) {
-  if (id % 1000 === 0) {
-    print(id);
-  }
 
-  try {
-    KaTeXUtil.formatKatexToHtmlStringWithOptions(problem_tex, {
-      convertMarkUp: true,
-      injectPhantomBoxClasses: true,
-      convertTable: true,
-      throwOnKaTexError: true,
-    });
-  } catch (e) {
-    printError(id, task_id, 'proble');
-    errors.push({ id, task_id, e, type: 'problem' });
-  }
-
-  try {
-    KaTeXUtil.formatKatexToHtmlStringWithOptions(solution_tex, {
-      convertMarkUp: true,
-      injectPhantomBoxClasses: true,
-      convertTable: true,
-      throwOnKaTexError: true,
-    });
-  } catch (e) {
-    printError(id, task_id, 'solution');
-    errors.push({ id, task_id, e, type: 'solution' });
-  }
+/**
+ *
+ * @param {number} id
+ * @param {number} task_id
+ * @param {'problem' | 'solution'} type
+ * @param {string} msg
+ */
+function addError(id, task_id, type, msg) {
+  printError(id, task_id, type, msg);
+  errors.push({ problem_id: id, task_id, type, msg });
 }
 
+let index = -1;
+
+const processing = async () => {
+  for (const { id, task_id, problem_tex, solution_tex, answer, answer_type } of problems) {
+    index += 1;
+    if (index % 1000 === 0) {
+      print(`Processing: ${index}th`);
+    }
+
+    try {
+      util.formatKatexToHtmlStringWithOptions(problem_tex, {
+        convertMarkUp: true,
+        injectPhantomBoxClasses: true,
+        convertTable: true,
+        throwOnKaTexError: true,
+      });
+    } catch (e) {
+      if (e.name === 'ParseError') {
+        addError(id, task_id, 'problem', `TeX 문법 오류, ${e}`);
+      } else {
+        addError(id, task_id, 'problem', '알 수 없는 오류');
+      }
+    }
+
+    try {
+      util.formatKatexToHtmlStringWithOptions(solution_tex, {
+        convertMarkUp: true,
+        injectPhantomBoxClasses: true,
+        convertTable: true,
+        throwOnKaTexError: true,
+      });
+    } catch (e) {
+      if (e.name === 'ParseError') {
+        addError(id, task_id, 'solution', `TeX 문법 오류, ${e}`);
+      } else {
+        addError(id, task_id, 'solution', '알 수 없는 오류');
+      }
+    }
+
+    const regExp = () => /\[정답\](\d+)/;
+    if (regExp().test(solution_tex)) {
+      const answerInTex = regExp().exec(solution_tex)[1];
+      if (Number(answerInTex) !== answer) {
+        addError(
+          id,
+          task_id,
+          'solution',
+          `정답이 solution_tex에 있는 것과 일치하지 않음, Tex 내 정답: [${answerInTex}], 문제의 정답: [${answer}]`,
+        );
+      }
+    }
+  }
+};
+
+await processing();
 printSuccess(`Done, error: ${errors.length}`);
 
 writeJson('./tool/data/result.json', errors);
