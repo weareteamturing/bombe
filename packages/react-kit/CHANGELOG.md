@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.1...@teamturing/react-kit@2.21.2) (2024-02-26)
+
+### Bug Fixes
+
+- **react-kit:** fix Datagrid.Row sx ([ea0b7eb](https://github.com/weareteamturing/bombe/commit/ea0b7eba87d1e36c9485f1c63a6c334de527b510))
+
 ## [2.21.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.0...@teamturing/react-kit@2.21.1) (2024-02-26)
 
 ### Bug Fixes
