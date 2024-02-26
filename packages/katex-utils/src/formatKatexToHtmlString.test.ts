@@ -206,3 +206,13 @@ describe('개념집', () => {
     // expect(result).toMatchSnapshot();
   });
 });
+
+describe('기타', () => {
+  it('throwOnKaTexError flag', () => {
+    const errorTex = `$\\underline\\dfrac{1}{4}$`;
+    expect(() => formatKatexToHtmlStringWithOptions(errorTex)).not.toThrowError();
+    expect(() => formatKatexToHtmlStringWithOptions(errorTex, { throwOnKaTexError: true })).toThrowError(
+      /KaTeX parse error/,
+    );
+  });
+});

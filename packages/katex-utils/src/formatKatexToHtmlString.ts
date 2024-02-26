@@ -159,7 +159,10 @@ const convertTableMarkToHTML = (rootText: string) => {
   }
 };
 
-const renderToStringWithDollar = (text: string) => {
+const renderToStringWithDollar = (
+  text: string,
+  { throwOnError = false }: { throwOnError?: boolean } = { throwOnError: false },
+) => {
   let dollarMode = false;
   let startIndex = 0;
   let endIndex = 0;
@@ -185,7 +188,7 @@ const renderToStringWithDollar = (text: string) => {
         try {
           const renderResult = katex.renderToString(targetString, {
             strict: 'ignore',
-            throwOnError: false,
+            throwOnError,
             errorColor: '#CF222E',
             trust: true,
             output: 'html',
@@ -193,8 +196,10 @@ const renderToStringWithDollar = (text: string) => {
           });
           resultHTML += renderResult;
           startIndex = index + 1;
-        } catch (error) {
-          // resultAccu += targetString
+        } catch (e) {
+          if (throwOnError) {
+            throw e;
+          }
         }
         dollarMode = false;
       }
@@ -317,13 +322,20 @@ export type FormatKaTexOptions = {
   convertMarkUp?: boolean;
   convertTable?: boolean;
   injectPhantomBoxClasses?: boolean;
+  throwOnKaTexError?: boolean;
 };
 export function formatKatexToHtmlStringWithOptions(
   tex: string,
-  { convertMarkUp, injectPhantomBoxClasses: injectPhantomBoxClassesOption, convertTable }: FormatKaTexOptions = {
+  {
+    convertMarkUp,
+    injectPhantomBoxClasses: injectPhantomBoxClassesOption,
+    convertTable,
+    throwOnKaTexError,
+  }: FormatKaTexOptions = {
     convertMarkUp: false,
     injectPhantomBoxClasses: false,
     convertTable: false,
+    throwOnKaTexError: false,
   },
 ): string {
   if (!isNotEmptyString(tex)) return '';
@@ -339,7 +351,9 @@ export function formatKatexToHtmlStringWithOptions(
   // 정규식에서 ^$ 를 써서 새로운 줄의 시작 위치냐 아니냐가 중요하기 때문에 항상 Tex->Html과정 바로 전에
   // \n을 변환하는 위치를 고정시키도록 한다.
   const renderTexToHtml = (tex: string) =>
-    renderToStringWithDollar(convertNewLineToHTMLTag(excludeNewLineFollowingImgTag(tex)));
+    renderToStringWithDollar(convertNewLineToHTMLTag(excludeNewLineFollowingImgTag(tex)), {
+      throwOnError: throwOnKaTexError,
+    });
 
   return injectHtmlToContentFrame(
     phantomBoxClassesInjectionPipe(
@@ -354,11 +368,12 @@ export function formatKatexToHtmlStringWithOptions(
   );
 }
 
-const allTrueOption: Required<FormatKaTexOptions> = {
+const defaultOptions: Required<FormatKaTexOptions> = {
   convertMarkUp: true,
   injectPhantomBoxClasses: true,
   convertTable: true,
+  throwOnKaTexError: false,
 };
 export function formatKatexToHtmlString(tex: string) {
-  return formatKatexToHtmlStringWithOptions(tex, allTrueOption);
+  return formatKatexToHtmlStringWithOptions(tex, defaultOptions);
 }
