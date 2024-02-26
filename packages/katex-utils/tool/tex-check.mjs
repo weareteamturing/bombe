@@ -127,7 +127,7 @@ const util = require('../dist/index.js');
 
 printSuccess(problems.length);
 
-// problems.splice(10);
+problems.splice(10000);
 
 /** @type {{problem_id: number; task_id; number; type: 'problem' | 'solution'; msg: string}[]} */
 const errors = [];
@@ -144,7 +144,38 @@ function addError(id, task_id, type, msg) {
   errors.push({ problem_id: id, task_id, type, msg });
 }
 
+const tKey = {};
+function measureStart(name) {
+  print(`=====Measure Start [${name}]=======`);
+  tKey[name] = Date.now();
+}
+
+function measureEnd(name) {
+  print(`=====Measure End [${name}]==[${Date.now() - tKey[name]}ms]=======`);
+}
+
 let index = -1;
+
+/**
+ * @param {string} html
+ * @return {string[]}
+ */
+const parseImageUris = (html) => {
+  const regex = /<img.*?src="(.*?)".*?>/gi;
+
+  let match;
+  const ret = [];
+  while ((match = regex.exec(html))) {
+    ret.push(match[1]);
+  }
+  return ret;
+};
+
+const downloadImageAndGetByte = (uri) => {
+  return fetch(uri)
+    .then((r) => r.blob())
+    .then((blob) => blob.size);
+};
 
 const processing = async () => {
   for (const { id, task_id, problem_tex, solution_tex, answer, answer_type } of problems) {
@@ -183,9 +214,8 @@ const processing = async () => {
       }
     }
 
-    const regExp = () => /\[정답\](\d+)/;
-    if (regExp().test(solution_tex)) {
-      const answerInTex = regExp().exec(solution_tex)[1];
+    if (/\[정답\](\d+)/.test(solution_tex)) {
+      const answerInTex = /\[정답\](\d+)/.exec(solution_tex)[1];
       if (Number(answerInTex) !== answer) {
         addError(
           id,
@@ -195,10 +225,32 @@ const processing = async () => {
         );
       }
     }
+
+    if (/\[테이블\]/.test(problem_tex)) {
+      addError(id, task_id, 'problem', '[테이블] 문법은 문제에서 지원되지 않습니다');
+    }
+    if (/\[테이블\]/.test(problem_tex)) {
+      addError(id, task_id, 'solution', '[테이블] 문법은 문제에서 지원되지 않습니다');
+    }
+    if (/\[들여쓰기(\d+)?\]/.test(problem_tex)) {
+      addError(id, task_id, 'problem', '[들여쓰기] 문법은 문제에서 지원되지 않습니다');
+    }
+    if (/\[들여쓰기(\d+)?\]/.test(problem_tex)) {
+      addError(id, task_id, 'solution', '[들여쓰기] 문법은 문제에서 지원되지 않습니다');
+    }
+
+    // const problemImages = parseImageUris(problem_tex);
+    // for (const img of problemImages) {
+    //   const byte = await downloadImageAndGetByte(img);
+    //   const kb = byte / 1024;
+    //   console.log(img, Math.round(kb) + 'kb');
+    // }
   }
 };
 
+measureStart('processing');
 await processing();
-printSuccess(`Done, error: ${errors.length}`);
+measureEnd('processing');
+printSuccess(`Done, error: ${errors.length}, Saved to data/result.json`);
 
 writeJson('./tool/data/result.json', errors);
