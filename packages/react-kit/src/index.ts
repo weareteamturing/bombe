@@ -182,7 +182,9 @@ export { default as useResize } from './hook/useResize';
 
 export { default as useSafeLayoutEffect } from './hook/useSafeLayoutEffect';
 
-export { default as useToggleHandler } from './hook/useToggleHandler';
+export { default as useTabState } from './hook/useTabState';
+
+export { default as useToggleState } from './hook/useToggleState';
 
 /**
  * theme

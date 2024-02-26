@@ -4,7 +4,7 @@ type Options = {
   initialState?: boolean;
 };
 
-const useToggleHandler = ({ initialState = false }: Options) => {
+const useToggleState = ({ initialState = false }: Options) => {
   const [state, setState] = useState<boolean>(initialState);
 
   const on = () => {
@@ -17,13 +17,8 @@ const useToggleHandler = ({ initialState = false }: Options) => {
     setState((prev) => !prev);
   }, []);
 
-  return {
-    state,
-    on,
-    off,
-    toggle,
-  };
+  return [state, toggle, on, off] as const;
 };
 
-export default useToggleHandler;
-export type { Options as UseToggleHandlerOptions };
+export default useToggleState;
+export type { Options as UseToggleStateOptions };
