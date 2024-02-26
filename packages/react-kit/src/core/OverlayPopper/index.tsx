@@ -5,7 +5,7 @@ import { Children, ForwardedRef, HTMLAttributes, ReactElement, ReactNode, RefObj
 
 import useFocusTrap, { FocusTrapHookSettings } from '../../hook/useFocusTrap';
 import useFocusZone, { FocusZoneHookSettings } from '../../hook/useFocusZone';
-import useToggleHandler from '../../hook/useToggleHandler';
+import useToggleState from '../../hook/useToggleState';
 import { OverlayProps } from '../Overlay';
 
 type Props = {
@@ -43,12 +43,7 @@ const OverlayPopper = ({
     strategy: 'fixed',
   });
 
-  const {
-    state: isOpen,
-    toggle: toggleOverlay,
-    on: openOverlay,
-    off: closeOverlay,
-  } = useToggleHandler({ initialState: false });
+  const [isOpen, toggleOverlay, openOverlay, closeOverlay] = useToggleState({ initialState: false });
   const handleOverlayToggle = () => {
     if (!isOpen) onOpen?.();
     else onClose?.();

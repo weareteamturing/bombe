@@ -4,18 +4,15 @@ type Options = {
   initialSelectIndex?: number;
 };
 
-const useTabHandler = ({ initialSelectIndex = 0 }: Options) => {
+const useTabState = ({ initialSelectIndex = 0 }: Options) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(initialSelectIndex);
 
   const handleSelect = (index: number) => {
     setSelectedIndex(index);
   };
 
-  return {
-    selectedIndex,
-    handleSelect,
-  };
+  return [selectedIndex, handleSelect];
 };
 
-export default useTabHandler;
-export type { Options as UseTabHandlerOptions };
+export default useTabState;
+export type { Options as UseTabStateOptions };
