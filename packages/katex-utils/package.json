@@ -24,7 +24,8 @@
     "check:lint": "eslint ./src --cache",
     "check:type": "tsc --noEmit",
     "test": "jest --config ./jest.config.js",
-    "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js"
+    "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js",
+    "check:tex": "yarn zx tool/tex-check.mjs"
   },
   "bugs": {
     "url": "https://github.com/weareteamturing/bombe/issues"
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@types/katex": "^0.16.7",
-    "rollup-plugin-copy": "^3.5.0"
+    "rollup-plugin-copy": "^3.5.0",
+    "zx": "^7.2.3"
   }
 }
