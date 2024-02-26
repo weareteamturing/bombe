@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.15.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.14.0...@teamturing/katex-utils@2.15.0) (2024-02-26)
+
+### Features
+
+- **katex-utils:** add more tex check logics ([ac1c9b7](https://github.com/weareteamturing/bombe/commit/ac1c9b7296512bd197eaa4f1eb77eac1f435bcb0))
+- **katex-utils:** add more tex checker logic ([878fe8f](https://github.com/weareteamturing/bombe/commit/878fe8f626ec81d0dceedb21f9667c0ae410a2ad))
+- **katex-utils:** add more tex checker logic ([e068ebb](https://github.com/weareteamturing/bombe/commit/e068ebb3775bcc95642fa426a2de3e3510251a87))
+
 # [2.14.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.13.0...@teamturing/katex-utils@2.14.0) (2024-02-26)
 
 ### Features
