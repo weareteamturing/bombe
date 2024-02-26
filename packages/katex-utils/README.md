@@ -42,3 +42,10 @@ limit 1000000;
 ```
 
 3. `check:tex`를 실행시켜 `result.json`의 결과를 확인한다.
+
+4. 몇 가지 검사들(특히 이미지 유효성 검사)은 시간이 오래걸리기 때문에, 다음과 같은 코드에서 검사하지 않을 항목들을 `false`로 변경한 뒤 진행한다.
+
+```js
+const CHECK_IMAGE_DOWNLOADABLE = true;
+const CHECK_TEX_SYNTAX = true;
+```

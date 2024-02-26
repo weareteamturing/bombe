@@ -127,7 +127,7 @@ const util = require('../dist/index.js');
 
 printSuccess(problems.length);
 
-problems.splice(10000);
+// problems.splice(10000);
 
 /** @type {{problem_id: number; task_id; number; type: 'problem' | 'solution'; msg: string}[]} */
 const errors = [];
@@ -145,6 +145,7 @@ function addError(id, task_id, type, msg) {
 }
 
 const tKey = {};
+
 function measureStart(name) {
   print(`=====Measure Start [${name}]=======`);
   tKey[name] = Date.now();
@@ -177,40 +178,50 @@ const downloadImageAndGetByte = (uri) => {
     .then((blob) => blob.size);
 };
 
+const checkImageIsDownloadable = async (uri) => {
+  const ret = await fetch(uri, { method: 'HEAD' });
+  return ret.ok;
+};
+
+const CHECK_IMAGE_DOWNLOADABLE = true;
+const CHECK_TEX_SYNTAX = true;
+
 const processing = async () => {
   for (const { id, task_id, problem_tex, solution_tex, answer, answer_type } of problems) {
     index += 1;
-    if (index % 1000 === 0) {
+    if (index % 100 === 0) {
       print(`Processing: ${index}th`);
     }
 
-    try {
-      util.formatKatexToHtmlStringWithOptions(problem_tex, {
-        convertMarkUp: true,
-        injectPhantomBoxClasses: true,
-        convertTable: true,
-        throwOnKaTexError: true,
-      });
-    } catch (e) {
-      if (e.name === 'ParseError') {
-        addError(id, task_id, 'problem', `TeX 문법 오류, ${e}`);
-      } else {
-        addError(id, task_id, 'problem', '알 수 없는 오류');
+    if (CHECK_TEX_SYNTAX) {
+      try {
+        util.formatKatexToHtmlStringWithOptions(problem_tex, {
+          convertMarkUp: true,
+          injectPhantomBoxClasses: true,
+          convertTable: true,
+          throwOnKaTexError: true,
+        });
+      } catch (e) {
+        if (e.name === 'ParseError') {
+          addError(id, task_id, 'problem', `TeX 문법 오류, ${e}`);
+        } else {
+          addError(id, task_id, 'problem', '알 수 없는 오류');
+        }
       }
-    }
 
-    try {
-      util.formatKatexToHtmlStringWithOptions(solution_tex, {
-        convertMarkUp: true,
-        injectPhantomBoxClasses: true,
-        convertTable: true,
-        throwOnKaTexError: true,
-      });
-    } catch (e) {
-      if (e.name === 'ParseError') {
-        addError(id, task_id, 'solution', `TeX 문법 오류, ${e}`);
-      } else {
-        addError(id, task_id, 'solution', '알 수 없는 오류');
+      try {
+        util.formatKatexToHtmlStringWithOptions(solution_tex, {
+          convertMarkUp: true,
+          injectPhantomBoxClasses: true,
+          convertTable: true,
+          throwOnKaTexError: true,
+        });
+      } catch (e) {
+        if (e.name === 'ParseError') {
+          addError(id, task_id, 'solution', `TeX 문법 오류, ${e}`);
+        } else {
+          addError(id, task_id, 'solution', '알 수 없는 오류');
+        }
       }
     }
 
@@ -239,12 +250,41 @@ const processing = async () => {
       addError(id, task_id, 'solution', '[들여쓰기] 문법은 문제에서 지원되지 않습니다');
     }
 
-    // const problemImages = parseImageUris(problem_tex);
-    // for (const img of problemImages) {
-    //   const byte = await downloadImageAndGetByte(img);
-    //   const kb = byte / 1024;
-    //   console.log(img, Math.round(kb) + 'kb');
-    // }
+    if (CHECK_IMAGE_DOWNLOADABLE) {
+      const problemImages = parseImageUris(problem_tex);
+      for (const img of problemImages) {
+        try {
+          const isDownloadable = await checkImageIsDownloadable(img);
+
+          if (!isDownloadable) {
+            addError(id, task_id, 'problem', `이미지를 다운로드 할 수 없습니다`);
+          }
+
+          // const byte = await downloadImageAndGetByte(img);
+          // const kb = byte / 1024;
+          // console.log(img, Math.round(kb) + 'kb');
+        } catch (e) {
+          addError(id, task_id, 'problem', `이미지를 검사하던 중 문제가 발생했습니다. ${e}`);
+        }
+      }
+
+      const solutionImages = parseImageUris(solution_tex);
+      for (const img of solutionImages) {
+        try {
+          const isDownloadable = await checkImageIsDownloadable(img);
+
+          if (!isDownloadable) {
+            addError(id, task_id, 'solution', `이미지를 다운로드 할 수 없습니다`);
+          }
+
+          // const byte = await downloadImageAndGetByte(img);
+          // const kb = byte / 1024;
+          // console.log(img, Math.round(kb) + 'kb');
+        } catch (e) {
+          addError(id, task_id, 'solution', `이미지를 검사하던 중 문제가 발생했습니다. ${e}`);
+        }
+      }
+    }
   }
 };
 
