@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.14.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.13.0...@teamturing/katex-utils@2.14.0) (2024-02-26)
+
+### Features
+
+- **katex-utils:** fix dependency versions ([cd3d2bd](https://github.com/weareteamturing/bombe/commit/cd3d2bdff6485bc849d4951862c55688ea11e190))
+
 # [2.13.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.12.0...@teamturing/katex-utils@2.13.0) (2024-02-26)
 
 ### Features

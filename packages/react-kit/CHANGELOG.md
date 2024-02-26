@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.21.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.20.2...@teamturing/react-kit@2.21.0) (2024-02-26)
+
+### Features
+
+- **react-kit:** add useTabHandler hook ([268465f](https://github.com/weareteamturing/bombe/commit/268465fef48b95ab36bcc1629a41cad4c12edec5))
+- **react-kit:** update useToggleState, useTabState from useToggleHandler, useTabHandler ([ae5fef7](https://github.com/weareteamturing/bombe/commit/ae5fef7d81edd3dc17db1a2f84834f9ef4bec5b1))
+
 ## [2.20.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.20.1...@teamturing/react-kit@2.20.2) (2024-02-23)
 
 **Note:** Version bump only for package @teamturing/react-kit
