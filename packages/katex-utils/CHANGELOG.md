@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.12.0...@teamturing/katex-utils@2.13.0) (2024-02-26)
+
+### Features
+
+- **katex-utils:** add throwOnKaTexError option ([022d621](https://github.com/weareteamturing/bombe/commit/022d62126675305ee37aebfc639362f808ea05cd))
+
 # [2.12.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.11.0...@teamturing/katex-utils@2.12.0) (2024-02-18)
 
 ### Features
