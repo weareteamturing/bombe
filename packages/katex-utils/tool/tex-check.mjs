@@ -229,13 +229,13 @@ const processing = async () => {
     if (/\[테이블\]/.test(problem_tex)) {
       addError(id, task_id, 'problem', '[테이블] 문법은 문제에서 지원되지 않습니다');
     }
-    if (/\[테이블\]/.test(problem_tex)) {
+    if (/\[테이블\]/.test(solution_tex)) {
       addError(id, task_id, 'solution', '[테이블] 문법은 문제에서 지원되지 않습니다');
     }
     if (/\[들여쓰기(\d+)?\]/.test(problem_tex)) {
       addError(id, task_id, 'problem', '[들여쓰기] 문법은 문제에서 지원되지 않습니다');
     }
-    if (/\[들여쓰기(\d+)?\]/.test(problem_tex)) {
+    if (/\[들여쓰기(\d+)?\]/.test(solution_tex)) {
       addError(id, task_id, 'solution', '[들여쓰기] 문법은 문제에서 지원되지 않습니다');
     }
 
