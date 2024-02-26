@@ -31,13 +31,13 @@
     "url": "https://github.com/weareteamturing/bombe/issues"
   },
   "dependencies": {
-    "katex": "^0.16.9",
-    "node-html-parser": "^6.1.12"
+    "katex": "0.16.9",
+    "node-html-parser": "6.1.12"
   },
   "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.4",
-    "@types/katex": "^0.16.7",
-    "rollup-plugin-copy": "^3.5.0",
-    "zx": "^7.2.3"
+    "@rollup/plugin-terser": "0.4.4",
+    "@types/katex": "0.16.7",
+    "rollup-plugin-copy": "3.5.0",
+    "zx": "7.2.3"
   }
 }
