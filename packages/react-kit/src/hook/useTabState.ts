@@ -11,7 +11,7 @@ const useTabState = ({ initialSelectIndex = 0 }: Options) => {
     setSelectedIndex(index);
   };
 
-  return [selectedIndex, handleSelect];
+  return [selectedIndex, handleSelect] as const;
 };
 
 export default useTabState;
