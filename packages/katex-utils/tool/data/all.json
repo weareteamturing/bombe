@@ -1,8 +1,0 @@
-[
-  {
-    "id": 55,
-    "task_id": 5084,
-    "problem_tex": "다음 그림과 같이 원 $\\left(x-1\\right)^{2}+\\left(y-2\\right)^{2}=5$ 위의 두 점 $\\mathrm{A}(-1,\\ 3),\\ \\mathrm{B}(2,\\ 4)$와 원 위를 움직이는 점 $\\mathrm P$를 꼭짓점으로 하는 삼각형 $\\mathrm{ABP}$의 넓이의 최댓값은 $a+b\\sqrt2$이다. 두 유리수 $ a,\\ b$에 대하여  $a+b$의 값을 구하시오.\n<img data-group-id=\"2151\" data-set-id=\"2151\" src=\"https://cdn.teamturing.com/cms/problem_images/2020-07-21/4ETCGQ_p_pic1_revise.jpg\" />\n",
-    "solution_tex": "삼각형 $\\mathrm{ABC}$에서\n$\\qquad\\overline{\\mathrm{AB}}=\\sqrt{(-1-2)^{2}+(3-4)^{2}}=\\sqrt{10}$\n직선 $\\mathrm{AB}$의 방정식을 구하면\n$\\qquad y-3=\\displaystyle\\frac{3-4}{-1-2}\\{x-(-1)\\}$\n$\\qquad\\therefore\\ x-3y+10=0$\n또한 원의 중심 $(1,\\ 2)$에서 변 $\\mathrm{AB}$까지의 거리는\n$\\qquad\\displaystyle\\frac{|1-6+10|}{\\sqrt{1^{2}+(-3)^{2}}}=\\displaystyle\\frac{5}{\\sqrt{10}}=\\displaystyle\\frac{ \\sqrt{10}}{2}$\n삼각형 $\\mathrm{ABP}$의 넓이가 최대가 되려면 밑변을 $\\overline{\\mathrm{AB}}$라 할 때 높이가 최대이어야 하므로 넓이를 최대로 만드는 높이는 중심에서 변 $\\mathrm{AB}$까지 거리와 반지름의 합이다.\n$\\qquad\\begin{aligned} \\displaystyle\\frac{1}{2} \\times \\overline{\\mathrm{AB}} \\times\\left(\\frac{ \\sqrt{10}}{2}+\\sqrt5\\right) &=\\displaystyle\\frac{1}{2} \\times \\sqrt{10} \\times\\left(\\displaystyle\\frac{ \\sqrt{10}}{2}+\\sqrt5\\right) \\\\ &=\\displaystyle\\frac{5}{2}+\\frac{5}{2}\\sqrt{2} \\end{aligned}$\n$\\qquad a=\\dfrac52,\\ b=\\dfrac52\\qquad\\therefore\\ a+b=5$\n"
-  }
-]

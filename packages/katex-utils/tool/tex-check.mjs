@@ -1,5 +1,5 @@
 #!/usr/bin/env zx
-/* eslint-disable max-len */
+/* eslint-disable max-len, no-console */
 
 // region ZX Util
 $.verbose = false;
@@ -112,42 +112,185 @@ const HEADING = `// @ts-nocheck
 
 // start
 
-const json = require('./data/all.json');
-const KaTeXUtil = require('../dist/index.js');
+const cw_original = console.warn;
+console.warn = (...args) => {
+  if (typeof args[0] === 'string') {
+    if (args[0].startsWith('No character metrics for ')) return;
+  }
+  cw_original(...args);
+};
 
-printSuccess(json.length);
+/** @type {{id: number; task_id: number; problem_tex: string; solution_tex: string; answer: number; answer_type: string;}[]}  */
+const problems = require('./data/all.json');
 
+const util = require('../dist/index.js');
+
+printSuccess(problems.length);
+
+// problems.splice(10000);
+
+/** @type {{problem_id: number; task_id; number; type: 'problem' | 'solution'; msg: string}[]} */
 const errors = [];
-for (const { id, task_id, problem_tex, solution_tex } of json) {
-  if (id % 1000 === 0) {
-    print(id);
-  }
 
-  try {
-    KaTeXUtil.formatKatexToHtmlStringWithOptions(problem_tex, {
-      convertMarkUp: true,
-      injectPhantomBoxClasses: true,
-      convertTable: true,
-      throwOnKaTexError: true,
-    });
-  } catch (e) {
-    printError(id, task_id, 'proble');
-    errors.push({ id, task_id, e, type: 'problem' });
-  }
-
-  try {
-    KaTeXUtil.formatKatexToHtmlStringWithOptions(solution_tex, {
-      convertMarkUp: true,
-      injectPhantomBoxClasses: true,
-      convertTable: true,
-      throwOnKaTexError: true,
-    });
-  } catch (e) {
-    printError(id, task_id, 'solution');
-    errors.push({ id, task_id, e, type: 'solution' });
-  }
+/**
+ *
+ * @param {number} id
+ * @param {number} task_id
+ * @param {'problem' | 'solution'} type
+ * @param {string} msg
+ */
+function addError(id, task_id, type, msg) {
+  printError(id, task_id, type, msg);
+  errors.push({ problem_id: id, task_id, type, msg });
 }
 
-printSuccess(`Done, error: ${errors.length}`);
+const tKey = {};
+
+function measureStart(name) {
+  print(`=====Measure Start [${name}]=======`);
+  tKey[name] = Date.now();
+}
+
+function measureEnd(name) {
+  print(`=====Measure End [${name}]==[${Date.now() - tKey[name]}ms]=======`);
+}
+
+let index = -1;
+
+/**
+ * @param {string} html
+ * @return {string[]}
+ */
+const parseImageUris = (html) => {
+  const regex = /<img.*?src="(.*?)".*?>/gi;
+
+  let match;
+  const ret = [];
+  while ((match = regex.exec(html))) {
+    ret.push(match[1]);
+  }
+  return ret;
+};
+
+const downloadImageAndGetByte = (uri) => {
+  return fetch(uri)
+    .then((r) => r.blob())
+    .then((blob) => blob.size);
+};
+
+const checkImageIsDownloadable = async (uri) => {
+  const ret = await fetch(uri, { method: 'HEAD' });
+  return ret.ok;
+};
+
+const CHECK_IMAGE_DOWNLOADABLE = true;
+const CHECK_TEX_SYNTAX = true;
+
+const processing = async () => {
+  for (const { id, task_id, problem_tex, solution_tex, answer, answer_type } of problems) {
+    index += 1;
+    if (index % 100 === 0) {
+      print(`Processing: ${index}th`);
+    }
+
+    if (CHECK_TEX_SYNTAX) {
+      try {
+        util.formatKatexToHtmlStringWithOptions(problem_tex, {
+          convertMarkUp: true,
+          injectPhantomBoxClasses: true,
+          convertTable: true,
+          throwOnKaTexError: true,
+        });
+      } catch (e) {
+        if (e.name === 'ParseError') {
+          addError(id, task_id, 'problem', `TeX 문법 오류, ${e}`);
+        } else {
+          addError(id, task_id, 'problem', '알 수 없는 오류');
+        }
+      }
+
+      try {
+        util.formatKatexToHtmlStringWithOptions(solution_tex, {
+          convertMarkUp: true,
+          injectPhantomBoxClasses: true,
+          convertTable: true,
+          throwOnKaTexError: true,
+        });
+      } catch (e) {
+        if (e.name === 'ParseError') {
+          addError(id, task_id, 'solution', `TeX 문법 오류, ${e}`);
+        } else {
+          addError(id, task_id, 'solution', '알 수 없는 오류');
+        }
+      }
+    }
+
+    if (/\[정답\](\d+)/.test(solution_tex)) {
+      const answerInTex = /\[정답\](\d+)/.exec(solution_tex)[1];
+      if (Number(answerInTex) !== answer) {
+        addError(
+          id,
+          task_id,
+          'solution',
+          `정답이 solution_tex에 있는 것과 일치하지 않음, Tex 내 정답: [${answerInTex}], 문제의 정답: [${answer}]`,
+        );
+      }
+    }
+
+    if (/\[테이블\]/.test(problem_tex)) {
+      addError(id, task_id, 'problem', '[테이블] 문법은 문제에서 지원되지 않습니다');
+    }
+    if (/\[테이블\]/.test(solution_tex)) {
+      addError(id, task_id, 'solution', '[테이블] 문법은 문제에서 지원되지 않습니다');
+    }
+    if (/\[들여쓰기(\d+)?\]/.test(problem_tex)) {
+      addError(id, task_id, 'problem', '[들여쓰기] 문법은 문제에서 지원되지 않습니다');
+    }
+    if (/\[들여쓰기(\d+)?\]/.test(solution_tex)) {
+      addError(id, task_id, 'solution', '[들여쓰기] 문법은 문제에서 지원되지 않습니다');
+    }
+
+    if (CHECK_IMAGE_DOWNLOADABLE) {
+      const problemImages = parseImageUris(problem_tex);
+      for (const img of problemImages) {
+        try {
+          const isDownloadable = await checkImageIsDownloadable(img);
+
+          if (!isDownloadable) {
+            addError(id, task_id, 'problem', `이미지를 다운로드 할 수 없습니다`);
+          }
+
+          // const byte = await downloadImageAndGetByte(img);
+          // const kb = byte / 1024;
+          // console.log(img, Math.round(kb) + 'kb');
+        } catch (e) {
+          addError(id, task_id, 'problem', `이미지를 검사하던 중 문제가 발생했습니다. ${e}`);
+        }
+      }
+
+      const solutionImages = parseImageUris(solution_tex);
+      for (const img of solutionImages) {
+        try {
+          const isDownloadable = await checkImageIsDownloadable(img);
+
+          if (!isDownloadable) {
+            addError(id, task_id, 'solution', `이미지를 다운로드 할 수 없습니다`);
+          }
+
+          // const byte = await downloadImageAndGetByte(img);
+          // const kb = byte / 1024;
+          // console.log(img, Math.round(kb) + 'kb');
+        } catch (e) {
+          addError(id, task_id, 'solution', `이미지를 검사하던 중 문제가 발생했습니다. ${e}`);
+        }
+      }
+    }
+  }
+};
+
+measureStart('processing');
+await processing();
+measureEnd('processing');
+printSuccess(`Done, error: ${errors.length}, Saved to data/result.json`);
 
 writeJson('./tool/data/result.json', errors);
