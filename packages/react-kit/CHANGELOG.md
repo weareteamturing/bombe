@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.0...@teamturing/react-kit@2.21.1) (2024-02-26)
+
+### Bug Fixes
+
+- **react-kit:** update useTabState return type ([080a9fc](https://github.com/weareteamturing/bombe/commit/080a9fcf4a791e782f4738d763a394020f40312b))
+
 # [2.21.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.20.2...@teamturing/react-kit@2.21.0) (2024-02-26)
 
 ### Features
