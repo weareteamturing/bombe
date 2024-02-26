@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react';
 import Grid, { GridProps } from '../Grid';
 import Space, { SpaceProps } from '../Space';
 
-type Props = {} & Pick<GridProps, 'gapX' | 'alignItems' | 'justifyContent' | 'sx'> &
+type Props = {} & Pick<GridProps, 'gapX' | 'alignItems' | 'justifyContent'> &
   Pick<
     SpaceProps,
     | 'p'
@@ -20,11 +20,12 @@ type Props = {} & Pick<GridProps, 'gapX' | 'alignItems' | 'justifyContent' | 'sx
     | 'paddingRight'
     | 'paddingBottom'
     | 'paddingLeft'
+    | 'sx'
   >;
 
-const DatagridRow = ({ gapX = 2, alignItems, justifyContent, sx, children, ...props }: PropsWithChildren<Props>) => (
+const DatagridRow = ({ gapX = 2, alignItems, justifyContent, children, ...props }: PropsWithChildren<Props>) => (
   <DatagridRowWrapper {...props}>
-    <BaseDatagridRow wrap={false} gapX={gapX} alignItems={alignItems} justifyContent={justifyContent} sx={sx}>
+    <BaseDatagridRow wrap={false} gapX={gapX} alignItems={alignItems} justifyContent={justifyContent}>
       {children}
     </BaseDatagridRow>
   </DatagridRowWrapper>
