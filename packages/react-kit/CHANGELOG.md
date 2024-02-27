@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.3...@teamturing/react-kit@2.21.4) (2024-02-27)
+
+### Bug Fixes
+
+- **react-kit:** update form control label component css ([3b0ebee](https://github.com/weareteamturing/bombe/commit/3b0ebeea47a5fa2e4fc524770c8d772eb36f77c7))
+
 ## [2.21.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.2...@teamturing/react-kit@2.21.3) (2024-02-26)
 
 **Note:** Version bump only for package @teamturing/react-kit
