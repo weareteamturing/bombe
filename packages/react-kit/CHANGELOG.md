@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.4...@teamturing/react-kit@2.21.5) (2024-02-27)
+
+### Bug Fixes
+
+- **react-kit:** update Button style with correct reference ([6c8c96c](https://github.com/weareteamturing/bombe/commit/6c8c96cb4e6a99b372f59c0e8775897292fa0466))
+
 ## [2.21.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.3...@teamturing/react-kit@2.21.4) (2024-02-27)
 
 ### Bug Fixes
