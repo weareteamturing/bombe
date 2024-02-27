@@ -35,7 +35,7 @@ const BaseStack = styled(View)<Props>(
     variant({
       prop: 'gapX',
       variants: Object.fromEntries(
-        Object.entries(theme.space).map(([key, value]) => {
+        Object.entries<number>(theme.space).map(([key, value]) => {
           const styleValue: BetterSystemStyleObject = {
             '& > *': { px: forcePixelValue(value / 2) },
             'mx': forcePixelValue(-value / 2),
@@ -48,7 +48,7 @@ const BaseStack = styled(View)<Props>(
     variant({
       prop: 'gapY',
       variants: Object.fromEntries(
-        Object.entries(theme.space).map(([key, value]) => {
+        Object.entries<number>(theme.space).map(([key, value]) => {
           const styleValue: BetterSystemStyleObject = {
             '& > *': { mt: forcePixelValue(value) },
             'mt': forcePixelValue(-value),
