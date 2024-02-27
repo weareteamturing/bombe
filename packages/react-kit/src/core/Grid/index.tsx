@@ -1,4 +1,4 @@
-import { SpaceKey, space } from '@teamturing/token-studio';
+import { SpaceKey } from '@teamturing/token-studio';
 import { forcePixelValue, isArray, isNullable } from '@teamturing/utils';
 import { PropsWithChildren, Ref, forwardRef } from 'react';
 import styled from 'styled-components';
@@ -38,30 +38,32 @@ const BaseGrid = styled(View)<Omit<Props, 'wrap'> & { wrap?: ResponsiveValue<'tr
     display: 'flex',
     flexDirection: 'row',
   },
-  variant({
-    prop: 'gapX',
-    variants: Object.fromEntries(
-      Object.entries(space).map(([key, value]) => {
-        const styleValue: BetterSystemStyleObject = {
-          '& > *': { px: forcePixelValue(value / 2) },
-          'mx': forcePixelValue(-value / 2),
-        };
-        return [key, styleValue];
-      }),
-    ),
-  }),
-  variant({
-    prop: 'gapY',
-    variants: Object.fromEntries(
-      Object.entries(space).map(([key, value]) => {
-        const styleValue: BetterSystemStyleObject = {
-          '& > *': { mt: forcePixelValue(value) },
-          'mt': forcePixelValue(-value),
-        };
-        return [key, styleValue];
-      }),
-    ),
-  }),
+  ({ theme }) =>
+    variant({
+      prop: 'gapX',
+      variants: Object.fromEntries(
+        Object.entries(theme.space).map(([key, value]) => {
+          const styleValue: BetterSystemStyleObject = {
+            '& > *': { px: forcePixelValue(value / 2) },
+            'mx': forcePixelValue(-value / 2),
+          };
+          return [key, styleValue];
+        }),
+      ),
+    }),
+  ({ theme }) =>
+    variant({
+      prop: 'gapY',
+      variants: Object.fromEntries(
+        Object.entries(theme.space).map(([key, value]) => {
+          const styleValue: BetterSystemStyleObject = {
+            '& > *': { mt: forcePixelValue(value) },
+            'mt': forcePixelValue(-value),
+          };
+          return [key, styleValue];
+        }),
+      ),
+    }),
   variant<BetterSystemStyleObject>({
     prop: 'wrap',
     variants: {

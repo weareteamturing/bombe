@@ -1,4 +1,3 @@
-import { color, radii, typography } from '@teamturing/token-studio';
 import { ComponentType, PropsWithChildren, SVGProps } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
@@ -51,16 +50,16 @@ const Chip = ({
 );
 
 const BaseChip = styled.span<Props & SxProp>(
-  {
+  ({ theme }) => ({
     position: 'relative',
     width: 'fit-content',
-    borderRadius: radii.full,
+    borderRadius: theme.radii.full,
     outline: 'none',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-  },
-  ({ leadingIcon, trailingIcon }) =>
+  }),
+  ({ leadingIcon, trailingIcon, theme }) =>
     variant({
       prop: 'size',
       variants: {
@@ -68,9 +67,9 @@ const BaseChip = styled.span<Props & SxProp>(
           'pl': leadingIcon ? 2 : 3,
           'pr': trailingIcon ? 2 : 3,
           'py': 1,
-          'fontSize': typography['s'].fontSize,
-          'fontWeight': typography['s'].fontWeight,
-          'lineHeight': typography['s'].lineHeight,
+          'fontSize': theme.fontSizes.s,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
           'columnGap': 1,
           '& svg': { width: 16, height: 16 },
         },
@@ -78,9 +77,9 @@ const BaseChip = styled.span<Props & SxProp>(
           'pl': leadingIcon ? 2 : 3,
           'pr': trailingIcon ? 2 : 3,
           'py': 1,
-          'fontSize': typography['xs'].fontSize,
-          'fontWeight': typography['xs'].fontWeight,
-          'lineHeight': typography['xs'].lineHeight,
+          'fontSize': theme.fontSizes.xs,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
           'columnGap': 0.5,
           '& svg': { width: 16, height: 16 },
         },
@@ -88,95 +87,96 @@ const BaseChip = styled.span<Props & SxProp>(
           'pl': !leadingIcon && trailingIcon ? 3 : 2,
           'pr': leadingIcon && !trailingIcon ? 3 : 2,
           'py': 0.5,
-          'fontSize': typography['xxs'].fontSize,
-          'fontWeight': typography['xxs'].fontWeight,
-          'lineHeight': typography['xxs'].lineHeight,
+          'fontSize': theme.fontSizes.xxs,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
           'columnGap': 0.5,
           '& svg': { width: 12, height: 12 },
         },
       },
     }),
-  variant<BetterSystemStyleObject, NonNullable<Props['variant']>>({
-    prop: 'variant',
-    variants: {
-      'primary': {
-        'backgroundColor': color['bg/primary'],
-        'color': color['text/inverse'],
-        '& svg': { color: color['icon/inverse'] },
-      },
-      'secondary': {
-        'backgroundColor': color['bg/secondary'],
-        'color': color['text/primary'],
-        '& svg': { color: color['icon/primary'] },
-      },
-      'outlined-primary': {
-        'backgroundColor': color['bg/neutral/subtler'],
-        'color': color['text/primary'],
-        '& svg': { color: color['icon/primary'] },
-        '&:after': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0,
-          borderWidth: 1,
-          borderStyle: 'solid',
-          borderColor: color['border/primary'],
-          borderRadius: radii.full,
-          boxSizing: 'border-box',
+  ({ theme }) =>
+    variant<BetterSystemStyleObject, NonNullable<Props['variant']>>({
+      prop: 'variant',
+      variants: {
+        'primary': {
+          'backgroundColor': theme.colors['bg/primary'],
+          'color': theme.colors['text/inverse'],
+          '& svg': { color: theme.colors['icon/inverse'] },
+        },
+        'secondary': {
+          'backgroundColor': theme.colors['bg/secondary'],
+          'color': theme.colors['text/primary'],
+          '& svg': { color: theme.colors['icon/primary'] },
+        },
+        'outlined-primary': {
+          'backgroundColor': theme.colors['bg/neutral/subtler'],
+          'color': theme.colors['text/primary'],
+          '& svg': { color: theme.colors['icon/primary'] },
+          '&:after': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+            borderWidth: 1,
+            borderStyle: 'solid',
+            borderColor: theme.colors['border/primary'],
+            borderRadius: theme.radii.full,
+            boxSizing: 'border-box',
+          },
+        },
+        'outlined-neutral': {
+          'backgroundColor': theme.colors['bg/neutral/subtler'],
+          'color': theme.colors['text/neutral/subtle'],
+          '& svg': { color: theme.colors['icon/neutral/bolder'] },
+          '&:after': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+            borderWidth: 1,
+            borderStyle: 'solid',
+            borderColor: theme.colors['border/neutral/bolder'],
+            borderRadius: theme.radii.full,
+            boxSizing: 'border-box',
+          },
+        },
+        'neutral': {
+          'backgroundColor': theme.colors['bg/neutral'],
+          'color': theme.colors['text/neutral/subtle'],
+          '& svg': { color: theme.colors['icon/neutral/bolder'] },
+        },
+        'red': {
+          'backgroundColor': theme.colors['bg/accent/red/subtlest'],
+          'color': theme.colors['text/accent/red'],
+          '& svg': { color: theme.colors['icon/accent/red'] },
+        },
+        'red-accent': {
+          'backgroundColor': theme.colors['bg/accent/red'],
+          'color': theme.colors['text/inverse'],
+          '& svg': { color: theme.colors['icon/inverse'] },
+        },
+        'yellow': {
+          'backgroundColor': theme.colors['bg/accent/yellow/subtlest'],
+          'color': theme.colors['text/accent/yellow'],
+          '& svg': { color: theme.colors['icon/accent/yellow'] },
+        },
+        'green': {
+          'backgroundColor': theme.colors['bg/accent/green/subtlest'],
+          'color': theme.colors['text/accent/green'],
+          '& svg': { color: theme.colors['icon/accent/green'] },
+        },
+        'dim': {
+          'backgroundColor': theme.colors['dim'],
+          'color': theme.colors['text/inverse'],
+          '& svg': { color: theme.colors['icon/inverse'] },
         },
       },
-      'outlined-neutral': {
-        'backgroundColor': color['bg/neutral/subtler'],
-        'color': color['text/neutral/subtle'],
-        '& svg': { color: color['icon/neutral/bolder'] },
-        '&:after': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0,
-          borderWidth: 1,
-          borderStyle: 'solid',
-          borderColor: color['border/neutral/bolder'],
-          borderRadius: radii.full,
-          boxSizing: 'border-box',
-        },
-      },
-      'neutral': {
-        'backgroundColor': color['bg/neutral'],
-        'color': color['text/neutral/subtle'],
-        '& svg': { color: color['icon/neutral/bolder'] },
-      },
-      'red': {
-        'backgroundColor': color['bg/accent/red/subtlest'],
-        'color': color['text/accent/red'],
-        '& svg': { color: color['icon/accent/red'] },
-      },
-      'red-accent': {
-        'backgroundColor': color['bg/accent/red'],
-        'color': color['text/inverse'],
-        '& svg': { color: color['icon/inverse'] },
-      },
-      'yellow': {
-        'backgroundColor': color['bg/accent/yellow/subtlest'],
-        'color': color['text/accent/yellow'],
-        '& svg': { color: color['icon/accent/yellow'] },
-      },
-      'green': {
-        'backgroundColor': color['bg/accent/green/subtlest'],
-        'color': color['text/accent/green'],
-        '& svg': { color: color['icon/accent/green'] },
-      },
-      'dim': {
-        'backgroundColor': color['dim'],
-        'color': color['text/inverse'],
-        '& svg': { color: color['icon/inverse'] },
-      },
-    },
-  }),
+    }),
   sx,
 );
 

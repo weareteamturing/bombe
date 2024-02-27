@@ -1,4 +1,3 @@
-import { typography } from '@teamturing/token-studio';
 import { scrollIntoView } from '@teamturing/utils';
 import { ComponentType, PropsWithChildren, SVGProps, useContext, useRef } from 'react';
 import styled from 'styled-components';
@@ -84,32 +83,32 @@ const BaseTabItem = styled(UnstyledButton)<Props & TabContextValue>(
       outlineOffset: 2,
     },
   }),
-  () =>
+  ({ theme }) =>
     variant<BetterSystemStyleObject>({
       prop: 'size',
       variants: {
         l: {
           'px': 4,
           'py': 2,
-          'fontSize': typography['s'].fontSize,
-          'fontWeight': typography['s'].fontWeight,
-          'lineHeight': typography['s'].lineHeight,
+          'fontSize': theme.fontSizes.s,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
           '& svg': { width: 20, height: 20 },
         },
         m: {
           'px': 4,
           'py': 2,
-          'fontSize': typography['xs'].fontSize,
-          'fontWeight': typography['xs'].fontWeight,
-          'lineHeight': typography['xs'].lineHeight,
+          'fontSize': theme.fontSizes.xs,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
           '& svg': { width: 20, height: 20 },
         },
         s: {
           'px': 3,
           'py': 2,
-          'fontSize': typography['xxs'].fontSize,
-          'fontWeight': typography['xxs'].fontWeight,
-          'lineHeight': typography['xxs'].lineHeight,
+          'fontSize': theme.fontSizes.xxs,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
           '& svg': { width: 16, height: 16 },
         },
       },

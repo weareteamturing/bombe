@@ -1,8 +1,9 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@teamturing/icons';
-import { SpaceKey, elevation, gradient } from '@teamturing/token-studio';
+import { SpaceKey } from '@teamturing/token-studio';
 import { forcePixelValue } from '@teamturing/utils';
 import throttle from 'lodash.throttle';
 import { PropsWithChildren, RefObject, createContext, useEffect, useRef, useState } from 'react';
+import { useTheme } from 'styled-components';
 import { ResponsiveValue } from 'styled-system';
 
 import useResize from '../../hook/useResize';
@@ -21,6 +22,7 @@ type TabContextValue = { containerRef?: RefObject<HTMLElement> } & Props;
 const TabContext = createContext<TabContextValue>({});
 
 const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChildren<Props>) => {
+  const theme = useTheme();
   const rootRef = useRef<HTMLDivElement>(null);
 
   const [isLeftButtonVisible, setIsLeftButtonVisible] = useState(
@@ -99,7 +101,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
                   bottom: 0,
                   width: forcePixelValue(gradientWidth),
                   height: '100%',
-                  background: `linear-gradient(${gradient['overlay/floating/toright']})`,
+                  background: `linear-gradient(${theme.gradients['overlay/floating/toright']})`,
                   pointerEvents: 'none',
                 }}
               />
@@ -111,7 +113,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
                   top: 0,
                   left: 0,
                   bottom: 0,
-                  backgroundColor: elevation.surface,
+                  backgroundColor: theme.colors.surface,
                 }}
               >
                 <IconButton size={'s'} variant={'plain-bold'} icon={ChevronLeftIcon} onClick={handleLeftButtonClick} />
@@ -128,7 +130,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
                   bottom: 0,
                   width: forcePixelValue(gradientWidth),
                   height: '100%',
-                  background: `linear-gradient(${gradient['overlay/floating/toleft']})`,
+                  background: `linear-gradient(${theme.gradients['overlay/floating/toleft']})`,
                   pointerEvents: 'none',
                 }}
               />
@@ -140,7 +142,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
                   top: 0,
                   right: 0,
                   bottom: 0,
-                  backgroundColor: elevation.surface,
+                  backgroundColor: theme.colors.surface,
                 }}
               >
                 <IconButton

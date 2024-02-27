@@ -1,11 +1,4 @@
-import {
-  ColorKey,
-  FontSizeKey,
-  FontWeightKey,
-  LineHeightKey,
-  TypographyKey,
-  typography,
-} from '@teamturing/token-studio';
+import { ColorKey, FontSizeKey, FontWeightKey, LineHeightKey, TypographyKey } from '@teamturing/token-studio';
 import styled from 'styled-components';
 import {
   compose,
@@ -25,6 +18,7 @@ import {
 } from 'styled-system';
 
 import {
+  BetterSystemStyleObject,
   SxProp,
   TextDecorationProps,
   WhiteSpaceProps,
@@ -49,36 +43,105 @@ type Props = {
 
 const Text = styled.span<Props>(
   { 'display': 'block', 'whiteSpace': 'pre-wrap', '& > span': { display: 'inline' } },
-  variant<(typeof typography)[TypographyKey], TypographyKey, 'typography'>({
-    prop: 'typography',
-    variants: {
-      'display1': typography.display1,
-      'display2': typography.display2,
-      'display3': typography.display3,
-      'display4': typography.display4,
-      'xxl/regular': typography['xxl/regular'],
-      'xxl': typography['xxl'],
-      'xxl/bold': typography['xxl/bold'],
-      'xl/regular': typography['xl/regular'],
-      'xl': typography['xl'],
-      'xl/bold': typography['xl/bold'],
-      'l/regular': typography['l/regular'],
-      'l': typography['l'],
-      'l/bold': typography['l/bold'],
-      'm/regular': typography['m/regular'],
-      'm': typography['m'],
-      'm/bold': typography['m/bold'],
-      's/regular': typography['s/regular'],
-      's': typography['s'],
-      's/bold': typography['s/bold'],
-      'xs/regular': typography['xs/regular'],
-      'xs': typography['xs'],
-      'xs/bold': typography['xs/bold'],
-      'xxs/regular': typography['xxs/regular'],
-      'xxs': typography['xxs'],
-      'xxs/bold': typography['xxs/bold'],
-    },
-  }),
+  ({ theme }) =>
+    variant<BetterSystemStyleObject, TypographyKey, 'typography'>({
+      prop: 'typography',
+      variants: {
+        'display1': {
+          fontSize: theme.fontSizes.display1,
+          fontWeight: theme.fontWeights.bold,
+          lineHeight: theme.lineHeights[1],
+        },
+        'display2': {
+          fontSize: theme.fontSizes.display2,
+          fontWeight: theme.fontWeights.bold,
+          lineHeight: theme.lineHeights[1],
+        },
+        'display3': {
+          fontSize: theme.fontSizes.display3,
+          fontWeight: theme.fontWeights.bold,
+          lineHeight: theme.lineHeights[1],
+        },
+        'display4': {
+          fontSize: theme.fontSizes.display4,
+          fontWeight: theme.fontWeights.bold,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xxl/regular': {
+          fontSize: theme.fontSizes.xxl,
+          fontWeight: theme.fontWeights.regular,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xxl': {
+          fontSize: theme.fontSizes.xxl,
+          fontWeight: theme.fontWeights.medium,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xxl/bold': {
+          fontSize: theme.fontSizes.xxl,
+          fontWeight: theme.fontWeights.bold,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xl/regular': {
+          fontSize: theme.fontSizes.xl,
+          fontWeight: theme.fontWeights.regular,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xl': { fontSize: theme.fontSizes.xl, fontWeight: theme.fontWeights.medium, lineHeight: theme.lineHeights[2] },
+        'xl/bold': {
+          fontSize: theme.fontSizes.xl,
+          fontWeight: theme.fontWeights.bold,
+          lineHeight: theme.lineHeights[2],
+        },
+        'l/regular': {
+          fontSize: theme.fontSizes.l,
+          fontWeight: theme.fontWeights.regular,
+          lineHeight: theme.lineHeights[2],
+        },
+        'l': { fontSize: theme.fontSizes.l, fontWeight: theme.fontWeights.medium, lineHeight: theme.lineHeights[2] },
+        'l/bold': { fontSize: theme.fontSizes.l, fontWeight: theme.fontWeights.bold, lineHeight: theme.lineHeights[2] },
+        'm/regular': {
+          fontSize: theme.fontSizes.m,
+          fontWeight: theme.fontWeights.regular,
+          lineHeight: theme.lineHeights[2],
+        },
+        'm': { fontSize: theme.fontSizes.m, fontWeight: theme.fontWeights.medium, lineHeight: theme.lineHeights[2] },
+        'm/bold': { fontSize: theme.fontSizes.m, fontWeight: theme.fontWeights.bold, lineHeight: theme.lineHeights[2] },
+        's/regular': {
+          fontSize: theme.fontSizes.s,
+          fontWeight: theme.fontWeights.regular,
+          lineHeight: theme.lineHeights[2],
+        },
+        's': { fontSize: theme.fontSizes.s, fontWeight: theme.fontWeights.medium, lineHeight: theme.lineHeights[2] },
+        's/bold': { fontSize: theme.fontSizes.s, fontWeight: theme.fontWeights.bold, lineHeight: theme.lineHeights[2] },
+        'xs/regular': {
+          fontSize: theme.fontSizes.xs,
+          fontWeight: theme.fontWeights.regular,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xs': { fontSize: theme.fontSizes.xs, fontWeight: theme.fontWeights.medium, lineHeight: theme.lineHeights[2] },
+        'xs/bold': {
+          fontSize: theme.fontSizes.xs,
+          fontWeight: theme.fontWeights.bold,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xxs/regular': {
+          fontSize: theme.fontSizes.xxs,
+          fontWeight: theme.fontWeights.regular,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xxs': {
+          fontSize: theme.fontSizes.xxs,
+          fontWeight: theme.fontWeights.medium,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xxs/bold': {
+          fontSize: theme.fontSizes.xxs,
+          fontWeight: theme.fontWeights.bold,
+          lineHeight: theme.lineHeights[2],
+        },
+      },
+    }),
   compose(wordBreak, whiteSpace, textDecoration, fontSize, fontWeight, lineHeight, color, textAlign),
   sx,
 );
