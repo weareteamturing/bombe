@@ -1,4 +1,3 @@
-import { color, radii, typography } from '@teamturing/token-studio';
 import { ComponentType, PropsWithChildren, Ref, SVGProps, forwardRef } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
@@ -108,16 +107,16 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<Props>>(
 );
 
 const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disabled?: boolean }>(
-  ({ $loading, $disabled, fillWidth }) => ({
+  ({ $loading, $disabled, fillWidth, theme }) => ({
     'position': 'relative',
-    'borderRadius': radii.full,
+    'borderRadius': theme.radii.full,
     'backgroundColor': 'black',
     'transition': 'background-color 100ms, color 100ms',
     'cursor': $loading ? 'progress' : $disabled ? 'not-allowed' : 'pointer',
     'width': fillWidth ? '100%' : 'initial',
     '& svg': { transition: 'color 100ms' },
   }),
-  ({ leadingIcon, trailingIcon }) =>
+  ({ leadingIcon, trailingIcon, theme }) =>
     variant({
       prop: 'size',
       variants: {
@@ -127,9 +126,9 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
           'py': 3,
           'height': 'initial',
           'maxHeight': 'initial',
-          'fontSize': typography['s'].fontSize,
-          'fontWeight': typography['s'].fontWeight,
-          'lineHeight': typography['s'].lineHeight,
+          'fontSize': theme.fontSizes.s,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
           '& svg': { width: 20, height: 20 },
         },
         m: {
@@ -138,9 +137,9 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
           'py': 2,
           'height': 'initial',
           'maxHeight': 'initial',
-          'fontSize': typography['xs'].fontSize,
-          'fontWeight': typography['xs'].fontWeight,
-          'lineHeight': typography['xs'].lineHeight,
+          'fontSize': theme.fontSizes.xs,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
           '& svg': { width: 16, height: 16 },
         },
         s: {
@@ -149,93 +148,93 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
           'py': 0,
           'height': 32,
           'maxHeight': 32,
-          'fontSize': typography['xxs'].fontSize,
-          'fontWeight': typography['xxs'].fontWeight,
-          'lineHeight': typography['xxs'].lineHeight,
+          'fontSize': theme.fontSizes.xxs,
+          'fontWeight': theme.fontWeights.medium,
+          'lineHeight': theme.lineHeights[2],
           '& svg': { width: 12, height: 12 },
         },
       },
     }),
-  ({ $disabled }) =>
+  ({ $disabled, theme }) =>
     variant<BetterSystemStyleObject>({
       prop: 'variant',
       variants: {
         primary: {
-          'backgroundColor': color['bg/primary'],
-          'color': color['text/inverse'],
-          '& svg': { color: color['icon/inverse'] },
+          'backgroundColor': theme.color['bg/primary'],
+          'color': theme.color['text/inverse'],
+          '& svg': { color: theme.color['icon/inverse'] },
           '&:hover:not(:disabled)': {
-            backgroundColor: color['bg/primary/hovered'],
+            backgroundColor: theme.color['bg/primary/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: color['bg/primary/pressed'],
+            backgroundColor: theme.color['bg/primary/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: color['border/focused'],
+            outlineColor: theme.color['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': color['bg/disabled'],
-                'color': color['text/disabled'],
-                '& svg': { color: color['icon/disabled'] },
+                'backgroundColor': theme.color['bg/disabled'],
+                'color': theme.color['text/disabled'],
+                '& svg': { color: theme.color['icon/disabled'] },
               }
             : {}),
         },
         secondary: {
-          'backgroundColor': color['bg/secondary'],
-          'color': color['text/primary'],
-          '& svg': { color: color['icon/primary'] },
+          'backgroundColor': theme.color['bg/secondary'],
+          'color': theme.color['text/primary'],
+          '& svg': { color: theme.color['icon/primary'] },
           '&:hover:not(:disabled)': {
-            backgroundColor: color['bg/secondary/hovered'],
+            backgroundColor: theme.color['bg/secondary/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: color['bg/secondary/pressed'],
+            backgroundColor: theme.color['bg/secondary/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: color['border/focused'],
+            outlineColor: theme.color['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': color['bg/disabled'],
-                'color': color['text/disabled'],
-                '& svg': { color: color['icon/disabled'] },
+                'backgroundColor': theme.color['bg/disabled'],
+                'color': theme.color['text/disabled'],
+                '& svg': { color: theme.color['icon/disabled'] },
               }
             : {}),
         },
         neutral: {
-          'backgroundColor': color['bg/neutral'],
-          'color': color['text/neutral'],
-          '& svg': { color: color['icon/accent/gray'] },
+          'backgroundColor': theme.color['bg/neutral'],
+          'color': theme.color['text/neutral'],
+          '& svg': { color: theme.color['icon/accent/gray'] },
           '&:hover:not(:disabled)': {
-            backgroundColor: color['bg/neutral/hovered'],
+            backgroundColor: theme.color['bg/neutral/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: color['bg/neutral/pressed'],
+            backgroundColor: theme.color['bg/neutral/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: color['border/focused'],
+            outlineColor: theme.color['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': color['bg/disabled'],
-                'color': color['text/disabled'],
-                '& svg': { color: color['icon/disabled'] },
+                'backgroundColor': theme.color['bg/disabled'],
+                'color': theme.color['text/disabled'],
+                '& svg': { color: theme.color['icon/disabled'] },
               }
             : {}),
         },
         outlined: {
-          'backgroundColor': color['bg/neutral/subtler'],
-          'color': color['text/neutral/subtle'],
-          '& svg': { color: color['icon/neutral/bolder'] },
+          'backgroundColor': theme.color['bg/neutral/subtler'],
+          'color': theme.color['text/neutral/subtle'],
+          '& svg': { color: theme.color['icon/neutral/bolder'] },
           '&:after': {
             content: '""',
             position: 'absolute',
@@ -245,27 +244,27 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
             left: 0,
             borderWidth: 1,
             borderStyle: 'solid',
-            borderColor: color['border/neutral/bolder'],
-            borderRadius: radii.full,
+            borderColor: theme.color['border/neutral/bolder'],
+            borderRadius: theme.radii.full,
             boxSizing: 'border-box',
           },
           '&:hover:not(:disabled)': {
-            backgroundColor: color['bg/neutral/subtler/hovered'],
+            backgroundColor: theme.color['bg/neutral/subtler/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: color['bg/neutral/subtler/pressed'],
+            backgroundColor: theme.color['bg/neutral/subtler/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: color['border/focused'],
+            outlineColor: theme.color['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': color['bg/disabled'],
-                'color': color['text/disabled'],
-                '& svg': { color: color['icon/disabled'] },
+                'backgroundColor': theme.color['bg/disabled'],
+                'color': theme.color['text/disabled'],
+                '& svg': { color: theme.color['icon/disabled'] },
                 '&:after': {
                   display: 'none',
                 },
@@ -273,56 +272,56 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
             : {}),
         },
         plain: {
-          'backgroundColor': color['bg/neutral/subtler'],
-          'color': color['text/neutral/subtle'],
-          '& svg': { color: color['icon/neutral/bolder'] },
+          'backgroundColor': theme.color['bg/neutral/subtler'],
+          'color': theme.color['text/neutral/subtle'],
+          '& svg': { color: theme.color['icon/neutral/bolder'] },
           '&:hover:not(:disabled)': {
-            'color': color['text/neutral'],
+            'color': theme.color['text/neutral'],
             '& svg': {
-              color: color['icon/accent/gray'],
+              color: theme.color['icon/accent/gray'],
             },
           },
           '&:active:not(:disabled)': {
-            'color': color['text/neutral'],
+            'color': theme.color['text/neutral'],
             '& svg': {
-              color: color['icon/accent/gray'],
+              color: theme.color['icon/accent/gray'],
             },
           },
           '&:focus-visible': {
-            outlineColor: color['border/focused'],
+            outlineColor: theme.color['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': color['bg/disabled/subtlest'],
-                'color': color['text/disabled'],
-                '& svg': { color: color['icon/disabled'] },
+                'backgroundColor': theme.color['bg/disabled/subtlest'],
+                'color': theme.color['text/disabled'],
+                '& svg': { color: theme.color['icon/disabled'] },
               }
             : {}),
         },
         danger: {
-          'backgroundColor': color['bg/danger/bold'],
-          'color': color['text/inverse'],
-          '& svg': { color: color['icon/inverse'] },
+          'backgroundColor': theme.color['bg/danger/bold'],
+          'color': theme.color['text/inverse'],
+          '& svg': { color: theme.color['icon/inverse'] },
           '&:hover:not(:disabled)': {
-            backgroundColor: color['bg/danger/bold/hovered'],
+            backgroundColor: theme.color['bg/danger/bold/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: color['bg/danger/bold/pressed'],
+            backgroundColor: theme.color['bg/danger/bold/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: color['border/focused'],
+            outlineColor: theme.color['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': color['bg/disabled'],
-                'color': color['text/disabled'],
-                '& svg': { color: color['icon/disabled'] },
+                'backgroundColor': theme.color['bg/disabled'],
+                'color': theme.color['text/disabled'],
+                '& svg': { color: theme.color['icon/disabled'] },
               }
             : {}),
         },
@@ -348,29 +347,30 @@ const BaseSpinner = styled(Spinner)<Pick<Props, 'size' | 'variant'>>(
       },
     },
   }),
-  variant({
-    prop: 'variant',
-    variants: {
-      primary: {
-        color: color['icon/inverse'],
+  ({ theme }) =>
+    variant({
+      prop: 'variant',
+      variants: {
+        primary: {
+          color: theme.color['icon/inverse'],
+        },
+        secondary: {
+          color: theme.color['icon/primary'],
+        },
+        neutral: {
+          color: theme.color['icon/accent/gray'],
+        },
+        outlined: {
+          color: theme.color['icon/neutral/bolder'],
+        },
+        plain: {
+          color: theme.color['icon/neutral/bolder'],
+        },
+        danger: {
+          color: theme.color['icon/inverse'],
+        },
       },
-      secondary: {
-        color: color['icon/primary'],
-      },
-      neutral: {
-        color: color['icon/accent/gray'],
-      },
-      outlined: {
-        color: color['icon/neutral/bolder'],
-      },
-      plain: {
-        color: color['icon/neutral/bolder'],
-      },
-      danger: {
-        color: color['icon/inverse'],
-      },
-    },
-  }),
+    }),
 );
 
 export default Button;
