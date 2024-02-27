@@ -160,81 +160,81 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
       prop: 'variant',
       variants: {
         primary: {
-          'backgroundColor': theme.color['bg/primary'],
-          'color': theme.color['text/inverse'],
-          '& svg': { color: theme.color['icon/inverse'] },
+          'backgroundColor': theme.colors['bg/primary'],
+          'color': theme.colors['text/inverse'],
+          '& svg': { color: theme.colors['icon/inverse'] },
           '&:hover:not(:disabled)': {
-            backgroundColor: theme.color['bg/primary/hovered'],
+            backgroundColor: theme.colors['bg/primary/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: theme.color['bg/primary/pressed'],
+            backgroundColor: theme.colors['bg/primary/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: theme.color['border/focused'],
+            outlineColor: theme.colors['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': theme.color['bg/disabled'],
-                'color': theme.color['text/disabled'],
-                '& svg': { color: theme.color['icon/disabled'] },
+                'backgroundColor': theme.colors['bg/disabled'],
+                'color': theme.colors['text/disabled'],
+                '& svg': { color: theme.colors['icon/disabled'] },
               }
             : {}),
         },
         secondary: {
-          'backgroundColor': theme.color['bg/secondary'],
-          'color': theme.color['text/primary'],
-          '& svg': { color: theme.color['icon/primary'] },
+          'backgroundColor': theme.colors['bg/secondary'],
+          'color': theme.colors['text/primary'],
+          '& svg': { color: theme.colors['icon/primary'] },
           '&:hover:not(:disabled)': {
-            backgroundColor: theme.color['bg/secondary/hovered'],
+            backgroundColor: theme.colors['bg/secondary/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: theme.color['bg/secondary/pressed'],
+            backgroundColor: theme.colors['bg/secondary/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: theme.color['border/focused'],
+            outlineColor: theme.colors['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': theme.color['bg/disabled'],
-                'color': theme.color['text/disabled'],
-                '& svg': { color: theme.color['icon/disabled'] },
+                'backgroundColor': theme.colors['bg/disabled'],
+                'color': theme.colors['text/disabled'],
+                '& svg': { color: theme.colors['icon/disabled'] },
               }
             : {}),
         },
         neutral: {
-          'backgroundColor': theme.color['bg/neutral'],
-          'color': theme.color['text/neutral'],
-          '& svg': { color: theme.color['icon/accent/gray'] },
+          'backgroundColor': theme.colors['bg/neutral'],
+          'color': theme.colors['text/neutral'],
+          '& svg': { color: theme.colors['icon/accent/gray'] },
           '&:hover:not(:disabled)': {
-            backgroundColor: theme.color['bg/neutral/hovered'],
+            backgroundColor: theme.colors['bg/neutral/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: theme.color['bg/neutral/pressed'],
+            backgroundColor: theme.colors['bg/neutral/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: theme.color['border/focused'],
+            outlineColor: theme.colors['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': theme.color['bg/disabled'],
-                'color': theme.color['text/disabled'],
-                '& svg': { color: theme.color['icon/disabled'] },
+                'backgroundColor': theme.colors['bg/disabled'],
+                'color': theme.colors['text/disabled'],
+                '& svg': { color: theme.colors['icon/disabled'] },
               }
             : {}),
         },
         outlined: {
-          'backgroundColor': theme.color['bg/neutral/subtler'],
-          'color': theme.color['text/neutral/subtle'],
-          '& svg': { color: theme.color['icon/neutral/bolder'] },
+          'backgroundColor': theme.colors['bg/neutral/subtler'],
+          'color': theme.colors['text/neutral/subtle'],
+          '& svg': { color: theme.colors['icon/neutral/bolder'] },
           '&:after': {
             content: '""',
             position: 'absolute',
@@ -244,27 +244,27 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
             left: 0,
             borderWidth: 1,
             borderStyle: 'solid',
-            borderColor: theme.color['border/neutral/bolder'],
+            borderColor: theme.colors['border/neutral/bolder'],
             borderRadius: theme.radii.full,
             boxSizing: 'border-box',
           },
           '&:hover:not(:disabled)': {
-            backgroundColor: theme.color['bg/neutral/subtler/hovered'],
+            backgroundColor: theme.colors['bg/neutral/subtler/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: theme.color['bg/neutral/subtler/pressed'],
+            backgroundColor: theme.colors['bg/neutral/subtler/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: theme.color['border/focused'],
+            outlineColor: theme.colors['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': theme.color['bg/disabled'],
-                'color': theme.color['text/disabled'],
-                '& svg': { color: theme.color['icon/disabled'] },
+                'backgroundColor': theme.colors['bg/disabled'],
+                'color': theme.colors['text/disabled'],
+                '& svg': { color: theme.colors['icon/disabled'] },
                 '&:after': {
                   display: 'none',
                 },
@@ -272,56 +272,56 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
             : {}),
         },
         plain: {
-          'backgroundColor': theme.color['bg/neutral/subtler'],
-          'color': theme.color['text/neutral/subtle'],
-          '& svg': { color: theme.color['icon/neutral/bolder'] },
+          'backgroundColor': theme.colors['bg/neutral/subtler'],
+          'color': theme.colors['text/neutral/subtle'],
+          '& svg': { color: theme.colors['icon/neutral/bolder'] },
           '&:hover:not(:disabled)': {
-            'color': theme.color['text/neutral'],
+            'color': theme.colors['text/neutral'],
             '& svg': {
-              color: theme.color['icon/accent/gray'],
+              color: theme.colors['icon/accent/gray'],
             },
           },
           '&:active:not(:disabled)': {
-            'color': theme.color['text/neutral'],
+            'color': theme.colors['text/neutral'],
             '& svg': {
-              color: theme.color['icon/accent/gray'],
+              color: theme.colors['icon/accent/gray'],
             },
           },
           '&:focus-visible': {
-            outlineColor: theme.color['border/focused'],
+            outlineColor: theme.colors['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': theme.color['bg/disabled/subtlest'],
-                'color': theme.color['text/disabled'],
-                '& svg': { color: theme.color['icon/disabled'] },
+                'backgroundColor': theme.colors['bg/disabled/subtlest'],
+                'color': theme.colors['text/disabled'],
+                '& svg': { color: theme.colors['icon/disabled'] },
               }
             : {}),
         },
         danger: {
-          'backgroundColor': theme.color['bg/danger/bold'],
-          'color': theme.color['text/inverse'],
-          '& svg': { color: theme.color['icon/inverse'] },
+          'backgroundColor': theme.colors['bg/danger/bold'],
+          'color': theme.colors['text/inverse'],
+          '& svg': { color: theme.colors['icon/inverse'] },
           '&:hover:not(:disabled)': {
-            backgroundColor: theme.color['bg/danger/bold/hovered'],
+            backgroundColor: theme.colors['bg/danger/bold/hovered'],
           },
           '&:active:not(:disabled)': {
-            backgroundColor: theme.color['bg/danger/bold/pressed'],
+            backgroundColor: theme.colors['bg/danger/bold/pressed'],
           },
           '&:focus-visible': {
-            outlineColor: theme.color['border/focused'],
+            outlineColor: theme.colors['border/focused'],
             outlineStyle: 'solid',
             outlineWidth: 2,
             outlineOffset: 2,
           },
           ...($disabled
             ? {
-                'backgroundColor': theme.color['bg/disabled'],
-                'color': theme.color['text/disabled'],
-                '& svg': { color: theme.color['icon/disabled'] },
+                'backgroundColor': theme.colors['bg/disabled'],
+                'color': theme.colors['text/disabled'],
+                '& svg': { color: theme.colors['icon/disabled'] },
               }
             : {}),
         },
@@ -352,22 +352,22 @@ const BaseSpinner = styled(Spinner)<Pick<Props, 'size' | 'variant'>>(
       prop: 'variant',
       variants: {
         primary: {
-          color: theme.color['icon/inverse'],
+          color: theme.colors['icon/inverse'],
         },
         secondary: {
-          color: theme.color['icon/primary'],
+          color: theme.colors['icon/primary'],
         },
         neutral: {
-          color: theme.color['icon/accent/gray'],
+          color: theme.colors['icon/accent/gray'],
         },
         outlined: {
-          color: theme.color['icon/neutral/bolder'],
+          color: theme.colors['icon/neutral/bolder'],
         },
         plain: {
-          color: theme.color['icon/neutral/bolder'],
+          color: theme.colors['icon/neutral/bolder'],
         },
         danger: {
-          color: theme.color['icon/inverse'],
+          color: theme.colors['icon/inverse'],
         },
       },
     }),
