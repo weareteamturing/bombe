@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.7](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.6...@teamturing/react-kit@2.21.7) (2024-02-27)
+
+### Bug Fixes
+
+- **react-kit:** fix typescript error ([a8837a0](https://github.com/weareteamturing/bombe/commit/a8837a088dcda480496d6c51c4236aca4f973153))
+- **react-kit:** update reference for theme ([df124ef](https://github.com/weareteamturing/bombe/commit/df124efdf0fd15230004be5db3d3e6074792b9c2))
+
 ## [2.21.6](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.5...@teamturing/react-kit@2.21.6) (2024-02-27)
 
 ### Bug Fixes
