@@ -1,5 +1,4 @@
 import { CloseIcon } from '@teamturing/icons';
-import { color, elevation } from '@teamturing/token-studio';
 import {
   forwardRef,
   PropsWithChildren,
@@ -181,17 +180,17 @@ const Blanket = styled.span`
     display: block;
     cursor: default;
     content: '';
-    background: ${color.dim};
+    background: ${({ theme }) => theme.colors.dim};
   }
 `;
 
 const BaseDialog = styled.div<SxProp>(
-  () => ({
+  ({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    boxShadow: elevation['shadow/overlay'],
-    backgroundColor: elevation['surface/overlay'],
+    boxShadow: theme.shadows['shadow/overlay'],
+    backgroundColor: theme.colors['surface/overlay'],
     outline: 'none',
     overflow: 'hidden',
     margin: 'auto',

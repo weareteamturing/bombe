@@ -1,7 +1,7 @@
 import { useFloating, autoUpdate, offset, flip, shift, Placement, UseFloatingReturn } from '@floating-ui/react-dom';
-import { space } from '@teamturing/token-studio';
 import { isFunction } from '@teamturing/utils';
 import { Children, ForwardedRef, HTMLAttributes, ReactElement, ReactNode, RefObject, cloneElement } from 'react';
+import { useTheme } from 'styled-components';
 
 import useFocusTrap, { FocusTrapHookSettings } from '../../hook/useFocusTrap';
 import useFocusZone, { FocusZoneHookSettings } from '../../hook/useFocusZone';
@@ -36,10 +36,11 @@ const OverlayPopper = ({
   onOpen,
   onClose,
 }: Props) => {
+  const theme = useTheme();
   const { refs, elements, floatingStyles, isPositioned } = useFloating({
     placement,
     whileElementsMounted: autoUpdate,
-    middleware: [offset(space[1]), flip(), shift()],
+    middleware: [offset(theme.space[1]), flip(), shift()],
     strategy: 'fixed',
   });
 

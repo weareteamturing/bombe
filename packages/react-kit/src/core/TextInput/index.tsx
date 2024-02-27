@@ -1,4 +1,3 @@
-import { color } from '@teamturing/token-studio';
 import { forcePixelValue, isFunction, isNullable } from '@teamturing/utils';
 import {
   ElementType,
@@ -12,7 +11,7 @@ import {
   forwardRef,
 } from 'react';
 import { isValidElementType } from 'react-is';
-import styled, { css } from 'styled-components';
+import styled, { css, useTheme } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 import View from '../View';
@@ -50,6 +49,7 @@ const TextInput = (
   }: Props,
   ref: Ref<HTMLInputElement>,
 ) => {
+  const theme = useTheme();
   const inputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLInputElement>);
 
   const focusInput = () => {
@@ -70,8 +70,8 @@ const TextInput = (
           'flexShrink': 0,
           'fontSize': 'xxs',
           'fontWeight': 'medium',
-          'color': color['text/neutral'],
-          '& > svg': { display: 'block', width: 16, height: 16, color: color['icon/neutral/bold'] },
+          'color': theme.colors['text/neutral'],
+          '& > svg': { display: 'block', width: 16, height: 16, color: theme.colors['icon/neutral/bold'] },
         }}
       >
         {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
@@ -97,8 +97,8 @@ const TextInput = (
           'flexShrink': 0,
           'fontSize': 'xxs',
           'fontWeight': 'medium',
-          'color': color['text/neutral'],
-          '& > svg': { display: 'block', width: 16, height: 16, color: color['icon/neutral/bold'] },
+          'color': theme.colors['text/neutral'],
+          '& > svg': { display: 'block', width: 16, height: 16, color: theme.colors['icon/neutral/bold'] },
         }}
       >
         {typeof TrailingVisual !== 'string' && isValidElementType(TrailingVisual) ? (

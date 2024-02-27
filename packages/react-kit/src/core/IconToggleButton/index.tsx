@@ -1,4 +1,3 @@
-import { color, radii } from '@teamturing/token-studio';
 import { ComponentType, SVGProps } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
@@ -56,14 +55,14 @@ const IconToggleButton = ({
 };
 
 const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolean }>(
-  ({ $disabled }) => ({
+  ({ $disabled, theme }) => ({
     'position': 'relative',
-    'borderRadius': radii.full,
+    'borderRadius': theme.radii.full,
     'transition': 'background-color 100ms, color 100ms',
     '& svg': { display: 'block' },
     'cursor': $disabled ? 'not-allowed' : 'pointer',
     '&:focus-visible': {
-      outlineColor: color['border/focused'],
+      outlineColor: theme.colors['border/focused'],
       outlineStyle: 'solid',
       outlineWidth: 2,
       outlineOffset: 2,
@@ -86,40 +85,40 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
       },
     },
   }),
-  ({ selected, $disabled }) =>
+  ({ selected, $disabled, theme }) =>
     variant<BetterSystemStyleObject>({
       prop: 'variant',
       variants: {
         primary: {
           ...(selected
             ? {
-                backgroundColor: color['bg/selected/violet'],
-                color: color['icon/inverse'],
+                backgroundColor: theme.colors['bg/selected/violet'],
+                color: theme.colors['icon/inverse'],
               }
             : {
-                backgroundColor: color['bg/neutral'],
-                color: color['icon/accent/gray'],
+                backgroundColor: theme.colors['bg/neutral'],
+                color: theme.colors['icon/accent/gray'],
               }),
           ...($disabled
             ? {
-                backgroundColor: color['bg/disabled'],
-                color: color['icon/disabled'],
+                backgroundColor: theme.colors['bg/disabled'],
+                color: theme.colors['icon/disabled'],
               }
             : {}),
         },
         plain: {
-          backgroundColor: color['bg/neutral/subtler'],
+          backgroundColor: theme.colors['bg/neutral/subtler'],
           ...(selected
             ? {
-                color: color['icon/selected/violet'],
+                color: theme.colors['icon/selected/violet'],
               }
             : {
-                color: color['icon/neutral'],
+                color: theme.colors['icon/neutral'],
               }),
           ...($disabled
             ? {
-                backgroundColor: color['bg/disabled/subtlest'],
-                color: color['icon/disabled/subtler'],
+                backgroundColor: theme.colors['bg/disabled/subtlest'],
+                color: theme.colors['icon/disabled/subtler'],
               }
             : {}),
         },
