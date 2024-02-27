@@ -15,7 +15,7 @@ const FormControlLabel = ({ children, visuallyHidden, ...props }: PropsWithChild
   const { id, disabled, required } = useContext(FormControlContext);
 
   return (
-    <VisuallyHidden as={'label'} htmlFor={id} isVisible={!visuallyHidden}>
+    <VisuallyHidden as={'label'} htmlFor={id} sx={{ width: 'fit-content' }} isVisible={!visuallyHidden}>
       <LabelWrapper {...props} disabled={disabled}>
         {children}
         {required ? (
