@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.16.0...@teamturing/katex-utils@2.17.0) (2024-02-28)
+
+### Features
+
+- **katex-utils:** revert \colorbox parse logic ([6aab1fb](https://github.com/weareteamturing/bombe/commit/6aab1fbfd1509cef45edd2d8b96dc2562367d975))
+
 # [2.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.15.0...@teamturing/katex-utils@2.16.0) (2024-02-28)
 
 ### Features
