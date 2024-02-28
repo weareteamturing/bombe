@@ -25,7 +25,7 @@
     "check:type": "tsc --noEmit",
     "test": "jest --config ./jest.config.js",
     "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js",
-    "check:tex": "yarn zx tool/tex-check.mjs"
+    "check:tex": "yarn test && yarn zx tool/tex-check.mjs"
   },
   "bugs": {
     "url": "https://github.com/weareteamturing/bombe/issues"

@@ -91,6 +91,20 @@ $(나)\ f(x)=g'(x)-f'(x)$
 const sampleImage = String.raw`좌표평면에서 곡선 $y= \sin x$ 위의 점 $\mathrm{P}(t,\ \sin t)\ (0<t<\pi)$를 중심으로 하고 $x$축에 접하는 원을 $C$라 하자. 원 $C$가 $x$축에 접하는 점을 $\mathrm{Q}$, 선분 $\mathrm{OP}$와 만나는 점을 $\mathrm{R}$라 하자. $\displaystyle \lim _{t \rightarrow 0+} \frac{\overline{\mathrm{OQ}}}{\overline{\mathrm{OR}}}=a+b \sqrt{2}$일 때, $a+b$의 값을 구하시오. $($단, $\mathrm{O}$는 원점이고, $a,\ b$는 정수이다.$)$
 <img data-group-id="1075" data-set-id="1075" src="https://cdn.teamturing.com/cms/problem_images/2020-07-21/GW740O_p_pic1_revise.jpg" />`;
 
+let warn_original: any;
+beforeAll(() => {
+  warn_original = console.warn;
+  console.warn = (...args) => {
+    if (typeof args[0] === 'string') {
+      if (args[0].startsWith('No character metrics for ')) return;
+    }
+    warn_original(...args);
+  };
+});
+afterAll(() => {
+  console.warn = warn_original;
+});
+
 describe('일반', () => {
   it('줄바꿈이 <br/>로 치환된다', () => {
     const tex = '\n';
@@ -214,5 +228,56 @@ describe('기타', () => {
     expect(() => formatKatexToHtmlStringWithOptions(errorTex, { throwOnKaTexError: true })).toThrowError(
       /KaTeX parse error/,
     );
+  });
+
+  it('\\colorbox', () => {
+    const tex = `$\\colorbox{aqua}{$\\sqrt{123}$}$
+This is Colored Box Test $\\colorbox{black}{123}$ $a^2+b^2=c^4 \\qquad \\begin{aligned} a && b \\\\ a && b+c && d \\end{aligned}$
+
+$\\begin{aligned}
+D_Y &\\equiv 3-2c+y+\\left[ \\dfrac c4 \\right] \\pmod 7\\\\
+w &\\equiv D_y+[(2.6)m-0.2]-2+(d-1) \\pmod 7\\\\
+&\\equiv 3-2c+y+\\left[ \\dfrac c4 \\right]+\\left[ \\dfrac y4 \\right]+[(2.6)m-0.2]-2+(d-1) \\pmod 7\\\\
+&\\equiv d+[(2.6)m-0.2]-2c+y+\\left[ \\dfrac c4 \\right]+\\left[ \\dfrac y4 \\right]\\pmod 7
+\\end{aligned}$`;
+
+    expect(() => formatKatexToHtmlStringWithOptions(tex, { throwOnKaTexError: true })).not.toThrowError();
+  });
+});
+
+describe('1000개의 문제에 대한 Snapshot', () => {
+  it('문제의 Tex들은 옵션에 상관없이 결과가 동일하다', () => {
+    const problems: {
+      id: number;
+      task_id: number;
+      problem_tex: string;
+      solution_tex: string;
+      answer: number;
+      answer_type: string;
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+    }[] = require('../test/problems_for_test.json');
+
+    expect(problems.length).toBe(1000);
+    for (const { problem_tex, solution_tex } of problems) {
+      const problemWithoutOptions = formatKatexToHtmlStringWithOptions(problem_tex, {
+        convertMarkUp: false,
+        convertTable: false,
+        injectPhantomBoxClasses: false,
+        throwOnKaTexError: true,
+      });
+      const problemWithOptions = formatKatexToHtmlString(problem_tex);
+      const solutionWithoutOptions = formatKatexToHtmlStringWithOptions(solution_tex, {
+        convertMarkUp: false,
+        convertTable: false,
+        injectPhantomBoxClasses: false,
+        throwOnKaTexError: true,
+      });
+      const solutionWithOptions = formatKatexToHtmlString(solution_tex);
+
+      expect(problemWithOptions).toBe(problemWithoutOptions);
+      expect(solutionWithOptions).toBe(solutionWithoutOptions);
+      expect(problemWithOptions).toMatchSnapshot();
+      expect(solutionWithOptions).toMatchSnapshot();
+    }
   });
 });
