@@ -48,6 +48,9 @@ jobs:
       - name: Check Typescript
         run: lerna run check:type
 
+      - name: Run Test
+        run: lerna run test
+
       - name: Versioning
         run: lerna version --yes --ignore-changes
 
