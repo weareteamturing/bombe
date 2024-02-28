@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.19.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.18.0...@teamturing/katex-utils@2.19.0) (2024-02-28)
+
+### Features
+
+- **katex-utils:** handle unpair dollar as non-equation chunk in parse logic ([45a450f](https://github.com/weareteamturing/bombe/commit/45a450f71630151e1d27484b026bbebab6095b91))
+
 # [2.18.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.17.0...@teamturing/katex-utils@2.18.0) (2024-02-28)
 
 ### Features
