@@ -159,16 +159,6 @@ const convertTableMarkToHTML = (rootText: string) => {
   }
 };
 
-function isSubStringMatch(str: string, match: string, offset: number) {
-  if (str.length < offset + match.length) return false;
-  for (let i = offset; i < offset + match.length; i++) {
-    if (match.charAt(i - offset) !== str.charAt(i)) {
-      return false;
-    }
-  }
-  return true;
-}
-
 const renderToStringWithDollar = (
   text: string,
   { throwOnError = false }: { throwOnError?: boolean } = { throwOnError: false },
