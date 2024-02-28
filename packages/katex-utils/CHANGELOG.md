@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.18.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.17.0...@teamturing/katex-utils@2.18.0) (2024-02-28)
+
+### Features
+
+- **katex-utils:** add border radius for .colorbox ([c486448](https://github.com/weareteamturing/bombe/commit/c48644858aa6917a204fb101de0df837bd5a3f85))
+- **katex-utils:** create isSubStringMatch internal utility ([9fe74af](https://github.com/weareteamturing/bombe/commit/9fe74af860040b133a148aa9bf9284d0224711d2))
+- **katex-utils:** enhance tex parse logic + tests + support \colorbox correctly ([2d4bc38](https://github.com/weareteamturing/bombe/commit/2d4bc38b70791d8ec69348fc9ab07741c3386e1e))
+
 # [2.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.16.0...@teamturing/katex-utils@2.17.0) (2024-02-28)
 
 ### Features
