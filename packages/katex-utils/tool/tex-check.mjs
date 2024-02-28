@@ -189,7 +189,7 @@ const CHECK_TEX_SYNTAX = true;
 const processing = async () => {
   for (const { id, task_id, problem_tex, solution_tex, answer, answer_type } of problems) {
     index += 1;
-    if (index % 100 === 0) {
+    if (index % 2000 === 0) {
       print(`Processing: ${index}th`);
     }
 
