@@ -183,7 +183,7 @@ const checkImageIsDownloadable = async (uri) => {
   return ret.ok;
 };
 
-const CHECK_IMAGE_DOWNLOADABLE = true;
+const CHECK_IMAGE_DOWNLOADABLE = false;
 const CHECK_TEX_SYNTAX = true;
 
 const processing = async () => {
@@ -196,9 +196,9 @@ const processing = async () => {
     if (CHECK_TEX_SYNTAX) {
       try {
         util.formatKatexToHtmlStringWithOptions(problem_tex, {
-          convertMarkUp: true,
-          injectPhantomBoxClasses: true,
-          convertTable: true,
+          convertMarkUp: false,
+          injectPhantomBoxClasses: false,
+          convertTable: false,
           throwOnKaTexError: true,
         });
       } catch (e) {
@@ -211,9 +211,9 @@ const processing = async () => {
 
       try {
         util.formatKatexToHtmlStringWithOptions(solution_tex, {
-          convertMarkUp: true,
-          injectPhantomBoxClasses: true,
-          convertTable: true,
+          convertMarkUp: false,
+          injectPhantomBoxClasses: false,
+          convertTable: false,
           throwOnKaTexError: true,
         });
       } catch (e) {

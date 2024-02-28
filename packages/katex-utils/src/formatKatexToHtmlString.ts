@@ -159,6 +159,16 @@ const convertTableMarkToHTML = (rootText: string) => {
   }
 };
 
+function isSubStringMatch(str: string, match: string, offset: number) {
+  if (str.length < offset + match.length) return false;
+  for (let i = offset; i < offset + match.length; i++) {
+    if (match.charAt(i - offset) !== str.charAt(i)) {
+      return false;
+    }
+  }
+  return true;
+}
+
 const renderToStringWithDollar = (
   text: string,
   { throwOnError = false }: { throwOnError?: boolean } = { throwOnError: false },
@@ -168,40 +178,43 @@ const renderToStringWithDollar = (
   let endIndex = 0;
   let resultHTML = '';
   let metDollar = false;
+  let ignoreDollarCount = 0;
+  const hasColorBox = /\\colorbox{\w*?}/.test(text);
 
   for (let index = 0; index < text.length; index++) {
     const char = text[index];
 
     if (char === '$') {
       metDollar = true;
-      if (!dollarMode) {
-        endIndex = index;
-        resultHTML += text.slice(startIndex, endIndex);
-        startIndex = index;
-        dollarMode = true;
-      } else if (dollarMode) {
-        endIndex = index;
-        const targetString = text
-          .slice(startIndex + 1, endIndex)
-          .replace(/\n/g, '')
-          .replace(/<br ?\/?>/g, '');
-        try {
-          const renderResult = katex.renderToString(targetString, {
-            strict: 'ignore',
-            throwOnError,
-            errorColor: '#CF222E',
-            trust: true,
-            output: 'html',
-            displayMode: false,
-          });
-          resultHTML += renderResult;
-          startIndex = index + 1;
-        } catch (e) {
-          if (throwOnError) {
-            throw e;
+      if (ignoreDollarCount > 0) {
+        ignoreDollarCount -= 1;
+      } else if (hasColorBox && !dollarMode && isSubStringMatch(text, '$\\colorbox', index)) {
+        ignoreDollarCount = 2;
+      } else {
+        if (!dollarMode) {
+          // process previous non-equation chunk
+          endIndex = index;
+          resultHTML += text.slice(startIndex, endIndex);
+          startIndex = index;
+          dollarMode = true;
+        } else if (dollarMode) {
+          // process previous equation chunk
+          endIndex = index;
+          const targetString = text
+            .slice(startIndex + 1, endIndex)
+            .replace(/\n/g, '')
+            .replace(/<br ?\/?>/g, '');
+          try {
+            resultHTML += processWithKaTex(targetString);
+          } catch (e) {
+            if (throwOnError) {
+              throw e;
+            }
+          } finally {
+            startIndex = index + 1;
+            dollarMode = false;
           }
         }
-        dollarMode = false;
       }
     }
   }
@@ -212,6 +225,24 @@ const renderToStringWithDollar = (
   resultHTML += text.slice(startIndex);
 
   return resultHTML;
+
+  function processWithKaTex(equation: string) {
+    const targetString = equation.replace(/\n/g, '').replace(/<br ?\/?>/g, '');
+    try {
+      return katex.renderToString(targetString, {
+        strict: 'ignore',
+        throwOnError,
+        errorColor: '#CF222E',
+        trust: true,
+        output: 'html',
+        displayMode: false,
+      });
+    } catch (e) {
+      if (throwOnError) {
+        throw e;
+      }
+    }
+  }
 };
 
 /**
