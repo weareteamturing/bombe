@@ -230,7 +230,7 @@ describe('기타', () => {
     );
   });
 
-  it.skip('\\colorbox', () => {
+  it('\\colorbox', () => {
     const tex = `$\\colorbox{aqua}{$\\sqrt{123}$}$
 This is Colored Box Test $\\colorbox{black}{123}$ $a^2+b^2=c^4 \\qquad \\begin{aligned} a && b \\\\ a && b+c && d \\end{aligned}$
 
@@ -246,38 +246,34 @@ w &\\equiv D_y+[(2.6)m-0.2]-2+(d-1) \\pmod 7\\\\
 });
 
 describe('1000개의 문제에 대한 Snapshot', () => {
-  it('문제의 Tex들은 옵션에 상관없이 결과가 동일하다', () => {
-    const problems: {
-      id: number;
-      task_id: number;
-      problem_tex: string;
-      solution_tex: string;
-      answer: number;
-      answer_type: string;
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
-    }[] = require('../test/problems_for_test.json');
+  const problems: {
+    id: number;
+    task_id: number;
+    problem_tex: string;
+    solution_tex: string;
+    answer: number;
+    answer_type: string;
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+  }[] = require('../test/problems_for_test.json');
+  it.each(problems)('문제의 Tex들은 옵션에 상관없이 결과가 동일하다 %p.id', ({ solution_tex, problem_tex }) => {
+    const problemWithoutOptions = formatKatexToHtmlStringWithOptions(problem_tex, {
+      convertMarkUp: false,
+      convertTable: false,
+      injectPhantomBoxClasses: false,
+      throwOnKaTexError: true,
+    });
+    const problemWithOptions = formatKatexToHtmlString(problem_tex);
+    const solutionWithoutOptions = formatKatexToHtmlStringWithOptions(solution_tex, {
+      convertMarkUp: false,
+      convertTable: false,
+      injectPhantomBoxClasses: false,
+      throwOnKaTexError: true,
+    });
+    const solutionWithOptions = formatKatexToHtmlString(solution_tex);
 
-    expect(problems.length).toBe(1000);
-    for (const { problem_tex, solution_tex } of problems) {
-      const problemWithoutOptions = formatKatexToHtmlStringWithOptions(problem_tex, {
-        convertMarkUp: false,
-        convertTable: false,
-        injectPhantomBoxClasses: false,
-        throwOnKaTexError: true,
-      });
-      const problemWithOptions = formatKatexToHtmlString(problem_tex);
-      const solutionWithoutOptions = formatKatexToHtmlStringWithOptions(solution_tex, {
-        convertMarkUp: false,
-        convertTable: false,
-        injectPhantomBoxClasses: false,
-        throwOnKaTexError: true,
-      });
-      const solutionWithOptions = formatKatexToHtmlString(solution_tex);
-
-      expect(problemWithOptions).toBe(problemWithoutOptions);
-      expect(solutionWithOptions).toBe(solutionWithoutOptions);
-      expect(problemWithOptions).toMatchSnapshot();
-      expect(solutionWithOptions).toMatchSnapshot();
-    }
+    expect(problemWithOptions).toBe(problemWithoutOptions);
+    expect(solutionWithOptions).toBe(solutionWithoutOptions);
+    expect(problemWithOptions).toMatchSnapshot();
+    expect(solutionWithOptions).toMatchSnapshot();
   });
 });
