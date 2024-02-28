@@ -177,6 +177,7 @@ const renderToStringWithDollar = (
     }
 
     let equation = '';
+    let isClosedDollarExist = false;
     let j = i + 1;
     for (; j < text.length; ) {
       const equationChar = text.charAt(j);
@@ -190,13 +191,21 @@ const renderToStringWithDollar = (
           j += 10;
         }
       } else if (equationChar === '$') {
+        isClosedDollarExist = true;
         break;
       } else {
         equation += equationChar;
         j += 1;
       }
     }
-    result += convertEquationToHtmlWithKaTex(equation);
+    if (equation) {
+      if (isClosedDollarExist) {
+        result += convertEquationToHtmlWithKaTex(equation);
+      } else {
+        // concat skipped begining dollar again
+        result += '$' + equation;
+      }
+    }
     i = j + 1;
   }
 

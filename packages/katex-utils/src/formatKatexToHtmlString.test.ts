@@ -222,7 +222,7 @@ describe('개념집', () => {
 });
 
 describe('기타', () => {
-  it('throwOnKaTexError flag', () => {
+  it('throwOnKaTexError flag가 설정되었다면 잘못된 문법에서 Error를 던진다', () => {
     const errorTex = `$\\underline\\dfrac{1}{4}$`;
     expect(() => formatKatexToHtmlStringWithOptions(errorTex)).not.toThrowError();
     expect(() => formatKatexToHtmlStringWithOptions(errorTex, { throwOnKaTexError: true })).toThrowError(
@@ -230,7 +230,7 @@ describe('기타', () => {
     );
   });
 
-  it('\\colorbox', () => {
+  it('\\colorbox 문법이 정상적으로 파싱된다', () => {
     const tex = `$\\colorbox{aqua}{$\\sqrt{123}$}$
 This is Colored Box Test $\\colorbox{black}{123}$ $a^2+b^2=c^4 \\qquad \\begin{aligned} a && b \\\\ a && b+c && d \\end{aligned}$
 
@@ -242,6 +242,11 @@ w &\\equiv D_y+[(2.6)m-0.2]-2+(d-1) \\pmod 7\\\\
 \\end{aligned}$`;
 
     expect(() => formatKatexToHtmlStringWithOptions(tex, { throwOnKaTexError: true })).not.toThrowError();
+  });
+
+  it('$가 쌍을 이루지 않는다면 그 부분은 수식으로 처리되지 않는다', () => {
+    const tex = `$a+b+c`;
+    expect(formatKatexToHtmlString(tex)).toBe('<div class="_cms_content-frame">$a+b+c</div>');
   });
 });
 
