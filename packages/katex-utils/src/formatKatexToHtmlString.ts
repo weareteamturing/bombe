@@ -178,42 +178,31 @@ const renderToStringWithDollar = (
   let endIndex = 0;
   let resultHTML = '';
   let metDollar = false;
-  let ignoreDollarCount = 0;
-  const hasColorBox = /\\colorbox{\w*?}/.test(text);
 
   for (let index = 0; index < text.length; index++) {
     const char = text[index];
 
     if (char === '$') {
       metDollar = true;
-      if (ignoreDollarCount > 0) {
-        ignoreDollarCount -= 1;
-      } else if (hasColorBox && !dollarMode && isSubStringMatch(text, '$\\colorbox', index)) {
-        ignoreDollarCount = 2;
-      } else {
-        if (!dollarMode) {
-          // process previous non-equation chunk
-          endIndex = index;
-          resultHTML += text.slice(startIndex, endIndex);
-          startIndex = index;
-          dollarMode = true;
-        } else if (dollarMode) {
-          // process previous equation chunk
-          endIndex = index;
-          const targetString = text
-            .slice(startIndex + 1, endIndex)
-            .replace(/\n/g, '')
-            .replace(/<br ?\/?>/g, '');
-          try {
-            resultHTML += processWithKaTex(targetString);
-          } catch (e) {
-            if (throwOnError) {
-              throw e;
-            }
-          } finally {
-            startIndex = index + 1;
-            dollarMode = false;
+      if (!dollarMode) {
+        // process previous non-equation chunk
+        endIndex = index;
+        resultHTML += text.slice(startIndex, endIndex);
+        startIndex = index;
+        dollarMode = true;
+      } else if (dollarMode) {
+        // process previous equation chunk
+        endIndex = index;
+        const targetString = text.slice(startIndex + 1, endIndex);
+        try {
+          resultHTML += processWithKaTex(targetString);
+        } catch (e) {
+          if (throwOnError) {
+            throw e;
           }
+        } finally {
+          startIndex = index + 1;
+          dollarMode = false;
         }
       }
     }

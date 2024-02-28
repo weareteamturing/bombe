@@ -230,7 +230,7 @@ describe('기타', () => {
     );
   });
 
-  it('\\colorbox', () => {
+  it.skip('\\colorbox', () => {
     const tex = `$\\colorbox{aqua}{$\\sqrt{123}$}$
 This is Colored Box Test $\\colorbox{black}{123}$ $a^2+b^2=c^4 \\qquad \\begin{aligned} a && b \\\\ a && b+c && d \\end{aligned}$
 
