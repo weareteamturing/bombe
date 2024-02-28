@@ -291,6 +291,9 @@ const processing = async () => {
 measureStart('processing');
 await processing();
 measureEnd('processing');
-printSuccess(`Done, error: ${errors.length}, Saved to data/result.json`);
+print(`Done, error: ${errors.length}, Saved to data/result.json`);
+if (!errors.length) {
+  printSuccess('No Error!');
+}
 
 writeJson('./tool/data/result.json', errors);
