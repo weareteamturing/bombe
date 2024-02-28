@@ -1303,3 +1303,7 @@ img {
 ._cms_phantom_border_invisible {
     border: transparent !important;
 }
+
+.colorbox {
+    border-radius: 50%;
+}
