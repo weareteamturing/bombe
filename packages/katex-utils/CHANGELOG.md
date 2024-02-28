@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.15.0...@teamturing/katex-utils@2.16.0) (2024-02-28)
+
+### Features
+
+- **katex-utils:** katex support \colorbox syntax + enhance test, tex checker ([1b11442](https://github.com/weareteamturing/bombe/commit/1b11442be14040bc63399a0b61c7fafd4671fea1))
+
 # [2.15.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.14.0...@teamturing/katex-utils@2.15.0) (2024-02-26)
 
 ### Features
