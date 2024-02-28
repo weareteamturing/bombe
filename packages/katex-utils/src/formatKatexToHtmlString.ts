@@ -3,7 +3,9 @@ import { parse, NodeType, HTMLElement } from 'node-html-parser';
 
 import { injectHtmlToContentFrame } from './injectHtmlToContentFrame';
 import { choiceSelector } from './internal/choiceSelector';
+import { findBalancedBracketEndIndex } from './internal/findBalancedBracketEndIndex';
 import { isNullable, isValidJSON, isNotEmptyString } from './internal/is';
+import { isSubStringMatch } from './internal/isSubStringMatch';
 import { removeLineBreak } from './internal/removeLineBreak';
 
 /**
@@ -159,63 +161,47 @@ const convertTableMarkToHTML = (rootText: string) => {
   }
 };
 
-function isSubStringMatch(str: string, match: string, offset: number) {
-  if (str.length < offset + match.length) return false;
-  for (let i = offset; i < offset + match.length; i++) {
-    if (match.charAt(i - offset) !== str.charAt(i)) {
-      return false;
-    }
-  }
-  return true;
-}
-
 const renderToStringWithDollar = (
   text: string,
   { throwOnError = false }: { throwOnError?: boolean } = { throwOnError: false },
-) => {
-  let dollarMode = false;
-  let startIndex = 0;
-  let endIndex = 0;
-  let resultHTML = '';
-  let metDollar = false;
+): string => {
+  const hasColorBox = text.includes('\\colorbox{');
+  let result = '';
 
-  for (let index = 0; index < text.length; index++) {
-    const char = text[index];
+  for (let i = 0; i < text.length; ) {
+    const char = text.charAt(i);
+    if (char !== '$') {
+      result += char;
+      i += 1;
+      continue;
+    }
 
-    if (char === '$') {
-      metDollar = true;
-      if (!dollarMode) {
-        // process previous non-equation chunk
-        endIndex = index;
-        resultHTML += text.slice(startIndex, endIndex);
-        startIndex = index;
-        dollarMode = true;
-      } else if (dollarMode) {
-        // process previous equation chunk
-        endIndex = index;
-        const targetString = text.slice(startIndex + 1, endIndex);
-        try {
-          resultHTML += processWithKaTex(targetString);
-        } catch (e) {
-          if (throwOnError) {
-            throw e;
-          }
-        } finally {
-          startIndex = index + 1;
-          dollarMode = false;
+    let equation = '';
+    let j = i + 1;
+    for (; j < text.length; ) {
+      const equationChar = text.charAt(j);
+      if (hasColorBox && equationChar === '\\' && isSubStringMatch(text, '\\colorbox{', j)) {
+        equation += '\\colorbox{';
+        const colorBoxEndIndex = findBalancedBracketEndIndex({ text, startIndex: j + 9, topLevelBracketCount: 2 });
+        if (colorBoxEndIndex !== -1) {
+          equation += text.slice(j + 10, colorBoxEndIndex + 1);
+          j = colorBoxEndIndex + 1;
+        } else {
+          j += 10;
         }
+      } else if (equationChar === '$') {
+        break;
+      } else {
+        equation += equationChar;
+        j += 1;
       }
     }
+    result += convertEquationToHtmlWithKaTex(equation);
+    i = j + 1;
   }
-  if (!metDollar) {
-    return text;
-  }
 
-  resultHTML += text.slice(startIndex);
-
-  return resultHTML;
-
-  function processWithKaTex(equation: string) {
+  return result;
+  function convertEquationToHtmlWithKaTex(equation: string) {
     const targetString = equation.replace(/\n/g, '').replace(/<br ?\/?>/g, '');
     try {
       return katex.renderToString(targetString, {
