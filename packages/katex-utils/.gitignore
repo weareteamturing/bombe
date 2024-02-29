@@ -2,3 +2,4 @@ tool/tex_dimension_check/*.json
 tool/problem_check/*.json
 tool/hint_check/*.json
 tool/data/
+tool/**/*.json
