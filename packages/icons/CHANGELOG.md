@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.26.1...@teamturing/icons@1.27.0) (2024-03-06)
+
+### Features
+
+- **icons:** add WorkbookTwoColor icon ([1ce857a](https://github.com/weareteamturing/bombe/commit/1ce857ac9e236ac11d8e6ca5f7dc2f74009bc666))
+
 ## [1.26.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.26.0...@teamturing/icons@1.26.1) (2024-02-26)
 
 ### Bug Fixes
