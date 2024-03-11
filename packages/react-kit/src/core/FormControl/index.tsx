@@ -7,7 +7,7 @@ import SearchSelectInput from '../SearchSelectInput';
 import Select from '../Select';
 import TextInput from '../TextInput';
 import Textarea from '../Textarea';
-import View from '../View';
+import View, { ViewProps } from '../View';
 
 import FormControlCaption, { FormControlCaptionProps } from './FormControlCaption';
 import FormControlErrorMessage, { FormControlErrorMessageProps } from './FormControlErrorMessage';
@@ -36,7 +36,7 @@ type Props = {
    * FormControl이 허용하는 Input 컴포넌트를 추가로 정의합니다.
    */
   additionalInputComponentCandidates?: any[];
-};
+} & Pick<ViewProps, 'sx'>;
 
 type FormControlFieldProps = {
   name: string;
@@ -48,7 +48,14 @@ type FormControlContextValue = {} & Omit<Props, 'additionalInputComponentCandida
 const FormControlContext = createContext<FormControlContextValue>({});
 
 const FormControl = (
-  { children: propChildren, id, disabled, required, additionalInputComponentCandidates = [] }: PropsWithChildren<Props>,
+  {
+    children: propChildren,
+    id,
+    disabled,
+    required,
+    additionalInputComponentCandidates = [],
+    sx,
+  }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
 ) => {
   const [relocatableComponentsObject, restComponents] = useRelocation({
@@ -78,7 +85,7 @@ const FormControl = (
   return (
     <FormControlContext.Provider value={{ id, disabled, required }}>
       {isHorizontalLayoutNeeded ? (
-        <View ref={ref} display={'flex'} sx={{ columnGap: 2 }}>
+        <View ref={ref} display={'flex'} sx={{ columnGap: 2, ...sx }}>
           <View display={'inline-flex'}>
             {cloneElement(InputComponent as ReactElement, { id, disabled, required })}
           </View>
@@ -94,7 +101,7 @@ const FormControl = (
           ref={ref}
           display={'flex'}
           flexDirection={'column'}
-          sx={{ '& > label': { mb: 1 }, '& > span': { mt: 1 } }}
+          sx={{ '& > label': { mb: 1 }, '& > span': { mt: 1 }, ...sx }}
         >
           {relocatableComponentsObject.label}
           {cloneElement(InputComponent as ReactElement, { id, disabled, required })}
