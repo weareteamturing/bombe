@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.9](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.8...@teamturing/react-kit@2.21.9) (2024-03-11)
+
+### Bug Fixes
+
+- **react-kit:** update FormControl component interface ([79eae57](https://github.com/weareteamturing/bombe/commit/79eae57a345b5aad81271cd06025d126fdc4a662))
+
 ## [2.21.8](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.7...@teamturing/react-kit@2.21.8) (2024-03-06)
 
 **Note:** Version bump only for package @teamturing/react-kit
