@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.28.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.27.0...@teamturing/icons@1.28.0) (2024-03-26)
+
+### Features
+
+- **icons:** add Twinkle, League icons ([21b89a0](https://github.com/weareteamturing/bombe/commit/21b89a0cbf9bc7d33f577044f9010b893539dc93))
+
 # [1.27.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.26.1...@teamturing/icons@1.27.0) (2024-03-06)
 
 ### Features
