@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.29.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.28.0...@teamturing/icons@1.29.0) (2024-03-29)
+
+### Features
+
+- **icons:** add star_color icon ([e5176fb](https://github.com/weareteamturing/bombe/commit/e5176fb6221098b7da127f6c89490d26e8554189))
+
 # [1.28.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.27.0...@teamturing/icons@1.28.0) (2024-03-26)
 
 ### Features
