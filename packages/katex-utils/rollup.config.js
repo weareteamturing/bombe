@@ -19,11 +19,6 @@ module.exports = [
         format: 'esm',
         preserveModulesRoot: 'src',
       },
-      {
-        dir: 'iife',
-        format: 'iife',
-        name: 'KatexUtils',
-      },
     ],
     plugins: [
       nodeResolve({ extensions: ['.ts', '.js'] }),
@@ -33,7 +28,7 @@ module.exports = [
         targets: [
           {
             src: 'fonts/*',
-            dest: ['dist/fonts', 'esm/fonts', 'iife/fonts'],
+            dest: ['dist/fonts', 'esm/fonts'],
           },
         ],
         hook: 'buildEnd',
