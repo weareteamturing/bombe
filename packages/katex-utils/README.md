@@ -45,7 +45,7 @@
 
 1. `lerna run build` 로 프로젝트를 빌드하여 `packages/katex-utils/dist` 에 현재 소스코드로 빌드된 결과물을 준비시킨다.
 
-2. tool/data에 `all.json`을 준비한다. `all.json`에 있는 json 형식대로 DB에서 문제들의 정보를 조회하여 json파일 형식으로 준비한다.(이 때, DB에서 쿼리를 해온 Tex 결과물이 아직 TCMS의 변경사항을 반영하지 않고 있을 수 있다.)
+2. `tool/problem_check`에 `problems.json`을 준비한다. `problems.json`에 있는 json 형식대로 DB에서 문제들의 정보를 조회하여 json파일 형식으로 준비한다.
 
 ```sql
 select id,
@@ -68,3 +68,5 @@ limit 1000000;
 const CHECK_IMAGE_DOWNLOADABLE = true;
 const CHECK_TEX_SYNTAX = true;
 ```
+
+5. jest test도 실행시켜준다. snapshot이 검사된다.

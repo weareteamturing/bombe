@@ -121,9 +121,9 @@ console.warn = (...args) => {
 };
 
 /** @type {{id: number; task_id: number; problem_tex: string; solution_tex: string; answer: number; answer_type: string;}[]}  */
-const problems = require('./data/all.json');
+const problems = require('./problems.json');
 
-const util = require('../dist/index.js');
+const util = require('../../dist/index.js');
 
 printSuccess(problems.length);
 
@@ -291,9 +291,9 @@ const processing = async () => {
 measureStart('processing');
 await processing();
 measureEnd('processing');
-print(`Done, error: ${errors.length}, Saved to data/result.json`);
+print(`Done, error: ${errors.length}, Saved to result.json`);
 if (!errors.length) {
   printSuccess('No Error!');
 }
 
-writeJson('./tool/data/result.json', errors);
+writeJson('./tool/problem_check/result.json', errors);

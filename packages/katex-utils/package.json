@@ -25,7 +25,10 @@
     "check:type": "tsc --noEmit",
     "test": "jest --config ./jest.config.js",
     "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist && rollup --config rollup.config.js",
-    "check:tex": "yarn test && yarn zx tool/tex-check.mjs"
+    "check:problem": "yarn zx tool/problem_check/tex-check.mjs",
+    "check:hint": "yarn zx tool/hint_check/hint-check.mjs",
+    "check:problem-tex-dimension": "yarn zx tool/problem_tex_dimension_check/tex-dimension-check.mjs",
+    "check:hint-tex-dimension": "yarn zx tool/hint_tex_dimension_check/tex-dimension-check.mjs"
   },
   "bugs": {
     "url": "https://github.com/weareteamturing/bombe/issues"
@@ -37,6 +40,7 @@
   "devDependencies": {
     "@rollup/plugin-terser": "0.4.4",
     "@types/katex": "0.16.7",
+    "puppeteer": "^22.3.0",
     "rollup-plugin-copy": "3.5.0",
     "zx": "7.2.3"
   }
