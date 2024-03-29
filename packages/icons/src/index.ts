@@ -170,6 +170,7 @@ export { default as SoundOnIcon } from './SoundOn';
 export { default as SpeakerIcon } from './Speaker';
 export { default as StackupIcon } from './Stackup';
 export { default as StarIcon } from './Star';
+export { default as StarColorIcon } from './StarColor';
 export { default as StoreIcon } from './Store';
 export { default as SyncIcon } from './Sync';
 export { default as TestUploadColorIcon } from './TestUploadColor';
