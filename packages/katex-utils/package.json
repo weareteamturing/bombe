@@ -8,8 +8,7 @@
   "main": "./dist/index.js",
   "files": [
     "dist",
-    "esm",
-    "iife"
+    "esm"
   ],
   "exports": {
     "require": "./dist/index.js",
