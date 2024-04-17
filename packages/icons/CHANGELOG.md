@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.29.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.29.0...@teamturing/icons@1.29.1) (2024-04-17)
+
+### Bug Fixes
+
+- **icons:** add EmojiPlus, EmojiPlusDash icons ([2688fd8](https://github.com/weareteamturing/bombe/commit/2688fd8abbbdeae5f5a1d93c92a7d9507e3b8b37))
+
 # [1.29.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.28.0...@teamturing/icons@1.29.0) (2024-03-29)
 
 ### Features
