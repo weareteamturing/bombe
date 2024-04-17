@@ -65,6 +65,8 @@ export { default as DocumentIcon } from './Document';
 export { default as DotsIcon } from './Dots';
 export { default as DownloadIcon } from './Download';
 export { default as EmojiIcon } from './Emoji';
+export { default as EmojiPlusIcon } from './EmojiPlus';
+export { default as EmojiPlusDashIcon } from './EmojiPlusDash';
 export { default as EngIcon } from './Eng';
 export { default as EqualIcon } from './Equal';
 export { default as EraserIcon } from './Eraser';
