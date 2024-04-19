@@ -1,22 +1,21 @@
 import { InfoInCircleIcon } from '@teamturing/icons';
 import { forcePixelValue } from '@teamturing/utils';
-import { ComponentType, PropsWithChildren, SVGProps } from 'react';
+import { ComponentType, HTMLAttributes, PropsWithChildren, Ref, SVGProps, forwardRef } from 'react';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 
 type FlashVariantType = 'neutral' | 'danger';
-type Props = { variant?: FlashVariantType; icon?: ComponentType<SVGProps<SVGSVGElement>> } & SxProp;
+type Props = { variant?: FlashVariantType; icon?: ComponentType<SVGProps<SVGSVGElement>> } & SxProp &
+  HTMLAttributes<HTMLDivElement>;
 
-const Flash = ({
-  variant = 'neutral',
-  icon: Icon = InfoInCircleIcon,
-  children,
-  ...props
-}: PropsWithChildren<Props>) => {
+const Flash = (
+  { variant = 'neutral', icon: Icon = InfoInCircleIcon, children, ...props }: PropsWithChildren<Props>,
+  ref: Ref<HTMLDivElement>,
+) => {
   return (
-    <BaseFlash variant={variant} {...props}>
+    <BaseFlash ref={ref} variant={variant} {...props}>
       <Icon />
       {children}
     </BaseFlash>
@@ -71,5 +70,5 @@ const BaseFlash = styled.div<Props>`
   ${sx}
 `;
 
-export default Flash;
+export default forwardRef(Flash);
 export type { Props as FlashProps };
