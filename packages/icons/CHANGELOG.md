@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.30.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.29.1...@teamturing/icons@1.30.0) (2024-05-02)
+
+### Features
+
+- **icons:** add PaperPenColor, PaperPen, PaperTwo icons ([a0fd570](https://github.com/weareteamturing/bombe/commit/a0fd570ca2232721003d7093c158071f459a9ac9))
+
 ## [1.29.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.29.0...@teamturing/icons@1.29.1) (2024-04-17)
 
 ### Bug Fixes
