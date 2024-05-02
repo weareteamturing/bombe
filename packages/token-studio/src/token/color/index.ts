@@ -99,6 +99,7 @@ const iconColor = {
   'icon/neutral/bold': palette.gray400,
   'icon/neutral/bolder': palette.gray700,
   'icon/accent/gray': palette.gray900,
+  'icon/accent/blue/subtle': palette.blue200,
   'icon/accent/blue': palette.blue500,
   'icon/accent/blue/bold': palette.blue700,
   'icon/accent/green': palette.green500,
