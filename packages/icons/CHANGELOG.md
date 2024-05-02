@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.32.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.31.0...@teamturing/icons@1.32.0) (2024-05-02)
+
+### Features
+
+- **icons:** add Enter icon ([347eb83](https://github.com/weareteamturing/bombe/commit/347eb83fcbdf45b5cee7d935a8f57c0cce102cbd))
+
 # [1.31.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.30.0...@teamturing/icons@1.31.0) (2024-05-02)
 
 ### Features
