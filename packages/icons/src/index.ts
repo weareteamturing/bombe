@@ -68,6 +68,7 @@ export { default as EmojiIcon } from './Emoji';
 export { default as EmojiPlusIcon } from './EmojiPlus';
 export { default as EmojiPlusDashIcon } from './EmojiPlusDash';
 export { default as EngIcon } from './Eng';
+export { default as EnterIcon } from './Enter';
 export { default as EqualIcon } from './Equal';
 export { default as EraserIcon } from './Eraser';
 export { default as ExclamationPointInCircleIcon } from './ExclamationPointInCircle';
