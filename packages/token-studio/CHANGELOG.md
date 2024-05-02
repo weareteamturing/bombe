@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.2.2...@teamturing/token-studio@1.3.0) (2024-05-02)
+
+### Features
+
+- **token-studio:** add icon/accent/blue/subtle color token ([e7fead6](https://github.com/weareteamturing/bombe/commit/e7fead66a7533901c76e7ca4bbd8e998a0e3eb94))
+
 ## [1.2.2](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.2.1...@teamturing/token-studio@1.2.2) (2024-01-18)
 
 ### Bug Fixes
