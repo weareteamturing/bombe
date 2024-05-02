@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.31.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.30.0...@teamturing/icons@1.31.0) (2024-05-02)
+
+### Features
+
+- **icons:** add LetterCrownOpenColor, LetterHeartOpenColor icons ([488103b](https://github.com/weareteamturing/bombe/commit/488103b0c6b6c36d438e91f92e7c14cd686248e2))
+
 # [1.30.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.29.1...@teamturing/icons@1.30.0) (2024-05-02)
 
 ### Features
