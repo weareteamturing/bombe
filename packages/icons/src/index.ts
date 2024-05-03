@@ -188,6 +188,7 @@ export { default as ThunderIcon } from './Thunder';
 export { default as TicketIcon } from './Ticket';
 export { default as TicketColorIcon } from './TicketColor';
 export { default as TimeIcon } from './Time';
+export { default as TimerIcon } from './Timer';
 export { default as TopIcon } from './Top';
 export { default as TouchIcon } from './Touch';
 export { default as TrashIcon } from './Trash';
