@@ -97,7 +97,7 @@ const TextInput = (
           'flexShrink': 0,
           'fontSize': 'xxs',
           'fontWeight': 'medium',
-          'color': theme.colors['text/neutral'],
+          'color': theme.colors['text/neutral/subtler'],
           '& > svg': { display: 'block', width: 16, height: 16, color: theme.colors['icon/neutral/bold'] },
         }}
       >
