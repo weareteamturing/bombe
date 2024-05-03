@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.19](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.18...@teamturing/react-kit@2.21.19) (2024-05-03)
+
+### Bug Fixes
+
+- **react-kit:** update TextInput trailingVisual color ([a43a23a](https://github.com/weareteamturing/bombe/commit/a43a23a65f21b90351d8e7308accd6dc73d9654a))
+
 ## [2.21.18](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.17...@teamturing/react-kit@2.21.18) (2024-05-03)
 
 **Note:** Version bump only for package @teamturing/react-kit
