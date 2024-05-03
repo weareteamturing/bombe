@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.33.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.32.0...@teamturing/icons@1.33.0) (2024-05-03)
+
+### Features
+
+- **icons:** add Timer icon and change Out icon ([c8d9df6](https://github.com/weareteamturing/bombe/commit/c8d9df6f1155927f0eb399f645532bf95fd8b223))
+
 # [1.32.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.31.0...@teamturing/icons@1.32.0) (2024-05-02)
 
 ### Features
