@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo, type ComponentProps } from 'react';
+import React, { useState, useCallback, useMemo, type ComponentProps } from 'react';
 
 import { useTicker, UseTickerParams } from './useTicker';
 
