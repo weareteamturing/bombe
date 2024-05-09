@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.8.0...@teamturing/timer@1.8.1) (2024-05-09)
+
+### Bug Fixes
+
+- **timer:** add babel preset react to rollup config ([9b3e39d](https://github.com/weareteamturing/bombe/commit/9b3e39d2b12030487938792f014b3963dd5dad4c))
+
 # [1.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.7.1...@teamturing/timer@1.8.0) (2024-05-09)
 
 ### Bug Fixes
