@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo, type ComponentProps } from 'react';
+import { useState, useCallback, useMemo, type ComponentProps } from 'react';
 
 import { useTicker, UseTickerParams } from './useTicker';
 
@@ -37,7 +37,8 @@ export function useReverseTicker(params: UseTickerParams & { asForwardTicker?: b
   }, [TickerComponent, duration]);
 
   return {
-    startTicker: params.asForwardTicker ? _startTicker : startReverseTicker,
+    startTicker: startReverseTicker,
+    startForwardTicker: _startTicker,
     resetTicker: params.asForwardTicker ? _resetTicker : resetReverseTicker,
     tickSec: params.asForwardTicker ? _tickSec : duration - _tickSec,
     TickerComponent: params.asForwardTicker ? TickerComponent : ReverseTickerComponent,
