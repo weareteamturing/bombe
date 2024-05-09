@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.7.1...@teamturing/timer@1.8.0) (2024-05-09)
+
+### Bug Fixes
+
+- **timer:** fix react import ([8dd5f6c](https://github.com/weareteamturing/bombe/commit/8dd5f6c8005b10271bde21b30abdbc4fe5acede8))
+
+### Features
+
+- **timer:** useReverseTicker can act as forward ticker ([ae925e2](https://github.com/weareteamturing/bombe/commit/ae925e2273e643a0b7f8a9a28afe4874187612a3))
+
 ## [1.7.1](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.7.0...@teamturing/timer@1.7.1) (2024-05-09)
 
 ### Bug Fixes
