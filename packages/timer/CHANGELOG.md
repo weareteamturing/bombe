@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.7.0...@teamturing/timer@1.7.1) (2024-05-09)
+
+### Bug Fixes
+
+- **timer:** reverseTickerComponent ([4facea1](https://github.com/weareteamturing/bombe/commit/4facea105cc19c91daf69e3f583f496b35bdadb6))
+
 # [1.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.6.0...@teamturing/timer@1.7.0) (2024-05-09)
 
 ### Features
