@@ -34,7 +34,7 @@ export function useReverseTicker(params: UseTickerParams) {
         {({ tickSec }) => props.children({ tickSec: duration - tickSec })}
       </TickerComponent>
     );
-  }, [TickerComponent]);
+  }, [TickerComponent, duration]);
 
   return {
     startTicker,
