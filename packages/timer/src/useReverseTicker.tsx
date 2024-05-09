@@ -2,7 +2,7 @@ import React, { useState, useCallback, useMemo, type ComponentProps } from 'reac
 
 import { useTicker, UseTickerParams } from './useTicker';
 
-export function useReverseTicker(params: UseTickerParams) {
+export function useReverseTicker(params: UseTickerParams & { asForwardTicker?: boolean }) {
   const {
     startTicker: _startTicker,
     tickSec: _tickSec,
@@ -13,7 +13,7 @@ export function useReverseTicker(params: UseTickerParams) {
 
   const [duration, setDuration] = useState(0);
 
-  const startTicker = useCallback(
+  const startReverseTicker = useCallback(
     ({ durationSec, intervalSec, tickMillis }: { durationSec: number; intervalSec?: number; tickMillis?: number }) => {
       if (durationSec >= 0) {
         setDuration(durationSec);
@@ -23,7 +23,7 @@ export function useReverseTicker(params: UseTickerParams) {
     [_startTicker],
   );
 
-  const resetTicker = useCallback(() => {
+  const resetReverseTicker = useCallback(() => {
     _resetTicker();
     setDuration(0);
   }, [_resetTicker]);
@@ -37,10 +37,10 @@ export function useReverseTicker(params: UseTickerParams) {
   }, [TickerComponent, duration]);
 
   return {
-    startTicker,
-    resetTicker,
-    tickSec: duration - _tickSec,
-    TickerComponent: ReverseTickerComponent,
+    startTicker: params.asForwardTicker ? _startTicker : startReverseTicker,
+    resetTicker: params.asForwardTicker ? _resetTicker : resetReverseTicker,
+    tickSec: params.asForwardTicker ? _tickSec : duration - _tickSec,
+    TickerComponent: params.asForwardTicker ? TickerComponent : ReverseTickerComponent,
     ...rest,
   };
 }
