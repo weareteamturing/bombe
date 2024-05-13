@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.34.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.33.0...@teamturing/icons@1.34.0) (2024-05-13)
+
+### Features
+
+- **icons:** change Coupon icon and delete WorkbookTwoColor icon ([0408333](https://github.com/weareteamturing/bombe/commit/0408333bc82a9915026baa89f83c9c783d7e4d09))
+
 # [1.33.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.32.0...@teamturing/icons@1.33.0) (2024-05-03)
 
 ### Features
