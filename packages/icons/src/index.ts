@@ -208,6 +208,5 @@ export { default as WarningIcon } from './Warning';
 export { default as WifiIcon } from './Wifi';
 export { default as WorkbookIcon } from './Workbook';
 export { default as WorkbookColorIcon } from './WorkbookColor';
-export { default as WorkbookTwoColorIcon } from './WorkbookTwoColor';
 export { default as WrongIcon } from './Wrong';
 export { default as YoutubeIcon } from './Youtube';
