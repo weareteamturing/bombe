@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.35.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.34.0...@teamturing/icons@1.35.0) (2024-05-26)
+
+### Features
+
+- **icons:** add home.svg ([afd915d](https://github.com/weareteamturing/bombe/commit/afd915d2c2c79bc5e5767919aa2d592772663718))
+
 # [1.34.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.33.0...@teamturing/icons@1.34.0) (2024-05-13)
 
 ### Features
