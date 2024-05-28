@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.22.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.22...@teamturing/react-kit@2.22.0) (2024-05-28)
+
+### Features
+
+- **react-kit:** add disabledPlaceholderOption props to Select ([82f36be](https://github.com/weareteamturing/bombe/commit/82f36bea73f19a46667525fc9b82ec0def3c74c0))
+
 ## [2.21.22](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.21.21...@teamturing/react-kit@2.21.22) (2024-05-27)
 
 **Note:** Version bump only for package @teamturing/react-kit
