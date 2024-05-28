@@ -29,10 +29,22 @@ type Props = {
    */
   leadingVisual?: ElementType | ReactNode;
   placeholder?: string;
+  /**
+   * option list에서 placeholder option를 선택할 수 있는지 여부를 나타냅니다
+   */
+  disabledPlaceholderOption?: boolean;
 } & SelectHTMLAttributes<HTMLSelectElement>;
 
 const Select = (
-  { children, disabled, validationStatus, leadingVisual: LeadingVisual, placeholder = '옵션 선택', ...props }: Props,
+  {
+    children,
+    disabled,
+    validationStatus,
+    disabledPlaceholderOption = false,
+    leadingVisual: LeadingVisual,
+    placeholder = '옵션 선택',
+    ...props
+  }: Props,
   ref: Ref<HTMLSelectElement>,
 ) => {
   const PLACEHOLDER_VALUE = '';
@@ -89,7 +101,7 @@ const Select = (
           }
         }}
       >
-        <SelectOption label={placeholder} value={PLACEHOLDER_VALUE} />
+        <SelectOption label={placeholder} value={PLACEHOLDER_VALUE} disabled={disabledPlaceholderOption} />
         {children}
       </BaseSelect>
       <StyledIcon
