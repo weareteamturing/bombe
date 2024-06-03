@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.36.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.35.2...@teamturing/icons@1.36.0) (2024-06-03)
+
+### Features
+
+- **icons:** add pill, pill_color icon ([091154d](https://github.com/weareteamturing/bombe/commit/091154d3b9eb08dfc0b69b71a40997b55d659e4e))
+
 ## [1.35.2](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.35.1...@teamturing/icons@1.35.2) (2024-05-30)
 
 ### Bug Fixes
