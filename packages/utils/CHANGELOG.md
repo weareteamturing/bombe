@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.2.0...@teamturing/utils@1.2.1) (2024-06-14)
+
+### Bug Fixes
+
+- **utils:** fix clipboard utils to prevent from calling func infinitely ([423411e](https://github.com/weareteamturing/bombe/commit/423411e32ed4252570ae95330800f07429bc20af))
+
 # [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.1.1...@teamturing/utils@1.2.0) (2024-01-29)
 
 ### Features
