@@ -18,9 +18,6 @@ const writeText: (data: string) => Promise<boolean> = async (data) => {
   안드로이드 인앱브라우저 등 clipboard api writeText()가 작동하지 않을 때를 대응합니다
 **/
 const writeTextWithExec: (data: string) => Promise<boolean> = async (data) => {
-  const isClipboardSuccess = await writeText(data);
-  if (isClipboardSuccess) return true;
-
   try {
     const body = document.body;
     const input = document.createElement('input');
