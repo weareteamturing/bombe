@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.2](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.8.1...@teamturing/timer@1.8.2) (2024-06-27)
+
+### Bug Fixes
+
+- **timer:** update rollup config for proper output ([eb79d8a](https://github.com/weareteamturing/bombe/commit/eb79d8aec749a0d5db6ae9b2ff18f0787279edf4))
+
 ## [1.8.1](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.8.0...@teamturing/timer@1.8.1) (2024-05-09)
 
 ### Bug Fixes
