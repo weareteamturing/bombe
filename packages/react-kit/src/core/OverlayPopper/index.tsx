@@ -3,8 +3,10 @@ import { isFunction } from '@teamturing/utils';
 import { Children, ForwardedRef, HTMLAttributes, ReactElement, ReactNode, RefObject, cloneElement } from 'react';
 import { useTheme } from 'styled-components';
 
+import useDelayedFunction from '../../hook/useDelayedFunction';
 import useFocusTrap, { FocusTrapHookSettings } from '../../hook/useFocusTrap';
 import useFocusZone, { FocusZoneHookSettings } from '../../hook/useFocusZone';
+import useMousePosition from '../../hook/useMousePosition';
 import useToggleState from '../../hook/useToggleState';
 import { OverlayProps } from '../Overlay';
 
@@ -13,13 +15,14 @@ type Props = {
     | ReactNode
     | ((
         popperProps: HTMLAttributes<HTMLElement>,
-        { isOpen, openOverlay }: { isOpen: boolean; openOverlay: () => void },
+        { isOpen, openOverlay, closeOverlay }: { isOpen: boolean; openOverlay: () => void; closeOverlay: () => void },
       ) => ReactNode);
   renderOverlay: (
     overlayProps: OverlayProps & { ref?: ForwardedRef<HTMLDivElement> },
     { isOpen, closeOverlay }: { isOpen: boolean; closeOverlay: () => void },
     { elements }: { elements: UseFloatingReturn['elements'] },
   ) => ReactNode;
+  triggeredBy?: 'click' | 'hover';
   placement?: Placement;
   focusZoneSettings?: Partial<FocusZoneHookSettings>;
   focusTrapSettings?: Partial<FocusTrapHookSettings>;
@@ -30,6 +33,7 @@ type Props = {
 const OverlayPopper = ({
   children: propChildren,
   renderOverlay,
+  triggeredBy = 'click',
   placement = 'bottom-start',
   focusZoneSettings,
   focusTrapSettings,
@@ -43,8 +47,9 @@ const OverlayPopper = ({
     middleware: [offset(theme.space[1]), flip(), shift()],
     strategy: 'fixed',
   });
-
   const [isOpen, toggleOverlay, openOverlay, closeOverlay] = useToggleState({ initialState: false });
+  const { x, y } = useMousePosition({ targetRef: refs.floating });
+
   const handleOverlayToggle = () => {
     if (!isOpen) onOpen?.();
     else onClose?.();
@@ -62,29 +67,44 @@ const OverlayPopper = ({
     closeOverlay();
   };
 
+  const delayedHandleOverlayClose = useDelayedFunction({ func: handleOverlayClose, delay: 150 });
+
   const handleDismiss = () => {
     handleOverlayClose();
   };
 
   const defaultPopperProps: HTMLAttributes<HTMLElement> = {
-    onClick: handleOverlayToggle,
-    onKeyDown: (e) => {
-      if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
-        e.preventDefault();
-        handleOverlayOpen();
-      }
-
-      e.stopPropagation();
-    },
     tabIndex: 0,
+    ...(triggeredBy === 'click'
+      ? {
+          onClick: handleOverlayToggle,
+          onKeyDown: (e) => {
+            if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
+              e.preventDefault();
+              handleOverlayOpen();
+            }
+
+            e.stopPropagation();
+          },
+        }
+      : triggeredBy === 'hover'
+      ? {
+          onMouseEnter: handleOverlayOpen,
+          onMouseLeave: () => {
+            if (x === 0 && y === 0) {
+              delayedHandleOverlayClose();
+            }
+          },
+        }
+      : {}),
     ...{ ref: refs.setReference },
   };
 
   const children = isFunction(propChildren)
-    ? propChildren({ ...defaultPopperProps }, { isOpen, openOverlay: handleOverlayOpen })
+    ? propChildren(defaultPopperProps, { isOpen, openOverlay: handleOverlayOpen, closeOverlay: handleOverlayClose })
     : Children.map(propChildren, (child) =>
         cloneElement(child as ReactElement<HTMLAttributes<HTMLElement>>, {
-          ...defaultPopperProps,
+          ...(defaultPopperProps as HTMLAttributes<HTMLElement>),
         }),
       );
 
@@ -106,6 +126,8 @@ const OverlayPopper = ({
           ignoreOutsideClickRefs: [refs.reference as RefObject<HTMLElement>],
           style: { ...floatingStyles },
           onDismiss: handleDismiss,
+          onMouseEnter: openOverlay,
+          onMouseLeave: delayedHandleOverlayClose,
         },
         { isOpen, closeOverlay: handleOverlayClose },
         { elements },
