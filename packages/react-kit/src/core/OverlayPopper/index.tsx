@@ -6,7 +6,6 @@ import { useTheme } from 'styled-components';
 import useDelayedFunction from '../../hook/useDelayedFunction';
 import useFocusTrap, { FocusTrapHookSettings } from '../../hook/useFocusTrap';
 import useFocusZone, { FocusZoneHookSettings } from '../../hook/useFocusZone';
-import useMousePosition from '../../hook/useMousePosition';
 import useToggleState from '../../hook/useToggleState';
 import { OverlayProps } from '../Overlay';
 
@@ -48,7 +47,6 @@ const OverlayPopper = ({
     strategy: 'fixed',
   });
   const [isOpen, toggleOverlay, openOverlay, closeOverlay] = useToggleState({ initialState: false });
-  const { x, y } = useMousePosition({ targetRef: refs.floating });
 
   const handleOverlayToggle = () => {
     if (!isOpen) onOpen?.();
@@ -90,11 +88,7 @@ const OverlayPopper = ({
       : triggeredBy === 'hover'
       ? {
           onMouseEnter: handleOverlayOpen,
-          onMouseLeave: () => {
-            if (x === 0 && y === 0) {
-              delayedHandleOverlayClose();
-            }
-          },
+          onMouseLeave: delayedHandleOverlayClose,
         }
       : {}),
     ...{ ref: refs.setReference },
@@ -126,8 +120,6 @@ const OverlayPopper = ({
           ignoreOutsideClickRefs: [refs.reference as RefObject<HTMLElement>],
           style: { ...floatingStyles },
           onDismiss: handleDismiss,
-          onMouseEnter: openOverlay,
-          onMouseLeave: delayedHandleOverlayClose,
         },
         { isOpen, closeOverlay: handleOverlayClose },
         { elements },
