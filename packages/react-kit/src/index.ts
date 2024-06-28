@@ -164,13 +164,19 @@ export { default as EnigmaUI } from './enigma/EnigmaUI';
 /**
  * hooks
  */
+export { default as useDelayedFunction } from './hook/useDelayedFunction';
+
 export { default as useDevice } from './hook/useDevice';
 
 export { default as useFocusTrap } from './hook/useFocusTrap';
 
 export { default as useFocusZone } from './hook/useFocusZone';
 
+export { default as useHover } from './hook/useHover';
+
 export { default as useMediaQuery } from './hook/useMediaQuery';
+
+export { default as useMousePosition } from './hook/useMousePosition';
 
 export { default as useOutsideClick } from './hook/useOutsideClick';
 
