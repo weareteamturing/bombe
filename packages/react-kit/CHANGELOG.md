@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.23.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.22.3...@teamturing/react-kit@2.23.0) (2024-06-28)
+
+### Features
+
+- **react-kit:** update OverlayPopper triggerBy props ([72f0c58](https://github.com/weareteamturing/bombe/commit/72f0c5875ed343b74d267db4e59b83412d8ad562))
+
 ## [2.22.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.22.2...@teamturing/react-kit@2.22.3) (2024-06-14)
 
 **Note:** Version bump only for package @teamturing/react-kit
