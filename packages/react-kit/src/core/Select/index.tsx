@@ -9,6 +9,7 @@ import {
   RefObject,
   forwardRef,
   useState,
+  useEffect,
 } from 'react';
 import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
@@ -57,6 +58,12 @@ const Select = (
   const focusSelect = () => {
     selectRef.current?.focus();
   };
+
+  useEffect(() => {
+    if (selectRef.current) {
+      setIsValueEmpty(selectRef.current.value === PLACEHOLDER_VALUE);
+    }
+  }, [selectRef.current]);
 
   return (
     <SelectWrapper
