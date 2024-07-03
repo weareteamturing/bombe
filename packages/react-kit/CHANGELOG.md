@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.23.1...@teamturing/react-kit@2.23.2) (2024-07-03)
+
+### Bug Fixes
+
+- **react-kit:** update Select component style ([dffedd8](https://github.com/weareteamturing/bombe/commit/dffedd802b0b26eaf30925202219520d971bb765))
+
 ## [2.23.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.23.0...@teamturing/react-kit@2.23.1) (2024-06-28)
 
 ### Bug Fixes
