@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.3.0...@teamturing/token-studio@1.4.0) (2024-08-20)
+
+### Features
+
+- **token-studio:** update color palatte ([32cddc1](https://github.com/weareteamturing/bombe/commit/32cddc143a771b2665504eb58361785e30cfc180))
+
 # [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.2.2...@teamturing/token-studio@1.3.0) (2024-05-02)
 
 ### Features
