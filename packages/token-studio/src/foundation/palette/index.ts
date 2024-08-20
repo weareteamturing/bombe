@@ -111,29 +111,29 @@ const skyBlue = {
 } as const;
 
 const indianRed = {
-  indianRed50: '#632A2A',
-  indianRed100: '#823838',
-  indianRed200: '#A84848',
-  indianRed300: '#D75C5C',
-  indianRed400: '#EC6565',
-  indianRed500: '#F08484',
-  indianRed600: '#F29898',
-  indianRed700: '#F6B8B8',
-  indianRed800: '#F9CFCF',
-  indianRed900: '#FDF0F0',
+  indianRed50: '#FDF0F0',
+  indianRed100: '#F9CFCF',
+  indianRed200: '#F6B8B8',
+  indianRed300: '#F29898',
+  indianRed400: '#F08484',
+  indianRed500: '#EC6565',
+  indianRed600: '#D75C5C',
+  indianRed700: '#A84848',
+  indianRed800: '#823838',
+  indianRed900: '#632A2A',
 } as const;
 
 const mustardYellow = {
-  mustardYellow50: '#675025',
-  mustardYellow100: '#876931',
-  mustardYellow200: '#AE883F',
-  mustardYellow300: '#DFAE51',
-  mustardYellow400: '#F5BF59',
-  mustardYellow500: '#F7CC7A',
-  mustardYellow600: '#F8D490',
-  mustardYellow700: '#FAE2B3',
-  mustardYellow800: '#FCEBCC',
-  mustardYellow900: '#FEF9EE',
+  mustardYellow50: '#FEF9EE',
+  mustardYellow100: '#FCEBCC',
+  mustardYellow200: '#FAE2B3',
+  mustardYellow300: '#F8D490',
+  mustardYellow400: '#F7CC7A',
+  mustardYellow500: '#F5BF59',
+  mustardYellow600: '#DFAE51',
+  mustardYellow700: '#AE883F',
+  mustardYellow800: '#876931',
+  mustardYellow900: '#675025',
 } as const;
 
 const palette = {
