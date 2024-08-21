@@ -19,6 +19,11 @@ module.exports = [
         format: 'esm',
         preserveModulesRoot: 'src',
       },
+      {
+        dir: 'iife',
+        format: 'iife',
+        name: 'KatexUtils',
+      },
     ],
     plugins: [
       nodeResolve({ extensions: ['.ts', '.js'] }),
