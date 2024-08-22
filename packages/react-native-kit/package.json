@@ -61,7 +61,6 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@types/react": "^18.2.44",
-    "eslint-config-expo": "^7.1.2",
     "react": "18.2.0",
     "react-native": "0.74.5",
     "react-native-builder-bob": "^0.30.0"
@@ -76,19 +75,6 @@
   "workspaces": [
     "example"
   ],
-  "jest": {
-    "preset": "react-native",
-    "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/lib/"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "../../.eslintrc",
-      "expo"
-    ]
-  },
   "eslintIgnore": [
     "node_modules/",
     "lib/",
