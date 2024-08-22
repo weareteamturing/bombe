@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.37.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.37.0...@teamturing/icons@1.37.1) (2024-08-19)
+
+### Bug Fixes
+
+- **icons:** change present icon ([73b0a2e](https://github.com/weareteamturing/bombe/commit/73b0a2ec14d23734516e74393e08dabbce6dc81a))
+
+# [1.37.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.36.0...@teamturing/icons@1.37.0) (2024-08-18)
+
+### Features
+
+- **icons:** add Book, Scroll icons ([55fbb47](https://github.com/weareteamturing/bombe/commit/55fbb47a4183db601821dc5a1222dfedb471aaca))
+
 # [1.36.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.35.2...@teamturing/icons@1.36.0) (2024-06-03)
 
 ### Features

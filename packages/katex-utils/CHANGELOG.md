@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.20.1](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.20.0...@teamturing/katex-utils@2.20.1) (2024-08-21)
+
+### Bug Fixes
+
+- **katex-utils:** fix iife release ([9531112](https://github.com/weareteamturing/bombe/commit/95311129599ab3ea6d4589e449f8513154d661c8))
+
+# [2.20.0](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.19.2...@teamturing/katex-utils@2.20.0) (2024-08-21)
+
+### Features
+
+- **katex-utils:** re-enable iife release ([bb31308](https://github.com/weareteamturing/bombe/commit/bb31308ceb815f6ca0496ad9cfb03655f7a8a7a0))
+
 ## [2.19.2](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.19.1...@teamturing/katex-utils@2.19.2) (2024-04-12)
 
 **Note:** Version bump only for package @teamturing/katex-utils
