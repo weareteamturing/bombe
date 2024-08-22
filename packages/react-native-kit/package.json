@@ -5,7 +5,6 @@
   "scripts": {
     "example": "yarn workspace @teamturing/react-native-kit-example",
     "dev": "yarn example start",
-    "test": "jest",
     "check:type": "tsc",
     "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
     "build": "bob build"
