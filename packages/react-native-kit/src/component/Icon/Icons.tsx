@@ -217,4 +217,3 @@ export { default as workbook } from '@teamturing/icons/svg/workbook.svg';
 export { default as workbook_color } from '@teamturing/icons/svg/workbook_color.svg';
 export { default as wrong } from '@teamturing/icons/svg/wrong.svg';
 export { default as youtube } from '@teamturing/icons/svg/youtube.svg';
-export { default as * } from '@teamturing/icons/svg/*.svg';
