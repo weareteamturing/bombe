@@ -2,7 +2,7 @@ import { Txt, type Typography, type TextConfigProp, type TxtEllipsizeMode } from
 import { useEffect, useRef } from 'react';
 import { Animated, Easing, View } from 'react-native';
 
-import type { LayoutStyle } from './Layout/LayoutStyle';
+import type { LayoutStyle } from './Layout';
 
 const numberWidthByTypography: Record<Typography, number> = {
   'H1': 16,
