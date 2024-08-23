@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.2.2...@teamturing/react-native-kit@1.2.3) (2024-08-23)
+
+### Bug Fixes
+
+- **react-native-kit:** fix import ([dc5ea21](https://github.com/weareteamturing/bombe/commit/dc5ea217e24344e7ceaacd3436bf87695284b017))
+- **react-native-kit:** fix lint ([0a8f0b6](https://github.com/weareteamturing/bombe/commit/0a8f0b6358f942cbf2c79b33d7b644a2a079f2a1))
+
 ## [1.2.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.2.1...@teamturing/react-native-kit@1.2.2) (2024-08-23)
 
 ### Bug Fixes
