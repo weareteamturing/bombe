@@ -8,7 +8,6 @@
     "check:type": "tsc",
     "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
     "build": "yarn gen:icon && yarn gen:theme && bob build",
-    "test": "jest",
     "gen:icon": "bash ./script/gen_icon.sh",
     "gen:theme": "generate-theme-type src/theme/StyledSystemTheme.ts ../../node_modules/@react-native-styled-system/core/lib/typescript/src/@types/ThemedTypings.d.ts",
     "prepare": "yarn gen:icon && yarn gen:theme"
