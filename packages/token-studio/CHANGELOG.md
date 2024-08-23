@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.4.0...@teamturing/token-studio@1.5.0) (2024-08-23)
+
+### Features
+
+- **token-studio:** export palette ([8f88899](https://github.com/weareteamturing/bombe/commit/8f88899e69ff0948a89cc868e570d0dfa204d6a5))
+
 # [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.3.0...@teamturing/token-studio@1.4.0) (2024-08-20)
 
 ### Features
