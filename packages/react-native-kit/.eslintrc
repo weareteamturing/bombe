@@ -1,0 +1,10 @@
+{
+  "root": false,
+  "extends": ["../../.eslintrc","expo"],
+  "plugins": [],
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-empty": "off",
+    "react/display-name": "off"
+  }
+}

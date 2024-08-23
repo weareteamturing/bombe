@@ -1,17 +1,11 @@
-import { multiply } from '@teamturing/react-native-kit';
-import { useState, useEffect } from 'react';
+import { useAppState } from '@teamturing/react-native-kit';
 import { StyleSheet, View, Text } from 'react-native';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
-
-  useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
+  const appState = useAppState();
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Result: {appState}</Text>
     </View>
   );
 }
