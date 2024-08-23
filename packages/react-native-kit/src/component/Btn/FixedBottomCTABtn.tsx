@@ -3,8 +3,10 @@ import type { ReactElement } from 'react';
 import { is } from '../../util';
 import { Box } from '../Box';
 import { WhiteGradientFixedBottomLayout, FixedBottomLayout } from '../Layout';
-import { Btn } from './index';
+
 import type { BaseBtnProps } from './BaseBtn';
+
+import { Btn } from './index';
 
 type Props = {
   excludeSafeAreaBottom?: boolean;

@@ -1,6 +1,7 @@
-import { is, isTestEnvironment, isNewArch } from '@teamturing/react-native-kit';
 import { useCallback, useEffect, useRef } from 'react';
 import { Platform } from 'react-native';
+
+import { isNewArch, is, isTestEnvironment } from '../../util';
 
 const DELAY_AFTER_EVENT = 500; /* 0.5sec */
 const DELAY_AFTER_ENABLED = 800; /* 0.8sec */

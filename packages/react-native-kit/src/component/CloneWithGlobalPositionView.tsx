@@ -1,7 +1,9 @@
-import { useTimeoutHandler, is } from '@teamturing/react-native-kit';
 import React, { useRef } from 'react';
 import type { ViewProps } from 'react-native';
 import { View } from 'react-native';
+
+import { useTimeoutHandler } from '../hook';
+import { is } from '../util';
 
 type GlobalLayoutParams = { x: number; y: number; width: number; height: number };
 type Props = {

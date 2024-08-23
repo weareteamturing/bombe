@@ -1,6 +1,7 @@
-import { is } from '@teamturing/react-native-kit';
 import type { ImageStyle, StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { StyleSheet } from 'react-native';
+
+import { is } from '..';
 
 export function flatStyle<S extends ViewStyle | ImageStyle | TextStyle>(style?: StyleProp<S>): S {
   return (StyleSheet.flatten(style) || {}) as S;

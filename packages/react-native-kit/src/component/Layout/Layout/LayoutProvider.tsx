@@ -1,7 +1,9 @@
-import { createCtx, useStableCallback } from '@teamturing/react-native-kit';
 import { useCallback, useMemo, useState } from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { useStableCallback } from '../../../hook';
+import { createCtx } from '../../../util';
 
 import { WindowSizeClass, decideWindowWidthSizeClass, decideWindowHeightSizeClass } from './WindowSizeClass';
 import { useDynamicDimensions } from './useDynamicDimensions';

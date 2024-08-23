@@ -1,7 +1,10 @@
-import { palette, applyOpacity, Box } from '@teamturing/react-native-kit';
 import type { ViewProps } from 'react-native';
 import { View } from 'react-native';
 
+import { palette } from '../theme';
+import { applyOpacity } from '../util';
+
+import { Box } from './Box';
 import { LoadingIndicator } from './LoadingIndicator';
 
 export const LoadingIndicatorView = ({ isLoading, children, ...rest }: { isLoading: boolean } & ViewProps) => {

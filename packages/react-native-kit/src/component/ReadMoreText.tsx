@@ -1,6 +1,11 @@
 import { useLayout } from '@react-native-community/hooks';
-import { Txt, is, palette, Touch } from '@teamturing/react-native-kit';
 import { useEffect, useState } from 'react';
+
+import { palette } from '../theme';
+import { is } from '../util';
+
+import { Touch } from './Pressable';
+import { Txt } from './Txt';
 
 type Props = { onlyMore?: boolean; TxtComponent?: Txt; text: string; numberOfLines?: number };
 

@@ -1,8 +1,9 @@
-import { useTimeoutHandler } from '@teamturing/react-native-kit';
 import type { PropsWithChildren } from 'react';
 import { useRef, useEffect, useState } from 'react';
 import type { ViewProps } from 'react-native';
 import { Animated } from 'react-native';
+
+import { useTimeoutHandler } from '../../../hook';
 
 type Props = { opacity: number; duration?: number; dropChildrenWhenInvisible?: boolean } & ViewProps;
 const OpacityAnimatedView = ({

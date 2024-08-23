@@ -1,8 +1,8 @@
-import { Txt, type Typography, type TextConfigProp, type TxtEllipsizeMode } from '@teamturing/react-native-kit';
 import { useEffect, useRef } from 'react';
 import { Animated, Easing, View } from 'react-native';
 
 import type { LayoutStyle } from './Layout';
+import { type Typography, Txt, type TextConfigProp, type TxtEllipsizeMode } from './Txt';
 
 const numberWidthByTypography: Record<Typography, number> = {
   'H1': 16,

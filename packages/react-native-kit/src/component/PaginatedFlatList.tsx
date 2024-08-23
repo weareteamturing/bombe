@@ -1,7 +1,9 @@
-import { useStableCallback, is, useScrollViewOnEndReachedConfig } from '@teamturing/react-native-kit';
 import React, { useImperativeHandle, useRef, useState } from 'react';
 import type { FlatListProps, ScrollViewProps } from 'react-native';
 import { FlatList as FlatList, View } from 'react-native';
+
+import { useStableCallback, useScrollViewOnEndReachedConfig } from '../hook';
+import { is } from '../util';
 
 import { LoadingIndicator } from './LoadingIndicator';
 

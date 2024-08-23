@@ -1,6 +1,10 @@
-import { useKeyboard, is, GradientCollection, palette } from '@teamturing/react-native-kit';
 import type { PropsWithChildren } from 'react';
 import { StyleSheet } from 'react-native';
+
+import { useKeyboard } from '../../hook';
+import { palette } from '../../theme';
+import { is } from '../../util';
+import { GradientCollection } from '../GradientCollection';
 
 import type { FixedBottomLayoutProps } from './FixedBottomLayout';
 import { FixedBottomLayout } from './FixedBottomLayout';

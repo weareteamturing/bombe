@@ -1,7 +1,10 @@
-import { FontWeight, is, palette, spacing } from '@teamturing/react-native-kit';
 import React, { useState, useEffect, forwardRef } from 'react';
 import type { TextInputProps, StyleProp, TextStyle } from 'react-native';
 import { TextInput } from 'react-native';
+
+import { palette, spacing } from '../../theme';
+import { is } from '../../util';
+import { FontWeight } from '../Txt';
 
 import type { NumericFormatType } from './textFieldNumericFormatUtils';
 import { TextFieldNumericFormatUtil } from './textFieldNumericFormatUtils';

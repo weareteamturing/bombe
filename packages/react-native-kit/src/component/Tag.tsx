@@ -1,20 +1,16 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
-import {
-  Txt,
-  type TextConfig,
-  palette,
-  spacing,
-  gradient,
-  type LayoutStyle,
-  Touch,
-} from '@teamturing/react-native-kit';
 import React from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { StyleSheet } from 'react-native';
 
+import { palette, spacing, gradient } from '../theme';
+
 import { type GradientCollecitonProps, GradientCollection } from './GradientCollection';
 import { type IconName, type IconProps, Icon } from './Icon';
+import type { LayoutStyle } from './Layout';
+import { Touch } from './Pressable';
+import { Txt, type TextConfig } from './Txt';
 
 export type TagSize = 'm' | 's';
 export type TagVariant = 'gray-900' | 'violet-500' | 'outlined' | 'gradient1' | 'plain';

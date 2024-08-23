@@ -1,11 +1,13 @@
 import type { SxProps } from '@react-native-styled-system/core';
-import { useStableCallback, Chip } from '@teamturing/react-native-kit';
 import type { Ref } from 'react';
 import { useState } from 'react';
 import type { TCarouselProps as BaseCarouselProps, ICarouselInstance } from 'react-native-reanimated-carousel';
 import BaseCarousel from 'react-native-reanimated-carousel';
 
+import { useStableCallback } from '../hook';
+
 import { Box } from './Box';
+import { Chip } from './Chip';
 import { type PaginatorProps, Paginator } from './Paginator';
 
 type Props<T> = {

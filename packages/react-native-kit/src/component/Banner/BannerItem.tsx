@@ -1,10 +1,12 @@
-import { Txt, is, spacing } from '@teamturing/react-native-kit';
 import React from 'react';
 import { View } from 'react-native';
 
+import { spacing } from '../../theme';
+import { is } from '../../util';
 import { type IconName, type IconProps, Icon } from '../Icon';
-import { type ImgSource, Img } from '../Img/Img';
-import { GapW } from '../Layout/Gap';
+import { type ImgSource, Img } from '../Img';
+import { GapW } from '../Layout';
+import { Txt } from '../Txt';
 
 export type BannerItemProps = {
   icon?: {

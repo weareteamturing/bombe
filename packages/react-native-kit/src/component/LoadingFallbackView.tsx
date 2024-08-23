@@ -1,5 +1,6 @@
-import { palette } from '@teamturing/react-native-kit';
 import { View } from 'react-native';
+
+import { palette } from '../theme';
 
 type Props = {
   height: number;

@@ -1,8 +1,11 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
-import { useDynamicLayout, px, is, Portal, runAfterFlushMacroQueue } from '@teamturing/react-native-kit';
 import React, { useCallback, useImperativeHandle, useRef, forwardRef } from 'react';
 import { Easing } from 'react-native';
+
+import { px, runAfterFlushMacroQueue, is } from '../../../util';
+import { useDynamicLayout } from '../../Layout';
+import { Portal } from '../../Portal';
 
 import type { ModalBoxProps } from './ModalBox';
 import { ModalBox } from './ModalBox';

@@ -1,13 +1,17 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
-import { spacing, Txt, palette, is, Btn } from '@teamturing/react-native-kit';
 import React from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { View } from 'react-native';
 
+import { palette, spacing } from '../theme';
+import { is } from '../util';
+
+import { Btn } from './Btn';
 import type { BaseBtnProps } from './Btn/BaseBtn';
 import type { IconName, IconProps } from './Icon';
 import { Icon } from './Icon';
+import { Txt } from './Txt';
 
 type Props = {
   iconName?: IconName;

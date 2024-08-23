@@ -1,15 +1,19 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
-import { spacing, palette, gradient, Txt, PressableDelayed, LoadingIndicator, is } from '@teamturing/react-native-kit';
 import { mix } from 'polished';
 import type { PressableProps, StyleProp, ViewStyle } from 'react-native';
 import { StyleSheet } from 'react-native';
 
+import { spacing, palette, gradient } from '../../theme';
+import { is } from '../../util';
 import { type GradientCollecitonProps, GradientCollection } from '../GradientCollection';
 import { type IconName, Icon } from '../Icon';
-import type { LayoutStyle } from '../Layout/LayoutStyle';
-import { RowCenter } from '../Layout/Row';
+import type { LayoutStyle } from '../Layout';
+import { RowCenter } from '../Layout';
+import { LoadingIndicator } from '../LoadingIndicator';
+import { PressableDelayed } from '../Pressable';
 import type { UseDisabilityAwareDebouncerParams } from '../Pressable/useDisabilityAwareDebouncer';
+import { Txt } from '../Txt';
 
 export type BaseBtnSize = 'l' | 'm' | 's';
 export type BaseBtnVariant =

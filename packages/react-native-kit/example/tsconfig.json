@@ -1,6 +1,9 @@
 {
   "extends": "../tsconfig",
   "compilerOptions": {
+    "paths": {
+      "@teamturing/react-native-kit": ["../src/index"],
+    },
     // Avoid expo-cli auto-generating a tsconfig
   },
   "exclude": ["metro.config.js"]

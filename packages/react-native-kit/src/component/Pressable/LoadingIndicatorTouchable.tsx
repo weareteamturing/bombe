@@ -1,5 +1,6 @@
-import { LoadingIndicator } from '@teamturing/react-native-kit';
 import { StyleSheet } from 'react-native';
+
+import { LoadingIndicator } from '../LoadingIndicator';
 
 import { type TouchProps, Touch } from './Touch';
 

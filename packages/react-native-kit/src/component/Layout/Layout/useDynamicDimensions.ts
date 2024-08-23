@@ -1,5 +1,6 @@
-import { spacing } from '@teamturing/react-native-kit';
 import { useMemo } from 'react';
+
+import { spacing } from '../../../theme';
 
 import type { WindowSizeClass } from './WindowSizeClass';
 import { createWindowSizeClassIntRecord } from './WindowSizeClass';

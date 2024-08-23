@@ -1,8 +1,12 @@
-import { Lottie, useDialogContext, useAppState, useStableCallback } from '@teamturing/react-native-kit';
 import type LottieView from 'lottie-react-native';
 import React, { useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { Animated, StyleSheet } from 'react-native';
+
+import { useStableCallback, useAppState } from '../../hook';
+import { Lottie } from '../Lottie';
+
+import { useDialogContext } from './DialogProvider';
 
 export type LottieDialogShowParams = {
   source: any;

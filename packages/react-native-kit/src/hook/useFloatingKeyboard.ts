@@ -1,9 +1,9 @@
-import { is } from '@teamturing/react-native-kit';
 import { useEffect, useState } from 'react';
 import type { KeyboardEvent } from 'react-native';
 import { Keyboard } from 'react-native';
 
-import { useDynamicLayout } from '../component/Layout/Layout/LayoutProvider';
+import { useDynamicLayout } from '../component';
+import { is } from '../util';
 
 /* Return true if keyboard width is not same with screen width */
 export function useIsIPadFloatingKeyboard() {
