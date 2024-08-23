@@ -1,13 +1,7 @@
-import { useAppState } from '@teamturing/react-native-kit';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 export default function App() {
-  const appState = useAppState();
-  return (
-    <View style={styles.container}>
-      <Text>Result: {appState}</Text>
-    </View>
-  );
+  return <View style={styles.container}></View>;
 }
 
 const styles = StyleSheet.create({
