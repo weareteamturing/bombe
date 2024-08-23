@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Declare a string array with type
-declare -a ICON_DIR_PATH_LIST=("../icons/svg" "./src/assets/icons")
+declare -a ICON_DIR_PATH_LIST=("../icons/svg")
 ICON_SOURCE_FILE_PATH="./src/component/Icon/Icons.tsx"
 
 

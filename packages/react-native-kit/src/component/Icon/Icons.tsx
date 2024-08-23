@@ -18,6 +18,7 @@ export { default as arrow_up_limit } from '@teamturing/icons/svg/arrow_up_limit.
 export { default as barchart } from '@teamturing/icons/svg/barchart.svg';
 export { default as book } from '@teamturing/icons/svg/book.svg';
 export { default as bookmark } from '@teamturing/icons/svg/bookmark.svg';
+export { default as bookmark_animation } from '@teamturing/icons/svg/bookmark_animation.svg';
 export { default as box } from '@teamturing/icons/svg/box.svg';
 export { default as bus_color } from '@teamturing/icons/svg/bus_color.svg';
 export { default as calendar_check } from '@teamturing/icons/svg/calendar_check.svg';
@@ -38,6 +39,7 @@ export { default as chat_bubble_correct } from '@teamturing/icons/svg/chat_bubbl
 export { default as chat_bubble_correct_color } from '@teamturing/icons/svg/chat_bubble_correct_color.svg';
 export { default as chat_bubble_dots } from '@teamturing/icons/svg/chat_bubble_dots.svg';
 export { default as chat_bubble_question } from '@teamturing/icons/svg/chat_bubble_question.svg';
+export { default as chat_bubble_question_animation } from '@teamturing/icons/svg/chat_bubble_question_animation.svg';
 export { default as check } from '@teamturing/icons/svg/check.svg';
 export { default as check_in_circle } from '@teamturing/icons/svg/check_in_circle.svg';
 export { default as check_in_circle_color } from '@teamturing/icons/svg/check_in_circle_color.svg';
@@ -215,5 +217,4 @@ export { default as workbook } from '@teamturing/icons/svg/workbook.svg';
 export { default as workbook_color } from '@teamturing/icons/svg/workbook_color.svg';
 export { default as wrong } from '@teamturing/icons/svg/wrong.svg';
 export { default as youtube } from '@teamturing/icons/svg/youtube.svg';
-export { default as bookmark_animation } from '@teamturing/icons/svg/bookmark_animation.svg';
-export { default as chat_bubble_question_animation } from '@teamturing/icons/svg/chat_bubble_question_animation.svg';
+export { default as * } from '@teamturing/icons/svg/*.svg';
