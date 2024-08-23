@@ -29,13 +29,7 @@ for ICON_DIR_PATH in "${ICON_DIR_PATH_LIST[@]}"; do
       rm $f
     fi
 
-    if command -v grealpath >/dev/null 2>&1; then
-        path_cmd="grealpath"
-    else
-        path_cmd="realpath"
-    fi
-    relativePath=$($path_cmd --relative-to="$(dirname $ICON_SOURCE_FILE_PATH)" $f)
-    echo "export { default as $assetName } from '$relativePath';" >> temp_image
+    echo "export { default as $assetName } from '@teamturing/icons/svg/${assetName}.svg';" >> temp_image
   done
 done
 
