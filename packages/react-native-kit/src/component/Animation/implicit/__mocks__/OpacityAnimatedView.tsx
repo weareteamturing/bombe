@@ -16,4 +16,4 @@ const OpacityAnimatedView = ({
   );
 };
 
-export default OpacityAnimatedView;
+export { OpacityAnimatedView };

@@ -13,7 +13,7 @@ type Props = {
   style?: StyleProp<ViewStyle>;
 } & SxProps;
 
-const SectionLayout = (props: React.PropsWithChildren<Props>) => {
+export const SectionLayout = (props: React.PropsWithChildren<Props>) => {
   const { getStyle } = useSx(props, { fallback: { bg: 'gray100' } });
   const { children } = props;
 
@@ -42,5 +42,3 @@ const SectionLayout = (props: React.PropsWithChildren<Props>) => {
 export const SectionDivider = (props: ColumnProps) => (
   <Column {...props} style={[props?.style, { height: spacing[4], backgroundColor: palette.gray100 }]} />
 );
-
-export default SectionLayout;

@@ -1,5 +1,5 @@
 import { FontWeight, is, palette, spacing } from '@teamturing/react-native-kit';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import type { TextInputProps, StyleProp, TextStyle } from 'react-native';
 import { TextInput } from 'react-native';
 
@@ -39,7 +39,7 @@ type Props = {
   | 'testID'
 >;
 
-const CoreTextField = (
+const _CoreTextField = (
   {
     disabled,
     readonly,
@@ -108,5 +108,6 @@ const CoreTextField = (
   );
 };
 
-export default React.forwardRef(CoreTextField);
+export const CoreTextField = forwardRef(_CoreTextField);
+
 export type { Props as CoreTextFieldProps };

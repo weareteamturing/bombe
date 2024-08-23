@@ -9,10 +9,10 @@ import {
   Txt,
   Btn,
   runAfterFlushMacroQueue,
+  is,
 } from '@teamturing/react-native-kit';
 import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react';
 
-import is from '../../util/is';
 import { type BaseBtnProps } from '../Btn/BaseBtn';
 
 import { useDialogContext } from './DialogProvider';

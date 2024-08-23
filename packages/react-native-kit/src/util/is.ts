@@ -69,10 +69,8 @@ function isPlainObject(value: any): value is object {
   }
 }
 
-const is = {
+export const is = {
   ...isType,
   ...isCheck,
   ...isPlatform,
 };
-
-export default is;

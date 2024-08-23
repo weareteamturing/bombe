@@ -6,10 +6,9 @@ import { useRef, forwardRef, useImperativeHandle, useCallback } from 'react';
 import type { ScrollView } from 'react-native';
 import { View } from 'react-native';
 
-import is from '../util/is';
+import { is } from '../util';
 
-import { useDynamicLayout } from './Layout/Layout/LayoutProvider';
-import { RowCenter } from './Layout/Row';
+import { useDynamicLayout, RowCenter } from './Layout';
 import { StyledScrollView } from './StyledScrollView';
 
 type Props = {

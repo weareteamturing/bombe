@@ -1,7 +1,7 @@
 import type { PressableProps } from 'react-native';
 import { Pressable } from 'react-native';
 
-import is from '../../util/is';
+import { is } from '../../util';
 
 import { useDisabilityAwareDebouncer } from './useDisabilityAwareDebouncer';
 

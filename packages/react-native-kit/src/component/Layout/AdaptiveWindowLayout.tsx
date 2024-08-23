@@ -1,9 +1,9 @@
 import type React from 'react';
 
-import is from '../../util/is';
+import { is } from '../../util';
 
-import { useDynamicLayout } from './Layout/LayoutProvider';
-import type { WindowSizeClass } from './Layout/WindowSizeClass';
+import type { WindowSizeClass } from './Layout';
+import { useDynamicLayout } from './Layout';
 
 export type AdaptiveLayoutProps = {
   ifElement?: React.ReactElement | null;

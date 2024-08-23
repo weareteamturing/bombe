@@ -1,11 +1,10 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
-import { spacing, palette, gradient, Txt, PressableDelayed, LoadingIndicator } from '@teamturing/react-native-kit';
+import { spacing, palette, gradient, Txt, PressableDelayed, LoadingIndicator, is } from '@teamturing/react-native-kit';
 import { mix } from 'polished';
 import type { PressableProps, StyleProp, ViewStyle } from 'react-native';
 import { StyleSheet } from 'react-native';
 
-import is from '../../util/is';
 import { type GradientCollecitonProps, GradientCollection } from '../GradientCollection';
 import { type IconName, Icon } from '../Icon';
 import type { LayoutStyle } from '../Layout/LayoutStyle';
@@ -342,5 +341,5 @@ const BaseBtn = (props: Props) => {
   );
 };
 
-export default BaseBtn;
+export { BaseBtn };
 export type { Props as BaseBtnProps };

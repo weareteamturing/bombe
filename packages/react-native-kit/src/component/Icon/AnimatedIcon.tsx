@@ -24,4 +24,4 @@ const AnimatedIcon = ({ name, size = 24, layout, animatedStyle }: Props) => {
   return <IconComponent width={size} height={size} style={[layout, animatedStyle]} />;
 };
 
-export default AnimatedIcon;
+export { AnimatedIcon };

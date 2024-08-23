@@ -19,5 +19,5 @@ const Section = (props: React.PropsWithChildren<Props>) => {
   );
 };
 
-export default Section;
+export { Section };
 export type { Props as SectionProps };

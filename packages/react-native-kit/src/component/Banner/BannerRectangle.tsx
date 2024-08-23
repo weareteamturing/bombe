@@ -1,5 +1,5 @@
 import { palette, spacing } from '../../theme';
-import is from '../../util/is';
+import { is } from '../../util';
 import { Box } from '../Box';
 import type { LayoutStyle } from '../Layout';
 import { PressableDelayed } from '../Pressable';
