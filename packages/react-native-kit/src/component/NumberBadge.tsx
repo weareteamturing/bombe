@@ -1,7 +1,6 @@
+import { type PaletteColor, is, palette, spacing, Txt } from '@teamturing/react-native-kit';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { View } from 'react-native';
-
-import { type PaletteColor, is, palette, spacing, Txt } from '@teamturing/react-native-kit';
 
 type Props = {
   count?: number;

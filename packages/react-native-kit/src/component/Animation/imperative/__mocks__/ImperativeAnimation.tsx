@@ -1,8 +1,7 @@
+import { is, useTimeoutHandler } from '@teamturing/react-native-kit';
 import React, { useRef, useCallback, useEffect, useImperativeHandle, forwardRef } from 'react';
 import type { ViewStyle, ViewProps } from 'react-native';
 import { Animated, View } from 'react-native';
-
-import { is, useTimeoutHandler } from '@teamturing/react-native-kit';
 
 type Props = React.PropsWithChildren<
   {

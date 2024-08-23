@@ -1,9 +1,8 @@
+import { spacing } from '@teamturing/react-native-kit';
 import { useMemo } from 'react';
 
 import type { WindowSizeClass } from './WindowSizeClass';
 import { createWindowSizeClassIntRecord } from './WindowSizeClass';
-
-import { spacing } from '@teamturing/react-native-kit';
 
 export function useDynamicDimensions({
   windowWidthSizeClass,

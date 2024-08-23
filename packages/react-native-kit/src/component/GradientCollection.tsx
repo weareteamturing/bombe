@@ -1,13 +1,12 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
+import { type GradientProps, useRefValue } from '@teamturing/react-native-kit';
 import dayjs from 'dayjs';
 import { parseToHsl } from 'polished';
 import { type PropsWithChildren } from 'react';
 import type { ViewProps } from 'react-native';
 import { View } from 'react-native';
 import { Svg, LinearGradient, Stop, Defs, Rect } from 'react-native-svg';
-
-import { type GradientProps, useRefValue } from '@teamturing/react-native-kit';
 
 type Props = PropsWithChildren<GradientProps & ViewProps>;
 

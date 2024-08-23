@@ -1,11 +1,10 @@
+import { is } from '@teamturing/react-native-kit';
 import type { LottieViewProps as BaseLottieProps } from 'lottie-react-native';
 import BaseLottie from 'lottie-react-native';
 import { useState, useEffect, forwardRef, type ForwardedRef, type MutableRefObject } from 'react';
 import { AppState, Platform, StyleSheet } from 'react-native';
 
 import { Box } from '../Box';
-
-import { is } from '@teamturing/react-native-kit';
 
 type Props = {
   delay?: number;

@@ -1,10 +1,9 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
+import { type PaletteColor, palette } from '@teamturing/react-native-kit';
 import { View } from 'react-native';
 
 import { Box } from './Box';
-
-import { type PaletteColor, palette } from '@teamturing/react-native-kit';
 
 type Props = {
   sx?: SxProps;

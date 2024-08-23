@@ -1,11 +1,10 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
+import { spacing, palette, is, RowCenter, Column } from '@teamturing/react-native-kit';
 import type { ReactElement } from 'react';
 import type { StyleProp, ViewStyle, ColorValue } from 'react-native';
 import { View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
-
-import { spacing, palette, is, RowCenter, Column } from '@teamturing/react-native-kit';
 
 type Props = {
   triangleDirection?:

@@ -1,5 +1,6 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
+import { type TagProps, Tag, useTimeoutHandlers, spacing } from '@teamturing/react-native-kit';
 import type { Ref } from 'react';
 import { useRef, forwardRef, useImperativeHandle, useCallback } from 'react';
 import type { ScrollView } from 'react-native';
@@ -10,8 +11,6 @@ import is from '../util/is';
 import { useDynamicLayout } from './Layout/Layout/LayoutProvider';
 import { RowCenter } from './Layout/Row';
 import { StyledScrollView } from './StyledScrollView';
-
-import { type TagProps, Tag, useTimeoutHandlers, spacing } from '@teamturing/react-native-kit';
 
 type Props = {
   tags: (TagProps & { key: string | number })[];

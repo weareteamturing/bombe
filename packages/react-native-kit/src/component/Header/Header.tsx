@@ -1,11 +1,10 @@
+import { type Spacing, Txt, is, useDynamicLayout, spacing, RowCenter, palette } from '@teamturing/react-native-kit';
 import React from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { StyleSheet, View } from 'react-native';
 
 import { OpacityAnimatedView } from '../Animation';
 import { Box } from '../Box';
-
-import { type Spacing, Txt, is, useDynamicLayout, spacing, RowCenter, palette } from '@teamturing/react-native-kit';
 
 type Props = {
   title?: string;

@@ -1,9 +1,8 @@
+import { palette, applyOpacity, Box } from '@teamturing/react-native-kit';
 import type { ViewProps } from 'react-native';
 import { View } from 'react-native';
 
 import { LoadingIndicator } from './LoadingIndicator';
-
-import { palette, applyOpacity, Box } from '@teamturing/react-native-kit';
 
 export const LoadingIndicatorView = ({ isLoading, children, ...rest }: { isLoading: boolean } & ViewProps) => {
   return (

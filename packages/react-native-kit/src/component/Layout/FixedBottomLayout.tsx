@@ -1,11 +1,10 @@
+import { is, spacing } from '@teamturing/react-native-kit';
 import React, { useState, useEffect } from 'react';
 import { Keyboard } from 'react-native';
 
 import { Box } from '../Box';
 
 import { useDynamicLayout } from './Layout/LayoutProvider';
-
-import { is, spacing } from '@teamturing/react-native-kit';
 
 type Props = { excludeSafeAreaBottom?: boolean };
 

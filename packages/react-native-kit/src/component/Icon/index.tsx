@@ -1,10 +1,9 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
+import { type PaletteColor, palette } from '@teamturing/react-native-kit';
 import type { SvgProps } from 'react-native-svg';
 
 import * as Icons from './Icons';
-
-import { type PaletteColor, palette } from '@teamturing/react-native-kit';
 
 export type IconName = keyof typeof Icons;
 type Props = {

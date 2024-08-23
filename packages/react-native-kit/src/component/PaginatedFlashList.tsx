@@ -1,11 +1,10 @@
 import { type FlashListProps, FlashList } from '@shopify/flash-list';
+import { useStableCallback, is, useScrollViewOnEndReachedConfig } from '@teamturing/react-native-kit';
 import { useImperativeHandle, useRef, useState, forwardRef } from 'react';
 import type { FlatListProps, ScrollViewProps } from 'react-native';
 import { View } from 'react-native';
 
 import { LoadingIndicator } from './LoadingIndicator';
-
-import { useStableCallback, is, useScrollViewOnEndReachedConfig } from '@teamturing/react-native-kit';
 
 export type PaginatedFlashListProps<T> = Omit<FlashListProps<T>, 'maintainVisibleContentPosition'> & {
   /**

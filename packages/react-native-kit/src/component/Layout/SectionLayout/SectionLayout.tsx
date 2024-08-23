@@ -1,5 +1,6 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
+import { palette, spacing } from '@teamturing/react-native-kit';
 import React from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { StyleSheet } from 'react-native';
@@ -7,8 +8,6 @@ import { StyleSheet } from 'react-native';
 import { type ColumnProps, Column } from '../Column';
 
 import type { SectionProps } from './Section';
-
-import { palette, spacing } from '@teamturing/react-native-kit';
 
 type Props = {
   style?: StyleProp<ViewStyle>;

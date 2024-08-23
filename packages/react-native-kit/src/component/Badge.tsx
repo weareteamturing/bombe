@@ -1,8 +1,7 @@
+import { palette } from '@teamturing/react-native-kit';
 import { View } from 'react-native';
 
 import type { LayoutStyle } from './Layout/LayoutStyle';
-
-import { palette } from '@teamturing/react-native-kit';
 
 type Props = {
   layout?: LayoutStyle;

@@ -1,11 +1,10 @@
+import { FontWeight, is, palette, spacing } from '@teamturing/react-native-kit';
 import React, { useState, useEffect } from 'react';
 import type { TextInputProps, StyleProp, TextStyle } from 'react-native';
 import { TextInput } from 'react-native';
 
 import type { NumericFormatType } from './textFieldNumericFormatUtils';
 import { TextFieldNumericFormatUtil } from './textFieldNumericFormatUtils';
-
-import { FontWeight, is, palette, spacing } from '@teamturing/react-native-kit';
 
 type Props = {
   style?: StyleProp<TextStyle>;

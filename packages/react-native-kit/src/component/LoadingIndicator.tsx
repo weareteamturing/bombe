@@ -1,9 +1,8 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
+import { palette, is } from '@teamturing/react-native-kit';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { ActivityIndicator } from 'react-native';
-
-import { palette, is } from '@teamturing/react-native-kit';
 
 export type MathKingIndicatorProps = {
   testID?: string;

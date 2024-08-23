@@ -1,8 +1,7 @@
+import { LoadingIndicator } from '@teamturing/react-native-kit';
 import { StyleSheet } from 'react-native';
 
 import { type TouchProps, Touch } from './Touch';
-
-import { LoadingIndicator } from '@teamturing/react-native-kit';
 
 type Props = { isLoading: boolean } & TouchProps;
 const LoadingIndicatorTouchable = ({ isLoading, disabled, children, style, ...rest }: Props) => {

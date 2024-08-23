@@ -1,12 +1,3 @@
-import React, { useEffect, useRef } from 'react';
-import { type TextInput, type StyleProp, type ViewStyle, type ColorValue, type TextStyle, View } from 'react-native';
-
-import { IconBtn } from '../Btn';
-import { type IconName, Icon } from '../Icon';
-
-import type { CoreTextFieldProps } from './CoreTextField';
-import CoreTextField from './CoreTextField';
-
 import {
   is,
   palette,
@@ -17,6 +8,14 @@ import {
   type ImperativeAnimationRef,
   Touch,
 } from '@teamturing/react-native-kit';
+import React, { useEffect, useRef } from 'react';
+import { type TextInput, type StyleProp, type ViewStyle, type ColorValue, type TextStyle, View } from 'react-native';
+
+import { IconBtn } from '../Btn';
+import { type IconName, Icon } from '../Icon';
+
+import type { CoreTextFieldProps } from './CoreTextField';
+import CoreTextField from './CoreTextField';
 
 type Props = {
   label?: string;

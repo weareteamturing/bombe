@@ -1,4 +1,5 @@
 import type { SxProps } from '@react-native-styled-system/core';
+import { px, palette, Txt, gradient, type TextConfig, spacing, GradientCollection } from '@teamturing/react-native-kit';
 import { transparentize } from 'polished';
 import React from 'react';
 import { StyleSheet } from 'react-native';
@@ -8,8 +9,6 @@ import { Box } from './Box';
 import type { GradientCollecitonProps } from './GradientCollection';
 import type { IconName, IconProps } from './Icon';
 import { Icon } from './Icon';
-
-import { px, palette, Txt, gradient, type TextConfig, spacing, GradientCollection } from '@teamturing/react-native-kit';
 
 export type ChipSize = 'l' | 'm' | 's';
 export type ChipVariant =

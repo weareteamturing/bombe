@@ -1,12 +1,11 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
+import { useDynamicLayout, px, is, Portal, runAfterFlushMacroQueue } from '@teamturing/react-native-kit';
 import React, { useCallback, useImperativeHandle, useRef, forwardRef } from 'react';
 import { Easing } from 'react-native';
 
 import type { ModalBoxProps } from './ModalBox';
 import { ModalBox } from './ModalBox';
-
-import { useDynamicLayout, px, is, Portal, runAfterFlushMacroQueue } from '@teamturing/react-native-kit';
 
 export type DialogRef = {
   open: () => void;

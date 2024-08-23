@@ -1,4 +1,5 @@
 import { useSx } from '@react-native-styled-system/core';
+import { gradient } from '@teamturing/react-native-kit';
 import { parseToHsl } from 'polished';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { LayoutChangeEvent } from 'react-native';
@@ -6,8 +7,6 @@ import { Stop } from 'react-native-svg';
 
 import { Box } from './Box';
 import type { GradientMaskProps } from './GradientMask';
-
-import { gradient } from '@teamturing/react-native-kit';
 
 /* text, svg(fill), img 지원 */
 const GradientMask = ({ onLayout, ...props }: GradientMaskProps) => {

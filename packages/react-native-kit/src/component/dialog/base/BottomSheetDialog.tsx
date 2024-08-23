@@ -1,12 +1,11 @@
 import { is } from '@mj-studio/js-util';
 import { useSx } from '@react-native-styled-system/core';
+import { useDynamicLayout } from '@teamturing/react-native-kit';
 import React, { forwardRef } from 'react';
 import { StyleSheet } from 'react-native';
 
 import type { DialogRef, DialogProps } from './Dialog';
 import { Dialog } from './Dialog';
-
-import { useDynamicLayout } from '@teamturing/react-native-kit';
 
 type Props = {
   excludeSafeAreaBottomPadding?: boolean;

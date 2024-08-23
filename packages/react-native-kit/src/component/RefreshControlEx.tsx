@@ -1,8 +1,7 @@
+import { palette } from '@teamturing/react-native-kit';
 import React from 'react';
 import type { RefreshControlProps } from 'react-native';
 import { RefreshControl } from 'react-native';
-
-import { palette } from '@teamturing/react-native-kit';
 
 type Props = {} & RefreshControlProps;
 const RefreshControlEx: React.FC<Props> = ({ ...rest }: Props) => {

@@ -1,10 +1,9 @@
+import { useStableCallback, is, useScrollViewOnEndReachedConfig } from '@teamturing/react-native-kit';
 import React, { useImperativeHandle, useRef, useState } from 'react';
 import type { FlatListProps, ScrollViewProps } from 'react-native';
 import { FlatList as FlatList, View } from 'react-native';
 
 import { LoadingIndicator } from './LoadingIndicator';
-
-import { useStableCallback, is, useScrollViewOnEndReachedConfig } from '@teamturing/react-native-kit';
 
 export type PaginatedFlatListProps<T> = Omit<FlatListProps<T>, 'maintainVisibleContentPosition'> & {
   /**

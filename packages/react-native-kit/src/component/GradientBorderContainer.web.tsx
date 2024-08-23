@@ -1,8 +1,7 @@
+import { gradient as Gradient } from '@teamturing/react-native-kit';
 import { View } from 'react-native';
 
 import type { GradientBorderContainerProps } from './GradientBorderContainer';
-
-import { gradient as Gradient } from '@teamturing/react-native-kit';
 
 const GradientBorderContainer = ({
   borderWidth = 1,

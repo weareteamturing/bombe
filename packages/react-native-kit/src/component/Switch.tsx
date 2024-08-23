@@ -1,8 +1,7 @@
+import { palette } from '@teamturing/react-native-kit';
 import { useEffect, useRef } from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { Animated, TouchableOpacity } from 'react-native';
-
-import { palette } from '@teamturing/react-native-kit';
 
 const AnimatedTouchableOpacity = Animated.createAnimatedComponent(TouchableOpacity);
 

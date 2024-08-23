@@ -1,3 +1,4 @@
+import { Txt, FontWeight, spacing, palette, is, Dot, px } from '@teamturing/react-native-kit';
 import type { ColorValue, ViewStyle } from 'react-native';
 
 import { Box } from '../Box';
@@ -6,8 +7,6 @@ import { Icon } from '../Icon';
 import { Row, RowCenter } from '../Layout';
 
 import { type BaseTabPropsWithoutRenderProps, BaseTab } from './BaseTab';
-
-import { Txt, FontWeight, spacing, palette, is, Dot, px } from '@teamturing/react-native-kit';
 
 type RoundTabSize = 'l' | 'm' | 's';
 type Variant = 'default' | 'plain' | 'dim';

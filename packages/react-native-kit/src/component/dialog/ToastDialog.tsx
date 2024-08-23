@@ -1,8 +1,3 @@
-import React, { useImperativeHandle, useRef, useState } from 'react';
-import { View } from 'react-native';
-
-import { useAppEventListener } from '../../util/AppEvent';
-
 import {
   type IconName,
   palette,
@@ -17,6 +12,10 @@ import {
   Txt,
   useDialogContext,
 } from '@teamturing/react-native-kit';
+import React, { useImperativeHandle, useRef, useState } from 'react';
+import { View } from 'react-native';
+
+import { useAppEventListener } from '../../util/AppEvent';
 
 export type ToastType = 'success' | 'warning';
 const ToastParamsByType: Record<ToastType, Pick<ToastDialogParams, 'iconName' | 'iconFill'>> = {

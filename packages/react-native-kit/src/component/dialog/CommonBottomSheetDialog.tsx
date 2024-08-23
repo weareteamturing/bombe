@@ -1,12 +1,4 @@
 import { useBackHandler } from '@react-native-community/hooks';
-import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react';
-
-import is from '../../util/is';
-import { type BaseBtnProps } from '../Btn/BaseBtn';
-
-import { useDialogContext } from './DialogProvider';
-import { type DialogRef, BottomSheetDialog } from './base';
-
 import {
   type ImgSource,
   type IconName,
@@ -18,6 +10,13 @@ import {
   Btn,
   runAfterFlushMacroQueue,
 } from '@teamturing/react-native-kit';
+import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react';
+
+import is from '../../util/is';
+import { type BaseBtnProps } from '../Btn/BaseBtn';
+
+import { useDialogContext } from './DialogProvider';
+import { type DialogRef, BottomSheetDialog } from './base';
 
 type Button = {
   title?: string;

@@ -1,8 +1,7 @@
+import { type Spacing, is, spacing } from '@teamturing/react-native-kit';
 import React from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { View } from 'react-native';
-
-import { type Spacing, is, spacing } from '@teamturing/react-native-kit';
 
 type Props<T> = {
   items: T[];

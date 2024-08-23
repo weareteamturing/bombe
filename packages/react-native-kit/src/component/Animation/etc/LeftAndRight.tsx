@@ -1,8 +1,7 @@
+import { useMount } from '@teamturing/react-native-kit';
 import type { PropsWithChildren } from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import Animated, { useSharedValue, useAnimatedStyle, withRepeat, withTiming, Easing } from 'react-native-reanimated';
-
-import { useMount } from '@teamturing/react-native-kit';
 
 type Props = {
   style?: StyleProp<Omit<ViewStyle, 'transform'>>;

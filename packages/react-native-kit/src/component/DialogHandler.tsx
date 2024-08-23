@@ -1,10 +1,9 @@
-import type React from 'react';
-
 import {
   useDialogHandler,
   type UseDialogWithParamsHandler,
   useDialogWithParamsHandler,
 } from '@teamturing/react-native-kit';
+import type React from 'react';
 
 export const DialogHandler = ({
   children,

@@ -1,7 +1,6 @@
+import { Txt } from '@teamturing/react-native-kit';
 import React from 'react';
 import { View, Pressable } from 'react-native';
-
-import { Txt } from '@teamturing/react-native-kit';
 
 type Props = {
   tabs: string[];

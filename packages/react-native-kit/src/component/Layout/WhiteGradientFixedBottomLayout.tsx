@@ -1,10 +1,9 @@
+import { useKeyboard, is, GradientCollection, palette } from '@teamturing/react-native-kit';
 import type { PropsWithChildren } from 'react';
 import { StyleSheet } from 'react-native';
 
 import type { FixedBottomLayoutProps } from './FixedBottomLayout';
 import { FixedBottomLayout } from './FixedBottomLayout';
-
-import { useKeyboard, is, GradientCollection, palette } from '@teamturing/react-native-kit';
 
 type Props = {} & FixedBottomLayoutProps;
 const WhiteGradientFixedBottomLayout = ({ children, ...props }: PropsWithChildren<Props>) => {

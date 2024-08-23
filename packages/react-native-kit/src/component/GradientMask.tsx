@@ -1,13 +1,12 @@
 import MaskedView from '@react-native-masked-view/masked-view';
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
+import { type GradientType, gradient } from '@teamturing/react-native-kit';
 import type { PropsWithChildren } from 'react';
 import type { ViewProps } from 'react-native';
 import { View, StyleSheet } from 'react-native';
 
 import { GradientCollection } from './GradientCollection';
-
-import { type GradientType, gradient } from '@teamturing/react-native-kit';
 
 type Props = PropsWithChildren<
   {

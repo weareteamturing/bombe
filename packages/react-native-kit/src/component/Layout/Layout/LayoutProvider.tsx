@@ -1,11 +1,10 @@
+import { createCtx, useStableCallback } from '@teamturing/react-native-kit';
 import { useCallback, useMemo, useState } from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { WindowSizeClass, decideWindowWidthSizeClass, decideWindowHeightSizeClass } from './WindowSizeClass';
 import { useDynamicDimensions } from './useDynamicDimensions';
-
-import { createCtx, useStableCallback } from '@teamturing/react-native-kit';
 
 export const [useDynamicLayout, LayoutProvider] = createCtx(
   (

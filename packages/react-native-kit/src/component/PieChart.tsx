@@ -1,6 +1,5 @@
-import { Circle, G, Svg } from 'react-native-svg';
-
 import { palette, is } from '@teamturing/react-native-kit';
+import { Circle, G, Svg } from 'react-native-svg';
 
 type Props<T> = {
   size: number;

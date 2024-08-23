@@ -1,9 +1,8 @@
 import MaskedView from '@react-native-masked-view/masked-view';
+import { gradient as Gradient, type GradientProps, GradientCollection } from '@teamturing/react-native-kit';
 import type { PropsWithChildren } from 'react';
 import type { ViewProps } from 'react-native';
 import { View, StyleSheet } from 'react-native';
-
-import { gradient as Gradient, type GradientProps, GradientCollection } from '@teamturing/react-native-kit';
 
 type Props = PropsWithChildren<
   {
