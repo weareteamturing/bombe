@@ -1,6 +1,6 @@
 {
   "root": false,
-  "extends": ["../../.eslintrc","expo"],
+  "extends": ["expo"],
   "plugins": [],
   "rules": {
     "@typescript-eslint/ban-ts-comment": "off",
