@@ -1,7 +1,7 @@
-import { setIntervalWithTimeout } from '@teamturing/timer';
 import { useRef, useEffect } from 'react';
 
 import { useMount } from './useMount';
+import { setIntervalWithTimeout } from '@mj-studio/js-util';
 
 export function useIntervalCallback(callback: () => void, intervalSec = 1, doImmediately = false) {
   const ref = useRef<Function>();

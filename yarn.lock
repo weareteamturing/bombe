@@ -5935,7 +5935,6 @@ __metadata:
     "@react-native-styled-system/core": ^1.4.1
     "@shopify/flash-list": ^1.7.1
     "@teamturing/icons": "workspace:^"
-    "@teamturing/timer": "workspace:^"
     "@testing-library/react-native": ^12.6.0
     "@types/react": ^18.2.44
     eslint-config-expo: ^7.1.2
@@ -5972,7 +5971,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@teamturing/timer@workspace:^, @teamturing/timer@workspace:packages/timer":
+"@teamturing/timer@workspace:packages/timer":
   version: 0.0.0-use.local
   resolution: "@teamturing/timer@workspace:packages/timer"
   peerDependencies:
