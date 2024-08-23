@@ -7,6 +7,7 @@
     "dev": "yarn example start",
     "check:type": "tsc",
     "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "t": "yarn check:lint && yarn check:type",
     "build": "yarn gen:icon && yarn gen:theme && bob build",
     "gen:icon": "bash ./script/gen_icon.sh",
     "gen:theme": "generate-theme-type src/theme/StyledSystemTheme.ts ../../node_modules/@react-native-styled-system/core/lib/typescript/src/@types/ThemedTypings.d.ts",
@@ -65,6 +66,7 @@
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
+  "types": "./lib/typescript/module/src/index.d.ts",
   "exports": {
     ".": {
       "import": {

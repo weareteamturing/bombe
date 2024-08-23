@@ -1,4 +1,4 @@
-import is from './is';
+import { is } from './is';
 
 export function px(x: number): `${number}px` {
   if (!is.number(x)) {

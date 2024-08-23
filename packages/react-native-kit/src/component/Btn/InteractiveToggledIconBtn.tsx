@@ -16,7 +16,7 @@ import Animated, {
 } from 'react-native-reanimated';
 
 import type { IconName } from '../Icon';
-import AnimatedIcon from '../Icon/AnimatedIcon';
+import { AnimatedIcon } from '../Icon/AnimatedIcon';
 
 type Variant = 'gray-primary' | 'lightgray-darkgray';
 const ColorByVariant: Record<

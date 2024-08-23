@@ -311,4 +311,4 @@ const IconBtn = (props: Props) => {
 };
 
 export type { Props as IconBtnProps };
-export default IconBtn;
+export { IconBtn };

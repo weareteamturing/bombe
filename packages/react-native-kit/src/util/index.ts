@@ -1,4 +1,4 @@
-export { default as is } from './is';
+export * from './is';
 export * from './ColorUtil';
 export * from './StyleUtil';
 export * from './Px';

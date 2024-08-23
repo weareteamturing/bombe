@@ -13,7 +13,7 @@ import {
   Keyboard,
 } from 'react-native';
 
-import is from '../../../util/is';
+import { is } from '../../../util';
 
 const { height: SCREEN_HEIGHT, width: SCREEN_WIDTH } = Dimensions.get('window');
 const styles = StyleSheet.create({

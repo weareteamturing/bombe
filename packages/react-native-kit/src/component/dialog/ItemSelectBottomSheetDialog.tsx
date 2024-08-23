@@ -14,7 +14,7 @@ import React, { useRef, useImperativeHandle, useMemo } from 'react';
 import { ScrollView, TouchableHighlight } from 'react-native';
 
 import { type BottomSheetDialogProps, BottomSheetDialog } from './base/BottomSheetDialog';
-import type { DialogRef } from './base/Dialog';
+import type { DialogRef } from './base';
 
 type Option<T> = Readonly<{ id: T; value: string; description?: string; disabled?: boolean; chevron?: boolean }>;
 
