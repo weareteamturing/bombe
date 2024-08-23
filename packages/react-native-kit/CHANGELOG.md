@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.2.1...@teamturing/react-native-kit@1.2.2) (2024-08-23)
+
+### Bug Fixes
+
+- **react-native-kit:** fix ([1e8f525](https://github.com/weareteamturing/bombe/commit/1e8f525924850d2efe74f0a97dc8a76f2e8ac4cd))
+- **react-native-kit:** fix icon generation script ([e94e1d5](https://github.com/weareteamturing/bombe/commit/e94e1d59c105350b7018b3e334a75c7c58c26f62))
+- **react-native-kit:** fix icon import path ([d28e1b0](https://github.com/weareteamturing/bombe/commit/d28e1b0540c7677774535dbdaaadf5052f6014c9))
+
 ## [1.2.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.2.0...@teamturing/react-native-kit@1.2.1) (2024-08-23)
 
 **Note:** Version bump only for package @teamturing/react-native-kit
