@@ -36,6 +36,10 @@ jobs:
         env:
           NPM_AUTOMATION_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
 
+      # for `grealpath` command
+      - name: Install coreutils
+        run: sudo apt-get install -y coreutils
+
       - name: Install dependencies
         run: yarn install --immutable
 
