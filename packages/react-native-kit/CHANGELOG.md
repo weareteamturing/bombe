@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.1.0...@teamturing/react-native-kit@1.2.0) (2024-08-23)
+
+### Features
+
+- **react-native-kit:** import core component + util + themes ([aa06cb5](https://github.com/weareteamturing/bombe/commit/aa06cb50f7cdd02f6b48ade47e39230e3cc1a868))
+
 # 1.1.0 (2024-08-23)
 
 ### Bug Fixes
