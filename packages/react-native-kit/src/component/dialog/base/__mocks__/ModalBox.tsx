@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { act } from 'react-test-renderer';
 
-import { is } from '@teamturing/react-native-kit';
+import { is } from '../../../../util';
 
 type Props = {
   onOpened?: () => void;

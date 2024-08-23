@@ -1,22 +1,14 @@
 import { useBackHandler } from '@react-native-community/hooks';
-import {
-  type IconName,
-  type IconProps,
-  type ImgSource,
-  type ChipProps,
-  type BtnProps,
-  is,
-  Icon,
-  palette,
-  Img,
-  spacing,
-  Chip,
-  Txt,
-  Btn,
-  runAfterFlushMacroQueue,
-} from '@teamturing/react-native-kit';
 import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react';
 import { View } from 'react-native';
+
+import { palette, spacing } from '../../theme';
+import { is, runAfterFlushMacroQueue } from '../../util';
+import { type BtnProps, Btn } from '../Btn';
+import { type ChipProps, Chip } from '../Chip';
+import { type IconName, type IconProps, Icon } from '../Icon';
+import { type ImgSource, Img } from '../Img';
+import { Txt } from '../Txt';
 
 import { useDialogContext } from './DialogProvider';
 import { type DialogRef, Dialog } from './base';

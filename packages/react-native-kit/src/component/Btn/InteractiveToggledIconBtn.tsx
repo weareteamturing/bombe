@@ -1,4 +1,3 @@
-import { palette, spacing, Touch } from '@teamturing/react-native-kit';
 import type { Ref } from 'react';
 import { useEffect, forwardRef, useImperativeHandle, useCallback } from 'react';
 import type { ViewStyle } from 'react-native';
@@ -15,8 +14,10 @@ import Animated, {
   withDelay,
 } from 'react-native-reanimated';
 
+import { palette, spacing } from '../../theme';
 import type { IconName } from '../Icon';
 import { AnimatedIcon } from '../Icon/AnimatedIcon';
+import { Touch } from '../Pressable';
 
 type Variant = 'gray-primary' | 'lightgray-darkgray';
 const ColorByVariant: Record<

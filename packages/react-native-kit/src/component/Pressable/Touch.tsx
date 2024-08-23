@@ -1,10 +1,12 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
-import { spacing, is } from '@teamturing/react-native-kit';
 import type { PropsWithChildren, Ref } from 'react';
 import { forwardRef } from 'react';
 import type { TouchableOpacityProps } from 'react-native';
 import { TouchableOpacity } from 'react-native';
+
+import { spacing } from '../../theme';
+import { is } from '../../util';
 
 import { type UseDisabilityAwareDebouncerParams, useDisabilityAwareDebouncer } from './useDisabilityAwareDebouncer';
 

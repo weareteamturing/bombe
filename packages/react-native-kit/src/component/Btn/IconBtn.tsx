@@ -1,11 +1,13 @@
 import type { SxProps } from '@react-native-styled-system/core';
 import { useSx } from '@react-native-styled-system/core';
-import { palette, PressableDelayed, spacing, LoadingIndicator } from '@teamturing/react-native-kit';
 import { mix } from 'polished';
 import type { PressableProps, StyleProp, ViewStyle } from 'react-native';
 
+import { palette, spacing } from '../../theme';
 import { type IconName, type IconProps, Icon } from '../Icon';
 import type { FlexibleLayoutStyle } from '../Layout/LayoutStyle';
+import { LoadingIndicator } from '../LoadingIndicator';
+import { PressableDelayed } from '../Pressable';
 
 type IconBtnSize = '56' | '40' | 'l' | 'm' | 's';
 type IconBtnVariant =

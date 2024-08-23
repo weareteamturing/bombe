@@ -1,10 +1,13 @@
-import { Txt, FontWeight, spacing, palette, is, Dot, px } from '@teamturing/react-native-kit';
 import type { ColorValue, ViewStyle } from 'react-native';
 
+import { palette, spacing } from '../../theme';
+import { is, px } from '../../util';
 import { Box } from '../Box';
+import { Dot } from '../Dot';
 import type { IconName, IconProps } from '../Icon';
 import { Icon } from '../Icon';
 import { Row, RowCenter } from '../Layout';
+import { Txt, FontWeight } from '../Txt';
 
 import { type BaseTabPropsWithoutRenderProps, BaseTab } from './BaseTab';
 

@@ -1,8 +1,10 @@
 import { type FlashListProps, FlashList } from '@shopify/flash-list';
-import { useStableCallback, is, useScrollViewOnEndReachedConfig } from '@teamturing/react-native-kit';
 import { useImperativeHandle, useRef, useState, forwardRef } from 'react';
 import type { FlatListProps, ScrollViewProps } from 'react-native';
 import { View } from 'react-native';
+
+import { useStableCallback, useScrollViewOnEndReachedConfig } from '../hook';
+import { is } from '../util';
 
 import { LoadingIndicator } from './LoadingIndicator';
 

@@ -1,21 +1,15 @@
-import {
-  type IconName,
-  palette,
-  type IconProps,
-  useDynamicLayout,
-  type ImperativeAnimationRef,
-  useAppState,
-  FadeInOut,
-  SlideInOut,
-  spacing,
-  Icon,
-  Txt,
-  useDialogContext,
-} from '@teamturing/react-native-kit';
 import React, { useImperativeHandle, useRef, useState } from 'react';
 import { View } from 'react-native';
 
+import { useAppState } from '../../hook';
+import { palette, spacing } from '../../theme';
 import { useAppEventListener } from '../../util/AppEvent';
+import { type ImperativeAnimationRef, FadeInOut, SlideInOut } from '../Animation';
+import { type IconName, type IconProps, Icon } from '../Icon';
+import { useDynamicLayout } from '../Layout';
+import { Txt } from '../Txt';
+
+import { useDialogContext } from './DialogProvider';
 
 export type ToastType = 'success' | 'warning';
 const ToastParamsByType: Record<ToastType, Pick<ToastDialogParams, 'iconName' | 'iconFill'>> = {

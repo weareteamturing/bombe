@@ -1,10 +1,10 @@
-import { palette, spacing } from '@teamturing/react-native-kit';
 import type { ReactElement } from 'react';
 import type { ColorValue, ViewStyle } from 'react-native';
 
+import { palette, spacing } from '../theme';
+
 import { type IconName, Icon } from './Icon';
-import { GapW } from './Layout/Gap';
-import { RowCenter } from './Layout/Row';
+import { GapW, RowCenter } from './Layout';
 
 type Props = {
   highlightColor?: ColorValue;

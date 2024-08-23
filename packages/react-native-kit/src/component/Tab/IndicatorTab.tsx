@@ -1,6 +1,9 @@
-import { palette, Txt, spacing, Badge } from '@teamturing/react-native-kit';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { View } from 'react-native';
+
+import { palette, spacing } from '../../theme';
+import { Badge } from '../Badge';
+import { Txt } from '../Txt';
 
 import { type BaseTabPropsWithoutRenderProps, BaseTab } from './BaseTab';
 

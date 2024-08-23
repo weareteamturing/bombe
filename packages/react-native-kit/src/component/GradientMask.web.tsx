@@ -1,9 +1,10 @@
 import { useSx } from '@react-native-styled-system/core';
-import { gradient } from '@teamturing/react-native-kit';
 import { parseToHsl } from 'polished';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { LayoutChangeEvent } from 'react-native';
 import { Stop } from 'react-native-svg';
+
+import { gradient } from '../theme';
 
 import { Box } from './Box';
 import type { GradientMaskProps } from './GradientMask';

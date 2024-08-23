@@ -1,18 +1,14 @@
-import {
-  is,
-  palette,
-  spacing,
-  Txt,
-  Grid,
-  Shake,
-  type ImperativeAnimationRef,
-  Touch,
-} from '@teamturing/react-native-kit';
 import React, { useEffect, useRef, forwardRef } from 'react';
 import { type TextInput, type StyleProp, type ViewStyle, type ColorValue, type TextStyle, View } from 'react-native';
 
+import { palette, spacing } from '../../theme';
+import { is } from '../../util';
+import { type ImperativeAnimationRef, Shake } from '../Animation';
 import { IconBtn } from '../Btn';
 import { type IconName, Icon } from '../Icon';
+import { Grid } from '../Layout';
+import { Touch } from '../Pressable';
+import { Txt } from '../Txt';
 
 import type { CoreTextFieldProps } from './CoreTextField';
 import { CoreTextField } from './CoreTextField';

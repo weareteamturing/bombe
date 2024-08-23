@@ -1,4 +1,4 @@
-import { is } from '@teamturing/react-native-kit';
+import { is } from '../../../util';
 
 export enum WindowSizeClass {
   COMPACT = 1,

@@ -1,7 +1,10 @@
-import { is, Txt } from '@teamturing/react-native-kit';
 import React, { useEffect, useRef, useState } from 'react';
 import type { LayoutRectangle, StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { Animated, Easing, ScrollView } from 'react-native';
+
+import { is } from '../util';
+
+import { Txt } from './Txt';
 
 export type MarqueeViewProps = {
   textStyle?: StyleProp<TextStyle>;

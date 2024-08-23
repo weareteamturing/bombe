@@ -1,7 +1,8 @@
-import { useTimeoutHandler, useTimeoutHandlers } from '@teamturing/react-native-kit';
 import { renderHook } from '@testing-library/react-native';
 
 import { waitRealTime } from '../../test/util/RealTimerUtil';
+
+import { useTimeoutHandler, useTimeoutHandlers } from './useTimeoutHandler';
 
 jest.useRealTimers();
 describe('useTimeoutHandler', () => {

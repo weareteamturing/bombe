@@ -1,8 +1,9 @@
-import { palette } from '@teamturing/react-native-kit';
 import type { PressableProps } from 'react-native';
 import { Pressable, View } from 'react-native';
 
-import type { LayoutStyle } from './Layout/LayoutStyle';
+import { palette } from '../theme';
+
+import type { LayoutStyle } from './Layout';
 
 type Props = { layout?: LayoutStyle; value: boolean } & PressableProps;
 const RadioButton = ({ layout, value, ...props }: Props) => {

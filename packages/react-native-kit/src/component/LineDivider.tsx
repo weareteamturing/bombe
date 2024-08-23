@@ -1,6 +1,8 @@
-import { palette, flatStyle } from '@teamturing/react-native-kit';
 import type { ColorValue, StyleProp, ViewStyle } from 'react-native';
 import { View } from 'react-native';
+
+import { palette } from '../theme';
+import { flatStyle } from '../util';
 
 type Props = {
   style?: StyleProp<ViewStyle>;

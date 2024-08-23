@@ -1,10 +1,12 @@
 import { generateArray } from '@mj-studio/js-util';
-import { type Spacing, palette, useMount } from '@teamturing/react-native-kit';
 import { useRef } from 'react';
 import type { ColorValue } from 'react-native';
 import { Animated, Easing } from 'react-native';
 
-import { RowCenter } from './Layout/Row';
+import { useMount } from '../hook';
+import { type Spacing, palette } from '../theme';
+
+import { RowCenter } from './Layout';
 
 type Props = {
   size?: number;

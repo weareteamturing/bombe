@@ -1,4 +1,4 @@
-import { is } from '@teamturing/react-native-kit';
+import { is } from '../../util';
 
 export type NumericFormatType = '0000 0000 0000 0000' | '00 / 00' | '000 0000 0000';
 function isEscapeChar(char: string): boolean {

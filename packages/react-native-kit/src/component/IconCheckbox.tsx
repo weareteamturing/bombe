@@ -1,9 +1,12 @@
-import { palette, type Spacing, spacing, is, type LayoutStyle, RowCenter } from '@teamturing/react-native-kit';
 import type { ReactElement } from 'react';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { Pressable } from 'react-native';
 
+import { palette, type Spacing, spacing } from '../theme';
+import { is } from '../util';
+
 import { type IconName, type IconProps, Icon } from './Icon';
+import { type LayoutStyle, RowCenter } from './Layout';
 
 export type IconCheckboxSize = 'm' | 's' | 's20';
 export type IconCheckboxVariant = 'check-primary' | 'check-circle-gray900' | 'check-circle-violet500';

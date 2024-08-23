@@ -1,5 +1,6 @@
-import { gradient as Gradient } from '@teamturing/react-native-kit';
 import { View } from 'react-native';
+
+import { gradient as Gradient } from '../theme';
 
 import type { GradientBorderContainerProps } from './GradientBorderContainer';
 

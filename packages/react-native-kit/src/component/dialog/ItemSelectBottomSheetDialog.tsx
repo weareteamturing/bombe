@@ -1,20 +1,15 @@
-import {
-  Box,
-  useDynamicLayout,
-  ItemList,
-  palette,
-  Txt,
-  RowCenter,
-  FontWeight,
-  Icon,
-  spacing,
-  is,
-} from '@teamturing/react-native-kit';
 import React, { useRef, useImperativeHandle, useMemo } from 'react';
 import { ScrollView, TouchableHighlight } from 'react-native';
 
-import { type BottomSheetDialogProps, BottomSheetDialog } from './base/BottomSheetDialog';
+import { spacing, palette } from '../../theme';
+import { is } from '../../util';
+import { Box } from '../Box';
+import { Icon } from '../Icon';
+import { ItemList, useDynamicLayout, RowCenter } from '../Layout';
+import { Txt, FontWeight } from '../Txt';
+
 import type { DialogRef } from './base';
+import { type BottomSheetDialogProps, BottomSheetDialog } from './base/BottomSheetDialog';
 
 type Option<T> = Readonly<{ id: T; value: string; description?: string; disabled?: boolean; chevron?: boolean }>;
 
