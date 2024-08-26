@@ -1,4 +1,13 @@
-import { PropsWithChildren, ReactElement, Ref, cloneElement, createContext, forwardRef, isValidElement } from 'react';
+import {
+  DataHTMLAttributes,
+  PropsWithChildren,
+  ReactElement,
+  Ref,
+  cloneElement,
+  createContext,
+  forwardRef,
+  isValidElement,
+} from 'react';
 
 import useRelocation from '../../hook/useRelocation';
 import Checkbox from '../Checkbox';
@@ -55,6 +64,7 @@ const FormControl = (
     required,
     additionalInputComponentCandidates = [],
     sx,
+    ...props
   }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
 ) => {
@@ -85,7 +95,7 @@ const FormControl = (
   return (
     <FormControlContext.Provider value={{ id, disabled, required }}>
       {isHorizontalLayoutNeeded ? (
-        <View ref={ref} display={'flex'} sx={{ columnGap: 2, ...sx }}>
+        <View ref={ref} display={'flex'} sx={{ columnGap: 2, ...sx }} {...props}>
           <View display={'inline-flex'}>
             {cloneElement(InputComponent as ReactElement, { id, disabled, required })}
           </View>
@@ -102,6 +112,7 @@ const FormControl = (
           display={'flex'}
           flexDirection={'column'}
           sx={{ '& > label': { mb: 1 }, '& > span': { mt: 1 }, ...sx }}
+          {...props}
         >
           {relocatableComponentsObject.label}
           {cloneElement(InputComponent as ReactElement, { id, disabled, required })}
