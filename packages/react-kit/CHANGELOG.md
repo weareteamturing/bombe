@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.8](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.23.7...@teamturing/react-kit@2.23.8) (2024-08-26)
+
+### Bug Fixes
+
+- **react-kit:** fix eslint error ([5f3f570](https://github.com/weareteamturing/bombe/commit/5f3f570c31dff0ac66a50f249ab2cc5959e8cdf4))
+- **react-kit:** update FormControl props to passed ([bce1638](https://github.com/weareteamturing/bombe/commit/bce163850b564387333f45be6412419f9db8bc98))
+
 ## [2.23.7](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.23.6...@teamturing/react-kit@2.23.7) (2024-08-23)
 
 **Note:** Version bump only for package @teamturing/react-kit
