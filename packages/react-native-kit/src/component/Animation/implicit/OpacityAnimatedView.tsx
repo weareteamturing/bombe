@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from 'react';
 import type { ViewProps } from 'react-native';
 import { Animated } from 'react-native';
 
-import { useTimeoutHandler } from '../../../hook';
+import { useTimeoutHandlers } from '../../../hook';
 
 type Props = { opacity: number; duration?: number; dropChildrenWhenInvisible?: boolean } & ViewProps;
 const OpacityAnimatedView = ({
@@ -15,22 +15,22 @@ const OpacityAnimatedView = ({
   ...rest
 }: PropsWithChildren<Props>) => {
   const opacityValue = useRef(new Animated.Value(opacity)).current;
-  const timeoutHandler = useTimeoutHandler();
+  const { clearAllTimers, setAutoClearTimeout } = useTimeoutHandlers();
   const [dropChildren, setDropChildren] = useState(!!(dropChildrenWhenInvisible && opacity === 0));
   useEffect(() => {
-    clearTimeout(timeoutHandler.current);
+    clearAllTimers();
     const anim = Animated.timing(opacityValue, { useNativeDriver: true, toValue: opacity, duration });
     anim.start();
     if (opacity <= 0 && dropChildrenWhenInvisible) {
-      timeoutHandler.current = setTimeout(() => setDropChildren(true), duration);
+      setAutoClearTimeout(() => setDropChildren(true), duration);
     } else {
       setDropChildren(false);
     }
     return () => {
-      clearTimeout(timeoutHandler.current);
+      clearAllTimers();
       anim.stop();
     };
-  }, [opacity, duration, opacityValue, dropChildrenWhenInvisible, timeoutHandler]);
+  }, [opacity, duration, opacityValue, dropChildrenWhenInvisible, clearAllTimers, setAutoClearTimeout]);
 
   return (
     <Animated.View style={[style, { opacity: opacityValue }]} {...rest}>
