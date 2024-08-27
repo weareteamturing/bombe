@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.2.3...@teamturing/react-native-kit@1.2.4) (2024-08-27)
+
+### Bug Fixes
+
+- **react-native-kit:** opacityAnimatedView invalid timer ([b11dc27](https://github.com/weareteamturing/bombe/commit/b11dc27334142a352bb96b5ab268fc0f5ea495bc))
+
 ## [1.2.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.2.2...@teamturing/react-native-kit@1.2.3) (2024-08-23)
 
 ### Bug Fixes
