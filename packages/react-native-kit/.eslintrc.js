@@ -22,7 +22,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {
-        project: 'packages/react-native-kit/tsconfig.json',
+        project: ['packages/react-native-kit/tsconfig.json', 'tsconfig.json'],
       },
     },
   },
