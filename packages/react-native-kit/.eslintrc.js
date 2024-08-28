@@ -18,12 +18,6 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
-  },
-  settings: {
-    'import/resolver': {
-      typescript: {
-        project: 'packages/react-native-kit/tsconfig.json',
-      },
-    },
+    'import/no-unresolved': 'off',
   },
 };
