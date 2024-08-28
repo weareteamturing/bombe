@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.2.4...@teamturing/react-native-kit@1.3.0) (2024-08-28)
+
+### Bug Fixes
+
+- **react-native-kit:** fix lint ([f187f4c](https://github.com/weareteamturing/bombe/commit/f187f4ca3471b36248897a5ba35cb581f8fbe8b3))
+- **react-native-kit:** fix lint ([48d1ac7](https://github.com/weareteamturing/bombe/commit/48d1ac738a6f1c39f13053f3bcc1abdfa382016d))
+- **react-native-kit:** lint ([368ebbd](https://github.com/weareteamturing/bombe/commit/368ebbd584de615a7c9de6cf4556b955635326f0))
+- **react-native-kit:** lint ([241fc8d](https://github.com/weareteamturing/bombe/commit/241fc8ddf48b1b6195f34ceecc7eff744a49c3a9))
+
+### Features
+
+- **react-native-kit:** add ProfilePhoto components ([5dc22ca](https://github.com/weareteamturing/bombe/commit/5dc22cad864925db479893d979636fa4005a22cc))
+
 ## [1.2.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.2.3...@teamturing/react-native-kit@1.2.4) (2024-08-27)
 
 ### Bug Fixes
