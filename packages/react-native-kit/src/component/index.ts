@@ -50,9 +50,9 @@ export * from './Img';
 export * from './Icon';
 export * from './Header';
 export * from './FloatingRoundChip';
-
 export * from './dialog';
 export * from './Btn';
 export * from './Box';
 export * from './Banner';
 export * from './Animation';
+export * from './ProfilePhoto';

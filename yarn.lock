@@ -5935,6 +5935,7 @@ __metadata:
     "@react-native-styled-system/core": ^1.4.1
     "@shopify/flash-list": ^1.7.1
     "@teamturing/icons": "workspace:^"
+    "@teamturing/utils": "workspace:^"
     "@testing-library/react-native": ^12.6.0
     "@types/react": ^18.2.44
     eslint-config-expo: ^7.1.2
