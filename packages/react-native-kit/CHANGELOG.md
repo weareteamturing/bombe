@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.3.0...@teamturing/react-native-kit@1.3.1) (2024-08-29)
+
+### Bug Fixes
+
+- **react-native-kit:** deploy ([8db3d1b](https://github.com/weareteamturing/bombe/commit/8db3d1bb52d51cec19040809fe0fee3568dba531))
+- **react-native-kit:** useTimeoutHandler clearTimeout condition ([d2555b8](https://github.com/weareteamturing/bombe/commit/d2555b8547e4198c7330cb156f76851a9dc05cbb))
+
 # [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.2.4...@teamturing/react-native-kit@1.3.0) (2024-08-28)
 
 ### Bug Fixes
