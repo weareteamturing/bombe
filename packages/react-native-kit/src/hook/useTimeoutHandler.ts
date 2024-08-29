@@ -7,7 +7,7 @@ function useTimeoutHandler() {
   const handler = useRef<any>(-1);
 
   useUnmount(() => {
-    clearTimeout(handler.current);
+    if (handler.current !== -1) clearTimeout(handler.current);
   });
 
   return handler;
