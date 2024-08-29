@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import { type StyleProp, type ViewStyle, View } from 'react-native';
+import { type StyleProp, type ViewStyle, View, type ImageSourcePropType } from 'react-native';
 
 import { palette } from '../../theme';
 import { is } from '../../util';
@@ -18,6 +18,7 @@ type Props = {
   length?: number;
   testID?: string;
   profileImageUrl?: string;
+  defaultImage?: ImageSourcePropType;
 };
 const ProfilePhoto = ({
   style,
@@ -27,6 +28,7 @@ const ProfilePhoto = ({
   length: _length,
   testID,
   profileImageUrl,
+  defaultImage,
 }: Props): ReactElement => {
   const length = is.number(_length) ? _length : defaultLength;
 
@@ -52,7 +54,7 @@ const ProfilePhoto = ({
         onPress={onPress}
         disabled={!pressable}
       >
-        <LightProfilePhoto profileImageUrl={profileImageUrl || ''} size={length} />
+        <LightProfilePhoto profileImageUrl={profileImageUrl || ''} size={length} defaultImage={defaultImage} />
         {showIcon ? (
           <View
             style={{
