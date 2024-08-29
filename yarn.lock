@@ -5929,7 +5929,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@teamturing/react-native-kit@workspace:packages/react-native-kit":
+"@teamturing/react-native-kit@workspace:^, @teamturing/react-native-kit@workspace:packages/react-native-kit":
   version: 0.0.0-use.local
   resolution: "@teamturing/react-native-kit@workspace:packages/react-native-kit"
   dependencies:
@@ -5976,6 +5976,27 @@ __metadata:
     react-native-reanimated-carousel: 3
     react-native-safe-area-context: "*"
     react-native-svg: "*"
+    react-native-webview: "*"
+  languageName: unknown
+  linkType: soft
+
+"@teamturing/react-native-tex@workspace:packages/react-native-tex":
+  version: 0.0.0-use.local
+  resolution: "@teamturing/react-native-tex@workspace:packages/react-native-tex"
+  dependencies:
+    "@babel/core": ^7.25.2
+    "@babel/preset-env": ^7.25.3
+    "@mj-studio/js-util": ^1.1.16
+    "@teamturing/react-native-kit": "workspace:^"
+    "@types/react": ^18.2.44
+    eslint-config-expo: ^7.1.2
+    eslint-import-resolver-typescript: ^3.6.3
+    eslint-plugin-import: ^2.29.1
+    react: 18.2.0
+    react-native: 0.74.5
+    react-native-builder-bob: ^0.30.0
+    react-native-webview: ^13.11.1
+  peerDependencies:
     react-native-webview: "*"
   languageName: unknown
   linkType: soft
