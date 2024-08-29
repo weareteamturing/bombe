@@ -1,10 +1,10 @@
-import type { StyleProp, ViewStyle } from 'react-native';
+import type { StyleProp, ViewStyle, ImageSourcePropType } from 'react-native';
 import { View } from 'react-native';
 
 import { is, appendImageSizeQueryParams } from '../../util';
 import { Img } from '../Img';
 
-import defaultImage from './profile_outline_gray_90.png';
+import DEFAULT_PROFILE_IMAGE from './profile_outline_gray_90.png';
 
 // this is used for just rendering character image in light component like list item(shouldn't be heavy)
 const LightProfilePhoto = ({
@@ -14,6 +14,7 @@ const LightProfilePhoto = ({
   borderColor,
   borderWidth = 0,
   optimize = true,
+  defaultImage = DEFAULT_PROFILE_IMAGE,
 }: {
   profileImageUrl: string;
   style?: StyleProp<Omit<ViewStyle, 'borderWidth' | 'borderColor'>>;
@@ -21,6 +22,7 @@ const LightProfilePhoto = ({
   borderWidth?: number;
   borderColor?: string;
   optimize?: boolean;
+  defaultImage?: ImageSourcePropType;
 }) => {
   const size = _size || 56;
   return (
