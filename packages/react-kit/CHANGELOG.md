@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.24.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.23.8...@teamturing/react-kit@2.24.0) (2024-08-29)
+
+### Features
+
+- **react-kit:** update Flash component ([fb20439](https://github.com/weareteamturing/bombe/commit/fb204390f21cc2a5964e6639cbee79342fd42929))
+
 ## [2.23.8](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.23.7...@teamturing/react-kit@2.23.8) (2024-08-26)
 
 ### Bug Fixes
