@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.3.1...@teamturing/react-native-kit@1.3.2) (2024-08-29)
+
+### Bug Fixes
+
+- **react-native-kit:** add defaultImage prop to LightProfilePhoto ([1921d50](https://github.com/weareteamturing/bombe/commit/1921d50fe2f88da5ed551f38f4bc829101e31e2a))
+
 ## [1.3.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.3.0...@teamturing/react-native-kit@1.3.1) (2024-08-29)
 
 ### Bug Fixes
