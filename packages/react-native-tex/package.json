@@ -1,0 +1,132 @@
+{
+  "name": "@teamturing/react-native-tex",
+  "version": "1.0.0",
+  "description": "React Native Tex Module for Team Turing",
+  "scripts": {
+    "check:type": "tsc",
+    "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "t": "yarn check:lint && yarn check:type",
+    "build": "yarn gen:icon && yarn gen:theme && bob build",
+    "gen:html": "zx script/generate_html_text.mjs --src src/html",
+    "prepare": "yarn gen:html"
+  },
+  "dependencies": {
+    "@mj-studio/js-util": "^1.1.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@teamturing/react-native-kit": "workspace:^",
+    "@types/react": "^18.2.44",
+    "eslint-config-expo": "^7.1.2",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.29.1",
+    "react": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-builder-bob": "^0.30.0",
+    "react-native-mmkv": "^3.0.1",
+    "react-native-webview": "^13.11.1",
+    "zx": "^8.1.5"
+  },
+  "resolutions": {
+    "@types/react": "^18.2.44"
+  },
+  "peerDependencies": {
+    "@teamturing/react-native-kit": "*",
+    "react-native-mmkv": ">=3",
+    "react-native-webview": "*"
+  },
+  "source": "./src/index.tsx",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
+  "types": "./lib/typescript/module/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/typescript/module/src/index.d.ts",
+        "default": "./lib/module/index.js"
+      },
+      "require": {
+        "types": "./lib/typescript/commonjs/src/index.d.ts",
+        "default": "./lib/commonjs/index.js"
+      }
+    }
+  },
+  "workspaces": [
+    "example"
+  ],
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/",
+    "**/metro.config.js",
+    "**/babel.config.js"
+  ],
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/"
+    ]
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json",
+          "esm": true
+        }
+      ]
+    ]
+  },
+  "create-react-native-library": {
+    "type": "library",
+    "version": "0.41.0"
+  },
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "*.podspec",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weareteamturing/bombe.git"
+  },
+  "author": "mystic <mystic@teamturing.com> (https://teamturing.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weareteamturing/bombe/issues"
+  }
+}
