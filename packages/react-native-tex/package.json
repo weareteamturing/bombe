@@ -7,17 +7,16 @@
     "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
     "t": "yarn check:lint && yarn check:type",
     "build": "yarn gen:icon && yarn gen:theme && bob build",
-    "gen:icon": "bash ./script/gen_icon.sh",
-    "gen:theme": "generate-theme-type src/theme/StyledSystemTheme.ts ../../node_modules/@react-native-styled-system/core/lib/typescript/src/@types/ThemedTypings.d.ts",
-    "prepare": "yarn gen:icon && yarn gen:theme"
+    "gen:html": "zx script/generate_html_text.mjs --src src/html",
+    "prepare": "yarn gen:html"
   },
   "dependencies": {
-    "@mj-studio/js-util": "^1.1.16",
-    "@teamturing/react-native-kit": "workspace:^"
+    "@mj-studio/js-util": "^1.1.16"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
+    "@teamturing/react-native-kit": "workspace:^",
     "@types/react": "^18.2.44",
     "eslint-config-expo": "^7.1.2",
     "eslint-import-resolver-typescript": "^3.6.3",
@@ -25,12 +24,16 @@
     "react": "18.2.0",
     "react-native": "0.74.5",
     "react-native-builder-bob": "^0.30.0",
-    "react-native-webview": "^13.11.1"
+    "react-native-mmkv": "^3.0.1",
+    "react-native-webview": "^13.11.1",
+    "zx": "^8.1.5"
   },
   "resolutions": {
     "@types/react": "^18.2.44"
   },
   "peerDependencies": {
+    "@teamturing/react-native-kit": "*",
+    "react-native-mmkv": ">=3",
     "react-native-webview": "*"
   },
   "source": "./src/index.tsx",

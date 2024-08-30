@@ -5995,8 +5995,12 @@ __metadata:
     react: 18.2.0
     react-native: 0.74.5
     react-native-builder-bob: ^0.30.0
+    react-native-mmkv: ^3.0.1
     react-native-webview: ^13.11.1
+    zx: ^8.1.5
   peerDependencies:
+    "@teamturing/react-native-kit": "*"
+    react-native-mmkv: ">=3"
     react-native-webview: "*"
   languageName: unknown
   linkType: soft
@@ -6160,7 +6164,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/fs-extra@npm:^11.0.1":
+"@types/fs-extra@npm:>=11, @types/fs-extra@npm:^11.0.1":
   version: 11.0.4
   resolution: "@types/fs-extra@npm:11.0.4"
   dependencies:
@@ -6352,6 +6356,15 @@ __metadata:
   version: 20.4.7
   resolution: "@types/node@npm:20.4.7"
   checksum: a40d7003f66b56220a2028179e49f950b46fa6dbf860a4a6ecbd6ba7976f05b2f0b31ced39689ec88a7d9e32d07e088c6a06d270b99d5bc13a28291ac2f30ca7
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:>=20":
+  version: 22.5.1
+  resolution: "@types/node@npm:22.5.1"
+  dependencies:
+    undici-types: ~6.19.2
+  checksum: 366990347c12e08e9ffe113e493253ac454d5337828e23cb02c790d5abe1f2ab0148da37b728eb886d858c4c5f29f4341a29987e89555d482ea236691d9d2648
   languageName: node
   linkType: hard
 
@@ -17791,6 +17804,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-mmkv@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "react-native-mmkv@npm:3.0.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: b23c5b5e0c2c4f54fa001b88b1945842a64e03e9a3fe3e967f9c294b0b821d03bc4240e73ce5aea54b190224adaf994c8d5c9b7de7e297f723a1f007fe04a962
+  languageName: node
+  linkType: hard
+
 "react-native-reanimated-carousel@npm:^3.5.1":
   version: 3.5.1
   resolution: "react-native-reanimated-carousel@npm:3.5.1"
@@ -20625,6 +20648,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~6.19.2":
+  version: 6.19.8
+  resolution: "undici-types@npm:6.19.8"
+  checksum: de51f1b447d22571cf155dfe14ff6d12c5bdaec237c765085b439c38ca8518fc360e88c70f99469162bf2e14188a7b0bcb06e1ed2dc031042b984b0bb9544017
+  languageName: node
+  linkType: hard
+
 "unicode-canonical-property-names-ecmascript@npm:^2.0.0":
   version: 2.0.0
   resolution: "unicode-canonical-property-names-ecmascript@npm:2.0.0"
@@ -21543,5 +21573,22 @@ __metadata:
   bin:
     zx: build/cli.js
   checksum: 33b05e26ec3a429de6ff8db759d7b7857b947f4845025416db410bedaa8e613608a6d1916f257e129625d0192b6ba43e482356c6844ff90d15b0fd06dd9b98d2
+  languageName: node
+  linkType: hard
+
+"zx@npm:^8.1.5":
+  version: 8.1.5
+  resolution: "zx@npm:8.1.5"
+  dependencies:
+    "@types/fs-extra": ">=11"
+    "@types/node": ">=20"
+  dependenciesMeta:
+    "@types/fs-extra":
+      optional: true
+    "@types/node":
+      optional: true
+  bin:
+    zx: build/cli.js
+  checksum: a7a346cc7aee6962efe9b80b1ca2e0a4faad850e6e4e697916bc75255c252f9e7e6648bbc606a7bd0530080c79841bdb71fe8426d9a477d961afe2f3250f2574
   languageName: node
   linkType: hard
