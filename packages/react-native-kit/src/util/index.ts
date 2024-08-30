@@ -6,3 +6,4 @@ export * from './EnvironmentUtil';
 export * from './createCtx';
 export * from './runAfterFlushMacroQueue';
 export * from './WebImageUrlEnricher';
+export * from './Assert';
