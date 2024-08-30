@@ -22,7 +22,17 @@ Text.defaultProps.allowFontScaling = false;
 TextInput.defaultProps = TextInput.defaultProps || {};
 // @ts-ignore
 TextInput.defaultProps.allowFontScaling = false;
+
+type GlobalOption = { includeFontPadding?: boolean; allowFontScaling?: boolean };
+let globalOption: GlobalOption = {
+  allowFontScaling: false,
+  includeFontPadding: false,
+};
 class Txt {
+  static configure(option: GlobalOption) {
+    globalOption = option;
+  }
+
   readonly #config: TextConfig;
 
   get config() {
@@ -44,7 +54,7 @@ class Txt {
       style,
       {
         fontSize: size,
-        includeFontPadding: false,
+        includeFontPadding: globalOption.includeFontPadding || false,
         color,
         fontFamily: this.fontFaimily,
         textAlign: align,
@@ -59,7 +69,7 @@ class Txt {
       onLayout: this.config.onLayout,
       ...this.numberOfLinesProp,
       ...(ellipsizeMode ? { ellipsizeMode } : undefined),
-      allowFontScaling: false,
+      allowFontScaling: globalOption.allowFontScaling || false,
       style: mergedStyle,
       testID: testID,
     };
