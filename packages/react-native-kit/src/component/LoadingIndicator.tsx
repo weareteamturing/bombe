@@ -6,13 +6,13 @@ import { ActivityIndicator } from 'react-native';
 import { palette } from '../theme';
 import { is } from '../util';
 
-export type MathKingIndicatorProps = {
+export type LoadingIndicatorProps = {
   testID?: string;
   size?: number;
   color?: string;
   style?: StyleProp<ViewStyle>;
 } & SxProps;
-const LoadingIndicator = (props: MathKingIndicatorProps) => {
+const LoadingIndicator = (props: LoadingIndicatorProps) => {
   const { getStyle, filteredProps } = useSx(props);
   const { testID, size, color = palette.gray400 } = filteredProps;
   return (
