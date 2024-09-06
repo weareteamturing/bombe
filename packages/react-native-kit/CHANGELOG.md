@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.5.1...@teamturing/react-native-kit@1.5.2) (2024-09-06)
+
+### Bug Fixes
+
+- **react-native-kit:** don't clear timeout handler if invalid in CommonDialog ([f9be13a](https://github.com/weareteamturing/bombe/commit/f9be13a61bc55ef9bfd33c14c327093b1ecaa1a3))
+
 ## [1.5.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.5.0...@teamturing/react-native-kit@1.5.1) (2024-08-30)
 
 **Note:** Version bump only for package @teamturing/react-native-kit
