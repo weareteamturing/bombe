@@ -110,7 +110,7 @@ const CommonBottomSheetDialog = forwardRef<CommonBottomSheetDialogRef, CommonBot
   const open = useCallback(
     (params: CommonBottomSheetDialogOpenParams) => {
       isOpen.current = true;
-      if (clearStateHandler.current) {
+      if (clearStateHandler.current !== -1) {
         clearTimeout(clearStateHandler.current);
       }
 
