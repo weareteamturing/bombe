@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.5.4...@teamturing/react-native-kit@1.5.5) (2024-09-06)
+
+### Bug Fixes
+
+- **react-native-kit:** fix common bottom sheet dialog clear timeout bug ([b805db7](https://github.com/weareteamturing/bombe/commit/b805db71450a1f1df27501b6fd3e56b6f6cfa64b))
+
 ## [1.5.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.5.3...@teamturing/react-native-kit@1.5.4) (2024-09-06)
 
 ### Bug Fixes
