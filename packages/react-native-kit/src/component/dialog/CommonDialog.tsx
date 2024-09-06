@@ -142,7 +142,7 @@ const CommonDialog = forwardRef<CommonDialogRef, CommonDialogProps>((props, ref)
   const open = useCallback(
     (params: CommonDialogOpenParams) => {
       isOpen.current = true;
-      clearTimeout(clearStateHandler.current);
+      if (clearStateHandler.current !== -1) clearTimeout(clearStateHandler.current);
 
       setUIStates(params);
       dialog.current?.open();
