@@ -14,12 +14,16 @@ type HandleErrorWithCommonDialogOption = {
   hideErrorReportButton: boolean;
   buttonText: string;
 };
-const defaultHandleErrorWithCommonDialogOption: HandleErrorWithCommonDialogOption = {
+let defaultHandleErrorWithCommonDialogOption: HandleErrorWithCommonDialogOption = {
   title: '오류가 발생했습니다',
   body: '잠시 후에 다시 시도해주세요',
   hideErrorReportButton: false,
   buttonText: '확인',
 };
+
+export function setDefaultErrorWithCommonDialogOption(option: Partial<HandleErrorWithCommonDialogOption>) {
+  defaultHandleErrorWithCommonDialogOption = { ...defaultHandleErrorWithCommonDialogOption, ...option };
+}
 
 export const [useDialogContext, DialogProvider, DialogConsumer, useDialogContextSafely] = createCtx(() => {
   const commonDialog = useRef<CommonDialogRef>(null);
