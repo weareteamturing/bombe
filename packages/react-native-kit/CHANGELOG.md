@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.5.2...@teamturing/react-native-kit@1.5.3) (2024-09-06)
+
+**Note:** Version bump only for package @teamturing/react-native-kit
+
 ## [1.5.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.5.1...@teamturing/react-native-kit@1.5.2) (2024-09-06)
 
 ### Bug Fixes
