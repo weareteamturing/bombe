@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.1.6...@teamturing/react-native-tex@1.1.7) (2024-09-06)
+
+### Bug Fixes
+
+- **react-native-tex:** prevent intensive resize callback ([be15263](https://github.com/weareteamturing/bombe/commit/be15263338af797e969b08dc1a2726d06d89b83b))
+
 ## [1.1.6](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.1.5...@teamturing/react-native-tex@1.1.6) (2024-09-06)
 
 **Note:** Version bump only for package @teamturing/react-native-tex
