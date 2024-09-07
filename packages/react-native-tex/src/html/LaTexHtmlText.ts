@@ -151,25 +151,37 @@ const text = ({ fontSize }: { fontSize: number } = { fontSize: 13 }) => String.r
   const onPhantomBoxPressed = (index) => {
     window.ReactNativeWebView.postMessage(JSON.stringify({ event: "phantom-box-pressed", index }));
   };
+  
+  let debounceHandler = -1;
+  const debounce = (fn) => {
+    if(debounceHandler !== -1) clearTimeout(debounceHandler);
+    debounceHandler = setTimeout(() => {
+      fn();
+      debounceHandler = -1;
+    }, 500);
+  }
+  
   let lastScrollHeight = 0;
   let lastScrollWidth = 0;
   let lastClientWidth = 0;
   const onDocumentResized = () => {
-    const container = document.getElementById("container");
-    if (container && Math.abs(lastScrollHeight - container.scrollHeight) +
-      Math.abs(lastScrollWidth - container.scrollWidth) + Math.abs(lastClientWidth - container.clientWidth) >= 15) {
-      lastScrollHeight = container.scrollHeight;
-      lastScrollWidth = container.scrollWidth;
-      lastClientWidth = container.clientWidth;
-      window.ReactNativeWebView.postMessage(
-        JSON.stringify({
-          event: "set-layout",
-          scrollHeight: container.scrollHeight,
-          scrollWidth: container.scrollWidth,
-          clientWidth: container.clientWidth
-        })
-      );
-    }
+    debounce(() => {
+      const container = document.getElementById("container");
+      if (container && Math.abs(lastScrollHeight - container.scrollHeight) +
+        Math.abs(lastScrollWidth - container.scrollWidth) + Math.abs(lastClientWidth - container.clientWidth) >= 15) {
+        lastScrollHeight = container.scrollHeight;
+        lastScrollWidth = container.scrollWidth;
+        lastClientWidth = container.clientWidth;
+        window.ReactNativeWebView.postMessage(
+          JSON.stringify({
+            event: "set-layout",
+            scrollHeight: container.scrollHeight,
+            scrollWidth: container.scrollWidth,
+            clientWidth: container.clientWidth
+          })
+        );
+      }
+    });
   };
 
   const scrollToTop = () => {
