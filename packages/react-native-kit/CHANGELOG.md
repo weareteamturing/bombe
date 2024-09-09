@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.5.5...@teamturing/react-native-kit@1.6.0) (2024-09-09)
+
+### Features
+
+- **react-native-kit:** export AppEvent module ([2697e7a](https://github.com/weareteamturing/bombe/commit/2697e7a6c9025d847ae9445416570dd3359f143c))
+
 ## [1.5.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.5.4...@teamturing/react-native-kit@1.5.5) (2024-09-06)
 
 ### Bug Fixes

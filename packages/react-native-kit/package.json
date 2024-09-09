@@ -1,6 +1,6 @@
 {
   "name": "@teamturing/react-native-kit",
-  "version": "1.5.5",
+  "version": "1.6.0",
   "description": "React Native Common Module for Team Turing",
   "scripts": {
     "example": "yarn workspace @teamturing/react-native-kit-example",
