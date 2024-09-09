@@ -330,8 +330,8 @@ export const LaTexWithDocumentIntrinsicHeight = (
     disableHorizontalScroll?: boolean;
     refForCapture?: ForwardedRef<View>;
     paddingBottom?: number;
-    sketchViewMinHeight?: number;
     innerRef?: ForwardedRef<LaTexRef>;
+    minHeight?: number;
   },
 ) => {
   const { fontSize } = useTexSettings();
@@ -344,7 +344,7 @@ export const LaTexWithDocumentIntrinsicHeight = (
       pb={px(props.paddingBottom ?? 0)}
       ref={props.refForCapture}
       collapsable={false}
-      {...(props?.sketchViewMinHeight ? { minHeight: px(props.sketchViewMinHeight) } : {})}
+      minHeight={px(props.minHeight ?? 0)}
     >
       <LaTexMemoized
         key={`${props.tex}-${props.width}-${fontSize}`}
