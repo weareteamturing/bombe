@@ -7,3 +7,4 @@ export * from './createCtx';
 export * from './runAfterFlushMacroQueue';
 export * from './WebImageUrlEnricher';
 export * from './Assert';
+export * from './AppEvent';
