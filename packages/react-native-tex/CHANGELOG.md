@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.10](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.1.9...@teamturing/react-native-tex@1.1.10) (2024-09-09)
+
+### Bug Fixes
+
+- **react-native-tex:** change prop name ([232cb09](https://github.com/weareteamturing/bombe/commit/232cb09465925e95fca00eab82323a1c9e5fc41b))
+
 ## [1.1.9](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.1.8...@teamturing/react-native-tex@1.1.9) (2024-09-09)
 
 **Note:** Version bump only for package @teamturing/react-native-tex
