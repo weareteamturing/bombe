@@ -180,6 +180,7 @@ const LaTexInternal = forwardRef(
 
     useImperativeHandle(ref, () => ({ setPhantomBoxVisibility, scrollToTop }), [setPhantomBoxVisibility, scrollToTop]);
 
+    const lastLayoutChangeEventId = useRef(-1);
     const handler = useTimeoutHandler();
     const onMessage = useStableCallback((event: WebViewMessageEvent) => {
       const rawData = event?.nativeEvent?.data;
@@ -199,6 +200,10 @@ const LaTexInternal = forwardRef(
           if (!is.number(data.scrollHeight) || !(data.scrollHeight > 0)) {
             return;
           }
+          if (is.number(data.layoutChangeEventId) && data.layoutChangeEventId <= lastLayoutChangeEventId.current) {
+            return;
+          }
+          lastLayoutChangeEventId.current = data.layoutChangeEventId;
           // widthForFixedDocumentWidth가 있음은 intrinsic height로 계산되어야 하는 LaTex란 뜻이므로 이 때만 처리
           if (widthForFixedDocumentWidth && is.number(data.scrollWidth)) {
             if (documentHeight !== data.scrollHeight || documentWidth !== data.scrollWidth) {
@@ -215,7 +220,6 @@ const LaTexInternal = forwardRef(
 
     return (
       <View
-        id={'123'}
         style={[style, { width }, Platform.OS === 'web' ? { height: heightProp } : { height }]}
         pointerEvents={disablePointerEvent ? 'none' : 'auto'}
         testID={testID}
@@ -226,7 +230,6 @@ const LaTexInternal = forwardRef(
           style={[
             {
               backgroundColor: 'transparent',
-              height,
               width: '100%',
             },
             Platform.OS === 'web'
