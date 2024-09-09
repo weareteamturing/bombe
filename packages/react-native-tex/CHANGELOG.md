@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.11](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.1.10...@teamturing/react-native-tex@1.1.11) (2024-09-09)
+
+### Bug Fixes
+
+- **react-native-tex:** layout calculation dupling ([d5bb437](https://github.com/weareteamturing/bombe/commit/d5bb437e1b2bbcdb32235e9711564925dc928c2d))
+
 ## [1.1.10](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.1.9...@teamturing/react-native-tex@1.1.10) (2024-09-09)
 
 ### Bug Fixes
