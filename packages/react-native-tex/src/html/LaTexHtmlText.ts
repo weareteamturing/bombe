@@ -97,10 +97,36 @@ const text = ({ fontSize }: { fontSize: number } = { fontSize: 13 }) => String.r
 <script>
   const CONTENT_FRAME_CLASS = "_cms_content-frame";
 
-  const documentResizeObserver = new ResizeObserver(() => {
-    onDocumentResized();
-  });
-  documentResizeObserver.observe(document.getElementById("container"));
+  const layoutCache = {
+    scrollHeight: 0,
+    scrollWidth: 0,
+    clientWidth: 0
+  };
+  let layoutChangeEventId = 0;
+  function alertLayoutChange () {
+    const container = document.getElementById("container");
+    if (container &&
+      Math.abs(layoutCache.scrollHeight - container.scrollHeight) +
+      Math.abs(layoutCache.scrollWidth - container.scrollWidth) +
+      Math.abs(layoutCache.clientWidth - container.clientWidth) >= 15) {
+      layoutCache.scrollHeight = container.scrollHeight;
+      layoutCache.scrollWidth = container.scrollWidth;
+      layoutCache.clientWidth = container.clientWidth;
+      layoutChangeEventId++;
+      window.ReactNativeWebView.postMessage(
+        JSON.stringify({
+          event: "set-layout",
+          scrollHeight: container.scrollHeight,
+          scrollWidth: container.scrollWidth,
+          clientWidth: container.clientWidth,
+          layoutChangeEventId,
+        })
+      );
+    }
+  }
+
+  setTimeout(alertLayoutChange, 200);
+  setInterval(alertLayoutChange, 1000);
 
   const renderChoiceLayout = (container) => {
     const choiceBox = container.querySelector("._cms_choice-box");
@@ -150,38 +176,6 @@ const text = ({ fontSize }: { fontSize: number } = { fontSize: 13 }) => String.r
   };
   const onPhantomBoxPressed = (index) => {
     window.ReactNativeWebView.postMessage(JSON.stringify({ event: "phantom-box-pressed", index }));
-  };
-  
-  let debounceHandler = -1;
-  const debounce = (fn) => {
-    if(debounceHandler !== -1) clearTimeout(debounceHandler);
-    debounceHandler = setTimeout(() => {
-      fn();
-      debounceHandler = -1;
-    }, 500);
-  }
-  
-  let lastScrollHeight = 0;
-  let lastScrollWidth = 0;
-  let lastClientWidth = 0;
-  const onDocumentResized = () => {
-    debounce(() => {
-      const container = document.getElementById("container");
-      if (container && Math.abs(lastScrollHeight - container.scrollHeight) +
-        Math.abs(lastScrollWidth - container.scrollWidth) + Math.abs(lastClientWidth - container.clientWidth) >= 15) {
-        lastScrollHeight = container.scrollHeight;
-        lastScrollWidth = container.scrollWidth;
-        lastClientWidth = container.clientWidth;
-        window.ReactNativeWebView.postMessage(
-          JSON.stringify({
-            event: "set-layout",
-            scrollHeight: container.scrollHeight,
-            scrollWidth: container.scrollWidth,
-            clientWidth: container.clientWidth
-          })
-        );
-      }
-    });
   };
 
   const scrollToTop = () => {
