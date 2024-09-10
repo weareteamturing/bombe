@@ -6,6 +6,7 @@ export * from './forcePixelValue';
 export * from './isArray';
 export * from './isFunction';
 export * from './isNullable';
+export * from './josaizeKorean';
 export * from './last';
 export * from './noop';
 export * from './scrollIntoView';
