@@ -11,9 +11,11 @@
     "esm"
   ],
   "exports": {
-    "require": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "import": "./esm/index.js"
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./esm/index.js"
+    }
   },
   "repository": {
     "type": "git",
