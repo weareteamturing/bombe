@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.2.1...@teamturing/utils@1.3.0) (2024-09-10)
+
+### Features
+
+- **utils:** add josaizeKorean function ([c0e6b2f](https://github.com/weareteamturing/bombe/commit/c0e6b2f1b8bbfac906880610152ea83830762e3e))
+
 ## [1.2.1](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.2.0...@teamturing/utils@1.2.1) (2024-06-14)
 
 ### Bug Fixes
