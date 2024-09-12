@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.37.3](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.37.2...@teamturing/icons@1.37.3) (2024-09-12)
+
+### Bug Fixes
+
+- **icons:** add chat_bubble_question_color icon, remove 6 icons ([6e36301](https://github.com/weareteamturing/bombe/commit/6e363017602398b9c1d76cbb144ac0b1ec3d4b9f))
+
 ## [1.37.2](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.37.1...@teamturing/icons@1.37.2) (2024-08-23)
 
 **Note:** Version bump only for package @teamturing/icons
