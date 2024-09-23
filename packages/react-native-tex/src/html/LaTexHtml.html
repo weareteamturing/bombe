@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
   <title>MathKing</title>
   <meta
@@ -257,7 +257,7 @@
     const container = document.getElementById("container");
     const shadowContainer = document.getElementById("shadow-animation-container");
 
-    let delayHandler = -1;
+    let delayHandler;
 
     function setPaddingForContentFrame (element) {
       if (element instanceof HTMLElement) {
