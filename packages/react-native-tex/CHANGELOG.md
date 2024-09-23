@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.14](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.1.13...@teamturing/react-native-tex@1.1.14) (2024-09-23)
+
+### Bug Fixes
+
+- **react-native-tex:** fix html lang ([37d7e06](https://github.com/weareteamturing/bombe/commit/37d7e0620e0cfb0cd44f5d1c0de62bbd5c03856a))
+
 ## [1.1.13](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.1.12...@teamturing/react-native-tex@1.1.13) (2024-09-12)
 
 **Note:** Version bump only for package @teamturing/react-native-tex
