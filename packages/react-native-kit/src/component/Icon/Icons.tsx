@@ -87,6 +87,7 @@ export { default as fire_color } from '@teamturing/icons/svg/fire_color.svg';
 export { default as folder } from '@teamturing/icons/svg/folder.svg';
 export { default as frame } from '@teamturing/icons/svg/frame.svg';
 export { default as glasses } from '@teamturing/icons/svg/glasses.svg';
+export { default as google_color } from '@teamturing/icons/svg/google_color.svg';
 export { default as graph } from '@teamturing/icons/svg/graph.svg';
 export { default as hair } from '@teamturing/icons/svg/hair.svg';
 export { default as headphone } from '@teamturing/icons/svg/headphone.svg';
