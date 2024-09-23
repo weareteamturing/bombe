@@ -87,6 +87,7 @@ export { default as FireColorIcon } from './FireColor';
 export { default as FolderIcon } from './Folder';
 export { default as FrameIcon } from './Frame';
 export { default as GlassesIcon } from './Glasses';
+export { default as GoogleColorIcon } from './GoogleColor';
 export { default as GraphIcon } from './Graph';
 export { default as HairIcon } from './Hair';
 export { default as HeadphoneIcon } from './Headphone';
