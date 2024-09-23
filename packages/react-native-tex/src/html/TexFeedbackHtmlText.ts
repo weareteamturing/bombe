@@ -1,7 +1,7 @@
 /* eslint-disable */
 const text = ({ fontSize }: { fontSize: number } = { fontSize: 13 }) => String.raw`
 <!DOCTYPE html>
-<html lang="ko">
+<html>
   <head>
     <title>MathKing</title>
     <meta

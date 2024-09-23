@@ -1,7 +1,7 @@
 /* eslint-disable */
 const text = ({ fontSize }: { fontSize: number } = { fontSize: 13 }) => String.raw`
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
   <title>MathKing</title>
   <meta
@@ -259,7 +259,7 @@ const text = ({ fontSize }: { fontSize: number } = { fontSize: 13 }) => String.r
     const container = document.getElementById("container");
     const shadowContainer = document.getElementById("shadow-animation-container");
 
-    let delayHandler = -1;
+    let delayHandler;
 
     function setPaddingForContentFrame (element) {
       if (element instanceof HTMLElement) {
