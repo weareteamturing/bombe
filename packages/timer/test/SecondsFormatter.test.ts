@@ -141,6 +141,21 @@ const Suites: { type: SecondsFormats; sec: any; expect: string }[] = [
     sec: 1,
     expect: '1 Second',
   },
+  {
+    type: 'hh:mm:ss_on_demand',
+    sec: 1,
+    expect: '0:01',
+  },
+  {
+    type: 'hh:mm:ss_on_demand',
+    sec: 65,
+    expect: '1:05',
+  },
+  {
+    type: 'hh:mm:ss_on_demand',
+    sec: H + 36 * M + 1,
+    expect: '1:36:01',
+  },
 ];
 
 it('SecondsFormatter', () => {

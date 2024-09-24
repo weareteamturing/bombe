@@ -3,7 +3,7 @@ import { parseSecond } from './internal/parseSecond';
 type Formatter = (totalSecond: number) => string;
 
 type LogicalFormats = 'due_date' | 'due_date_hh:mm:ss' | 'study_duration' | 'study_duration_en';
-type GeneralFormats = 'mm:ss' | 'm:ss' | 'hh:mm:ss' | 'h:mm:ss';
+type GeneralFormats = 'mm:ss' | 'm:ss' | 'hh:mm:ss' | 'h:mm:ss' | 'hh:mm:ss_on_demand';
 export type SecondsFormats = LogicalFormats | GeneralFormats;
 
 const Formatters: Record<SecondsFormats, Formatter> = {
@@ -21,6 +21,13 @@ const Formatters: Record<SecondsFormats, Formatter> = {
   },
   'h:mm:ss': (totalSecond) => {
     const { onlyMinute, onlySecond, totalHour } = parseSecond(totalSecond);
+    return `${totalHour}:${lz(onlyMinute)}:${lz(onlySecond)}`;
+  },
+  'hh:mm:ss_on_demand': (totalSecond) => {
+    const { onlyMinute, onlySecond, totalHour } = parseSecond(totalSecond);
+    if (totalHour < 1) {
+      return `${onlyMinute}:${lz(onlySecond)}`;
+    }
     return `${totalHour}:${lz(onlyMinute)}:${lz(onlySecond)}`;
   },
   'due_date': (totalSecond) => {
@@ -70,6 +77,7 @@ const InvalidateIntervalSeconds: Record<SecondsFormats, number> = {
   'mm:ss': 1,
   'h:mm:ss': 1,
   'hh:mm:ss': 1,
+  'hh:mm:ss_on_demand': 1,
   'due_date': 60,
   'due_date_hh:mm:ss': 1,
   'study_duration': 1,
