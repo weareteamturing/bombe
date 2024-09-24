@@ -119,15 +119,17 @@ const LaTexInternal = forwardRef(
     );
 
     const postMessageToWebView = ({ type, data }: { type: MessageType; data?: any }) => {
-      if (Platform.OS === 'web') {
-        webView.current?.injectJavaScript({ type, data } as any);
-      } else {
-        webView.current?.injectJavaScript(
-          `(function(){
+      setTimeout(() => {
+        if (Platform.OS === 'web') {
+          webView.current?.injectJavaScript({ type, data } as any);
+        } else {
+          webView.current?.injectJavaScript(
+            `(function(){
           window.dispatchEvent(new MessageEvent('message', {data : ${JSON.stringify({ type, data })}}))
       })()`,
-        );
-      }
+          );
+        }
+      }, 0);
     };
 
     const renderTex = useStableCallback(() => {
@@ -146,13 +148,8 @@ const LaTexInternal = forwardRef(
         });
       }
     });
-    const isFirstRendering = useRef(true);
     // Don't change useEffect dependencies if you are not sure.
     useEffect(() => {
-      if (isFirstRendering.current) {
-        isFirstRendering.current = false;
-        return;
-      }
       renderTex();
     }, [
       paddingHorizontal,
