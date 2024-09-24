@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.2.1...@teamturing/react-native-tex@1.2.2) (2024-09-24)
+
+### Bug Fixes
+
+- **react-native-tex:** ignored rendering problem in LaTeX ([545482c](https://github.com/weareteamturing/bombe/commit/545482c59df888ce7e2a8a18f22ce0699b74447f))
+
 ## [1.2.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.2.0...@teamturing/react-native-tex@1.2.1) (2024-09-24)
 
 ### Bug Fixes
