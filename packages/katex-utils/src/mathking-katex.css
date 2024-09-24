@@ -1112,8 +1112,7 @@ img {
     background-color: transparent;
     color: black;
     font-family: 'Noto Serif KR', serif;
-    word-break: keep-all;
-    line-break: anywhere;
+    word-break: normal;
     margin: 0 auto;
     overflow: auto;
 }
