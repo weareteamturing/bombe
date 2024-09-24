@@ -219,7 +219,6 @@ const text = ({ fontSize }: { fontSize: number } = { fontSize: 13 }) => String.r
     paddingTop,
   }) => {
     const container = document.getElementById("container");
-    const shadowContainer = document.getElementById("shadow-animation-container");
 
     function setPaddingForContentFrame (element) {
       if (element instanceof HTMLElement) {
@@ -240,11 +239,10 @@ const text = ({ fontSize }: { fontSize: number } = { fontSize: 13 }) => String.r
     function renderContainer () {
       container.innerHTML = html;
       container.style.visibility = "visible";
-      shadowContainer.innerHTML = "";
       setPaddingForContentFrame(container.querySelector("." + CONTENT_FRAME_CLASS));
       setTimeout(function() {
         relayout();
-      }, 100);
+      }, 50);
       initializePhantomBoxes(initialPhantomBoxVisibility, isPhantomBoxClickable);
       onRenderSuccess();
     }
