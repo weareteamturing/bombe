@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.8.2...@teamturing/timer@1.9.0) (2024-09-24)
+
+### Features
+
+- **timer:** add study_duration_en type of formatting ([e106cfc](https://github.com/weareteamturing/bombe/commit/e106cfc4877e2532e84858c0cbd265883d25d722))
+
 ## [1.8.2](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.8.1...@teamturing/timer@1.8.2) (2024-06-27)
 
 ### Bug Fixes
