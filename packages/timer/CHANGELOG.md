@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.9.0...@teamturing/timer@1.10.0) (2024-09-24)
+
+### Features
+
+- **timer:** add hh:mm:ss_on_demand type ([eb04377](https://github.com/weareteamturing/bombe/commit/eb043770bae73962358cf1f05c83d2d4f45efc8e))
+
 # [1.9.0](https://github.com/weareteamturing/bombe/compare/@teamturing/timer@1.8.2...@teamturing/timer@1.9.0) (2024-09-24)
 
 ### Features
