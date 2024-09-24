@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.6.4...@teamturing/react-native-kit@1.6.5) (2024-09-24)
+
+### Bug Fixes
+
+- **react-native-tex:** fix something ([8d3969b](https://github.com/weareteamturing/bombe/commit/8d3969bccb9d9237a1245e71049d5943e8b26613))
+
 ## [1.6.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.6.3...@teamturing/react-native-kit@1.6.4) (2024-09-24)
 
 **Note:** Version bump only for package @teamturing/react-native-kit
