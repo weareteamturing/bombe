@@ -2,7 +2,7 @@ import { parseSecond } from './internal/parseSecond';
 
 type Formatter = (totalSecond: number) => string;
 
-type LogicalFormats = 'due_date' | 'due_date_hh:mm:ss' | 'study_duration';
+type LogicalFormats = 'due_date' | 'due_date_hh:mm:ss' | 'study_duration' | 'study_duration_en';
 type GeneralFormats = 'mm:ss' | 'm:ss' | 'hh:mm:ss' | 'h:mm:ss';
 export type SecondsFormats = LogicalFormats | GeneralFormats;
 
@@ -52,6 +52,18 @@ const Formatters: Record<SecondsFormats, Formatter> = {
     }
     return `${Math.max(0, totalSecond)}초`;
   },
+  'study_duration_en': (totalSecond) => {
+    const { totalHour, onlyMinute } = parseSecond(totalSecond);
+    const sIfNotOne = (n: number) => (n === 1 ? '' : 's');
+
+    if (totalHour >= 1) {
+      return `${totalHour} Hour${sIfNotOne(totalHour)} ${onlyMinute} Minute${sIfNotOne(onlyMinute)}`;
+    }
+    if (onlyMinute >= 1) {
+      return `${onlyMinute} Minute${sIfNotOne(onlyMinute)}`;
+    }
+    return `${Math.max(0, totalSecond)} Second${sIfNotOne(Math.max(0, totalSecond))}`;
+  },
 };
 const InvalidateIntervalSeconds: Record<SecondsFormats, number> = {
   'm:ss': 1,
@@ -61,6 +73,7 @@ const InvalidateIntervalSeconds: Record<SecondsFormats, number> = {
   'due_date': 60,
   'due_date_hh:mm:ss': 1,
   'study_duration': 1,
+  'study_duration_en': 1,
 };
 
 // Append leading zeros
