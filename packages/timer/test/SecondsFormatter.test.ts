@@ -121,6 +121,26 @@ const Suites: { type: SecondsFormats; sec: any; expect: string }[] = [
     sec: 59,
     expect: '59초',
   },
+  {
+    type: 'study_duration_en',
+    sec: 100 * H + 4 * M + 20,
+    expect: '100 Hours 4 Minutes',
+  },
+  {
+    type: 'study_duration_en',
+    sec: 4 * M + 20,
+    expect: '4 Minutes',
+  },
+  {
+    type: 'study_duration_en',
+    sec: 59,
+    expect: '59 Seconds',
+  },
+  {
+    type: 'study_duration_en',
+    sec: 1,
+    expect: '1 Second',
+  },
 ];
 
 it('SecondsFormatter', () => {
