@@ -4,12 +4,10 @@ import { useStableCallback } from './useStableCallback';
 import { useUnmount } from './useUnmount';
 
 function useTimeoutHandler() {
-  const handler = useRef<any>(-1);
+  const handler = useRef<any>();
 
   useUnmount(() => {
-    if (handler.current !== -1) {
-      clearTimeout(handler.current);
-    }
+    clearTimeout(handler.current);
   });
 
   return handler;
