@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.38.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.38.0...@teamturing/icons@1.38.1) (2024-09-24)
+
+**Note:** Version bump only for package @teamturing/icons
+
 # [1.38.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.37.3...@teamturing/icons@1.38.0) (2024-09-23)
 
 ### Features
