@@ -54,7 +54,6 @@ export type LaTexProp = {
   convertTable?: boolean;
   injectPhantomBoxClasses?: boolean;
   flattenPhantomBoxClassNameIndice?: boolean;
-  isAiAnimationEnable?: boolean;
 };
 export type LaTexRef = {
   setPhantomBoxVisibility: (visibility: PhantomBoxVisibility) => void;
@@ -91,7 +90,6 @@ const LaTexInternal = forwardRef(
       convertTable,
       injectPhantomBoxClasses,
       flattenPhantomBoxClassNameIndice,
-      isAiAnimationEnable = false,
       tex,
     }: LaTexProp,
     ref: React.Ref<LaTexRef>,
@@ -144,7 +142,6 @@ const LaTexInternal = forwardRef(
             initialPhantomBoxVisibility,
             isPhantomBoxClickable,
             injectPhantomBoxClasses,
-            isAiAnimationEnable,
           },
         });
       }
