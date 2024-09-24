@@ -13,7 +13,7 @@ const text = ({ fontSize }: { fontSize: number } = { fontSize: 13 }) => String.r
     <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@teamturing/katex-utils@2.19.0/iife/mathking-katex.css"
+      href="https://cdn.jsdelivr.net/npm/@teamturing/katex-utils@2.20.2/dist/mathking-katex.css"
       crossorigin="anonymous"
     />
     <style>
