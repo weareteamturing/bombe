@@ -33,6 +33,7 @@
   },
   "peerDependencies": {
     "@teamturing/react-native-kit": "*",
+    "@teamturing/katex-utils": "*",
     "react-native-mmkv": ">=3",
     "react-native-webview": "*"
   },
