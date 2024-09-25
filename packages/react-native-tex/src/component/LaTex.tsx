@@ -32,7 +32,7 @@ export type LaTexProp = {
   disablePointerEvent?: boolean;
   testID?: string;
   paddingHorizontal?: number;
-  paddingTopIfScrollable?: number;
+  paddingTop?: number;
   paddingBottomIfScrollable?: number;
   initialPhantomBoxVisibility?: PhantomBoxVisibility;
   isPhantomBoxClickable?: boolean;
@@ -83,7 +83,7 @@ const LaTexInternal = forwardRef(
       showsHorizontalFadings = false,
       isScrollEnabled: _isScrollEnabled = false,
       showsTopFading = false,
-      paddingTopIfScrollable = spacing[0],
+      paddingTop = spacing[0],
       paddingBottomIfScrollable = spacing[32],
       fontSize = 13,
       convertMarkUp,
@@ -139,7 +139,7 @@ const LaTexInternal = forwardRef(
           data: {
             html,
             paddingHorizontal,
-            paddingTop: isScrollEnabled ? paddingTopIfScrollable : 0,
+            paddingTop,
             paddingBottom: isScrollEnabled ? paddingBottomIfScrollable : 0,
             initialPhantomBoxVisibility,
             isPhantomBoxClickable,
@@ -155,7 +155,7 @@ const LaTexInternal = forwardRef(
       paddingHorizontal,
       initialPhantomBoxVisibility,
       isPhantomBoxClickable,
-      paddingTopIfScrollable,
+      paddingTop,
       paddingBottomIfScrollable,
       renderTex,
       tex,
@@ -326,6 +326,7 @@ export const LaTexWithDocumentIntrinsicHeight = (
     sketchView?: ReactElement;
     disableHorizontalScroll?: boolean;
     refForCapture?: ForwardedRef<View>;
+    paddingTop?: number;
     paddingBottom?: number;
     innerRef?: ForwardedRef<LaTexRef>;
     minHeight?: number;
