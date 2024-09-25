@@ -1,5 +1,5 @@
-import { useCallback, useMemo, useState } from 'react';
-import { Dimensions, StyleSheet, View } from 'react-native';
+import { useCallback, useMemo } from 'react';
+import { useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useStableCallback } from '../../../hook';
@@ -9,12 +9,9 @@ import { WindowSizeClass, decideWindowWidthSizeClass, decideWindowHeightSizeClas
 import { useDynamicDimensions } from './useDynamicDimensions';
 
 export const [useDynamicLayout, LayoutProvider] = createCtx(
-  (
-    { useSafeAreaInsetsHook = useSafeAreaInsets }: { useSafeAreaInsetsHook?: typeof useSafeAreaInsets },
-    transformChildren,
-  ) => {
-    const [windowWidth, setWindowWidth] = useState(Math.ceil(Dimensions.get('window').width));
-    const [windowHeight, setWindowHeight] = useState(Math.ceil(Dimensions.get('window').height));
+  ({ useSafeAreaInsetsHook = useSafeAreaInsets }: { useSafeAreaInsetsHook?: typeof useSafeAreaInsets }) => {
+    const { width: windowWidth, height: windowHeight } = useWindowDimensions();
+
     const windowShortLen = Math.min(windowWidth, windowHeight);
     const windowLongLen = Math.max(windowWidth, windowHeight);
     const _insets: { top: number; bottom: number; left: number; right: number } = useSafeAreaInsetsHook();
@@ -53,19 +50,6 @@ export const [useDynamicLayout, LayoutProvider] = createCtx(
       windowHeightSizeClass,
     });
 
-    const updateScreenSizesBeforeRotation = useCallback(
-      (orientation: 'portrait' | 'landscape') => {
-        if (orientation === 'portrait') {
-          setWindowWidth(windowShortLen);
-          setWindowHeight(windowLongLen);
-        } else if (orientation === 'landscape') {
-          setWindowWidth(windowLongLen);
-          setWindowHeight(windowShortLen);
-        }
-      },
-      [windowLongLen, windowShortLen],
-    );
-
     const localImageDimensionProps = useStableCallback(
       (
         imageWidth: number,
@@ -96,23 +80,6 @@ export const [useDynamicLayout, LayoutProvider] = createCtx(
       },
     );
 
-    transformChildren((children) => (
-      <View
-        testID={'LayoutProvider'}
-        style={StyleSheet.absoluteFill}
-        onLayout={({
-          nativeEvent: {
-            layout: { width, height },
-          },
-        }) => {
-          setWindowWidth(Math.ceil(width));
-          setWindowHeight(Math.ceil(height));
-        }}
-      >
-        {children}
-      </View>
-    ));
-
     return {
       ...dimensions,
       screenHeight: windowHeight,
@@ -120,7 +87,6 @@ export const [useDynamicLayout, LayoutProvider] = createCtx(
       screenWidthWithPadding: windowWidth - 2 * dimensions.sidePadding,
       screenShortLen: windowShortLen,
       screenLongLen: windowLongLen,
-      updateScreenSizesBeforeRotation,
       safeAreaInsets: insets,
       sfTop: insets.top,
       sfLeft: insets.left,
