@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.24.4...@teamturing/react-kit@2.24.5) (2024-09-27)
+
+**Note:** Version bump only for package @teamturing/react-kit
+
 ## [2.24.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.24.3...@teamturing/react-kit@2.24.4) (2024-09-24)
 
 **Note:** Version bump only for package @teamturing/react-kit
