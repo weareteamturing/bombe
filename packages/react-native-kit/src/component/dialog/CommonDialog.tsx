@@ -3,7 +3,7 @@ import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from '
 import { View } from 'react-native';
 
 import { palette, spacing } from '../../theme';
-import { is, runAfterFlushMacroQueue } from '../../util';
+import { is, runAfterFlushMacroQueue, useAppEventListener, AppEvent } from '../../util';
 import { type BtnProps, Btn } from '../Btn';
 import { type ChipProps, Chip } from '../Chip';
 import { type IconName, type IconProps, Icon } from '../Icon';
@@ -150,6 +150,9 @@ const CommonDialog = forwardRef<CommonDialogRef, CommonDialogProps>((props, ref)
     [setUIStates],
   );
 
+  useAppEventListener<CommonDialogOpenParams>('open_common_dialog', open);
+  useAppEventListener('close_common_dialog', close);
+
   useImperativeHandle(
     ref,
     () => ({
@@ -292,5 +295,13 @@ export const CommonDialogComposer = () => {
   const { commonDialog } = useDialogContext();
   return <CommonDialog ref={commonDialog} />;
 };
+
+export function openCommonDialog(params: CommonDialogOpenParams) {
+  AppEvent.emitEvent('open_common_dialog', params);
+}
+
+export function closeCommonDialog() {
+  AppEvent.emitEvent('close_common_dialog');
+}
 
 export { CommonDialog };

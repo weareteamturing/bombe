@@ -1,9 +1,9 @@
 import React, { useImperativeHandle, useRef, useState } from 'react';
 import { View } from 'react-native';
 
-import { useAppState } from '../../hook';
+import { useAppState, useStableCallback } from '../../hook';
 import { palette, spacing } from '../../theme';
-import { useAppEventListener } from '../../util/AppEvent';
+import { useAppEventListener, AppEvent } from '../../util/AppEvent';
 import { type ImperativeAnimationRef, FadeInOut, SlideInOut } from '../Animation';
 import { type IconName, type IconProps, Icon } from '../Icon';
 import { useDynamicLayout } from '../Layout';
@@ -38,21 +38,26 @@ const _ToastDialog = (_, ref: React.Ref<ToastDialogRef>) => {
   const fadeInOutAnimation = useRef<ImperativeAnimationRef>(null);
   const slideInOutAnimation = useRef<ImperativeAnimationRef>(null);
 
+  const show = useStableCallback((type: ToastType, text: string, duration?: number) => {
+    setParams({
+      ...ToastParamsByType[type],
+      text,
+      duration,
+    });
+    fadeInOutAnimation.current?.start();
+    slideInOutAnimation.current?.start();
+  });
+
   useImperativeHandle(
     ref,
     () => ({
-      show: (type: ToastType, text: string, duration) => {
-        setParams({
-          ...ToastParamsByType[type],
-          text,
-          duration,
-        });
-        fadeInOutAnimation.current?.start();
-        slideInOutAnimation.current?.start();
-      },
+      show,
     }),
-    [],
+    [show],
   );
+
+  useAppEventListener<string>('show_success_toast', (message) => show('success', message));
+  useAppEventListener<string>('show_warning_toast', (message) => show('warning', message));
 
   const width = Math.min(351, screenWidth * 0.9);
 
@@ -120,3 +125,11 @@ export const ToastDialogComposer = () => {
   useAppEventListener<string>('SHOW_SUCCESS_TOAST', (text) => toastDialog.current?.show('success', text));
   return <ToastDialog ref={toastDialog} />;
 };
+
+export function showSuccessToast(message: string) {
+  AppEvent.emitEvent('show_success_toast', message);
+}
+
+export function showWarningToast(message: string) {
+  AppEvent.emitEvent('show_warning_toast', message);
+}
