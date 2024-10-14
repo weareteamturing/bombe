@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.7.0...@teamturing/react-native-kit@1.8.0) (2024-10-14)
+
+### Features
+
+- **react-native-kit:** remove CommonDialog, ToastDialog methods from provider ([e4df0de](https://github.com/weareteamturing/bombe/commit/e4df0deb6532474a98ac316973366b268979b6fe))
+
 # [1.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.6.7...@teamturing/react-native-kit@1.7.0) (2024-10-11)
 
 ### Features
