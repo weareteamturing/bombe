@@ -304,4 +304,50 @@ export function closeCommonDialog() {
   AppEvent.emitEvent('close_common_dialog');
 }
 
+type HandleErrorWithCommonDialogOption = {
+  title: string;
+  body: string;
+  hideErrorReportButton: boolean;
+  buttonText: string;
+};
+let defaultHandleErrorWithCommonDialogOption: HandleErrorWithCommonDialogOption = {
+  title: '오류가 발생했습니다',
+  body: '잠시 후에 다시 시도해주세요',
+  hideErrorReportButton: false,
+  buttonText: '확인',
+};
+
+export function setDefaultErrorWithCommonDialogOption(option: Partial<HandleErrorWithCommonDialogOption>) {
+  defaultHandleErrorWithCommonDialogOption = { ...defaultHandleErrorWithCommonDialogOption, ...option };
+}
+export function handleErrorWithCommonDialogOptions(
+  options: Partial<HandleErrorWithCommonDialogOption> = defaultHandleErrorWithCommonDialogOption,
+) {
+  const { title, body, hideErrorReportButton, buttonText } = {
+    ...defaultHandleErrorWithCommonDialogOption,
+    ...options,
+  };
+  openCommonDialog({
+    iconName: 'exclamation_point_in_circle',
+    imageSize: '64',
+    title: title,
+    body: body,
+    buttons: [
+      {
+        title: buttonText,
+      },
+      hideErrorReportButton
+        ? null
+        : {
+            title: '오류 제보하기',
+            onPress: () => AppEvent.emitEvent('NAVIGATE_BUG_REPORT'),
+          },
+    ],
+    buttonType: 'vertical-primary-text',
+  });
+}
+export function handleErrorWithCommonDialog() {
+  handleErrorWithCommonDialogOptions();
+}
+
 export { CommonDialog };
