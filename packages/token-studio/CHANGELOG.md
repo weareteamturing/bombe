@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.5.0...@teamturing/token-studio@1.6.0) (2024-10-24)
+
+### Features
+
+- **token-studio:** update opacity token ([4b502a1](https://github.com/weareteamturing/bombe/commit/4b502a1ece0d259d7a1bc0eeb806ebffec0ec9cf))
+
 # [1.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.4.0...@teamturing/token-studio@1.5.0) (2024-08-23)
 
 ### Features
