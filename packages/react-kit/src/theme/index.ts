@@ -9,6 +9,7 @@ import {
   fontWeights,
   fontSizes,
   lineHeights,
+  opacity,
 } from '@teamturing/token-studio';
 
 const theme = {
@@ -21,6 +22,7 @@ const theme = {
   colors: { ...color, ...surfaceElevation },
   gradients: gradient,
   shadows: { ...shadowElevation },
+  opacity,
 };
 
 export default theme;
