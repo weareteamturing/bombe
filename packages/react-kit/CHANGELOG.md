@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.25.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.24.5...@teamturing/react-kit@2.25.0) (2024-10-24)
+
+### Features
+
+- **react-kit:** add opacity to theme ([5d931d4](https://github.com/weareteamturing/bombe/commit/5d931d429626cf7035d4ea2a76d2d1b07a3b5ea2))
+
 ## [2.24.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.24.4...@teamturing/react-kit@2.24.5) (2024-09-27)
 
 **Note:** Version bump only for package @teamturing/react-kit
