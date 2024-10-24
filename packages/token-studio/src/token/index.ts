@@ -18,8 +18,8 @@ export type { ElevationKey, ShadowElevationKey, SurfaceElevationKey } from './el
 export { default as gradient, bgGradient, borderGradient, overlayGradient, textGradient } from './gradient';
 export type { GradientKey, BgGradientKey, BorderGradientKey, OverlayGradientKey, TextGradientKey } from './gradient';
 
-export { default as opacity, accentOpacity } from './opacity';
-export type { OpacityKey, AccentOpacityKey } from './opacity';
+export { default as opacity } from './opacity';
+export type { OpacityKey } from './opacity';
 
 export { default as radii } from './radii';
 export type { RadiiKey } from './radii';
