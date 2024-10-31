@@ -58,6 +58,18 @@ export type {
   DialogFooterProps,
 } from './core/Dialog';
 
+export { default as Drawer } from './core/Drawer';
+export type {
+  DrawerProps,
+  UnstyledDrawerHeaderProps,
+  UnstyledDrawerBodyProps,
+  UnstyledDrawerFooterProps,
+  DrawerHeaderProps,
+  DrawerHeaderIconButtonProps,
+  DrawerBodyProps,
+  DrawerFooterProps,
+} from './core/Drawer';
+
 export { default as EmptyState } from './core/EmptyState';
 export type { EmptyStateProps } from './core/EmptyState';
 

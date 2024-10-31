@@ -55,6 +55,7 @@ const IconButton = forwardRef<HTMLButtonElement, Props>(
 
 const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disabled?: boolean }>(
   ({ $loading, $disabled, theme }) => ({
+    'width': 'fit-content',
     'position': 'relative',
     'borderRadius': theme.radii.full,
     'transition': 'background-color 100ms, color 100ms',

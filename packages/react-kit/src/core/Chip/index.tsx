@@ -52,7 +52,8 @@ const Chip = ({
 const BaseChip = styled.span<Props & SxProp>(
   ({ theme }) => ({
     position: 'relative',
-    width: 'fit-content',
+    width: 'max-content',
+    whiteSpace: 'nowrap',
     borderRadius: theme.radii.full,
     outline: 'none',
     display: 'flex',
