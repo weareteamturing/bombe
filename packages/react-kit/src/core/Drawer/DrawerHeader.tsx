@@ -17,7 +17,7 @@ const DrawerHeader = ({ children, sx, ...props }: PropsWithChildren<Props>) => (
       borderBottomColor: 'border/neutral',
 
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'row',
       columnGap: 1,
       flexWrap: 'nowrap',
       ...sx,
