@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.8.0...@teamturing/react-native-kit@1.9.0) (2024-10-31)
+
+### Features
+
+- **icons:** add new icons ([074d829](https://github.com/weareteamturing/bombe/commit/074d829911b4c854981d3d710cd1772400cce72c))
+
 # [1.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.7.0...@teamturing/react-native-kit@1.8.0) (2024-10-14)
 
 ### Features

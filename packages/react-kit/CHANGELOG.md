@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.26.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.25.1...@teamturing/react-kit@2.26.0) (2024-10-31)
+
+### Bug Fixes
+
+- **react-kit:** fix Chip component layout ([86a7cba](https://github.com/weareteamturing/bombe/commit/86a7cbaa7dfba4bc2a88ed64f521b20ce2263c98))
+- **react-kit:** fix IconButton layout ([f905539](https://github.com/weareteamturing/bombe/commit/f905539fc124bf618b10c926dd3bf618adf0f811))
+
+### Features
+
+- **react-kit:** add Drawer component ([e4e7a80](https://github.com/weareteamturing/bombe/commit/e4e7a80ef12a1f64a21f70091a04a34813957700))
+
 ## [2.25.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.25.0...@teamturing/react-kit@2.25.1) (2024-10-24)
 
 **Note:** Version bump only for package @teamturing/react-kit
