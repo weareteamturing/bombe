@@ -3,6 +3,7 @@ export { default as AiColorIcon } from './AiColor';
 export { default as AiSadIcon } from './AiSad';
 export { default as AlarmIcon } from './Alarm';
 export { default as AppleColorIcon } from './AppleColor';
+export { default as ArrowBelowIcon } from './ArrowBelow';
 export { default as ArrowDiagonalIcon } from './ArrowDiagonal';
 export { default as ArrowDownIcon } from './ArrowDown';
 export { default as ArrowLeftIcon } from './ArrowLeft';

@@ -3,6 +3,7 @@ export { default as ai_color } from '@teamturing/icons/svg/ai_color.svg';
 export { default as ai_sad } from '@teamturing/icons/svg/ai_sad.svg';
 export { default as alarm } from '@teamturing/icons/svg/alarm.svg';
 export { default as apple_color } from '@teamturing/icons/svg/apple_color.svg';
+export { default as arrow_below } from '@teamturing/icons/svg/arrow_below.svg';
 export { default as arrow_diagonal } from '@teamturing/icons/svg/arrow_diagonal.svg';
 export { default as arrow_down } from '@teamturing/icons/svg/arrow_down.svg';
 export { default as arrow_left } from '@teamturing/icons/svg/arrow_left.svg';
