@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.2](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.40.1...@teamturing/icons@1.40.2) (2024-11-26)
+
+### Bug Fixes
+
+- **icons:** fix scholarship letter icons ([415249d](https://github.com/weareteamturing/bombe/commit/415249d7fab32a175746385fb68d55c547f7a5bc))
+
 ## [1.40.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.40.0...@teamturing/icons@1.40.1) (2024-11-04)
 
 ### Bug Fixes
