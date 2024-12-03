@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.27.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.26.4...@teamturing/react-kit@2.27.0) (2024-12-03)
+
+### Features
+
+- **react-kit:** update Flash component with accent variant ([1d8f9d1](https://github.com/weareteamturing/bombe/commit/1d8f9d1b5fc611d5e1320e592325e8891d29aa38))
+
 ## [2.26.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.26.3...@teamturing/react-kit@2.26.4) (2024-11-26)
 
 **Note:** Version bump only for package @teamturing/react-kit
