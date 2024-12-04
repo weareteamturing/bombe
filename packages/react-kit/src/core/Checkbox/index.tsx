@@ -75,6 +75,7 @@ const BaseCheckbox = styled(UnstyledCheckbox)<Props>`
   &:disabled {
     background-color: ${({ theme }) => theme.colors['bg/disabled']};
     border-color: ${({ theme }) => theme.colors['border/disabled']};
+    cursor: not-allowed;
   }
 
   &:checked {
