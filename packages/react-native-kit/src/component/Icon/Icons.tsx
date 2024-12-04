@@ -16,6 +16,7 @@ export { default as arrow_right_limit } from '@teamturing/icons/svg/arrow_right_
 export { default as arrow_up } from '@teamturing/icons/svg/arrow_up.svg';
 export { default as arrow_up_down } from '@teamturing/icons/svg/arrow_up_down.svg';
 export { default as arrow_up_limit } from '@teamturing/icons/svg/arrow_up_limit.svg';
+export { default as auto } from '@teamturing/icons/svg/auto.svg';
 export { default as barchart } from '@teamturing/icons/svg/barchart.svg';
 export { default as book } from '@teamturing/icons/svg/book.svg';
 export { default as bookmark } from '@teamturing/icons/svg/bookmark.svg';
@@ -77,6 +78,7 @@ export { default as enter } from '@teamturing/icons/svg/enter.svg';
 export { default as equal } from '@teamturing/icons/svg/equal.svg';
 export { default as eraser } from '@teamturing/icons/svg/eraser.svg';
 export { default as exclamation_point_in_circle } from '@teamturing/icons/svg/exclamation_point_in_circle.svg';
+export { default as external_link } from '@teamturing/icons/svg/external_link.svg';
 export { default as eye_off } from '@teamturing/icons/svg/eye_off.svg';
 export { default as eye_on } from '@teamturing/icons/svg/eye_on.svg';
 export { default as face_happy } from '@teamturing/icons/svg/face_happy.svg';
