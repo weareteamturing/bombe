@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.41.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.40.2...@teamturing/icons@1.41.0) (2024-12-04)
+
+### Features
+
+- **icons:** add ExternalLink, Auto icons ([a9c2b12](https://github.com/weareteamturing/bombe/commit/a9c2b128a9a8673d2d7bbcf6488e275423764ff7))
+
 ## [1.40.2](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.40.1...@teamturing/icons@1.40.2) (2024-11-26)
 
 ### Bug Fixes

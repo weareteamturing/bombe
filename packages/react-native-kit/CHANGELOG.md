@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.10.2...@teamturing/react-native-kit@1.11.0) (2024-12-04)
+
+### Features
+
+- **icons:** add ExternalLink, Auto icons ([a9c2b12](https://github.com/weareteamturing/bombe/commit/a9c2b128a9a8673d2d7bbcf6488e275423764ff7))
+
 ## [1.10.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.10.1...@teamturing/react-native-kit@1.10.2) (2024-11-26)
 
 **Note:** Version bump only for package @teamturing/react-native-kit

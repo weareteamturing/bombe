@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.27.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.27.0...@teamturing/react-kit@2.27.1) (2024-12-04)
+
+### Bug Fixes
+
+- **react-kit:** update Checkbox disabled style ([a3a8878](https://github.com/weareteamturing/bombe/commit/a3a8878c44d27605d53e09932a5d4cd9aa00c36f))
+
 # [2.27.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.26.4...@teamturing/react-kit@2.27.0) (2024-12-03)
 
 ### Features
