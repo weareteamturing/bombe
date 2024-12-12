@@ -23,7 +23,6 @@ type Props = {
   size?: ResponsiveValue<OverlaySizeType>;
   ignoreOutsideClickRefs?: RefObject<HTMLElement>[];
   dismissFocusRef?: RefObject<HTMLElement>;
-  enableInitialFocus?: boolean;
 } & MaxHeightProps &
   SxProp &
   HTMLAttributes<HTMLElement>;
@@ -36,7 +35,6 @@ const Overlay = (
     size = 'm',
     ignoreOutsideClickRefs = [],
     dismissFocusRef,
-    enableInitialFocus = true,
     maxHeight = forcePixelValue(600),
     ...props
   }: PropsWithChildren<Props>,
@@ -80,7 +78,7 @@ const Overlay = (
   );
 
   useEffect(() => {
-    if (overlayRef.current && enableInitialFocus) {
+    if (overlayRef.current) {
       const firstItem = iterateFocusableElements(overlayRef.current).next().value;
       firstItem?.focus();
     }
