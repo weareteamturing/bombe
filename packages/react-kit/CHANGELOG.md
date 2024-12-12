@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.28.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.28.0...@teamturing/react-kit@2.28.1) (2024-12-12)
+
+### Bug Fixes
+
+- **react-kit:** add pointer media query ([3b50e44](https://github.com/weareteamturing/bombe/commit/3b50e4445cb243ca9b8f03e7df9cc5202e5ceea1))
+- **react-kit:** apply styles only when browser has the hover state with media query ([b7455ec](https://github.com/weareteamturing/bombe/commit/b7455ec01dc146e1fe8466f1d5e7ad53f06a9248))
+
 # [2.28.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.27.1...@teamturing/react-kit@2.28.0) (2024-12-12)
 
 ### Features
