@@ -92,7 +92,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
         'primary': {
           'backgroundColor': theme.colors['bg/primary'],
           'color': theme.colors['icon/inverse'],
-          '@media (hover: hover)': {
+          '@media (hover: hover) and (pointer: fine)': {
             '&:hover:not(:disabled)': {
               backgroundColor: theme.colors['bg/primary/hovered'],
             },
@@ -110,7 +110,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
         'secondary': {
           'backgroundColor': theme.colors['bg/secondary'],
           'color': theme.colors['icon/primary'],
-          '@media (hover: hover)': {
+          '@media (hover: hover) and (pointer: fine)': {
             '&:hover:not(:disabled)': {
               backgroundColor: theme.colors['bg/secondary/hovered'],
             },
@@ -128,7 +128,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
         'neutral': {
           'backgroundColor': theme.colors['bg/neutral'],
           'color': theme.colors['icon/accent/gray'],
-          '@media (hover: hover)': {
+          '@media (hover: hover) and (pointer: fine)': {
             '&:hover:not(:disabled)': {
               backgroundColor: theme.colors['bg/neutral/hovered'],
             },
@@ -159,7 +159,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
             borderRadius: theme.radii.full,
             boxSizing: 'border-box',
           },
-          '@media (hover: hover)': {
+          '@media (hover: hover) and (pointer: fine)': {
             '&:hover:not(:disabled)': {
               backgroundColor: theme.colors['bg/neutral/subtler/hovered'],
             },
@@ -180,7 +180,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
         'plain-bold': {
           'backgroundColor': theme.colors['bg/neutral/subtler'],
           'color': theme.colors['icon/neutral/bolder'],
-          '@media (hover: hover)': {
+          '@media (hover: hover) and (pointer: fine)': {
             '&:hover:not(:disabled)': {
               color: theme.colors['icon/accent/gray'],
             },
@@ -198,7 +198,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
         'plain': {
           'backgroundColor': theme.colors['bg/neutral/subtler'],
           'color': theme.colors['icon/neutral/bold'],
-          '@media (hover: hover)': {
+          '@media (hover: hover) and (pointer: fine)': {
             '&:hover:not(:disabled)': {
               color: theme.colors['icon/neutral/bolder'],
             },
@@ -216,7 +216,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
         'plain-subtle': {
           'backgroundColor': theme.colors['bg/neutral/subtler'],
           'color': theme.colors['icon/neutral'],
-          '@media (hover: hover)': {
+          '@media (hover: hover) and (pointer: fine)': {
             '&:hover:not(:disabled)': {
               color: theme.colors['icon/neutral/bold'],
             },
@@ -234,7 +234,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
         'danger': {
           'backgroundColor': theme.colors['bg/danger/bold'],
           'color': theme.colors['icon/inverse'],
-          '@media (hover: hover)': {
+          '@media (hover: hover) and (pointer: fine)': {
             '&:hover:not(:disabled)': {
               backgroundColor: theme.colors['bg/danger/bold/hovered'],
             },
