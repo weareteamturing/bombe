@@ -13,6 +13,7 @@ import {
 import { isValidElementType } from 'react-is';
 import styled, { css, useTheme } from 'styled-components';
 
+import useDevice from '../../hook/useDevice';
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 import HorizontalDivider from '../HorizontalDivider';
 import Overlay, { OverlayProps } from '../Overlay';
@@ -68,6 +69,7 @@ const SearchSelectInput = <T,>(
   ref: Ref<HTMLInputElement>,
 ) => {
   const theme = useTheme();
+  const { isDesktop } = useDevice();
 
   const isVisibleValueExist =
     value && isArray(value) && !isNullable(renderValue(value))
@@ -103,13 +105,23 @@ const SearchSelectInput = <T,>(
     }
   };
 
+  /**
+   * ? dummyRef가 왜 있나?
+   * 모바일 환경에서 Input에 포커스가 가지 않도록 하기 위한 장치입니다.
+   */
+  const dummyRef = useRef<HTMLDivElement>(null);
+
   const listContainerRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const activeDescendantRef = useRef<HTMLElement>();
 
   return (
     <OverlayPopper
-      focusTrapSettings={{ initialFocusRef: searchInputRef, restoreFocusOnCleanUp: true, ...focusTrapSettings }}
+      focusTrapSettings={{
+        initialFocusRef: isDesktop ? searchInputRef : dummyRef,
+        restoreFocusOnCleanUp: true,
+        ...focusTrapSettings,
+      }}
       focusZoneSettings={{
         containerRef: listContainerRef,
         activeDescendantFocus: searchInputRef,
@@ -150,6 +162,7 @@ const SearchSelectInput = <T,>(
             }
           }}
         >
+          {!isDesktop ? <View aria-hidden ref={dummyRef} tabIndex={0} /> : null}
           <Space
             p={2}
             sx={{
