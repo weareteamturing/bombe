@@ -163,8 +163,10 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
           'backgroundColor': theme.colors['bg/primary'],
           'color': theme.colors['text/inverse'],
           '& svg': { color: theme.colors['icon/inverse'] },
-          '&:hover:not(:disabled)': {
-            backgroundColor: theme.colors['bg/primary/hovered'],
+          '@media (hover: hover) and (pointer: fine)': {
+            '&:hover:not(:disabled)': {
+              backgroundColor: theme.colors['bg/primary/hovered'],
+            },
           },
           '&:active:not(:disabled)': {
             backgroundColor: theme.colors['bg/primary/pressed'],
@@ -187,8 +189,10 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
           'backgroundColor': theme.colors['bg/secondary'],
           'color': theme.colors['text/primary'],
           '& svg': { color: theme.colors['icon/primary'] },
-          '&:hover:not(:disabled)': {
-            backgroundColor: theme.colors['bg/secondary/hovered'],
+          '@media (hover: hover) and (pointer: fine)': {
+            '&:hover:not(:disabled)': {
+              backgroundColor: theme.colors['bg/secondary/hovered'],
+            },
           },
           '&:active:not(:disabled)': {
             backgroundColor: theme.colors['bg/secondary/pressed'],
@@ -211,8 +215,10 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
           'backgroundColor': theme.colors['bg/neutral'],
           'color': theme.colors['text/neutral'],
           '& svg': { color: theme.colors['icon/accent/gray'] },
-          '&:hover:not(:disabled)': {
-            backgroundColor: theme.colors['bg/neutral/hovered'],
+          '@media (hover: hover) and (pointer: fine)': {
+            '&:hover:not(:disabled)': {
+              backgroundColor: theme.colors['bg/neutral/hovered'],
+            },
           },
           '&:active:not(:disabled)': {
             backgroundColor: theme.colors['bg/neutral/pressed'],
@@ -248,8 +254,10 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
             borderRadius: theme.radii.full,
             boxSizing: 'border-box',
           },
-          '&:hover:not(:disabled)': {
-            backgroundColor: theme.colors['bg/neutral/subtler/hovered'],
+          '@media (hover: hover) and (pointer: fine)': {
+            '&:hover:not(:disabled)': {
+              backgroundColor: theme.colors['bg/neutral/subtler/hovered'],
+            },
           },
           '&:active:not(:disabled)': {
             backgroundColor: theme.colors['bg/neutral/subtler/pressed'],
@@ -275,10 +283,12 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
           'backgroundColor': theme.colors['bg/neutral/subtler'],
           'color': theme.colors['text/neutral/subtle'],
           '& svg': { color: theme.colors['icon/neutral/bolder'] },
-          '&:hover:not(:disabled)': {
-            'color': theme.colors['text/neutral'],
-            '& svg': {
-              color: theme.colors['icon/accent/gray'],
+          '@media (hover: hover) and (pointer: fine)': {
+            '&:hover:not(:disabled)': {
+              'color': theme.colors['text/neutral'],
+              '& svg': {
+                color: theme.colors['icon/accent/gray'],
+              },
             },
           },
           '&:active:not(:disabled)': {
@@ -305,8 +315,10 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
           'backgroundColor': theme.colors['bg/danger/bold'],
           'color': theme.colors['text/inverse'],
           '& svg': { color: theme.colors['icon/inverse'] },
-          '&:hover:not(:disabled)': {
-            backgroundColor: theme.colors['bg/danger/bold/hovered'],
+          '@media (hover: hover) and (pointer: fine)': {
+            '&:hover:not(:disabled)': {
+              backgroundColor: theme.colors['bg/danger/bold/hovered'],
+            },
           },
           '&:active:not(:disabled)': {
             backgroundColor: theme.colors['bg/danger/bold/pressed'],
