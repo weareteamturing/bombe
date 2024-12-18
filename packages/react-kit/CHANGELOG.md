@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.29.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.28.1...@teamturing/react-kit@2.29.0) (2024-12-18)
+
+### Features
+
+- **react-kit:** update Drawer with bottom direction ([4bf6509](https://github.com/weareteamturing/bombe/commit/4bf65094706de38ce7953af93c0eed6924e66814))
+- **react-kit:** update OverlayPopper floating placement fallback ([03dc4dc](https://github.com/weareteamturing/bombe/commit/03dc4dc6b5fafe314799a29d506529b8f87822ea))
+
 ## [2.28.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.28.0...@teamturing/react-kit@2.28.1) (2024-12-12)
 
 ### Bug Fixes
