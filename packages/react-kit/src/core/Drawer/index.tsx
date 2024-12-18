@@ -1,5 +1,5 @@
 import { CloseIcon } from '@teamturing/icons';
-import { AnimatePresence, easeInOut } from 'framer-motion';
+import { easeInOut } from 'framer-motion';
 import {
   forwardRef,
   PropsWithChildren,
@@ -11,9 +11,11 @@ import {
   useRef,
 } from 'react';
 import styled from 'styled-components';
+import { variant } from 'styled-system';
 
 import useFocusTrap from '../../hook/useFocusTrap';
 import { sx, SxProp } from '../../utils/styled-system';
+import AnimatePresence from '../AnimatePresence';
 import IconButton from '../IconButton';
 import MotionView from '../MotionView';
 import View from '../View';
@@ -27,11 +29,14 @@ import UnstyledDrawerFooter, { UnstyledDrawerFooterProps } from './_UnstyledDraw
 import UnstyledDrawerHeader, { UnstyledDrawerHeaderProps } from './_UnstyledDrawerHeader';
 
 type DrawerSizeType = 'full' | 'l' | 'm' | 's';
+type DrawerDirectionType = 'right' | 'bottom';
+
 type Props = {
   isOpen?: boolean;
   onDismiss?: () => void;
   isOutsideClickDismissable?: boolean;
   size?: DrawerSizeType;
+  direction?: DrawerDirectionType;
   initialFocusRef?: RefObject<HTMLElement>;
 } & SxProp;
 
@@ -42,6 +47,7 @@ const Drawer = (
     onDismiss,
     isOutsideClickDismissable = true,
     size = 'm',
+    direction = 'right',
     initialFocusRef,
     sx,
   }: PropsWithChildren<Props>,
@@ -117,9 +123,15 @@ const Drawer = (
             <Blanket ref={blanketRef} />
           </MotionView>
           <MotionView
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            {...(direction === 'right'
+              ? {
+                  initial: { x: '100%' },
+                  animate: { x: 0 },
+                  exit: { x: '100%' },
+                }
+              : direction === 'bottom'
+              ? { initial: { y: '100%' }, animate: { y: 0 }, exit: { y: '100%' } }
+              : {})}
             transition={{
               duration: 0.25,
               ease: easeInOut,
@@ -127,11 +139,23 @@ const Drawer = (
             sx={{
               position: 'fixed',
               display: 'flex',
-              top: 0,
-              right: 0,
-              bottom: 0,
               zIndex: 9999,
-              width: ['100%', '100%', 'fit-content'],
+
+              ...(direction === 'right'
+                ? {
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    width: ['100%', '100%', 'fit-content'],
+                  }
+                : direction === 'bottom'
+                ? {
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    width: '100%',
+                  }
+                : {}),
             }}
           >
             <BaseDrawer
@@ -139,27 +163,9 @@ const Drawer = (
               aria-modal={'true'}
               role={'dialog'}
               tabIndex={-1}
-              sx={{
-                ...(size === 's'
-                  ? {
-                      width: ['calc(100% - 32px)', 400, 400],
-                    }
-                  : size === 'm'
-                  ? {
-                      width: ['100%', '100%', 640],
-                    }
-                  : size === 'l'
-                  ? {
-                      width: ['100%', '100%', 860],
-                    }
-                  : size === 'full'
-                  ? {
-                      width: ['100%', '100%', 'calc(100vw - 80px)'],
-                    }
-                  : {}),
-
-                ...sx,
-              }}
+              size={size}
+              direction={direction}
+              sx={sx}
               onKeyDown={handleKeyDown}
             >
               <View sx={{ position: 'absolute', top: 2, right: 5 }}>
@@ -193,7 +199,7 @@ const Blanket = styled.span`
     background: ${({ theme }) => theme.colors.dim};
   }
 `;
-const BaseDrawer = styled.div<SxProp>(
+const BaseDrawer = styled.div<SxProp & Pick<Props, 'size' | 'direction'>>(
   ({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
@@ -202,10 +208,59 @@ const BaseDrawer = styled.div<SxProp>(
     backgroundColor: theme.colors['surface/overlay'],
     outline: 'none',
     overflow: 'hidden',
-    margin: 'auto',
 
+    margin: 'auto',
     height: '100%',
     marginRight: 0,
+  }),
+  ({ direction }) =>
+    direction === 'right'
+      ? variant({
+          prop: 'size',
+          variants: {
+            s: {
+              width: ['calc(100% - 32px)', 400, 400],
+            },
+            m: {
+              width: ['100%', '100%', 640],
+            },
+            l: {
+              width: ['100%', '100%', 860],
+            },
+            full: {
+              width: ['100%', '100%', 'calc(100vw - 80px)'],
+            },
+          },
+        })
+      : variant({
+          prop: 'size',
+          variants: {
+            s: {
+              height: '40dvh',
+              maxHeight: '40dvh',
+            },
+            m: {
+              height: '60dvh',
+              maxHeight: '60dvh',
+            },
+            l: {
+              height: '80dvh',
+              maxHeight: '80dvh',
+            },
+            full: {
+              height: 'calc(100dvh - 80px)',
+              maxHeight: 'calc(100dvh - 80px)',
+            },
+          },
+        }),
+  variant({
+    prop: 'direction',
+    variants: {
+      right: {},
+      bottom: {
+        width: '100% !important',
+      },
+    },
   }),
   sx,
 );

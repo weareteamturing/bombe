@@ -1,4 +1,4 @@
-import { useFloating, autoUpdate, offset, flip, shift, Placement, UseFloatingReturn } from '@floating-ui/react-dom';
+import { useFloating, autoUpdate, offset, shift, Placement, UseFloatingReturn, flip } from '@floating-ui/react-dom';
 import { isFunction } from '@teamturing/utils';
 import { Children, ForwardedRef, HTMLAttributes, ReactElement, ReactNode, RefObject, cloneElement } from 'react';
 import { useTheme } from 'styled-components';
@@ -43,7 +43,7 @@ const OverlayPopper = ({
   const { refs, elements, floatingStyles, isPositioned } = useFloating({
     placement,
     whileElementsMounted: autoUpdate,
-    middleware: [offset(theme.space[1]), flip(), shift()],
+    middleware: [offset(theme.space[1]), flip(), shift({ crossAxis: true })],
     strategy: 'fixed',
   });
   const [isOpen, toggleOverlay, openOverlay, closeOverlay] = useToggleState({ initialState: false });
