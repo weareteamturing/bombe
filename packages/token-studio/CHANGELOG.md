@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.6.0...@teamturing/token-studio@1.7.0) (2024-12-20)
+
+### Features
+
+- **token-studio:** add text color token ([2a33b4c](https://github.com/weareteamturing/bombe/commit/2a33b4cb07e889f5700d0795aed962762f7122ad))
+- **token-studio:** update gradient token ([d241879](https://github.com/weareteamturing/bombe/commit/d241879a61d32f2355c6f65f4903134768736e09))
+
 # [1.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.5.0...@teamturing/token-studio@1.6.0) (2024-10-24)
 
 ### Features
