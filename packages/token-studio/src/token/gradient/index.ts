@@ -20,12 +20,17 @@ const overlayGradient = {
   'overlay/subtlest/toright': generateGradientTokenValue('directionToRight', 'colorStopListWhite'),
   'overlay/subtlest/toleft': generateGradientTokenValue('directionToLeft', 'colorStopListWhite'),
   'overlay/subtlest/totop': generateGradientTokenValue('directionToTop', 'colorStopListWhite'),
+  'overlay/subtlest/tobottom': generateGradientTokenValue('directionToBottom', 'colorStopListWhite'),
+
   'overlay/floating/toright': generateGradientTokenValue('directionToRight', 'colorStopListWhite'),
   'overlay/floating/toleft': generateGradientTokenValue('directionToLeft', 'colorStopListWhite'),
   'overlay/floating/totop': generateGradientTokenValue('directionToTop', 'colorStopListWhite'),
+  'overlay/floating/tobottom': generateGradientTokenValue('directionToBottom', 'colorStopListWhite'),
+
   'overlay/bold/toright': generateGradientTokenValue('directionToRight', 'colorStopListBlack'),
   'overlay/bold/toleft': generateGradientTokenValue('directionToLeft', 'colorStopListBlack'),
   'overlay/bold/totop': generateGradientTokenValue('directionToTop', 'colorStopListBlack'),
+  'overlay/bold/tobottom': generateGradientTokenValue('directionToBottom', 'colorStopListBlack'),
 } as const;
 
 const gradient = {
