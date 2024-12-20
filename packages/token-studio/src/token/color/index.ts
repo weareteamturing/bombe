@@ -18,6 +18,7 @@ const textColor = {
   'text/warning': palette.yellow500,
   'text/danger': palette.red500,
   'text/selected': palette.gray900,
+  'text/weak': palette.gray300,
 } as const;
 
 const bgColor = {
