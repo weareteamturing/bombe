@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.30.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.29.1...@teamturing/react-kit@2.30.0) (2025-01-06)
+
+### Features
+
+- **react-kit:** update IconToggleButton with forwardRef ([e9dfa46](https://github.com/weareteamturing/bombe/commit/e9dfa4635982cabe9b898a88ca4da3d181172a54))
+
 ## [2.29.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.29.0...@teamturing/react-kit@2.29.1) (2024-12-20)
 
 **Note:** Version bump only for package @teamturing/react-kit
