@@ -86,6 +86,7 @@ export { default as face_sad } from '@teamturing/icons/svg/face_sad.svg';
 export { default as facebook } from '@teamturing/icons/svg/facebook.svg';
 export { default as facebook_color } from '@teamturing/icons/svg/facebook_color.svg';
 export { default as filter } from '@teamturing/icons/svg/filter.svg';
+export { default as find } from '@teamturing/icons/svg/find.svg';
 export { default as fire } from '@teamturing/icons/svg/fire.svg';
 export { default as fire_color } from '@teamturing/icons/svg/fire_color.svg';
 export { default as folder } from '@teamturing/icons/svg/folder.svg';

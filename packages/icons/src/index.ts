@@ -86,6 +86,7 @@ export { default as FaceSadIcon } from './FaceSad';
 export { default as FacebookIcon } from './Facebook';
 export { default as FacebookColorIcon } from './FacebookColor';
 export { default as FilterIcon } from './Filter';
+export { default as FindIcon } from './Find';
 export { default as FireIcon } from './Fire';
 export { default as FireColorIcon } from './FireColor';
 export { default as FolderIcon } from './Folder';
