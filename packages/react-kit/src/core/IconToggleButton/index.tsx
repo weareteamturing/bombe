@@ -1,4 +1,4 @@
-import { ComponentType, SVGProps } from 'react';
+import { ComponentType, Ref, SVGProps, forwardRef } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
@@ -28,31 +28,25 @@ type Props = {
 } & UnstyledButtonProps &
   SxProp;
 
-const IconToggleButton = ({
-  icon: Icon,
-  size = 'm',
-  variant = 'primary',
-  selected = false,
-  disabled = false,
-  sx,
-  ...props
-}: Props) => {
-  return (
-    <BaseIconToggleButton
-      icon={Icon}
-      size={size}
-      variant={variant}
-      selected={selected}
-      type={'button'}
-      disabled={disabled}
-      $disabled={disabled}
-      sx={sx}
-      {...props}
-    >
-      <Icon />
-    </BaseIconToggleButton>
-  );
-};
+const IconToggleButton = (
+  { icon: Icon, size = 'm', variant = 'primary', selected = false, disabled = false, sx, ...props }: Props,
+  ref: Ref<HTMLButtonElement>,
+) => (
+  <BaseIconToggleButton
+    ref={ref}
+    icon={Icon}
+    size={size}
+    variant={variant}
+    selected={selected}
+    type={'button'}
+    disabled={disabled}
+    $disabled={disabled}
+    sx={sx}
+    {...props}
+  >
+    <Icon />
+  </BaseIconToggleButton>
+);
 
 const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolean }>(
   ({ $disabled, theme }) => ({
@@ -127,5 +121,5 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
   sx,
 );
 
-export default IconToggleButton;
+export default forwardRef(IconToggleButton);
 export type { Props as IconToggleButtonProps };
