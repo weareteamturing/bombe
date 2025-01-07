@@ -1,6 +1,7 @@
 import { forcePixelValue } from '@teamturing/utils';
 import { forwardRef, HTMLAttributes, PropsWithChildren, Ref } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { ResponsiveValue, variant } from 'styled-system';
 
 import { SxProp, sx } from '../../utils/styled-system';
 
@@ -21,17 +22,18 @@ type Props = {
    * Tooltip의 텍스트를 정의합니다.
    */
   text?: string;
+  disabled?: ResponsiveValue<boolean>;
 } & SxProp &
   Pick<HTMLAttributes<HTMLSpanElement>, 'className'>;
 
 const Tooltip = (
-  { children, direction = 'top-center', text, className: propClassName, sx }: PropsWithChildren<Props>,
+  { children, direction = 'top-center', text, disabled, className: propClassName, sx }: PropsWithChildren<Props>,
   ref: Ref<HTMLSpanElement>,
 ) => {
   const className = [propClassName, `tooltip-direction-${direction}`].join(' ');
 
   return (
-    <BaseTooltip ref={ref} role={'tooltip'} aria-label={text} className={className} sx={sx}>
+    <BaseTooltip ref={ref} role={'tooltip'} aria-label={text} disabled={disabled} className={className} sx={sx}>
       {children}
     </BaseTooltip>
   );
@@ -47,7 +49,7 @@ const tooltipAppear = keyframes`
   }
 `;
 
-const BaseTooltip = styled.span<SxProp>`
+const BaseTooltip = styled.span<SxProp & Pick<Props, 'disabled'>>`
   display: inline-block;
   position: relative;
 
@@ -225,6 +227,25 @@ const BaseTooltip = styled.span<SxProp>`
   }
 
   ${sx}
+  ${variant({
+    prop: 'disabled',
+    variants: {
+      true: {
+        '&:hover , &:active, &:focus': {
+          '&::before, &::after': {
+            display: 'none',
+          },
+        },
+      },
+      false: {
+        '&:hover , &:active, &:focus': {
+          '&::before, &::after': {
+            display: 'table-cell',
+          },
+        },
+      },
+    },
+  })}
 `;
 
 export default forwardRef(Tooltip);
