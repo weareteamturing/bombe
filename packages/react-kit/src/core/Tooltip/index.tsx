@@ -89,20 +89,18 @@ const BaseTooltip = styled.span<SxProp>`
     opacity: 0;
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover,
-    &:active,
-    &:focus {
-      &::before,
-      &::after {
-        display: table-cell;
-        text-decoration: none;
-        animation-name: ${tooltipAppear};
-        animation-duration: 100ms;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in;
-        animation-delay: 300ms;
-      }
+  &:hover,
+  &:active,
+  &:focus {
+    &::before,
+    &::after {
+      display: table-cell;
+      text-decoration: none;
+      animation-name: ${tooltipAppear};
+      animation-duration: 100ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+      animation-delay: 300ms;
     }
   }
 
