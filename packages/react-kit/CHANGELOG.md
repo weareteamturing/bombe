@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.31.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.30.1...@teamturing/react-kit@2.31.0) (2025-01-07)
+
+### Bug Fixes
+
+- **react-kit:** revert change for Tooltip ([9e01d58](https://github.com/weareteamturing/bombe/commit/9e01d582de8be20faece462c610af12ab3fbe430))
+- **react-kit:** update Tooltip hover behavior ([cc4928d](https://github.com/weareteamturing/bombe/commit/cc4928d898e2f56a7c69ec7b33bcbfcfc57429d4))
+
+### Features
+
+- **react-kit:** update Tooltip with disabled props ([10da72e](https://github.com/weareteamturing/bombe/commit/10da72e9667bb837326e456f1277a173ef39e958))
+
 ## [2.30.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.30.0...@teamturing/react-kit@2.30.1) (2025-01-06)
 
 **Note:** Version bump only for package @teamturing/react-kit
