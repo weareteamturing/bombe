@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.12.0...@teamturing/react-native-kit@1.13.0) (2025-01-16)
+
+### Features
+
+- **icons:** add book_color, quiz_color ([63a7624](https://github.com/weareteamturing/bombe/commit/63a7624227f541dcbe120c28e59d806fb4bc5efe))
+
 # [1.12.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.11.0...@teamturing/react-native-kit@1.12.0) (2025-01-06)
 
 ### Features
