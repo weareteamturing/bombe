@@ -19,6 +19,7 @@ export { default as arrow_up_limit } from '@teamturing/icons/svg/arrow_up_limit.
 export { default as auto } from '@teamturing/icons/svg/auto.svg';
 export { default as barchart } from '@teamturing/icons/svg/barchart.svg';
 export { default as book } from '@teamturing/icons/svg/book.svg';
+export { default as book_color } from '@teamturing/icons/svg/book_color.svg';
 export { default as bookmark } from '@teamturing/icons/svg/bookmark.svg';
 export { default as bookmark_animation } from '@teamturing/icons/svg/bookmark_animation.svg';
 export { default as box } from '@teamturing/icons/svg/box.svg';
@@ -166,6 +167,7 @@ export { default as profile } from '@teamturing/icons/svg/profile.svg';
 export { default as progress_gradient } from '@teamturing/icons/svg/progress_gradient.svg';
 export { default as question_mark_in_circle } from '@teamturing/icons/svg/question_mark_in_circle.svg';
 export { default as question_mark_in_circle_outlined } from '@teamturing/icons/svg/question_mark_in_circle_outlined.svg';
+export { default as quiz_color } from '@teamturing/icons/svg/quiz_color.svg';
 export { default as raffle_color } from '@teamturing/icons/svg/raffle_color.svg';
 export { default as receipt } from '@teamturing/icons/svg/receipt.svg';
 export { default as refresh } from '@teamturing/icons/svg/refresh.svg';
