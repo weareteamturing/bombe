@@ -18,9 +18,9 @@ const FormControlLabel = ({ children, visuallyHidden, ...props }: PropsWithChild
     <VisuallyHidden as={'label'} htmlFor={id} sx={{ width: 'fit-content' }} isVisible={!visuallyHidden}>
       <LabelWrapper {...props} disabled={disabled}>
         {children}
-        {required ? (
+        {typeof required === 'boolean' && required === false ? (
           <View as={'span'} aria-hidden="true">
-            {' *'}
+            {' (선택)'}
           </View>
         ) : null}
       </LabelWrapper>
@@ -59,6 +59,12 @@ const LabelWrapper = styled(View)<SxProp & FormControlContextValue>`
   color: ${({ theme }) => theme.colors['text/neutral/subtle']};
 
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+
+  span {
+    font-size: inherit;
+    font-weight: inherit;
+    color: ${({ theme }) => theme.colors['text/neutral/subtlest']};
+  }
 
   ${sx};
 `;

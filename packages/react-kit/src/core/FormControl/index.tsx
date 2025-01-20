@@ -52,7 +52,7 @@ const FormControl = (
     children: propChildren,
     id,
     disabled,
-    required,
+    required = true,
     additionalInputComponentCandidates = [],
     sx,
     ...props
