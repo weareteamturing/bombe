@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.32.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.31.1...@teamturing/react-kit@2.32.0) (2025-01-20)
+
+### Features
+
+- **react-kit:** update FormControl required behavior ([9b88649](https://github.com/weareteamturing/bombe/commit/9b886492ff9c87935ff46e19cce4dc6f2af256bf))
+
 ## [2.31.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.31.0...@teamturing/react-kit@2.31.1) (2025-01-16)
 
 **Note:** Version bump only for package @teamturing/react-kit
