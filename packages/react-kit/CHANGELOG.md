@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.32.0...@teamturing/react-kit@2.32.1) (2025-01-20)
+
+### Bug Fixes
+
+- **react-kit:** fix required props injection logic ([ed36c40](https://github.com/weareteamturing/bombe/commit/ed36c40a913c5047024133bff86c42d8409feb46))
+
 # [2.32.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.31.1...@teamturing/react-kit@2.32.0) (2025-01-20)
 
 ### Features
