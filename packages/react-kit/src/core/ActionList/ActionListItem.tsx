@@ -113,7 +113,7 @@ const ActionListItem = ({
         )}
       </VisualWrapper>
       <View flex={1}>
-        <Grid gapX={2} gapY={0.5} wrap={true} alignItems={'flex-end'}>
+        <Grid gapX={2} gapY={0.5} wrap={true} alignItems={'center'}>
           <Grid.Unit
             size={descriptionLayout === 'inline' ? 'min' : 1}
             sx={{ fontWeight: description && descriptionLayout === 'block' ? 'bold' : 'medium' }}
