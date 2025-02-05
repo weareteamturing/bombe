@@ -11,10 +11,17 @@ const DatagridBody = ({ ...props }: PropsWithChildren<Props>) => <BaseDatagridBo
 const BaseDatagridBody = styled.div<SxProp>`
   width: inherit;
 
+  border-radius: inherit;
+
   & > *:not(:last-child) {
     border-bottom-width: ${forcePixelValue(1)};
     border-bottom-style: solid;
     border-bottom-color: ${({ theme }) => theme.colors['border/neutral']};
+  }
+
+  & > *:last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
   }
 
   ${sx}

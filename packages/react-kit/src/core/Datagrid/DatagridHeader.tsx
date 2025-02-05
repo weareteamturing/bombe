@@ -32,6 +32,9 @@ const DataGridHeaderWrapper = styled.div<SxProp>`
   padding: ${({ theme }) => `${forcePixelValue(theme.space[1])} ${forcePixelValue(theme.space[4])}`};
   background-color: ${({ theme }) => theme.colors['bg/neutral']};
 
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+
   ${sx}
 `;
 

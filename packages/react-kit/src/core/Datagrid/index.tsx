@@ -45,6 +45,8 @@ const DatagridWrapper = styled.div<SxProp>`
 
 const BaseDatagrid = styled.div`
   width: inherit;
+
+  border-radius: inherit;
 `;
 
 export default Object.assign(Datagrid, {
