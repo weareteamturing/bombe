@@ -38,7 +38,6 @@ const DatagridWrapper = styled.div<SxProp>`
   border-style: solid;
   border-color: ${({ theme }) => theme.colors['border/neutral']};
   border-radius: ${({ theme }) => forcePixelValue(theme.radii.s)};
-  overflow: hidden;
   isolation: isolate;
 
   ${sx}
