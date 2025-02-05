@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.32.3...@teamturing/react-kit@2.32.4) (2025-02-05)
+
+### Bug Fixes
+
+- **react-kit:** update Datagrid css ([b20854e](https://github.com/weareteamturing/bombe/commit/b20854e7908f31ef25480b507063e993b9638107))
+
 ## [2.32.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.32.2...@teamturing/react-kit@2.32.3) (2025-02-03)
 
 ### Bug Fixes
