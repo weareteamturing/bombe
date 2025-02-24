@@ -60,6 +60,7 @@ const bgColor = {
   'bg/accent/red/subtle': palette.red400,
   'bg/accent/red': palette.red500,
   'bg/accent/gray/subtlest': palette.gray200,
+  'bg/accent/violet/subtlest': palette.violet100,
 
   'bg/selected/violet': palette.violet500,
   'bg/selected': palette.gray900,
