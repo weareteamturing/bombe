@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.9](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.32.8...@teamturing/react-kit@2.32.9) (2025-02-26)
+
+### Bug Fixes
+
+- **react-kit:** update Dialog component for mobile device ([948a4d3](https://github.com/weareteamturing/bombe/commit/948a4d3178f561ee08a97c808d0cabcdabcc04f2))
+
 ## [2.32.8](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.32.7...@teamturing/react-kit@2.32.8) (2025-02-24)
 
 **Note:** Version bump only for package @teamturing/react-kit
