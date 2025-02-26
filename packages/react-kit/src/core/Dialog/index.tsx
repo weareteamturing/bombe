@@ -113,7 +113,7 @@ const Dialog = (
         sx={{
           ...(size === 's'
             ? {
-                maxHeight: 'calc(100vh - 64px)',
+                maxHeight: 'calc(100dvh - 64px)',
 
                 width: ['calc(100% - 64px)', 400, 400],
                 marginX: 'auto',
@@ -123,7 +123,7 @@ const Dialog = (
               }
             : size === 'm'
             ? {
-                maxHeight: ['100%', '100%', 'calc(100vh - 64px)'],
+                maxHeight: ['100%', '100%', 'calc(100dvh - 64px)'],
                 height: ['100%', '100%', 'auto'],
                 minHeight: ['-webkit-fill-available', '-webkit-fill-available', 'auto'],
 
@@ -135,7 +135,7 @@ const Dialog = (
               }
             : size === 'l'
             ? {
-                maxHeight: ['100%', '100%', 'calc(100vh - 64px)'],
+                maxHeight: ['100%', '100%', 'calc(100dvh - 64px)'],
                 height: ['100%', '100%', 'auto'],
                 minHeight: ['-webkit-fill-available', '-webkit-fill-available', 'auto'],
 
@@ -147,7 +147,7 @@ const Dialog = (
               }
             : size === 'full'
             ? {
-                height: ['100%', '100%', 'calc(100vh - 40px)'],
+                height: ['100%', '100%', 'calc(100dvh - 40px)'],
 
                 width: ['100%', '100%', 'calc(100vw - 40px)'],
                 marginX: [0, 0, 'auto'],
