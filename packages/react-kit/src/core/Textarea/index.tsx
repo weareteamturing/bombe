@@ -8,7 +8,7 @@ import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 
 type Props = {
   validationStatus?: 'error' | 'success' | undefined;
-  renderCount?: (count: number, element: HTMLTextAreaElement | null) => ReactNode;
+  renderCount?: (count: number, props: Props) => ReactNode;
 } & TextareaAutosizeProps;
 
 const Textarea = forwardRef<HTMLTextAreaElement, Props>(
@@ -50,7 +50,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
           disabled={disabled}
           onChange={handleChange}
         />
-        <TextareaCount>{renderCount(count, inputRef.current)}</TextareaCount>
+        <TextareaCount>{renderCount(count, { validationStatus, disabled, renderCount, ...props })}</TextareaCount>
       </TextareaWrapper>
     );
   },
