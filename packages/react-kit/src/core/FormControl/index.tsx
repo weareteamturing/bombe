@@ -5,6 +5,7 @@ import Checkbox from '../Checkbox';
 import Radio from '../Radio';
 import SearchSelectInput from '../SearchSelectInput';
 import Select from '../Select';
+import Switch from '../Switch';
 import TextInput from '../TextInput';
 import Textarea from '../Textarea';
 import View, { ViewProps } from '../View';
@@ -75,13 +76,15 @@ const FormControl = (
     SearchSelectInput,
     Checkbox,
     Radio,
+    Switch,
     ...additionalInputComponentCandidates,
   ];
   const InputComponent = restComponents.find((component) =>
     inputComponentCandidates.some((candidate) => isValidElement(component) && component.type === candidate),
   );
   const isHorizontalLayoutNeeded =
-    isValidElement(InputComponent) && (InputComponent.type === Checkbox || InputComponent.type === Radio);
+    isValidElement(InputComponent) &&
+    (InputComponent.type === Checkbox || InputComponent.type === Radio || InputComponent.type === Switch);
 
   return (
     <FormControlContext.Provider value={{ id, disabled, required }}>
