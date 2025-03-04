@@ -142,6 +142,9 @@ export type { StackProps } from './core/Stack';
 export { default as StyledIcon } from './core/StyledIcon';
 export type { StyledIconProps } from './core/StyledIcon';
 
+export { default as Switch } from './core/Switch';
+export type { SwitchProps } from './core/Switch';
+
 export { default as Tab } from './core/Tab';
 export type { TabProps } from './core/Tab';
 
