@@ -1,6 +1,6 @@
 import { commaizeNumber, forcePixelValue, isFunction } from '@teamturing/utils';
 import toArray from 'lodash.toarray';
-import { MutableRefObject, Ref, RefObject, forwardRef, useEffect, useState } from 'react';
+import { MutableRefObject, ReactNode, Ref, RefObject, forwardRef, useEffect, useState } from 'react';
 import ReactTextareaAutosize, { TextareaAutosizeProps } from 'react-textarea-autosize';
 import styled, { css } from 'styled-components';
 
@@ -8,10 +8,14 @@ import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 
 type Props = {
   validationStatus?: 'error' | 'success' | undefined;
+  renderCount?: (count: number, element: HTMLTextAreaElement | null) => ReactNode;
 } & TextareaAutosizeProps;
 
 const Textarea = forwardRef<HTMLTextAreaElement, Props>(
-  ({ validationStatus, disabled, ...props }: Props, ref: Ref<HTMLTextAreaElement>) => {
+  (
+    { validationStatus, disabled, renderCount = (count) => `${commaizeNumber(count)}자`, ...props }: Props,
+    ref: Ref<HTMLTextAreaElement>,
+  ) => {
     const inputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLTextAreaElement>);
 
     const focusInput = () => {
@@ -46,7 +50,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
           disabled={disabled}
           onChange={handleChange}
         />
-        <TextareaCount>{commaizeNumber(count)}자</TextareaCount>
+        <TextareaCount>{renderCount(count, inputRef.current)}</TextareaCount>
       </TextareaWrapper>
     );
   },
