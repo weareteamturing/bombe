@@ -28,6 +28,7 @@ const bgColor = {
   'bg/primary': palette.violet500,
   'bg/primary/hovered': palette.violet700,
   'bg/primary/pressed': palette.violet700,
+  'bg/primary/disabled': palette.violet100,
 
   'bg/neutral/subtlest': palette.transparent,
   'bg/neutral/subtlest/hovered': palette.gray50,
@@ -60,7 +61,6 @@ const bgColor = {
   'bg/accent/red/subtle': palette.red400,
   'bg/accent/red': palette.red500,
   'bg/accent/gray/subtlest': palette.gray200,
-  'bg/accent/violet/subtlest': palette.violet100,
 
   'bg/selected/violet': palette.violet500,
   'bg/selected': palette.gray900,
