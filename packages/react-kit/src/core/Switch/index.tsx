@@ -60,7 +60,7 @@ const BaseSwitch = styled(UnstyledSwitch)<Props>`
     }
 
     &:disabled {
-      background-color: ${({ theme }) => theme.colors['bg/accent/violet/subtlest']};
+      background-color: ${({ theme }) => theme.colors['bg/primary/disabled']};
     }
   }
 
