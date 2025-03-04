@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.35.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.35.0...@teamturing/react-kit@2.35.1) (2025-03-04)
+
+### Bug Fixes
+
+- **react-kit:** export Swtich component ([8865065](https://github.com/weareteamturing/bombe/commit/886506545a9222cc03c1695983a680a28e3baaa9))
+
 # [2.35.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.34.0...@teamturing/react-kit@2.35.0) (2025-03-04)
 
 ### Bug Fixes
