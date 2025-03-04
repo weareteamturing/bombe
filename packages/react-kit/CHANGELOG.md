@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.35.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.34.0...@teamturing/react-kit@2.35.0) (2025-03-04)
+
+### Bug Fixes
+
+- **react-kit:** fix color in Switch ([78d9d8e](https://github.com/weareteamturing/bombe/commit/78d9d8e8b42d42a2fb241d3ff46db6a7740d5242))
+- **react-kit:** update FormControl to include Switch as controller ([07d9422](https://github.com/weareteamturing/bombe/commit/07d9422698e3ddf99d40dd632cfe8430db67cdb4))
+
+### Features
+
+- **react-kit:** add Swtich component ([a003cab](https://github.com/weareteamturing/bombe/commit/a003cabbbe053f803873012254ccc40773ee5bca))
+
 # [2.34.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.33.0...@teamturing/react-kit@2.34.0) (2025-03-04)
 
 ### Features

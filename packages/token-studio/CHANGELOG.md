@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.8.0...@teamturing/token-studio@1.9.0) (2025-03-04)
+
+### Features
+
+- **token-studio:** update color ([5cf3b7b](https://github.com/weareteamturing/bombe/commit/5cf3b7bd916e59b0283c384572e94a188f35761d))
+
 # [1.8.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.7.0...@teamturing/token-studio@1.8.0) (2025-02-24)
 
 ### Features
