@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.34.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.33.0...@teamturing/react-kit@2.34.0) (2025-03-04)
+
+### Features
+
+- **react-kit:** update Textarea renderCount props ([7e72a52](https://github.com/weareteamturing/bombe/commit/7e72a5270e3da98362e28df8b5df70c6b51bbf78))
+
 # [2.33.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.32.9...@teamturing/react-kit@2.33.0) (2025-03-04)
 
 ### Features
