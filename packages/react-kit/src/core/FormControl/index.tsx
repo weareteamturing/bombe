@@ -14,6 +14,7 @@ import FormControlCaption, { FormControlCaptionProps } from './FormControlCaptio
 import FormControlErrorMessage, { FormControlErrorMessageProps } from './FormControlErrorMessage';
 import FormControlLabel, { FormControlLabelProps } from './FormControlLabel';
 import FormControlSuccessMessage, { FormControlSuccessMessageProps } from './FormControlSuccessMessage';
+import FormControlTooltipIcon, { FormControlTooltipIconProps } from './FormControlTooltipIcon';
 
 type Props = {
   /**
@@ -32,7 +33,7 @@ type Props = {
   required?: boolean;
 
   /**
-   * @default TextInput, Select, SearchSelectInput, Checkbox
+   * @default TextInput, Textarea, Select, SearchSelectInput, Checkbox, Radio, Switch
    *
    * FormControl이 허용하는 Input 컴포넌트를 추가로 정의합니다.
    */
@@ -67,6 +68,7 @@ const FormControl = (
       caption: FormControlCaption,
       errorMessage: FormControlErrorMessage,
       successMessage: FormControlSuccessMessage,
+      tooltipIcon: FormControlTooltipIcon,
     },
   });
   const inputComponentCandidates = [
@@ -92,7 +94,15 @@ const FormControl = (
         <View ref={ref} display={'flex'} sx={{ columnGap: 2, ...sx }} {...props}>
           <View display={'inline-flex'}>{cloneElement(InputComponent as ReactElement, { id, disabled })}</View>
           <View sx={{ '& > span': { mt: 0.5 } }}>
-            {relocatableComponentsObject.label}
+            <View
+              className={'form_control__label_wrapper__horizontal'}
+              display={'flex'}
+              alignItems={'center'}
+              sx={{ columnGap: 1 }}
+            >
+              {relocatableComponentsObject.label}
+              {relocatableComponentsObject.tooltipIcon}
+            </View>
             {relocatableComponentsObject.caption}
             {relocatableComponentsObject.errorMessage}
             {relocatableComponentsObject.successMessage}
@@ -103,10 +113,24 @@ const FormControl = (
           ref={ref}
           display={'flex'}
           flexDirection={'column'}
-          sx={{ '& > label': { mb: 1 }, '& > span': { mt: 1 }, ...sx }}
+          sx={{
+            '& .form_control__label_wrapper__vertical': {
+              mb: relocatableComponentsObject.label?.props.visuallyHidden ? 0 : 1,
+            },
+            '& > span': { mt: 1 },
+            ...sx,
+          }}
           {...props}
         >
-          {relocatableComponentsObject.label}
+          <View
+            className={'form_control__label_wrapper__vertical'}
+            display={'flex'}
+            alignItems={'center'}
+            sx={{ columnGap: 1 }}
+          >
+            {relocatableComponentsObject.label}
+            {relocatableComponentsObject.tooltipIcon}
+          </View>
           {cloneElement(InputComponent as ReactElement, { id, disabled })}
           {relocatableComponentsObject.caption}
           {relocatableComponentsObject.errorMessage}
@@ -122,6 +146,7 @@ export default Object.assign(forwardRef(FormControl), {
   Caption: FormControlCaption,
   ErrorMessage: FormControlErrorMessage,
   SuccessMessage: FormControlSuccessMessage,
+  TooltipIcon: FormControlTooltipIcon,
 });
 export { FormControlContext };
 export type {
@@ -132,4 +157,5 @@ export type {
   FormControlErrorMessageProps,
   FormControlLabelProps,
   FormControlSuccessMessageProps,
+  FormControlTooltipIconProps,
 };

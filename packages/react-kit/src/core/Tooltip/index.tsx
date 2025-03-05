@@ -249,4 +249,4 @@ const BaseTooltip = styled.span<SxProp & Pick<Props, 'disabled'>>`
 `;
 
 export default forwardRef(Tooltip);
-export type { Props as TooptipProps };
+export type { Props as TooltipProps };
