@@ -84,6 +84,7 @@ export type {
   FormControlErrorMessageProps,
   FormControlLabelProps,
   FormControlSuccessMessageProps,
+  FormControlTooltipIconProps,
 } from './core/FormControl';
 
 export { default as GradientText } from './core/GradientText';
@@ -163,7 +164,7 @@ export { default as Toast } from './core/Toast';
 export type { ToastProps } from './core/Toast';
 
 export { default as Tooltip } from './core/Tooltip';
-export type { TooptipProps } from './core/Tooltip';
+export type { TooltipProps } from './core/Tooltip';
 
 export { default as View } from './core/View';
 export type { ViewProps } from './core/View';
