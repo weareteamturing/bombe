@@ -23,8 +23,9 @@ type Props = {
     | 'red-accent'
     | 'yellow'
     | 'green'
-    | 'blue'
-    | 'dim';
+    | 'dim'
+    | 'outlined-blue'
+    | 'blue';
   /**
    * 텍스트 앞에 보여질 아이콘을 정의합니다.
    */
@@ -172,15 +173,33 @@ const BaseChip = styled.span<Props & SxProp>(
           'color': theme.colors['text/accent/green'],
           '& svg': { color: theme.colors['icon/accent/green'] },
         },
-        'blue': {
-          'backgroundColor': theme.colors['bg/accent/blue/subtlest'],
-          'color': theme.colors['text/accent/blue'],
-          '& svg': { color: theme.colors['icon/accent/blue'] },
-        },
         'dim': {
           'backgroundColor': theme.colors['dim'],
           'color': theme.colors['text/inverse'],
           '& svg': { color: theme.colors['icon/inverse'] },
+        },
+        'outlined-blue': {
+          'backgroundColor': theme.colors['bg/neutral/subtler'],
+          'color': theme.colors['text/accent/blue'],
+          '& svg': { color: theme.colors['icon/accent/blue'] },
+          '&:after': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+            borderWidth: 1,
+            borderStyle: 'solid',
+            borderColor: theme.colors['border/accent/blue'],
+            borderRadius: theme.radii.full,
+            boxSizing: 'border-box',
+          },
+        },
+        'blue': {
+          'backgroundColor': theme.colors['bg/accent/blue/subtlest'],
+          'color': theme.colors['text/accent/blue'],
+          '& svg': { color: theme.colors['icon/accent/blue'] },
         },
       },
     }),

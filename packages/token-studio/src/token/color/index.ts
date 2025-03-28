@@ -94,6 +94,7 @@ const borderColor = {
   'border/focused': palette.blue500,
   'border/danger': palette.red500,
   'border/success': palette.green500,
+  'border/accent/blue': palette.blue500,
 } as const;
 
 const iconColor = {
