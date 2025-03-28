@@ -23,6 +23,7 @@ type Props = {
     | 'red-accent'
     | 'yellow'
     | 'green'
+    | 'blue'
     | 'dim';
   /**
    * 텍스트 앞에 보여질 아이콘을 정의합니다.
@@ -170,6 +171,11 @@ const BaseChip = styled.span<Props & SxProp>(
           'backgroundColor': theme.colors['bg/accent/green/subtlest'],
           'color': theme.colors['text/accent/green'],
           '& svg': { color: theme.colors['icon/accent/green'] },
+        },
+        'blue': {
+          'backgroundColor': theme.colors['bg/accent/blue/subtlest'],
+          'color': theme.colors['text/accent/blue'],
+          '& svg': { color: theme.colors['icon/accent/blue'] },
         },
         'dim': {
           'backgroundColor': theme.colors['dim'],
