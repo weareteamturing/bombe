@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.38.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.37.0...@teamturing/react-kit@2.38.0) (2025-03-28)
+
+### Features
+
+- **react-kit:** add Chip variant ([3ace94f](https://github.com/weareteamturing/bombe/commit/3ace94fe8fd9c9bfe70dd69021f9295b5ce1f031))
+
 # [2.37.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.36.0...@teamturing/react-kit@2.37.0) (2025-03-28)
 
 ### Features
