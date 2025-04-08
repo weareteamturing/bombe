@@ -1,4 +1,4 @@
-export { default as a_in_circle_color } from '@teamturing/icons/svg/a_in_circle_color.svg';
+export { default as a_in_circle_filled } from '@teamturing/icons/svg/a_in_circle_filled.svg';
 export { default as ai } from '@teamturing/icons/svg/ai.svg';
 export { default as ai_color } from '@teamturing/icons/svg/ai_color.svg';
 export { default as ai_sad } from '@teamturing/icons/svg/ai_sad.svg';
