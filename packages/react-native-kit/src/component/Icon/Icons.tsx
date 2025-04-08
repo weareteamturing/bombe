@@ -1,3 +1,4 @@
+export { default as a_in_circle_color } from '@teamturing/icons/svg/a_in_circle_color.svg';
 export { default as ai } from '@teamturing/icons/svg/ai.svg';
 export { default as ai_color } from '@teamturing/icons/svg/ai_color.svg';
 export { default as ai_sad } from '@teamturing/icons/svg/ai_sad.svg';
@@ -16,7 +17,6 @@ export { default as arrow_right_limit } from '@teamturing/icons/svg/arrow_right_
 export { default as arrow_up } from '@teamturing/icons/svg/arrow_up.svg';
 export { default as arrow_up_down } from '@teamturing/icons/svg/arrow_up_down.svg';
 export { default as arrow_up_limit } from '@teamturing/icons/svg/arrow_up_limit.svg';
-export { default as auto } from '@teamturing/icons/svg/auto.svg';
 export { default as barchart } from '@teamturing/icons/svg/barchart.svg';
 export { default as book } from '@teamturing/icons/svg/book.svg';
 export { default as book_color } from '@teamturing/icons/svg/book_color.svg';
@@ -24,6 +24,7 @@ export { default as bookmark } from '@teamturing/icons/svg/bookmark.svg';
 export { default as bookmark_animation } from '@teamturing/icons/svg/bookmark_animation.svg';
 export { default as box } from '@teamturing/icons/svg/box.svg';
 export { default as bus_color } from '@teamturing/icons/svg/bus_color.svg';
+export { default as calendar } from '@teamturing/icons/svg/calendar.svg';
 export { default as calendar_check } from '@teamturing/icons/svg/calendar_check.svg';
 export { default as calendar_check_color } from '@teamturing/icons/svg/calendar_check_color.svg';
 export { default as calendar_color } from '@teamturing/icons/svg/calendar_color.svg';
