@@ -2,8 +2,6 @@ import * as React from 'react';
 import type { SVGProps } from 'react';
 const SvgAInCircleColor = (props: SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" {...props}>
-    <path fill="#E5E5E5" d="M0 0h24v24H0z" />
-    <path fill="#fff" d="M-121-426h1440v1826H-121z" />
     <path
       fill="#BACEF8"
       fillRule="evenodd"
