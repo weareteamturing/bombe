@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.44.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.44.0...@teamturing/icons@1.44.1) (2025-04-08)
+
+### Bug Fixes
+
+- **icons:** update a_in_circle_color icon ([b53268b](https://github.com/weareteamturing/bombe/commit/b53268b0ab09e7d105366cedd1eb9de6ee59f516))
+
 # [1.44.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.43.2...@teamturing/icons@1.44.0) (2025-04-08)
 
 ### Features
