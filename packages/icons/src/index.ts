@@ -1,4 +1,4 @@
-export { default as AInCircleColorIcon } from './AInCircleColor';
+export { default as AInCircleFilledIcon } from './AInCircleFilled';
 export { default as AiIcon } from './Ai';
 export { default as AiColorIcon } from './AiColor';
 export { default as AiSadIcon } from './AiSad';
