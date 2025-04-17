@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.38.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.38.4...@teamturing/react-kit@2.38.5) (2025-04-17)
+
+### Bug Fixes
+
+- **react-kit:** update OverlayPopper with tabIndex ([817f0ac](https://github.com/weareteamturing/bombe/commit/817f0acca1bb935f8dc8652104e8125cdde066cb))
+
 ## [2.38.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.38.3...@teamturing/react-kit@2.38.4) (2025-04-17)
 
 ### Bug Fixes
