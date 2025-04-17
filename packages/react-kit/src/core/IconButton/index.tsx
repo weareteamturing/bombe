@@ -2,7 +2,7 @@ import { ComponentType, Ref, SVGProps, forwardRef } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
-import { BetterSystemStyleObject, sx } from '../../utils/styled-system';
+import { BetterSystemStyleObject } from '../../utils/styled-system';
 import Spinner from '../Spinner';
 import UnstyledButton, { UnstyledButtonProps } from '../_UnstyledButton';
 
