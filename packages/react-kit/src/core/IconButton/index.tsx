@@ -29,11 +29,11 @@ type Props = {
    * 로딩 상태를 정의합니다.
    */
   loading?: boolean;
-} & Pick<UnstyledButtonProps, 'type' | 'onClick' | 'sx'>;
+} & Pick<UnstyledButtonProps, 'type' | 'onClick' | 'sx' | 'tabIndex'>;
 
 const IconButton = forwardRef<HTMLButtonElement, Props>(
   (
-    { icon: Icon, size = 'm', variant = 'primary', disabled = false, loading = false, ...props },
+    { icon: Icon, size = 'm', variant = 'primary', disabled = false, loading = false, tabIndex, ...props },
     ref: Ref<HTMLButtonElement>,
   ) => {
     return (
@@ -45,6 +45,7 @@ const IconButton = forwardRef<HTMLButtonElement, Props>(
         disabled={disabled || loading}
         $disabled={disabled}
         $loading={loading}
+        tabIndex={tabIndex}
         {...props}
       >
         {!loading ? <Icon /> : <Spinner color={'currentColor'} />}
