@@ -27,6 +27,7 @@ type Props = {
   focusTrapSettings?: Partial<FocusTrapHookSettings>;
   onOpen?: () => void;
   onClose?: () => void;
+  tabIndex?: number;
 };
 
 const OverlayPopper = ({
@@ -38,6 +39,7 @@ const OverlayPopper = ({
   focusTrapSettings,
   onOpen,
   onClose,
+  tabIndex,
 }: Props) => {
   const theme = useTheme();
   const { refs, elements, floatingStyles, isPositioned } = useFloating({
@@ -72,7 +74,7 @@ const OverlayPopper = ({
   };
 
   const defaultPopperProps: HTMLAttributes<HTMLElement> = {
-    tabIndex: 0,
+    tabIndex: tabIndex ?? 0,
     ...(triggeredBy === 'click'
       ? {
           onClick: handleOverlayToggle,
