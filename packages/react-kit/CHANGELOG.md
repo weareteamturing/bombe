@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.38.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.38.3...@teamturing/react-kit@2.38.4) (2025-04-17)
+
+### Bug Fixes
+
+- **react-kit:** update IconButton with tabIndex ([af87a23](https://github.com/weareteamturing/bombe/commit/af87a23cdda7a6b068dee43a8c694ac37176aa6c))
+
 ## [2.38.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.38.2...@teamturing/react-kit@2.38.3) (2025-04-08)
 
 **Note:** Version bump only for package @teamturing/react-kit
