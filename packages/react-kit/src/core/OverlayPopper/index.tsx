@@ -65,6 +65,13 @@ const OverlayPopper = ({
     onClose?.();
 
     closeOverlay();
+
+    const reference = refs.reference as RefObject<HTMLElement>;
+    if (reference.current) {
+      setTimeout(() => {
+        reference.current?.focus();
+      }, 0);
+    }
   };
 
   const delayedHandleOverlayClose = useDelayedFunction({ func: handleOverlayClose, delay: 150 });
