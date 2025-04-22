@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.38.6](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.38.5...@teamturing/react-kit@2.38.6) (2025-04-22)
+
+### Bug Fixes
+
+- **react-kit:** update OverlayPopper close handler ([37533b4](https://github.com/weareteamturing/bombe/commit/37533b4d1ae6d5fefd3fcac06a91149722cc608a))
+
 ## [2.38.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.38.4...@teamturing/react-kit@2.38.5) (2025-04-17)
 
 ### Bug Fixes
