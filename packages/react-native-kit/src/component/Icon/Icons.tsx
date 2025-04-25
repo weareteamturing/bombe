@@ -119,6 +119,7 @@ export { default as logo_color } from '@teamturing/icons/svg/logo_color.svg';
 export { default as logo_facebook } from '@teamturing/icons/svg/logo_facebook.svg';
 export { default as logo_kakao } from '@teamturing/icons/svg/logo_kakao.svg';
 export { default as logo_naver } from '@teamturing/icons/svg/logo_naver.svg';
+export { default as magic_wand } from '@teamturing/icons/svg/magic_wand.svg';
 export { default as maxsize } from '@teamturing/icons/svg/maxsize.svg';
 export { default as minsize } from '@teamturing/icons/svg/minsize.svg';
 export { default as minus } from '@teamturing/icons/svg/minus.svg';

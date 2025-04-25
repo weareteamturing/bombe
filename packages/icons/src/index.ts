@@ -119,6 +119,7 @@ export { default as LogoColorIcon } from './LogoColor';
 export { default as LogoFacebookIcon } from './LogoFacebook';
 export { default as LogoKakaoIcon } from './LogoKakao';
 export { default as LogoNaverIcon } from './LogoNaver';
+export { default as MagicWandIcon } from './MagicWand';
 export { default as MaxsizeIcon } from './Maxsize';
 export { default as MinsizeIcon } from './Minsize';
 export { default as MinusIcon } from './Minus';
