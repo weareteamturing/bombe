@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.15.0...@teamturing/react-native-kit@1.16.0) (2025-04-25)
+
+### Features
+
+- **icons:** add magic wand icon ([839679f](https://github.com/weareteamturing/bombe/commit/839679fd98c954dc3c21f8e67c8a4589673d3976))
+
 # [1.15.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.14.1...@teamturing/react-native-kit@1.15.0) (2025-04-08)
 
 ### Features
