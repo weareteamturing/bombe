@@ -1,6 +1,15 @@
 /**
  * core components
  */
+export { default as UnstyledTable } from './core/_UnstyledTable';
+export type {
+  UnstyledTableProps,
+  UnstyledTableHeadProps,
+  UnstyledTableBodyProps,
+  UnstyledTableRowProps,
+  UnstyledTableCellProps,
+} from './core/_UnstyledTable';
+
 export { default as ActionList } from './core/ActionList';
 export type {
   ActionListProps,
