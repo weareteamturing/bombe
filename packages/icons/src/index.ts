@@ -164,6 +164,7 @@ export { default as PointInCircleIcon } from './PointInCircle';
 export { default as PointInCircleColorIcon } from './PointInCircleColor';
 export { default as PresentIcon } from './Present';
 export { default as PresentColorIcon } from './PresentColor';
+export { default as PrintIcon } from './Print';
 export { default as ProblemIcon } from './Problem';
 export { default as ProfileIcon } from './Profile';
 export { default as ProgressGradientIcon } from './ProgressGradient';
