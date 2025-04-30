@@ -164,6 +164,7 @@ export { default as point_in_circle } from '@teamturing/icons/svg/point_in_circl
 export { default as point_in_circle_color } from '@teamturing/icons/svg/point_in_circle_color.svg';
 export { default as present } from '@teamturing/icons/svg/present.svg';
 export { default as present_color } from '@teamturing/icons/svg/present_color.svg';
+export { default as print } from '@teamturing/icons/svg/print.svg';
 export { default as problem } from '@teamturing/icons/svg/problem.svg';
 export { default as profile } from '@teamturing/icons/svg/profile.svg';
 export { default as progress_gradient } from '@teamturing/icons/svg/progress_gradient.svg';
