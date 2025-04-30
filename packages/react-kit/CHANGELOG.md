@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.39.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.38.7...@teamturing/react-kit@2.39.0) (2025-04-30)
+
+### Features
+
+- **react-kit:** add UnstyledTable component ([4543569](https://github.com/weareteamturing/bombe/commit/45435694e7aa49634d89f91550d98dcd7e529359))
+
 ## [2.38.7](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.38.6...@teamturing/react-kit@2.38.7) (2025-04-25)
 
 **Note:** Version bump only for package @teamturing/react-kit
