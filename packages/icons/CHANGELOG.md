@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.48.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.47.0...@teamturing/icons@1.48.0) (2025-05-12)
+
+### Features
+
+- **icons:** add camera_color and update paper_pen_color ([dbbaea6](https://github.com/weareteamturing/bombe/commit/dbbaea625943afc4f79219dfa089807d948be59c))
+
 # [1.47.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.46.0...@teamturing/icons@1.47.0) (2025-04-30)
 
 ### Features

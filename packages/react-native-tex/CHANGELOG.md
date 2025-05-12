@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.23](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.2.22...@teamturing/react-native-tex@1.2.23) (2025-05-12)
+
+**Note:** Version bump only for package @teamturing/react-native-tex
+
 ## [1.2.22](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-tex@1.2.21...@teamturing/react-native-tex@1.2.22) (2025-04-30)
 
 **Note:** Version bump only for package @teamturing/react-native-tex
