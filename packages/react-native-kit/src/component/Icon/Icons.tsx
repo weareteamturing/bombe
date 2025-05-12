@@ -29,6 +29,7 @@ export { default as calendar_check } from '@teamturing/icons/svg/calendar_check.
 export { default as calendar_check_color } from '@teamturing/icons/svg/calendar_check_color.svg';
 export { default as calendar_color } from '@teamturing/icons/svg/calendar_color.svg';
 export { default as camera } from '@teamturing/icons/svg/camera.svg';
+export { default as camera_color } from '@teamturing/icons/svg/camera_color.svg';
 export { default as card } from '@teamturing/icons/svg/card.svg';
 export { default as cards_percent } from '@teamturing/icons/svg/cards_percent.svg';
 export { default as cards_percent_color } from '@teamturing/icons/svg/cards_percent_color.svg';

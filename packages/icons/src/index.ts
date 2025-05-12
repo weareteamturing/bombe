@@ -29,6 +29,7 @@ export { default as CalendarCheckIcon } from './CalendarCheck';
 export { default as CalendarCheckColorIcon } from './CalendarCheckColor';
 export { default as CalendarColorIcon } from './CalendarColor';
 export { default as CameraIcon } from './Camera';
+export { default as CameraColorIcon } from './CameraColor';
 export { default as CardIcon } from './Card';
 export { default as CardsPercentIcon } from './CardsPercent';
 export { default as CardsPercentColorIcon } from './CardsPercentColor';
