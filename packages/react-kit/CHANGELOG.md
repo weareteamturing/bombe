@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.41.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.41.0...@teamturing/react-kit@2.41.1) (2025-05-15)
+
+### Bug Fixes
+
+- **mathkingclass:** add missing className props from Grid ([1371382](https://github.com/weareteamturing/bombe/commit/13713827286977c2badae0511c97bd13fa408386))
+
 # [2.41.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.40.0...@teamturing/react-kit@2.41.0) (2025-05-15)
 
 ### Features
