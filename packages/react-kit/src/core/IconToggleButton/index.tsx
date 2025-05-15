@@ -15,7 +15,7 @@ type Props = {
   /**
    * 색을 정의합니다.
    */
-  variant?: 'primary' | 'plain';
+  variant?: 'primary' | 'plain' | 'plain-neutral';
   /**
    * 활성화 상태를 정의합니다.
    * `true`일 경우, 활성화된 상태를 그립니다.
@@ -80,10 +80,10 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
     },
   }),
   ({ selected, $disabled, theme }) =>
-    variant<BetterSystemStyleObject>({
+    variant<BetterSystemStyleObject, NonNullable<Props['variant']>>({
       prop: 'variant',
       variants: {
-        primary: {
+        'primary': {
           ...(selected
             ? {
                 backgroundColor: theme.colors['bg/selected/violet'],
@@ -100,11 +100,27 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
               }
             : {}),
         },
-        plain: {
+        'plain': {
           backgroundColor: theme.colors['bg/neutral/subtler'],
           ...(selected
             ? {
                 color: theme.colors['icon/selected/violet'],
+              }
+            : {
+                color: theme.colors['icon/neutral'],
+              }),
+          ...($disabled
+            ? {
+                backgroundColor: theme.colors['bg/disabled/subtlest'],
+                color: theme.colors['icon/disabled/subtler'],
+              }
+            : {}),
+        },
+        'plain-neutral': {
+          backgroundColor: theme.colors['bg/neutral/subtler'],
+          ...(selected
+            ? {
+                color: theme.colors['icon/neutral/bold'],
               }
             : {
                 color: theme.colors['icon/neutral'],
