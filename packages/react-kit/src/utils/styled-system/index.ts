@@ -42,17 +42,17 @@ const lineClamp = system({ lineClamp: { property: 'WebkitLineClamp', scale: 'Web
 type GapProps<ThemeType extends Theme = RequiredTheme, TVal = ThemeValue<'space', ThemeType>> = {
   gap?: ResponsiveValue<TVal, ThemeType> | undefined;
 };
-const gap = system({ gap: { property: 'gap', scale: 'gap' } });
+const gap = system({ gap: { property: 'gap', scale: 'space' } });
 
 type ColumnGapProps<ThemeType extends Theme = RequiredTheme, TVal = ThemeValue<'space', ThemeType>> = {
   columnGap?: ResponsiveValue<TVal, ThemeType> | undefined;
 };
-const columnGap = system({ columnGap: { property: 'columnGap', scale: 'columnGap' } });
+const columnGap = system({ columnGap: { property: 'columnGap', scale: 'space' } });
 
 type RowGapProps<ThemeType extends Theme = RequiredTheme, TVal = ThemeValue<'space', ThemeType>> = {
   rowGap?: ResponsiveValue<TVal, ThemeType> | undefined;
 };
-const rowGap = system({ rowGap: { property: 'rowGap', scale: 'rowGap' } });
+const rowGap = system({ rowGap: { property: 'rowGap', scale: 'space' } });
 
 export { sx, textDecoration, whiteSpace, wordBreak, lineClamp, gap, columnGap, rowGap };
 export type {
