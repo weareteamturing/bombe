@@ -1,6 +1,6 @@
 import css, { SystemStyleObject } from '@styled-system/css';
 import * as CSS from 'csstype';
-import { RequiredTheme, ResponsiveValue, system, Theme } from 'styled-system';
+import { RequiredTheme, ResponsiveValue, system, Theme, ThemeValue } from 'styled-system';
 
 // Support CSS custom properties in the `sx` prop
 type CSSCustomProperties = {
@@ -39,5 +39,30 @@ type LineClampProps<ThemeType extends Theme = RequiredTheme> = {
 };
 const lineClamp = system({ lineClamp: { property: 'WebkitLineClamp', scale: 'WebkitLineClamp' } });
 
-export { sx, textDecoration, whiteSpace, wordBreak, lineClamp };
-export type { BetterSystemStyleObject, AsProp, TextDecorationProps, WhiteSpaceProps, WordBreakProps, LineClampProps };
+type GapProps<ThemeType extends Theme = RequiredTheme, TVal = ThemeValue<'space', ThemeType>> = {
+  gap?: ResponsiveValue<TVal, ThemeType> | undefined;
+};
+const gap = system({ gap: { property: 'gap', scale: 'space' } });
+
+type ColumnGapProps<ThemeType extends Theme = RequiredTheme, TVal = ThemeValue<'space', ThemeType>> = {
+  columnGap?: ResponsiveValue<TVal, ThemeType> | undefined;
+};
+const columnGap = system({ columnGap: { property: 'columnGap', scale: 'space' } });
+
+type RowGapProps<ThemeType extends Theme = RequiredTheme, TVal = ThemeValue<'space', ThemeType>> = {
+  rowGap?: ResponsiveValue<TVal, ThemeType> | undefined;
+};
+const rowGap = system({ rowGap: { property: 'rowGap', scale: 'space' } });
+
+export { sx, textDecoration, whiteSpace, wordBreak, lineClamp, gap, columnGap, rowGap };
+export type {
+  BetterSystemStyleObject,
+  AsProp,
+  TextDecorationProps,
+  WhiteSpaceProps,
+  WordBreakProps,
+  LineClampProps,
+  GapProps,
+  ColumnGapProps,
+  RowGapProps,
+};
