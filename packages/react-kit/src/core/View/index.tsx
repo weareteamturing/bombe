@@ -1,4 +1,4 @@
-import { ColorKey, RadiiKey, SurfaceElevationKey } from '@teamturing/token-studio';
+import { ColorKey, RadiiKey, SpaceKey, SurfaceElevationKey } from '@teamturing/token-studio';
 import styled from 'styled-components';
 import {
   compose,
@@ -21,7 +21,7 @@ import {
   BorderColorProps,
 } from 'styled-system';
 
-import { SxProp, sx } from '../../utils/styled-system';
+import { ColumnGapProps, GapProps, RowGapProps, SxProp, rowGap, columnGap, gap, sx } from '../../utils/styled-system';
 
 type Props = {} & SxProp &
   LayoutProps &
@@ -32,10 +32,13 @@ type Props = {} & SxProp &
   BorderColorProps<Theme, ColorKey | SurfaceElevationKey> &
   PositionProps &
   ShadowProps<Theme> &
-  BorderRadiusProps<Theme, RadiiKey>;
+  BorderRadiusProps<Theme, RadiiKey> &
+  GapProps<Theme, SpaceKey> &
+  ColumnGapProps<Theme, SpaceKey> &
+  RowGapProps<Theme, SpaceKey>;
 
 const View = styled.div<Props>`
-  ${compose(layout, color, flexbox, background, border, position, shadow)}
+  ${compose(layout, color, flexbox, background, border, position, shadow, gap, columnGap, rowGap)}
   ${sx}
 `;
 
