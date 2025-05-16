@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.41.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.41.1...@teamturing/react-kit@2.41.2) (2025-05-16)
+
+### Bug Fixes
+
+- **react-kit:** update ActionListItem with focus, blur event ([28758ba](https://github.com/weareteamturing/bombe/commit/28758bad7071cb4b888823595fc620de79d4cef4))
+
 ## [2.41.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.41.0...@teamturing/react-kit@2.41.1) (2025-05-15)
 
 ### Bug Fixes
