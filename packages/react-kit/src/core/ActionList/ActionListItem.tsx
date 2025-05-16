@@ -8,6 +8,7 @@ import {
   KeyboardEvent as ReactKeyboardEvent,
   useContext,
   useCallback,
+  LiHTMLAttributes,
 } from 'react';
 import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
@@ -34,7 +35,8 @@ type Props = {
 
   selected?: boolean;
   onSelect?: (event: ReactMouseEvent<HTMLLIElement> | ReactKeyboardEvent<HTMLLIElement>) => void;
-} & SxProp;
+} & Pick<LiHTMLAttributes<HTMLLIElement>, 'onFocus' | 'onBlur'> &
+  SxProp;
 
 const ActionListItem = ({
   variant = 'neutral',
@@ -46,6 +48,8 @@ const ActionListItem = ({
   selected = false,
   onSelect: propOnSelect,
   children,
+  onFocus,
+  onBlur,
   sx,
 }: PropsWithChildren<Props>) => {
   const { selectionVariant, onSelect: defaultOnSelect } = useContext(ActionListContext);
@@ -87,6 +91,8 @@ const ActionListItem = ({
       sx={sx}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
+      onFocus={onFocus}
+      onBlur={onBlur}
     >
       {!isNullable(selectionVariant) ? (
         <View display={'inline-flex'} minWidth={20} sx={{ 'mr': 2, '& svg': { color: 'icon/selected/violet' } }}>
