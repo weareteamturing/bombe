@@ -13,9 +13,15 @@ type Props = {
    */
   size?: ResponsiveValue<'l' | 'm' | 's'>;
   /**
-   * 색을 정의합니다.
+   * 모양을 정의합니다.
+   * 반응형 디자인이 적용됩니다.
    */
-  variant?: 'primary' | 'plain' | 'plain-neutral';
+  shape?: 'circle' | 'rounded';
+  /**
+   * 색을 정의합니다.
+   * 반응형 디자인이 적용됩니다.
+   */
+  variant?: 'primary' | 'plain' | 'blue' | 'plain-neutral';
   /**
    * 활성화 상태를 정의합니다.
    * `true`일 경우, 활성화된 상태를 그립니다.
@@ -29,13 +35,23 @@ type Props = {
   SxProp;
 
 const IconToggleButton = (
-  { icon: Icon, size = 'm', variant = 'primary', selected = false, disabled = false, sx, ...props }: Props,
+  {
+    icon: Icon,
+    size = 'm',
+    shape = 'circle',
+    variant = 'primary',
+    selected = false,
+    disabled = false,
+    sx,
+    ...props
+  }: Props,
   ref: Ref<HTMLButtonElement>,
 ) => (
   <BaseIconToggleButton
     ref={ref}
     icon={Icon}
     size={size}
+    shape={shape}
     variant={variant}
     selected={selected}
     type={'button'}
@@ -51,7 +67,6 @@ const IconToggleButton = (
 const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolean }>(
   ({ $disabled, theme }) => ({
     'position': 'relative',
-    'borderRadius': theme.radii.full,
     'transition': 'background-color 100ms, color 100ms',
     '& svg': { display: 'block' },
     'cursor': $disabled ? 'not-allowed' : 'pointer',
@@ -79,6 +94,14 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
       },
     },
   }),
+  ({ theme }) =>
+    variant<BetterSystemStyleObject, NonNullable<Props['shape']>>({
+      prop: 'shape',
+      variants: {
+        circle: { borderRadius: theme.radii.full },
+        rounded: { borderRadius: theme.radii.xs },
+      },
+    }),
   ({ selected, $disabled, theme }) =>
     variant<BetterSystemStyleObject, NonNullable<Props['variant']>>({
       prop: 'variant',
@@ -113,6 +136,23 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
             ? {
                 backgroundColor: theme.colors['bg/disabled/subtlest'],
                 color: theme.colors['icon/disabled/subtler'],
+              }
+            : {}),
+        },
+        'blue': {
+          ...(selected
+            ? {
+                backgroundColor: theme.colors['bg/accent/blue/subtlest'],
+                color: theme.colors['icon/accent/blue'],
+              }
+            : {
+                backgroundColor: theme.colors['bg/neutral'],
+                color: theme.colors['icon/neutral'],
+              }),
+          ...($disabled
+            ? {
+                backgroundColor: theme.colors['bg/disabled'],
+                color: theme.colors['icon/disabled'],
               }
             : {}),
         },
