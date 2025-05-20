@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.42.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.41.2...@teamturing/react-kit@2.42.0) (2025-05-20)
+
+### Features
+
+- **react-kit:** update IconToggleButton with shape, variant ([5686e6d](https://github.com/weareteamturing/bombe/commit/5686e6dee387018009621119f3718cfc53f6fe31))
+
 ## [2.41.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.41.1...@teamturing/react-kit@2.41.2) (2025-05-16)
 
 ### Bug Fixes
