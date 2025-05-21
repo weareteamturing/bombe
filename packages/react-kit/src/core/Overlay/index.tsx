@@ -95,10 +95,10 @@ const Overlay = (
   useEffect(() => {
     if (isOpen) {
       document.addEventListener('click', handleOutsideClick);
-      document.addEventListener('touchstart', handleOutsideClick);
+      document.addEventListener('touchend', handleOutsideClick);
       return () => {
         document.removeEventListener('click', handleOutsideClick);
-        document.removeEventListener('touchstart', handleOutsideClick);
+        document.removeEventListener('touchend', handleOutsideClick);
       };
     }
   }, [isOpen, handleOutsideClick]);
