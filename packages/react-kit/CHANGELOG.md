@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.42.0...@teamturing/react-kit@2.42.1) (2025-05-21)
+
+### Bug Fixes
+
+- **react-kit:** update Overlay close event ([1681866](https://github.com/weareteamturing/bombe/commit/1681866bead78d1c6fad9c20f3048f19985af571))
+
 # [2.42.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.41.2...@teamturing/react-kit@2.42.0) (2025-05-20)
 
 ### Features
