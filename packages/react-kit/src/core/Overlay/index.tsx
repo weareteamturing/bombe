@@ -54,7 +54,7 @@ const Overlay = (
   }, [onDismiss]);
 
   const handleOutsideClick = useCallback(
-    (e: MouseEvent) => {
+    (e: MouseEvent | TouchEvent) => {
       if (
         overlayRef.current &&
         e.target instanceof Node &&
@@ -95,8 +95,10 @@ const Overlay = (
   useEffect(() => {
     if (isOpen) {
       document.addEventListener('click', handleOutsideClick);
+      document.addEventListener('touchstart', handleOutsideClick);
       return () => {
         document.removeEventListener('click', handleOutsideClick);
+        document.removeEventListener('touchstart', handleOutsideClick);
       };
     }
   }, [isOpen, handleOutsideClick]);
