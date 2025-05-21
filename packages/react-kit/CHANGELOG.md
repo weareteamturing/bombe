@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.42.1...@teamturing/react-kit@2.42.2) (2025-05-21)
+
+### Bug Fixes
+
+- **react-kit:** update Overlay touch event ([1a1858b](https://github.com/weareteamturing/bombe/commit/1a1858b8e0384840833e714a6bf41df75aef680e))
+
 ## [2.42.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.42.0...@teamturing/react-kit@2.42.1) (2025-05-21)
 
 ### Bug Fixes
