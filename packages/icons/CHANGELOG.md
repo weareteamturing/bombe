@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.49.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.48.0...@teamturing/icons@1.49.0) (2025-06-01)
+
+### Features
+
+- **icons:** update package exports options ([0565b29](https://github.com/weareteamturing/bombe/commit/0565b29b807283b6e56a3c17d046e0ac925a16cf))
+
 # [1.48.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.47.0...@teamturing/icons@1.48.0) (2025-05-12)
 
 ### Features
