@@ -11,6 +11,10 @@ type Props = {
   gapX?: ResponsiveValue<SpaceKey>;
   gapY?: ResponsiveValue<SpaceKey>;
   wrap?: ResponsiveValue<boolean>;
+  /**
+   * 화면의 레이아웃을 위해 사용하는 경우 document size를 넘어가는 경우를 방지하기 위해 사용합니다.
+   */
+  layout?: boolean;
 } & Pick<ViewProps, 'alignItems' | 'justifyContent' | 'sx'> &
   Pick<HTMLAttributes<HTMLDivElement>, 'className'> &
   AsProp;
@@ -39,27 +43,40 @@ const BaseGrid = styled(View)<Omit<Props, 'wrap'> & { wrap?: ResponsiveValue<'tr
     display: 'flex',
     flexDirection: 'row',
   },
-  ({ theme }) =>
+  ({ theme, layout }) =>
     variant({
       prop: 'gapX',
       variants: Object.fromEntries(
         Object.entries<number>(theme.space).map(([key, value]) => {
           const styleValue: BetterSystemStyleObject = {
-            '& > *': { px: forcePixelValue(value / 2) },
-            'mx': forcePixelValue(-value / 2),
+            ...(layout
+              ? {
+                  '& > *': { pl: forcePixelValue(value) },
+                  'ml': forcePixelValue(-value),
+                }
+              : {
+                  '& > *': { px: forcePixelValue(value / 2) },
+                  'mx': forcePixelValue(-value / 2),
+                }),
           };
           return [key, styleValue];
         }),
       ),
     }),
-  ({ theme }) =>
+  ({ theme, layout }) =>
     variant({
       prop: 'gapY',
       variants: Object.fromEntries(
         Object.entries<number>(theme.space).map(([key, value]) => {
           const styleValue: BetterSystemStyleObject = {
-            '& > *': { mt: forcePixelValue(value) },
-            'mt': forcePixelValue(-value),
+            ...(layout
+              ? {
+                  '& > *': { pt: forcePixelValue(value) },
+                }
+              : {
+                  '& > *': { mt: forcePixelValue(value) },
+                }),
+            mt: forcePixelValue(-value),
           };
           return [key, styleValue];
         }),
