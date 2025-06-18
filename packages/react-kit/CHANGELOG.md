@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.43.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.42.3...@teamturing/react-kit@2.43.0) (2025-06-18)
+
+### Features
+
+- **react-kit:** update Grid with layout props ([6b056f7](https://github.com/weareteamturing/bombe/commit/6b056f7a4d26b4a0bd22fffeb5924d69d781173d))
+
 ## [2.42.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.42.2...@teamturing/react-kit@2.42.3) (2025-06-01)
 
 **Note:** Version bump only for package @teamturing/react-kit
