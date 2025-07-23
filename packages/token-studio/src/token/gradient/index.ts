@@ -5,12 +5,17 @@ const generateGradientTokenValue = (direction: keyof typeof fDirection, colorSto
 
 const textGradient = {
   'text/accent': generateGradientTokenValue('directionToRightBottom', 'colorStopListVioletPink'),
+  'text/accent/pinkblue': generateGradientTokenValue('directionToRightBottom', 'colorStopListPinkVioletBlue'),
 } as const;
 
 const bgGradient = {
   'bg/accent/violet': generateGradientTokenValue('directionToRightBottom', 'colorStopListVioletPink'),
   'bg/accent/neutral': generateGradientTokenValue('directionToRightBottom', 'colorStopListBlackGray'),
 } as const;
+
+const iconGradient = {
+  'icon/accent/pinkblue': generateGradientTokenValue('directionToRightBottom', 'colorStopListPinkVioletBlue'),
+};
 
 const borderGradient = {
   'border/accent/violet': generateGradientTokenValue('directionToRightBottom', 'colorStopListVioletPink'),
@@ -35,17 +40,19 @@ const overlayGradient = {
 
 const gradient = {
   ...textGradient,
+  ...iconGradient,
   ...bgGradient,
   ...borderGradient,
   ...overlayGradient,
 } as const;
 
 type TextGradientKey = keyof typeof textGradient;
+type IconGradientKey = keyof typeof iconGradient;
 type BgGradientKey = keyof typeof bgGradient;
 type BorderGradientKey = keyof typeof borderGradient;
 type OverlayGradientKey = keyof typeof overlayGradient;
 type GradientKey = keyof typeof gradient;
 
 export default gradient;
-export { textGradient, bgGradient, borderGradient, overlayGradient };
-export type { TextGradientKey, BgGradientKey, BorderGradientKey, OverlayGradientKey, GradientKey };
+export { textGradient, iconGradient, bgGradient, borderGradient, overlayGradient };
+export type { TextGradientKey, IconGradientKey, BgGradientKey, BorderGradientKey, OverlayGradientKey, GradientKey };
