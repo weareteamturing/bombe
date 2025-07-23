@@ -176,6 +176,7 @@ export { default as raffle_color } from '@teamturing/icons/svg/raffle_color.svg'
 export { default as receipt } from '@teamturing/icons/svg/receipt.svg';
 export { default as refresh } from '@teamturing/icons/svg/refresh.svg';
 export { default as repeat } from '@teamturing/icons/svg/repeat.svg';
+export { default as report_color } from '@teamturing/icons/svg/report_color.svg';
 export { default as school } from '@teamturing/icons/svg/school.svg';
 export { default as school_color } from '@teamturing/icons/svg/school_color.svg';
 export { default as scroll } from '@teamturing/icons/svg/scroll.svg';
