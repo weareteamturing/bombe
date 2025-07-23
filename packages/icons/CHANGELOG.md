@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.50.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.49.0...@teamturing/icons@1.50.0) (2025-07-23)
+
+### Features
+
+- **icons:** add report_color.svg ([678ab72](https://github.com/weareteamturing/bombe/commit/678ab724365690c6cd5d081507699dc580706632))
+
 # [1.49.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.48.0...@teamturing/icons@1.49.0) (2025-06-01)
 
 ### Features
