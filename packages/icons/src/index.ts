@@ -176,6 +176,7 @@ export { default as RaffleColorIcon } from './RaffleColor';
 export { default as ReceiptIcon } from './Receipt';
 export { default as RefreshIcon } from './Refresh';
 export { default as RepeatIcon } from './Repeat';
+export { default as ReportColorIcon } from './ReportColor';
 export { default as SchoolIcon } from './School';
 export { default as SchoolColorIcon } from './SchoolColor';
 export { default as ScrollIcon } from './Scroll';
