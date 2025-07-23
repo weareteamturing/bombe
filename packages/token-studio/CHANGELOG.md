@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.10.0...@teamturing/token-studio@1.11.0) (2025-07-23)
+
+### Features
+
+- **token-studio:** add gradient ([672c696](https://github.com/weareteamturing/bombe/commit/672c6965d249cdb203e314336f6ffad55d855e31))
+
 # [1.10.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.9.0...@teamturing/token-studio@1.10.0) (2025-03-28)
 
 ### Features
