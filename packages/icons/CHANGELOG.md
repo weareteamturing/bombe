@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.51.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.50.0...@teamturing/icons@1.51.0) (2025-07-24)
+
+### Features
+
+- **icons:** add twinkle_color ([16923f6](https://github.com/weareteamturing/bombe/commit/16923f6e8df0dad80553f91e3327dc1f9643ecbb))
+
 # [1.50.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.49.0...@teamturing/icons@1.50.0) (2025-07-23)
 
 ### Features

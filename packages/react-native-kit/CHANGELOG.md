@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.19.0...@teamturing/react-native-kit@1.20.0) (2025-07-24)
+
+### Features
+
+- **icons:** add twinkle_color ([16923f6](https://github.com/weareteamturing/bombe/commit/16923f6e8df0dad80553f91e3327dc1f9643ecbb))
+
 # [1.19.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.18.1...@teamturing/react-native-kit@1.19.0) (2025-07-23)
 
 ### Features
