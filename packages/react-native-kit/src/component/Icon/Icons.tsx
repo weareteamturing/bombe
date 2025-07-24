@@ -211,6 +211,7 @@ export { default as trash } from '@teamturing/icons/svg/trash.svg';
 export { default as treasurebox } from '@teamturing/icons/svg/treasurebox.svg';
 export { default as trophy } from '@teamturing/icons/svg/trophy.svg';
 export { default as twinkle } from '@teamturing/icons/svg/twinkle.svg';
+export { default as twinkle_color } from '@teamturing/icons/svg/twinkle_color.svg';
 export { default as undo } from '@teamturing/icons/svg/undo.svg';
 export { default as university } from '@teamturing/icons/svg/university.svg';
 export { default as user_blocked } from '@teamturing/icons/svg/user_blocked.svg';

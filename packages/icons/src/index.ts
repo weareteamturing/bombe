@@ -211,6 +211,7 @@ export { default as TrashIcon } from './Trash';
 export { default as TreasureboxIcon } from './Treasurebox';
 export { default as TrophyIcon } from './Trophy';
 export { default as TwinkleIcon } from './Twinkle';
+export { default as TwinkleColorIcon } from './TwinkleColor';
 export { default as UndoIcon } from './Undo';
 export { default as UniversityIcon } from './University';
 export { default as UserBlockedIcon } from './UserBlocked';
