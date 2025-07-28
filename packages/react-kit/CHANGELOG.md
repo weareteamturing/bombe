@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.44.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.44.1...@teamturing/react-kit@2.44.2) (2025-07-28)
+
+### Bug Fixes
+
+- **react-kit:** update default props ([37c6558](https://github.com/weareteamturing/bombe/commit/37c6558e1542d99d0dacb3a5bec691998646c37a))
+
 ## [2.44.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.44.0...@teamturing/react-kit@2.44.1) (2025-07-28)
 
 ### Bug Fixes
