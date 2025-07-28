@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.44.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.43.4...@teamturing/react-kit@2.44.0) (2025-07-28)
+
+### Features
+
+- **react-kit:** update GradientText component with additional variant ([6f3895f](https://github.com/weareteamturing/bombe/commit/6f3895fa69e91e9329e5752b6aea07e86240dbf8))
+
 ## [2.43.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.43.3...@teamturing/react-kit@2.43.4) (2025-07-28)
 
 **Note:** Version bump only for package @teamturing/react-kit
