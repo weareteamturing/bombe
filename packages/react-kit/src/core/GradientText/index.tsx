@@ -5,7 +5,7 @@ import { BetterSystemStyleObject } from '../../utils/styled-system';
 import Text from '../Text';
 import type { TextProps } from '../Text';
 
-type Props = { variant: 'violet' | 'pinkBlue' } & TextProps;
+type Props = { variant?: 'violet' | 'pinkBlue' } & TextProps;
 
 const GradientText = styled(Text)<Props>(
   {
@@ -22,6 +22,10 @@ const GradientText = styled(Text)<Props>(
       },
     }),
 );
+
+GradientText.defaultProps = {
+  variant: 'violet',
+};
 
 export default GradientText;
 export type { Props as GradientTextProps };
