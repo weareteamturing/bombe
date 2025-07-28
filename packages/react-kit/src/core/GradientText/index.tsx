@@ -7,7 +7,7 @@ import type { TextProps } from '../Text';
 
 type Props = { variant: 'violet' | 'pinkBlue' } & TextProps;
 
-const GradientText = styled(Text)(
+const GradientText = styled(Text)<Props>(
   {
     backgroundClip: 'text',
     WebkitBackgroundClip: 'text',
