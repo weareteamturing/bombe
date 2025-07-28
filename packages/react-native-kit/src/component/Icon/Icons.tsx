@@ -176,6 +176,7 @@ export { default as raffle_color } from '@teamturing/icons/svg/raffle_color.svg'
 export { default as receipt } from '@teamturing/icons/svg/receipt.svg';
 export { default as refresh } from '@teamturing/icons/svg/refresh.svg';
 export { default as repeat } from '@teamturing/icons/svg/repeat.svg';
+export { default as report_color } from '@teamturing/icons/svg/report_color.svg';
 export { default as school } from '@teamturing/icons/svg/school.svg';
 export { default as school_color } from '@teamturing/icons/svg/school_color.svg';
 export { default as scroll } from '@teamturing/icons/svg/scroll.svg';
@@ -210,6 +211,7 @@ export { default as trash } from '@teamturing/icons/svg/trash.svg';
 export { default as treasurebox } from '@teamturing/icons/svg/treasurebox.svg';
 export { default as trophy } from '@teamturing/icons/svg/trophy.svg';
 export { default as twinkle } from '@teamturing/icons/svg/twinkle.svg';
+export { default as twinkle_color } from '@teamturing/icons/svg/twinkle_color.svg';
 export { default as undo } from '@teamturing/icons/svg/undo.svg';
 export { default as university } from '@teamturing/icons/svg/university.svg';
 export { default as user_blocked } from '@teamturing/icons/svg/user_blocked.svg';
