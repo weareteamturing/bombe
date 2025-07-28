@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.44.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.44.0...@teamturing/react-kit@2.44.1) (2025-07-28)
+
+### Bug Fixes
+
+- **react-kit:** add missing type ([d4ebaf2](https://github.com/weareteamturing/bombe/commit/d4ebaf27bd88e8f7ada199f8c3924425e313c765))
+
 # [2.44.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.43.4...@teamturing/react-kit@2.44.0) (2025-07-28)
 
 ### Features
