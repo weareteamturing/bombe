@@ -8,11 +8,6 @@ import type { TextProps } from '../Text';
 type Props = { variant?: 'violet' | 'pinkBlue' } & TextProps;
 
 const GradientText = styled(Text)<Props>(
-  {
-    backgroundClip: 'text',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-  },
   ({ theme }) =>
     variant<BetterSystemStyleObject>({
       prop: 'variant',
@@ -21,6 +16,11 @@ const GradientText = styled(Text)<Props>(
         pinkBlue: { background: `linear-gradient(${theme.gradients['text/accent/pinkblue']})` },
       },
     }),
+  {
+    backgroundClip: 'text',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+  },
 );
 
 GradientText.defaultProps = {
