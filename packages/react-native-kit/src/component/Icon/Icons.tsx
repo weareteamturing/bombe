@@ -84,6 +84,7 @@ export { default as exclamation_point_in_circle } from '@teamturing/icons/svg/ex
 export { default as external_link } from '@teamturing/icons/svg/external_link.svg';
 export { default as eye_off } from '@teamturing/icons/svg/eye_off.svg';
 export { default as eye_on } from '@teamturing/icons/svg/eye_on.svg';
+export { default as eyes_two } from '@teamturing/icons/svg/eyes_two.svg';
 export { default as face_happy } from '@teamturing/icons/svg/face_happy.svg';
 export { default as face_sad } from '@teamturing/icons/svg/face_sad.svg';
 export { default as facebook } from '@teamturing/icons/svg/facebook.svg';

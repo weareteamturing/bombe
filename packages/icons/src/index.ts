@@ -84,6 +84,7 @@ export { default as ExclamationPointInCircleIcon } from './ExclamationPointInCir
 export { default as ExternalLinkIcon } from './ExternalLink';
 export { default as EyeOffIcon } from './EyeOff';
 export { default as EyeOnIcon } from './EyeOn';
+export { default as EyesTwoIcon } from './EyesTwo';
 export { default as FaceHappyIcon } from './FaceHappy';
 export { default as FaceSadIcon } from './FaceSad';
 export { default as FacebookIcon } from './Facebook';
