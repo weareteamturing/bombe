@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.52.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.51.0...@teamturing/icons@1.52.0) (2025-07-30)
+
+### Features
+
+- **icons:** add eyes_two ([c87624d](https://github.com/weareteamturing/bombe/commit/c87624dd85ce42425b7f0e8c144430bac1448969))
+
 # [1.51.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.50.0...@teamturing/icons@1.51.0) (2025-07-24)
 
 ### Features

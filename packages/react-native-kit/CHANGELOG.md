@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.20.0...@teamturing/react-native-kit@1.21.0) (2025-07-30)
+
+### Features
+
+- **icons:** add eyes_two ([c87624d](https://github.com/weareteamturing/bombe/commit/c87624dd85ce42425b7f0e8c144430bac1448969))
+
 # [1.20.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.19.0...@teamturing/react-native-kit@1.20.0) (2025-07-24)
 
 ### Features
