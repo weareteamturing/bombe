@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.21.0...@teamturing/react-native-kit@1.22.0) (2025-08-01)
+
+### Features
+
+- **icons:** add flag icon ([e06110d](https://github.com/weareteamturing/bombe/commit/e06110d87aaa2343e56d3b04fb01d191e06ec26e))
+
 # [1.21.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.20.0...@teamturing/react-native-kit@1.21.0) (2025-07-30)
 
 ### Features
