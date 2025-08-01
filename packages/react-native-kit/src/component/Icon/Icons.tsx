@@ -93,6 +93,7 @@ export { default as filter } from '@teamturing/icons/svg/filter.svg';
 export { default as find } from '@teamturing/icons/svg/find.svg';
 export { default as fire } from '@teamturing/icons/svg/fire.svg';
 export { default as fire_color } from '@teamturing/icons/svg/fire_color.svg';
+export { default as flag } from '@teamturing/icons/svg/flag.svg';
 export { default as folder } from '@teamturing/icons/svg/folder.svg';
 export { default as frame } from '@teamturing/icons/svg/frame.svg';
 export { default as glasses } from '@teamturing/icons/svg/glasses.svg';
