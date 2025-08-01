@@ -93,6 +93,7 @@ export { default as FilterIcon } from './Filter';
 export { default as FindIcon } from './Find';
 export { default as FireIcon } from './Fire';
 export { default as FireColorIcon } from './FireColor';
+export { default as FlagIcon } from './Flag';
 export { default as FolderIcon } from './Folder';
 export { default as FrameIcon } from './Frame';
 export { default as GlassesIcon } from './Glasses';
