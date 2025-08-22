@@ -39,6 +39,9 @@ export type { CheckboxProps } from './core/Checkbox';
 export { default as Chip } from './core/Chip';
 export type { ChipProps } from './core/Chip';
 
+export { default as ClickArea } from './core/ClickArea';
+export type { ClickAreaProps } from './core/ClickArea';
+
 export { default as CounterBadge } from './core/CounterBadge';
 export type { CounterBadgeProps } from './core/CounterBadge';
 
