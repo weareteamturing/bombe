@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.45.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.44.5...@teamturing/react-kit@2.45.0) (2025-08-22)
+
+### Features
+
+- **react-kit:** add ClickArea ([f6ea745](https://github.com/weareteamturing/bombe/commit/f6ea745007156c6aad3e9f9b9d0b790fca626e9d))
+
 ## [2.44.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.44.4...@teamturing/react-kit@2.44.5) (2025-08-01)
 
 **Note:** Version bump only for package @teamturing/react-kit
