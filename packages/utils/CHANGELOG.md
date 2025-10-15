@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.4.0...@teamturing/utils@1.5.0) (2025-10-15)
+
+### Features
+
+- **utils:** add ceilTo ([9bb73bf](https://github.com/weareteamturing/bombe/commit/9bb73bf68840e42613c4f9408ed7c835fceba90b))
+
 # [1.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.3.0...@teamturing/utils@1.4.0) (2025-02-13)
 
 ### Features
