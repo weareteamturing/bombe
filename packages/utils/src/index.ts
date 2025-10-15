@@ -1,3 +1,4 @@
+export * from './ceilTo';
 export * from './clipboard';
 export * from './commaizeNumber';
 export * from './decommaizeNumber';
