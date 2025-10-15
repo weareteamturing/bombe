@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   publish-packages:
     name: Publish packages to NPM
@@ -30,11 +34,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set npm config
-        run: |
-          npm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTOMATION_TOKEN}"
-        env:
-          NPM_AUTOMATION_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
+      # - name: Set npm config
+      #   run: |
+      #     npm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTOMATION_TOKEN}"
+      #   env:
+      #     NPM_AUTOMATION_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
 
       - name: Install dependencies
         run: yarn install --immutable
