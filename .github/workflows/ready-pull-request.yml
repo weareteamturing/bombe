@@ -35,13 +35,13 @@ jobs:
         run: yarn install --immutable
 
       - name: Check ESLint
-        run: lerna run check:lint
+        run: yarn lerna run check:lint
 
       - name: Build
-        run: lerna run build
+        run: yarn lerna run build
 
       - name: Check Typescript
-        run: lerna run check:type
+        run: yarn lerna run check:type
 
       - name: Run Test
-        run: lerna run test
+        run: yarn lerna run test
