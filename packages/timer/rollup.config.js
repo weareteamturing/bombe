@@ -17,7 +17,7 @@ module.exports = {
       preserveModulesRoot: 'src',
     },
   ],
-  external: ['react'],
+  external: ['react', 'react/jsx-runtime', 'react/jsx-dev-runtime'],
   plugins: [
     nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     commonjs(),
