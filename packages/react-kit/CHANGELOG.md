@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.45.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.45.1...@teamturing/react-kit@2.45.2) (2025-10-22)
+
+### Bug Fixes
+
+- **react-kit:** update TextInput trailing action props ([4aff44f](https://github.com/weareteamturing/bombe/commit/4aff44f4475255a71989b820c89fc7cd966c84f8))
+
 ## [2.45.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.45.0...@teamturing/react-kit@2.45.1) (2025-10-15)
 
 **Note:** Version bump only for package @teamturing/react-kit
