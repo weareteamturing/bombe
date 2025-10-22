@@ -106,7 +106,7 @@ const TextInput = (
         ) : (
           (TrailingVisual as ReactNode)
         )}
-        {trailingAction ? cloneElement(trailingAction, { disabled: disabled }) : null}
+        {trailingAction ? cloneElement(trailingAction, { disabled: trailingAction.props.disabled || disabled }) : null}
       </View>
     </TextInputWrapper>
   );
