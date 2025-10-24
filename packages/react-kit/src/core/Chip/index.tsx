@@ -45,9 +45,9 @@ const Chip = ({
   sx,
 }: PropsWithChildren<Props & SxProp>) => (
   <BaseChip sx={sx} size={size} variant={variant} leadingIcon={LeadingIcon} trailingIcon={TrailingIcon}>
-    {LeadingIcon ? <LeadingIcon /> : null}
+    {LeadingIcon ? <LeadingIcon className={'chip__leading_icon'} /> : null}
     {children}
-    {TrailingIcon ? <TrailingIcon /> : null}
+    {TrailingIcon ? <TrailingIcon className={'chip__trailing_icon'} /> : null}
   </BaseChip>
 );
 
