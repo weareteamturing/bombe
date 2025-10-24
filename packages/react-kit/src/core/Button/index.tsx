@@ -81,9 +81,9 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<Props>>(
             visibility: !loading ? 'initial' : 'hidden',
           }}
         >
-          {LeadingIcon ? <LeadingIcon /> : null}
+          {LeadingIcon ? <LeadingIcon className={'button__leading_icon'} /> : null}
           {children}
-          {TrailingIcon ? <TrailingIcon /> : null}
+          {TrailingIcon ? <TrailingIcon className={'button__trailing_icon'} /> : null}
         </View>
         {loading ? (
           <View
@@ -98,7 +98,7 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<Props>>(
               justifyContent: 'center',
             }}
           >
-            <BaseSpinner size={size} variant={variant} />
+            <BaseSpinner className={'button__spinner'} size={size} variant={variant} />
           </View>
         ) : null}
       </BaseButton>
