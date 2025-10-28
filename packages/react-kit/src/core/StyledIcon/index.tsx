@@ -1,4 +1,4 @@
-import { ComponentType, SVGProps } from 'react';
+import { ComponentType, HTMLAttributes, SVGProps } from 'react';
 
 import View, { ViewProps } from '../View';
 
@@ -7,7 +7,8 @@ type Props = {
    * @teamturing/icons와 함께 사용
    */
   icon: ComponentType<SVGProps<SVGSVGElement>>;
-} & Pick<ViewProps, 'size' | 'color' | 'sx'>;
+} & Pick<ViewProps, 'size' | 'color' | 'sx'> &
+  Pick<HTMLAttributes<HTMLDivElement>, 'className'>;
 
 const StyledIcon = ({ icon: Icon, sx, ...props }: Props) => (
   <View

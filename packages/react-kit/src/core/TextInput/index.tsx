@@ -14,6 +14,7 @@ import { isValidElementType } from 'react-is';
 import styled, { css, useTheme } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
+import { sx, SxProp } from '../../utils/styled-system';
 import View from '../View';
 
 import TextInputTrailingAction from './TextInputTrailingAction';
@@ -35,7 +36,8 @@ type Props = {
    * 입력 창 뒤에 사용작용할 요소를 정의합니다.
    */
   trailingAction?: React.ReactElement<HTMLProps<HTMLButtonElement>>;
-} & InputHTMLAttributes<HTMLInputElement>;
+} & InputHTMLAttributes<HTMLInputElement> &
+  SxProp;
 
 const TextInput = (
   {
@@ -45,6 +47,7 @@ const TextInput = (
     leadingVisual: LeadingVisual,
     trailingVisual: TrailingVisual,
     trailingAction,
+    sx,
     ...props
   }: Props,
   ref: Ref<HTMLInputElement>,
@@ -64,6 +67,7 @@ const TextInput = (
       hasTrailingVisual={!isNullable(TrailingVisual)}
       hasTrailingAction={!isNullable(trailingAction)}
       validationStatus={validationStatus}
+      sx={sx}
     >
       <View
         sx={{
@@ -73,6 +77,7 @@ const TextInput = (
           'color': theme.colors['text/neutral'],
           '& > svg': { display: 'block', width: 16, height: 16, color: theme.colors['icon/neutral/bold'] },
         }}
+        className={'text_input__leading_visual'}
       >
         {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
           <LeadingVisual />
@@ -81,6 +86,7 @@ const TextInput = (
         )}
       </View>
       <BaseInput
+        className={'text_input__base_input'}
         ref={(e) => {
           isFunction(ref) ? ref(e) : null;
           (inputRef as MutableRefObject<HTMLInputElement | null>).current = e;
@@ -100,6 +106,7 @@ const TextInput = (
           'color': theme.colors['text/neutral/subtler'],
           '& > svg': { display: 'block', width: 16, height: 16, color: theme.colors['icon/neutral/bold'] },
         }}
+        className={'text_input__trailing_visual'}
       >
         {typeof TrailingVisual !== 'string' && isValidElementType(TrailingVisual) ? (
           <TrailingVisual />
@@ -117,7 +124,8 @@ type TextInputWrapperProps = {
   hasLeadingVisual?: boolean;
   hasTrailingVisual?: boolean;
   hasTrailingAction?: boolean;
-} & Pick<Props, 'validationStatus' | 'disabled'>;
+} & Pick<Props, 'validationStatus' | 'disabled'> &
+  SxProp;
 
 const TextInputWrapper = styled.div<TextInputWrapperProps>`
   position: relative;
@@ -231,6 +239,8 @@ const TextInputWrapper = styled.div<TextInputWrapperProps>`
   &:after {
     transition: border-color 100ms;
   }
+
+  ${sx}
 `;
 
 const UnstyledInput = styled.input`

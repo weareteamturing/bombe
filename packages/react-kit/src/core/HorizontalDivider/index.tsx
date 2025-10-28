@@ -1,4 +1,5 @@
 import { ColorKey, SurfaceElevationKey } from '@teamturing/token-studio';
+import { HTMLAttributes } from 'react';
 import styled from 'styled-components';
 import { BorderColorProps, BorderProps, Theme, border } from 'styled-system';
 
@@ -8,10 +9,17 @@ type Props = {
   width?: BorderProps['borderBottomWidth'];
   color?: BorderColorProps<Theme, ColorKey | SurfaceElevationKey>['borderBottomColor'];
   variant?: BorderProps['borderBottomStyle'];
-} & SxProp;
+} & SxProp &
+  Pick<HTMLAttributes<HTMLHRElement>, 'className'>;
 
-const HorizontalDivider = ({ width = 1, color = 'border/neutral', variant = 'solid', ...props }: Props) => (
-  <BaseHorizontalDivider borderBottomWidth={width} borderBottomStyle={variant} borderBottomColor={color} {...props} />
+const HorizontalDivider = ({ className, width = 1, color = 'border/neutral', variant = 'solid', ...props }: Props) => (
+  <BaseHorizontalDivider
+    className={className}
+    borderBottomWidth={width}
+    borderBottomStyle={variant}
+    borderBottomColor={color}
+    {...props}
+  />
 );
 
 const BaseHorizontalDivider = styled.hr<BorderProps & BorderColorProps & SxProp>`

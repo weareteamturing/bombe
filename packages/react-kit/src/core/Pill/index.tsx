@@ -107,19 +107,20 @@ const Pill = (
       type={'button'}
     >
       {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
-        <LeadingVisual />
+        <LeadingVisual className={'pill__leading_visual'} />
       ) : (
         (LeadingVisual as ReactNode)
       )}
       {/*<span title={children?.toString()}>{children}</span>*/}
       <span>{children}</span>
       {typeof TrailingVisual !== 'string' && isValidElementType(TrailingVisual) ? (
-        <TrailingVisual />
+        <TrailingVisual className={'pill__trailing_visual'} />
       ) : (
         (TrailingVisual as ReactNode)
       )}
       {propOnRemove ? (
         <div
+          className={'pill__remove_button'}
           onClick={(e) => {
             e.preventDefault();
             handleRemoveClick(e);
@@ -138,7 +139,7 @@ const Pill = (
           aria-disabled={disabled}
           tabIndex={disabled ? -1 : 0}
         >
-          <RemoveIcon />
+          <RemoveIcon className={'pill__remove_button__icon'} />
         </div>
       ) : null}
     </BasePill>

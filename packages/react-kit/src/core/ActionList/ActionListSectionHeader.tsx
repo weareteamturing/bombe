@@ -7,7 +7,7 @@ import { SxProp, sx } from '../../utils/styled-system';
 type Props = {} & SxProp;
 
 const ActionListSectionHeader = ({ ...props }: PropsWithChildren<Props>) => {
-  return <BaseActionListSectionHeader role={'presentation'} {...props} />;
+  return <BaseActionListSectionHeader className={'action_list_setion_header'} role={'presentation'} {...props} />;
 };
 
 const BaseActionListSectionHeader = styled.div<Props>`

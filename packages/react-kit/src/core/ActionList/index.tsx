@@ -29,7 +29,7 @@ const ActionListContext = createContext<ActionListContextValue>({});
 const ActionList = ({ selectionVariant, onSelect, ...props }: PropsWithChildren<Props>) => {
   return (
     <ActionListContext.Provider value={{ selectionVariant, onSelect }}>
-      <BaseActionList role={'menu'} {...props} />
+      <BaseActionList className={'action_list'} role={'menu'} {...props} />
     </ActionListContext.Provider>
   );
 };

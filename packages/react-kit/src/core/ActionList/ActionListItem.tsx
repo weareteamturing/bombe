@@ -95,13 +95,19 @@ const ActionListItem = ({
       onBlur={onBlur}
     >
       {!isNullable(selectionVariant) ? (
-        <View display={'inline-flex'} minWidth={20} sx={{ 'mr': 2, '& svg': { color: 'icon/selected/violet' } }}>
+        <View
+          className={'action_list_item__selection_wrapper'}
+          display={'inline-flex'}
+          minWidth={20}
+          sx={{ 'mr': 2, '& svg': { color: 'icon/selected/violet' } }}
+        >
           {selectionVariant === 'single' ? (
             selected ? (
-              <StyledIcon icon={CheckIcon} size={20} />
+              <StyledIcon className={'action_list_item__selection_wrapper_single'} icon={CheckIcon} size={20} />
             ) : null
           ) : selectionVariant === 'multiple' ? (
             <FakeCheckbox
+              className={'action_list_item__selection_wrapper_multiple'}
               aria-checked={selected}
               checked={selected}
               onChange={noop}
@@ -111,29 +117,45 @@ const ActionListItem = ({
           ) : null}
         </View>
       ) : null}
-      <VisualWrapper display={'inline-flex'} flexShrink={0} sx={{ mr: LeadingVisual ? 2 : 0 }} variant={variant}>
+      <VisualWrapper
+        className={'action_list_item__leading_visual'}
+        display={'inline-flex'}
+        flexShrink={0}
+        sx={{ mr: LeadingVisual ? 2 : 0 }}
+        variant={variant}
+      >
         {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
           <LeadingVisual />
         ) : (
           (LeadingVisual as ReactNode)
         )}
       </VisualWrapper>
-      <View flex={1}>
+      <View flex={1} className={'action_list_item__content'}>
         <Grid gapX={2} gapY={0.5} wrap={true} alignItems={'center'}>
           <Grid.Unit
+            className={'action_list__content__children'}
             size={descriptionLayout === 'inline' ? 'min' : 1}
             sx={{ fontWeight: description && descriptionLayout === 'block' ? 'bold' : 'medium' }}
           >
             {children}
           </Grid.Unit>
-          <Grid.Unit size={descriptionLayout === 'inline' ? 'max' : 1}>
+          <Grid.Unit
+            className={'action_list_item__content__description'}
+            size={descriptionLayout === 'inline' ? 'max' : 1}
+          >
             <Text typography={'xxs/regular'} color={disabled ? 'text/disabled' : 'text/neutral/subtler'}>
               {description}
             </Text>
           </Grid.Unit>
         </Grid>
       </View>
-      <VisualWrapper display={'inline-flex'} flexShrink={0} sx={{ ml: TrailingVisual ? 2 : 0 }} variant={variant}>
+      <VisualWrapper
+        className={'action_list_item__content__trailing_visual'}
+        display={'inline-flex'}
+        flexShrink={0}
+        sx={{ ml: TrailingVisual ? 2 : 0 }}
+        variant={variant}
+      >
         {typeof TrailingVisual !== 'string' && isValidElementType(TrailingVisual) ? (
           <TrailingVisual />
         ) : (
