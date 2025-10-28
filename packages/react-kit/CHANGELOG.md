@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.45.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.45.2...@teamturing/react-kit@2.45.3) (2025-10-28)
+
+### Bug Fixes
+
+- **react-kit:** update ActionList related components with className ([e28999b](https://github.com/weareteamturing/bombe/commit/e28999b6840551f9714c90462545d47ef8c85b05))
+- **react-kit:** update Button with className ([2a98135](https://github.com/weareteamturing/bombe/commit/2a98135539f208d2e5707911171f6c8ff67c5a7c))
+- **react-kit:** update Chip with className ([8745d47](https://github.com/weareteamturing/bombe/commit/8745d47e36e273242376546e6f5372bcecf0f929))
+- **react-kit:** update HorizontalDivider props ([222be75](https://github.com/weareteamturing/bombe/commit/222be75d850e3779a799219895739ed2c8e26d9c))
+- **react-kit:** update Pill with className ([727dc89](https://github.com/weareteamturing/bombe/commit/727dc89145cecd568d54154e7757b151716a4907))
+- **react-kit:** update StyledIcon props ([ff21b43](https://github.com/weareteamturing/bombe/commit/ff21b438fb5e5d8d54e4c629f62fedd9e7944191))
+- **react-kit:** update TextInput with className ([66f7444](https://github.com/weareteamturing/bombe/commit/66f74442443477c41e04b6e45c45b47c2b31f527))
+
 ## [2.45.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.45.1...@teamturing/react-kit@2.45.2) (2025-10-22)
 
 ### Bug Fixes
