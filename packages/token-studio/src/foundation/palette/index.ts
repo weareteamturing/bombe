@@ -81,6 +81,7 @@ const shade = {
   white: '#FFFFFF',
   white10A: '#FFFFFF1A',
   black: '#000000',
+  darkGray: '#202124',
   black60A: '#00000099',
 } as const;
 
