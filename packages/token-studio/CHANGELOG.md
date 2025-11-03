@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.12.0...@teamturing/token-studio@1.13.0) (2025-11-03)
+
+### Features
+
+- **token-studio:** add palette color for shade ([7fe26e5](https://github.com/weareteamturing/bombe/commit/7fe26e5eabdd2cb4c0db80e93c459884ff574063))
+
 # [1.12.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.11.0...@teamturing/token-studio@1.12.0) (2025-07-28)
 
 ### Features
