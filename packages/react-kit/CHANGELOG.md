@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.46.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.45.4...@teamturing/react-kit@2.46.0) (2025-11-04)
+
+### Features
+
+- **react-kit:** update Tooltip structure ([5b23e91](https://github.com/weareteamturing/bombe/commit/5b23e9106b591813978863a20eaf65c31ebef84b))
+
 ## [2.45.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.45.3...@teamturing/react-kit@2.45.4) (2025-11-03)
 
 **Note:** Version bump only for package @teamturing/react-kit
