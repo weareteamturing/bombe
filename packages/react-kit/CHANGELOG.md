@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.46.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.2...@teamturing/react-kit@2.46.3) (2025-11-04)
+
+### Bug Fixes
+
+- **react-kit:** update Tooltip hover action ([58f7b18](https://github.com/weareteamturing/bombe/commit/58f7b18ef0ac82452df5fe91e08269f9d0052fa8))
+
 ## [2.46.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.1...@teamturing/react-kit@2.46.2) (2025-11-04)
 
 ### Bug Fixes
