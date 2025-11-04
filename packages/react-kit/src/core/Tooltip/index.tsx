@@ -36,8 +36,8 @@ const Tooltip = ({ children, direction = 'top-center', text }: Props) => {
 
   return (
     <BaseTooltip placement={directionToPlacement}>
-      <BaseTooltipTrigger>{children}</BaseTooltipTrigger>
-      <BaseTooltipContent>{text}</BaseTooltipContent>
+      <BaseTooltipTrigger className={'tooltip__tooltip_trigger'}>{children}</BaseTooltipTrigger>
+      <BaseTooltipContent className={'tooltip__tooltip_content'}>{text}</BaseTooltipContent>
     </BaseTooltip>
   );
 };
