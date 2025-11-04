@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.46.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.1...@teamturing/react-kit@2.46.2) (2025-11-04)
+
+### Bug Fixes
+
+- **react-kit:** add missing className for Tooltip ([f4c19d9](https://github.com/weareteamturing/bombe/commit/f4c19d9f6def27cefefe91f696af7c0fa423640c))
+
 ## [2.46.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.0...@teamturing/react-kit@2.46.1) (2025-11-04)
 
 ### Bug Fixes
