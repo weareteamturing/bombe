@@ -7,10 +7,10 @@ import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import Image, { ImageProps } from '../Image';
 
 type AvatarSizeType = 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl';
-type Props = { size?: ResponsiveValue<AvatarSizeType> } & Pick<ImageProps, 'src' | 'alt'> & SxProp;
+type Props = { size?: ResponsiveValue<AvatarSizeType> } & ImageProps & SxProp;
 
-const Avatar = ({ src, alt = '', size = 'm', sx }: Props, ref: Ref<HTMLImageElement>) => (
-  <BaseAvatar ref={ref} src={src} alt={alt} sx={sx} size={size} />
+const Avatar = ({ src, alt = '', size = 'm', sx, ...props }: Props, ref: Ref<HTMLImageElement>) => (
+  <BaseAvatar ref={ref} src={src} alt={alt} sx={sx} size={size} {...props} />
 );
 
 const BaseAvatar = styled(Image)<Props>`
@@ -53,6 +53,7 @@ const BaseAvatar = styled(Image)<Props>`
       },
     },
   })}
+
   ${sx}
 `;
 
