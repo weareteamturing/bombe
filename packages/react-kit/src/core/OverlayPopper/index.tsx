@@ -1,4 +1,4 @@
-import { useFloating, autoUpdate, offset, shift, Placement, UseFloatingReturn, flip } from '@floating-ui/react-dom';
+import { useFloating, autoUpdate, offset, shift, Placement, UseFloatingReturn, flip } from '@floating-ui/react';
 import { isFunction } from '@teamturing/utils';
 import { Children, ForwardedRef, HTMLAttributes, ReactElement, ReactNode, RefObject, cloneElement } from 'react';
 import { useTheme } from 'styled-components';

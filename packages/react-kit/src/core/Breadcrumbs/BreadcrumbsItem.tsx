@@ -27,7 +27,7 @@ const BreadcrumbsItem = ({ text, selected = false, truncatedWidth = 100, ...prop
   );
 
   return isOverflow ? (
-    <Tooltip text={text} direction={'bottom-center'} sx={{ display: 'inline-flex' }}>
+    <Tooltip text={text} direction={'bottom-center'}>
       {baseBreadCrumbsItem}
     </Tooltip>
   ) : (
