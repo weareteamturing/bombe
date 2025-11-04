@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.46.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.0...@teamturing/react-kit@2.46.1) (2025-11-04)
+
+### Bug Fixes
+
+- **react-kit:** update Avatar component interface with missing props ([fa68809](https://github.com/weareteamturing/bombe/commit/fa688093b104915060920b8e0d2eb67455bc77c3))
+
 # [2.46.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.45.4...@teamturing/react-kit@2.46.0) (2025-11-04)
 
 ### Features
