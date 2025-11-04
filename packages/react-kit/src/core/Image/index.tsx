@@ -4,9 +4,7 @@ import { LayoutProps, layout } from 'styled-system';
 
 import { SxProp, sx } from '../../utils/styled-system';
 
-type Props = {} & Pick<ImgHTMLAttributes<HTMLImageElement>, 'src' | 'alt' | 'width' | 'height' | 'loading'> &
-  SxProp &
-  LayoutProps;
+type Props = {} & ImgHTMLAttributes<HTMLImageElement> & SxProp & LayoutProps;
 
 const Image = styled.img<Props>`
   ${layout}
