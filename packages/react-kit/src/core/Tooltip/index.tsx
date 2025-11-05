@@ -2,6 +2,7 @@ import { type Placement } from '@floating-ui/react';
 import { PropsWithChildren } from 'react';
 
 import { BaseTooltip, BaseTooltipContent, BaseTooltipTrigger } from './BaseTooltip';
+import { TooltipOptions } from './useTooltip';
 
 type Props = {
   /**
@@ -24,9 +25,10 @@ type Props = {
    * Tooltip의 활성화 여부를 정의합니다.
    */
   disabled?: boolean;
-} & PropsWithChildren;
+} & PropsWithChildren &
+  Pick<TooltipOptions, 'mouseOnly'>;
 
-const Tooltip = ({ children, direction = 'top-center', text, disabled = false }: Props) => {
+const Tooltip = ({ children, direction = 'top-center', text, disabled = false, mouseOnly = true }: Props) => {
   const directionToPlacement: Placement = {
     'top-center': 'top' as const,
     'top-right': 'top-start' as const,
@@ -39,7 +41,7 @@ const Tooltip = ({ children, direction = 'top-center', text, disabled = false }:
   }[direction];
 
   return (
-    <BaseTooltip placement={directionToPlacement}>
+    <BaseTooltip placement={directionToPlacement} mouseOnly={mouseOnly}>
       <BaseTooltipTrigger className={'tooltip__tooltip_trigger'}>{children}</BaseTooltipTrigger>
       {!disabled ? <BaseTooltipContent className={'tooltip__tooltip_content'}>{text}</BaseTooltipContent> : null}
     </BaseTooltip>

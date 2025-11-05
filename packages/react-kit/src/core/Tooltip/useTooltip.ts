@@ -13,22 +13,24 @@ import {
   type Placement,
   type UseFloatingReturn,
   type UseInteractionsReturn,
+  type UseHoverProps,
 } from '@floating-ui/react';
 import { useRef, useState, useMemo, type MutableRefObject } from 'react';
 import { useTheme } from 'styled-components';
 
-export interface TooltipOptions {
+export type TooltipOptions = {
   initialOpen?: boolean;
   placement?: Placement;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
-}
+} & Pick<UseHoverProps, 'mouseOnly'>;
 
 export function useTooltip({
   initialOpen = false,
   placement = 'top',
   open: controlledOpen,
   onOpenChange: setControlledOpen,
+  mouseOnly = true,
 }: TooltipOptions = {}): { open: boolean; setOpen: (open: boolean) => void } & UseInteractionsReturn &
   UseFloatingReturn & { arrowRef: MutableRefObject<null> } {
   const theme = useTheme();
@@ -63,7 +65,7 @@ export function useTooltip({
     move: false,
     restMs: 300,
     enabled: controlledOpen == null,
-    mouseOnly: true,
+    mouseOnly,
   });
   const focus = useFocus(context, {
     enabled: controlledOpen == null,
