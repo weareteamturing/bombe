@@ -89,6 +89,7 @@ const StyledBaseTooltipContent = styled.div<SxProp>`
   z-index: 99999;
   background-color: ${({ theme }) => theme.colors['bg/neutral/bolder']};
   border-radius: ${({ theme }) => forcePixelValue(theme.radii.xs)};
+  box-shadow: ${({ theme }) => theme.shadows['shadow/overlay']};
   padding: ${({ theme }) => `${forcePixelValue(theme.space[2])} ${forcePixelValue(theme.space[3])}`};
   font-size: ${({ theme }) => forcePixelValue(theme.fontSizes.xxs)};
   font-weight: ${({ theme }) => theme.fontWeights.medium};
