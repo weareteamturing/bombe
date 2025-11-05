@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.46.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.4...@teamturing/react-kit@2.46.5) (2025-11-05)
+
+### Bug Fixes
+
+- **react-kit:** update Tooltip props with mouseOnly ([f47ab00](https://github.com/weareteamturing/bombe/commit/f47ab00df7619b69c8bf8e58b7458e2b32fe4bd7))
+
 ## [2.46.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.3...@teamturing/react-kit@2.46.4) (2025-11-05)
 
 ### Bug Fixes
