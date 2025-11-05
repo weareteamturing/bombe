@@ -14,7 +14,7 @@ const FormControlTooltipIcon = ({
   color = 'icon/neutral',
   ...props
 }: PropsWithChildren<Props>) => (
-  <Tooltip text={text} direction={direction}>
+  <Tooltip text={text} direction={direction} mouseOnly={false}>
     <StyledIcon icon={icon} size={size} color={color} {...props} />
   </Tooltip>
 );
