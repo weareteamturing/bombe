@@ -20,9 +20,13 @@ type Props = {
    * Tooltip의 텍스트를 정의합니다.
    */
   text?: string;
+  /**
+   * Tooltip의 활성화 여부를 정의합니다.
+   */
+  disabled?: boolean;
 } & PropsWithChildren;
 
-const Tooltip = ({ children, direction = 'top-center', text }: Props) => {
+const Tooltip = ({ children, direction = 'top-center', text, disabled = false }: Props) => {
   const directionToPlacement: Placement = {
     'top-center': 'top' as const,
     'top-right': 'top-start' as const,
@@ -37,7 +41,7 @@ const Tooltip = ({ children, direction = 'top-center', text }: Props) => {
   return (
     <BaseTooltip placement={directionToPlacement}>
       <BaseTooltipTrigger className={'tooltip__tooltip_trigger'}>{children}</BaseTooltipTrigger>
-      <BaseTooltipContent className={'tooltip__tooltip_content'}>{text}</BaseTooltipContent>
+      {!disabled ? <BaseTooltipContent className={'tooltip__tooltip_content'}>{text}</BaseTooltipContent> : null}
     </BaseTooltip>
   );
 };
