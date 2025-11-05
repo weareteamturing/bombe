@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.46.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.3...@teamturing/react-kit@2.46.4) (2025-11-05)
+
+### Bug Fixes
+
+- **react-kit:** add disabled props to Tooltip ([503e672](https://github.com/weareteamturing/bombe/commit/503e672cda5b527b3bea04edbbc1079667ae1fe3))
+- **react-kit:** add missing box shadow to Tooltip ([8ea7223](https://github.com/weareteamturing/bombe/commit/8ea72235cc643d28af702ec4fb87c0248e8df502))
+- **react-kit:** update StyledIcon with missing forwardRef ([f1f681a](https://github.com/weareteamturing/bombe/commit/f1f681aebfde37f58abf80813e93d9f204efcdff))
+
 ## [2.46.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.2...@teamturing/react-kit@2.46.3) (2025-11-04)
 
 ### Bug Fixes
