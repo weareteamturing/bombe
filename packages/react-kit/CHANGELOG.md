@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.46.6](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.5...@teamturing/react-kit@2.46.6) (2025-11-05)
+
+### Bug Fixes
+
+- **react-kit:** update FormControlTooltipIcon ([888e1af](https://github.com/weareteamturing/bombe/commit/888e1afcf9a959c4e3fa9a0cd2a11965d4451492))
+
 ## [2.46.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.4...@teamturing/react-kit@2.46.5) (2025-11-05)
 
 ### Bug Fixes
