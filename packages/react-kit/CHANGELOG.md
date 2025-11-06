@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.47.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.6...@teamturing/react-kit@2.47.0) (2025-11-06)
+
+### Features
+
+- **react-kit:** add AvatarGroup component ([4d566d5](https://github.com/weareteamturing/bombe/commit/4d566d54674b020a19b4c03db6c5c023e3734f3a))
+
 ## [2.46.6](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.46.5...@teamturing/react-kit@2.46.6) (2025-11-05)
 
 ### Bug Fixes
