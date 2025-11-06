@@ -24,6 +24,9 @@ export type { AnimatePresenceProps } from './core/AnimatePresence';
 export { default as Avatar } from './core/Avatar';
 export type { AvatarProps } from './core/Avatar';
 
+export { default as AvatarGroup } from './core/AvatarGroup';
+export type { AvatarGroupProps } from './core/AvatarGroup';
+
 export { default as BadgeAttacher } from './core/BadgeAttacher';
 export type { BadgeAttacherProps } from './core/BadgeAttacher';
 
