@@ -30,28 +30,26 @@ const AvatarGroup = (
       {isOverflown ? (
         <OverlayPopper
           placement={'bottom'}
-          renderOverlay={(overlayProps) => {
-            return (
-              <Overlay
-                size={'s'}
-                maxHeight={300}
-                sx={{ overflow: 'auto' }}
-                onClick={(e) => e.stopPropagation()}
-                {...overlayProps}
-              >
-                <Space px={1} py={2}>
-                  {(childrenArray as Array<ReactElement>).slice(maxItemCount).map(({ key, props }) => (
-                    <View key={key} sx={{ p: 3, display: 'flex', alignItems: 'center', columnGap: 2 }}>
-                      <Avatar size={'xs'} src={props.src} alt={props.alt} />
-                      <Text typography={'xs'} color={'text/neutral'}>
-                        {props.alt}
-                      </Text>
-                    </View>
-                  ))}
-                </Space>
-              </Overlay>
-            );
-          }}
+          renderOverlay={(overlayProps) => (
+            <Overlay
+              size={'s'}
+              maxHeight={300}
+              sx={{ overflow: 'auto' }}
+              onClick={(e) => e.stopPropagation()}
+              {...overlayProps}
+            >
+              <Space px={1} py={2}>
+                {(childrenArray as Array<ReactElement>).slice(maxItemCount).map(({ key, props }) => (
+                  <View key={key} sx={{ p: 3, display: 'flex', alignItems: 'center', columnGap: 2 }}>
+                    <Avatar size={'xs'} src={props.src} alt={props.alt} />
+                    <Text typography={'xs'} color={'text/neutral'}>
+                      {props.alt}
+                    </Text>
+                  </View>
+                ))}
+              </Space>
+            </Overlay>
+          )}
         >
           {(popperProps) => (
             <UnstyledButton

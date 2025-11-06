@@ -1,5 +1,5 @@
 import { forcePixelValue } from '@teamturing/utils';
-import { Ref, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
@@ -9,12 +9,17 @@ import Image, { ImageProps } from '../Image';
 type AvatarSizeType = 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl';
 type Props = { size?: ResponsiveValue<AvatarSizeType> } & ImageProps & SxProp;
 
-const Avatar = ({ src, alt = '', size = 'm', sx, ...props }: Props, ref: Ref<HTMLImageElement>) => (
-  <BaseAvatar ref={ref} src={src} alt={alt} sx={sx} size={size} {...props} />
+const DEFAULT_AVATAR_URL = 'https://cdn.teamturing.com/cms/uploads/2024-02-21/1708481300_empty-profile.png';
+
+const Avatar = forwardRef<HTMLImageElement, Props>(
+  ({ src = DEFAULT_AVATAR_URL, alt = '', size = 'm', sx, ...props }, ref) => (
+    <BaseAvatar ref={ref} role={'presentation'} src={src} alt={alt} sx={sx} size={size} {...props} />
+  ),
 );
 
 const BaseAvatar = styled(Image)<Props>`
   border-radius: ${({ theme }) => forcePixelValue(theme.radii.full)};
+  object-fit: cover;
 
   ${variant<BetterSystemStyleObject>({
     prop: 'size',
@@ -57,5 +62,5 @@ const BaseAvatar = styled(Image)<Props>`
   ${sx}
 `;
 
-export default forwardRef(Avatar);
+export default Avatar;
 export type { Props as AvatarProps };
