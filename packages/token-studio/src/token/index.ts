@@ -1,6 +1,6 @@
 export { default as breakpoints, baseBreakpoints } from './breakpoints';
 
-export { default as color, bgColor, borderColor, dimColor, iconColor, linkColor, scaleColor, textColor } from './color';
+export { default as color } from './color';
 export type {
   ColorKey,
   BgColorKey,
