@@ -1,12 +1,9 @@
-import palette from '../../foundation/palette';
-
-import gpaiDarkColor from './gpai/dark';
-import gpaiLightColor from './gpai/light';
+import palette from '../../../foundation/palette';
 
 const textColor = {
-  'text/primary': palette.violet500,
+  'text/primary': palette.orange500,
   'text/accent/blue': palette.blue500,
-  'text/accent/green': palette.green500,
+  'text/accent/green': palette.lime500,
   'text/accent/yellow': palette.yellow500,
   'text/accent/red': palette.red500,
   'text/weak': palette.gray300,
@@ -18,20 +15,20 @@ const textColor = {
   'text/inverse/subtle': palette.gray200,
   'text/inverse/subtler': palette.gray300,
   'text/disabled': palette.gray400,
-  'text/success': palette.green500,
+  'text/success': palette.lime500,
   'text/warning': palette.yellow500,
   'text/danger': palette.red500,
   'text/selected': palette.gray900,
 } as const;
 
 const bgColor = {
-  'bg/secondary': palette.violet50,
-  'bg/secondary/hovered': palette.violet200,
-  'bg/secondary/pressed': palette.violet200,
-  'bg/primary': palette.violet500,
-  'bg/primary/hovered': palette.violet700,
-  'bg/primary/pressed': palette.violet700,
-  'bg/primary/disabled': palette.violet100,
+  'bg/secondary': palette.orange50,
+  'bg/secondary/hovered': palette.orange200,
+  'bg/secondary/pressed': palette.orange200,
+  'bg/primary': palette.orange500,
+  'bg/primary/hovered': palette.orange700,
+  'bg/primary/pressed': palette.orange700,
+  'bg/primary/disabled': palette.orange100,
 
   'bg/neutral/subtlest': palette.transparent,
   'bg/neutral/subtlest/hovered': palette.gray50,
@@ -58,22 +55,22 @@ const bgColor = {
   'bg/input': palette.white,
 
   'bg/accent/blue/subtlest': palette.blue50,
-  'bg/accent/green/subtlest': palette.green50,
+  'bg/accent/green/subtlest': palette.lime50,
   'bg/accent/yellow/subtlest': palette.yellow50,
   'bg/accent/red/subtlest': palette.red50,
   'bg/accent/red/subtle': palette.red400,
   'bg/accent/red': palette.red500,
   'bg/accent/gray/subtlest': palette.gray200,
 
-  'bg/selected/primary': palette.violet500,
+  'bg/selected/primary': palette.orange500,
   'bg/selected': palette.gray900,
   'bg/selected/subtle': palette.gray100,
 
   'bg/inverse': palette.black,
   'bg/inverse/subtlest': palette.white10A,
 
-  'bg/success': palette.green50,
-  'bg/success/bold': palette.green500,
+  'bg/success': palette.lime50,
+  'bg/success/bold': palette.lime500,
 
   'bg/warning': palette.yellow50,
   'bg/warning/bold': palette.yellow500,
@@ -92,11 +89,11 @@ const borderColor = {
   'border/inverse': palette.white10A,
   'border/selected': palette.gray900,
   'border/disabled': palette.gray100,
-  'border/primary': palette.violet500,
+  'border/primary': palette.orange500,
   'border/hovered': palette.blue300,
   'border/focused': palette.blue500,
   'border/danger': palette.red500,
-  'border/success': palette.green500,
+  'border/success': palette.lime500,
   'border/accent/blue': palette.blue500,
 } as const;
 
@@ -108,18 +105,18 @@ const iconColor = {
   'icon/accent/blue/subtle': palette.blue200,
   'icon/accent/blue': palette.blue500,
   'icon/accent/blue/bold': palette.blue700,
-  'icon/accent/green': palette.green500,
+  'icon/accent/green': palette.lime500,
   'icon/accent/yellow': palette.yellow500,
   'icon/accent/red': palette.red500,
   'icon/inverse': palette.white,
   'icon/disabled': palette.gray300,
   'icon/disabled/subtler': palette.gray200,
-  'icon/selected/primary': palette.violet500,
+  'icon/selected/primary': palette.orange500,
   'icon/selected': palette.gray900,
-  'icon/primary/subtle': palette.violet300,
-  'icon/primary': palette.violet500,
-  'icon/primary/bold': palette.violet700,
-  'icon/success': palette.green500,
+  'icon/primary/subtle': palette.orange300,
+  'icon/primary': palette.orange500,
+  'icon/primary/bold': palette.orange700,
+  'icon/success': palette.lime500,
   'icon/warning': palette.yellow500,
   'icon/danger': palette.red500,
 } as const;
@@ -231,7 +228,7 @@ const scaleColor = {
   'scale/yellow/9': palette.mustardYellow900,
 };
 
-const color = {
+const gpaiLightColor = {
   ...textColor,
   ...bgColor,
   ...borderColor,
@@ -241,24 +238,4 @@ const color = {
   ...scaleColor,
 } as const;
 
-type TextColorKey = keyof typeof textColor;
-type BgColorKey = keyof typeof bgColor;
-type BorderColorKey = keyof typeof borderColor;
-type IconColorKey = keyof typeof iconColor;
-type LinkColorKey = keyof typeof linkColor;
-type DimColorKey = keyof typeof dimColor;
-type ScaleColorKey = keyof typeof scaleColor;
-type ColorKey = keyof typeof color;
-
-export default color;
-export { gpaiLightColor, gpaiDarkColor };
-export type {
-  ColorKey,
-  TextColorKey,
-  BgColorKey,
-  BorderColorKey,
-  IconColorKey,
-  LinkColorKey,
-  DimColorKey,
-  ScaleColorKey,
-};
+export default gpaiLightColor;
