@@ -62,7 +62,7 @@ const bgColor = {
   'bg/accent/red': palette.red500,
   'bg/accent/gray/subtlest': palette.gray200,
 
-  'bg/selected/violet': palette.violet500,
+  'bg/selected/primary': palette.violet500,
   'bg/selected': palette.gray900,
   'bg/selected/subtle': palette.gray100,
 
@@ -112,7 +112,7 @@ const iconColor = {
   'icon/inverse': palette.white,
   'icon/disabled': palette.gray300,
   'icon/disabled/subtler': palette.gray200,
-  'icon/selected/violet': palette.violet500,
+  'icon/selected/primary': palette.violet500,
   'icon/selected': palette.gray900,
   'icon/primary/subtle': palette.violet300,
   'icon/primary': palette.violet500,
@@ -249,7 +249,6 @@ type ScaleColorKey = keyof typeof scaleColor;
 type ColorKey = keyof typeof color;
 
 export default color;
-export { textColor, bgColor, borderColor, iconColor, linkColor, dimColor, scaleColor };
 export type {
   ColorKey,
   TextColorKey,
