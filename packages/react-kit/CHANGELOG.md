@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.48.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.47.1...@teamturing/react-kit@2.48.0) (2025-11-07)
+
+### Features
+
+- **react-kit:** update color token name ([ac1724a](https://github.com/weareteamturing/bombe/commit/ac1724ab60b2134f3efcc7dfca91bf1d5f3cc0f3))
+
 ## [2.47.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.47.0...@teamturing/react-kit@2.47.1) (2025-11-06)
 
 ### Bug Fixes
