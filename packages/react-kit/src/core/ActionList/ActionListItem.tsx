@@ -99,7 +99,7 @@ const ActionListItem = ({
           className={'action_list_item__selection_wrapper'}
           display={'inline-flex'}
           minWidth={20}
-          sx={{ 'mr': 2, '& svg': { color: 'icon/selected/violet' } }}
+          sx={{ 'mr': 2, '& svg': { color: 'icon/selected/primary' } }}
         >
           {selectionVariant === 'single' ? (
             selected ? (
