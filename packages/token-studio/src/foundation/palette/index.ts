@@ -137,6 +137,32 @@ const mustardYellow = {
   mustardYellow900: '#675025',
 } as const;
 
+const orange = {
+  orange50: '#FFF1E7',
+  orange100: '#FFD2B5',
+  orange200: '#FFBD91',
+  orange300: '#FF9F5E',
+  orange400: '#FF8C3F',
+  orange500: '#FF6F0F',
+  orange600: '#E8650E',
+  orange700: '#B54F0B',
+  orange800: '#8C3D08',
+  orange900: '#6B2F06',
+} as const;
+
+const lime = {
+  lime50: '#EEFAE6',
+  lime100: '#CBEFB1',
+  lime200: '#B2E88B',
+  lime300: '#8FDD55',
+  lime400: '#79D635',
+  lime500: '#58CC02',
+  lime600: '#50BA02',
+  lime700: '#3E9101',
+  lime800: '#307001',
+  lime900: '#255601',
+} as const;
+
 const palette = {
   ...gray,
   ...violet,
@@ -149,7 +175,9 @@ const palette = {
   ...skyBlue,
   ...indianRed,
   ...mustardYellow,
+  ...orange,
+  ...lime,
 };
 
 export default palette;
-export { gray, violet, green, yellow, red, blue, shade, fuchsiaPink, skyBlue, indianRed, mustardYellow };
+export { gray, violet, green, yellow, red, blue, shade, fuchsiaPink, skyBlue, indianRed, mustardYellow, orange, lime };
