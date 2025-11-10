@@ -9,6 +9,8 @@ import {
   lineHeights,
   opacity,
   elevation,
+  gpaiLightColor,
+  gpaiDarkColor,
 } from '@teamturing/token-studio';
 
 const theme = {
@@ -24,4 +26,15 @@ const theme = {
   opacity,
 };
 
+const gpaiLightTheme = {
+  ...theme,
+  colors: gpaiLightColor,
+};
+
+const gpaiDarkTheme = {
+  ...theme,
+  colors: gpaiDarkColor,
+};
+
 export default theme;
+export { gpaiLightTheme, gpaiDarkTheme };
