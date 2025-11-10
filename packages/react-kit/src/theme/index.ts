@@ -1,8 +1,6 @@
 import {
   breakpoints,
   color,
-  shadowElevation,
-  surfaceElevation,
   gradient,
   radii,
   space,
@@ -10,6 +8,7 @@ import {
   fontSizes,
   lineHeights,
   opacity,
+  elevation,
 } from '@teamturing/token-studio';
 
 const theme = {
@@ -19,9 +18,9 @@ const theme = {
   fontSizes,
   lineHeights,
   radii,
-  colors: { ...color, ...surfaceElevation },
+  colors: color,
   gradients: gradient,
-  shadows: { ...shadowElevation },
+  shadows: elevation,
   opacity,
 };
 

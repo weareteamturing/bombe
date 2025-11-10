@@ -12,8 +12,8 @@ export type {
   TextColorKey,
 } from './color';
 
-export { default as elevation, shadowElevation, surfaceElevation } from './elevation';
-export type { ElevationKey, ShadowElevationKey, SurfaceElevationKey } from './elevation';
+export { default as elevation } from './elevation';
+export type { ElevationKey } from './elevation';
 
 export { default as gradient, bgGradient, borderGradient, overlayGradient, textGradient } from './gradient';
 export type { GradientKey, BgGradientKey, BorderGradientKey, OverlayGradientKey, TextGradientKey } from './gradient';

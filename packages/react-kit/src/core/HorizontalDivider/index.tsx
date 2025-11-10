@@ -1,4 +1,4 @@
-import { ColorKey, SurfaceElevationKey } from '@teamturing/token-studio';
+import { ColorKey } from '@teamturing/token-studio';
 import { HTMLAttributes } from 'react';
 import styled from 'styled-components';
 import { BorderColorProps, BorderProps, Theme, border } from 'styled-system';
@@ -7,7 +7,7 @@ import { SxProp, sx } from '../../utils/styled-system';
 
 type Props = {
   width?: BorderProps['borderBottomWidth'];
-  color?: BorderColorProps<Theme, ColorKey | SurfaceElevationKey>['borderBottomColor'];
+  color?: BorderColorProps<Theme, ColorKey>['borderBottomColor'];
   variant?: BorderProps['borderBottomStyle'];
 } & SxProp &
   Pick<HTMLAttributes<HTMLHRElement>, 'className'>;
