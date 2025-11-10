@@ -11,7 +11,7 @@ const textColor = {
   'text/neutral/subtler': palette.gray400,
   'text/neutral/subtle': palette.gray200,
   'text/neutral': palette.gray50,
-  'text/inverse': palette.white,
+  'text/inverse': palette.gray900,
   'text/inverse/subtle': palette.gray700,
   'text/inverse/subtler': palette.gray600,
   'text/disabled': palette.gray500,
