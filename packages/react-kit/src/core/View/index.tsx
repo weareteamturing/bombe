@@ -1,4 +1,4 @@
-import { ColorKey, RadiiKey, SpaceKey, SurfaceElevationKey } from '@teamturing/token-studio';
+import { ColorKey, RadiiKey, SpaceKey } from '@teamturing/token-studio';
 import styled from 'styled-components';
 import {
   compose,
@@ -25,11 +25,11 @@ import { ColumnGapProps, GapProps, RowGapProps, SxProp, rowGap, columnGap, gap, 
 
 type Props = {} & SxProp &
   LayoutProps &
-  ColorProps<Theme, ColorKey | SurfaceElevationKey> &
+  ColorProps<Theme, ColorKey> &
   FlexboxProps &
   BackgroundProps &
   BorderProps &
-  BorderColorProps<Theme, ColorKey | SurfaceElevationKey> &
+  BorderColorProps<Theme, ColorKey> &
   PositionProps &
   ShadowProps<Theme> &
   BorderRadiusProps<Theme, RadiiKey> &
