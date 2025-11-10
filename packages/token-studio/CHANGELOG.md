@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.15.0...@teamturing/token-studio@1.16.0) (2025-11-10)
+
+### Features
+
+- **token-studio:** update token structure ([5f5d2c5](https://github.com/weareteamturing/bombe/commit/5f5d2c55f3f7fbe25faed2a3bd03f74451642136))
+
 # [1.15.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.14.0...@teamturing/token-studio@1.15.0) (2025-11-10)
 
 ### Features
