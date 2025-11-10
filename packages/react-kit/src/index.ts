@@ -226,7 +226,7 @@ export { default as useToggleState } from './hook/useToggleState';
 /**
  * theme
  */
-export { default as theme } from './theme';
+export { default as theme, gpaiLightTheme, gpaiDarkTheme } from './theme';
 
 /**
  * styled-system utils
