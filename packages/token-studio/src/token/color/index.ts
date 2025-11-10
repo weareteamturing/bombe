@@ -229,7 +229,12 @@ const scaleColor = {
   'scale/yellow/7': palette.mustardYellow700,
   'scale/yellow/8': palette.mustardYellow800,
   'scale/yellow/9': palette.mustardYellow900,
-};
+} as const;
+
+const surfaceColor = {
+  'surface': palette.white,
+  'surface/overlay': palette.white,
+} as const;
 
 const color = {
   ...textColor,
@@ -239,6 +244,7 @@ const color = {
   ...linkColor,
   ...dimColor,
   ...scaleColor,
+  ...surfaceColor,
 } as const;
 
 type TextColorKey = keyof typeof textColor;
@@ -248,6 +254,7 @@ type IconColorKey = keyof typeof iconColor;
 type LinkColorKey = keyof typeof linkColor;
 type DimColorKey = keyof typeof dimColor;
 type ScaleColorKey = keyof typeof scaleColor;
+type SurfaceColorKey = keyof typeof surfaceColor;
 type ColorKey = keyof typeof color;
 
 export default color;
@@ -261,4 +268,5 @@ export type {
   LinkColorKey,
   DimColorKey,
   ScaleColorKey,
+  SurfaceColorKey,
 };

@@ -226,7 +226,12 @@ const scaleColor = {
   'scale/yellow/7': palette.mustardYellow200,
   'scale/yellow/8': palette.mustardYellow100,
   'scale/yellow/9': palette.mustardYellow50,
-};
+} as const;
+
+const surfaceColor = {
+  'surface': palette.darkGray,
+  'surface/overlay': palette.darkGray,
+} as const;
 
 const gpaiDarkColor = {
   ...textColor,
@@ -236,6 +241,7 @@ const gpaiDarkColor = {
   ...linkColor,
   ...dimColor,
   ...scaleColor,
+  ...surfaceColor,
 } as const;
 
 export default gpaiDarkColor;
