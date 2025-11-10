@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.16.0...@teamturing/token-studio@1.16.1) (2025-11-10)
+
+### Bug Fixes
+
+- **token-studio:** fix wrong mapped color ([e415de2](https://github.com/weareteamturing/bombe/commit/e415de2fb4a6404f66f7970d70e1d22c2a02ae96))
+
 # [1.16.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.15.0...@teamturing/token-studio@1.16.0) (2025-11-10)
 
 ### Features
