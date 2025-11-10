@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.14.0...@teamturing/token-studio@1.15.0) (2025-11-10)
+
+### Features
+
+- **token-studio:** add color file for gpai service with light and dark mode ([56cbee2](https://github.com/weareteamturing/bombe/commit/56cbee20adb5a7fb5fc6783faff16fee3c29ff97))
+
 # [1.14.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.13.0...@teamturing/token-studio@1.14.0) (2025-11-07)
 
 ### Features
