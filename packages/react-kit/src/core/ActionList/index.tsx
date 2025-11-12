@@ -15,7 +15,7 @@ import ActionListSectionHeader, { ActionListSectionHeaderProps } from './ActionL
 type Props = {
   /**
    * ActionList의 아이템에 선택이 되어있다는 것을 표시할 때 사용하는 속성입니다.
-   * `undefine`: 선택에 대한 표시를 하지 않습니다.
+   * `undefined`: 선택에 대한 표시를 하지 않습니다.
    * `single`: 하나의 선택된 아이템에 대해, CheckIcon을 보여줍니다.
    * `multiple`: 모든 아이템에 Checkbox를 표시합니다.
    */
