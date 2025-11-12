@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.51.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.50.1...@teamturing/react-kit@2.51.0) (2025-11-12)
+
+### Features
+
+- **react-kit:** add Card component ([1f731b0](https://github.com/weareteamturing/bombe/commit/1f731b0025c16cb93c21123f70bd24b4cb44a6a3))
+
 ## [2.50.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.50.0...@teamturing/react-kit@2.50.1) (2025-11-10)
 
 **Note:** Version bump only for package @teamturing/react-kit
