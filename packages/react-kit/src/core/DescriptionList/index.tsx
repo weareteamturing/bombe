@@ -8,13 +8,14 @@ import ItemList, { ItemListProps } from '../ItemList';
 import StyledIcon from '../StyledIcon';
 import Text from '../Text';
 import View from '../View';
+
 type DescriptionListItemDescriptionType<T extends Record<string, any>> = {
   icon?: ComponentType<SVGProps<SVGSVGElement>>;
   title: string | ReactNode;
   renderValue: (item: T) => ReactNode;
 };
 
-type Props<T extends Record<string, any>, TD extends Record<string, DescriptionListItemDescriptionType<T>>> = {
+type Props<T extends Record<string, any>, TD extends Record<string, DescriptionListItemDescriptionType<T>> = {}> = {
   item: T;
   itemDescriptions: TD;
   picks: (keyof TD)[];
@@ -28,7 +29,7 @@ type Props<T extends Record<string, any>, TD extends Record<string, DescriptionL
 
 const DescriptionList = <
   T extends Record<string, any>,
-  TD extends Record<string, DescriptionListItemDescriptionType<T>>,
+  TD extends Record<string, DescriptionListItemDescriptionType<T>> = {},
 >({
   item,
   itemDescriptions,
