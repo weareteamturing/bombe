@@ -36,9 +36,6 @@ export type { BreadcrumbsProps } from './core/Breadcrumbs';
 export { default as Button } from './core/Button';
 export type { ButtonProps } from './core/Button';
 
-export { default as Card } from './core/Card';
-export type { CardProps } from './core/Card';
-
 export { default as Checkbox } from './core/Checkbox';
 export type { CheckboxProps } from './core/Checkbox';
 
