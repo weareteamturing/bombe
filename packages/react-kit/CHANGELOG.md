@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.51.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.1...@teamturing/react-kit@2.51.2) (2025-11-17)
+
+### Bug Fixes
+
+- **react-kit:** revert change for DescriptionList ([968e55d](https://github.com/weareteamturing/bombe/commit/968e55d4cfa68ebe82ae4ed4ae027eae5c60a05e))
+
+### Reverts
+
+- Revert "fix(react-kit): update DescriptionList type inference" ([095e743](https://github.com/weareteamturing/bombe/commit/095e743b5402bbd25045c70d49681009bfa7e3c6))
+
 ## [2.51.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.0...@teamturing/react-kit@2.51.1) (2025-11-17)
 
 ### Bug Fixes
