@@ -11,7 +11,12 @@ module.exports = {
       dir: 'dist',
       format: 'cjs',
       interop: 'auto',
-      globals: { 'styled-components': 'styled' },
+      globals: {
+        'styled-components': 'styled',
+        'react': 'React',
+        'react-dom': 'ReactDom',
+        'react/jsx-runtime': 'ReactJsxRuntime',
+      },
     },
     {
       dir: 'esm',
@@ -19,10 +24,15 @@ module.exports = {
       interop: 'auto',
       preserveModules: true,
       preserveModulesRoot: 'src',
-      globals: { 'styled-components': 'styled' },
+      globals: {
+        'styled-components': 'styled',
+        'react': 'React',
+        'react-dom': 'ReactDom',
+        'react/jsx-runtime': 'ReactJsxRuntime',
+      },
     },
   ],
-  external: ['react', 'styled-components', 'react-textarea-autosize'],
+  external: ['react', 'react-dom', 'styled-components', 'react-textarea-autosize'],
   plugins: [
     nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     commonjs(),
