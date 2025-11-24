@@ -1,5 +1,5 @@
 import { type Placement } from '@floating-ui/react';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 
 import { BaseTooltip, BaseTooltipContent, BaseTooltipTrigger } from './BaseTooltip';
 import { TooltipOptions } from './useTooltip';
@@ -20,7 +20,7 @@ type Props = {
   /**
    * Tooltip의 텍스트를 정의합니다.
    */
-  text?: string;
+  text?: ReactNode;
   /**
    * Tooltip의 활성화 여부를 정의합니다.
    */
