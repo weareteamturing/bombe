@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.51.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.4...@teamturing/react-kit@2.51.5) (2025-11-24)
+
+### Bug Fixes
+
+- **react-kit:** update tooltip props type ([3026132](https://github.com/weareteamturing/bombe/commit/302613299db5e80c22a06f9a849f5f20bec073da))
+
 ## [2.51.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.3...@teamturing/react-kit@2.51.4) (2025-11-24)
 
 ### Bug Fixes
