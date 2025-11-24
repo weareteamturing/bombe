@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.51.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.3...@teamturing/react-kit@2.51.4) (2025-11-24)
+
+### Bug Fixes
+
+- **react-kit:** update build config ([daa672e](https://github.com/weareteamturing/bombe/commit/daa672e1dd23d88670dd39597f3b806541849491))
+
 ## [2.51.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.2...@teamturing/react-kit@2.51.3) (2025-11-21)
 
 ### Bug Fixes
