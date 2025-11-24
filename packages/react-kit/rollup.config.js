@@ -32,7 +32,19 @@ module.exports = {
       },
     },
   ],
-  external: ['react', 'react-dom', 'styled-components', 'react-textarea-autosize'],
+  external: (id) => {
+    return (
+      id.startsWith('react') ||
+      id.startsWith('@floating-ui/') ||
+      id.startsWith('framer-motion') ||
+      id.startsWith('styled-components') ||
+      id.startsWith('@teamturing/') ||
+      id.startsWith('@primer/') ||
+      id === 'react-is' ||
+      id === 'react-textarea-autosize' ||
+      id.startsWith('lodash.')
+    );
+  },
   plugins: [
     nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     commonjs(),
