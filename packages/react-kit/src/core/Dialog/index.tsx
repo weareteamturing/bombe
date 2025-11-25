@@ -99,9 +99,9 @@ const Dialog = (
       {isOpen ? (
         <>
           <MotionView
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.1 }}
             transition={{
               duration: 0.25,
               /**
@@ -119,92 +119,75 @@ const Dialog = (
             }}
           >
             <Blanket ref={blanketRef} />
-          </MotionView>
-          <MotionView
-            initial={{ opacity: 0, scale: 1.1, translateX: '-50%', translateY: '-50%' }}
-            animate={{ opacity: 1, scale: 1, translateX: '-50%', translateY: '-50%' }}
-            exit={{ opacity: 0, scale: 1.1, translateX: '-50%', translateY: '-50%' }}
-            transition={{
-              duration: 0.25,
-              /**
-               * easeOutQuad by https://easings.net/ko#easeOutQuad
-               */
-              ease: cubicBezier(0.5, 1, 0.89, 1),
-            }}
-            sx={{
-              position: 'fixed',
-              top: '50%',
-              left: '50%',
-              zIndex: 9999,
-            }}
-          >
-            <BaseDialog
-              ref={dialogRef}
-              aria-modal={'true'}
-              role={'dialog'}
-              tabIndex={-1}
-              sx={{
-                ...(size === 's'
-                  ? {
-                      maxHeight: 'calc(100dvh - 64px)',
+            <View display={'flex'} width={'100%'} height={'100%'}>
+              <BaseDialog
+                ref={dialogRef}
+                aria-modal={'true'}
+                role={'dialog'}
+                tabIndex={-1}
+                sx={{
+                  ...(size === 's'
+                    ? {
+                        maxHeight: 'calc(100dvh - 64px)',
 
-                      width: ['calc(100% - 64px)', 400, 400],
-                      marginX: 'auto',
-                      marginY: 'auto',
+                        width: ['calc(100% - 64px)', 400, 400],
+                        marginX: 'auto',
+                        marginY: 'auto',
 
-                      borderRadius: 'l',
-                    }
-                  : size === 'm'
-                  ? {
-                      maxHeight: ['100%', '100%', 'calc(100dvh - 64px)'],
-                      height: ['100%', '100%', 'auto'],
-                      minHeight: ['-webkit-fill-available', '-webkit-fill-available', 'auto'],
+                        borderRadius: 'l',
+                      }
+                    : size === 'm'
+                    ? {
+                        maxHeight: ['100%', '100%', 'calc(100dvh - 64px)'],
+                        height: ['100%', '100%', 'auto'],
+                        minHeight: ['-webkit-fill-available', '-webkit-fill-available', 'auto'],
 
-                      width: ['100%', '100%', 640],
-                      marginX: [0, 0, 'auto'],
-                      marginY: 'auto',
+                        width: ['100%', '100%', 640],
+                        marginX: [0, 0, 'auto'],
+                        marginY: 'auto',
 
-                      borderRadius: ['none', 'none', 'l'],
-                    }
-                  : size === 'l'
-                  ? {
-                      maxHeight: ['100%', '100%', 'calc(100dvh - 64px)'],
-                      height: ['100%', '100%', 'auto'],
-                      minHeight: ['-webkit-fill-available', '-webkit-fill-available', 'auto'],
+                        borderRadius: ['none', 'none', 'l'],
+                      }
+                    : size === 'l'
+                    ? {
+                        maxHeight: ['100%', '100%', 'calc(100dvh - 64px)'],
+                        height: ['100%', '100%', 'auto'],
+                        minHeight: ['-webkit-fill-available', '-webkit-fill-available', 'auto'],
 
-                      width: ['100%', '100%', 860],
-                      marginX: [0, 0, 'auto'],
-                      marginY: 'auto',
+                        width: ['100%', '100%', 860],
+                        marginX: [0, 0, 'auto'],
+                        marginY: 'auto',
 
-                      borderRadius: ['none', 'none', 'l'],
-                    }
-                  : size === 'full'
-                  ? {
-                      height: ['100%', '100%', 'calc(100dvh - 40px)'],
+                        borderRadius: ['none', 'none', 'l'],
+                      }
+                    : size === 'full'
+                    ? {
+                        height: ['100%', '100%', 'calc(100dvh - 40px)'],
 
-                      width: ['100%', '100%', 'calc(100vw - 40px)'],
-                      marginX: [0, 0, 'auto'],
-                      marginY: 'auto',
+                        width: ['100%', '100%', 'calc(100vw - 40px)'],
+                        marginX: [0, 0, 'auto'],
+                        marginY: 'auto',
 
-                      borderRadius: ['none', 'none', 'l'],
-                    }
-                  : {}),
+                        borderRadius: ['none', 'none', 'l'],
+                      }
+                    : {}),
 
-                ...sx,
-              }}
-              onKeyDown={handleKeyDown}
-            >
-              <View sx={{ position: 'absolute', top: 3, right: 3 }}>
-                <IconButton
-                  ref={closeButtonRef}
-                  icon={CloseIcon}
-                  variant={'plain'}
-                  size={'m'}
-                  onClick={handleDismiss}
-                />
-              </View>
-              {children}
-            </BaseDialog>
+                  ...sx,
+                }}
+                onKeyDown={handleKeyDown}
+              >
+                <View sx={{ position: 'absolute', top: 3, right: 3 }}>
+                  <IconButton
+                    ref={closeButtonRef}
+                    icon={CloseIcon}
+                    variant={'plain'}
+                    size={'m'}
+                    onClick={handleDismiss}
+                  />
+                </View>
+                {children}
+              </BaseDialog>
+            </View>
           </MotionView>
         </>
       ) : null}
