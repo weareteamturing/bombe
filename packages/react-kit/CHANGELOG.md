@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.51.6](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.5...@teamturing/react-kit@2.51.6) (2025-11-25)
+
+### Bug Fixes
+
+- **react-kit:** update Dialog with animation ([45528b3](https://github.com/weareteamturing/bombe/commit/45528b3c9fc5be8338ba3d40d6d4d8f64c381967))
+
 ## [2.51.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.4...@teamturing/react-kit@2.51.5) (2025-11-24)
 
 ### Bug Fixes
