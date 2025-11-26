@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.51.8](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.7...@teamturing/react-kit@2.51.8) (2025-11-26)
+
+### Bug Fixes
+
+- **react-kit:** update FormControlLabel display ([962ac94](https://github.com/weareteamturing/bombe/commit/962ac945df53f95b9d5658dcc3749089aabfdf9c))
+
 ## [2.51.7](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.6...@teamturing/react-kit@2.51.7) (2025-11-25)
 
 ### Bug Fixes
