@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.51.9](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.8...@teamturing/react-kit@2.51.9) (2025-12-03)
+
+### Bug Fixes
+
+- **react-kit:** update IconButton props for a11y ([b4f038d](https://github.com/weareteamturing/bombe/commit/b4f038d1b2783052dfb539129fd7f9fa21068d7d))
+
 ## [2.51.8](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.7...@teamturing/react-kit@2.51.8) (2025-11-26)
 
 ### Bug Fixes
