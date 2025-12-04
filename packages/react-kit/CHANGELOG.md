@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.52.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.10...@teamturing/react-kit@2.52.0) (2025-12-04)
+
+### Features
+
+- **react-kit:** add className to textarea, textinput ([8507784](https://github.com/weareteamturing/bombe/commit/8507784bbe0bd37d10601dc973abab87176fcea3))
+
 ## [2.51.10](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.51.9...@teamturing/react-kit@2.51.10) (2025-12-04)
 
 **Note:** Version bump only for package @teamturing/react-kit
