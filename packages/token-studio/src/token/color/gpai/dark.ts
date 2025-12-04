@@ -1,7 +1,7 @@
 import palette from '../../../foundation/palette';
 
 const textColor = {
-  'text/primary': palette.orange500,
+  'text/primary': palette.orange400,
   'text/accent/blue': palette.blue400,
   'text/accent/green': palette.lime400,
   'text/accent/yellow': palette.yellow400,
