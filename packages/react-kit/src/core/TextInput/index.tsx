@@ -61,6 +61,7 @@ const TextInput = (
 
   return (
     <TextInputWrapper
+      className={'text_input__wrapper'}
       disabled={disabled}
       onClick={focusInput}
       hasLeadingVisual={!isNullable(LeadingVisual)}

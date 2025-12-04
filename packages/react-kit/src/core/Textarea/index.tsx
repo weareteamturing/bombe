@@ -39,8 +39,14 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
     }, [ref]);
 
     return (
-      <TextareaWrapper disabled={disabled} onClick={focusInput} validationStatus={validationStatus}>
+      <TextareaWrapper
+        className={'textarea__wrapper'}
+        disabled={disabled}
+        onClick={focusInput}
+        validationStatus={validationStatus}
+      >
         <ReactTextareaAutosize
+          className={'textarea__react_textarea_autosize'}
           minRows={1}
           {...props}
           ref={(e) => {
@@ -50,7 +56,9 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
           disabled={disabled}
           onChange={handleChange}
         />
-        <TextareaCount>{renderCount(count, { validationStatus, disabled, renderCount, ...props })}</TextareaCount>
+        <TextareaCount className={'textarea__count'}>
+          {renderCount(count, { validationStatus, disabled, renderCount, ...props })}
+        </TextareaCount>
       </TextareaWrapper>
     );
   },
