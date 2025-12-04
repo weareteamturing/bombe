@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.2](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.16.1...@teamturing/token-studio@1.16.2) (2025-12-04)
+
+### Bug Fixes
+
+- **token-studio:** fix text/primary on gpai dark mode ([a521d7d](https://github.com/weareteamturing/bombe/commit/a521d7dbed8b1ebe5c469e19a4ea3fdf63b3ca08))
+
 ## [1.16.1](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.16.0...@teamturing/token-studio@1.16.1) (2025-11-10)
 
 ### Bug Fixes
