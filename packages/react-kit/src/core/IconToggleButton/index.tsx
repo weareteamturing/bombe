@@ -5,23 +5,27 @@ import { ResponsiveValue, variant } from 'styled-system';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import UnstyledButton, { UnstyledButtonProps } from '../_UnstyledButton';
 
+type IconToggleButtonSizeType = 'l' | 'm' | 's';
+type IconToggleButtonShapeType = 'circle' | 'rounded';
+type IconToggleButtonVariantType = 'primary' | 'plain' | 'blue' | 'plain-neutral';
+
 type Props = {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
   /**
    * 크기를 정의합니다.
    * 반응형 디자인이 적용됩니다.
    */
-  size?: ResponsiveValue<'l' | 'm' | 's'>;
+  size?: ResponsiveValue<IconToggleButtonSizeType>;
   /**
    * 모양을 정의합니다.
    * 반응형 디자인이 적용됩니다.
    */
-  shape?: 'circle' | 'rounded';
+  shape?: ResponsiveValue<IconToggleButtonShapeType>;
   /**
    * 색을 정의합니다.
    * 반응형 디자인이 적용됩니다.
    */
-  variant?: 'primary' | 'plain' | 'blue' | 'plain-neutral';
+  variant?: ResponsiveValue<IconToggleButtonVariantType>;
   /**
    * 활성화 상태를 정의합니다.
    * `true`일 경우, 활성화된 상태를 그립니다.
@@ -77,7 +81,7 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
       outlineOffset: 2,
     },
   }),
-  variant<BetterSystemStyleObject>({
+  variant<BetterSystemStyleObject, IconToggleButtonSizeType, 'size'>({
     prop: 'size',
     variants: {
       l: {
@@ -95,7 +99,7 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
     },
   }),
   ({ theme }) =>
-    variant<BetterSystemStyleObject, NonNullable<Props['shape']>>({
+    variant<BetterSystemStyleObject, IconToggleButtonShapeType, 'shape'>({
       prop: 'shape',
       variants: {
         circle: { borderRadius: theme.radii.full },
@@ -103,7 +107,7 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
       },
     }),
   ({ selected, $disabled, theme }) =>
-    variant<BetterSystemStyleObject, NonNullable<Props['variant']>>({
+    variant<BetterSystemStyleObject, IconToggleButtonVariantType, 'variant'>({
       prop: 'variant',
       variants: {
         'primary': {

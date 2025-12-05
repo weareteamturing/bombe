@@ -7,17 +7,21 @@ import Spinner from '../Spinner';
 import View from '../View';
 import UnstyledButton, { UnstyledButtonProps } from '../_UnstyledButton';
 
+type ButtonSizeType = 'l' | 'm' | 's';
+type ButtonVariantType = 'primary' | 'secondary' | 'neutral' | 'outlined' | 'plain' | 'danger';
+
 type Props = {
   /**
    * 크기를 정의합니다.
    * 반응형 디자인이 적용됩니다.
    */
-  size?: ResponsiveValue<'l' | 'm' | 's'>;
+  size?: ResponsiveValue<ButtonSizeType>;
   /**
    * 색을 정의합니다.
    * hover, active, focused, disabled, loading 등의 모든 상황에 관여합니다.
+   * 반응형 디자인이 적용됩니다.
    */
-  variant?: 'primary' | 'secondary' | 'neutral' | 'outlined' | 'plain' | 'danger';
+  variant?: ResponsiveValue<ButtonVariantType>;
   /**
    * 감싸고 있는 컨테이너의 너비를 채웁니다.
    */
@@ -117,7 +121,7 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
     '& svg': { transition: 'color 100ms' },
   }),
   ({ leadingIcon, trailingIcon, theme }) =>
-    variant({
+    variant<BetterSystemStyleObject, ButtonSizeType, 'size'>({
       prop: 'size',
       variants: {
         l: {
@@ -156,7 +160,7 @@ const BaseButton = styled(UnstyledButton)<Props & { $loading?: boolean; $disable
       },
     }),
   ({ $disabled, theme }) =>
-    variant<BetterSystemStyleObject>({
+    variant<BetterSystemStyleObject, ButtonVariantType, 'variant'>({
       prop: 'variant',
       variants: {
         primary: {
