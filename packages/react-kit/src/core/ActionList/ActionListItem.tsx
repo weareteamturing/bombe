@@ -28,7 +28,7 @@ type Props = {
 
   leadingVisual?: ElementType | ReactNode;
   trailingVisual?: ElementType | ReactNode;
-  description?: string;
+  description?: ReactNode;
   descriptionLayout?: 'inline' | 'block';
 
   disabled?: boolean;
