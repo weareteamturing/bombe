@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.52.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.52.1...@teamturing/react-kit@2.52.2) (2025-12-09)
+
+### Bug Fixes
+
+- **react-kit:** update ActionListItem interface ([80165d4](https://github.com/weareteamturing/bombe/commit/80165d405adfecb14aa15cfe2166368023d3be29))
+
 ## [2.52.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.52.0...@teamturing/react-kit@2.52.1) (2025-12-05)
 
 ### Bug Fixes
