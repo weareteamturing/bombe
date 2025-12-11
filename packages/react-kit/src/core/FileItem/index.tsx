@@ -1,6 +1,6 @@
 import { DocumentIcon, ExclamationPointInCircleIcon, PictureIcon, VideoIcon } from '@teamturing/icons';
 import { forcePixelValue } from '@teamturing/utils';
-import { HTMLProps, memo, useEffect, useState } from 'react';
+import { HTMLProps, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
@@ -264,5 +264,5 @@ const BaseFile = styled.div<Omit<Props, 'file'>>(
   sx,
 );
 
-export default memo(FileItem);
+export default FileItem;
 export type { Props as FileItemProps };
