@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.53.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.52.2...@teamturing/react-kit@2.53.0) (2025-12-11)
+
+### Bug Fixes
+
+- **react-kit:** remove memoization for FileItem ([669d443](https://github.com/weareteamturing/bombe/commit/669d4439c7b411761121611272ad86823e431faa))
+
+### Features
+
+- **react-kit:** add FileItem component ([a854c08](https://github.com/weareteamturing/bombe/commit/a854c081f865e15f675475790d17ff3895be0a7b))
+
 ## [2.52.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.52.1...@teamturing/react-kit@2.52.2) (2025-12-09)
 
 ### Bug Fixes
