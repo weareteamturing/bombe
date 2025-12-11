@@ -91,6 +91,9 @@ export type {
 export { default as EmptyState } from './core/EmptyState';
 export type { EmptyStateProps } from './core/EmptyState';
 
+export { default as FileItem } from './core/FileItem';
+export type { FileItemProps } from './core/FileItem';
+
 export { default as Flash } from './core/Flash';
 export type { FlashProps } from './core/Flash';
 
