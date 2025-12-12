@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.53.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.0...@teamturing/react-kit@2.53.1) (2025-12-12)
+
+### Bug Fixes
+
+- **react-kit:** update Dialog/Drawer related components with className ([5a9a61f](https://github.com/weareteamturing/bombe/commit/5a9a61fbaae081cd6917b47990b79064528ebcb9))
+
 # [2.53.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.52.2...@teamturing/react-kit@2.53.0) (2025-12-11)
 
 ### Bug Fixes
