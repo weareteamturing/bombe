@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.53.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.3...@teamturing/react-kit@2.53.4) (2025-12-12)
+
+### Bug Fixes
+
+- **react-kit:** fix drawer classname with direction ([258cc9e](https://github.com/weareteamturing/bombe/commit/258cc9e8df3201fd626373b68cb6fe51d8dc6fde))
+
 ## [2.53.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.2...@teamturing/react-kit@2.53.3) (2025-12-12)
 
 ### Bug Fixes
