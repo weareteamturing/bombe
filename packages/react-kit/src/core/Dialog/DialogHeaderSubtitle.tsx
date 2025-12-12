@@ -8,7 +8,9 @@ const DialogHeaderSubtitle = ({
   typography = 'xs',
   color = 'text/neutral/subtler',
   ...props
-}: PropsWithChildren<Props>) => <Text typography={typography} color={color} {...props} />;
+}: PropsWithChildren<Props>) => (
+  <Text className={'trk-dialog_header_subtitle'} typography={typography} color={color} {...props} />
+);
 
 export default DialogHeaderSubtitle;
 export type { Props as DialogHeaderSubtitleProps };

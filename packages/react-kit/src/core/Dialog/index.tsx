@@ -121,6 +121,7 @@ const Dialog = (
             <Blanket ref={blanketRef} />
             <View display={'flex'} width={'100%'} height={'100%'}>
               <BaseDialog
+                className={`rkt-dialog--${size}`}
                 ref={dialogRef}
                 aria-modal={'true'}
                 role={'dialog'}
@@ -178,6 +179,7 @@ const Dialog = (
               >
                 <View sx={{ position: 'absolute', top: 3, right: 3 }}>
                   <IconButton
+                    className={'trk-dialog__close_button'}
                     ref={closeButtonRef}
                     icon={CloseIcon}
                     variant={'plain'}

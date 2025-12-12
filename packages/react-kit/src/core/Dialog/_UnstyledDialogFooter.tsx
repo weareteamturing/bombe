@@ -5,7 +5,9 @@ import { SxProp, sx } from '../../utils/styled-system';
 
 type Props = {} & HTMLAttributes<HTMLDivElement> & SxProp;
 
-const UnstyledDialogFooter = styled.div<Props>`
+const UnstyledDialogFooter = styled.div.attrs<Props>({
+  className: 'trk-dialog_footer',
+})`
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;

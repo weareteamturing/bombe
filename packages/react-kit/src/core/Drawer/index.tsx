@@ -159,6 +159,7 @@ const Drawer = (
             }}
           >
             <BaseDrawer
+              className={`trk-drawer--${size}`}
               ref={drawerRef}
               aria-modal={'true'}
               role={'dialog'}
@@ -170,6 +171,7 @@ const Drawer = (
             >
               <View sx={{ position: 'absolute', top: 2, right: 5 }}>
                 <IconButton
+                  className={'trk-drawer__close_button'}
                   ref={closeButtonRef}
                   icon={CloseIcon}
                   variant={'plain-bold'}

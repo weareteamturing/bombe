@@ -5,7 +5,9 @@ import { sx, SxProp } from '../../utils/styled-system';
 
 type Props = {} & HTMLAttributes<HTMLDivElement> & SxProp;
 
-const UnstyledDrawerBody = styled.div<Props>`
+const UnstyledDrawerBody = styled.div.attrs<Props>({
+  className: 'trk-drawer_body',
+})`
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;

@@ -5,7 +5,7 @@ import { SxProp, sx } from '../../utils/styled-system';
 
 type Props = {} & HTMLAttributes<HTMLDivElement> & SxProp;
 
-const UnstyledDialogHeader = styled.div<Props>`
+const UnstyledDialogHeader = styled.div.attrs<Props>({ className: 'trk-dialog_header' })`
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
