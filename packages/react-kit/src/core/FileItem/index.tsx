@@ -44,11 +44,13 @@ const FileItem = ({
 
   const [objectUrl, setObjectUrl] = useState('');
   useEffect(() => {
-    setObjectUrl(URL.createObjectURL(file));
+    const url = URL.createObjectURL(file);
+    setObjectUrl(url);
+
     return () => {
-      URL.revokeObjectURL(objectUrl);
+      URL.revokeObjectURL(url);
     };
-  }, []);
+  }, [file]);
 
   return (
     <BaseFile
@@ -72,7 +74,9 @@ const FileItem = ({
         </>
       ) : variant === 'thumbnail' ? (
         <>
-          {fileType === 'image' ? (
+          {!objectUrl ? (
+            <div className={'file__thumbnail__empty'} />
+          ) : fileType === 'image' ? (
             <img src={objectUrl} />
           ) : fileType === 'video' ? (
             <div className={'file__thumbnail__video'}>
@@ -186,6 +190,11 @@ const BaseFile = styled.div<Omit<Props, 'file'>>(
             backgroundColor: 'bg/neutral',
           },
 
+          '& > .file__thumbnail__empty': {
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'bg/neutral',
+          },
           '& > img': {
             width: '100%',
             height: '100%',
