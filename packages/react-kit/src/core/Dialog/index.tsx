@@ -121,7 +121,7 @@ const Dialog = (
             <Blanket ref={blanketRef} />
             <View display={'flex'} width={'100%'} height={'100%'}>
               <BaseDialog
-                className={`rkt-dialog--${size}`}
+                className={`trk-dialog--${size}`}
                 ref={dialogRef}
                 aria-modal={'true'}
                 role={'dialog'}
