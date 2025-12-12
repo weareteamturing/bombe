@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.53.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.2...@teamturing/react-kit@2.53.3) (2025-12-12)
+
+### Bug Fixes
+
+- **react-kit:** fix diaolg classname typo ([34ea4eb](https://github.com/weareteamturing/bombe/commit/34ea4eb6008e337bfeb57776933c9f38cef758b8))
+
 ## [2.53.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.1...@teamturing/react-kit@2.53.2) (2025-12-12)
 
 ### Bug Fixes
