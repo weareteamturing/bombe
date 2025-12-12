@@ -159,7 +159,7 @@ const Drawer = (
             }}
           >
             <BaseDrawer
-              className={`trk-drawer--${size}`}
+              className={`trk-drawer--${size} trk-drawer--${direction}`}
               ref={drawerRef}
               aria-modal={'true'}
               role={'dialog'}
