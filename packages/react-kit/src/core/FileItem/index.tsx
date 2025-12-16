@@ -86,6 +86,7 @@ const FileItem = ({
           ) : (
             <div className={'file__thumbnail__whatever'}>
               <DocumentIcon />
+              <span title={fileName}>{fileName}</span>
             </div>
           )}
           {validationStatus === 'error' || loading ? (
@@ -222,16 +223,30 @@ const BaseFile = styled.div<Omit<Props, 'file'>>(
             },
           },
           '& > .file__thumbnail__whatever': {
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'bg/neutral',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            svg: {
+            'width': '100%',
+            'height': '100%',
+            'backgroundColor': 'bg/neutral',
+            'display': 'flex',
+            'alignItems': 'center',
+            'justifyContent': 'center',
+            'flexDirection': 'column',
+            'rowGap': 1,
+            'svg': {
               width: 24,
               height: 24,
               color: 'icon/neutral/bold',
+            },
+            '& > span': {
+              textAlign: 'center',
+              width: '100%',
+              px: 3,
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+              fontSize: 'xxs',
+              fontWeight: 'medium',
+              lineHeight: 2,
+              color: 'text/neutral/subtler',
             },
           },
 
