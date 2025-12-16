@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.53.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.4...@teamturing/react-kit@2.53.5) (2025-12-16)
+
+### Bug Fixes
+
+- **react-kit:** update FileItem component ([8283e8e](https://github.com/weareteamturing/bombe/commit/8283e8e2b1c30117fb715e57147c8b718679257b))
+
 ## [2.53.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.3...@teamturing/react-kit@2.53.4) (2025-12-12)
 
 ### Bug Fixes
