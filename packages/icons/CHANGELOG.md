@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.56.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.55.0...@teamturing/icons@1.56.0) (2025-12-17)
+
+### Features
+
+- **icons:** add quiz icon ([dd1233b](https://github.com/weareteamturing/bombe/commit/dd1233b70032519e6138ab0668e83caaad741a0e))
+
 # [1.55.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.54.0...@teamturing/icons@1.55.0) (2025-12-17)
 
 ### Features
