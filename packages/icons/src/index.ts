@@ -189,6 +189,7 @@ export { default as ProfileIcon } from './Profile';
 export { default as ProgressGradientIcon } from './ProgressGradient';
 export { default as QuestionMarkInCircleIcon } from './QuestionMarkInCircle';
 export { default as QuestionMarkInCircleOutlinedIcon } from './QuestionMarkInCircleOutlined';
+export { default as QuizIcon } from './Quiz';
 export { default as QuizColorIcon } from './QuizColor';
 export { default as RaffleColorIcon } from './RaffleColor';
 export { default as ReceiptIcon } from './Receipt';
