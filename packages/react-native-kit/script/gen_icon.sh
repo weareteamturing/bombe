@@ -13,21 +13,21 @@ for ICON_DIR_PATH in "${ICON_DIR_PATH_LIST[@]}"; do
     fi
   done
 
+  # Remove non-svg files and directories first
   for f in "$ICON_DIR_PATH"/*
   do
-    # remove directory
     if [[ -d $f ]] ; then
       rm -rf $f
-    fi
-
-    assetExtension="${f##*.}" # extension
-    assetNameWithExtension="${f##*/}" # filename + extension without path (after last '/' in path)
-    assetName="${assetNameWithExtension%.*}" # filename without extension
-
-    # remove if not *svg
-    if [[ $assetExtension != "svg" ]] ; then
+    elif [[ "${f##*.}" != "svg" ]] ; then
       rm $f
     fi
+  done
+
+  # Process svg files in sorted order (LC_ALL=C ensures consistent ordering across all environments)
+  for f in $(ls "$ICON_DIR_PATH"/*.svg 2>/dev/null | LC_ALL=C sort)
+  do
+    assetNameWithExtension="${f##*/}" # filename + extension without path (after last '/' in path)
+    assetName="${assetNameWithExtension%.*}" # filename without extension
 
     echo "export { default as $assetName } from '@teamturing/icons/svg/${assetName}.svg';" >> temp_image
   done
