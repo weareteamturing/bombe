@@ -187,6 +187,7 @@ export { default as PrintIcon } from './Print';
 export { default as ProblemIcon } from './Problem';
 export { default as ProfileIcon } from './Profile';
 export { default as ProgressGradientIcon } from './ProgressGradient';
+export { default as ProgressLineIcon } from './ProgressLine';
 export { default as QuestionMarkInCircleIcon } from './QuestionMarkInCircle';
 export { default as QuestionMarkInCircleOutlinedIcon } from './QuestionMarkInCircleOutlined';
 export { default as QuizIcon } from './Quiz';
