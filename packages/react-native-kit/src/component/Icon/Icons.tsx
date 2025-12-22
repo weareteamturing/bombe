@@ -187,6 +187,7 @@ export { default as print } from '@teamturing/icons/svg/print.svg';
 export { default as problem } from '@teamturing/icons/svg/problem.svg';
 export { default as profile } from '@teamturing/icons/svg/profile.svg';
 export { default as progress_gradient } from '@teamturing/icons/svg/progress_gradient.svg';
+export { default as progress_line } from '@teamturing/icons/svg/progress_line.svg';
 export { default as question_mark_in_circle } from '@teamturing/icons/svg/question_mark_in_circle.svg';
 export { default as question_mark_in_circle_outlined } from '@teamturing/icons/svg/question_mark_in_circle_outlined.svg';
 export { default as quiz } from '@teamturing/icons/svg/quiz.svg';
