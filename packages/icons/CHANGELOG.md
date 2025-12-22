@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.57.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.56.0...@teamturing/icons@1.57.0) (2025-12-22)
+
+### Bug Fixes
+
+- **icons:** update icon structure ([0d790b3](https://github.com/weareteamturing/bombe/commit/0d790b385e5bbbcec14c9f7d5330d8333526dad8))
+- **icons:** update progress_line icon ([98a58f7](https://github.com/weareteamturing/bombe/commit/98a58f729a5d89a54eb296f1abdb6e6b8cc68920))
+
+### Features
+
+- **icons:** add progress_line icon ([b65d056](https://github.com/weareteamturing/bombe/commit/b65d05602e9a6e238ee353804ea7dcce2de7ade4))
+
 # [1.56.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.55.0...@teamturing/icons@1.56.0) (2025-12-17)
 
 ### Features

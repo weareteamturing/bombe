@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.24.0...@teamturing/react-native-kit@1.25.0) (2025-12-22)
+
+### Features
+
+- **icons:** add progress_line icon ([b65d056](https://github.com/weareteamturing/bombe/commit/b65d05602e9a6e238ee353804ea7dcce2de7ade4))
+
 # [1.24.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.23.1...@teamturing/react-native-kit@1.24.0) (2025-12-17)
 
 ### Features
