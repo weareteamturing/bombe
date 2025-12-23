@@ -28,7 +28,8 @@ const ProgressLineSpinner = styled(ProgressLineIcon)`
 const Spinner = forwardRef<SVGSVGElement, Props>(
   ({ variant: propsVariant, width = 32, height = 32, ...props }, ref) => {
     const theme = useTheme();
-    const variant = propsVariant ?? theme.components.spinner.defaultVariant ?? 'progress-gradient';
+    const variant: SpinnerVariantType =
+      propsVariant ?? theme.components?.spinner?.defaultVariant ?? 'progress-gradient';
     const SpinnerComponent = {
       'progress-gradient': ProgressGradientSpinner,
       'progress-line': ProgressLineSpinner,
