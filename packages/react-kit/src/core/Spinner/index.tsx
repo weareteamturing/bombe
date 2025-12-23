@@ -1,8 +1,10 @@
-import { ProgressGradientIcon } from '@teamturing/icons';
-import { SVGProps } from 'react';
-import styled, { keyframes } from 'styled-components';
+import { ProgressGradientIcon, ProgressLineIcon } from '@teamturing/icons';
+import { forwardRef, SVGProps } from 'react';
+import styled, { keyframes, useTheme } from 'styled-components';
 
-type Props = SVGProps<SVGSVGElement>;
+type SpinnerVariantType = 'progress-gradient' | 'progress-line';
+
+type Props = { variant?: SpinnerVariantType } & Omit<SVGProps<SVGSVGElement>, 'ref'>;
 
 const spin = keyframes`
   from {
@@ -13,15 +15,28 @@ const spin = keyframes`
   }
 `;
 
-const Spinner = styled(ProgressGradientIcon)`
+const ProgressGradientSpinner = styled(ProgressGradientIcon)`
   color: ${({ theme }) => theme.colors['icon/neutral']};
   animation: ${spin} 1000ms infinite steps(8, end);
 `;
 
-Spinner.defaultProps = {
-  width: 32,
-  height: 32,
-};
+const ProgressLineSpinner = styled(ProgressLineIcon)`
+  color: ${({ theme }) => theme.colors['icon/neutral']};
+  animation: ${spin} 1000ms infinite linear;
+`;
+
+const Spinner = forwardRef<SVGSVGElement, Props>(
+  ({ variant: propsVariant, width = 32, height = 32, ...props }, ref) => {
+    const theme = useTheme();
+    const variant = propsVariant ?? theme.components.spinner.defaultVariant ?? 'progress-gradient';
+    const SpinnerComponent = {
+      'progress-gradient': ProgressGradientSpinner,
+      'progress-line': ProgressLineSpinner,
+    }[variant];
+
+    return <SpinnerComponent ref={ref} width={width} height={height} {...props} />;
+  },
+);
 
 export default Spinner;
 export type { Props as SpinnerProps };
