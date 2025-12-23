@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.54.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.8...@teamturing/react-kit@2.54.0) (2025-12-23)
+
+### Bug Fixes
+
+- **react-kit:** enhance type safety ([d8507dd](https://github.com/weareteamturing/bombe/commit/d8507dd8469aea3f51eb4810c0f2ff826674e49e))
+
+### Features
+
+- **react-kit:** update Spinner with theme config ([1cab73d](https://github.com/weareteamturing/bombe/commit/1cab73d8ef517578e28e9e802af1430bf834b5b6))
+
 ## [2.53.8](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.7...@teamturing/react-kit@2.53.8) (2025-12-22)
 
 **Note:** Version bump only for package @teamturing/react-kit
