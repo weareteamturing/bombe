@@ -42,6 +42,20 @@ export type { CardProps } from './core/Card';
 export { default as Checkbox } from './core/Checkbox';
 export type { CheckboxProps } from './core/Checkbox';
 
+export { default as CheckboxGroup } from './core/CheckboxGroup';
+export type { CheckboxGroupProps, CheckboxGroupOptionProps } from './core/CheckboxGroup';
+
+export { default as CheckboxOrRadioGroupFormControl } from './core/CheckboxOrRadioGroupFormControl';
+export type {
+  CheckboxOrRadioGroupFormControlProps,
+  CheckboxOrRadioGroupFormControlFieldProps,
+  CheckboxOrRadioGroupFormControlCaptionProps,
+  CheckboxOrRadioGroupFormControlErrorMessageProps,
+  CheckboxOrRadioGroupFormControlLabelProps,
+  CheckboxOrRadioGroupFormControlSuccessMessageProps,
+  CheckboxOrRadioGroupFormControlTooltipIconProps,
+} from './core/CheckboxOrRadioGroupFormControl';
+
 export { default as Chip } from './core/Chip';
 export type { ChipProps } from './core/Chip';
 
@@ -145,6 +159,9 @@ export type { PillProps } from './core/Pill';
 
 export { default as Radio } from './core/Radio';
 export type { RadioProps } from './core/Radio';
+
+export { default as RadioGroup } from './core/RadioGroup';
+export type { RadioGroupProps, RadioGroupOptionProps } from './core/RadioGroup';
 
 export { default as SearchSelectInput } from './core/SearchSelectInput';
 export type { SearchSelectInputProps } from './core/SearchSelectInput';
