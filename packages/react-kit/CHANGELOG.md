@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.55.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.54.0...@teamturing/react-kit@2.55.0) (2025-12-24)
+
+### Features
+
+- **react-kit:** add CheckboxGroup, RadioGroup, CheckboxOrRadioGroupFormControl component ([bfc6517](https://github.com/weareteamturing/bombe/commit/bfc6517c77b748c50d3b7aaaf69a6acad8709ce8))
+
 # [2.54.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.53.8...@teamturing/react-kit@2.54.0) (2025-12-23)
 
 ### Bug Fixes
