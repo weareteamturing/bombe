@@ -91,7 +91,7 @@ const FileItem = ({
             </div>
           ) : (
             <div className={'file__thumbnail__whatever'}>
-              <DocumentIcon />
+              <FileIcon />
               <span title={fileName}>{fileName}</span>
             </div>
           )}
