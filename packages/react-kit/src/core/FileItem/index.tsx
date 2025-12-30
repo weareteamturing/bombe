@@ -1,6 +1,6 @@
 import { DocumentIcon, ExclamationPointInCircleIcon, PictureIcon, VideoIcon } from '@teamturing/icons';
 import { forcePixelValue } from '@teamturing/utils';
-import { HTMLProps, useEffect, useState } from 'react';
+import { ComponentType, HTMLProps, SVGProps, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
@@ -27,6 +27,10 @@ type Props = {
    * 시각적인 후행 부분에 상호작용할 요소를 정의합니다.
    */
   trailingAction?: React.ReactElement<HTMLProps<HTMLButtonElement>>;
+  /**
+   * file 일 때의 icon을 결정합니다.
+   */
+  renderFileIcon?: (fileType: string, file: Props['file']) => ComponentType<SVGProps<SVGSVGElement>>;
 } & SxProp;
 
 const FileItem = ({
@@ -36,11 +40,13 @@ const FileItem = ({
   loading,
   validationStatus,
   trailingAction,
+  renderFileIcon = () => DocumentIcon,
   ...props
 }: Props) => {
   const fileType = file.type.match('image/*') ? 'image' : file.type.match('video/*') ? 'video' : 'whatever';
   const fileName = 'name' in file ? file.name : '';
-  const FileIcon = fileType === 'image' ? PictureIcon : fileType === 'video' ? VideoIcon : DocumentIcon;
+  const FileIcon =
+    fileType === 'image' ? PictureIcon : fileType === 'video' ? VideoIcon : renderFileIcon(fileType, file);
 
   const [objectUrl, setObjectUrl] = useState('');
   useEffect(() => {
