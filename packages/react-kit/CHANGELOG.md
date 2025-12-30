@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.56.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.56.0...@teamturing/react-kit@2.56.1) (2025-12-30)
+
+### Bug Fixes
+
+- **react-kit:** fix file item ([f947e0e](https://github.com/weareteamturing/bombe/commit/f947e0eb5e38cc78a01faae27f07ab5d4925b5de))
+
 # [2.56.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.55.0...@teamturing/react-kit@2.56.0) (2025-12-30)
 
 ### Features
