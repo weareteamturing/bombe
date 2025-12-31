@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.58.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.58.0...@teamturing/icons@1.58.1) (2025-12-31)
+
+### Bug Fixes
+
+- **icons:** fix stop icon ([0b1d518](https://github.com/weareteamturing/bombe/commit/0b1d518d73391e98cdfc5c6279c1105611e9de64))
+
 # [1.58.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.57.0...@teamturing/icons@1.58.0) (2025-12-31)
 
 ### Features
