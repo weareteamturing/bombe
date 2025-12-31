@@ -217,6 +217,7 @@ export { default as speaker } from '@teamturing/icons/svg/speaker.svg';
 export { default as stackup } from '@teamturing/icons/svg/stackup.svg';
 export { default as star } from '@teamturing/icons/svg/star.svg';
 export { default as star_color } from '@teamturing/icons/svg/star_color.svg';
+export { default as stop } from '@teamturing/icons/svg/stop.svg';
 export { default as store } from '@teamturing/icons/svg/store.svg';
 export { default as sun } from '@teamturing/icons/svg/sun.svg';
 export { default as sync } from '@teamturing/icons/svg/sync.svg';
