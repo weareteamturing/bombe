@@ -217,6 +217,7 @@ export { default as SpeakerIcon } from './Speaker';
 export { default as StackupIcon } from './Stackup';
 export { default as StarIcon } from './Star';
 export { default as StarColorIcon } from './StarColor';
+export { default as StopIcon } from './Stop';
 export { default as StoreIcon } from './Store';
 export { default as SunIcon } from './Sun';
 export { default as SyncIcon } from './Sync';
