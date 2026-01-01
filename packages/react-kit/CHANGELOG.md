@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.56.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.56.3...@teamturing/react-kit@2.56.4) (2026-01-01)
+
+### Bug Fixes
+
+- **react-kit:** remove invalid DOM attribute, loading, in FileItem ([a2579a5](https://github.com/weareteamturing/bombe/commit/a2579a50915b2bf457778fe22856537ea5c114b8))
+
 ## [2.56.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.56.2...@teamturing/react-kit@2.56.3) (2025-12-31)
 
 **Note:** Version bump only for package @teamturing/react-kit
