@@ -62,7 +62,6 @@ const FileItem = ({
     <BaseFile
       variant={variant}
       disabled={disabled}
-      loading={disabled}
       validationStatus={validationStatus}
       trailingAction={trailingAction}
       {...props}
