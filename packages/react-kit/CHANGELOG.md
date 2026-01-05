@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.57.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.56.4...@teamturing/react-kit@2.57.0) (2026-01-05)
+
+### Features
+
+- **react-kit:** update Overlay props with initialFocusRef ([779bf71](https://github.com/weareteamturing/bombe/commit/779bf71b03562f5dc7f6de113a10f70582ad2c61))
+
 ## [2.56.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.56.3...@teamturing/react-kit@2.56.4) (2026-01-01)
 
 ### Bug Fixes
