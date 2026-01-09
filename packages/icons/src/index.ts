@@ -72,6 +72,7 @@ export { default as ClipIcon } from './Clip';
 export { default as CloseIcon } from './Close';
 export { default as CloseInCircleIcon } from './CloseInCircle';
 export { default as CoinIcon } from './Coin';
+export { default as CommandLineIcon } from './CommandLine';
 export { default as ContactIcon } from './Contact';
 export { default as CopyIcon } from './Copy';
 export { default as CorrectIcon } from './Correct';
