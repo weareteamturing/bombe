@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.58.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.57.0...@teamturing/react-kit@2.58.0) (2026-01-09)
+
+### Features
+
+- **react-kit:** add classname to styled icon ([9130185](https://github.com/weareteamturing/bombe/commit/9130185f8d819a6199846ec1604a7c8e73eb59d9))
+
 # [2.57.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.56.4...@teamturing/react-kit@2.57.0) (2026-01-05)
 
 ### Features

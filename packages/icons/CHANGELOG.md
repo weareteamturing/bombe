@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.59.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.58.1...@teamturing/icons@1.59.0) (2026-01-09)
+
+### Features
+
+- **icons:** add command_line icon ([3c6438d](https://github.com/weareteamturing/bombe/commit/3c6438d5b4726615f84cb003964c4e10e4d4b4c0))
+
 ## [1.58.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.58.0...@teamturing/icons@1.58.1) (2025-12-31)
 
 ### Bug Fixes
