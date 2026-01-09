@@ -72,6 +72,7 @@ export { default as clip } from '@teamturing/icons/svg/clip.svg';
 export { default as close } from '@teamturing/icons/svg/close.svg';
 export { default as close_in_circle } from '@teamturing/icons/svg/close_in_circle.svg';
 export { default as coin } from '@teamturing/icons/svg/coin.svg';
+export { default as command_line } from '@teamturing/icons/svg/command_line.svg';
 export { default as contact } from '@teamturing/icons/svg/contact.svg';
 export { default as copy } from '@teamturing/icons/svg/copy.svg';
 export { default as correct } from '@teamturing/icons/svg/correct.svg';
