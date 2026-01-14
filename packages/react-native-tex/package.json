@@ -1,6 +1,6 @@
 {
   "name": "@teamturing/react-native-tex",
-  "version": "1.2.36",
+  "version": "1.2.37",
   "description": "React Native Tex Module for Team Turing",
   "scripts": {
     "check:type": "tsc",
