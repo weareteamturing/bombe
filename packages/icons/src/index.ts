@@ -157,6 +157,7 @@ export { default as NumberFiveFilledIcon } from './NumberFiveFilled';
 export { default as NumberFiveOutlinedIcon } from './NumberFiveOutlined';
 export { default as NumberFourFilledIcon } from './NumberFourFilled';
 export { default as NumberFourOutlinedIcon } from './NumberFourOutlined';
+export { default as NumberListIcon } from './NumberList';
 export { default as NumberOneFilledIcon } from './NumberOneFilled';
 export { default as NumberOneOutlinedIcon } from './NumberOneOutlined';
 export { default as NumberThreeFilledIcon } from './NumberThreeFilled';

@@ -157,6 +157,7 @@ export { default as number_five_filled } from '@teamturing/icons/svg/number_five
 export { default as number_five_outlined } from '@teamturing/icons/svg/number_five_outlined.svg';
 export { default as number_four_filled } from '@teamturing/icons/svg/number_four_filled.svg';
 export { default as number_four_outlined } from '@teamturing/icons/svg/number_four_outlined.svg';
+export { default as number_list } from '@teamturing/icons/svg/number_list.svg';
 export { default as number_one_filled } from '@teamturing/icons/svg/number_one_filled.svg';
 export { default as number_one_outlined } from '@teamturing/icons/svg/number_one_outlined.svg';
 export { default as number_three_filled } from '@teamturing/icons/svg/number_three_filled.svg';
