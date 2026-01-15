@@ -32,7 +32,7 @@ export { default as bookmark } from '@teamturing/icons/svg/bookmark.svg';
 export { default as bookmark_animation } from '@teamturing/icons/svg/bookmark_animation.svg';
 export { default as box } from '@teamturing/icons/svg/box.svg';
 export { default as box_plus } from '@teamturing/icons/svg/box_plus.svg';
-export { default as bullet } from '@teamturing/icons/svg/bullet.svg';
+export { default as bullet_list } from '@teamturing/icons/svg/bullet_list.svg';
 export { default as bus_color } from '@teamturing/icons/svg/bus_color.svg';
 export { default as calendar } from '@teamturing/icons/svg/calendar.svg';
 export { default as calendar_check } from '@teamturing/icons/svg/calendar_check.svg';
