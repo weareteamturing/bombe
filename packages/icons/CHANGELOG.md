@@ -3,12 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.61.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.60.0...@teamturing/icons@1.61.0) (2026-01-15)
-
-### Features
-
-- **icons:** add numbered_list icon ([c150bcb](https://github.com/weareteamturing/bombe/commit/c150bcb020c5e79363003c979aa38b56e5a2b81e))
-
 # [1.60.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.59.0...@teamturing/icons@1.60.0) (2026-01-14)
 
 ### Features
