@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.61.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.61.0...@teamturing/icons@1.61.0) (2026-01-15)
+
+### Features
+
+- **icons:** add number_list icon ([dbd5258](https://github.com/weareteamturing/bombe/commit/dbd52588bd1a99ab6d7fa3b227c5fbb0aac34fb5))
+
+### Reverts
+
+- Revert "feat(icons): add numbered_list icon" ([8a50180](https://github.com/weareteamturing/bombe/commit/8a50180968652d7320a4aed45038d7179fb1b1c1))
+- Revert "chore(release): publish libraries" ([9d7adbf](https://github.com/weareteamturing/bombe/commit/9d7adbff265caceeb7bdde1cf0c9f82a388fefe3))
+
 # [1.60.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.59.0...@teamturing/icons@1.60.0) (2026-01-14)
 
 ### Features
