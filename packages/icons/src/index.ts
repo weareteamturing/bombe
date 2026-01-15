@@ -163,6 +163,7 @@ export { default as NumberThreeFilledIcon } from './NumberThreeFilled';
 export { default as NumberThreeOutlinedIcon } from './NumberThreeOutlined';
 export { default as NumberTwoFilledIcon } from './NumberTwoFilled';
 export { default as NumberTwoOutlinedIcon } from './NumberTwoOutlined';
+export { default as NumberedListIcon } from './NumberedList';
 export { default as OutIcon } from './Out';
 export { default as PalmTreeColorIcon } from './PalmTreeColor';
 export { default as PaperCheckIcon } from './PaperCheck';
