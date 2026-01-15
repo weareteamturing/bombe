@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.63.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.62.0...@teamturing/icons@1.63.0) (2026-01-15)
+
+### Features
+
+- **icons:** rename from bullet to bullet_list ([de33883](https://github.com/weareteamturing/bombe/commit/de33883fa9649678e18b336513d697ebcaeac8be))
+
 # [1.62.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.61.0...@teamturing/icons@1.62.0) (2026-01-15)
 
 ### Features
