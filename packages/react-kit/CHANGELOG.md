@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.58.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.58.2...@teamturing/react-kit@2.58.3) (2026-01-15)
+
+### Reverts
+
+- Revert "chore(release): publish libraries" ([9d7adbf](https://github.com/weareteamturing/bombe/commit/9d7adbff265caceeb7bdde1cf0c9f82a388fefe3))
+
 ## [2.58.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.58.2...@teamturing/react-kit@2.58.2) (2026-01-15)
 
 ### Reverts

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.6](https://github.com/weareteamturing/bombe/compare/@teamturing/mathking-utils@1.2.5...@teamturing/mathking-utils@1.2.6) (2026-01-15)
+
+**Note:** Version bump only for package @teamturing/mathking-utils
+
 ## [1.2.5](https://github.com/weareteamturing/bombe/compare/@teamturing/mathking-utils@1.2.4...@teamturing/mathking-utils@1.2.5) (2023-09-12)
 
 ### Bug Fixes

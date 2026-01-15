@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.20.3](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.20.2...@teamturing/katex-utils@2.20.3) (2026-01-15)
+
+**Note:** Version bump only for package @teamturing/katex-utils
+
 ## [2.20.2](https://github.com/weareteamturing/bombe/compare/@teamturing/katex-utils@2.20.1...@teamturing/katex-utils@2.20.2) (2024-09-24)
 
 ### Bug Fixes
