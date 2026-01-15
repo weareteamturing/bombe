@@ -32,7 +32,7 @@ export { default as BookmarkIcon } from './Bookmark';
 export { default as BookmarkAnimationIcon } from './BookmarkAnimation';
 export { default as BoxIcon } from './Box';
 export { default as BoxPlusIcon } from './BoxPlus';
-export { default as BulletIcon } from './Bullet';
+export { default as BulletListIcon } from './BulletList';
 export { default as BusColorIcon } from './BusColor';
 export { default as CalendarIcon } from './Calendar';
 export { default as CalendarCheckIcon } from './CalendarCheck';
