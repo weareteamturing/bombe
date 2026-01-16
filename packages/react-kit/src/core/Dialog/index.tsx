@@ -182,7 +182,7 @@ const Dialog = (
                     className={'trk-dialog__close_button'}
                     ref={closeButtonRef}
                     icon={CloseIcon}
-                    variant={'plain'}
+                    variant={'plain-bold'}
                     size={'m'}
                     onClick={handleDismiss}
                   />
