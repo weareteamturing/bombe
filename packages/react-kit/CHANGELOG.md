@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.58.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.58.4...@teamturing/react-kit@2.58.5) (2026-01-16)
+
+### Bug Fixes
+
+- **react-kit:** update dialog close button variant ([5efdab8](https://github.com/weareteamturing/bombe/commit/5efdab8207c30229687b895ec82e81bd68b60a07))
+
 ## [2.58.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.58.3...@teamturing/react-kit@2.58.4) (2026-01-15)
 
 **Note:** Version bump only for package @teamturing/react-kit
