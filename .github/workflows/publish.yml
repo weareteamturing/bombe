@@ -8,7 +8,7 @@ on:
 
 permissions:
   id-token: write
-  contents: read
+  contents: write
 
 jobs:
   publish-packages:
@@ -16,16 +16,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: '0'
           token: ${{ secrets.WORKFLOW_GIT_ACCESS_TOKEN }}
 
-      - name: Set node version
-        uses: actions/setup-node@v3
+      - name: Setup Node.js with caching
+        uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: 'yarn'
 
       - name: Set git config
         run: |

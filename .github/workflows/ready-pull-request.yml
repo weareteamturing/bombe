@@ -11,27 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: '0'
 
-      - name: Set node version
-        uses: actions/setup-node@v3
+      - name: Setup Node.js with caching
+        uses: actions/setup-node@v4
         with:
           node-version: 18
-
-      - name: Cache dependencies
-        id: cache
-        uses: actions/cache@v3
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-            ${{ runner.os }}-node-
+          cache: 'yarn'
 
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
 
       - name: Check ESLint
