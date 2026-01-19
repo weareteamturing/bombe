@@ -6606,6 +6606,9 @@ __metadata:
 "@teamturing/utils@workspace:^, @teamturing/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@teamturing/utils@workspace:packages/utils"
+  dependencies:
+    "@types/lodash.toarray": ^4.4.9
+    lodash.toarray: ^4.4.0
   languageName: unknown
   linkType: soft
 

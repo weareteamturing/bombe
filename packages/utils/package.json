@@ -21,6 +21,12 @@
     "type": "git",
     "url": "git+https://github.com/weareteamturing/bombe.git"
   },
+  "dependencies": {
+    "lodash.toarray": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/lodash.toarray": "^4.4.9"
+  },
   "scripts": {
     "check:lint": "eslint ./src --cache",
     "check:type": "tsc --noEmit",
