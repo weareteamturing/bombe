@@ -1,5 +1,4 @@
-import { commaizeNumber, forcePixelValue, isFunction } from '@teamturing/utils';
-import toArray from 'lodash.toarray';
+import { commaizeNumber, forcePixelValue, getGraphemeLength, isFunction } from '@teamturing/utils';
 import { MutableRefObject, ReactNode, Ref, RefObject, forwardRef, useEffect, useState } from 'react';
 import ReactTextareaAutosize, { TextareaAutosizeProps } from 'react-textarea-autosize';
 import styled, { css } from 'styled-components';
@@ -21,20 +20,17 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
     const focusInput = () => {
       inputRef.current?.focus();
     };
-    const getTextareaLength = (value: string) => {
-      return toArray(value).length;
-    };
 
     const [count, setCount] = useState(0);
     const handleChange: Props['onChange'] = (e) => {
-      setCount(getTextareaLength(e.target.value));
+      setCount(getGraphemeLength(e.target.value));
 
       props.onChange?.(e);
     };
 
     useEffect(() => {
       if (inputRef.current) {
-        setCount(getTextareaLength(inputRef.current.value));
+        setCount(getGraphemeLength(inputRef.current.value));
       }
     }, [ref]);
 

@@ -6470,7 +6470,6 @@ __metadata:
     "@teamturing/utils": "workspace:^"
     "@types/lodash.debounce": ^4.0.7
     "@types/lodash.throttle": ^4.1.7
-    "@types/lodash.toarray": ^4.4.9
     "@types/react-is": ^18.2.2
     "@types/styled-system": ^5.1.17
     "@types/styled-system__css": ^5.0.17
@@ -6478,7 +6477,6 @@ __metadata:
     framer-motion: ^10.16.4
     lodash.debounce: ^4.0.8
     lodash.throttle: ^4.1.1
-    lodash.toarray: ^4.4.0
     react: ^18.2.0
     react-is: ^18.2.0
     react-textarea-autosize: ^8.5.3
@@ -6606,6 +6604,9 @@ __metadata:
 "@teamturing/utils@workspace:^, @teamturing/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@teamturing/utils@workspace:packages/utils"
+  dependencies:
+    "@types/lodash.toarray": ^4.4.9
+    lodash.toarray: ^4.4.0
   languageName: unknown
   linkType: soft
 
