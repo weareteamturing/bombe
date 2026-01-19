@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.5.1...@teamturing/utils@1.6.0) (2026-01-19)
+
+### Bug Fixes
+
+- **utils:** update export list ([2c2d922](https://github.com/weareteamturing/bombe/commit/2c2d92214a01d4b4614acb0e1bbf700e6d7d1251))
+
+### Features
+
+- **utils:** add getGraphemeLength function ([573d431](https://github.com/weareteamturing/bombe/commit/573d431c229cd1bbe50677b02d6e5c301adf62f5))
+
 ## [1.5.1](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.5.0...@teamturing/utils@1.5.1) (2026-01-15)
 
 **Note:** Version bump only for package @teamturing/utils

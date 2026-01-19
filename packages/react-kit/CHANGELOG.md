@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.59.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.58.5...@teamturing/react-kit@2.59.0) (2026-01-19)
+
+### Bug Fixes
+
+- **react-kit:** update textarea with utils ([4fb770c](https://github.com/weareteamturing/bombe/commit/4fb770c2409773edb4b03059f928fe92d20044a4))
+
+### Features
+
+- **utils:** add getGraphemeLength function ([573d431](https://github.com/weareteamturing/bombe/commit/573d431c229cd1bbe50677b02d6e5c301adf62f5))
+
 ## [2.58.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.58.4...@teamturing/react-kit@2.58.5) (2026-01-16)
 
 ### Bug Fixes
