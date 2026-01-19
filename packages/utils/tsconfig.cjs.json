@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.cjs.json",
   "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
     "rootDir": "./src",
     "outDir": "./dist"
   },

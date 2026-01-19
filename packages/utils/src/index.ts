@@ -4,6 +4,7 @@ export * from './commaizeNumber';
 export * from './decommaizeNumber';
 export * from './first';
 export * from './forcePixelValue';
+export * from './getGraphemeLength';
 export * from './isArray';
 export * from './isFunction';
 export * from './isNullable';
