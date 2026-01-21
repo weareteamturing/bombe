@@ -224,6 +224,7 @@ export { default as StopIcon } from './Stop';
 export { default as StoreIcon } from './Store';
 export { default as SunIcon } from './Sun';
 export { default as SyncIcon } from './Sync';
+export { default as TelescopeIcon } from './Telescope';
 export { default as TestUploadColorIcon } from './TestUploadColor';
 export { default as ThumbdownIcon } from './Thumbdown';
 export { default as ThumbupIcon } from './Thumbup';

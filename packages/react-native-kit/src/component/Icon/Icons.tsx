@@ -224,6 +224,7 @@ export { default as stop } from '@teamturing/icons/svg/stop.svg';
 export { default as store } from '@teamturing/icons/svg/store.svg';
 export { default as sun } from '@teamturing/icons/svg/sun.svg';
 export { default as sync } from '@teamturing/icons/svg/sync.svg';
+export { default as telescope } from '@teamturing/icons/svg/telescope.svg';
 export { default as test_upload_color } from '@teamturing/icons/svg/test_upload_color.svg';
 export { default as thumbdown } from '@teamturing/icons/svg/thumbdown.svg';
 export { default as thumbup } from '@teamturing/icons/svg/thumbup.svg';
