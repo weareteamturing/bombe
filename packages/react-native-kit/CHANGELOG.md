@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.31.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.30.1...@teamturing/react-native-kit@1.31.0) (2026-01-21)
+
+### Features
+
+- **icons:** add telescope icon ([6431e66](https://github.com/weareteamturing/bombe/commit/6431e66783771c0ea1549176452403a7e05e7b39))
+
 ## [1.30.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.30.0...@teamturing/react-native-kit@1.30.1) (2026-01-19)
 
 **Note:** Version bump only for package @teamturing/react-native-kit

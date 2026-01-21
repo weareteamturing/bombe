@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.64.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.63.0...@teamturing/icons@1.64.0) (2026-01-21)
+
+### Features
+
+- **icons:** add telescope icon ([6431e66](https://github.com/weareteamturing/bombe/commit/6431e66783771c0ea1549176452403a7e05e7b39))
+
 # [1.63.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.62.0...@teamturing/icons@1.63.0) (2026-01-15)
 
 ### Features
