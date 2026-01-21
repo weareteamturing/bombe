@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.esm.json",
   "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
     "rootDir": "./src",
     "outDir": "./esm"
   },
