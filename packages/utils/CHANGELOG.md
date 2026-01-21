@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.6.0...@teamturing/utils@1.6.1) (2026-01-21)
+
+### Bug Fixes
+
+- **utils:** update build config ([e82fcca](https://github.com/weareteamturing/bombe/commit/e82fcca1e40ca88e25c59e3f4b9f5b5724c03d75))
+
 # [1.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/utils@1.5.1...@teamturing/utils@1.6.0) (2026-01-19)
 
 ### Bug Fixes
