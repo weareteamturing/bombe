@@ -204,6 +204,9 @@ export type { ToastProps } from './core/Toast';
 export { default as Tooltip } from './core/Tooltip';
 export type { TooltipProps } from './core/Tooltip';
 
+export { default as UploadInput } from './core/UploadInput';
+export type { UploadInputProps } from './core/UploadInput';
+
 export { default as View } from './core/View';
 export type { ViewProps } from './core/View';
 
