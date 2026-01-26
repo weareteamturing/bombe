@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.60.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.59.2...@teamturing/react-kit@2.60.0) (2026-01-26)
+
+### Features
+
+- **react-kit:** add upload input component ([1180417](https://github.com/weareteamturing/bombe/commit/1180417c0d5abb1fef05b2e4255abd23ed1b40cf))
+
 ## [2.59.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.59.1...@teamturing/react-kit@2.59.2) (2026-01-21)
 
 **Note:** Version bump only for package @teamturing/react-kit
