@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.60.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.60.0...@teamturing/react-kit@2.60.1) (2026-01-30)
+
+### Bug Fixes
+
+- **react-kit:** update background color for some components ([20f7c01](https://github.com/weareteamturing/bombe/commit/20f7c01f6d8e5e13e8842c642ef3797916f5af99))
+
 # [2.60.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.59.2...@teamturing/react-kit@2.60.0) (2026-01-26)
 
 ### Features
