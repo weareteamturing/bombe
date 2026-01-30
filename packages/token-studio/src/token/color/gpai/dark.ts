@@ -230,7 +230,7 @@ const scaleColor = {
 
 const surfaceColor = {
   'surface': palette.darkGray,
-  'surface/overlay': palette.darkGray,
+  'surface/overlay': palette.gray900,
 } as const;
 
 const gpaiDarkColor = {

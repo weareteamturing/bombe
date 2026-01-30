@@ -127,7 +127,7 @@ const BaseFlash = styled.div<Props>`
           },
         },
         assist: {
-          'background': `linear-gradient(${theme.colors['surface/overlay']}, ${theme.colors['surface/overlay']}) padding-box, linear-gradient(${theme.gradients['border/accent/violet']}) border-box`,
+          'background': `linear-gradient(${theme.colors['surface']}, ${theme.colors['surface']}) padding-box, linear-gradient(${theme.gradients['border/accent/violet']}) border-box`,
           'borderWidth': 1,
           'borderStyle': 'solid',
           'borderColor': 'transparent',
