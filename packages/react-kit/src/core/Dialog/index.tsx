@@ -217,7 +217,7 @@ const BaseDialog = styled.div<SxProp>(
     flexDirection: 'column',
     position: 'relative',
     boxShadow: theme.shadows['shadow/overlay'],
-    backgroundColor: theme.colors['surface/overlay'],
+    backgroundColor: theme.colors['surface'],
     outline: 'none',
     overflow: 'hidden',
     margin: 'auto',

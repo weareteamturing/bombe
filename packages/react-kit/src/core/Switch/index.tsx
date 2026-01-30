@@ -39,7 +39,7 @@ const BaseSwitch = styled(UnstyledSwitch)<Props>`
     position: absolute;
     width: ${forcePixelValue(16)};
     height: ${forcePixelValue(16)};
-    background-color: ${({ theme }) => theme.colors['surface/overlay']};
+    background-color: ${({ theme }) => theme.colors['surface']};
     top: ${forcePixelValue(2)};
     border-radius: ${({ theme }) => `${forcePixelValue(theme.radii.full)}`};
 

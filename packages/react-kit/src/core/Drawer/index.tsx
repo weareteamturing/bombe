@@ -207,7 +207,7 @@ const BaseDrawer = styled.div<SxProp & Pick<Props, 'size' | 'direction'>>(
     flexDirection: 'column',
     position: 'relative',
     boxShadow: theme.shadows['shadow/overlay'],
-    backgroundColor: theme.colors['surface/overlay'],
+    backgroundColor: theme.colors['surface'],
     outline: 'none',
     overflow: 'hidden',
 
