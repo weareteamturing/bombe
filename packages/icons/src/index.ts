@@ -8,6 +8,7 @@ export { default as AlarmIcon } from './Alarm';
 export { default as AlphabetBoldIcon } from './AlphabetBold';
 export { default as AlphabetHeading1Icon } from './AlphabetHeading1';
 export { default as AlphabetHeading2Icon } from './AlphabetHeading2';
+export { default as AlphabetHeading3Icon } from './AlphabetHeading3';
 export { default as AlphabetItalicIcon } from './AlphabetItalic';
 export { default as AlphabetTextIcon } from './AlphabetText';
 export { default as AlphabetUnderlineIcon } from './AlphabetUnderline';
