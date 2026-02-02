@@ -8,6 +8,7 @@ export { default as alarm } from '@teamturing/icons/svg/alarm.svg';
 export { default as alphabet_bold } from '@teamturing/icons/svg/alphabet_bold.svg';
 export { default as alphabet_heading_1 } from '@teamturing/icons/svg/alphabet_heading_1.svg';
 export { default as alphabet_heading_2 } from '@teamturing/icons/svg/alphabet_heading_2.svg';
+export { default as alphabet_heading_3 } from '@teamturing/icons/svg/alphabet_heading_3.svg';
 export { default as alphabet_italic } from '@teamturing/icons/svg/alphabet_italic.svg';
 export { default as alphabet_text } from '@teamturing/icons/svg/alphabet_text.svg';
 export { default as alphabet_underline } from '@teamturing/icons/svg/alphabet_underline.svg';
