@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.65.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.64.0...@teamturing/icons@1.65.0) (2026-02-02)
+
+### Features
+
+- **icons:** add alphabet-heading-3 icon ([136eef7](https://github.com/weareteamturing/bombe/commit/136eef7e7e9ba990d7d15538aa2bb6d0f966de23))
+
 # [1.64.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.63.0...@teamturing/icons@1.64.0) (2026-01-21)
 
 ### Features
