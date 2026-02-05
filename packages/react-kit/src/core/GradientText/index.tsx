@@ -23,6 +23,5 @@ const GradientText = styled(Text).attrs<Props>((props) => ({ variant: props.vari
   },
 );
 
-
 export default GradientText;
 export type { Props as GradientTextProps };
