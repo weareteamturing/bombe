@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.60.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.60.2...@teamturing/react-kit@2.60.3) (2026-02-05)
+
+### Bug Fixes
+
+- **react-kit:** change defaultProps with attrs ([855b420](https://github.com/weareteamturing/bombe/commit/855b420d924d06dc5bd789038f920a96cdc9c6aa))
+- **react-kit:** fix lint ([34c7119](https://github.com/weareteamturing/bombe/commit/34c711932bc6cce9864be06ce015c2abcdaaaea7))
+
 ## [2.60.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.60.1...@teamturing/react-kit@2.60.2) (2026-02-02)
 
 **Note:** Version bump only for package @teamturing/react-kit
