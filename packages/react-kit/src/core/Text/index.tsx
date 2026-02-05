@@ -41,7 +41,7 @@ type Props = {
   TextAlignProps &
   ColorProps<Theme, ColorKey>;
 
-const Text = styled.span<Props>(
+const Text = styled.span.attrs<Props>((props) => ({ color: props.color ?? 'text/neutral' }))(
   { 'display': 'block', 'whiteSpace': 'pre-wrap', '& > span': { display: 'inline' } },
   ({ theme }) =>
     variant<BetterSystemStyleObject, TypographyKey, 'typography'>({
@@ -146,9 +146,6 @@ const Text = styled.span<Props>(
   sx,
 );
 
-Text.defaultProps = {
-  color: 'text/neutral',
-};
 
 export default Text;
 export type { Props as TextProps };
