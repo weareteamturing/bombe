@@ -19,6 +19,7 @@ import {
 } from 'styled-system';
 
 import {
+  AsProp,
   BetterSystemStyleObject,
   SxProp,
   TextDecorationProps,
@@ -147,7 +148,7 @@ const BaseText = styled.span<BaseProps>(
   sx,
 );
 
-type TextProps = ComponentPropsWithRef<typeof BaseText>;
+type TextProps = ComponentPropsWithRef<typeof BaseText> & AsProp;
 
 const Text = forwardRef<HTMLSpanElement, TextProps>(({ color = 'text/neutral', ...props }, ref) => (
   <BaseText ref={ref} color={color} {...props} />
