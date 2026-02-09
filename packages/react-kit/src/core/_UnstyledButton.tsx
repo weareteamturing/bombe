@@ -15,9 +15,9 @@ const BaseButton = styled.button<Props>`
   ${sx}
 `;
 
-const UnstyledButton = forwardRef<HTMLButtonElement, Props>(
-  ({ type = 'button', ...props }, ref) => <BaseButton ref={ref} type={type} {...props} />,
-);
+const UnstyledButton = forwardRef<HTMLButtonElement, Props>(({ type = 'button', ...props }, ref) => (
+  <BaseButton ref={ref} type={type} {...props} />
+));
 
 UnstyledButton.displayName = 'UnstyledButton';
 
