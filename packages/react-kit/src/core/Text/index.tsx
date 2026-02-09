@@ -1,5 +1,5 @@
-import { type ElementType, forwardRef, type HTMLAttributes, type PropsWithChildren } from 'react';
 import { ColorKey, FontSizeKey, FontWeightKey, LineHeightKey, TypographyKey } from '@teamturing/token-studio';
+import { type ElementType, forwardRef, type HTMLAttributes, type PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import {
   compose,
