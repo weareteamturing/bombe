@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.61.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.60.3...@teamturing/react-kit@2.61.0) (2026-02-09)
+
+### Features
+
+- **react-kit:** add babel-plugin-styled-components for SSR ([71d2d15](https://github.com/weareteamturing/bombe/commit/71d2d15ed4d51e4d2a18550f17c87402b0bc60e8))
+
 ## [2.60.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.60.2...@teamturing/react-kit@2.60.3) (2026-02-05)
 
 ### Bug Fixes
