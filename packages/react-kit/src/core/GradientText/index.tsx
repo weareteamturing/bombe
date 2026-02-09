@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
@@ -6,9 +6,9 @@ import { BetterSystemStyleObject } from '../../utils/styled-system';
 import Text from '../Text';
 import type { TextProps } from '../Text';
 
-type BaseProps = { variant?: 'violet' | 'pinkBlue' } & TextProps;
+type GradientTextProps = { variant?: 'violet' | 'pinkBlue' } & TextProps;
 
-const BaseGradientText = styled(Text)<BaseProps>(
+const BaseGradientText = styled(Text)<GradientTextProps>(
   ({ theme }) =>
     variant<BetterSystemStyleObject>({
       prop: 'variant',
@@ -24,9 +24,7 @@ const BaseGradientText = styled(Text)<BaseProps>(
   },
 );
 
-type GradientTextProps = ComponentPropsWithRef<typeof BaseGradientText>;
-
-const GradientText = forwardRef<HTMLSpanElement, GradientTextProps>(({ variant = 'violet', ...props }, ref) => (
+const GradientText = forwardRef<HTMLElement, GradientTextProps>(({ variant = 'violet', ...props }, ref) => (
   <BaseGradientText ref={ref} variant={variant} {...props} />
 ));
 

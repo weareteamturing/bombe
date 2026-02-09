@@ -1,5 +1,5 @@
 import { ColorKey, FontSizeKey, FontWeightKey, LineHeightKey, TypographyKey } from '@teamturing/token-studio';
-import { ComponentPropsWithRef, forwardRef } from 'react';
+import { ElementType, forwardRef, HTMLAttributes } from 'react';
 import styled from 'styled-components';
 import {
   compose,
@@ -32,6 +32,7 @@ import {
 
 type BaseProps = {
   typography?: ResponsiveValue<TypographyKey>;
+  as?: ElementType;
 } & SxProp &
   WordBreakProps &
   WhiteSpaceProps &
@@ -40,7 +41,8 @@ type BaseProps = {
   FontWeightProps<Theme, FontWeightKey> &
   LineHeightProps<Theme, LineHeightKey> &
   TextAlignProps &
-  ColorProps<Theme, ColorKey>;
+  ColorProps<Theme, ColorKey> &
+  HTMLAttributes<HTMLElement>;
 
 const BaseText = styled.span<BaseProps>(
   { 'display': 'block', 'whiteSpace': 'pre-wrap', '& > span': { display: 'inline' } },
@@ -147,9 +149,9 @@ const BaseText = styled.span<BaseProps>(
   sx,
 );
 
-type TextProps = ComponentPropsWithRef<typeof BaseText>;
+type TextProps = BaseProps;
 
-const Text = forwardRef<HTMLSpanElement, TextProps>(({ color = 'text/neutral', ...props }, ref) => (
+const Text = forwardRef<HTMLElement, TextProps>(({ color = 'text/neutral', ...props }, ref) => (
   <BaseText ref={ref} color={color} {...props} />
 ));
 
