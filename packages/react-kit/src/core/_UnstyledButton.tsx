@@ -1,11 +1,11 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, forwardRef } from 'react';
 import styled from 'styled-components';
 
 import { SxProp, sx } from '../utils/styled-system';
 
 type Props = {} & ButtonHTMLAttributes<HTMLButtonElement> & SxProp;
 
-const UnstyledButton = styled.button.attrs<Props>((props) => ({ type: props.type ?? 'button' }))`
+const BaseButton = styled.button<Props>`
   background: none;
   border: 0;
   padding: 0;
@@ -14,6 +14,12 @@ const UnstyledButton = styled.button.attrs<Props>((props) => ({ type: props.type
 
   ${sx}
 `;
+
+const UnstyledButton = forwardRef<HTMLButtonElement, Props>(
+  ({ type = 'button', ...props }, ref) => <BaseButton ref={ref} type={type} {...props} />,
+);
+
+UnstyledButton.displayName = 'UnstyledButton';
 
 export default UnstyledButton;
 export type { Props as UnstyledButtonProps };
