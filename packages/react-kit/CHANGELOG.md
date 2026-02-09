@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.61.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.61.1...@teamturing/react-kit@2.61.2) (2026-02-09)
+
+### Bug Fixes
+
+- **react-kit:** add type; text props ([06c1223](https://github.com/weareteamturing/bombe/commit/06c1223476f0d2a63e70c1fb48ab40065365646c))
+- **react-kit:** fix import order ([b63399b](https://github.com/weareteamturing/bombe/commit/b63399b425544f004a5e38c2744b3bb1d368c94f))
+- **react-kit:** revert to forwardRef ([13c3f46](https://github.com/weareteamturing/bombe/commit/13c3f4683101bba0d208c7b848e72b002bbfe9e5))
+- **react-kit:** use attrs objects instead of forwardRef ([346d192](https://github.com/weareteamturing/bombe/commit/346d19263db374cb6d5935dfcfdc614e7b0fbb28))
+
 ## [2.61.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.61.0...@teamturing/react-kit@2.61.1) (2026-02-09)
 
 ### Bug Fixes
