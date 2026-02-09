@@ -1,4 +1,5 @@
 import { ColorKey, FontSizeKey, FontWeightKey, LineHeightKey, TypographyKey } from '@teamturing/token-studio';
+import { ComponentPropsWithRef, forwardRef } from 'react';
 import styled from 'styled-components';
 import {
   compose,
@@ -29,7 +30,7 @@ import {
   wordBreak,
 } from '../../utils/styled-system';
 
-type Props = {
+type BaseProps = {
   typography?: ResponsiveValue<TypographyKey>;
 } & SxProp &
   WordBreakProps &
@@ -41,7 +42,7 @@ type Props = {
   TextAlignProps &
   ColorProps<Theme, ColorKey>;
 
-const Text = styled.span.attrs<Props>((props) => ({ color: props.color ?? 'text/neutral' }))(
+const BaseText = styled.span<BaseProps>(
   { 'display': 'block', 'whiteSpace': 'pre-wrap', '& > span': { display: 'inline' } },
   ({ theme }) =>
     variant<BetterSystemStyleObject, TypographyKey, 'typography'>({
@@ -146,5 +147,13 @@ const Text = styled.span.attrs<Props>((props) => ({ color: props.color ?? 'text/
   sx,
 );
 
+type TextProps = ComponentPropsWithRef<typeof BaseText>;
+
+const Text = forwardRef<HTMLSpanElement, TextProps>(({ color = 'text/neutral', ...props }, ref) => (
+  <BaseText ref={ref} color={color} {...props} />
+));
+
+Text.displayName = 'Text';
+
 export default Text;
-export type { Props as TextProps };
+export type { TextProps };
