@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.61.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.61.0...@teamturing/react-kit@2.61.1) (2026-02-09)
+
+### Bug Fixes
+
+- **react-kit:** fix default prop; Text, GradientText, \_UnstyledButton ([7f60bff](https://github.com/weareteamturing/bombe/commit/7f60bff804a1c027e68eec66d0e8f602a3399abf))
+- **react-kit:** fix lint... ([42552bf](https://github.com/weareteamturing/bombe/commit/42552bff103fc2e3605148ba3a016af8cace731e))
+- **react-kit:** fix lint.......... ([b6dfb88](https://github.com/weareteamturing/bombe/commit/b6dfb88d0865846a81ed2190c73e0e4abfd60cf5))
+- **react-kit:** fix type ([41b195a](https://github.com/weareteamturing/bombe/commit/41b195af0caa8043964f687707452420c05b4d5c))
+
 # [2.61.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.60.3...@teamturing/react-kit@2.61.0) (2026-02-09)
 
 ### Features
