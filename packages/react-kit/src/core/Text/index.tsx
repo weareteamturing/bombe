@@ -158,3 +158,4 @@ const Text = forwardRef<HTMLSpanElement, PropsWithChildren<Props>>(({ color = 't
 Text.displayName = 'Text';
 
 export default Text;
+export type { Props as TextProps };
