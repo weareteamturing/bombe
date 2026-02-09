@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, type PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
@@ -6,9 +6,9 @@ import { BetterSystemStyleObject } from '../../utils/styled-system';
 import Text from '../Text';
 import type { TextProps } from '../Text';
 
-type GradientTextProps = { variant?: 'violet' | 'pinkBlue' } & TextProps;
+type Props = { variant?: 'violet' | 'pinkBlue' } & TextProps;
 
-const BaseGradientText = styled(Text)<GradientTextProps>(
+const BaseGradientText = styled(Text)<Pick<Props, 'variant'>>(
   ({ theme }) =>
     variant<BetterSystemStyleObject>({
       prop: 'variant',
@@ -24,11 +24,11 @@ const BaseGradientText = styled(Text)<GradientTextProps>(
   },
 );
 
-const GradientText = forwardRef<HTMLSpanElement, GradientTextProps>(({ variant = 'violet', ...props }, ref) => (
+const GradientText = forwardRef<HTMLSpanElement, PropsWithChildren<Props>>(({ variant = 'violet', ...props }, ref) => (
   <BaseGradientText ref={ref} variant={variant} {...props} />
 ));
 
 GradientText.displayName = 'GradientText';
 
 export default GradientText;
-export type { GradientTextProps };
+export type { Props as GradientTextProps };
