@@ -24,7 +24,7 @@ const BaseGradientText = styled(Text)<GradientTextProps>(
   },
 );
 
-const GradientText = forwardRef<HTMLElement, GradientTextProps>(({ variant = 'violet', ...props }, ref) => (
+const GradientText = forwardRef<HTMLSpanElement, GradientTextProps>(({ variant = 'violet', ...props }, ref) => (
   <BaseGradientText ref={ref} variant={variant} {...props} />
 ));
 
