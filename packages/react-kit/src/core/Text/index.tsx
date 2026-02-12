@@ -1,5 +1,5 @@
 import { ColorKey, FontSizeKey, FontWeightKey, LineHeightKey, TypographyKey } from '@teamturing/token-studio';
-import { type ElementType, forwardRef, type HTMLAttributes, type PropsWithChildren } from 'react';
+import { forwardRef, type HTMLAttributes, type PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import {
   compose,
@@ -19,6 +19,7 @@ import {
 } from 'styled-system';
 
 import {
+  AsProp,
   BetterSystemStyleObject,
   SxProp,
   TextDecorationProps,
@@ -42,9 +43,7 @@ type StyleProps = {
   TextAlignProps &
   ColorProps<Theme, ColorKey>;
 
-type Props = StyleProps & {
-  as?: ElementType;
-} & Omit<HTMLAttributes<HTMLElement>, 'color'>;
+type Props = StyleProps & AsProp & Omit<HTMLAttributes<HTMLElement>, 'color'>;
 
 const BaseText = styled.span<StyleProps>(
   { 'display': 'block', 'whiteSpace': 'pre-wrap', '& > span': { display: 'inline' } },
