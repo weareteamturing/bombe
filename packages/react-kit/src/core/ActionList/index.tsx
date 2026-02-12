@@ -20,15 +20,21 @@ type Props = {
    * `multiple`: 모든 아이템에 Checkbox를 표시합니다.
    */
   selectionVariant?: 'single' | 'multiple';
+  /**
+   * 선택 표시(CheckIcon, Checkbox)의 위치를 결정합니다.
+   * `leading`: LeadingVisual 앞에 표시합니다. (기본값)
+   * `trailing`: TrailingVisual 뒤에 표시합니다.
+   */
+  selectionPosition?: 'leading' | 'trailing';
   onSelect?: (event: ReactMouseEvent<HTMLLIElement> | ReactKeyboardEvent<HTMLLIElement>) => void;
 } & SxProp;
 
-type ActionListContextValue = {} & Pick<Props, 'selectionVariant' | 'onSelect'>;
+type ActionListContextValue = {} & Pick<Props, 'selectionVariant' | 'selectionPosition' | 'onSelect'>;
 const ActionListContext = createContext<ActionListContextValue>({});
 
-const ActionList = ({ selectionVariant, onSelect, ...props }: PropsWithChildren<Props>) => {
+const ActionList = ({ selectionVariant, selectionPosition, onSelect, ...props }: PropsWithChildren<Props>) => {
   return (
-    <ActionListContext.Provider value={{ selectionVariant, onSelect }}>
+    <ActionListContext.Provider value={{ selectionVariant, selectionPosition, onSelect }}>
       <BaseActionList className={'action_list'} role={'menu'} {...props} />
     </ActionListContext.Provider>
   );

@@ -52,7 +52,7 @@ const ActionListItem = ({
   onBlur,
   sx,
 }: PropsWithChildren<Props>) => {
-  const { selectionVariant, onSelect: defaultOnSelect } = useContext(ActionListContext);
+  const { selectionVariant, selectionPosition = 'leading', onSelect: defaultOnSelect } = useContext(ActionListContext);
 
   if (!selectionVariant && selected) {
     throw new Error('To use selected props in ActionList.Item, ActionList selectionVariant props should be defined.');
@@ -84,6 +84,33 @@ const ActionListItem = ({
     [handleSelect, disabled],
   );
 
+  const selectionContent = !isNullable(selectionVariant) ? (
+    <View
+      className={'action_list_item__selection_wrapper'}
+      display={'inline-flex'}
+      minWidth={20}
+      sx={{
+        ...(selectionPosition === 'trailing' ? { ml: 2 } : { mr: 2 }),
+        '& svg': { color: 'icon/selected/primary' },
+      }}
+    >
+      {selectionVariant === 'single' ? (
+        selected ? (
+          <StyledIcon className={'action_list_item__selection_wrapper_single'} icon={CheckIcon} size={20} />
+        ) : null
+      ) : selectionVariant === 'multiple' ? (
+        <FakeCheckbox
+          className={'action_list_item__selection_wrapper_multiple'}
+          aria-checked={selected}
+          checked={selected}
+          onChange={noop}
+          aria-disabled={disabled}
+          disabled={disabled}
+        />
+      ) : null}
+    </View>
+  ) : null;
+
   return (
     <BaseActionListItem
       variant={variant}
@@ -94,29 +121,7 @@ const ActionListItem = ({
       onFocus={onFocus}
       onBlur={onBlur}
     >
-      {!isNullable(selectionVariant) ? (
-        <View
-          className={'action_list_item__selection_wrapper'}
-          display={'inline-flex'}
-          minWidth={20}
-          sx={{ 'mr': 2, '& svg': { color: 'icon/selected/primary' } }}
-        >
-          {selectionVariant === 'single' ? (
-            selected ? (
-              <StyledIcon className={'action_list_item__selection_wrapper_single'} icon={CheckIcon} size={20} />
-            ) : null
-          ) : selectionVariant === 'multiple' ? (
-            <FakeCheckbox
-              className={'action_list_item__selection_wrapper_multiple'}
-              aria-checked={selected}
-              checked={selected}
-              onChange={noop}
-              aria-disabled={disabled}
-              disabled={disabled}
-            />
-          ) : null}
-        </View>
-      ) : null}
+      {selectionPosition === 'leading' && selectionContent}
       <VisualWrapper
         className={'action_list_item__leading_visual'}
         display={'inline-flex'}
@@ -162,6 +167,7 @@ const ActionListItem = ({
           (TrailingVisual as ReactNode)
         )}
       </VisualWrapper>
+      {selectionPosition === 'trailing' && selectionContent}
     </BaseActionListItem>
   );
 };
