@@ -26,6 +26,7 @@ export { default as arrow_right_limit } from '@teamturing/icons/svg/arrow_right_
 export { default as arrow_up } from '@teamturing/icons/svg/arrow_up.svg';
 export { default as arrow_up_down } from '@teamturing/icons/svg/arrow_up_down.svg';
 export { default as arrow_up_limit } from '@teamturing/icons/svg/arrow_up_limit.svg';
+export { default as atom } from '@teamturing/icons/svg/atom.svg';
 export { default as barchart } from '@teamturing/icons/svg/barchart.svg';
 export { default as book } from '@teamturing/icons/svg/book.svg';
 export { default as book_color } from '@teamturing/icons/svg/book_color.svg';
@@ -33,6 +34,7 @@ export { default as bookmark } from '@teamturing/icons/svg/bookmark.svg';
 export { default as bookmark_animation } from '@teamturing/icons/svg/bookmark_animation.svg';
 export { default as box } from '@teamturing/icons/svg/box.svg';
 export { default as box_plus } from '@teamturing/icons/svg/box_plus.svg';
+export { default as brush_twinkle } from '@teamturing/icons/svg/brush_twinkle.svg';
 export { default as bullet_list } from '@teamturing/icons/svg/bullet_list.svg';
 export { default as bus_color } from '@teamturing/icons/svg/bus_color.svg';
 export { default as calendar } from '@teamturing/icons/svg/calendar.svg';
@@ -54,6 +56,7 @@ export { default as chat_bubble_badge_color } from '@teamturing/icons/svg/chat_b
 export { default as chat_bubble_correct } from '@teamturing/icons/svg/chat_bubble_correct.svg';
 export { default as chat_bubble_correct_color } from '@teamturing/icons/svg/chat_bubble_correct_color.svg';
 export { default as chat_bubble_dots } from '@teamturing/icons/svg/chat_bubble_dots.svg';
+export { default as chat_bubble_dots_twinkle } from '@teamturing/icons/svg/chat_bubble_dots_twinkle.svg';
 export { default as chat_bubble_question } from '@teamturing/icons/svg/chat_bubble_question.svg';
 export { default as chat_bubble_question_animation } from '@teamturing/icons/svg/chat_bubble_question_animation.svg';
 export { default as chat_bubble_question_color } from '@teamturing/icons/svg/chat_bubble_question_color.svg';
