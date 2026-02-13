@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.62.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.62.1...@teamturing/react-kit@2.62.2) (2026-02-13)
+
+### Bug Fixes
+
+- **react-kit:** fix Text, GradientText with polymorphic type ([1a2d988](https://github.com/weareteamturing/bombe/commit/1a2d988640479f550b9e0f7efab1153a701908e9))
+- **react-kit:** revert incorrect fix ([5ed1e60](https://github.com/weareteamturing/bombe/commit/5ed1e60ac3ad20de5487e68628730494db1f923d))
+
 ## [2.62.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.62.0...@teamturing/react-kit@2.62.1) (2026-02-13)
 
 **Note:** Version bump only for package @teamturing/react-kit
