@@ -146,7 +146,5 @@ const Text = styled.span.attrs<Props>((props) => ({ color: props.color ?? 'text/
   sx,
 );
 
-Text.displayName = 'Text';
-
 export default Text;
 export type { Props as TextProps };

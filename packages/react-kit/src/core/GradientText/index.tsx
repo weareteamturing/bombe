@@ -7,9 +7,7 @@ import type { TextProps } from '../Text';
 
 type Props = { variant?: 'violet' | 'pinkBlue' } & TextProps;
 
-const GradientText = styled(Text).attrs<Pick<Props, 'variant'>>((props) => ({
-  variant: props.variant ?? 'violet',
-}))(
+const GradientText = styled(Text).attrs<Props>((props) => ({ variant: props.variant ?? 'violet' }))(
   ({ theme }) =>
     variant<BetterSystemStyleObject>({
       prop: 'variant',
@@ -24,8 +22,6 @@ const GradientText = styled(Text).attrs<Pick<Props, 'variant'>>((props) => ({
     WebkitTextFillColor: 'transparent',
   },
 );
-
-GradientText.displayName = 'GradientText';
 
 export default GradientText;
 export type { Props as GradientTextProps };
