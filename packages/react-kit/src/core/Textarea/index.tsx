@@ -12,7 +12,7 @@ type Props = {
 
 const Textarea = forwardRef<HTMLTextAreaElement, Props>(
   (
-    { validationStatus, disabled, renderCount = (count) => `${commaizeNumber(count)}자`, ...props }: Props,
+    { validationStatus, disabled, renderCount = (count) => `${commaizeNumber(count)}`, ...props }: Props,
     ref: Ref<HTMLTextAreaElement>,
   ) => {
     const inputRef = useProvidedOrCreatedRef(ref as RefObject<HTMLTextAreaElement>);

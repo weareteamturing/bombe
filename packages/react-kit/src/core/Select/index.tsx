@@ -12,7 +12,7 @@ import {
   useEffect,
 } from 'react';
 import { isValidElementType } from 'react-is';
-import styled, { css } from 'styled-components';
+import styled, { css, useTheme } from 'styled-components';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 import StyledIcon from '../StyledIcon';
@@ -43,11 +43,13 @@ const Select = (
     validationStatus,
     disabledPlaceholderOption = false,
     leadingVisual: LeadingVisual,
-    placeholder = '옵션 선택',
+    placeholder: propPlaceholder,
     ...props
   }: Props,
   ref: Ref<HTMLSelectElement>,
 ) => {
+  const theme = useTheme();
+  const placeholder = propPlaceholder ?? theme.locales?.Select?.placeholder ?? '옵션 선택';
   const PLACEHOLDER_VALUE = '';
 
   const selectRef = useProvidedOrCreatedRef(ref as RefObject<HTMLSelectElement>);

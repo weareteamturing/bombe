@@ -1,7 +1,7 @@
 import { ShareIcon } from '@teamturing/icons';
 import { forcePixelValue } from '@teamturing/utils';
 import { DragEventHandler, InputHTMLAttributes, Ref, forwardRef, useImperativeHandle, useRef } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 import Button, { ButtonProps } from '../Button';
 
@@ -10,10 +10,16 @@ type Props = {
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'type'>;
 
 const UploadInput = (
-  { buttonProps: propsButtonProps, placeholder = '파일을 끌어다 놓으세요', accept, disabled, ...props }: Props,
+  { buttonProps: propsButtonProps, placeholder: propPlaceholder, accept, disabled, ...props }: Props,
   ref: Ref<HTMLInputElement>,
 ) => {
-  const defaultButtonProps: ButtonProps = { children: '파일 선택', size: 's', variant: 'neutral' };
+  const theme = useTheme();
+  const placeholder = propPlaceholder ?? theme.locales?.UploadInput?.placeholder ?? '파일을 끌어다 놓으세요';
+  const defaultButtonProps: ButtonProps = {
+    children: theme.locales?.UploadInput?.selectFile ?? '파일 선택',
+    size: 's',
+    variant: 'neutral',
+  };
   const buttonProps = { ...defaultButtonProps, ...propsButtonProps };
 
   const inputRef = useRef<HTMLInputElement>(null);

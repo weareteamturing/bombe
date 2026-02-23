@@ -30,6 +30,13 @@ const theme = {
       defaultVariant: 'progress-gradient' as const,
     },
   },
+
+  locales: {
+    FormControl: { optionalLabel: ' (선택)' },
+    Pagination: { previous: '이전', next: '다음' },
+    Select: { placeholder: '옵션 선택' },
+    UploadInput: { placeholder: '파일을 끌어다 놓으세요', selectFile: '파일 선택' },
+  },
 };
 
 const gpaiLightTheme = {

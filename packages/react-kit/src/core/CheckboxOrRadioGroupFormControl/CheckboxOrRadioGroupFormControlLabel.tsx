@@ -1,8 +1,8 @@
-import { SxProp, sx } from '@teamturing/react-kit';
 import { forcePixelValue } from '@teamturing/utils';
 import { PropsWithChildren, useContext } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
+import { SxProp, sx } from '../../utils/styled-system';
 import View from '../View';
 
 import { CheckboxOrRadioGroupFormControlContext, CheckboxOrRadioGroupFormControlContextValue } from '.';
@@ -13,6 +13,7 @@ type Props = {
 
 const CheckboxOrRadioGroupFormControlLabel = ({ children, visuallyHidden, ...props }: PropsWithChildren<Props>) => {
   const { id, disabled, required } = useContext(CheckboxOrRadioGroupFormControlContext);
+  const theme = useTheme();
 
   return (
     <VisuallyHidden
@@ -29,7 +30,7 @@ const CheckboxOrRadioGroupFormControlLabel = ({ children, visuallyHidden, ...pro
             className={'checkbox_or_radio_group_form_control_label__required__false'}
             aria-hidden="true"
           >
-            {' (선택)'}
+            {theme.locales?.FormControl?.optionalLabel ?? ' (선택)'}
           </View>
         ) : null}
       </LabelWrapper>

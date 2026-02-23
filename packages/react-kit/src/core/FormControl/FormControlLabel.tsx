@@ -1,6 +1,6 @@
 import { forcePixelValue } from '@teamturing/utils';
 import { PropsWithChildren, useContext } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 import { SxProp, sx } from '../../utils/styled-system';
 import View from '../View';
@@ -13,6 +13,7 @@ type Props = {
 
 const FormControlLabel = ({ children, visuallyHidden, ...props }: PropsWithChildren<Props>) => {
   const { id, disabled, required } = useContext(FormControlContext);
+  const theme = useTheme();
 
   return (
     <VisuallyHidden
@@ -25,7 +26,7 @@ const FormControlLabel = ({ children, visuallyHidden, ...props }: PropsWithChild
         {children}
         {typeof required === 'boolean' && required === false ? (
           <View as={'span'} className={'form_control_label__required__false'} aria-hidden="true">
-            {' (선택)'}
+            {theme.locales?.FormControl?.optionalLabel ?? ' (선택)'}
           </View>
         ) : null}
       </LabelWrapper>

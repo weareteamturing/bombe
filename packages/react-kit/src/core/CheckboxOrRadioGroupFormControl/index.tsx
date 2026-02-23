@@ -1,6 +1,7 @@
-import { SxProp, useRelocation } from '@teamturing/react-kit';
 import { PropsWithChildren, ReactElement, Ref, cloneElement, createContext, forwardRef, isValidElement } from 'react';
 
+import useRelocation from '../../hook/useRelocation';
+import { SxProp } from '../../utils/styled-system';
 import CheckboxGroup from '../CheckboxGroup';
 import RadioGroup from '../RadioGroup';
 import View from '../View';
