@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.63.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.62.3...@teamturing/react-kit@2.63.0) (2026-02-23)
+
+### Features
+
+- **web:** update design system to support locales ([302e3b0](https://github.com/weareteamturing/bombe/commit/302e3b00252436f2c669a82639d9c881c61a94b0))
+
 ## [2.62.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.62.2...@teamturing/react-kit@2.62.3) (2026-02-13)
 
 ### Bug Fixes
