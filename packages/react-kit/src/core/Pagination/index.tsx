@@ -1,7 +1,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@teamturing/icons';
 import { forcePixelValue, noop } from '@teamturing/utils';
 import { Fragment, ReactNode, useCallback } from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, useTheme } from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
@@ -54,20 +54,27 @@ const Pagination = <T extends { label: string }>({
     </PaginationPage>
   ),
   renderPageWrapper = (children, { label }, i) => <Fragment key={[label, i].join('-')}>{children}</Fragment>,
-  renderPreviousPageDirection = ({ previousPageDirectionProps }) => (
-    <PaginationPageDirection {...previousPageDirectionProps}>
-      <ChevronLeftIcon />
-      이전
-    </PaginationPageDirection>
-  ),
-  renderNextPageDirection = ({ nextPageDirectionProps }) => (
-    <PaginationPageDirection {...nextPageDirectionProps}>
-      다음
-      <ChevronRightIcon />
-    </PaginationPageDirection>
-  ),
+  renderPreviousPageDirection: propRenderPreviousPageDirection,
+  renderNextPageDirection: propRenderNextPageDirection,
   renderTruncationIndicator = () => <PaginationTruncationIndicator>&hellip;</PaginationTruncationIndicator>,
 }: Props<T>) => {
+  const theme = useTheme();
+  const renderPreviousPageDirection =
+    propRenderPreviousPageDirection ??
+    (({ previousPageDirectionProps }: { previousPageDirectionProps: PaginationPageDirectionProps }) => (
+      <PaginationPageDirection {...previousPageDirectionProps}>
+        <ChevronLeftIcon />
+        {theme.locales?.Pagination?.previous ?? '이전'}
+      </PaginationPageDirection>
+    ));
+  const renderNextPageDirection =
+    propRenderNextPageDirection ??
+    (({ nextPageDirectionProps }: { nextPageDirectionProps: PaginationPageDirectionProps }) => (
+      <PaginationPageDirection {...nextPageDirectionProps}>
+        {theme.locales?.Pagination?.next ?? '다음'}
+        <ChevronRightIcon />
+      </PaginationPageDirection>
+    ));
   const CURRENT_PAGE_COUNT = 1;
   const totalVisiblePageCount = CURRENT_PAGE_COUNT + 2 * aroundPageCount + 2 * edgePageCount;
 
