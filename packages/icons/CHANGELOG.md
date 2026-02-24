@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.67.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.66.0...@teamturing/icons@1.67.0) (2026-02-24)
+
+### Features
+
+- **icons:** add KeyboardDown icon ([a64033d](https://github.com/weareteamturing/bombe/commit/a64033d07367703ce66de3a985aca8e22744019e))
+
 # [1.66.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.65.0...@teamturing/icons@1.66.0) (2026-02-13)
 
 ### Features
