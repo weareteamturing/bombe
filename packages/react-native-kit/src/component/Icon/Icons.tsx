@@ -126,6 +126,7 @@ export { default as infinite } from '@teamturing/icons/svg/infinite.svg';
 export { default as info_in_circle } from '@teamturing/icons/svg/info_in_circle.svg';
 export { default as instagram } from '@teamturing/icons/svg/instagram.svg';
 export { default as kakao_color } from '@teamturing/icons/svg/kakao_color.svg';
+export { default as keyboard_down } from '@teamturing/icons/svg/keyboard_down.svg';
 export { default as kor } from '@teamturing/icons/svg/kor.svg';
 export { default as landscape_arrow } from '@teamturing/icons/svg/landscape_arrow.svg';
 export { default as league } from '@teamturing/icons/svg/league.svg';

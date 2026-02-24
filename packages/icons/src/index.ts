@@ -126,6 +126,7 @@ export { default as InfiniteIcon } from './Infinite';
 export { default as InfoInCircleIcon } from './InfoInCircle';
 export { default as InstagramIcon } from './Instagram';
 export { default as KakaoColorIcon } from './KakaoColor';
+export { default as KeyboardDownIcon } from './KeyboardDown';
 export { default as KorIcon } from './Kor';
 export { default as LandscapeArrowIcon } from './LandscapeArrow';
 export { default as LeagueIcon } from './League';
