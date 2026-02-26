@@ -124,6 +124,7 @@ export { default as HeartIcon } from './Heart';
 export { default as HomeIcon } from './Home';
 export { default as InfiniteIcon } from './Infinite';
 export { default as InfoInCircleIcon } from './InfoInCircle';
+export { default as InkPenTwinkleIcon } from './InkPenTwinkle';
 export { default as InstagramIcon } from './Instagram';
 export { default as KakaoColorIcon } from './KakaoColor';
 export { default as KeyboardDownIcon } from './KeyboardDown';
