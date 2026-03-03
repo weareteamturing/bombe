@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.36.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.35.0...@teamturing/react-native-kit@1.36.0) (2026-03-03)
+
+### Features
+
+- **icons:** add flask, ai, area icons ([648badf](https://github.com/weareteamturing/bombe/commit/648badf3e207dcd84601b8f5e841cc8f0f782adf))
+
 # [1.35.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.34.0...@teamturing/react-native-kit@1.35.0) (2026-02-26)
 
 ### Features

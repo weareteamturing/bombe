@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.69.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.68.0...@teamturing/icons@1.69.0) (2026-03-03)
+
+### Features
+
+- **icons:** add flask, ai, area icons ([648badf](https://github.com/weareteamturing/bombe/commit/648badf3e207dcd84601b8f5e841cc8f0f782adf))
+
 # [1.68.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.67.0...@teamturing/icons@1.68.0) (2026-02-26)
 
 ### Features
