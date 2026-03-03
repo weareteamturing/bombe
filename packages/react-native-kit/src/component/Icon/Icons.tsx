@@ -4,6 +4,7 @@ export { default as a_vertial_line } from '@teamturing/icons/svg/a_vertial_line.
 export { default as ai } from '@teamturing/icons/svg/ai.svg';
 export { default as ai_color } from '@teamturing/icons/svg/ai_color.svg';
 export { default as ai_sad } from '@teamturing/icons/svg/ai_sad.svg';
+export { default as ai_square } from '@teamturing/icons/svg/ai_square.svg';
 export { default as alarm } from '@teamturing/icons/svg/alarm.svg';
 export { default as alphabet_bold } from '@teamturing/icons/svg/alphabet_bold.svg';
 export { default as alphabet_heading_1 } from '@teamturing/icons/svg/alphabet_heading_1.svg';
@@ -13,6 +14,7 @@ export { default as alphabet_italic } from '@teamturing/icons/svg/alphabet_itali
 export { default as alphabet_text } from '@teamturing/icons/svg/alphabet_text.svg';
 export { default as alphabet_underline } from '@teamturing/icons/svg/alphabet_underline.svg';
 export { default as apple_color } from '@teamturing/icons/svg/apple_color.svg';
+export { default as area } from '@teamturing/icons/svg/area.svg';
 export { default as arrow_below } from '@teamturing/icons/svg/arrow_below.svg';
 export { default as arrow_diagonal } from '@teamturing/icons/svg/arrow_diagonal.svg';
 export { default as arrow_down } from '@teamturing/icons/svg/arrow_down.svg';
@@ -112,6 +114,7 @@ export { default as find } from '@teamturing/icons/svg/find.svg';
 export { default as fire } from '@teamturing/icons/svg/fire.svg';
 export { default as fire_color } from '@teamturing/icons/svg/fire_color.svg';
 export { default as flag } from '@teamturing/icons/svg/flag.svg';
+export { default as flask } from '@teamturing/icons/svg/flask.svg';
 export { default as folder } from '@teamturing/icons/svg/folder.svg';
 export { default as frame } from '@teamturing/icons/svg/frame.svg';
 export { default as glasses } from '@teamturing/icons/svg/glasses.svg';
