@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.64.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.63.3...@teamturing/react-kit@2.64.0) (2026-03-08)
+
+### Features
+
+- **react-kit:** add icon toggle button variant, plain-bold ([36444ef](https://github.com/weareteamturing/bombe/commit/36444ef0668a3991d7fd00b04024f7d963c92aa1))
+
 ## [2.63.3](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.63.2...@teamturing/react-kit@2.63.3) (2026-03-03)
 
 **Note:** Version bump only for package @teamturing/react-kit

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.37.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.36.0...@teamturing/react-native-kit@1.37.0) (2026-03-08)
+
+### Features
+
+- **icons:** add hand icon and 9 more ([fda35f9](https://github.com/weareteamturing/bombe/commit/fda35f90ada3e3804b9bb83e37e4fbc7251c9ee1))
+
 # [1.36.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.35.0...@teamturing/react-native-kit@1.36.0) (2026-03-03)
 
 ### Features

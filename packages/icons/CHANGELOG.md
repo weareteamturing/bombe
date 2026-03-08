@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.70.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.69.0...@teamturing/icons@1.70.0) (2026-03-08)
+
+### Features
+
+- **icons:** add hand icon and 9 more ([fda35f9](https://github.com/weareteamturing/bombe/commit/fda35f90ada3e3804b9bb83e37e4fbc7251c9ee1))
+
 # [1.69.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.68.0...@teamturing/icons@1.69.0) (2026-03-03)
 
 ### Features
