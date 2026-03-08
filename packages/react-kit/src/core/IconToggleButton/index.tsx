@@ -7,7 +7,7 @@ import UnstyledButton, { UnstyledButtonProps } from '../_UnstyledButton';
 
 type IconToggleButtonSizeType = 'l' | 'm' | 's';
 type IconToggleButtonShapeType = 'circle' | 'rounded';
-type IconToggleButtonVariantType = 'primary' | 'plain' | 'blue' | 'plain-neutral';
+type IconToggleButtonVariantType = 'primary' | 'plain' | 'blue' | 'plain-neutral' | 'plain-bold';
 
 type Props = {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
@@ -168,6 +168,23 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
               }
             : {
                 color: theme.colors['icon/neutral'],
+              }),
+          ...($disabled
+            ? {
+                backgroundColor: theme.colors['bg/disabled/subtlest'],
+                color: theme.colors['icon/disabled/subtler'],
+              }
+            : {}),
+        },
+        'plain-bold': {
+          ...(selected
+            ? {
+                backgroundColor: theme.colors['bg/secondary'],
+                color: theme.colors['icon/selected/primary'],
+              }
+            : {
+                backgroundColor: theme.colors['bg/neutral/subtler'],
+                color: theme.colors['icon/neutral/bold'],
               }),
           ...($disabled
             ? {
