@@ -101,7 +101,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
                   bottom: 0,
                   width: forcePixelValue(gradientWidth),
                   height: '100%',
-                  background: `linear-gradient(${theme.gradients['overlay/floating/toright']})`,
+                  background: `linear-gradient(to right, ${theme.colors['surface']} 0%, transparent 100%)`,
                   pointerEvents: 'none',
                 }}
               />
@@ -130,7 +130,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
                   bottom: 0,
                   width: forcePixelValue(gradientWidth),
                   height: '100%',
-                  background: `linear-gradient(${theme.gradients['overlay/floating/toleft']})`,
+                  background: `linear-gradient(to left, ${theme.colors['surface']} 0%, transparent 100%)`,
                   pointerEvents: 'none',
                 }}
               />
