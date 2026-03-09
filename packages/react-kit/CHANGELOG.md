@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.64.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.64.0...@teamturing/react-kit@2.64.1) (2026-03-09)
+
+### Bug Fixes
+
+- **web:** update tab gradient for dark mode ([4014a89](https://github.com/weareteamturing/bombe/commit/4014a89c1bdd8923d461bb5b98eaadf7a2629ba0))
+
 # [2.64.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.63.3...@teamturing/react-kit@2.64.0) (2026-03-08)
 
 ### Features
