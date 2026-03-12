@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.71.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.70.0...@teamturing/icons@1.71.0) (2026-03-12)
+
+### Features
+
+- **icons:** add arrows, isolate and typography icon ([49abe3b](https://github.com/weareteamturing/bombe/commit/49abe3bf37024beeb246001518dee619c6177a49))
+
 # [1.70.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.69.0...@teamturing/icons@1.70.0) (2026-03-08)
 
 ### Features

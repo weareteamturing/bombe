@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.38.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.37.0...@teamturing/react-native-kit@1.38.0) (2026-03-12)
+
+### Features
+
+- **icons:** add arrows, isolate and typography icon ([49abe3b](https://github.com/weareteamturing/bombe/commit/49abe3bf37024beeb246001518dee619c6177a49))
+
 # [1.37.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.36.0...@teamturing/react-native-kit@1.37.0) (2026-03-08)
 
 ### Features
