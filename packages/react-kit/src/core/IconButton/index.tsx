@@ -6,6 +6,8 @@ import { BetterSystemStyleObject } from '../../utils/styled-system';
 import Spinner from '../Spinner';
 import UnstyledButton, { UnstyledButtonProps } from '../_UnstyledButton';
 
+type IconButtonVariantType = 'primary' | 'secondary' | 'neutral' | 'outlined' | 'plain-bold' | 'plain' | 'plain-subtle' | 'danger';
+
 type Props = {
   /**
    * IconButton에 사용할 아이콘을 정의합니다.
@@ -19,8 +21,9 @@ type Props = {
   /**
    * 색을 정의합니다.
    * hover, active, focused, disabled, loading 등의 모든 상황에 관여합니다.
+   * 반응형 디자인이 적용됩니다.
    */
-  variant?: 'primary' | 'secondary' | 'neutral' | 'outlined' | 'plain-bold' | 'plain' | 'plain-subtle' | 'danger';
+  variant?: ResponsiveValue<IconButtonVariantType>;
   /**
    * 비활성화 상태를 정의합니다.
    */
@@ -86,7 +89,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
     },
   }),
   ({ $disabled, theme }) =>
-    variant<BetterSystemStyleObject, NonNullable<Props['variant']>>({
+    variant<BetterSystemStyleObject, IconButtonVariantType>({
       prop: 'variant',
       variants: {
         'primary': {
