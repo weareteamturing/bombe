@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.39.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.38.0...@teamturing/react-native-kit@1.39.0) (2026-03-16)
+
+### Features
+
+- **icons:** add text_box icon ([76dc6a0](https://github.com/weareteamturing/bombe/commit/76dc6a074d19e7c0ee3f76ca99faa7b2e481f06e))
+
 # [1.38.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.37.0...@teamturing/react-native-kit@1.38.0) (2026-03-12)
 
 ### Features

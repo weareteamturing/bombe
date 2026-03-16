@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.65.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.64.2...@teamturing/react-kit@2.65.0) (2026-03-16)
+
+### Bug Fixes
+
+- **react-kit:** fix lint error ([9cc0498](https://github.com/weareteamturing/bombe/commit/9cc0498de4e81cd39841add84ffe38eaf5c0ab29))
+
+### Features
+
+- **react-kit:** support responsive variant prop with icon button ([389ce7f](https://github.com/weareteamturing/bombe/commit/389ce7f68b5756d24177d54dc81568ca63c1d60b))
+
 ## [2.64.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.64.1...@teamturing/react-kit@2.64.2) (2026-03-12)
 
 **Note:** Version bump only for package @teamturing/react-kit
