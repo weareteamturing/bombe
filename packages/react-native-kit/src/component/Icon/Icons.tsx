@@ -248,6 +248,7 @@ export { default as sun } from '@teamturing/icons/svg/sun.svg';
 export { default as sync } from '@teamturing/icons/svg/sync.svg';
 export { default as telescope } from '@teamturing/icons/svg/telescope.svg';
 export { default as test_upload_color } from '@teamturing/icons/svg/test_upload_color.svg';
+export { default as text_box } from '@teamturing/icons/svg/text_box.svg';
 export { default as thumbdown } from '@teamturing/icons/svg/thumbdown.svg';
 export { default as thumbup } from '@teamturing/icons/svg/thumbup.svg';
 export { default as thunder } from '@teamturing/icons/svg/thunder.svg';
