@@ -6,7 +6,15 @@ import { BetterSystemStyleObject } from '../../utils/styled-system';
 import Spinner from '../Spinner';
 import UnstyledButton, { UnstyledButtonProps } from '../_UnstyledButton';
 
-type IconButtonVariantType = 'primary' | 'secondary' | 'neutral' | 'outlined' | 'plain-bold' | 'plain' | 'plain-subtle' | 'danger';
+type IconButtonVariantType =
+  | 'primary'
+  | 'secondary'
+  | 'neutral'
+  | 'outlined'
+  | 'plain-bold'
+  | 'plain'
+  | 'plain-subtle'
+  | 'danger';
 
 type Props = {
   /**
