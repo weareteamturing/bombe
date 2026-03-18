@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.73.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.72.0...@teamturing/icons@1.73.0) (2026-03-18)
+
+### Features
+
+- **icons:** add group/ungroup icon ([182caa0](https://github.com/weareteamturing/bombe/commit/182caa02efd8f7e3c43e2396e2b4e0a83295566b))
+
 # [1.72.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.71.0...@teamturing/icons@1.72.0) (2026-03-16)
 
 ### Features
