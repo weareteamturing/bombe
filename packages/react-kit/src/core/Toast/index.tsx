@@ -1,15 +1,21 @@
 import { CheckInCircleIcon, ExclamationPointInCircleIcon } from '@teamturing/icons';
-import { PropsWithChildren } from 'react';
+import { ComponentType, PropsWithChildren, SVGProps } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
 import { BetterSystemStyleObject } from '../../utils/styled-system';
 
+type ToastVariantType = 'success' | 'warning';
 type Props = {
   /**
    * 변주에 대해 정의합니다.
    */
-  variant?: 'success' | 'warning';
+  variant?: ToastVariantType;
+  /**
+   * 아이콘을 정의합니다.
+   * 기본값은 variant에 따라 결정됩니다.
+   */
+  icon?: ComponentType<SVGProps<SVGSVGElement>>;
   /**
    * 크기 변화에 대한 행동을 정의합니다.
    * 반응형 디자인이 적용됩니다.
@@ -17,15 +23,15 @@ type Props = {
   resizing?: ResponsiveValue<'hug' | 'fill'>;
 };
 
-const Toast = ({ variant = 'success', resizing = 'hug', children }: PropsWithChildren<Props>) => {
-  const IconByVariant = {
-    success: CheckInCircleIcon,
-    warning: ExclamationPointInCircleIcon,
-  }[variant];
-
+const Toast = ({
+  variant = 'success',
+  icon: Icon = variant === 'success' ? CheckInCircleIcon : ExclamationPointInCircleIcon,
+  resizing = 'hug',
+  children,
+}: PropsWithChildren<Props>) => {
   return (
     <BaseToast variant={variant} resizing={resizing}>
-      <IconByVariant />
+      <Icon className={'toast__leading_icon'} />
       {children}
     </BaseToast>
   );
@@ -45,8 +51,7 @@ const BaseToast = styled.div<Props>(
     'fontWeight': theme.fontWeights.medium,
     'lineHeight': theme.lineHeights[2],
 
-    '& div': { margin: 0, display: 'inline-block' },
-    '& svg': {
+    '& .toast__leading_icon': {
       width: 24,
       minWidth: 24,
       height: 24,
@@ -54,16 +59,16 @@ const BaseToast = styled.div<Props>(
     },
   }),
   ({ theme }) =>
-    variant<BetterSystemStyleObject, NonNullable<Props['variant']>>({
+    variant<BetterSystemStyleObject, ToastVariantType>({
       prop: 'variant',
       variants: {
         success: {
-          '& svg': {
+          '& .toast__leading_icon': {
             color: theme.colors['icon/success'],
           },
         },
         warning: {
-          '& svg': {
+          '& .toast__leading_icon': {
             color: theme.colors['icon/warning'],
           },
         },
