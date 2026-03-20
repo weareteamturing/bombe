@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.66.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.65.1...@teamturing/react-kit@2.66.0) (2026-03-20)
+
+### Features
+
+- **react-kit:** add icon prop and className to Toast component ([9630338](https://github.com/weareteamturing/bombe/commit/96303388a954a97e82d14214d0049db3e509174b))
+
 ## [2.65.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.65.0...@teamturing/react-kit@2.65.1) (2026-03-18)
 
 **Note:** Version bump only for package @teamturing/react-kit
