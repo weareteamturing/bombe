@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.67.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.66.0...@teamturing/react-kit@2.67.0) (2026-03-27)
+
+### Features
+
+- **react-kit:** adjust close button position in Dialog and Drawer using theme space values ([61a0209](https://github.com/weareteamturing/bombe/commit/61a020914e4a2eacaa0d1eab3b186bc7ca136c64))
+- **react-kit:** update IconButton m size svg from 24px to 20px ([59d3010](https://github.com/weareteamturing/bombe/commit/59d30103ab64534a763e9f123f467273c7cfb27d))
+- **react-kit:** update IconToggleButton m size svg from 24px to 20px ([5a77073](https://github.com/weareteamturing/bombe/commit/5a77073f3bc6e00b2e4dd37e24569d4ff2058a7d))
+
 # [2.66.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.65.1...@teamturing/react-kit@2.66.0) (2026-03-20)
 
 ### Features
