@@ -1,4 +1,5 @@
 import { CloseIcon } from '@teamturing/icons';
+import { forcePixelValue } from '@teamturing/utils';
 import { easeInOut } from 'framer-motion';
 import {
   forwardRef,
@@ -10,7 +11,7 @@ import {
   useImperativeHandle,
   useRef,
 } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { variant } from 'styled-system';
 
 import useFocusTrap from '../../hook/useFocusTrap';
@@ -53,6 +54,8 @@ const Drawer = (
   }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
 ) => {
+  const theme = useTheme();
+
   const handleDismiss = useCallback(() => onDismiss?.(), [onDismiss]);
 
   const blanketRef = useRef<HTMLSpanElement>(null);
@@ -169,7 +172,7 @@ const Drawer = (
               sx={sx}
               onKeyDown={handleKeyDown}
             >
-              <View sx={{ position: 'absolute', top: 2, right: 5 }}>
+              <View sx={{ position: 'absolute', top: forcePixelValue(theme.space[2] + theme.space['0.5']), right: 5 }}>
                 <IconButton
                   className={'trk-drawer__close_button'}
                   ref={closeButtonRef}
