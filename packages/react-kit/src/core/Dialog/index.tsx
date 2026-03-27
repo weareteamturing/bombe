@@ -1,4 +1,5 @@
 import { CloseIcon } from '@teamturing/icons';
+import { forcePixelValue } from '@teamturing/utils';
 import { AnimatePresence, cubicBezier } from 'framer-motion';
 import {
   forwardRef,
@@ -10,7 +11,7 @@ import {
   useImperativeHandle,
   useRef,
 } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 import IconButton from '../../core/IconButton';
 import View from '../../core/View';
@@ -48,6 +49,8 @@ const Dialog = (
   }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
 ) => {
+  const theme = useTheme();
+
   const handleDismiss = useCallback(() => onDismiss?.(), [onDismiss]);
 
   const blanketRef = useRef<HTMLSpanElement>(null);
@@ -177,7 +180,9 @@ const Dialog = (
                 }}
                 onKeyDown={handleKeyDown}
               >
-                <View sx={{ position: 'absolute', top: 3, right: 3 }}>
+                <View
+                  sx={{ position: 'absolute', top: forcePixelValue(theme.space[3] + theme.space['0.5']), right: 3 }}
+                >
                   <IconButton
                     className={'trk-dialog__close_button'}
                     ref={closeButtonRef}

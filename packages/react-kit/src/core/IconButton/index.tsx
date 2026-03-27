@@ -88,7 +88,7 @@ const BaseIconButton = styled(UnstyledButton)<Props & { $loading?: boolean; $dis
       },
       m: {
         'p': 2,
-        '& svg': { width: 24, height: 24 },
+        '& svg': { width: 20, height: 20 },
       },
       s: {
         'p': 2,

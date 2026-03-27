@@ -90,7 +90,7 @@ const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolea
       },
       m: {
         'p': 2,
-        '& svg': { width: 24, height: 24 },
+        '& svg': { width: 20, height: 20 },
       },
       s: {
         'p': 2,
