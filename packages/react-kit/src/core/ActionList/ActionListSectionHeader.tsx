@@ -18,7 +18,7 @@ const BaseActionListSectionHeader = styled.div<Props>`
 
   white-space: pre-wrap;
 
-  padding: ${({ theme }) => `${forcePixelValue(theme.space[1])} ${forcePixelValue(theme.space[3])}}`};
+  padding: ${({ theme }) => `${forcePixelValue(theme.space[1])} ${forcePixelValue(theme.space[3])}`};
 
   ${sx};
 `;
