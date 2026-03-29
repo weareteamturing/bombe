@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.67.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.67.0...@teamturing/react-kit@2.67.1) (2026-03-29)
+
+### Bug Fixes
+
+- **react-kit:** fix extra closing brace in ActionListSectionHeader padding causing invalid CSS ([0bae93c](https://github.com/weareteamturing/bombe/commit/0bae93c3360c4fa7034096fd40533688fb87ddb9))
+
 # [2.67.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.66.0...@teamturing/react-kit@2.67.0) (2026-03-27)
 
 ### Features
