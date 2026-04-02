@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.68.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.67.1...@teamturing/react-kit@2.68.0) (2026-04-02)
+
+### Features
+
+- **react-kit:** improve Dialog accessibility and header minHeight ([9c30614](https://github.com/weareteamturing/bombe/commit/9c30614590e29be8639fda8704c5cdc5a3088d7f))
+
 ## [2.67.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.67.0...@teamturing/react-kit@2.67.1) (2026-03-29)
 
 ### Bug Fixes
