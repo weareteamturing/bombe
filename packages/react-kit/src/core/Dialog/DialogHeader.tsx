@@ -1,3 +1,4 @@
+import { forcePixelValue } from '@teamturing/utils';
 import { PropsWithChildren } from 'react';
 
 import UnstyledDialogHeader, { UnstyledDialogHeaderProps } from './_UnstyledDialogHeader';
@@ -10,6 +11,7 @@ const DialogHeader = ({ children, sx, ...props }: PropsWithChildren<Props>) => (
     sx={{
       px: 5,
       py: 4,
+      minHeight: forcePixelValue(63),
       borderBottomWidth: 1,
       borderBottomStyle: 'solid',
       borderBottomColor: 'border/neutral',

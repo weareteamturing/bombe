@@ -8,6 +8,7 @@ import {
   RefObject,
   useCallback,
   useEffect,
+  useId,
   useImperativeHandle,
   useRef,
 } from 'react';
@@ -20,6 +21,7 @@ import { SxProp, sx } from '../../utils/styled-system';
 import MotionView from '../MotionView';
 
 import DialogBody, { DialogBodyProps } from './DialogBody';
+import DialogContext from './DialogContext';
 import DialogFooter, { DialogFooterProps } from './DialogFooter';
 import DialogHeader, { DialogHeaderProps } from './DialogHeader';
 import DialogHeaderSubtitle, { DialogHeaderSubtitleProps } from './DialogHeaderSubtitle';
@@ -50,6 +52,7 @@ const Dialog = (
   ref: Ref<HTMLDivElement>,
 ) => {
   const theme = useTheme();
+  const titleId = useId();
 
   const handleDismiss = useCallback(() => onDismiss?.(), [onDismiss]);
 
@@ -86,7 +89,12 @@ const Dialog = (
     [handleDismiss],
   );
 
-  useFocusTrap({ containerRef: dialogRef, initialFocusRef: initialFocusRef || closeButtonRef, disabled: !isOpen });
+  useFocusTrap({
+    containerRef: dialogRef,
+    initialFocusRef: initialFocusRef || closeButtonRef,
+    disabled: !isOpen,
+    restoreFocusOnCleanUp: true,
+  });
 
   useEffect(() => {
     if (isOpen && isOutsideClickDismissable) {
@@ -127,6 +135,7 @@ const Dialog = (
                 className={`trk-dialog--${size}`}
                 ref={dialogRef}
                 aria-modal={'true'}
+                aria-labelledby={titleId}
                 role={'dialog'}
                 tabIndex={-1}
                 sx={{
@@ -192,7 +201,7 @@ const Dialog = (
                     onClick={handleDismiss}
                   />
                 </View>
-                {children}
+                <DialogContext.Provider value={{ titleId }}>{children}</DialogContext.Provider>
               </BaseDialog>
             </View>
           </MotionView>
