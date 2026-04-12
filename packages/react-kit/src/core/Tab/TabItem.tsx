@@ -44,6 +44,7 @@ const TabItem = ({
 
   return (
     <BaseTabItem
+      className={'trk-tab_item'}
       type={'button'}
       role={'tab'}
       ref={ref}
@@ -54,6 +55,7 @@ const TabItem = ({
       onClick={handleClick}
     >
       <View
+        className={'trk-tab_item__content'}
         sx={{
           display: 'flex',
           flexDirection: 'row',
@@ -63,7 +65,7 @@ const TabItem = ({
         }}
       >
         {LeadingIcon ? <LeadingIcon /> : null}
-        <View>{children}</View>
+        <View className={'trk-tab_item__label'}>{children}</View>
       </View>
     </BaseTabItem>
   );
