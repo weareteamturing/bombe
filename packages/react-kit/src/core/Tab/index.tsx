@@ -7,6 +7,7 @@ import { useTheme } from 'styled-components';
 import { ResponsiveValue } from 'styled-system';
 
 import useResize from '../../hook/useResize';
+import { SxProp } from '../../utils/styled-system';
 import IconButton, { IconButtonProps } from '../IconButton';
 import View from '../View';
 
@@ -16,12 +17,12 @@ type Props = {
   variant?: 'plain' | 'outlined' | 'underline';
   size?: ResponsiveValue<'l' | 'm' | 's'>;
   gap?: ResponsiveValue<SpaceKey>;
-};
+} & SxProp;
 
 type TabContextValue = { containerRef?: RefObject<HTMLElement> } & Props;
 const TabContext = createContext<TabContextValue>({});
 
-const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChildren<Props>) => {
+const Tab = ({ variant = 'plain', size = 'm', gap = 2, sx, children }: PropsWithChildren<Props>) => {
   const theme = useTheme();
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -71,8 +72,9 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
 
   return (
     <TabContext.Provider value={{ variant, size, containerRef: rootRef }}>
-      <View position={'relative'}>
+      <View className={'trk-tab__wrapper'} position={'relative'} sx={sx}>
         <View
+          className={'trk-tab__list'}
           ref={rootRef}
           role={'tablist'}
           sx={{
@@ -90,10 +92,11 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
         >
           {children}
         </View>
-        <View display={['none', 'initial', 'initial']}>
+        <View className={'trk-tab__navigation'} display={['none', 'initial', 'initial']}>
           {isLeftButtonVisible ? (
             <>
               <View
+                className={'trk-tab__left_gradient'}
                 sx={{
                   position: 'absolute',
                   top: 0,
@@ -106,6 +109,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
                 }}
               />
               <View
+                className={'trk-tab__left_button'}
                 sx={{
                   position: 'absolute',
                   display: 'flex',
@@ -123,6 +127,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
           {isRightButtonVisible ? (
             <>
               <View
+                className={'trk-tab__right_gradient'}
                 sx={{
                   position: 'absolute',
                   top: 0,
@@ -135,6 +140,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, children }: PropsWithChil
                 }}
               />
               <View
+                className={'trk-tab__right_button'}
                 sx={{
                   position: 'absolute',
                   display: 'flex',
