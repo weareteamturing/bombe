@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.69.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.68.0...@teamturing/react-kit@2.69.0) (2026-04-12)
+
+### Features
+
+- **react-kit:** add className and sx prop support to Tab component ([1d4c236](https://github.com/weareteamturing/bombe/commit/1d4c23679e8df0f7ebacaf5b96489a8b3430501f))
+
 # [2.68.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.67.1...@teamturing/react-kit@2.68.0) (2026-04-02)
 
 ### Features
