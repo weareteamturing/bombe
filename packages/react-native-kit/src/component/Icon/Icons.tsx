@@ -195,6 +195,7 @@ export { default as pause } from '@teamturing/icons/svg/pause.svg';
 export { default as pen } from '@teamturing/icons/svg/pen.svg';
 export { default as percent_in_circle } from '@teamturing/icons/svg/percent_in_circle.svg';
 export { default as picture } from '@teamturing/icons/svg/picture.svg';
+export { default as picture_frame } from '@teamturing/icons/svg/picture_frame.svg';
 export { default as picture_off } from '@teamturing/icons/svg/picture_off.svg';
 export { default as pill } from '@teamturing/icons/svg/pill.svg';
 export { default as pill_color } from '@teamturing/icons/svg/pill_color.svg';
