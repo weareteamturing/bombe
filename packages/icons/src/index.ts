@@ -195,6 +195,7 @@ export { default as PauseIcon } from './Pause';
 export { default as PenIcon } from './Pen';
 export { default as PercentInCircleIcon } from './PercentInCircle';
 export { default as PictureIcon } from './Picture';
+export { default as PictureFrameIcon } from './PictureFrame';
 export { default as PictureOffIcon } from './PictureOff';
 export { default as PillIcon } from './Pill';
 export { default as PillColorIcon } from './PillColor';
