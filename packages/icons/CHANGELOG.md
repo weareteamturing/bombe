@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.73.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.73.0...@teamturing/icons@1.73.1) (2026-04-14)
+
+### Bug Fixes
+
+- **icons:** fix diamond icon ([966d2b0](https://github.com/weareteamturing/bombe/commit/966d2b0046fd5ec1e763d1c1431951d6b0d0994f))
+
 # [1.73.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.72.0...@teamturing/icons@1.73.0) (2026-03-18)
 
 ### Features
