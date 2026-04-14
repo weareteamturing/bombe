@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.41.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.40.1...@teamturing/react-native-kit@1.41.0) (2026-04-14)
+
+### Features
+
+- **icons:** rename frame -> picture_frame and add new frame.svg ([0fdbe2b](https://github.com/weareteamturing/bombe/commit/0fdbe2b4bc1d1045ab6ad144bc3a62d5cc29d288))
+
 ## [1.40.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.40.0...@teamturing/react-native-kit@1.40.1) (2026-04-14)
 
 **Note:** Version bump only for package @teamturing/react-native-kit

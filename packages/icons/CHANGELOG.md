@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.74.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.73.1...@teamturing/icons@1.74.0) (2026-04-14)
+
+### Features
+
+- **icons:** rename frame -> picture_frame and add new frame.svg ([0fdbe2b](https://github.com/weareteamturing/bombe/commit/0fdbe2b4bc1d1045ab6ad144bc3a62d5cc29d288))
+
 ## [1.73.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.73.0...@teamturing/icons@1.73.1) (2026-04-14)
 
 ### Bug Fixes
