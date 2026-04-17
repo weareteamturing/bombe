@@ -32,6 +32,7 @@ export { default as ArrowRightCircleIcon } from './ArrowRightCircle';
 export { default as ArrowRightLimitIcon } from './ArrowRightLimit';
 export { default as ArrowStraightIcon } from './ArrowStraight';
 export { default as ArrowUpIcon } from './ArrowUp';
+export { default as ArrowUpCircleIcon } from './ArrowUpCircle';
 export { default as ArrowUpDownIcon } from './ArrowUpDown';
 export { default as ArrowUpLimitIcon } from './ArrowUpLimit';
 export { default as AtomIcon } from './Atom';
