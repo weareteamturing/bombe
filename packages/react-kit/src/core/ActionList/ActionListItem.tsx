@@ -4,8 +4,11 @@ import {
   ElementType,
   PropsWithChildren,
   ReactNode,
+  Ref,
+  RefObject,
   MouseEvent as ReactMouseEvent,
   KeyboardEvent as ReactKeyboardEvent,
+  forwardRef,
   useContext,
   useCallback,
   LiHTMLAttributes,
@@ -14,6 +17,7 @@ import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
 import { variant } from 'styled-system';
 
+import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import { CheckboxProps } from '../Checkbox';
 import Grid from '../Grid';
@@ -35,23 +39,35 @@ type Props = {
 
   selected?: boolean;
   onSelect?: (event: ReactMouseEvent<HTMLLIElement> | ReactKeyboardEvent<HTMLLIElement>) => void;
-} & Pick<LiHTMLAttributes<HTMLLIElement>, 'onFocus' | 'onBlur'> &
+} & Pick<
+  LiHTMLAttributes<HTMLLIElement>,
+  'onFocus' | 'onBlur' | 'onClick' | 'onKeyDown' | 'tabIndex' | 'onMouseEnter' | 'onMouseLeave'
+> &
   SxProp;
 
-const ActionListItem = ({
-  variant = 'neutral',
-  leadingVisual: LeadingVisual,
-  trailingVisual: TrailingVisual,
-  description,
-  descriptionLayout = 'block',
-  disabled = false,
-  selected = false,
-  onSelect: propOnSelect,
-  children,
-  onFocus,
-  onBlur,
-  sx,
-}: PropsWithChildren<Props>) => {
+const ActionListItem = (
+  {
+    variant = 'neutral',
+    leadingVisual: LeadingVisual,
+    trailingVisual: TrailingVisual,
+    description,
+    descriptionLayout = 'block',
+    disabled = false,
+    selected = false,
+    onSelect: propOnSelect,
+    children,
+    onFocus,
+    onBlur,
+    onClick: externalOnClick,
+    onKeyDown: externalOnKeyDown,
+    onMouseEnter,
+    onMouseLeave,
+    tabIndex: externalTabIndex,
+    sx,
+  }: PropsWithChildren<Props>,
+  ref: Ref<HTMLLIElement>,
+) => {
+  const itemRef = useProvidedOrCreatedRef(ref as RefObject<HTMLLIElement>);
   const { selectionVariant, selectionPosition = 'leading', onSelect: defaultOnSelect } = useContext(ActionListContext);
 
   if (!selectionVariant && selected) {
@@ -63,25 +79,25 @@ const ActionListItem = ({
       defaultOnSelect?.(event);
       propOnSelect?.(event);
     },
-    [propOnSelect],
+    [propOnSelect, defaultOnSelect],
   );
 
   const handleClick = useCallback(
     (event: React.MouseEvent<HTMLLIElement>) => {
-      if (disabled) return;
-      handleSelect(event);
+      if (!disabled) handleSelect(event);
+      externalOnClick?.(event);
     },
-    [handleSelect, disabled],
+    [handleSelect, disabled, externalOnClick],
   );
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLLIElement>) => {
-      if (disabled) return;
-      if ([' ', 'Enter'].includes(event.key)) {
+      if (!disabled && [' ', 'Enter'].includes(event.key)) {
         handleSelect(event);
       }
+      externalOnKeyDown?.(event);
     },
-    [handleSelect, disabled],
+    [handleSelect, disabled, externalOnKeyDown],
   );
 
   const selectionContent = !isNullable(selectionVariant) ? (
@@ -113,13 +129,16 @@ const ActionListItem = ({
 
   return (
     <BaseActionListItem
+      ref={itemRef}
       variant={variant}
-      {...(disabled ? { disabled } : { tabIndex: 0 })}
+      {...(disabled ? { disabled } : { tabIndex: externalTabIndex ?? 0 })}
       sx={sx}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       onFocus={onFocus}
       onBlur={onBlur}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {selectionPosition === 'leading' && selectionContent}
       <VisualWrapper
@@ -304,5 +323,5 @@ const FakeCheckbox = styled.div<CheckboxProps>`
   ${sx}
 `;
 
-export default ActionListItem;
+export default forwardRef(ActionListItem);
 export type { Props as ActionListItemProps };
