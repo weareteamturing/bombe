@@ -15,13 +15,12 @@ import {
 } from 'react';
 import { isValidElementType } from 'react-is';
 import styled, { css } from 'styled-components';
-import { variant } from 'styled-system';
+import { ResponsiveValue, variant } from 'styled-system';
 
 import useProvidedOrCreatedRef from '../../hook/useProvidedOrCreatedRef';
 import { BetterSystemStyleObject, SxProp, sx } from '../../utils/styled-system';
 import { CheckboxProps } from '../Checkbox';
 import Grid from '../Grid';
-import StyledIcon from '../StyledIcon';
 import Text from '../Text';
 import View from '../View';
 
@@ -29,6 +28,10 @@ import { ActionListContext } from '.';
 
 type Props = {
   variant?: 'neutral' | 'danger';
+  /**
+   * 아이템 사이즈. 미지정 시 ActionList의 size를 따릅니다 (기본값 `m`).
+   */
+  size?: ResponsiveValue<'m' | 's'>;
 
   leadingVisual?: ElementType | ReactNode;
   trailingVisual?: ElementType | ReactNode;
@@ -48,6 +51,7 @@ type Props = {
 const ActionListItem = (
   {
     variant = 'neutral',
+    size: propSize,
     leadingVisual: LeadingVisual,
     trailingVisual: TrailingVisual,
     description,
@@ -68,7 +72,13 @@ const ActionListItem = (
   ref: Ref<HTMLLIElement>,
 ) => {
   const itemRef = useProvidedOrCreatedRef(ref as RefObject<HTMLLIElement>);
-  const { selectionVariant, selectionPosition = 'leading', onSelect: defaultOnSelect } = useContext(ActionListContext);
+  const {
+    size: contextSize,
+    selectionVariant,
+    selectionPosition = 'leading',
+    onSelect: defaultOnSelect,
+  } = useContext(ActionListContext);
+  const size = propSize ?? contextSize ?? 'm';
 
   if (!selectionVariant && selected) {
     throw new Error('To use selected props in ActionList.Item, ActionList selectionVariant props should be defined.');
@@ -101,10 +111,10 @@ const ActionListItem = (
   );
 
   const selectionContent = !isNullable(selectionVariant) ? (
-    <View
+    <SelectionWrapper
       className={'action_list_item__selection_wrapper'}
       display={'inline-flex'}
-      minWidth={20}
+      size={size}
       sx={{
         ...(selectionPosition === 'trailing' ? { ml: 2 } : { mr: 2 }),
         '& svg': { color: 'icon/selected/primary' },
@@ -112,7 +122,7 @@ const ActionListItem = (
     >
       {selectionVariant === 'single' ? (
         selected ? (
-          <StyledIcon className={'action_list_item__selection_wrapper_single'} icon={CheckIcon} size={20} />
+          <CheckIcon className={'action_list_item__selection_wrapper_single'} />
         ) : null
       ) : selectionVariant === 'multiple' ? (
         <FakeCheckbox
@@ -122,16 +132,20 @@ const ActionListItem = (
           onChange={noop}
           aria-disabled={disabled}
           disabled={disabled}
+          size={size}
         />
       ) : null}
-    </View>
+    </SelectionWrapper>
   ) : null;
 
   return (
     <BaseActionListItem
       ref={itemRef}
       variant={variant}
+      size={size}
       {...(disabled ? { disabled } : { tabIndex: externalTabIndex ?? 0 })}
+      hasLeadingVisual={!isNullable(LeadingVisual)}
+      hasTrailingVisual={!isNullable(TrailingVisual)}
       sx={sx}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
@@ -163,14 +177,16 @@ const ActionListItem = (
           >
             {children}
           </Grid.Unit>
-          <Grid.Unit
-            className={'action_list_item__content__description'}
-            size={descriptionLayout === 'inline' ? 'max' : 1}
-          >
-            <Text typography={'xxs/regular'} color={disabled ? 'text/disabled' : 'text/neutral/subtler'}>
-              {description}
-            </Text>
-          </Grid.Unit>
+          {description ? (
+            <Grid.Unit
+              className={'action_list_item__content__description'}
+              size={descriptionLayout === 'inline' ? 'max' : 1}
+            >
+              <Text typography={'xxs/regular'} color={disabled ? 'text/disabled' : 'text/neutral/subtler'}>
+                {description}
+              </Text>
+            </Grid.Unit>
+          ) : null}
         </Grid>
       </View>
       <VisualWrapper
@@ -191,6 +207,17 @@ const ActionListItem = (
   );
 };
 
+const SelectionWrapper = styled(View)<Pick<Props, 'size'>>`
+  ${() =>
+    variant<BetterSystemStyleObject>({
+      prop: 'size',
+      variants: {
+        m: { minWidth: forcePixelValue(20) },
+        s: { minWidth: forcePixelValue(20) },
+      },
+    })}
+`;
+
 const VisualWrapper = styled(View)<Pick<Props, 'variant'>>`
   ${variant<BetterSystemStyleObject>({
     prop: 'variant',
@@ -201,24 +228,63 @@ const VisualWrapper = styled(View)<Pick<Props, 'variant'>>`
   })}
 `;
 
-const BaseActionListItem = styled.li<Props>`
+const BaseActionListItem = styled.li<Props & { hasLeadingVisual?: boolean; hasTrailingVisual?: boolean }>`
   display: flex;
   align-items: flex-start;
 
-  font-size: ${({ theme }) => forcePixelValue(theme.fontSizes.xs)};
   font-weight: ${({ theme }) => theme.fontWeights.medium};
   line-height: ${({ theme }) => theme.lineHeights[2]};
 
-  & svg {
-    width: ${forcePixelValue(20)};
-    height: ${forcePixelValue(20)};
-  }
-
-  padding: ${({ theme }) => forcePixelValue(theme.space[3])};
   background-color: ${({ theme }) => theme.colors['bg/neutral/subtler']};
   border-radius: ${({ theme }) => forcePixelValue(theme.radii.xs)};
   cursor: pointer;
   transition: background-color 100ms;
+
+  ${({ theme, hasLeadingVisual, hasTrailingVisual }) =>
+    variant<BetterSystemStyleObject>({
+      prop: 'size',
+      variants: {
+        m: {
+          'fontSize': forcePixelValue(theme.fontSizes.xs),
+          'padding': forcePixelValue(theme.space[3]),
+          '& svg': {
+            width: forcePixelValue(20),
+            height: forcePixelValue(20),
+          },
+        },
+        s: {
+          'fontSize': forcePixelValue(theme.fontSizes.xs),
+          'paddingX': forcePixelValue(theme.space[3]),
+          'paddingY': forcePixelValue(theme.space[2]),
+          ...(hasLeadingVisual
+            ? {
+                '& .action_list_item__leading_visual': {
+                  width: forcePixelValue(16),
+                  height: forcePixelValue(20),
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                },
+              }
+            : {}),
+          ...(hasTrailingVisual
+            ? {
+                '& .action_list_item__content__trailing_visual': {
+                  width: forcePixelValue(16),
+                  height: forcePixelValue(20),
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                },
+              }
+            : {}),
+          '& svg': {
+            width: forcePixelValue(20),
+            height: forcePixelValue(20),
+          },
+        },
+      },
+    })}
 
   ${({ theme, disabled }) =>
     disabled
@@ -258,11 +324,18 @@ const BaseActionListItem = styled.li<Props>`
   ${sx};
 `;
 
-const FakeCheckbox = styled.div<CheckboxProps>`
+const FakeCheckbox = styled.div<Omit<CheckboxProps, 'size'> & Pick<Props, 'size'>>`
   position: relative;
 
-  width: ${forcePixelValue(20)};
-  height: ${forcePixelValue(20)};
+  ${() =>
+    variant<BetterSystemStyleObject>({
+      prop: 'size',
+      variants: {
+        m: { width: forcePixelValue(20), height: forcePixelValue(20) },
+        // TODO: replace with the actual 's' dimensions once the size spec is finalized.
+        s: { width: forcePixelValue(20), height: forcePixelValue(20) },
+      },
+    })}
 
   border-width: ${forcePixelValue(2)};
   border-style: solid;
