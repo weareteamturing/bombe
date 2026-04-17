@@ -32,6 +32,7 @@ export { default as arrow_right_circle } from '@teamturing/icons/svg/arrow_right
 export { default as arrow_right_limit } from '@teamturing/icons/svg/arrow_right_limit.svg';
 export { default as arrow_straight } from '@teamturing/icons/svg/arrow_straight.svg';
 export { default as arrow_up } from '@teamturing/icons/svg/arrow_up.svg';
+export { default as arrow_up_circle } from '@teamturing/icons/svg/arrow_up_circle.svg';
 export { default as arrow_up_down } from '@teamturing/icons/svg/arrow_up_down.svg';
 export { default as arrow_up_limit } from '@teamturing/icons/svg/arrow_up_limit.svg';
 export { default as atom } from '@teamturing/icons/svg/atom.svg';
