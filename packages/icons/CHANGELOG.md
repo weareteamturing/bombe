@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.75.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.74.0...@teamturing/icons@1.75.0) (2026-04-17)
+
+### Features
+
+- **icons:** add arrow_up_circle icon ([e0b91bd](https://github.com/weareteamturing/bombe/commit/e0b91bd45f5352b6ee474907e22e461c28cb31e2))
+
 # [1.74.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.73.1...@teamturing/icons@1.74.0) (2026-04-14)
 
 ### Features
