@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.70.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.69.2...@teamturing/react-kit@2.70.0) (2026-04-17)
+
+### Features
+
+- **react-kit:** support OverlayPopper trigger usage on ActionListItem ([1a137e1](https://github.com/weareteamturing/bombe/commit/1a137e1afe0987e1a57f9eda1698cfc56690e494))
+
 ## [2.69.2](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.69.1...@teamturing/react-kit@2.69.2) (2026-04-14)
 
 **Note:** Version bump only for package @teamturing/react-kit
