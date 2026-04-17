@@ -5,6 +5,7 @@ import {
   KeyboardEvent as ReactKeyboardEvent,
 } from 'react';
 import styled from 'styled-components';
+import { ResponsiveValue } from 'styled-system';
 
 import { SxProp, sx } from '../../utils/styled-system';
 
@@ -13,6 +14,12 @@ import ActionListSectionDivider, { ActionListSectionDividerProps } from './Actio
 import ActionListSectionHeader, { ActionListSectionHeaderProps } from './ActionListSectionHeader';
 
 type Props = {
+  /**
+   * ActionList 아이템들의 사이즈를 지정합니다.
+   * `m` (기본값): 표준 사이즈
+   * `s`: 작은 사이즈
+   */
+  size?: ResponsiveValue<'m' | 's'>;
   /**
    * ActionList의 아이템에 선택이 되어있다는 것을 표시할 때 사용하는 속성입니다.
    * `undefined`: 선택에 대한 표시를 하지 않습니다.
@@ -29,12 +36,18 @@ type Props = {
   onSelect?: (event: ReactMouseEvent<HTMLLIElement> | ReactKeyboardEvent<HTMLLIElement>) => void;
 } & SxProp;
 
-type ActionListContextValue = {} & Pick<Props, 'selectionVariant' | 'selectionPosition' | 'onSelect'>;
+type ActionListContextValue = {} & Pick<Props, 'size' | 'selectionVariant' | 'selectionPosition' | 'onSelect'>;
 const ActionListContext = createContext<ActionListContextValue>({});
 
-const ActionList = ({ selectionVariant, selectionPosition, onSelect, ...props }: PropsWithChildren<Props>) => {
+const ActionList = ({
+  size = 'm',
+  selectionVariant,
+  selectionPosition,
+  onSelect,
+  ...props
+}: PropsWithChildren<Props>) => {
   return (
-    <ActionListContext.Provider value={{ selectionVariant, selectionPosition, onSelect }}>
+    <ActionListContext.Provider value={{ size, selectionVariant, selectionPosition, onSelect }}>
       <BaseActionList className={'action_list'} role={'menu'} {...props} />
     </ActionListContext.Provider>
   );
