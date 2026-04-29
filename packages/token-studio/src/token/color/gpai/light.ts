@@ -19,6 +19,8 @@ const textColor = {
   'text/warning': palette.yellow500,
   'text/danger': palette.red500,
   'text/selected': palette.gray900,
+  'text/loading/subtle': palette.gray500,
+  'text/loading/subtlest': palette.gray200,
 } as const;
 
 const bgColor = {
@@ -79,6 +81,10 @@ const bgColor = {
   'bg/danger/bold': palette.red400,
   'bg/danger/bold/hovered': palette.red600,
   'bg/danger/bold/pressed': palette.red600,
+
+  'bg/loading/subtlest': palette.gray100,
+  'bg/loading/subtler': palette.gray200,
+  'bg/loading/subtle': palette.gray300,
 } as const;
 
 const borderColor = {
