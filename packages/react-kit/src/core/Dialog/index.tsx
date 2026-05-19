@@ -1,6 +1,6 @@
 import { CloseIcon } from '@teamturing/icons';
 import { forcePixelValue } from '@teamturing/utils';
-import { AnimatePresence, cubicBezier } from 'framer-motion';
+import { AnimatePresence, cubicBezier, HTMLMotionProps } from 'framer-motion';
 import {
   forwardRef,
   PropsWithChildren,
@@ -31,13 +31,28 @@ import UnstyledDialogFooter, { UnstyledDialogFooterProps } from './_UnstyledDial
 import UnstyledDialogHeader, { UnstyledDialogHeaderProps } from './_UnstyledDialogHeader';
 
 type DialogSizeType = 'full' | 'l' | 'm' | 's';
+type DialogMotionProps = Partial<Pick<HTMLMotionProps<'div'>, 'initial' | 'animate' | 'exit' | 'transition'>>;
 type Props = {
   isOpen?: boolean;
   onDismiss?: () => void;
   isOutsideClickDismissable?: boolean;
   size?: DialogSizeType;
   initialFocusRef?: RefObject<HTMLElement>;
+  motionProps?: DialogMotionProps;
 } & SxProp;
+
+const DEFAULT_MOTION_PROPS = {
+  initial: { opacity: 0, scale: 1.1 },
+  animate: { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 1.1 },
+  transition: {
+    duration: 0.25,
+    /**
+     * easeOutQuad by https://easings.net/ko#easeOutQuad
+     */
+    ease: cubicBezier(0.5, 1, 0.89, 1),
+  },
+} satisfies DialogMotionProps;
 
 const Dialog = (
   {
@@ -47,6 +62,7 @@ const Dialog = (
     isOutsideClickDismissable = true,
     size = 'm',
     initialFocusRef,
+    motionProps,
     sx,
   }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
@@ -110,16 +126,10 @@ const Dialog = (
       {isOpen ? (
         <>
           <MotionView
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.1 }}
-            transition={{
-              duration: 0.25,
-              /**
-               * easeOutQuad by https://easings.net/ko#easeOutQuad
-               */
-              ease: cubicBezier(0.5, 1, 0.89, 1),
-            }}
+            initial={motionProps?.initial ?? DEFAULT_MOTION_PROPS.initial}
+            animate={motionProps?.animate ?? DEFAULT_MOTION_PROPS.animate}
+            exit={motionProps?.exit ?? DEFAULT_MOTION_PROPS.exit}
+            transition={motionProps?.transition ?? DEFAULT_MOTION_PROPS.transition}
             sx={{
               position: 'fixed',
               top: 0,
@@ -251,6 +261,7 @@ export default Object.assign(forwardRef(Dialog), {
 });
 export type {
   Props as DialogProps,
+  DialogMotionProps,
   UnstyledDialogHeaderProps,
   UnstyledDialogBodyProps,
   UnstyledDialogFooterProps,
