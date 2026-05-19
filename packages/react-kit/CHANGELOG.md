@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.72.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.71.1...@teamturing/react-kit@2.72.0) (2026-05-19)
+
+### Features
+
+- **react-kit:** support injectable motion props on Dialog ([9674386](https://github.com/weareteamturing/bombe/commit/96743867dbd3bb67d07881a7cc276677f32c57a8))
+
 ## [2.71.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.71.0...@teamturing/react-kit@2.71.1) (2026-04-29)
 
 **Note:** Version bump only for package @teamturing/react-kit
