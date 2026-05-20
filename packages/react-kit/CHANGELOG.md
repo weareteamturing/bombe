@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.73.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.73.0...@teamturing/react-kit@2.73.1) (2026-05-20)
+
+### Bug Fixes
+
+- **react-kit:** keep Pagination.Page sizing under custom element ([ccaa4c8](https://github.com/weareteamturing/bombe/commit/ccaa4c824daff694efe26a09bd134964b736e747))
+- **react-kit:** use semantic list markup in Breadcrumbs ([7deb711](https://github.com/weareteamturing/bombe/commit/7deb7110572527f071e4dafcf5f929655c097b18))
+
 # [2.73.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.72.0...@teamturing/react-kit@2.73.0) (2026-05-20)
 
 ### Features
