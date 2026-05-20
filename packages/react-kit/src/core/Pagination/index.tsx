@@ -167,6 +167,10 @@ type PaginationPageProps = { selected?: boolean };
 const PaginationPage = styled(UnstyledButton)<PaginationPageProps>`
   transition: background-color 100ms;
 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   height: ${forcePixelValue(32)};
   min-width: ${forcePixelValue(32)};
 
