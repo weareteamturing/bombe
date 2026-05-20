@@ -39,6 +39,7 @@ type Props = {
   size?: DialogSizeType;
   initialFocusRef?: RefObject<HTMLElement>;
   motionProps?: DialogMotionProps;
+  blanketMotionProps?: DialogMotionProps;
 } & SxProp;
 
 const DEFAULT_MOTION_PROPS = {
@@ -54,6 +55,16 @@ const DEFAULT_MOTION_PROPS = {
   },
 } satisfies DialogMotionProps;
 
+const DEFAULT_BLANKET_MOTION_PROPS = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: {
+    duration: 0.25,
+    ease: cubicBezier(0.5, 1, 0.89, 1),
+  },
+} satisfies DialogMotionProps;
+
 const Dialog = (
   {
     children,
@@ -63,6 +74,7 @@ const Dialog = (
     size = 'm',
     initialFocusRef,
     motionProps,
+    blanketMotionProps,
     sx,
   }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
@@ -126,6 +138,22 @@ const Dialog = (
       {isOpen ? (
         <>
           <MotionView
+            initial={blanketMotionProps?.initial ?? DEFAULT_BLANKET_MOTION_PROPS.initial}
+            animate={blanketMotionProps?.animate ?? DEFAULT_BLANKET_MOTION_PROPS.animate}
+            exit={blanketMotionProps?.exit ?? DEFAULT_BLANKET_MOTION_PROPS.exit}
+            transition={blanketMotionProps?.transition ?? DEFAULT_BLANKET_MOTION_PROPS.transition}
+            sx={{
+              position: 'fixed',
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0,
+              zIndex: 9999,
+            }}
+          >
+            <Blanket ref={blanketRef} />
+          </MotionView>
+          <MotionView
             initial={motionProps?.initial ?? DEFAULT_MOTION_PROPS.initial}
             animate={motionProps?.animate ?? DEFAULT_MOTION_PROPS.animate}
             exit={motionProps?.exit ?? DEFAULT_MOTION_PROPS.exit}
@@ -137,10 +165,10 @@ const Dialog = (
               bottom: 0,
               left: 0,
               zIndex: 9999,
+              pointerEvents: 'none',
             }}
           >
-            <Blanket ref={blanketRef} />
-            <View display={'flex'} width={'100%'} height={'100%'}>
+            <View display={'flex'} width={'100%'} height={'100%'} sx={{ pointerEvents: 'none' }}>
               <BaseDialog
                 className={`trk-dialog--${size}`}
                 ref={dialogRef}
@@ -245,6 +273,7 @@ const BaseDialog = styled.div<SxProp>(
     outline: 'none',
     overflow: 'hidden',
     margin: 'auto',
+    pointerEvents: 'auto',
   }),
   sx,
 );
