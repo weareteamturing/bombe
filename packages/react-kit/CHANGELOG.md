@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.73.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.72.0...@teamturing/react-kit@2.73.0) (2026-05-20)
+
+### Features
+
+- **react-kit:** split Dialog blanket and body motion ([fc4234a](https://github.com/weareteamturing/bombe/commit/fc4234aef3dee3571a28d3c55094b9bb19ef5578))
+
 # [2.72.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.71.1...@teamturing/react-kit@2.72.0) (2026-05-19)
 
 ### Features
