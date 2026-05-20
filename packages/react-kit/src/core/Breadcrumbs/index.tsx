@@ -26,25 +26,33 @@ const Breadcrumbs = ({ children, maxItemCount = 5, ...props }: PropsWithChildren
       ];
 
   return (
-    <BaseBreadcrumbs {...props}>
-      {Children.map(breadcrumbsItems, (child) => (
-        <BreadcrumbsItemWrapper role={'listitem'}>{child}</BreadcrumbsItemWrapper>
-      ))}
+    <BaseBreadcrumbs aria-label={'Breadcrumb'} {...props}>
+      <BreadcrumbsList>
+        {Children.map(breadcrumbsItems, (child) => (
+          <BreadcrumbsItemWrapper>{child}</BreadcrumbsItemWrapper>
+        ))}
+      </BreadcrumbsList>
     </BaseBreadcrumbs>
   );
 };
 
-const BaseBreadcrumbs = styled.nav`
+const BaseBreadcrumbs = styled.nav``;
+
+const BreadcrumbsList = styled.ol`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
   column-gap: ${({ theme }) => forcePixelValue(theme.space[2])};
   row-gap: ${({ theme }) => forcePixelValue(theme.space[1])};
 `;
 
-const BreadcrumbsItemWrapper = styled.span`
+const BreadcrumbsItemWrapper = styled.li`
   display: inline-flex;
 
   &::after {
