@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.43.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.42.0...@teamturing/react-native-kit@1.43.0) (2026-05-27)
+
+### Features
+
+- **icons:** add ink_pen.svg ([d0117e9](https://github.com/weareteamturing/bombe/commit/d0117e9a4b3149a779e406caccaabcb211ec035b))
+
 # [1.42.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.41.0...@teamturing/react-native-kit@1.42.0) (2026-04-17)
 
 ### Features
