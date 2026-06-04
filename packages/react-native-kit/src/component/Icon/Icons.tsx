@@ -84,6 +84,7 @@ export { default as circles } from '@teamturing/icons/svg/circles.svg';
 export { default as clip } from '@teamturing/icons/svg/clip.svg';
 export { default as close } from '@teamturing/icons/svg/close.svg';
 export { default as close_in_circle } from '@teamturing/icons/svg/close_in_circle.svg';
+export { default as code } from '@teamturing/icons/svg/code.svg';
 export { default as coin } from '@teamturing/icons/svg/coin.svg';
 export { default as command_line } from '@teamturing/icons/svg/command_line.svg';
 export { default as comment } from '@teamturing/icons/svg/comment.svg';
