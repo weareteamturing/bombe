@@ -138,6 +138,7 @@ export { default as heart } from '@teamturing/icons/svg/heart.svg';
 export { default as home } from '@teamturing/icons/svg/home.svg';
 export { default as infinite } from '@teamturing/icons/svg/infinite.svg';
 export { default as info_in_circle } from '@teamturing/icons/svg/info_in_circle.svg';
+export { default as ink_pen } from '@teamturing/icons/svg/ink_pen.svg';
 export { default as ink_pen_twinkle } from '@teamturing/icons/svg/ink_pen_twinkle.svg';
 export { default as instagram } from '@teamturing/icons/svg/instagram.svg';
 export { default as isolate } from '@teamturing/icons/svg/isolate.svg';

@@ -138,6 +138,7 @@ export { default as HeartIcon } from './Heart';
 export { default as HomeIcon } from './Home';
 export { default as InfiniteIcon } from './Infinite';
 export { default as InfoInCircleIcon } from './InfoInCircle';
+export { default as InkPenIcon } from './InkPen';
 export { default as InkPenTwinkleIcon } from './InkPenTwinkle';
 export { default as InstagramIcon } from './Instagram';
 export { default as IsolateIcon } from './Isolate';
