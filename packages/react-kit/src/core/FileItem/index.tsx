@@ -2,7 +2,7 @@ import { DocumentIcon, ExclamationPointInCircleIcon, PictureIcon, VideoIcon } fr
 import { forcePixelValue } from '@teamturing/utils';
 import { ComponentType, HTMLProps, SVGProps, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { variant } from 'styled-system';
+import { ResponsiveValue, variant } from 'styled-system';
 
 import { BetterSystemStyleObject, sx, SxProp } from '../../utils/styled-system';
 import Spinner from '../Spinner';
@@ -31,6 +31,10 @@ type Props = {
    * file 일 때의 icon을 결정합니다.
    */
   renderFileIcon?: (fileType: string, file: Props['file']) => ComponentType<SVGProps<SVGSVGElement>>;
+  /**
+   * 컴포넌트의 사이즈를 정의합니다. thumbnail variant에서만 적용됩니다.
+   */
+  size?: ResponsiveValue<'m' | 's'>;
 } & SxProp;
 
 const FileItem = ({
@@ -40,6 +44,7 @@ const FileItem = ({
   loading,
   validationStatus,
   trailingAction,
+  size = 'm',
   renderFileIcon = () => DocumentIcon,
   ...props
 }: Props) => {
@@ -61,6 +66,7 @@ const FileItem = ({
   return (
     <BaseFile
       variant={variant}
+      size={size}
       disabled={disabled}
       validationStatus={validationStatus}
       trailingAction={trailingAction}
@@ -160,10 +166,6 @@ const BaseFile = styled.div<Omit<Props, 'file'>>(
           'display': 'flex',
           'alignItems': 'center',
           'justifyContent': 'center',
-
-          'width': forcePixelValue(160),
-          'maxWidth': forcePixelValue(160),
-          'aspectRatio': '16 / 9',
 
           'backgroundColor': theme.colors['bg/neutral'],
           'overflow': 'hidden',
@@ -285,6 +287,30 @@ const BaseFile = styled.div<Omit<Props, 'file'>>(
                   borderRadius: 'xs',
                   pointerEvents: 'none',
                 },
+              }
+            : {}),
+        },
+      },
+    }),
+  ({ variant: propVariant }) =>
+    variant<BetterSystemStyleObject>({
+      prop: 'size',
+      variants: {
+        m: {
+          ...(propVariant === 'thumbnail'
+            ? {
+                width: forcePixelValue(160),
+                maxWidth: forcePixelValue(160),
+                aspectRatio: '16 / 9',
+              }
+            : {}),
+        },
+        s: {
+          ...(propVariant === 'thumbnail'
+            ? {
+                width: forcePixelValue(80),
+                maxWidth: forcePixelValue(80),
+                aspectRatio: '1',
               }
             : {}),
         },
