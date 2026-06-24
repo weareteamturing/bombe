@@ -1,5 +1,5 @@
 import { forcePixelValue } from '@teamturing/utils';
-import { ElementType, HTMLAttributes, ReactElement, ReactNode } from 'react';
+import { AriaAttributes, ElementType, HTMLAttributes, ReactElement, ReactNode } from 'react';
 import { isValidElementType } from 'react-is';
 import styled from 'styled-components';
 
@@ -9,10 +9,13 @@ import View from '../View';
 type Props = {
   leadingVisual?: ElementType | ReactNode;
   trailingAction?: ReactElement<HTMLAttributes<HTMLElement>>;
-} & SxProp;
+} & SxProp &
+  Pick<HTMLAttributes<HTMLDivElement>, 'id'> &
+  AriaAttributes;
 
 const DatagridHeader = ({ leadingVisual: LeadingVisual, trailingAction, ...props }: Props) => (
   <DataGridHeaderWrapper {...props}>
+    {/* leadingVisual은 문자열이면 제목 텍스트로 렌더되어 표의 접근 가능한 이름으로 사용되므로 숨기지 않는다. */}
     <View sx={{ fontSize: 'xs', fontWeight: 'medium', lineHeight: 2, color: 'text/neutral/subtle' }}>
       {typeof LeadingVisual !== 'string' && isValidElementType(LeadingVisual) ? (
         <LeadingVisual />
