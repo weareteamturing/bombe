@@ -1,5 +1,5 @@
 import { forcePixelValue } from '@teamturing/utils';
-import { HTMLAttributes, PropsWithChildren } from 'react';
+import { HTMLAttributes, PropsWithChildren, ReactNode, cloneElement, isValidElement, useId } from 'react';
 import styled from 'styled-components';
 
 import useRelocation from '../../hook/useRelocation';
@@ -9,11 +9,19 @@ import DatagridBody, { DatagridBodyProps } from './DatagridBody';
 import DatagridCell, { DatagridCellProps } from './DatagridCell';
 import DatagridHeader, { DatagridHeaderProps } from './DatagridHeader';
 import DatagridRow, { DatagridRowProps } from './DatagridRow';
+import DatagridRowList, { DatagridRowListProps } from './DatagridRowList';
 import DatagridSubheader from './DatagridSubheader';
 
 type Props = {} & HTMLAttributes<HTMLDivElement> & SxProp;
 
-const Datagrid = ({ children, sx, ...props }: PropsWithChildren<Props>) => {
+const Datagrid = ({
+  children,
+  sx,
+  role = 'table',
+  'aria-label': ariaLabel,
+  'aria-labelledby': ariaLabelledby,
+  ...props
+}: PropsWithChildren<Props>) => {
   const [relocatableComponentsObject, restConmponents] = useRelocation({
     children,
     config: {
@@ -22,11 +30,24 @@ const Datagrid = ({ children, sx, ...props }: PropsWithChildren<Props>) => {
     },
   });
 
+  // Header가 있고 별도 라벨이 지정되지 않은 경우, Header를 표의 접근 가능한 이름으로 연결한다.
+  const generatedHeaderId = useId();
+  const { header: rawHeader, subHeader } = relocatableComponentsObject;
+  let headerNode: ReactNode = rawHeader;
+  let resolvedLabelledby = ariaLabelledby;
+  if (!ariaLabel && !ariaLabelledby && isValidElement(rawHeader)) {
+    const headerId = rawHeader.props.id ?? generatedHeaderId;
+    headerNode = cloneElement(rawHeader, { id: headerId });
+    resolvedLabelledby = headerId;
+  }
+
   return (
     <DatagridWrapper sx={sx}>
-      {relocatableComponentsObject.header}
-      {relocatableComponentsObject.subHeader}
-      <BaseDatagrid {...props}>{restConmponents}</BaseDatagrid>
+      {headerNode}
+      {subHeader}
+      <BaseDatagrid role={role} aria-label={ariaLabel} aria-labelledby={resolvedLabelledby} {...props}>
+        {restConmponents}
+      </BaseDatagrid>
     </DatagridWrapper>
   );
 };
@@ -54,6 +75,14 @@ export default Object.assign(Datagrid, {
   Subheader: DatagridSubheader,
   Body: DatagridBody,
   Row: DatagridRow,
+  RowList: DatagridRowList,
   Cell: DatagridCell,
 });
-export type { Props as DatagridProps, DatagridBodyProps, DatagridCellProps, DatagridHeaderProps, DatagridRowProps };
+export type {
+  Props as DatagridProps,
+  DatagridBodyProps,
+  DatagridCellProps,
+  DatagridHeaderProps,
+  DatagridRowProps,
+  DatagridRowListProps,
+};

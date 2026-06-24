@@ -72,6 +72,7 @@ export type {
   DatagridCellProps,
   DatagridHeaderProps,
   DatagridRowProps,
+  DatagridRowListProps,
 } from './core/Datagrid';
 
 export { default as DescriptionList } from './core/DescriptionList';

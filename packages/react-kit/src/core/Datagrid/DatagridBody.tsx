@@ -1,12 +1,14 @@
 import { forcePixelValue } from '@teamturing/utils';
-import { PropsWithChildren } from 'react';
+import { AriaAttributes, HTMLAttributes, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
 import { SxProp, sx } from '../../utils/styled-system';
 
-type Props = {} & SxProp;
+type Props = {} & SxProp & Pick<HTMLAttributes<HTMLDivElement>, 'id' | 'role'> & AriaAttributes;
 
-const DatagridBody = ({ ...props }: PropsWithChildren<Props>) => <BaseDatagridBody {...props} />;
+const DatagridBody = ({ role, ...props }: PropsWithChildren<Props>) => (
+  <BaseDatagridBody role={role ?? 'rowgroup'} {...props} />
+);
 
 const BaseDatagridBody = styled.div<SxProp>`
   width: inherit;

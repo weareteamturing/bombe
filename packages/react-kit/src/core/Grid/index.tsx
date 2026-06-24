@@ -1,6 +1,6 @@
 import { SpaceKey } from '@teamturing/token-studio';
 import { forcePixelValue, isArray, isNullable } from '@teamturing/utils';
-import { HTMLAttributes, PropsWithChildren, Ref, forwardRef } from 'react';
+import { AriaAttributes, HTMLAttributes, PropsWithChildren, Ref, forwardRef } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
@@ -16,7 +16,8 @@ type Props = {
    */
   layout?: boolean;
 } & Pick<ViewProps, 'alignItems' | 'justifyContent' | 'sx'> &
-  Pick<HTMLAttributes<HTMLDivElement>, 'className'> &
+  Pick<HTMLAttributes<HTMLDivElement>, 'className' | 'id' | 'role' | 'tabIndex'> &
+  AriaAttributes &
   AsProp;
 
 const Grid = forwardRef<HTMLDivElement, PropsWithChildren<Props>>(
@@ -98,7 +99,8 @@ const BaseGrid = styled(View)<Omit<Props, 'wrap'> & { wrap?: ResponsiveValue<'tr
 type UnitSizeType = 'min' | 'max' | number;
 
 type GridUnitProps = { size: ResponsiveValue<UnitSizeType> } & Pick<ViewProps, 'order' | 'sx'> &
-  Pick<HTMLAttributes<HTMLDivElement>, 'className'> &
+  Pick<HTMLAttributes<HTMLDivElement>, 'className' | 'id' | 'role' | 'tabIndex'> &
+  AriaAttributes &
   AsProp;
 
 const mapValueToResponsiveValueProps = <T,>(
