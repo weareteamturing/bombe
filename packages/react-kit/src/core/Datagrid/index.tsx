@@ -9,6 +9,7 @@ import DatagridBody, { DatagridBodyProps } from './DatagridBody';
 import DatagridCell, { DatagridCellProps } from './DatagridCell';
 import DatagridHeader, { DatagridHeaderProps } from './DatagridHeader';
 import DatagridRow, { DatagridRowProps } from './DatagridRow';
+import DatagridRowList, { DatagridRowListProps } from './DatagridRowList';
 import DatagridSubheader from './DatagridSubheader';
 
 type Props = {} & HTMLAttributes<HTMLDivElement> & SxProp;
@@ -74,6 +75,14 @@ export default Object.assign(Datagrid, {
   Subheader: DatagridSubheader,
   Body: DatagridBody,
   Row: DatagridRow,
+  RowList: DatagridRowList,
   Cell: DatagridCell,
 });
-export type { Props as DatagridProps, DatagridBodyProps, DatagridCellProps, DatagridHeaderProps, DatagridRowProps };
+export type {
+  Props as DatagridProps,
+  DatagridBodyProps,
+  DatagridCellProps,
+  DatagridHeaderProps,
+  DatagridRowProps,
+  DatagridRowListProps,
+};
