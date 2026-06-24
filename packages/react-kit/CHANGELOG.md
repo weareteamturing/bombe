@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.75.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.74.0...@teamturing/react-kit@2.75.0) (2026-06-24)
+
+### Features
+
+- **react-kit:** add ARIA table semantics to Datagrid ([d48cd79](https://github.com/weareteamturing/bombe/commit/d48cd7902ebcbc91998b101f2b5d7f292aa19fb0))
+- **react-kit:** add Datagrid.RowList for declarative row rendering ([749b6f7](https://github.com/weareteamturing/bombe/commit/749b6f7a39356b46d631ef635f7bcd462bdde68e))
+
 # [2.74.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.73.3...@teamturing/react-kit@2.74.0) (2026-06-12)
 
 ### Features
