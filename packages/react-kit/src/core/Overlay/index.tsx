@@ -111,7 +111,7 @@ const Overlay = (
   }, [isOpen, handleOutsideClick]);
 
   return isOpen ? (
-    <BaseOverlay ref={overlayRef} size={size} maxHeight={maxHeight} {...props} role={'dialog'}>
+    <BaseOverlay ref={overlayRef} role={'dialog'} size={size} maxHeight={maxHeight} {...props}>
       {children}
     </BaseOverlay>
   ) : null;

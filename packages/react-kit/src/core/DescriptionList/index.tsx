@@ -58,13 +58,13 @@ const DescriptionList = <
       return (
         <Grid gapX={gapX} gapY={gapY}>
           <Grid.Unit size={titleUnitSize}>
-            <View display={'flex'} alignItems={'center'} flexWrap={'nowrap'} sx={{ columnGap: 1 }}>
+            <View role={'term'} display={'flex'} alignItems={'center'} flexWrap={'nowrap'} sx={{ columnGap: 1 }}>
               {icon ? <StyledIcon icon={icon} size={16} color={'icon/neutral'} /> : null}
               {renderTitle(title)}
             </View>
           </Grid.Unit>
           <Grid.Unit size={descriptionUnitSize}>
-            {renderDescription(!isNullable(description) ? description : '-')}
+            <View role={'definition'}>{renderDescription(!isNullable(description) ? description : '-')}</View>
           </Grid.Unit>
         </Grid>
       );

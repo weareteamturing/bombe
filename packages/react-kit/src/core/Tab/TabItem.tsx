@@ -47,6 +47,7 @@ const TabItem = ({
       className={'trk-tab_item'}
       type={'button'}
       role={'tab'}
+      aria-selected={selected}
       ref={ref}
       variant={variant}
       size={size}

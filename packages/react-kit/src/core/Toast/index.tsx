@@ -1,5 +1,5 @@
 import { CheckInCircleIcon, ExclamationPointInCircleIcon } from '@teamturing/icons';
-import { ComponentType, PropsWithChildren, SVGProps } from 'react';
+import { ComponentType, HTMLAttributes, PropsWithChildren, SVGProps } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
@@ -21,17 +21,24 @@ type Props = {
    * 반응형 디자인이 적용됩니다.
    */
   resizing?: ResponsiveValue<'hug' | 'fill'>;
-};
+} & HTMLAttributes<HTMLDivElement>;
 
 const Toast = ({
   variant = 'success',
   icon: Icon = variant === 'success' ? CheckInCircleIcon : ExclamationPointInCircleIcon,
   resizing = 'hug',
   children,
+  ...props
 }: PropsWithChildren<Props>) => {
   return (
-    <BaseToast variant={variant} resizing={resizing}>
-      <Icon className={'toast__leading_icon'} />
+    <BaseToast
+      variant={variant}
+      resizing={resizing}
+      role={variant === 'warning' ? 'alert' : 'status'}
+      aria-live={variant === 'warning' ? 'assertive' : 'polite'}
+      {...props}
+    >
+      <Icon className={'toast__leading_icon'} aria-hidden={true} />
       {children}
     </BaseToast>
   );

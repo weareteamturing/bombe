@@ -46,8 +46,14 @@ const Flash = (
 ) => {
   const isButtonExist = !isNullable(buttons) && buttons.length > 0;
   return (
-    <BaseFlash ref={ref} variant={variant} {...props}>
-      <Icon className={'flash__leading_icon'} />
+    <BaseFlash
+      ref={ref}
+      variant={variant}
+      role={variant === 'danger' ? 'alert' : 'status'}
+      aria-live={variant === 'danger' ? 'assertive' : 'polite'}
+      {...props}
+    >
+      <Icon className={'flash__leading_icon'} aria-hidden={true} />
       <div className={'flash__content'}>
         <span className={'flash__content__children'}>{children}</span>
         {isButtonExist ? <div className={'flash__content__buttons'}>{buttons}</div> : null}

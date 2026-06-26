@@ -1,4 +1,4 @@
-import { ComponentType, Ref, SVGProps, forwardRef } from 'react';
+import { ComponentType, Ref, SVGProps, forwardRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
@@ -47,6 +47,16 @@ const IconButton = forwardRef<HTMLButtonElement, Props>(
     { icon: Icon, size = 'm', variant = 'primary', disabled = false, loading = false, ...props },
     ref: Ref<HTMLButtonElement>,
   ) => {
+    const hasAccessibleName = Boolean(props['aria-label'] || props['aria-labelledby'] || props['title']);
+    useEffect(() => {
+      if (process.env.NODE_ENV !== 'production' && !hasAccessibleName) {
+        // eslint-disable-next-line no-console
+        console.warn(
+          'IconButton: An icon-only button should provide an accessible name via `aria-label`, `aria-labelledby`, or `title` so that assistive technologies can identify it.',
+        );
+      }
+    }, [hasAccessibleName]);
+
     return (
       <BaseIconButton
         ref={ref}

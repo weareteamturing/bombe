@@ -1,4 +1,4 @@
-import { ComponentType, Ref, SVGProps, forwardRef } from 'react';
+import { ComponentType, Ref, SVGProps, forwardRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { ResponsiveValue, variant } from 'styled-system';
 
@@ -50,23 +50,36 @@ const IconToggleButton = (
     ...props
   }: Props,
   ref: Ref<HTMLButtonElement>,
-) => (
-  <BaseIconToggleButton
-    ref={ref}
-    icon={Icon}
-    size={size}
-    shape={shape}
-    variant={variant}
-    selected={selected}
-    type={'button'}
-    disabled={disabled}
-    $disabled={disabled}
-    sx={sx}
-    {...props}
-  >
-    <Icon />
-  </BaseIconToggleButton>
-);
+) => {
+  const hasAccessibleName = Boolean(props['aria-label'] || props['aria-labelledby'] || props['title']);
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'production' && !hasAccessibleName) {
+      // eslint-disable-next-line no-console
+      console.warn(
+        'IconToggleButton: An icon-only button should provide an accessible name via `aria-label`, `aria-labelledby`, or `title` so that assistive technologies can identify it.',
+      );
+    }
+  }, [hasAccessibleName]);
+
+  return (
+    <BaseIconToggleButton
+      ref={ref}
+      icon={Icon}
+      size={size}
+      shape={shape}
+      variant={variant}
+      selected={selected}
+      aria-pressed={selected}
+      type={'button'}
+      disabled={disabled}
+      $disabled={disabled}
+      sx={sx}
+      {...props}
+    >
+      <Icon />
+    </BaseIconToggleButton>
+  );
+};
 
 const BaseIconToggleButton = styled(UnstyledButton)<Props & { $disabled?: boolean }>(
   ({ $disabled, theme }) => ({
