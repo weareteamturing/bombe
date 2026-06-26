@@ -190,6 +190,7 @@ const Drawer = (
                   icon={CloseIcon}
                   variant={'plain-bold'}
                   size={'m'}
+                  aria-label={theme.locales?.Drawer?.closeButtonLabel ?? '닫기'}
                   onClick={handleDismiss}
                 />
               </View>
