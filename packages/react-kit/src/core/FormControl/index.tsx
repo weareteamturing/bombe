@@ -114,14 +114,23 @@ const FormControl = (
   const hasError = Boolean(relocatableComponentsObject.errorMessage);
   const hasSuccess = Boolean(relocatableComponentsObject.successMessage);
 
+  /**
+   * 소비자가 Input에 직접 전달한 aria 값을 보존하기 위해 기존 props와 병합합니다.
+   */
+  const inputProps: Record<string, any> = isValidElement(InputComponent)
+    ? (InputComponent.props as Record<string, any>)
+    : {};
+
   const describedBy =
-    [hasCaption && captionId, hasError && errorId, hasSuccess && successId].filter(Boolean).join(' ') || undefined;
+    [inputProps['aria-describedby'], hasCaption && captionId, hasError && errorId, hasSuccess && successId]
+      .filter(Boolean)
+      .join(' ') || undefined;
 
   const inputA11yProps = {
     'id': resolvedId,
     disabled,
-    'aria-invalid': hasError ? true : undefined,
-    'aria-required': required ? true : undefined,
+    'aria-invalid': hasError ? true : inputProps['aria-invalid'],
+    'aria-required': required ? true : inputProps['aria-required'],
     'aria-describedby': describedBy,
   };
 
