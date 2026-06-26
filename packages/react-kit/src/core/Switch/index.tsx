@@ -12,7 +12,9 @@ type Props = {
 
 const Switch = ({ checked, validationStatus, ...props }: Props, ref: Ref<HTMLInputElement>) => {
   const checkboxRef = useProvidedOrCreatedRef(ref as React.RefObject<HTMLInputElement>);
-  return <BaseSwitch ref={checkboxRef} checked={checked} validationStatus={validationStatus} {...props} />;
+  return (
+    <BaseSwitch ref={checkboxRef} role={'switch'} checked={checked} validationStatus={validationStatus} {...props} />
+  );
 };
 
 const UnstyledSwitch = styled.input.attrs({ type: 'checkbox' })<SxProp>`
