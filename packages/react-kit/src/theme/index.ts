@@ -36,6 +36,9 @@ const theme = {
     Pagination: { previous: '이전', next: '다음' },
     Select: { placeholder: '옵션 선택' },
     UploadInput: { placeholder: '파일을 끌어다 놓으세요', selectFile: '파일 선택' },
+    Dialog: { closeButtonLabel: '닫기' },
+    Drawer: { closeButtonLabel: '닫기' },
+    Tab: { scrollLeftLabel: '왼쪽으로 스크롤', scrollRightLabel: '오른쪽으로 스크롤' },
   },
 };
 

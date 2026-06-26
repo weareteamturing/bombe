@@ -120,7 +120,13 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, sx, children }: PropsWith
                   backgroundColor: theme.colors.surface,
                 }}
               >
-                <IconButton size={'s'} variant={'plain-bold'} icon={ChevronLeftIcon} onClick={handleLeftButtonClick} />
+                <IconButton
+                  size={'s'}
+                  variant={'plain-bold'}
+                  icon={ChevronLeftIcon}
+                  aria-label={theme.locales?.Tab?.scrollLeftLabel ?? '왼쪽으로 스크롤'}
+                  onClick={handleLeftButtonClick}
+                />
               </View>
             </>
           ) : null}
@@ -155,6 +161,7 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, sx, children }: PropsWith
                   size={'s'}
                   variant={'plain-bold'}
                   icon={ChevronRightIcon}
+                  aria-label={theme.locales?.Tab?.scrollRightLabel ?? '오른쪽으로 스크롤'}
                   onClick={handleRightButtonClick}
                 />
               </View>

@@ -236,6 +236,7 @@ const Dialog = (
                     icon={CloseIcon}
                     variant={'plain-bold'}
                     size={'m'}
+                    aria-label={theme.locales?.Dialog?.closeButtonLabel ?? '닫기'}
                     onClick={handleDismiss}
                   />
                 </View>

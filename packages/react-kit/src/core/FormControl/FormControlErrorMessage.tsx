@@ -8,10 +8,10 @@ import { FormControlContext } from '.';
 type Props = {};
 
 const FormControlErrorMessage = ({ children }: PropsWithChildren<Props>) => {
-  const { id } = useContext(FormControlContext);
+  const { errorId } = useContext(FormControlContext);
 
   return (
-    <StyledText id={id} typography={'xxs'} color={'text/danger'}>
+    <StyledText id={errorId} role={'alert'} typography={'xxs'} color={'text/danger'}>
       {children}
     </StyledText>
   );
