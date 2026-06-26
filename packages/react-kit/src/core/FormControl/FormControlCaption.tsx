@@ -7,10 +7,10 @@ import { FormControlContext } from '.';
 type Props = {};
 
 const FormControlCaption = ({ children }: PropsWithChildren<Props>) => {
-  const { id } = useContext(FormControlContext);
+  const { captionId } = useContext(FormControlContext);
 
   return (
-    <Text as={'span'} id={id} typography={'xxs'} color={'text/neutral/subtlest'}>
+    <Text as={'span'} id={captionId} typography={'xxs'} color={'text/neutral/subtlest'}>
       {children}
     </Text>
   );

@@ -8,10 +8,10 @@ import { FormControlContext } from '.';
 type Props = {};
 
 const FormControlSuccessMessage = ({ children }: PropsWithChildren<Props>) => {
-  const { id } = useContext(FormControlContext);
+  const { successId } = useContext(FormControlContext);
 
   return (
-    <StyledText id={id} typography={'xxs'} color={'text/success'}>
+    <StyledText id={successId} role={'status'} typography={'xxs'} color={'text/success'}>
       {children}
     </StyledText>
   );

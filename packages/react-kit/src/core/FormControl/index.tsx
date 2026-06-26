@@ -1,4 +1,13 @@
-import { PropsWithChildren, ReactElement, Ref, cloneElement, createContext, forwardRef, isValidElement } from 'react';
+import {
+  PropsWithChildren,
+  ReactElement,
+  Ref,
+  cloneElement,
+  createContext,
+  forwardRef,
+  isValidElement,
+  useId,
+} from 'react';
 
 import useRelocation from '../../hook/useRelocation';
 import Checkbox from '../Checkbox';
@@ -46,7 +55,14 @@ type FormControlFieldProps = {
   caption?: string;
 };
 
-type FormControlContextValue = {} & Omit<Props, 'additionalInputComponentCandidates'>;
+type FormControlContextValue = {
+  /**
+   * `Caption`, `ErrorMessage`, `SuccessMessage`가 Input과 `aria-describedby`로 연결되기 위한 고유 ID입니다.
+   */
+  captionId?: string;
+  errorId?: string;
+  successId?: string;
+} & Omit<Props, 'additionalInputComponentCandidates'>;
 const FormControlContext = createContext<FormControlContextValue>({});
 
 const FormControl = (
@@ -88,11 +104,32 @@ const FormControl = (
     isValidElement(InputComponent) &&
     (InputComponent.type === Checkbox || InputComponent.type === Radio || InputComponent.type === Switch);
 
+  const reactId = useId();
+  const resolvedId = id ?? reactId;
+  const captionId = `${resolvedId}-caption`;
+  const errorId = `${resolvedId}-error`;
+  const successId = `${resolvedId}-success`;
+
+  const hasCaption = Boolean(relocatableComponentsObject.caption);
+  const hasError = Boolean(relocatableComponentsObject.errorMessage);
+  const hasSuccess = Boolean(relocatableComponentsObject.successMessage);
+
+  const describedBy =
+    [hasCaption && captionId, hasError && errorId, hasSuccess && successId].filter(Boolean).join(' ') || undefined;
+
+  const inputA11yProps = {
+    'id': resolvedId,
+    disabled,
+    'aria-invalid': hasError ? true : undefined,
+    'aria-required': required ? true : undefined,
+    'aria-describedby': describedBy,
+  };
+
   return (
-    <FormControlContext.Provider value={{ id, disabled, required }}>
+    <FormControlContext.Provider value={{ id: resolvedId, disabled, required, captionId, errorId, successId }}>
       {isHorizontalLayoutNeeded ? (
         <View ref={ref} display={'flex'} sx={{ columnGap: 2, ...sx }} {...props}>
-          <View display={'inline-flex'}>{cloneElement(InputComponent as ReactElement, { id, disabled })}</View>
+          <View display={'inline-flex'}>{cloneElement(InputComponent as ReactElement, inputA11yProps)}</View>
           <View sx={{ '& > span': { mt: 0.5 } }}>
             <View
               className={'form_control__label_wrapper__horizontal'}
@@ -131,7 +168,7 @@ const FormControl = (
             {relocatableComponentsObject.label}
             {relocatableComponentsObject.tooltipIcon}
           </View>
-          {cloneElement(InputComponent as ReactElement, { id, disabled })}
+          {cloneElement(InputComponent as ReactElement, inputA11yProps)}
           {relocatableComponentsObject.caption}
           {relocatableComponentsObject.errorMessage}
           {relocatableComponentsObject.successMessage}
