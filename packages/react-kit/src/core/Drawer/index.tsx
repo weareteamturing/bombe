@@ -3,6 +3,7 @@ import { forcePixelValue } from '@teamturing/utils';
 import { easeInOut } from 'framer-motion';
 import {
   forwardRef,
+  HTMLAttributes,
   PropsWithChildren,
   Ref,
   RefObject,
@@ -39,7 +40,8 @@ type Props = {
   size?: DrawerSizeType;
   direction?: DrawerDirectionType;
   initialFocusRef?: RefObject<HTMLElement>;
-} & SxProp;
+} & Pick<HTMLAttributes<HTMLDivElement>, 'aria-label' | 'aria-labelledby'> &
+  SxProp;
 
 const Drawer = (
   {
@@ -50,6 +52,8 @@ const Drawer = (
     size = 'm',
     direction = 'right',
     initialFocusRef,
+    'aria-label': ariaLabel,
+    'aria-labelledby': ariaLabelledby,
     sx,
   }: PropsWithChildren<Props>,
   ref: Ref<HTMLDivElement>,
@@ -91,7 +95,12 @@ const Drawer = (
     [handleDismiss],
   );
 
-  useFocusTrap({ containerRef: drawerRef, initialFocusRef: initialFocusRef || closeButtonRef, disabled: !isOpen });
+  useFocusTrap({
+    containerRef: drawerRef,
+    initialFocusRef: initialFocusRef || closeButtonRef,
+    disabled: !isOpen,
+    restoreFocusOnCleanUp: true,
+  });
 
   useEffect(() => {
     if (isOpen && isOutsideClickDismissable) {
@@ -165,6 +174,8 @@ const Drawer = (
               className={`trk-drawer--${size} trk-drawer--${direction}`}
               ref={drawerRef}
               aria-modal={'true'}
+              aria-label={ariaLabel}
+              aria-labelledby={ariaLabelledby}
               role={'dialog'}
               tabIndex={-1}
               size={size}
