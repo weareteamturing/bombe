@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.76.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.75.0...@teamturing/react-kit@2.76.0) (2026-06-26)
+
+### Bug Fixes
+
+- **react-kit:** add accessible names to internal icon buttons ([0720a2e](https://github.com/weareteamturing/bombe/commit/0720a2e24b8f414bae26431b31e3699a95c8bcd6))
+- **react-kit:** preserve consumer aria props in FormControl ([2d909a8](https://github.com/weareteamturing/bombe/commit/2d909a83ea06475f475013f2a0ec25fdb5a6ea81))
+
+### Features
+
+- **react-kit:** add aria-selected to Tab.Item ([ed1c145](https://github.com/weareteamturing/bombe/commit/ed1c14590b401694fd449a4741d85e07089084ed))
+- **react-kit:** add combobox role to SearchSelectInput trigger ([545747e](https://github.com/weareteamturing/bombe/commit/545747e43bdfc6eebee04b7b395340099d907c71))
+- **react-kit:** add decorative/labeled icon semantics to StyledIcon ([f46c179](https://github.com/weareteamturing/bombe/commit/f46c1796e4ed4162c84e4ddc6590c53b21dc765f))
+- **react-kit:** add keyboard support to ClickArea ([15e0349](https://github.com/weareteamturing/bombe/commit/15e03494343fed2d7bebf6e05e19ea14a1ecdf66))
+- **react-kit:** add live region semantics to Toast, Flash, Spinner ([8edcf65](https://github.com/weareteamturing/bombe/commit/8edcf650a83013edaafca1e34f4e74fc992172de))
+- **react-kit:** add switch role to Switch ([0ed9711](https://github.com/weareteamturing/bombe/commit/0ed971180f0758e55a15638b9e61c22af0b0df35))
+- **react-kit:** add term/definition roles to DescriptionList ([ee0222b](https://github.com/weareteamturing/bombe/commit/ee0222b6cf1fd335a99d5776c99802083242e00c))
+- **react-kit:** add toggle state and accessible-name warning to icon buttons ([403886e](https://github.com/weareteamturing/bombe/commit/403886e63f562b4b5720c20c343912d0f5d8d198))
+- **react-kit:** improve Drawer/Overlay dialog a11y ([ba5392a](https://github.com/weareteamturing/bombe/commit/ba5392a90312ffa68468bc5f72b12d5a469fdf67))
+- **react-kit:** wire ARIA relationships in FormControl ([cc095db](https://github.com/weareteamturing/bombe/commit/cc095dba1168d153e3b1af4c57bbdd169ffc1a44))
+
 # [2.75.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.74.0...@teamturing/react-kit@2.75.0) (2026-06-24)
 
 ### Features
