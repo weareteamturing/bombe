@@ -199,7 +199,7 @@ const SearchSelectInput = <T,>(
         </Overlay>
       )}
     >
-      {(popperProps) => (
+      {(popperProps, { isOpen }) => (
         <TextInputWrapper
           {...(disabled
             ? {}
@@ -260,6 +260,9 @@ const SearchSelectInput = <T,>(
             <BaseInput
               id={id}
               ref={labelInputRef}
+              role={'combobox'}
+              aria-haspopup={'listbox'}
+              aria-expanded={isOpen}
               readOnly
               onChange={noop}
               autoComplete={'off'}
