@@ -191,6 +191,9 @@ export type { TabProps } from './core/Tab';
 export { default as Text } from './core/Text';
 export type { TextProps } from './core/Text';
 
+export { default as TextTruncate } from './core/TextTruncate';
+export type { TextTruncateProps } from './core/TextTruncate';
+
 export { default as Textarea } from './core/Textarea';
 export type { TextareaProps } from './core/Textarea';
 
