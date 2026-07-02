@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.77.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.76.0...@teamturing/react-kit@2.77.0) (2026-07-02)
+
+### Bug Fixes
+
+- **react-kit:** clear drag highlight on rejected drop in UploadInput ([752edbe](https://github.com/weareteamturing/bombe/commit/752edbeac606b47b0ce1d52de810bd8031bd617a))
+
+### Features
+
+- **react-kit:** add TextTruncate component ([71d52be](https://github.com/weareteamturing/bombe/commit/71d52be6cbe4afe6f42bc09ccfc06087a5f4e778))
+- **react-kit:** support responsive cursor prop on ClickArea ([0794d93](https://github.com/weareteamturing/bombe/commit/0794d9320cd3d13bb8efc1f186a4202f818d9d9a))
+
 # [2.76.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.75.0...@teamturing/react-kit@2.76.0) (2026-06-26)
 
 ### Bug Fixes
