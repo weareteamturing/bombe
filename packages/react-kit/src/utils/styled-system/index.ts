@@ -39,6 +39,11 @@ type LineClampProps<ThemeType extends Theme = RequiredTheme> = {
 };
 const lineClamp = system({ lineClamp: { property: 'WebkitLineClamp', scale: 'WebkitLineClamp' } });
 
+type CursorProps<ThemeType extends Theme = RequiredTheme> = {
+  cursor?: ResponsiveValue<CSS.Property.Cursor, ThemeType> | undefined;
+};
+const cursor = system({ cursor: { property: 'cursor' } });
+
 type GapProps<ThemeType extends Theme = RequiredTheme, TVal = ThemeValue<'space', ThemeType>> = {
   gap?: ResponsiveValue<TVal, ThemeType> | undefined;
 };
@@ -54,7 +59,7 @@ type RowGapProps<ThemeType extends Theme = RequiredTheme, TVal = ThemeValue<'spa
 };
 const rowGap = system({ rowGap: { property: 'rowGap', scale: 'space' } });
 
-export { sx, textDecoration, whiteSpace, wordBreak, lineClamp, gap, columnGap, rowGap };
+export { sx, textDecoration, whiteSpace, wordBreak, lineClamp, cursor, gap, columnGap, rowGap };
 export type {
   BetterSystemStyleObject,
   AsProp,
@@ -62,6 +67,7 @@ export type {
   WhiteSpaceProps,
   WordBreakProps,
   LineClampProps,
+  CursorProps,
   GapProps,
   ColumnGapProps,
   RowGapProps,

@@ -39,20 +39,16 @@ const UploadInput = (
   };
   const handleDrop: DragEventHandler<HTMLDivElement> = (e) => {
     e.preventDefault();
+    e.currentTarget?.classList.remove('upload-input__wrapper__active');
 
     const files = e.dataTransfer?.files ?? [];
     if (files.length < 1) return;
-    if (!props.multiple && files.length > 1) {
-      e.currentTarget?.classList.remove('upload-input__wrapper__active');
-      return;
-    }
+    if (!props.multiple && files.length > 1) return;
 
     const isAcceptableFile = new RegExp(
       (accept || '*').replace(/\*/g, '.*').replace(/,/g, '|').replace(/\s/g, ''),
     ).test(files[0].type);
     if (!isAcceptableFile) return;
-
-    e.currentTarget?.classList.remove('upload-input__wrapper__active');
 
     if (inputRef && inputRef.current && files) {
       const currentFiles = inputRef.current.files;

@@ -1,11 +1,13 @@
 import { HTMLAttributes, KeyboardEvent, PropsWithChildren, Ref, forwardRef } from 'react';
 import styled from 'styled-components';
 
+import { CursorProps, cursor } from '../../utils/styled-system';
 import View, { ViewProps } from '../View';
 
 type Props = {
   disabled?: boolean;
-} & ViewProps &
+} & CursorProps &
+  ViewProps &
   Pick<HTMLAttributes<HTMLDivElement>, 'onClick'>;
 
 const ClickArea = ({ disabled, onClick, ...props }: PropsWithChildren<Props>, ref: Ref<HTMLDivElement>) => {
@@ -34,10 +36,10 @@ const ClickArea = ({ disabled, onClick, ...props }: PropsWithChildren<Props>, re
   );
 };
 
-const BaseClickArea = styled(View)<Pick<Props, 'disabled'>>`
-  &:hover {
-    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  }
+const BaseClickArea = styled(View).attrs<Pick<Props, 'disabled' | 'cursor'>>(({ disabled, cursor }) => ({
+  cursor: disabled ? 'not-allowed' : cursor ?? 'pointer',
+}))`
+  ${cursor}
 `;
 
 export default forwardRef(ClickArea);
