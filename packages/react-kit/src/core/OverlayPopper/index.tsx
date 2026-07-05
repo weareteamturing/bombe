@@ -76,9 +76,20 @@ const OverlayPopper = ({
 
   const delayedHandleOverlayClose = useDelayedFunction({ func: handleOverlayClose, delay: 150 });
 
+  // overlay <-> trigger 를 오갈 때 예약된 close 를 취소해 hover 유지를 지원한다.
+  const handleOverlayEnter = () => {
+    delayedHandleOverlayClose.cancel();
+    handleOverlayOpen();
+  };
+
   const handleDismiss = () => {
     handleOverlayClose();
   };
+
+  // hover 모드에서 overlay 위에 hover 를 유지할 수 있도록 overlay 에 주입하는 핸들러.
+  const overlayHoverProps: Pick<HTMLAttributes<HTMLElement>, 'onMouseEnter' | 'onMouseLeave'> = triggeredBy === 'hover'
+    ? { onMouseEnter: () => delayedHandleOverlayClose.cancel(), onMouseLeave: () => delayedHandleOverlayClose() }
+    : {};
 
   const defaultPopperProps: HTMLAttributes<HTMLElement> = {
     tabIndex: tabIndex ?? 0,
@@ -96,7 +107,7 @@ const OverlayPopper = ({
         }
       : triggeredBy === 'hover'
       ? {
-          onMouseEnter: handleOverlayOpen,
+          onMouseEnter: handleOverlayEnter,
           onMouseLeave: delayedHandleOverlayClose,
         }
       : {}),
@@ -129,6 +140,7 @@ const OverlayPopper = ({
           ignoreOutsideClickRefs: [refs.reference as RefObject<HTMLElement>],
           style: { ...floatingStyles },
           onDismiss: handleDismiss,
+          ...overlayHoverProps,
         },
         { isOpen, closeOverlay: handleOverlayClose },
         { elements },
