@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.78.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.77.0...@teamturing/react-kit@2.78.0) (2026-07-05)
+
+### Features
+
+- **react-kit:** support hover within overlay in OverlayPopper ([02b0ce1](https://github.com/weareteamturing/bombe/commit/02b0ce1b5cd470665a91aad1ec9a0a94289482e2))
+
 # [2.77.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.76.0...@teamturing/react-kit@2.77.0) (2026-07-02)
 
 ### Bug Fixes

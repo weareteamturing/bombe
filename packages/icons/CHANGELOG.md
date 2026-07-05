@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.77.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.77.0...@teamturing/icons@1.77.1) (2026-07-05)
+
+### Bug Fixes
+
+- **icons:** render ChevronRightTwo and Store with currentColor ([0ac6777](https://github.com/weareteamturing/bombe/commit/0ac677710e6d640ed5675b00a97c906777399a70))
+
 # [1.77.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.76.0...@teamturing/icons@1.77.0) (2026-06-04)
 
 ### Features
