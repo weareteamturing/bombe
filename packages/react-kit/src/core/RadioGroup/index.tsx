@@ -3,7 +3,7 @@ import { ChangeEventHandler, Children, PropsWithChildren, ReactNode } from 'reac
 import { createSafeContext } from '../../utils/createSafeContext';
 import Grid from '../Grid';
 
-import RadioGroupOption, { RadioGroupOptionProps } from './RadioGroupOption';
+import RadioGroupOption, { RadioGroupOptionProps, RadioGroupOptionRenderState } from './RadioGroupOption';
 
 type RadioGroupContextValue = {
   name?: string;
@@ -76,4 +76,4 @@ const RadioGroup = ({
 
 export { useRadioGroupContext };
 export default Object.assign(RadioGroup, { Option: RadioGroupOption });
-export type { RadioGroupProps, RadioGroupContextValue, RadioGroupOptionProps };
+export type { RadioGroupProps, RadioGroupContextValue, RadioGroupOptionProps, RadioGroupOptionRenderState };
