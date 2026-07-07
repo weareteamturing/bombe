@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.79.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.78.0...@teamturing/react-kit@2.79.0) (2026-07-07)
+
+### Features
+
+- **react-kit:** support custom option visuals in RadioGroup/CheckboxGroup ([500405b](https://github.com/weareteamturing/bombe/commit/500405b23fcdb1ff2c3d632f4480e0ca3885cd37))
+
 # [2.78.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.77.0...@teamturing/react-kit@2.78.0) (2026-07-05)
 
 ### Features
