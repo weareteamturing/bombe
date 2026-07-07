@@ -35,8 +35,14 @@ const useFocusTrap = (
   React.useEffect(() => {
     if (containerRef.current instanceof HTMLElement) {
       if (!disabled) {
-        abortController.current = focusTrap(containerRef.current, initialFocusRef.current ?? undefined);
+        // 위치(transform) 확정 전 focus 시 요소가 (0,0)이라 스크롤이 튀어 다음 프레임에 트랩을 켠다
+        const rafId = requestAnimationFrame(() => {
+          if (containerRef.current instanceof HTMLElement) {
+            abortController.current = focusTrap(containerRef.current, initialFocusRef.current ?? undefined);
+          }
+        });
         return () => {
+          cancelAnimationFrame(rafId);
           disableTrap();
         };
       } else {
