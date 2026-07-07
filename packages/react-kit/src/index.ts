@@ -43,7 +43,11 @@ export { default as Checkbox } from './core/Checkbox';
 export type { CheckboxProps } from './core/Checkbox';
 
 export { default as CheckboxGroup } from './core/CheckboxGroup';
-export type { CheckboxGroupProps, CheckboxGroupOptionProps } from './core/CheckboxGroup';
+export type {
+  CheckboxGroupProps,
+  CheckboxGroupOptionProps,
+  CheckboxGroupOptionRenderState,
+} from './core/CheckboxGroup';
 
 export { default as CheckboxOrRadioGroupFormControl } from './core/CheckboxOrRadioGroupFormControl';
 export type {
@@ -162,7 +166,7 @@ export { default as Radio } from './core/Radio';
 export type { RadioProps } from './core/Radio';
 
 export { default as RadioGroup } from './core/RadioGroup';
-export type { RadioGroupProps, RadioGroupOptionProps } from './core/RadioGroup';
+export type { RadioGroupProps, RadioGroupOptionProps, RadioGroupOptionRenderState } from './core/RadioGroup';
 
 export { default as SearchSelectInput } from './core/SearchSelectInput';
 export type { SearchSelectInputProps } from './core/SearchSelectInput';
@@ -230,6 +234,8 @@ export { default as useDelayedFunction } from './hook/useDelayedFunction';
 export { default as useDevice } from './hook/useDevice';
 
 export { default as useFocusTrap } from './hook/useFocusTrap';
+
+export { default as useFocusVisible } from './hook/useFocusVisible';
 
 export { default as useFocusZone } from './hook/useFocusZone';
 

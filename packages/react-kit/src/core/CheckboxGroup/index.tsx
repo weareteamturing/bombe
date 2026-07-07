@@ -3,7 +3,7 @@ import { ChangeEventHandler, Children, PropsWithChildren, ReactNode } from 'reac
 import { createSafeContext } from '../../utils/createSafeContext';
 import Grid from '../Grid';
 
-import CheckboxGroupOption, { CheckboxGroupOptionProps } from './CheckboxGroupOption';
+import CheckboxGroupOption, { CheckboxGroupOptionProps, CheckboxGroupOptionRenderState } from './CheckboxGroupOption';
 
 type CheckboxGroupContextValue = {
   name?: string;
@@ -76,4 +76,4 @@ const CheckboxGroup = ({
 
 export { useCheckboxGroupContext };
 export default Object.assign(CheckboxGroup, { Option: CheckboxGroupOption });
-export type { CheckboxGroupProps, CheckboxGroupContextValue, CheckboxGroupOptionProps };
+export type { CheckboxGroupProps, CheckboxGroupContextValue, CheckboxGroupOptionProps, CheckboxGroupOptionRenderState };
