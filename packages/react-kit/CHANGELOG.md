@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.79.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.79.0...@teamturing/react-kit@2.79.1) (2026-07-07)
+
+### Bug Fixes
+
+- **react-kit:** defer focusTrap activation to next frame ([230484f](https://github.com/weareteamturing/bombe/commit/230484fb1a4dbc8ac99bdbd0b43187e601bbe22b))
+
 # [2.79.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.78.0...@teamturing/react-kit@2.79.0) (2026-07-07)
 
 ### Features
