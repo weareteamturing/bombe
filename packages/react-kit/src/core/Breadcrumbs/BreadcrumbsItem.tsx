@@ -2,11 +2,12 @@ import { forcePixelValue } from '@teamturing/utils';
 import { AnchorHTMLAttributes, useEffect, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 
-import { AsProp } from '../../utils/styled-system';
+import { AsProp, SxProp, sx } from '../../utils/styled-system';
 import Tooltip from '../Tooltip';
 
 type Props = { text: string; selected?: boolean; truncatedWidth?: number } & AnchorHTMLAttributes<HTMLAnchorElement> &
-  AsProp;
+  AsProp &
+  SxProp;
 
 const BreadcrumbsItem = ({ text, selected = false, truncatedWidth = 100, ...props }: Props) => {
   const itemRef = useRef<HTMLElement>(null);
@@ -21,7 +22,13 @@ const BreadcrumbsItem = ({ text, selected = false, truncatedWidth = 100, ...prop
   }, []);
 
   const baseBreadCrumbsItem = (
-    <BaseBreadcrumbsItem ref={itemRef} selected={selected} truncatedWidth={truncatedWidth} {...props}>
+    <BaseBreadcrumbsItem
+      className={'breadcrumbs_item'}
+      ref={itemRef}
+      selected={selected}
+      truncatedWidth={truncatedWidth}
+      {...props}
+    >
       {text}
     </BaseBreadcrumbsItem>
   );
@@ -61,6 +68,8 @@ const BaseBreadcrumbsItem = styled.a<Props>`
           pointer-events: none;
         `
       : ''}
+
+  ${sx}
 `;
 
 export default BreadcrumbsItem;

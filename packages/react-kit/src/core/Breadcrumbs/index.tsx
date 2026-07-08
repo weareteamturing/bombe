@@ -2,6 +2,8 @@ import { forcePixelValue } from '@teamturing/utils';
 import { Children, PropsWithChildren, useState } from 'react';
 import styled from 'styled-components';
 
+import { AsProp, SxProp, sx } from '../../utils/styled-system';
+
 import BreadcrumbsItem from './BreadcrumbsItem';
 
 type Props = {
@@ -10,7 +12,8 @@ type Props = {
    * BreadcrumbsItem의 갯수가 maxItemCount보다 클 경우, 자동으로 중간 BreadcrumbsItem들을 줄여서 보여줍니다.
    */
   maxItemCount?: number;
-};
+} & SxProp &
+  AsProp;
 
 const Breadcrumbs = ({ children, maxItemCount = 5, ...props }: PropsWithChildren<Props>) => {
   const childrenArray = Children.toArray(children);
@@ -26,17 +29,19 @@ const Breadcrumbs = ({ children, maxItemCount = 5, ...props }: PropsWithChildren
       ];
 
   return (
-    <BaseBreadcrumbs aria-label={'Breadcrumb'} {...props}>
-      <BreadcrumbsList>
+    <BaseBreadcrumbs className={'breadcrumbs'} aria-label={'Breadcrumb'} {...props}>
+      <BreadcrumbsList className={'breadcrumbs__list'}>
         {Children.map(breadcrumbsItems, (child) => (
-          <BreadcrumbsItemWrapper>{child}</BreadcrumbsItemWrapper>
+          <BreadcrumbsItemWrapper className={'breadcrumbs__item_wrapper'}>{child}</BreadcrumbsItemWrapper>
         ))}
       </BreadcrumbsList>
     </BaseBreadcrumbs>
   );
 };
 
-const BaseBreadcrumbs = styled.nav``;
+const BaseBreadcrumbs = styled.nav<SxProp>`
+  ${sx}
+`;
 
 const BreadcrumbsList = styled.ol`
   display: flex;
