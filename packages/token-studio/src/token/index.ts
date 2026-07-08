@@ -9,6 +9,7 @@ export type {
   IconColorKey,
   LinkColorKey,
   ScaleColorKey,
+  SurfaceColorKey,
   TextColorKey,
 } from './color';
 
