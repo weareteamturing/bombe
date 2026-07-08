@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.1](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.17.0...@teamturing/token-studio@1.17.1) (2026-07-08)
+
+### Bug Fixes
+
+- **token-studio:** re-export SurfaceColorKey from token barrel ([7343ccf](https://github.com/weareteamturing/bombe/commit/7343ccf9abf363c0966545f31f614a08d9695861))
+
 # [1.17.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.16.4...@teamturing/token-studio@1.17.0) (2026-04-29)
 
 ### Features

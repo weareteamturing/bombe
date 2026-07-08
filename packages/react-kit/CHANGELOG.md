@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.80.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.79.1...@teamturing/react-kit@2.80.0) (2026-07-08)
+
+### Features
+
+- **react-kit:** support sx, as, and className hooks in Breadcrumbs ([05267c2](https://github.com/weareteamturing/bombe/commit/05267c2d07611bf30cb94c18449229d7cc12b496))
+
 ## [2.79.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.79.0...@teamturing/react-kit@2.79.1) (2026-07-07)
 
 ### Bug Fixes
