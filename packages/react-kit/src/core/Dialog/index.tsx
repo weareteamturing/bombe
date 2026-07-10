@@ -65,6 +65,21 @@ const DEFAULT_BLANKET_MOTION_PROPS = {
   },
 } satisfies DialogMotionProps;
 
+/**
+ * 애니메이션 값을 필드 단위로 병합합니다.
+ * 우선순위: 인스턴스 prop → 전역(theme.components.dialog) → 하드 기본값
+ */
+const resolveMotionProps = (
+  instance: DialogMotionProps | undefined,
+  global: DialogMotionProps | undefined,
+  fallback: Required<DialogMotionProps>,
+): Required<DialogMotionProps> => ({
+  initial: instance?.initial ?? global?.initial ?? fallback.initial,
+  animate: instance?.animate ?? global?.animate ?? fallback.animate,
+  exit: instance?.exit ?? global?.exit ?? fallback.exit,
+  transition: instance?.transition ?? global?.transition ?? fallback.transition,
+});
+
 const Dialog = (
   {
     children,
@@ -81,6 +96,13 @@ const Dialog = (
 ) => {
   const theme = useTheme();
   const titleId = useId();
+
+  const dialogMotion = resolveMotionProps(motionProps, theme.components?.dialog?.motionProps, DEFAULT_MOTION_PROPS);
+  const blanketMotion = resolveMotionProps(
+    blanketMotionProps,
+    theme.components?.dialog?.blanketMotionProps,
+    DEFAULT_BLANKET_MOTION_PROPS,
+  );
 
   const handleDismiss = useCallback(() => onDismiss?.(), [onDismiss]);
 
@@ -138,10 +160,10 @@ const Dialog = (
       {isOpen ? (
         <>
           <MotionView
-            initial={blanketMotionProps?.initial ?? DEFAULT_BLANKET_MOTION_PROPS.initial}
-            animate={blanketMotionProps?.animate ?? DEFAULT_BLANKET_MOTION_PROPS.animate}
-            exit={blanketMotionProps?.exit ?? DEFAULT_BLANKET_MOTION_PROPS.exit}
-            transition={blanketMotionProps?.transition ?? DEFAULT_BLANKET_MOTION_PROPS.transition}
+            initial={blanketMotion.initial}
+            animate={blanketMotion.animate}
+            exit={blanketMotion.exit}
+            transition={blanketMotion.transition}
             sx={{
               position: 'fixed',
               top: 0,
@@ -154,10 +176,10 @@ const Dialog = (
             <Blanket ref={blanketRef} />
           </MotionView>
           <MotionView
-            initial={motionProps?.initial ?? DEFAULT_MOTION_PROPS.initial}
-            animate={motionProps?.animate ?? DEFAULT_MOTION_PROPS.animate}
-            exit={motionProps?.exit ?? DEFAULT_MOTION_PROPS.exit}
-            transition={motionProps?.transition ?? DEFAULT_MOTION_PROPS.transition}
+            initial={dialogMotion.initial}
+            animate={dialogMotion.animate}
+            exit={dialogMotion.exit}
+            transition={dialogMotion.transition}
             sx={{
               position: 'fixed',
               top: 0,
