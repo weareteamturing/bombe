@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.81.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.80.0...@teamturing/react-kit@2.81.0) (2026-07-10)
+
+### Features
+
+- **react-kit:** support global Dialog animation override via theme ([9b70324](https://github.com/weareteamturing/bombe/commit/9b70324ff36c287237a35d2d959a0e562b480725))
+
 # [2.80.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.79.1...@teamturing/react-kit@2.80.0) (2026-07-08)
 
 ### Features
