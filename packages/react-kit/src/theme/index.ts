@@ -13,6 +13,8 @@ import {
   gpaiDarkColor,
 } from '@teamturing/token-studio';
 
+import type { DialogMotionProps } from '../core/Dialog';
+
 const theme = {
   breakpoints,
   space,
@@ -29,6 +31,12 @@ const theme = {
     spinner: {
       defaultVariant: 'progress-gradient' as const,
     },
+    /**
+     * Dialog 애니메이션 전역 override 지점.
+     * 소비처에서 ThemeProvider로 `components.dialog.motionProps` / `blanketMotionProps`를 주입하면
+     * 모든 Dialog에 전역 적용된다. (인스턴스 prop이 최우선, 미지정 시 하드 기본값 사용)
+     */
+    dialog: {} as { motionProps?: DialogMotionProps; blanketMotionProps?: DialogMotionProps },
   },
 
   locales: {
