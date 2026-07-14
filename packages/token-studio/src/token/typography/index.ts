@@ -28,6 +28,9 @@ const typography = {
   'xxs/regular': { fontSize: fontSizes.xxs, fontWeight: fontWeights.regular, lineHeight: lineHeights[2] },
   'xxs': { fontSize: fontSizes.xxs, fontWeight: fontWeights.medium, lineHeight: lineHeights[2] },
   'xxs/bold': { fontSize: fontSizes.xxs, fontWeight: fontWeights.bold, lineHeight: lineHeights[2] },
+  'xxxs/regular': { fontSize: fontSizes.xxxs, fontWeight: fontWeights.regular, lineHeight: lineHeights[2] },
+  'xxxs': { fontSize: fontSizes.xxxs, fontWeight: fontWeights.medium, lineHeight: lineHeights[2] },
+  'xxxs/bold': { fontSize: fontSizes.xxxs, fontWeight: fontWeights.bold, lineHeight: lineHeights[2] },
 } as const;
 
 type TypographyKey = keyof typeof typography;

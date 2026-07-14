@@ -1,6 +1,7 @@
 import { fontSize } from '../../foundation/typography';
 
 const fontSizes = {
+  xxxs: fontSize.fontSize50,
   xxs: fontSize.fontSize100,
   xs: fontSize.fontSize200,
   s: fontSize.fontSize300,
