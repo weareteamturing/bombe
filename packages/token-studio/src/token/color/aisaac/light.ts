@@ -1,12 +1,7 @@
-import palette from '../../foundation/palette';
-
-import aisaacDarkColor from './aisaac/dark';
-import aisaacLightColor from './aisaac/light';
-import gpaiDarkColor from './gpai/dark';
-import gpaiLightColor from './gpai/light';
+import palette from '../../../foundation/palette';
 
 const textColor = {
-  'text/primary': palette.violet500,
+  'text/primary': palette.lavender500,
   'text/accent/blue': palette.blue500,
   'text/accent/green': palette.green500,
   'text/accent/yellow': palette.yellow500,
@@ -29,13 +24,13 @@ const textColor = {
 } as const;
 
 const bgColor = {
-  'bg/secondary': palette.violet50,
-  'bg/secondary/hovered': palette.violet200,
-  'bg/secondary/pressed': palette.violet200,
-  'bg/primary': palette.violet500,
-  'bg/primary/hovered': palette.violet700,
-  'bg/primary/pressed': palette.violet700,
-  'bg/primary/disabled': palette.violet100,
+  'bg/secondary': palette.lavender50,
+  'bg/secondary/hovered': palette.lavender200,
+  'bg/secondary/pressed': palette.lavender200,
+  'bg/primary': palette.lavender500,
+  'bg/primary/hovered': palette.lavender700,
+  'bg/primary/pressed': palette.lavender700,
+  'bg/primary/disabled': palette.lavender100,
 
   'bg/neutral/subtlest': palette.transparent,
   'bg/neutral/subtlest/hovered': palette.gray50,
@@ -69,7 +64,7 @@ const bgColor = {
   'bg/accent/red': palette.red500,
   'bg/accent/gray/subtlest': palette.gray200,
 
-  'bg/selected/primary': palette.violet500,
+  'bg/selected/primary': palette.lavender500,
   'bg/selected': palette.gray900,
   'bg/selected/subtle': palette.gray100,
 
@@ -100,7 +95,7 @@ const borderColor = {
   'border/inverse': palette.white10A,
   'border/selected': palette.gray900,
   'border/disabled': palette.gray100,
-  'border/primary': palette.violet500,
+  'border/primary': palette.lavender500,
   'border/hovered': palette.blue300,
   'border/focused': palette.blue500,
   'border/danger': palette.red500,
@@ -122,11 +117,11 @@ const iconColor = {
   'icon/inverse': palette.white,
   'icon/disabled': palette.gray300,
   'icon/disabled/subtler': palette.gray200,
-  'icon/selected/primary': palette.violet500,
+  'icon/selected/primary': palette.lavender500,
   'icon/selected': palette.gray900,
-  'icon/primary/subtle': palette.violet300,
-  'icon/primary': palette.violet500,
-  'icon/primary/bold': palette.violet700,
+  'icon/primary/subtle': palette.lavender300,
+  'icon/primary': palette.lavender500,
+  'icon/primary/bold': palette.lavender700,
   'icon/success': palette.green500,
   'icon/warning': palette.yellow500,
   'icon/danger': palette.red500,
@@ -244,7 +239,7 @@ const surfaceColor = {
   'surface/overlay': palette.white,
 } as const;
 
-const color = {
+const aisaacLightColor = {
   ...textColor,
   ...bgColor,
   ...borderColor,
@@ -255,26 +250,4 @@ const color = {
   ...surfaceColor,
 } as const;
 
-type TextColorKey = keyof typeof textColor;
-type BgColorKey = keyof typeof bgColor;
-type BorderColorKey = keyof typeof borderColor;
-type IconColorKey = keyof typeof iconColor;
-type LinkColorKey = keyof typeof linkColor;
-type DimColorKey = keyof typeof dimColor;
-type ScaleColorKey = keyof typeof scaleColor;
-type SurfaceColorKey = keyof typeof surfaceColor;
-type ColorKey = keyof typeof color;
-
-export default color;
-export { gpaiLightColor, gpaiDarkColor, aisaacLightColor, aisaacDarkColor };
-export type {
-  ColorKey,
-  TextColorKey,
-  BgColorKey,
-  BorderColorKey,
-  IconColorKey,
-  LinkColorKey,
-  DimColorKey,
-  ScaleColorKey,
-  SurfaceColorKey,
-};
+export default aisaacLightColor;

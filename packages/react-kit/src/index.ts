@@ -262,7 +262,7 @@ export { default as useToggleState } from './hook/useToggleState';
 /**
  * theme
  */
-export { default as theme, gpaiLightTheme, gpaiDarkTheme } from './theme';
+export { default as theme, gpaiLightTheme, gpaiDarkTheme, aisaacLightTheme, aisaacDarkTheme } from './theme';
 
 /**
  * styled-system utils

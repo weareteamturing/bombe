@@ -11,6 +11,8 @@ import {
   elevation,
   gpaiLightColor,
   gpaiDarkColor,
+  aisaacLightColor,
+  aisaacDarkColor,
 } from '@teamturing/token-studio';
 
 import type { DialogMotionProps } from '../core/Dialog';
@@ -70,5 +72,25 @@ const gpaiDarkTheme = {
   },
 };
 
+const aisaacLightTheme = {
+  ...theme,
+  colors: aisaacLightColor,
+  components: {
+    spinner: {
+      defaultVariant: 'progress-line' as const,
+    },
+  },
+};
+
+const aisaacDarkTheme = {
+  ...theme,
+  colors: aisaacDarkColor,
+  components: {
+    spinner: {
+      defaultVariant: 'progress-line' as const,
+    },
+  },
+};
+
 export default theme;
-export { gpaiLightTheme, gpaiDarkTheme };
+export { gpaiLightTheme, gpaiDarkTheme, aisaacLightTheme, aisaacDarkTheme };
