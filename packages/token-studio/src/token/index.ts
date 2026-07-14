@@ -1,6 +1,6 @@
 export { default as breakpoints, baseBreakpoints } from './breakpoints';
 
-export { default as color, gpaiLightColor, gpaiDarkColor } from './color';
+export { default as color, gpaiLightColor, gpaiDarkColor, aisaacLightColor, aisaacDarkColor } from './color';
 export type {
   ColorKey,
   BgColorKey,

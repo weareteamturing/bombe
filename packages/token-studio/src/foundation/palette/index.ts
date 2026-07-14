@@ -163,6 +163,19 @@ const lime = {
   lime900: '#255601',
 } as const;
 
+const lavender = {
+  lavender50: '#F0EFFD',
+  lavender100: '#DDDCFF',
+  lavender200: '#D1D0FB',
+  lavender300: '#B4B2F6',
+  lavender400: '#8582F0',
+  lavender500: '#6763EC',
+  lavender600: '#5753D7',
+  lavender700: '#423EA8',
+  lavender800: '#33307E',
+  lavender900: '#26255F',
+} as const;
+
 const palette = {
   ...gray,
   ...violet,
@@ -177,7 +190,23 @@ const palette = {
   ...mustardYellow,
   ...orange,
   ...lime,
+  ...lavender,
 };
 
 export default palette;
-export { gray, violet, green, yellow, red, blue, shade, fuchsiaPink, skyBlue, indianRed, mustardYellow, orange, lime };
+export {
+  gray,
+  violet,
+  green,
+  yellow,
+  red,
+  blue,
+  shade,
+  fuchsiaPink,
+  skyBlue,
+  indianRed,
+  mustardYellow,
+  orange,
+  lime,
+  lavender,
+};
