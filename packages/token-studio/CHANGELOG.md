@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.17.1...@teamturing/token-studio@1.18.0) (2026-07-14)
+
+### Features
+
+- **token-studio:** add AISAAC brand color tokens ([3ae9f23](https://github.com/weareteamturing/bombe/commit/3ae9f23343bcc7100b87ae6575a6d3a5834c5323))
+- **token-studio:** add lavender color palette ([dcac243](https://github.com/weareteamturing/bombe/commit/dcac243f9d71a20e6a8ff5756c64536d09f8ee03))
+
 ## [1.17.1](https://github.com/weareteamturing/bombe/compare/@teamturing/token-studio@1.17.0...@teamturing/token-studio@1.17.1) (2026-07-08)
 
 ### Bug Fixes

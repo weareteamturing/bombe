@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.82.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.81.0...@teamturing/react-kit@2.82.0) (2026-07-14)
+
+### Features
+
+- **token-studio:** add AISAAC brand color tokens ([3ae9f23](https://github.com/weareteamturing/bombe/commit/3ae9f23343bcc7100b87ae6575a6d3a5834c5323))
+
 # [2.81.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.80.0...@teamturing/react-kit@2.81.0) (2026-07-10)
 
 ### Features
