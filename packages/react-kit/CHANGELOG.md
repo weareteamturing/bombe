@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.83.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.82.0...@teamturing/react-kit@2.83.0) (2026-07-14)
+
+### Features
+
+- **token-studio:** add xxxs typography token ([24cd411](https://github.com/weareteamturing/bombe/commit/24cd4119bea3f0d44d5bb23ca361f5b553808c59))
+
 # [2.82.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.81.0...@teamturing/react-kit@2.82.0) (2026-07-14)
 
 ### Features
