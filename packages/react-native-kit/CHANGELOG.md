@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.45.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.44.1...@teamturing/react-native-kit@1.45.0) (2026-07-15)
+
+### Features
+
+- **icons:** add grid, slide, line_chart icon ([3c3bff3](https://github.com/weareteamturing/bombe/commit/3c3bff37e679d8b96aa218de3e4ab93e62e368fa))
+
 ## [1.44.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.44.0...@teamturing/react-native-kit@1.44.1) (2026-07-05)
 
 **Note:** Version bump only for package @teamturing/react-native-kit
