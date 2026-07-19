@@ -140,6 +140,21 @@ const Text = styled.span.attrs<Props>((props) => ({ color: props.color ?? 'text/
           fontWeight: theme.fontWeights.bold,
           lineHeight: theme.lineHeights[2],
         },
+        'xxxs/regular': {
+          fontSize: theme.fontSizes.xxxs,
+          fontWeight: theme.fontWeights.regular,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xxxs': {
+          fontSize: theme.fontSizes.xxxs,
+          fontWeight: theme.fontWeights.medium,
+          lineHeight: theme.lineHeights[2],
+        },
+        'xxxs/bold': {
+          fontSize: theme.fontSizes.xxxs,
+          fontWeight: theme.fontWeights.bold,
+          lineHeight: theme.lineHeights[2],
+        },
       },
     }),
   compose(wordBreak, whiteSpace, textDecoration, fontSize, fontWeight, lineHeight, color, textAlign),
