@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.85.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.84.0...@teamturing/react-kit@2.85.0) (2026-07-20)
+
+### Features
+
+- **react-kit:** add preventScrollOnFocus prop to OverlayPopper/Overlay ([0b4f674](https://github.com/weareteamturing/bombe/commit/0b4f674f14d1c7a52b99fa468568761104adb4de))
+
 # [2.84.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.83.1...@teamturing/react-kit@2.84.0) (2026-07-19)
 
 ### Features
