@@ -28,6 +28,7 @@ type Props = {
   onOpen?: () => void;
   onClose?: () => void;
   tabIndex?: number;
+  preventScrollOnFocus?: boolean;
 };
 
 const OverlayPopper = ({
@@ -40,6 +41,7 @@ const OverlayPopper = ({
   onOpen,
   onClose,
   tabIndex,
+  preventScrollOnFocus = false,
 }: Props) => {
   const theme = useTheme();
   const { refs, elements, floatingStyles, isPositioned } = useFloating({
@@ -69,7 +71,7 @@ const OverlayPopper = ({
     const reference = refs.reference as RefObject<HTMLElement>;
     if (reference.current) {
       setTimeout(() => {
-        reference.current?.focus();
+        reference.current?.focus({ preventScroll: preventScrollOnFocus });
       }, 0);
     }
   };
@@ -138,6 +140,7 @@ const OverlayPopper = ({
           isOpen,
           dismissFocusRef: refs.reference as RefObject<HTMLElement>,
           ignoreOutsideClickRefs: [refs.reference as RefObject<HTMLElement>],
+          preventScrollOnFocus,
           style: { ...floatingStyles },
           onDismiss: handleDismiss,
           ...overlayHoverProps,

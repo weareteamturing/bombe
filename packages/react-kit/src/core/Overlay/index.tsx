@@ -24,6 +24,7 @@ type Props = {
   ignoreOutsideClickRefs?: RefObject<HTMLElement>[];
   dismissFocusRef?: RefObject<HTMLElement>;
   initialFocusRef?: RefObject<HTMLElement>;
+  preventScrollOnFocus?: boolean;
 } & MaxHeightProps &
   SxProp &
   HTMLAttributes<HTMLElement>;
@@ -37,6 +38,7 @@ const Overlay = (
     ignoreOutsideClickRefs = [],
     dismissFocusRef,
     initialFocusRef,
+    preventScrollOnFocus = false,
     maxHeight = forcePixelValue(600),
     ...props
   }: PropsWithChildren<Props>,
@@ -48,7 +50,7 @@ const Overlay = (
   const handleDismiss = useCallback(() => {
     if (dismissFocusRef && dismissFocusRef.current) {
       setTimeout(() => {
-        dismissFocusRef.current?.focus();
+        dismissFocusRef.current?.focus({ preventScroll: preventScrollOnFocus });
       }, 0);
     }
 
@@ -81,13 +83,13 @@ const Overlay = (
 
   useEffect(() => {
     if (initialFocusRef && initialFocusRef.current) {
-      initialFocusRef.current.focus();
+      initialFocusRef.current.focus({ preventScroll: preventScrollOnFocus });
       return;
     }
 
     if (overlayRef.current) {
       const firstItem = iterateFocusableElements(overlayRef.current).next().value;
-      firstItem?.focus();
+      firstItem?.focus({ preventScroll: preventScrollOnFocus });
     }
   }, [isOpen]);
   useEffect(() => {
