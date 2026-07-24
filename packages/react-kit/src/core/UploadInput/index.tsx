@@ -3,15 +3,17 @@ import { forcePixelValue } from '@teamturing/utils';
 import { DragEventHandler, InputHTMLAttributes, ReactNode, Ref, forwardRef, useImperativeHandle, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 
+import { sx, SxProp } from '../../utils/styled-system';
 import Button, { ButtonProps } from '../Button';
 
 type Props = {
   buttonProps?: Pick<ButtonProps, 'children' | 'variant' | 'size' | 'leadingIcon' | 'trailingIcon'>;
   placeholder?: ReactNode;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'placeholder'>;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'placeholder'> &
+  SxProp;
 
 const UploadInput = (
-  { buttonProps: propsButtonProps, placeholder: propPlaceholder, accept, disabled, ...props }: Props,
+  { buttonProps: propsButtonProps, placeholder: propPlaceholder, accept, disabled, sx, ...props }: Props,
   ref: Ref<HTMLInputElement>,
 ) => {
   const theme = useTheme();
@@ -82,6 +84,7 @@ const UploadInput = (
   return (
     <UploadInputWrapper
       disabled={disabled}
+      sx={sx}
       {...(disabled
         ? {}
         : {
@@ -99,7 +102,7 @@ const UploadInput = (
   );
 };
 
-const UploadInputWrapper = styled.div<{ disabled?: boolean }>`
+const UploadInputWrapper = styled.div<{ disabled?: boolean } & SxProp>`
   width: 100%;
 
   display: flex;
@@ -166,6 +169,8 @@ const UploadInputWrapper = styled.div<{ disabled?: boolean }>`
       : {}}
 
   transition: background-color 200ms ease-in-out;
+
+  ${sx}
 `;
 
 const UnstyledInput = styled.input`
