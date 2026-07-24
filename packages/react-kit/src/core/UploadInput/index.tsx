@@ -1,13 +1,14 @@
 import { ShareIcon } from '@teamturing/icons';
 import { forcePixelValue } from '@teamturing/utils';
-import { DragEventHandler, InputHTMLAttributes, Ref, forwardRef, useImperativeHandle, useRef } from 'react';
+import { DragEventHandler, InputHTMLAttributes, ReactNode, Ref, forwardRef, useImperativeHandle, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 
 import Button, { ButtonProps } from '../Button';
 
 type Props = {
   buttonProps?: Pick<ButtonProps, 'children' | 'variant' | 'size' | 'leadingIcon' | 'trailingIcon'>;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, 'type'>;
+  placeholder?: ReactNode;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'placeholder'>;
 
 const UploadInput = (
   { buttonProps: propsButtonProps, placeholder: propPlaceholder, accept, disabled, ...props }: Props,
@@ -91,7 +92,7 @@ const UploadInput = (
           })}
     >
       <ShareIcon />
-      <span>{placeholder}</span>
+      <div className={'upload_input__placeholder'}>{placeholder}</div>
       <Button type={'button'} {...buttonProps} onClick={handleButtonClick} disabled={disabled} />
       <UnstyledInput ref={inputRef} {...props} type={'file'} hidden accept={accept} tabIndex={-1} disabled={disabled} />
     </UploadInputWrapper>
@@ -114,7 +115,7 @@ const UploadInputWrapper = styled.div<{ disabled?: boolean }>`
     color: ${({ theme }) => theme.colors['icon/neutral/bold']};
   }
 
-  & > span {
+  & > .upload_input__placeholder {
     font-size: ${({ theme }) => forcePixelValue(theme.fontSizes.xs)};
     font-weight: ${({ theme }) => theme.fontWeights.medium};
     line-height: ${({ theme }) => theme.lineHeights[2]};
@@ -160,7 +161,7 @@ const UploadInputWrapper = styled.div<{ disabled?: boolean }>`
           'cursor': 'not-allowed',
           'backgroundColor': theme.colors['bg/disabled'],
           '& > svg': { color: theme.colors['icon/disabled'] },
-          '& > span': { color: theme.colors['text/disabled'] },
+          '& > .upload_input__placeholder': { color: theme.colors['text/disabled'] },
         }
       : {}}
 
