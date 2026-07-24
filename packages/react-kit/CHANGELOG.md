@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.87.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.86.0...@teamturing/react-kit@2.87.0) (2026-07-24)
+
+### Features
+
+- **react-kit:** support sx prop on UploadInput ([9a642c4](https://github.com/weareteamturing/bombe/commit/9a642c49c017cec1735388385cb384eb6fd6b4d1))
+
 # [2.86.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.85.0...@teamturing/react-kit@2.86.0) (2026-07-24)
 
 ### Features
