@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.86.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.85.0...@teamturing/react-kit@2.86.0) (2026-07-24)
+
+### Features
+
+- **react-kit:** accept ReactNode placeholder in UploadInput ([588d43a](https://github.com/weareteamturing/bombe/commit/588d43a7317346bcb7dcff63e742ebbfdd9926c4))
+
 # [2.85.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.84.0...@teamturing/react-kit@2.85.0) (2026-07-20)
 
 ### Features
