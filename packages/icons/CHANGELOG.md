@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.78.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.78.0...@teamturing/icons@1.78.1) (2026-07-31)
+
+### Bug Fixes
+
+- **icon:** update pin icon ([5a5e806](https://github.com/weareteamturing/bombe/commit/5a5e8065122f6729c504434796f2c9d2f8afa1b6))
+
 # [1.78.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.77.1...@teamturing/icons@1.78.0) (2026-07-15)
 
 ### Features
