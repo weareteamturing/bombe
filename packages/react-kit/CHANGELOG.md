@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.88.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.87.1...@teamturing/react-kit@2.88.0) (2026-08-05)
+
+### Features
+
+- **react-kit:** support size s on FileItem default variant ([7d28392](https://github.com/weareteamturing/bombe/commit/7d2839266ac7a8a98eed97c80aaa6ed85c9de519))
+
 ## [2.87.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.87.0...@teamturing/react-kit@2.87.1) (2026-07-31)
 
 **Note:** Version bump only for package @teamturing/react-kit
