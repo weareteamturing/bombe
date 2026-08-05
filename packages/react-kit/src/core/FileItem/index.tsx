@@ -32,7 +32,8 @@ type Props = {
    */
   renderFileIcon?: (fileType: string, file: Props['file']) => ComponentType<SVGProps<SVGSVGElement>>;
   /**
-   * 컴포넌트의 사이즈를 정의합니다. thumbnail variant에서만 적용됩니다.
+   * 크기를 정의합니다.
+   * 반응형 디자인이 적용됩니다.
    */
   size?: ResponsiveValue<'m' | 's'>;
 } & SxProp;
@@ -63,6 +64,13 @@ const FileItem = ({
     };
   }, [file]);
 
+  const statusNode =
+    validationStatus === 'error' ? (
+      <StyledIcon className={'file__status'} icon={ExclamationPointInCircleIcon} color={'icon/danger'} />
+    ) : loading ? (
+      <Spinner className={'file__status file__status__spinner'} />
+    ) : null;
+
   return (
     <BaseFile
       variant={variant}
@@ -74,13 +82,9 @@ const FileItem = ({
     >
       {variant === 'default' ? (
         <>
-          <FileIcon />
+          <FileIcon className={'file__leading_icon'} />
           <span>{fileName}</span>
-          {validationStatus === 'error' ? (
-            <StyledIcon icon={ExclamationPointInCircleIcon} size={24} color={'icon/danger'} />
-          ) : loading ? (
-            <Spinner width={24} height={24} />
-          ) : null}
+          {statusNode}
           {trailingAction}
         </>
       ) : variant === 'thumbnail' ? (
@@ -100,15 +104,7 @@ const FileItem = ({
               <span title={fileName}>{fileName}</span>
             </div>
           )}
-          {validationStatus === 'error' || loading ? (
-            <div className={'file__thumbnail__cover'}>
-              {validationStatus === 'error' ? (
-                <StyledIcon icon={ExclamationPointInCircleIcon} size={24} color={'icon/danger'} />
-              ) : loading ? (
-                <Spinner width={24} height={24} />
-              ) : null}
-            </div>
-          ) : null}
+          {statusNode ? <div className={'file__thumbnail__cover'}>{statusNode}</div> : null}
           {trailingAction}
         </>
       ) : null}
@@ -117,7 +113,17 @@ const FileItem = ({
 };
 
 const BaseFile = styled.div<Omit<Props, 'file'>>(
-  { position: 'relative' },
+  ({ theme }) => ({
+    'position': 'relative',
+
+    '& .file__status': {
+      width: 20,
+      height: 20,
+    },
+    '& .file__status__spinner': {
+      color: theme.colors['icon/neutral/bold'],
+    },
+  }),
   ({ theme, disabled }) =>
     variant<BetterSystemStyleObject>({
       prop: 'variant',
@@ -126,23 +132,15 @@ const BaseFile = styled.div<Omit<Props, 'file'>>(
           'backgroundColor': theme.colors['bg/neutral'],
           'borderRadius': theme.radii.xs,
           'width': '100%',
-          'height': forcePixelValue(48),
-          'py': 1,
-          'pr': 2,
-          'pl': 4,
 
           'display': 'flex',
-          'columnGap': 2,
           'alignItems': 'center',
 
-          '& > svg': {
-            width: 24,
-            height: 24,
+          '& > .file__leading_icon': {
             color: theme.colors['icon/neutral/bold'],
           },
           '& > span': {
             flex: 1,
-            fontSize: theme.fontSizes.xs,
             fontWeight: theme.fontWeights.medium,
             lineHeight: theme.lineHeights[2],
             overflow: 'hidden',
@@ -153,7 +151,7 @@ const BaseFile = styled.div<Omit<Props, 'file'>>(
 
           ...(disabled
             ? {
-                '& > svg': {
+                '& > .file__leading_icon': {
                   color: theme.colors['icon/disabled'],
                 },
                 '& span': {
@@ -292,11 +290,28 @@ const BaseFile = styled.div<Omit<Props, 'file'>>(
         },
       },
     }),
-  ({ variant: propVariant }) =>
+  ({ theme, variant: propVariant }) =>
     variant<BetterSystemStyleObject>({
       prop: 'size',
       variants: {
         m: {
+          ...(propVariant === 'default'
+            ? {
+                'height': forcePixelValue(48),
+                'py': 1,
+                'pr': 2,
+                'pl': 4,
+                'columnGap': 2,
+
+                '& > .file__leading_icon': {
+                  width: 24,
+                  height: 24,
+                },
+                '& > span': {
+                  fontSize: theme.fontSizes.xs,
+                },
+              }
+            : {}),
           ...(propVariant === 'thumbnail'
             ? {
                 width: forcePixelValue(160),
@@ -306,6 +321,23 @@ const BaseFile = styled.div<Omit<Props, 'file'>>(
             : {}),
         },
         s: {
+          ...(propVariant === 'default'
+            ? {
+                'height': forcePixelValue(32),
+                'py': 0,
+                'pr': 1,
+                'pl': 2,
+                'columnGap': 1,
+
+                '& > .file__leading_icon': {
+                  width: 12,
+                  height: 12,
+                },
+                '& > span': {
+                  fontSize: theme.fontSizes.xxs,
+                },
+              }
+            : {}),
           ...(propVariant === 'thumbnail'
             ? {
                 width: forcePixelValue(80),
