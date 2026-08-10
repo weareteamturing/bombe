@@ -33,13 +33,15 @@ const Tab = ({ variant = 'plain', size = 'm', gap = 2, sx, children }: PropsWith
     rootRef.current ? rootRef.current.clientWidth + rootRef.current.scrollLeft < rootRef.current.scrollWidth : false,
   );
 
+  // 브라우저가 clientWidth/scrollWidth를 서로 다른 방향으로 정수화하면서(Safari, DPR > 1)
+  // 스크롤이 불필요한 경우에도 최대 1px 오차가 남기 때문에 임계값을 둔다
+  const scrollThreshold = 1;
+
   const handleScrollButtonVisibility = () => {
     if (rootRef.current) {
-      setIsLeftButtonVisible(rootRef.current ? rootRef.current.scrollLeft > 0 : false);
+      setIsLeftButtonVisible(rootRef.current.scrollLeft > scrollThreshold);
       setIsRightButtonVisible(
-        rootRef.current
-          ? rootRef.current.clientWidth + Math.ceil(rootRef.current.scrollLeft) < rootRef.current.scrollWidth
-          : false,
+        rootRef.current.scrollWidth - rootRef.current.clientWidth - rootRef.current.scrollLeft > scrollThreshold,
       );
     }
   };
