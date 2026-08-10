@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.88.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.88.0...@teamturing/react-kit@2.88.1) (2026-08-10)
+
+### Bug Fixes
+
+- **react-kit:** prevent Tab scroll buttons from showing without overflow ([6a2dcce](https://github.com/weareteamturing/bombe/commit/6a2dcced622a2d488136028d56dd764649dc634e))
+
 # [2.88.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.87.1...@teamturing/react-kit@2.88.0) (2026-08-05)
 
 ### Features
