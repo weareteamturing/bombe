@@ -5,7 +5,8 @@ const nodeResolve = require('@rollup/plugin-node-resolve');
 const postcss = require('rollup-plugin-postcss');
 
 module.exports = {
-  input: 'src/index.ts',
+  // enigma는 `@teamturing/icons` 전체를 참조하므로 별도 진입점으로 분리한다
+  input: { 'index': 'src/index.ts', 'enigma/index': 'src/enigma/index.ts' },
   output: [
     {
       dir: 'dist',

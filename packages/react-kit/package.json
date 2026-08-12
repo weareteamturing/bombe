@@ -12,9 +12,22 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.js",
       "types": "./dist/index.d.ts",
-      "import": "./esm/index.js"
+      "import": "./esm/index.js",
+      "require": "./dist/index.js"
+    },
+    "./enigma": {
+      "types": "./dist/enigma/index.d.ts",
+      "import": "./esm/enigma/index.js",
+      "require": "./dist/enigma/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "enigma": [
+        "./dist/enigma/index.d.ts"
+      ]
     }
   },
   "repository": {

@@ -74,3 +74,4 @@ export const getViewComponent: (viewContainer: ViewContainerType) => ComponentTy
 };
 
 export default Object.assign(EnigmaUI, { TextView, ImageView, IconView, ChipGroupView, GridView });
+export type { Props as EnigmaUIProps };

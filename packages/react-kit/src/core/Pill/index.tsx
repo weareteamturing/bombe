@@ -194,7 +194,7 @@ const BasePill = styled(UnstyledButton)<
           'fontWeight': theme.fontWeights.medium,
           'lineHeight': theme.lineHeights[2],
           'columnGap': 0.25,
-          '& svg': { minWidth: 12, height: 12 },
+          '& svg': { width: 12, minWidth: 12, height: 12 },
           '& > div': { p: 1 },
         },
         m: {
@@ -206,7 +206,7 @@ const BasePill = styled(UnstyledButton)<
           'fontWeight': theme.fontWeights.medium,
           'lineHeight': theme.lineHeights[2],
           'columnGap': 1,
-          '& svg': { minWidth: 12, height: 12 },
+          '& svg': { width: 12, minWidth: 12, height: 12 },
           '& > div': { p: 1 },
         },
       },

@@ -126,7 +126,10 @@ const mapValueToResponsiveValueProps = <T,>(
 };
 
 const Unit = ({ size, as, children, ...props }: PropsWithChildren<GridUnitProps>) => {
-  const getFlexGrowBySize = (size: UnitSizeType) => (size === 'max' ? 1 : size === 'min' ? 0 : 1);
+  /**
+   * `flex-grow`는 아래 `flex` 단축 속성이 결정합니다.
+   * 별도로 지정하면 단축 속성에 덮어써져 효과가 없고, DOM으로만 전달됩니다.
+   */
   const getFlexBySize = (size: UnitSizeType) => (size === 'max' ? 1 : size === 'min' ? 'none' : 'none');
   const getFlexBasisBySize = (size: UnitSizeType) => {
     const percentage = Math.round((size as number) * 100 * 10000) / 10000;
@@ -141,7 +144,6 @@ const Unit = ({ size, as, children, ...props }: PropsWithChildren<GridUnitProps>
     <View
       {...mapValueToResponsiveValueProps(size, (value) => ({
         display: value === 0 ? 'none' : 'initial',
-        flowGrow: getFlexGrowBySize(value),
         flex: getFlexBySize(value),
         flexBasis: getFlexBasisBySize(value),
         width: getWidthBySize(value),
