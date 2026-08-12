@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.88.1...@teamturing/react-kit@3.0.0) (2026-08-12)
+
+### Bug Fixes
+
+- **react-kit:** pin Pill icon size with both width and min-width ([8321331](https://github.com/weareteamturing/bombe/commit/83213316edc74a4c2b51deb75c84d33ecb076b37))
+- **react-kit:** remove redundant flexGrow from Grid.Unit ([022c959](https://github.com/weareteamturing/bombe/commit/022c9595a36bbfd55e9b1d26bcbb945d180909fe))
+
+- feat(react-kit)!: move EnigmaUI to the enigma subpath export ([53512d3](https://github.com/weareteamturing/bombe/commit/53512d3df891b171007902e25884a6d5bb6db69a))
+
+### Features
+
+- **react-kit:** support strokeWidth on StyledIcon ([6f3d6ec](https://github.com/weareteamturing/bombe/commit/6f3d6ec4a8f4681cf96db2ae0e6d6bb93e4b55dd))
+
+### BREAKING CHANGES
+
+- `EnigmaUI`를 메인 진입점에서 더 이상 export하지 않습니다.
+  `@teamturing/react-kit/enigma`에서 import하세요.
+
+  - import { EnigmaUI } from '@teamturing/react-kit';
+
+  * import { EnigmaUI } from '@teamturing/react-kit/enigma';
+
+enigma 관련 타입도 같은 경로에서 함께 export됩니다.
+
+Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+
 ## [2.88.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@2.88.0...@teamturing/react-kit@2.88.1) (2026-08-10)
 
 ### Bug Fixes
