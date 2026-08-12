@@ -223,8 +223,10 @@ export type { UnstyledButtonProps } from './core/_UnstyledButton';
 
 /**
  * enigma component
+ *
+ * enigma는 `@teamturing/icons` 전체를 참조하므로 `@teamturing/react-kit/enigma`로 분리되어 있습니다.
+ * 메인 진입점에서 re-export하면 enigma를 쓰지 않는 애플리케이션도 아이콘 전량을 번들에 포함하게 됩니다.
  */
-export { default as EnigmaUI } from './enigma/EnigmaUI';
 
 /**
  * hooks
