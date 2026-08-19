@@ -74,6 +74,17 @@ for (const f of files) {
   if (!source.includes('viewBox=')) errors.push(`viewBox가 없습니다: ${f}`);
 }
 
+/**
+ * 라이선스 전문이 패키지에 실리는가.
+ * ISC의 조건이라 빠지면 게시 자체가 문제가 된다.
+ */
+const NOTICE_FILE = path.join(PKG_DIR, 'THIRD-PARTY-NOTICES.md');
+if (!fs.existsSync(NOTICE_FILE)) {
+  errors.push('THIRD-PARTY-NOTICES.md가 없습니다. collect-lucide.mjs를 먼저 실행하세요.');
+} else if (!fs.readFileSync(NOTICE_FILE, 'utf8').includes('ISC License')) {
+  errors.push('THIRD-PARTY-NOTICES.md에 lucide 라이선스 전문이 없습니다.');
+}
+
 if (errors.length > 0) {
   console.error(`lucide 검증 실패 (${errors.length}건)`);
   for (const e of errors.slice(0, 20)) console.error(`  - ${e}`);
