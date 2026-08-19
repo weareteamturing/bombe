@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.79.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.78.1...@teamturing/icons@1.79.0) (2026-08-19)
+
+### Features
+
+- **icons:** add lucide icon set under the /lucide subpath ([df0f650](https://github.com/weareteamturing/bombe/commit/df0f6500646002fa7d25f1bba2b5fa0ca91e43d4))
+
 ## [1.78.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.78.0...@teamturing/icons@1.78.1) (2026-07-31)
 
 ### Bug Fixes
