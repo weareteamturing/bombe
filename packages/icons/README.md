@@ -9,11 +9,15 @@ React 프로젝트용 아이콘 컴포넌트. 두 갈래로 나뉜다.
 
 ```tsx
 import { SearchIcon } from '@teamturing/icons';
-import { Search } from '@teamturing/icons/lucide';
+import { SearchIcon as LucideSearchIcon } from '@teamturing/icons/lucide';
 ```
 
-자사 아이콘은 이름 끝에 `Icon`이 붙고 lucide는 붙지 않는다. 같은 개념의 아이콘을 양쪽에서
-가져와도 이름이 겹치지 않으며, lucide 쪽은 공식 문서의 이름을 그대로 쓴다.
+양쪽 다 `Icon` 접미사를 쓴다. 자사와 lucide에 같은 개념이 다 있는 것이 72개라
+(`CalendarIcon`, `ArrowDownIcon` 등) 한 파일에서 함께 쓸 때는 별칭이 필요하다.
+별칭을 써도 번들에는 아무것도 더해지지 않는다. 나머지 1697개는 그대로 가져다 쓰면 된다.
+
+lucide 이름은 공식 문서의 이름에 접미사만 붙인 형태다. `search` → `SearchIcon`,
+`trash-2` → `Trash2Icon`.
 
 두 엔트리는 서로를 참조하지 않는다. 자사 아이콘만 쓰는 앱의 번들에는 lucide 코드가
 한 바이트도 들어가지 않는다.
@@ -22,7 +26,7 @@ import { Search } from '@teamturing/icons/lucide';
 
 ```tsx
 // ✅ 아이콘 하나당 1KB 남짓
-import { Search } from '@teamturing/icons/lucide';
+import { SearchIcon } from '@teamturing/icons/lucide';
 
 // ❌ 1.07MB — lucide 전체가 번들에 들어간다
 import * as Lucide from '@teamturing/icons/lucide';
@@ -33,9 +37,9 @@ const Icon = Lucide[iconName];
 정해야 한다면 네임스페이스 대신 필요한 아이콘만 담은 맵을 직접 만든다.
 
 ```tsx
-import { Search, Settings, Trash2 } from '@teamturing/icons/lucide';
+import { SearchIcon, SettingsIcon, Trash2Icon } from '@teamturing/icons/lucide';
 
-const ICONS = { search: Search, settings: Settings, trash: Trash2 };
+const ICONS = { search: SearchIcon, settings: SettingsIcon, trash: Trash2Icon };
 const Icon = ICONS[iconName];
 ```
 
@@ -45,7 +49,7 @@ lucide의 `stroke-width="2"`는 **24px로 그렸을 때** 기준이다. 16px나 
 비율로 얇아져 자사 아이콘 옆에서 흐리게 보인다. 필요하면 `strokeWidth`로 보정한다.
 
 ```tsx
-<Search width={16} height={16} strokeWidth={3} />
+<SearchIcon width={16} height={16} strokeWidth={3} />
 ```
 
 react-kit을 쓴다면 `StyledIcon`의 `strokeWidth` prop이 같은 일을 한다.

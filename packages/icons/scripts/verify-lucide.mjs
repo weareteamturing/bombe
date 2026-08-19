@@ -38,7 +38,11 @@ for (const f of files) {
 
 /** index.ts의 export 이름 중복 — 중복되면 TS2300으로 컴파일이 깨진다 */
 const index = fs.readFileSync(path.join(SRC_DIR, 'index.ts'), 'utf8');
-const exportNames = [...index.matchAll(/export \{ default as (\w+) \}/g)].map((m) => m[1]);
+const exports = [...index.matchAll(/export \{ default as (\w+) \} from '\.\/(\w+)'/g)].map((m) => ({
+  name: m[1],
+  file: m[2],
+}));
+const exportNames = exports.map((e) => e.name);
 check(
   exportNames.length === canonical.length,
   `index.ts의 export 수가 맞지 않습니다: ${exportNames.length}개 / ${canonical.length}개`,
@@ -49,9 +53,19 @@ for (const name of exportNames) {
   seen.add(name);
 }
 
-/** index.ts가 가리키는 파일이 실제로 있는가 */
+/**
+ * index.ts가 가리키는 파일이 실제로 있는가.
+ * export 이름(`SearchIcon`)과 파일명(`Search.tsx`)이 다르므로 from 절의 경로로 확인한다.
+ */
+for (const { name, file } of exports) {
+  if (!fs.existsSync(path.join(SRC_DIR, `${file}.tsx`))) {
+    errors.push(`${name}이 없는 파일을 가리킵니다: ${file}.tsx`);
+  }
+}
+
+/** 접미사 규칙이 지켜졌는가 — 템플릿이 바뀌면 조용히 어긋난다 */
 for (const name of exportNames) {
-  if (!fs.existsSync(path.join(SRC_DIR, `${name}.tsx`))) errors.push(`export가 없는 파일을 가리킵니다: ${name}.tsx`);
+  if (!name.endsWith('Icon')) errors.push(`Icon 접미사가 없습니다: ${name}`);
 }
 
 /** viewBox 유실 — svgo 설정이 바뀌면 조용히 사라지고, 그러면 크기 조절이 전부 깨진다 */
