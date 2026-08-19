@@ -1,4 +1,5 @@
 import { ComponentType, forwardRef, HTMLAttributes, Ref, SVGProps } from 'react';
+import { ResponsiveValue } from 'styled-system';
 
 import View, { ViewProps } from '../View';
 
@@ -11,8 +12,12 @@ type Props = {
    * 선(stroke)으로 그려진 아이콘의 선 굵기를 정의합니다.
    * `lucide`, `tabler`처럼 `stroke-width`가 고정된 아이콘은 `size`를 줄이면 선도 함께 얇아지므로,
    * 이 값으로 보정합니다. 면(fill)으로 그려진 아이콘에는 영향이 없습니다.
+   * 반응형 디자인이 적용됩니다.
+   *
+   * `size`와 짝을 맞춰 쓰는 값이므로 `size`와 같은 길이의 배열을 전달합니다.
+   * 예를 들어 `size={[16, 20, 24]}`에는 `strokeWidth={[3, 2.5, 2]}`를 전달합니다.
    */
-  strokeWidth?: number | string;
+  strokeWidth?: ResponsiveValue<number | string>;
 } & Pick<ViewProps, 'size' | 'color' | 'sx'> &
   Pick<HTMLAttributes<HTMLDivElement>, 'className' | 'aria-label' | 'aria-hidden'>;
 
@@ -45,6 +50,10 @@ const StyledIcon = forwardRef<HTMLDivElement, Props>(
             display: 'inline-flex',
             width: '100%',
             height: '100%',
+            /**
+             * 배열을 넘기면 `@styled-system/css`가 테마의 `breakpoints`를 써서
+             * 미디어쿼리로 풀어줍니다. 중첩 셀렉터 안에서도 동일하게 동작합니다.
+             */
             ...(strokeWidth !== undefined ? { strokeWidth } : {}),
           },
           ...sx,
