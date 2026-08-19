@@ -6,6 +6,9 @@ esm/
 iife/
 **/lib/
 
+# lucide 원본 svg (lucide-static에서 그때그때 모은다 — packages/icons/scripts/collect-lucide.mjs)
+packages/icons/.lucide-svg/
+
 # eslint
 .eslintcache
 
