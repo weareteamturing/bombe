@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.0.0...@teamturing/icons@2.0.1) (2026-08-19)
+
+### Bug Fixes
+
+- **icons:** carry the lucide license notice into the package ([6e1532c](https://github.com/weareteamturing/bombe/commit/6e1532c03b0e25dd546e0d5cd6310c60560ed6ea))
+
 # [2.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.79.0...@teamturing/icons@2.0.0) (2026-08-19)
 
 - feat(icons)!: mark the lucide-bearing package as 2.0 ([2e771ab](https://github.com/weareteamturing/bombe/commit/2e771ab6d609b9c319e4f3f400ba30ec4fecef3b))
