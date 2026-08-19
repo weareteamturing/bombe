@@ -4,13 +4,14 @@
   "description": "Icon components for React based project",
   "author": "Sungchang Park <psch300@gmail.com> (https://github.com/psch300)",
   "homepage": "https://github.com/weareteamturing/bombe#readme",
-  "license": "MIT",
+  "license": "MIT AND ISC",
   "main": "./dist/index.js",
   "sideEffects": false,
   "files": [
     "dist",
     "esm",
-    "svg"
+    "svg",
+    "THIRD-PARTY-NOTICES.md"
   ],
   "exports": {
     ".": {

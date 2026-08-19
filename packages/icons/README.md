@@ -64,6 +64,20 @@ lucide의 `stroke-width="2"`는 **24px로 그렸을 때** 기준이다. 16px나 
 
 react-kit을 쓴다면 `StyledIcon`의 `strokeWidth` prop이 같은 일을 한다.
 
+## 라이선스
+
+이 패키지의 코드는 MIT다. `@teamturing/icons/lucide`의 아이콘은 [lucide](https://lucide.dev)에서
+파생된 것으로 **ISC**를 따르고, 그중 `search`·`check`·`calendar`처럼 Feather 프로젝트에서
+파생된 약 110개는 별도의 **MIT**(Copyright (c) 2013-present Cole Bemis)를 따른다.
+
+두 라이선스 모두 저작권 표시와 허가 문구를 사본에 유지할 것을 조건으로 한다. 그래서
+`THIRD-PARTY-NOTICES.md`에 전문을 싣고, 빌드 산출물의 lucide 모듈마다 `@license` 배너를 붙인다.
+배너를 엔트리에만 붙이면 트리셰이킹이 배럴을 걷어낼 때 표시도 함께 사라지므로,
+상류인 `lucide-react`와 마찬가지로 아이콘 파일마다 붙인다.
+
+자사 아이콘 쪽에는 붙지 않는다. lucide를 쓰지 않는 번들에 lucide 표시가 들어가면
+그것대로 잘못된 출처 표시이기 때문이다.
+
 ## 아이콘 추가·갱신
 
 ```bash
