@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@3.0.1...@teamturing/react-kit@3.1.0) (2026-08-19)
+
+### Features
+
+- **react-kit:** support responsive value on StyledIcon strokeWidth ([e64d79c](https://github.com/weareteamturing/bombe/commit/e64d79caf512988e2a6307264f74ec8d73d4225c))
+
 ## [3.0.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-kit@3.0.0...@teamturing/react-kit@3.0.1) (2026-08-19)
 
 **Note:** Version bump only for package @teamturing/react-kit

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.79.0...@teamturing/icons@2.0.0) (2026-08-19)
+
+- feat(icons)!: mark the lucide-bearing package as 2.0 ([2e771ab](https://github.com/weareteamturing/bombe/commit/2e771ab6d609b9c319e4f3f400ba30ec4fecef3b))
+
+### BREAKING CHANGES
+
+- 메이저 버전을 2.0.0으로 올립니다. 코드 상으로 깨지는 변경은 없어
+  1.x에서 올라올 때 고칠 것은 없습니다. 기존 export는 이름·형태 모두 그대로이고,
+  자사 아이콘만 쓰는 앱의 번들 크기도 변하지 않습니다(두 엔트리가 서로를 참조하지 않음).
+
+  2.0.0부터 `@teamturing/icons/lucide`로 lucide 아이콘 1769개를 쓸 수 있습니다.
+
+      import { SearchIcon } from '@teamturing/icons';
+      import { SearchIcon as LucideSearchIcon } from '@teamturing/icons/lucide';
+
+Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+
 # [1.79.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@1.78.1...@teamturing/icons@1.79.0) (2026-08-19)
 
 ### Features
