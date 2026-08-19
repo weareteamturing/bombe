@@ -4,6 +4,6 @@
     "rootDir": "./src",
     "outDir": "./esm"
   },
-  "files": ["./src/index.ts"],
+  "files": ["./src/index.ts", "./src/lucide/index.ts"],
   "include": ["src/**/*"]
 }

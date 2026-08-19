@@ -1,0 +1,20 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgEyeDashed = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M13.054 18.946a11 11 0 0 1-2.11 0M13.054 5.054a11 11 0 0 0-2.11-.001M17.072 6.274a11 11 0 0 1 1.753 1.173M18.825 16.552a11 11 0 0 1-1.753 1.174M2.514 13.303a11 11 0 0 1-.452-.954 1 1 0 0 1 0-.697 11 11 0 0 1 .45-.955M21.485 10.697a11 11 0 0 1 .453.955 1 1 0 0 1 0 .697 11 11 0 0 1-.453.954M5.173 7.448a11 11 0 0 1 1.753-1.174M6.926 17.726a11 11 0 0 1-1.753-1.174" />
+    <circle cx={12} cy={12} r={3} />
+  </svg>
+);
+export default SvgEyeDashed;
