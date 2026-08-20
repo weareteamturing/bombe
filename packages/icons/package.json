@@ -24,6 +24,11 @@
       "import": "./esm/lucide/index.js",
       "require": "./dist/lucide/index.js"
     },
+    "./gpai": {
+      "types": "./dist/gpai/index.d.ts",
+      "import": "./esm/gpai/index.js",
+      "require": "./dist/gpai/index.js"
+    },
     "./svg/*": "./svg/*",
     "./package.json": "./package.json"
   },
@@ -31,6 +36,9 @@
     "*": {
       "lucide": [
         "./dist/lucide/index.d.ts"
+      ],
+      "gpai": [
+        "./dist/gpai/index.d.ts"
       ]
     }
   },
@@ -41,7 +49,7 @@
   "scripts": {
     "check:lint": "eslint ./src --cache",
     "check:type": "tsc --noEmit",
-    "svgr": "svgr --index-template ./template/index-template.js --icon --typescript --replace-attr-values '#8D94A0=currentColor' -d src svg && lerna run gen:icon",
+    "svgr": "svgr --index-template ./template/index-template.js --icon --typescript --replace-attr-values '#8D94A0=currentColor' -d src svg && lerna run gen:icon && node scripts/verify-icons.mjs",
     "svgr:lucide": "node scripts/collect-lucide.mjs && svgr --config-file ./svgr.lucide.config.js -d src/lucide .lucide-svg && node scripts/verify-lucide.mjs",
     "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist --jsx react-jsx && rollup --config rollup.config.js"
   },

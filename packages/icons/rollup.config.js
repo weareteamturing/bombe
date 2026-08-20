@@ -73,6 +73,7 @@ const LUCIDE_BANNER = `/**
 
 module.exports = [
   entry('src/index.ts', 'dist'),
+  entry('src/gpai/index.ts', 'dist/gpai'),
   /**
    * `_virtual/`은 두 빌드가 공유하는 babel 헬퍼라 lucide 것이 아니다. 여기에 배너를 붙이면
    * 자사 아이콘만 쓰는 번들에도 lucide 표시가 딸려 들어간다(두 빌드가 같은 파일을 쓰고

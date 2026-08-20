@@ -1,0 +1,7 @@
+GPAI 전용 아이콘의 원본 svg를 여기에 넣는다.
+
+lucide에 있는 아이콘이면 `@teamturing/icons/lucide`를 쓰고, lucide에 없지만 범용이면
+`lucide-static` 버전을 올려 본다. 여기는 lucide가 다루지 않는 GPAI 제품·브랜드 전용만 남긴다.
+
+넣은 뒤 패키지 루트에서 `yarn svgr`. `src/gpai/`에 컴포넌트와 index가 생성된다.
+루트 `svg/`의 자사 아이콘 291개는 동결이므로 새 아이콘을 그쪽에 넣지 않는다.
