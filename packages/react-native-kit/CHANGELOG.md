@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.45.5](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.45.4...@teamturing/react-native-kit@1.45.5) (2026-08-20)
+
+### Bug Fixes
+
+- **react-native-kit:** stop gen_icon.sh from destroying svg subdirectories ([58f193b](https://github.com/weareteamturing/bombe/commit/58f193b3a9c0f7a327c3766380c9acac363a9660))
+
 ## [1.45.4](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.45.3...@teamturing/react-native-kit@1.45.4) (2026-08-19)
 
 **Note:** Version bump only for package @teamturing/react-native-kit

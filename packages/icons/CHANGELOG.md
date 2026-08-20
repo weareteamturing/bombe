@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.0.1...@teamturing/icons@2.1.0) (2026-08-20)
+
+### Bug Fixes
+
+- **icons:** make yarn svgr run to completion ([849a729](https://github.com/weareteamturing/bombe/commit/849a729bac701e17ac6d672e3e21e8ff368a4982))
+
+### Features
+
+- **icons:** add gpai subpath for GPAI-specific icons ([6267944](https://github.com/weareteamturing/bombe/commit/6267944c05cf9fae709445c310ef16f8fe0904d7))
+- **icons:** add the first 10 GPAI design system icons ([785c659](https://github.com/weareteamturing/bombe/commit/785c659d4bf92e65758c04fa278bf50348fe04bf)), closes [#8D94A0](https://github.com/weareteamturing/bombe/issues/8D94A0)
+
 ## [2.0.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.0.0...@teamturing/icons@2.0.1) (2026-08-19)
 
 ### Bug Fixes
