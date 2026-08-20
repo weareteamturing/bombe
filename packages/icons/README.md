@@ -6,7 +6,7 @@ React 프로젝트용 아이콘 컴포넌트. 세 갈래로 나뉜다.
 | --- | --- | --- | --- |
 | `@teamturing/icons` | 구 자사 아이콘 291개 | 두꺼운 면, `fill="currentColor"` | **동결** |
 | `@teamturing/icons/lucide` | [lucide](https://lucide.dev) 1776개 | 선, `stroke-width="2"` | 업스트림 버전 업 |
-| `@teamturing/icons/gpai` | GPAI 디자인 시스템 아이콘 10개 | 얇은 외곽선, `fill="currentColor"` | **신규 추가** |
+| `@teamturing/icons/gpai` | GPAI 디자인 시스템 아이콘 11개 | 얇은 외곽선, `fill="currentColor"` | **신규 추가** |
 
 ```tsx
 import { SearchIcon } from '@teamturing/icons';
@@ -40,9 +40,9 @@ lucide 이름은 공식 문서의 이름에 접미사만 붙인 형태다. `sear
 
 ### 이름이 겹치는 아이콘
 
-현재 gpai 10개 중 6개가 루트에 같은 이름으로 있다 — `AiSquareIcon`, `ArrowCurvedIcon`,
-`ArrowElbowIcon`, `RootXIcon`, `TwinkleIcon`, `YoutubeIcon`. 전부 같은 개념을 새 스타일로
-다시 그린 것이다. **새로 쓰는 화면이라면 `gpai` 쪽을 고른다.**
+현재 gpai 11개 중 7개가 루트에 같은 이름으로 있다 — `AiSquareIcon`, `ArrowCurvedIcon`,
+`ArrowElbowIcon`, `EyesTwoIcon`, `RootXIcon`, `TwinkleIcon`, `YoutubeIcon`. 전부 같은 개념을
+새 스타일로 다시 그린 것이다. **새로 쓰는 화면이라면 `gpai` 쪽을 고른다.**
 
 ```tsx
 import { TwinkleIcon } from '@teamturing/icons/gpai';                  // 새 스타일

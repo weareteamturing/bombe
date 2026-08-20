@@ -5,6 +5,7 @@ export { default as BaselineIcon } from './Baseline';
 export { default as BoldIcon } from './Bold';
 export { default as ChartAreaStackedIcon } from './ChartAreaStacked';
 export { default as ChartMultiLineIcon } from './ChartMultiLine';
+export { default as EyesTwoIcon } from './EyesTwo';
 export { default as RootXIcon } from './RootX';
 export { default as TwinkleIcon } from './Twinkle';
 export { default as YoutubeIcon } from './Youtube';
