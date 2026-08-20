@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.1.0...@teamturing/icons@2.2.0) (2026-08-20)
+
+### Features
+
+- **icons:** bump lucide to 1.33.0 ([4af3b50](https://github.com/weareteamturing/bombe/commit/4af3b50f69d25efa24e9c1cf33954445bf31233e))
+
 # [2.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.0.1...@teamturing/icons@2.1.0) (2026-08-20)
 
 ### Bug Fixes
