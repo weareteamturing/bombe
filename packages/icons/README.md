@@ -5,7 +5,7 @@ React 프로젝트용 아이콘 컴포넌트. 세 갈래로 나뉜다.
 | 엔트리 | 내용 | 형태 | 앞으로 |
 | --- | --- | --- | --- |
 | `@teamturing/icons` | 구 자사 아이콘 291개 | 두꺼운 면, `fill="currentColor"` | **동결** |
-| `@teamturing/icons/lucide` | [lucide](https://lucide.dev) 1769개 | 선, `stroke-width="2"` | 업스트림 버전 업 |
+| `@teamturing/icons/lucide` | [lucide](https://lucide.dev) 1776개 | 선, `stroke-width="2"` | 업스트림 버전 업 |
 | `@teamturing/icons/gpai` | GPAI 디자인 시스템 아이콘 10개 | 얇은 외곽선, `fill="currentColor"` | **신규 추가** |
 
 ```tsx
@@ -50,6 +50,8 @@ import { TwinkleIcon as LegacyTwinkleIcon } from '@teamturing/icons';  // 구 �
 ```
 
 한 화면에 두 세대를 섞으면 선 두께가 눈에 띄게 어긋나므로, 화면 단위로 한쪽을 고른다.
+
+lucide와 겹치는 것은 `BaselineIcon`·`BoldIcon` 둘이고, 루트와 lucide 사이에는 72개가 겹친다.
 
 `gpai`는 브랜드 네임스페이스이기도 하다. `packages/token-studio`가 색을 `gpai`/`aisaac`으로
 나누는 것과 같은 구분이고, 아이콘도 같은 축을 따른다.
@@ -138,8 +140,8 @@ index와 파일 불일치를 검사한다. gpai 아이콘에 색이 하드코딩
 (`color`를 상속하지 못한다 — 다만 여러 색으로 그려진 아이콘이면 정상이므로 실패시키지는 않는다).
 
 lucide **원본 svg만은 커밋하지 않는다.** lucide의 `search.svg`가 디자이너의 `search.svg`와
-이름이 겹치는 데다, 1769개를 리포에 넣을 이유도 없다. `lucide-static` 의존성에서 그때그때 읽어
-`.lucide-svg/`(gitignore)에 모은 뒤 변환한다.
+이름이 겹치는 데다, 1700개가 넘는 원본을 리포에 넣을 이유도 없다. `lucide-static` 의존성에서
+그때그때 읽어 `.lucide-svg/`(gitignore)에 모은 뒤 변환한다.
 
 lucide 버전을 올릴 때는 `yarn svgr:lucide`를 다시 돌린다. 마지막의 `verify-lucide.mjs`가
 개수·export 이름 중복·대소문자 충돌·`viewBox` 유실을 검사하고 어긋나면 빌드를 멈춘다.
