@@ -4,8 +4,8 @@
 
 ## lucide
 
-`@teamturing/icons/lucide`로 제공되는 아이콘 1769개는 [lucide](https://lucide.dev)에서
-파생됐습니다 (`lucide-static` v1.32.0). 원본 svg를 SVGR로 React 컴포넌트로 변환한 것 외에
+`@teamturing/icons/lucide`로 제공되는 아이콘 1776개는 [lucide](https://lucide.dev)에서
+파생됐습니다 (`lucide-static` v1.33.0). 원본 svg를 SVGR로 React 컴포넌트로 변환한 것 외에
 형태를 바꾸지 않았습니다.
 
 아래는 lucide가 배포하는 LICENSE 전문입니다. 두 번째 절은 lucide 중 Feather 프로젝트에서
