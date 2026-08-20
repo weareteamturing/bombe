@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.2.0...@teamturing/icons@2.3.0) (2026-08-20)
+
+### Features
+
+- **icons:** add EyesTwoIcon to the gpai set ([f255819](https://github.com/weareteamturing/bombe/commit/f2558191c979d4932e8caa3dfb379be3ac41bfaf)), closes [#8D94A0](https://github.com/weareteamturing/bombe/issues/8D94A0)
+
 # [2.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.1.0...@teamturing/icons@2.2.0) (2026-08-20)
 
 ### Features
