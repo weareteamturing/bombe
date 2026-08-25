@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.3.0...@teamturing/icons@2.4.0) (2026-08-25)
+
+### Features
+
+- **icons:** add CloverEye, FolderFilled, Thunder to the gpai set ([5732288](https://github.com/weareteamturing/bombe/commit/573228898212ff54ae2ca89cb0a0f1e2364310e4)), closes [#8D94A0](https://github.com/weareteamturing/bombe/issues/8D94A0)
+
 # [2.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.2.0...@teamturing/icons@2.3.0) (2026-08-20)
 
 ### Features
