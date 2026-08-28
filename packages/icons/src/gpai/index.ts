@@ -8,6 +8,8 @@ export { default as ChartMultiLineIcon } from './ChartMultiLine';
 export { default as CloverEyeIcon } from './CloverEye';
 export { default as EyesTwoIcon } from './EyesTwo';
 export { default as FolderFilledIcon } from './FolderFilled';
+export { default as LandscapeArrowIcon } from './LandscapeArrow';
+export { default as PortraitArrowIcon } from './PortraitArrow';
 export { default as RootXIcon } from './RootX';
 export { default as ThunderIcon } from './Thunder';
 export { default as TwinkleIcon } from './Twinkle';
