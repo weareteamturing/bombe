@@ -12,5 +12,6 @@ export { default as LandscapeArrowIcon } from './LandscapeArrow';
 export { default as PortraitArrowIcon } from './PortraitArrow';
 export { default as RootXIcon } from './RootX';
 export { default as ThunderIcon } from './Thunder';
+export { default as TwinkleFilledIcon } from './TwinkleFilled';
 export { default as TwinkleIcon } from './Twinkle';
 export { default as YoutubeIcon } from './Youtube';
