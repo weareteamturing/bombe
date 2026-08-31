@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.5.0...@teamturing/icons@2.6.0) (2026-08-31)
+
+### Features
+
+- **icons:** add twinkle-filled icon ([a06fc9c](https://github.com/weareteamturing/bombe/commit/a06fc9c99d18d6c14f03a7e00046a36a1ecc0f1d))
+
 # [2.5.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.4.0...@teamturing/icons@2.5.0) (2026-08-28)
 
 ### Features
