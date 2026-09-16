@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.6.0...@teamturing/icons@2.7.0) (2026-09-16)
+
+### Features
+
+- **icons:** add ImageFilled, FileFilled, FileSpreadsheetFilled, CirclePlayFilled to the gpai set ([11864a9](https://github.com/weareteamturing/bombe/commit/11864a9c053eba0c2ba810957ae2c4f02dd58a7e)), closes [#E5E5E5](https://github.com/weareteamturing/bombe/issues/E5E5E5) [#E5E5E5](https://github.com/weareteamturing/bombe/issues/E5E5E5) [#8D94A0](https://github.com/weareteamturing/bombe/issues/8D94A0)
+
 # [2.6.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.5.0...@teamturing/icons@2.6.0) (2026-08-31)
 
 ### Features
