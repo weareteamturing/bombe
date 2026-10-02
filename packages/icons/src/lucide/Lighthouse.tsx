@@ -1,0 +1,19 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgLighthouse = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M12 3V2M16.066 16.865 7 22l2-11V6a3 3 0 0 1 6 0v5l2 11M19.792 4.5l.866-.5M19.797 13.5l.866.5M21 9h1M3 9H2M4.203 13.5l-.866.5M4.208 4.5 3.342 4M5.5 22h13M7.932 16.875l7.377-4.178M8 11h8M8 7h8" />
+  </svg>
+);
+export default SvgLighthouse;

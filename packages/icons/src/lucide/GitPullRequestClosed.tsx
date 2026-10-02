@@ -13,9 +13,9 @@ const SvgGitPullRequestClosed = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <circle cx={6} cy={6} r={3} />
-    <path d="M6 9v12M21 3l-6 6M21 9l-6-6M18 11.5V15" />
+    <path d="m15.5 3.5 5 5M15.5 8.5l5-5M18 11.62V15M6 9v12" />
     <circle cx={18} cy={18} r={3} />
+    <circle cx={6} cy={6} r={3} />
   </svg>
 );
 export default SvgGitPullRequestClosed;

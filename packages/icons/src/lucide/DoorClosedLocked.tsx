@@ -13,8 +13,8 @@ const SvgDoorClosedLocked = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M10 12h.01M18 9V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14M2 20h8M20 17v-2a2 2 0 1 0-4 0v2" />
-    <rect width={8} height={5} x={14} y={17} rx={1} />
+    <path d="M19 8V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16M2 21h8M20 16v-2a2 2 0 0 0-4 0v2M9 12h.01" />
+    <rect width={8} height={5} x={14} y={16} rx={1} />
   </svg>
 );
 export default SvgDoorClosedLocked;

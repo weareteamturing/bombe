@@ -13,7 +13,7 @@ const SvgFaceAngry = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M15 11V9.416M17 9a5 5 0 0 0-3 1M7 9a5 5 0 0 1 3 1M9 11V9.416M9 16a5 5 0 0 1 6.001 0" />
+    <path d="M15 12v-1.584M17 10a5 5 0 0 0-3 1M7 10a5 5 0 0 1 3 1M9 12v-1.584M9 17a5 5 0 0 1 6.001 0" />
     <circle cx={12} cy={12} r={10} />
   </svg>
 );

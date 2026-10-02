@@ -13,7 +13,7 @@ const SvgSquareSplitVertical = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M5 8V5c0-1 1-2 2-2h10c1 0 2 1 2 2v3M19 16v3c0 1-1 2-2 2H7c-1 0-2-1-2-2v-3M4 12h16" />
+    <path d="M2 12h20M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3M3 8V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3" />
   </svg>
 );
 export default SvgSquareSplitVertical;
