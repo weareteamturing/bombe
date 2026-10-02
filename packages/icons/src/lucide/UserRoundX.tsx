@@ -13,9 +13,8 @@ const SvgUserRoundX = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M2 21a8 8 0 0 1 11.873-7" />
+    <path d="m16.5 16.5 5 5M2 21a8 8 0 0 1 11.531-7.18M21.5 16.5l-5 5" />
     <circle cx={10} cy={8} r={5} />
-    <path d="m17 17 5 5M22 17l-5 5" />
   </svg>
 );
 export default SvgUserRoundX;

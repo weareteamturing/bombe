@@ -13,7 +13,7 @@ const SvgSatelliteDish = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M4 10a7.31 7.31 0 0 0 10 10ZM9 15l3-3M17 13a6 6 0 0 0-6-6M21 13A10 10 0 0 0 11 3" />
+    <path d="M18 12a6 6 0 0 0-6-6M2.824 10.459a8 8 0 0 0 10.717 10.717c.558-.276.623-1.012.183-1.452l-9.448-9.448c-.44-.44-1.176-.375-1.452.183M22 12A10 10 0 0 0 12 2M9 15l4-4" />
   </svg>
 );
 export default SvgSatelliteDish;

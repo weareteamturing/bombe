@@ -5,7 +5,7 @@ React 프로젝트용 아이콘 컴포넌트. 세 갈래로 나뉜다.
 | 엔트리 | 내용 | 형태 | 앞으로 |
 | --- | --- | --- | --- |
 | `@teamturing/icons` | 구 자사 아이콘 291개 | 두꺼운 면, `fill="currentColor"` | **동결** |
-| `@teamturing/icons/lucide` | [lucide](https://lucide.dev) 1776개 | 선, `stroke-width="2"` | 업스트림 버전 업 |
+| `@teamturing/icons/lucide` | [lucide](https://lucide.dev) 1857개 | 선, `stroke-width="2"` | 업스트림 버전 업 |
 | `@teamturing/icons/gpai` | GPAI 디자인 시스템 아이콘 21개 | 얇은 외곽선 중심, `fill="currentColor"` | **신규 추가** |
 
 ```tsx
@@ -17,7 +17,7 @@ import { SearchIcon as LucideSearchIcon } from '@teamturing/icons/lucide';
 별칭을 써도 번들에는 아무것도 더해지지 않는다.
 
 lucide 이름은 공식 문서의 이름에 접미사만 붙인 형태다. `search` → `SearchIcon`,
-`trash-2` → `Trash2Icon`.
+`grid-2x2` → `Grid2X2Icon`.
 
 엔트리끼리는 서로를 참조하지 않는다. 자사 아이콘만 쓰는 앱의 번들에는 lucide 코드가
 한 바이트도 들어가지 않는다.
@@ -82,9 +82,9 @@ const Icon = Lucide[iconName];
 정해야 한다면 네임스페이스 대신 필요한 아이콘만 담은 맵을 직접 만든다.
 
 ```tsx
-import { SearchIcon, SettingsIcon, Trash2Icon } from '@teamturing/icons/lucide';
+import { SearchIcon, SettingsIcon, TrashIcon } from '@teamturing/icons/lucide';
 
-const ICONS = { search: SearchIcon, settings: SettingsIcon, trash: Trash2Icon };
+const ICONS = { search: SearchIcon, settings: SettingsIcon, trash: TrashIcon };
 const Icon = ICONS[iconName];
 ```
 

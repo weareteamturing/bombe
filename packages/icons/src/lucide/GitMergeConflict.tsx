@@ -13,7 +13,7 @@ const SvgGitMergeConflict = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M12 6h4a2 2 0 0 1 2 2v7M6 12v9M9 3 3 9M9 9 3 3" />
+    <path d="M12 6h4a2 2 0 0 1 2 2v7M6 12v9M8.5 3.5l-5 5M8.5 8.5l-5-5" />
     <circle cx={18} cy={18} r={3} />
   </svg>
 );

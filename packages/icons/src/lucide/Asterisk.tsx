@@ -13,7 +13,7 @@ const SvgAsterisk = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M12 6v12M17.196 9 6.804 15M6.804 9l10.392 6" />
+    <path d="M12 5v14M18.065 8.496l-12.125 7M5.94 8.504l12.125 7" />
   </svg>
 );
 export default SvgAsterisk;
