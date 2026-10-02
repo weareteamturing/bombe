@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.7.0...@teamturing/icons@3.0.0) (2026-10-02)
+
+- feat(icons)!: bump lucide to 1.49.0 ([debee33](https://github.com/weareteamturing/bombe/commit/debee335a1955b6cc6bf4ff823b9384716008b27))
+
+### BREAKING CHANGES
+
+- six exports are removed from `@teamturing/icons/lucide`.
+  Replace them as follows to keep the same look:
+
+* Trash2Icon -> TrashIcon (identical)
+* Building2Icon -> BuildingComplexIcon (identical)
+* AlbumIcon -> SquareBookmarkIcon (bookmark tip now rounded)
+* BookMarkedIcon -> BookBookmarkIcon (bookmark tip now rounded)
+* FlipHorizontal2Icon -> TrianglesCenterlineDashedVerticalIcon
+* FlipVertical2Icon -> TrianglesCenterlineDashedHorizontalIcon
+
+The flip pair is crossed on purpose. lucide aliases flip-horizontal-2 to
+triangles-centerline-dashed-horizontal, but "horizontal" there names the
+dashed centerline, so following the alias rotates the icon 90 degrees.
+
+TrashIcon keeps its name but now draws what Trash2Icon drew (two inner
+lines); the old plain trash can no longer exists in lucide.
+
+These keep their names but were redrawn upstream; check them visually:
+asterisk, badge-check, beef, blend, book-x, broccoli, card-sim,
+circle-check, circle-dot, clipboard-x, clock-check, computer, cookie,
+copy-x, credit-card, door-closed-locked, door-closed, door-open,
+face-angry, folder-bookmark, ghost, git-merge-conflict,
+git-pull-request-closed, grid-2x2-x, id-card-lanyard, id-card, key, leaf,
+lectern, mail-x, map-pinned, message-circle-check, panda, piano,
+satellite-dish, save-off, ship, shopping-cart, shrimp, spell-check,
+square-check, square-split-horizontal, square-split-vertical, sword,
+swords, table-2, trash, user-round-x, vector-square, volume-x
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
 # [2.7.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.6.0...@teamturing/icons@2.7.0) (2026-09-16)
 
 ### Features
