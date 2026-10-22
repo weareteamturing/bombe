@@ -1,6 +1,7 @@
 export { default as a_horizontal_line } from '@teamturing/icons/svg/a_horizontal_line.svg';
 export { default as a_in_circle_filled } from '@teamturing/icons/svg/a_in_circle_filled.svg';
 export { default as a_vertial_line } from '@teamturing/icons/svg/a_vertial_line.svg';
+export { default as ai-square-filled } from '@teamturing/icons/svg/ai-square-filled.svg';
 export { default as ai } from '@teamturing/icons/svg/ai.svg';
 export { default as ai_color } from '@teamturing/icons/svg/ai_color.svg';
 export { default as ai_sad } from '@teamturing/icons/svg/ai_sad.svg';
