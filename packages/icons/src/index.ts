@@ -1,11 +1,11 @@
 export { default as AHorizontalLineIcon } from './AHorizontalLine';
 export { default as AInCircleFilledIcon } from './AInCircleFilled';
 export { default as AVertialLineIcon } from './AVertialLine';
-export { default as AiSquareFilledIcon } from './AiSquareFilled';
 export { default as AiIcon } from './Ai';
 export { default as AiColorIcon } from './AiColor';
 export { default as AiSadIcon } from './AiSad';
 export { default as AiSquareIcon } from './AiSquare';
+export { default as AiSquareFilledIcon } from './AiSquareFilled';
 export { default as AlarmIcon } from './Alarm';
 export { default as AlignCenterIcon } from './AlignCenter';
 export { default as AlignLeftIcon } from './AlignLeft';
