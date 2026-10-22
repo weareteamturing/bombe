@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@3.0.0...@teamturing/icons@3.1.0) (2026-10-22)
+
+### Bug Fixes
+
+- **icons:** fix icon name.. ([6211966](https://github.com/weareteamturing/bombe/commit/621196673effeee294c8592eb56949cccafe8697))
+
+### Features
+
+- **icons:** add ai-square-filled icon ([6c69c7a](https://github.com/weareteamturing/bombe/commit/6c69c7ab539952efc139d4e3099e85aedf8e294c))
+
 # [3.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@2.7.0...@teamturing/icons@3.0.0) (2026-10-02)
 
 - feat(icons)!: bump lucide to 1.49.0 ([debee33](https://github.com/weareteamturing/bombe/commit/debee335a1955b6cc6bf4ff823b9384716008b27))
