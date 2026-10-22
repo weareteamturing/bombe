@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.46.1](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.46.0...@teamturing/react-native-kit@1.46.1) (2026-10-22)
+
+### Bug Fixes
+
+- **icons:** move ai-square-filled icon to the gpai set ([6921c29](https://github.com/weareteamturing/bombe/commit/6921c297a1c233d2edeb7a6c0e3d8774d85b4219))
+
 # [1.46.0](https://github.com/weareteamturing/bombe/compare/@teamturing/react-native-kit@1.45.12...@teamturing/react-native-kit@1.46.0) (2026-10-22)
 
 ### Bug Fixes
