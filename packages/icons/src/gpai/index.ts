@@ -1,3 +1,4 @@
+export { default as AiSquareFilledIcon } from './AiSquareFilled';
 export { default as AiSquareIcon } from './AiSquare';
 export { default as ArrowCurvedIcon } from './ArrowCurved';
 export { default as ArrowElbowIcon } from './ArrowElbow';

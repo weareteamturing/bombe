@@ -5,7 +5,6 @@ export { default as ai } from '@teamturing/icons/svg/ai.svg';
 export { default as ai_color } from '@teamturing/icons/svg/ai_color.svg';
 export { default as ai_sad } from '@teamturing/icons/svg/ai_sad.svg';
 export { default as ai_square } from '@teamturing/icons/svg/ai_square.svg';
-export { default as ai_square_filled } from '@teamturing/icons/svg/ai_square_filled.svg';
 export { default as alarm } from '@teamturing/icons/svg/alarm.svg';
 export { default as align_center } from '@teamturing/icons/svg/align_center.svg';
 export { default as align_left } from '@teamturing/icons/svg/align_left.svg';
