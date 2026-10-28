@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@3.1.1...@teamturing/icons@4.0.0) (2026-10-28)
+
+- feat(icons)!: bump lucide to 1.63.0 ([809f51d](https://github.com/weareteamturing/bombe/commit/809f51dc2c5826aa8366ccb9cb004b021ea958e1))
+
+### BREAKING CHANGES
+
+- five exports are removed from `@teamturing/icons/lucide`.
+  Replace them as follows:
+
+* ArchiveRestoreIcon -> ArchiveArrowUpIcon (identical)
+* Music3Icon -> HalfNoteIcon (identical)
+* MusicIcon -> EighthNotesIcon (redrawn upstream)
+* Music2Icon -> EighthNoteIcon (redrawn upstream)
+* Music4Icon -> SixteenthNotesIcon (redrawn upstream)
+
+These keep their names but were redrawn upstream; check them visually:
+barrel, brain, brain-circuit, brain-cog, chess-queen, nut, nut-off,
+pen-tool, salad, soup, tool-case, wifi-cog
+
+Added: archive-arrow-down, archive-arrow-up, armenian-dram, avocado,
+azerbaijani-manat, bacon, ball-wave, belarusian-ruble, boxes-linked,
+brain-off, calendar-arrow-left, calendar-arrow-right,
+calendar-chevrons-left, certificate, chart-quadrant, chart-radar,
+circle-chevrons-{down,left,right,up}, circle-fading-play, cpu-ai,
+database-cog, door-closed-cog, earbuds, earbuds-off, eighth-note,
+eighth-notes, emirati-dirham, folder-user, folder-users, graph-hub,
+graph-star, groceries, guitar-electric, half-note, handle-bottom-right,
+hiking-stick, hockey-stick, hot-air-balloon, kazakh-tenge, laser,
+layout-grid-circles, lens, letter-spacing, line-height, mail-dot,
+message-circle-text, perfume-bottle, phone-log, rugby-ball,
+scratch-blocks, screw, server-nas, shield-house, siren-off,
+sixteenth-notes, smartphone-user-round, square-chevrons-{down,left,right,up},
+text-align-justify-{center,end,start}, tombstone, user-round-shield,
+user-round-star, users-collaboration, users-round-collaboration,
+wifi-lock, wind-arrow-up
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
 ## [3.1.1](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@3.1.0...@teamturing/icons@3.1.1) (2026-10-22)
 
 ### Bug Fixes
