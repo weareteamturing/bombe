@@ -1,0 +1,19 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgScrew = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M10 9v10M14 13v2M16.5 10.5 5.706 21.294A2.4 2.4 0 0 1 4.002 22H2.5a.5.5 0 0 1-.5-.5v-1.502a2.4 2.4 0 0 1 .706-1.704L13.5 7.5M20.819 11.575a6 6 0 0 0 .969-5.162.6.6 0 0 0-.981-.219l-.455.454a1.2 1.2 0 0 1-1.704 0l-1.296-1.296a1.2 1.2 0 0 1 0-1.704l.454-.453a.595.595 0 0 0-.219-.98 6 6 0 0 0-5.162.967 2 2 0 0 0-.222 3.019l5.596 5.597a2 2 0 0 0 3.02-.222M6 13v8" />
+  </svg>
+);
+export default SvgScrew;

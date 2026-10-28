@@ -6424,7 +6424,7 @@ __metadata:
     "@svgr/cli": ^8.0.1
     "@svgr/rollup": ^8.0.1
     "@types/react": ^18.2.48
-    lucide-static: ^1.49.0
+    lucide-static: ^1.63.0
     react: ^18.2.0
   peerDependencies:
     react: ^18.2.0
@@ -15690,10 +15690,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-static@npm:^1.49.0":
-  version: 1.49.0
-  resolution: "lucide-static@npm:1.49.0"
-  checksum: b9bbecdd5aacd3069ec521fdd55c1abafd45800fa48755d5695e108c6d430237b0d2af0fa814faa83630c81e455133157d4ae5f4973c171b14482076079a09bc
+"lucide-static@npm:^1.63.0":
+  version: 1.63.0
+  resolution: "lucide-static@npm:1.63.0"
+  checksum: 3a81ef7ebfa0bb18a74c1b9e09196bd4ddb7decccafbae25f360f0eb8700638b2242fb1658491646e427f51593b77f43dcbc8cc5459251d0f870e7aad9ff787e
   languageName: node
   linkType: hard
 
