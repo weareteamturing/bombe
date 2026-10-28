@@ -1,0 +1,20 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgGroceries = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M10 15h4M19.424 11.095a2.5 2.5 0 0 0 .471-2.309 2 2 0 0 0 .424-3.286 2 2 0 0 0-2.143-3.322 2 2 0 0 0-.676.502 2 2 0 0 0-3.287.424 2.5 2.5 0 0 0-3.189 2.06A3 3 0 0 0 12 11l4-4" />
+    <path d="M4 12.006A1 1 0 0 1 4.994 11H19a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM7 11a4 4 0 0 1-4-4V5a1 1 0 0 1 1-1h2a4 4 0 0 1 3.584 2.222" />
+  </svg>
+);
+export default SvgGroceries;
