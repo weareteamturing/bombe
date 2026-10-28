@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { SVGProps } from 'react';
-const SvgArchiveRestore = (props: SVGProps<SVGSVGElement>) => (
+const SvgGraphHub = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -13,8 +13,11 @@ const SvgArchiveRestore = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <rect width={20} height={5} x={2} y={3} rx={1} />
-    <path d="M4 8v11a2 2 0 0 0 2 2h2M20 8v11a2 2 0 0 1-2 2h-2M9 15l3-3 3 3M12 12v9" />
+    <circle cx={12} cy={7} r={4} />
+    <circle cx={4} cy={19} r={2} />
+    <circle cx={12} cy={19} r={2} />
+    <circle cx={20} cy={19} r={2} />
+    <path d="M8 7a4 4 0 0 0-4 4v6M12 11v6M16 7a4 4 0 0 1 4 4v6" />
   </svg>
 );
-export default SvgArchiveRestore;
+export default SvgGraphHub;

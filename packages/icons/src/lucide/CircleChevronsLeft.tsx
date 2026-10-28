@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { SVGProps } from 'react';
-const SvgMusic3 = (props: SVGProps<SVGSVGElement>) => (
+const SvgCircleChevronsLeft = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -13,8 +13,8 @@ const SvgMusic3 = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <circle cx={12} cy={18} r={4} />
-    <path d="M16 18V2" />
+    <path d="m10 9-3 3 3 3M16 9l-3 3 3 3" />
+    <circle cx={12} cy={12} r={10} />
   </svg>
 );
-export default SvgMusic3;
+export default SvgCircleChevronsLeft;
