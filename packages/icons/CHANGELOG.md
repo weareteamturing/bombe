@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@4.0.0...@teamturing/icons@4.1.0) (2026-11-02)
+
+### Features
+
+- **icons:** add text layout, highlighter, paint bucket icons to the gpai set ([e0003d9](https://github.com/weareteamturing/bombe/commit/e0003d94039fdd0a63b18523912bbec4758cbcec))
+
 # [4.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@3.1.1...@teamturing/icons@4.0.0) (2026-10-28)
 
 - feat(icons)!: bump lucide to 1.63.0 ([809f51d](https://github.com/weareteamturing/bombe/commit/809f51dc2c5826aa8366ccb9cb004b021ea958e1))
