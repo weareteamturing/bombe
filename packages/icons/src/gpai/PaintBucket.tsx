@@ -25,12 +25,12 @@ const SvgPaintBucket = (props: SVGProps<SVGSVGElement>) => (
       fillRule="evenodd"
       d="M3.05 13c.099.508.346.979.717 1.35l3.887 3.887a2.617 2.617 0 0 0 3.699 0L16.59 13H3.05Z"
       clipRule="evenodd"
-      opacity={0.4}
+      data-icon-slot="swatch"
     />
     <path
       fill="currentColor"
       d="M20.001 18.66a4.304 4.304 0 0 1-.514.497l-.007.006c-.382.305-.48.595-.48.814v.012a1.002 1.002 0 0 0 1 1.013 1.001 1.001 0 0 0 1-1.013v-.012c0-.216-.096-.5-.487-.82l-.003-.003A4.345 4.345 0 0 1 20 18.66Z"
-      opacity={0.4}
+      data-icon-slot="swatch"
     />
   </svg>
 );
