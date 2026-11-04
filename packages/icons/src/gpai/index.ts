@@ -17,6 +17,7 @@ export { default as ImageFilledIcon } from './ImageFilled';
 export { default as LandscapeArrowIcon } from './LandscapeArrow';
 export { default as MessageCircleIcon } from './MessageCircle';
 export { default as PaintBucketIcon } from './PaintBucket';
+export { default as PieIcon } from './Pie';
 export { default as PortraitArrowIcon } from './PortraitArrow';
 export { default as RootXIcon } from './RootX';
 export { default as TextRotateDownIcon } from './TextRotateDown';
