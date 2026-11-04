@@ -6,7 +6,7 @@ React 프로젝트용 아이콘 컴포넌트. 세 갈래로 나뉜다.
 | --- | --- | --- | --- |
 | `@teamturing/icons` | 구 자사 아이콘 291개 | 두꺼운 면, `fill="currentColor"` | **동결** |
 | `@teamturing/icons/lucide` | [lucide](https://lucide.dev) 1924개 | 선, `stroke-width="2"` | 업스트림 버전 업 |
-| `@teamturing/icons/gpai` | GPAI 디자인 시스템 아이콘 22개 | 얇은 외곽선 중심, `fill="currentColor"` | **신규 추가** |
+| `@teamturing/icons/gpai` | GPAI 디자인 시스템 아이콘 37개 | 얇은 외곽선 중심, `fill="currentColor"` | **신규 추가** |
 
 ```tsx
 import { SearchIcon } from '@teamturing/icons';
@@ -40,7 +40,7 @@ lucide 이름은 공식 문서의 이름에 접미사만 붙인 형태다. `sear
 
 ### 이름이 겹치는 아이콘
 
-현재 gpai 22개 중 10개가 루트에 같은 이름으로 있다 — `AiSquareIcon`, `ArrowCurvedIcon`,
+현재 gpai 37개 중 10개가 루트에 같은 이름으로 있다 — `AiSquareIcon`, `ArrowCurvedIcon`,
 `ArrowElbowIcon`, `EyesTwoIcon`, `LandscapeArrowIcon`, `PortraitArrowIcon`, `RootXIcon`,
 `ThunderIcon`, `TwinkleIcon`, `YoutubeIcon`. 전부 같은 개념을 새 스타일로 다시 그린 것이다.
 **새로 쓰는 화면이라면 `gpai` 쪽을 고른다.**
@@ -52,7 +52,7 @@ import { TwinkleIcon as LegacyTwinkleIcon } from '@teamturing/icons';  // 구 �
 
 한 화면에 두 세대를 섞으면 선 두께가 눈에 띄게 어긋나므로, 화면 단위로 한쪽을 고른다.
 
-lucide와 겹치는 것은 `BaselineIcon`·`BoldIcon` 둘이고, 루트와 lucide 사이에는 72개가 겹친다.
+lucide와 겹치는 것은 `BaselineIcon`·`BoldIcon`·`HighlighterIcon`·`MessageCircleIcon`·`PaintBucketIcon`·`TextWrapIcon` 여섯이고, 루트와 lucide 사이에는 72개가 겹친다.
 
 `gpai`는 브랜드 네임스페이스이기도 하다. `packages/token-studio`가 색을 `gpai`/`aisaac`으로
 나누는 것과 같은 구분이고, 아이콘도 같은 축을 따른다.
