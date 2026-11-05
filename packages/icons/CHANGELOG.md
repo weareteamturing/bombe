@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@4.2.0...@teamturing/icons@4.3.0) (2026-11-05)
+
+### Features
+
+- **icons:** add caret and question mark icons to the gpai set ([ad14e70](https://github.com/weareteamturing/bombe/commit/ad14e701c5285c78943e4d19ec15ba4c2eb04cd9))
+
 # [4.2.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@4.1.1...@teamturing/icons@4.2.0) (2026-11-04)
 
 ### Features
