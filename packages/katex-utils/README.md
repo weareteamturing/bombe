@@ -35,6 +35,16 @@
 
 위 Html 파일들을 변경하고 난 뒤엔 `yarn generate-html` 커맨드를 MathKing에서 실행시켜주어야 한다.
 
+## 스타일시트 (`mathking-katex.css`)
+
+수식 크기(`.katex` 1.11em), 수식 안 한글·`\text{}` 크기(0.9em) 같은 렌더 기준값은 이 CSS 에 들어 있다.
+앱 WebView 가 쓰는 값이고, 서버 문항 이미지·PDF 렌더러도 같은 값으로 그린다.
+번들러에서는 아래 경로로 가져온다.
+
+```js
+import '@teamturing/katex-utils/mathking-katex.css';
+```
+
 ## KaTeX버전을 변경할 때 유의점 & Tex 전수 조사법
 
 웬만한 일이 없다면 바꾸지 않는 것을 추천한다.
