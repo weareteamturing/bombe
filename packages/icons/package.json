@@ -50,7 +50,7 @@
     "check:lint": "eslint ./src --cache",
     "check:type": "tsc --noEmit",
     "svgr": "svgr --index-template ./template/index-template.js --icon --typescript --replace-attr-values '#8D94A0=currentColor' -d src svg && node scripts/verify-icons.mjs && yarn workspace @teamturing/react-native-kit gen:icon",
-    "svgr:lucide": "node scripts/collect-lucide.mjs && svgr --config-file ./svgr.lucide.config.js -d src/lucide .lucide-svg && node scripts/verify-lucide.mjs",
+    "svgr:lucide": "rm -rf src/lucide && node scripts/collect-lucide.mjs && svgr --config-file ./svgr.lucide.config.js -d src/lucide .lucide-svg && node scripts/verify-lucide.mjs",
     "build": "rm -rf dist esm && tsc --project tsconfig.cjs.json --declaration --emitDeclarationOnly --declarationDir dist --jsx react-jsx && rollup --config rollup.config.js"
   },
   "bugs": {
@@ -60,6 +60,7 @@
     "@svgr/cli": "^8.0.1",
     "@svgr/rollup": "^8.0.1",
     "@types/react": "^18.2.48",
+    "camelcase": "^6.2.0",
     "lucide-static": "^1.63.0",
     "react": "^18.2.0"
   },
