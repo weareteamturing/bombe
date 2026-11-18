@@ -1,0 +1,21 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgPackageQuestionMark = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M12 22V12l8.71-5" />
+    <path d="M21 10.342V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2.33-1.332M3.29 7 12 12M7.5 4.27l9 5.15" />
+    <path d="M19 18.5c.5-1 2-1 2-2.5a2 2 0 0 0-2-2 2.5 2.5 0 0 0-2 1M19 22h.01" />
+  </svg>
+);
+export default SvgPackageQuestionMark;

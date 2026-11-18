@@ -13,7 +13,7 @@ const SvgRussianRuble = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M6 11h8a4 4 0 0 0 0-8H9v18M6 15h8" />
+    <path d="M4 16h6M7 20V5a1 1 0 0 1 1-1h6a4 4 0 0 1 0 8H4" />
   </svg>
 );
 export default SvgRussianRuble;

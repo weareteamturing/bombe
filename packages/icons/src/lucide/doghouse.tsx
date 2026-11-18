@@ -1,0 +1,21 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgDoghouse = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="m2 9.718 8.82-6.333a2 2 0 0 1 2.36 0L22 9.718" />
+    <path d="m20 8.282-1.007 10.902A2 2 0 0 1 17 21H7a2 2 0 0 1-1.992-1.816L4 8.282" />
+    <path d="M8.5 9.938a7 7 0 0 1 7 0M9 21v-5a3 3 0 0 1 6 0v5" />
+  </svg>
+);
+export default SvgDoghouse;

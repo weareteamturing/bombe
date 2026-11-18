@@ -13,7 +13,7 @@ const SvgGeorgianLari = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M11.5 21a7.5 7.5 0 1 1 7.35-9M13 12V3M4 21h16M9 12V3" />
+    <path d="M10 10V3M14 10V3M19 13a7 7 0 1 0-7 7M5 20h14" />
   </svg>
 );
 export default SvgGeorgianLari;

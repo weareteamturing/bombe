@@ -13,7 +13,7 @@ const SvgPoundSterling = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M18 7c0-5.333-8-5.333-8 0M10 7v14M6 21h12M6 13h10" />
+    <path d="M17 18a2 2 0 0 1-2 2H5a3 3 0 0 0 3-3V8a4 4 0 0 1 8 0M6 12h7" />
   </svg>
 );
 export default SvgPoundSterling;

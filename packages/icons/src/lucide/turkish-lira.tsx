@@ -13,7 +13,7 @@ const SvgTurkishLira = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M15 4 5 9M15 8.5l-10 5M18 12a9 9 0 0 1-9 9V3" />
+    <path d="m14 10-8 4M14 5 6 9M18 12a8 8 0 0 1-7.003 7.937c-.547.07-.997-.385-.997-.937V4" />
   </svg>
 );
 export default SvgTurkishLira;

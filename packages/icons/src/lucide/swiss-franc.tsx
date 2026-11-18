@@ -13,7 +13,7 @@ const SvgSwissFranc = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="M10 21V3h8M6 16h9M10 9.5h7" />
+    <path d="M10 10h7M10 20V5a1 1 0 0 1 1-1h7M6 16h9" />
   </svg>
 );
 export default SvgSwissFranc;

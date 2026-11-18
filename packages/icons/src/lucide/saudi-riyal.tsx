@@ -13,7 +13,7 @@ const SvgSaudiRiyal = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 24 24"
     {...props}
   >
-    <path d="m20 19.5-5.5 1.2M14.5 4v11.22a1 1 0 0 0 1.242.97L20 15.2M2.978 19.351l5.549-1.363A2 2 0 0 0 10 16V2M20 10 4 13.5" />
+    <path d="M10 2.977v13.19a2 2 0 0 1-1.23 1.846L4 19.999M14 4v9.523a1 1 0 0 0 1.371.928L19 13M19 18l-5 2M19 8 4 14" />
   </svg>
 );
 export default SvgSaudiRiyal;

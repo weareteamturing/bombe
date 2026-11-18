@@ -14,7 +14,7 @@ const SvgCircleQuestionMark = (props: SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <circle cx={12} cy={12} r={10} />
-    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01" />
+    <path d="M9 9.5a3 2.5 0 0 1 6 0c0 2-2 2-3 3.5M12 17h.01" />
   </svg>
 );
 export default SvgCircleQuestionMark;
