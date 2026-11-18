@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@4.3.0...@teamturing/icons@5.0.0) (2026-11-18)
+
+### Bug Fixes
+
+- **icons:** name lucide component files in kebab-case ([7134e69](https://github.com/weareteamturing/bombe/commit/7134e69ad08bd98f13521120e93c57e2098d3fc6))
+
+- feat(icons)!: bump lucide to 1.74.0 ([de9e391](https://github.com/weareteamturing/bombe/commit/de9e3910f743871be9f3cfc2977aeb5d3b94e12c))
+
+### Features
+
+- **icons:** add playback, eraser and file icons to the gpai set ([6cbe490](https://github.com/weareteamturing/bombe/commit/6cbe49087e16c75dd78bc7c5fb213afc2c0f7477))
+
+### BREAKING CHANGES
+
+- 37 exports are removed from `@teamturing/icons/lucide`.
+  Replace them as follows:
+
+* BadgeAlertIcon -> BadgeExclamationPointIcon (identical)
+* BoldIcon -> LetterBIcon (identical)
+* BookAlertIcon -> BookExclamationPointIcon (identical)
+* CircleAlertIcon -> CircleExclamationPointIcon (identical)
+* CircleArrowOutDownLeftIcon -> CircleArrowDownLeftExitIcon (identical)
+* CircleArrowOutDownRightIcon -> CircleArrowDownRightExitIcon (identical)
+* CircleArrowOutUpLeftIcon -> CircleArrowUpLeftExitIcon (identical)
+* CircleArrowOutUpRightIcon -> CircleArrowUpRightExitIcon (identical)
+* ClockAlertIcon -> ClockExclamationPointIcon (identical)
+* CloudAlertIcon -> CloudExclamationPointIcon (identical)
+* MailWarningIcon -> MailExclamationPointIcon (identical)
+* MessageCircleWarningIcon -> MessageCircleExclamationPointIcon (identical)
+* MessageSquareWarningIcon -> MessageSquareExclamationPointIcon (identical)
+* OctagonAlertIcon -> OctagonExclamationPointIcon (identical)
+* SearchAlertIcon -> SearchExclamationPointIcon (identical)
+* ShieldAlertIcon -> ShieldExclamationPointIcon (identical)
+* SquareArrowOutDownLeftIcon -> SquareArrowDownLeftExitIcon (identical)
+* SquareArrowOutDownRightIcon -> SquareArrowDownRightExitIcon (identical)
+* SquareArrowOutUpLeftIcon -> SquareArrowUpLeftExitIcon (identical)
+* SquareArrowOutUpRightIcon -> SquareArrowUpRightExitIcon (identical)
+* TriangleAlertIcon -> TriangleExclamationPointIcon (identical)
+* TrianglesCenterlineDashedHorizontalIcon -> CaretsToAxisDashedHorizontalIcon (identical)
+* TrianglesCenterlineDashedVerticalIcon -> CaretsToAxisDashedVerticalIcon (identical)
+* FoldHorizontalIcon -> ArrowsToAxisDashedVerticalIcon (identical)
+* FoldVerticalIcon -> ArrowsToAxisDashedHorizontalIcon (identical)
+* HeadingIcon -> LetterHIcon (identical)
+* SquareCenterlineDashedHorizontalIcon -> SquareAxisDashedVerticalIcon (identical)
+* SquareCenterlineDashedVerticalIcon -> SquareAxisDashedHorizontalIcon (identical)
+* SquareMIcon -> SquareLetterMIcon (identical)
+* UnfoldHorizontalIcon -> ArrowsFromAxisDashedVerticalIcon (identical)
+* UnfoldVerticalIcon -> ArrowsFromAxisDashedHorizontalIcon (identical)
+* BatteryWarningIcon -> BatteryExclamationPointIcon (redrawn upstream)
+* CircleParkingIcon -> CircleLetterPIcon (redrawn upstream)
+* CircleParkingOffIcon -> CircleLetterPOffIcon (redrawn upstream)
+* CopyrightIcon -> CircleLetterCIcon (redrawn upstream)
+* SquareParkingIcon -> SquareLetterPIcon (redrawn upstream)
+* SquareParkingOffIcon -> SquareLetterPOffIcon (redrawn upstream)
+
+These keep their names but were redrawn upstream; check them visually:
+badge-question-mark, chef-hat, circle-question-mark, dollar-sign,
+file-question-mark, georgian-lari, indian-rupee, japanese-yen,
+loader-pinwheel, mail-question-mark, message-circle-question-mark,
+nepali-rupee, philippine-peso, pound-sterling, route, russian-ruble,
+saudi-riyal, shield-question-mark, square-arrow-right-enter,
+square-arrow-right-exit, swiss-franc, turkish-lira
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
 # [4.3.0](https://github.com/weareteamturing/bombe/compare/@teamturing/icons@4.2.0...@teamturing/icons@4.3.0) (2026-11-05)
 
 ### Features
