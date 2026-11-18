@@ -26,7 +26,7 @@ const plugins = () => [
  * lucide를 쓰지 않는 사용처가 부담할 이유가 없는 비용이라 빌드를 둘로 나눈다.
  *
  * `preserveModulesRoot`는 두 빌드가 같은 `esm/`에 쓰면서도 소스 구조를 유지하게 한다
- * (`src/lucide/Search.tsx` → `esm/lucide/Search.js`). 지정하지 않으면 rollup이 각 빌드의
+ * (`src/lucide/search.tsx` → `esm/lucide/search.js`). 지정하지 않으면 rollup이 각 빌드의
  * 공통 조상을 따로 계산해 lucide 쪽이 `esm/` 바로 아래로 평탄화된다.
  */
 const entry = (input, cjsDir, banner) => ({

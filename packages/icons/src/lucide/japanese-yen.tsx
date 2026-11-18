@@ -1,0 +1,19 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgJapaneseYen = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M12 12v8M6 4l6 8 6-8M8 13h8M8 17h8" />
+  </svg>
+);
+export default SvgJapaneseYen;

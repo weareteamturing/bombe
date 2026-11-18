@@ -1,0 +1,19 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgSquareKanbanPlus = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M12 7v4M12.354 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7.354M15 18h6M16 7v4.536M18 21v-6M8 7v7" />
+  </svg>
+);
+export default SvgSquareKanbanPlus;
