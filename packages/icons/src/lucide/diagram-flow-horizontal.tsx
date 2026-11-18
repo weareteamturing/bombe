@@ -1,0 +1,22 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgDiagramFlowHorizontal = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M8 12h.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 0 3.5 3.5h.5M8.5 12A3.5 3.5 0 0 0 12 8.5 3.5 3.5 0 0 1 15.5 5h.5" />
+    <rect width={6} height={6} x={16} y={16} rx={1} />
+    <rect width={6} height={6} x={16} y={2} rx={1} />
+    <rect width={6} height={6} x={2} y={9} rx={1} />
+  </svg>
+);
+export default SvgDiagramFlowHorizontal;

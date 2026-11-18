@@ -1,0 +1,20 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgMonitorActivity = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M12 17v4M18 10h-2.315a1 1 0 0 0-.932.64l-.787 2.034a.5.5 0 0 1-.932 0l-2.068-5.348a.5.5 0 0 0-.932 0l-.787 2.035a1 1 0 0 1-.932.639H6M8 21h8" />
+    <rect width={20} height={14} x={2} y={3} rx={2} />
+  </svg>
+);
+export default SvgMonitorActivity;

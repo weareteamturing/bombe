@@ -1,0 +1,19 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgTextPen = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M12 12H3M21 5H3M21.377 14.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506zM8 19H3" />
+  </svg>
+);
+export default SvgTextPen;

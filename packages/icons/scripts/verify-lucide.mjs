@@ -4,7 +4,8 @@
  * 특히 대소문자 충돌 검사가 중요하다. macOS의 APFS는 대소문자를 구분하지 않아
  * `Foo.tsx`와 `foo.tsx`가 같은 파일로 취급된다. 그런 쌍이 생기면 SVGR은 아무 경고 없이
  * 한쪽을 다른 쪽으로 덮어쓰고, index.ts에는 두 이름이 모두 남아 존재하지 않는 파일을 가리킨다.
- * Linux CI에서는 재현되지 않으므로 로컬에서 잡아야 한다.
+ * 덮어쓰인 뒤의 디렉토리에는 한 파일만 남으므로 파일 목록이 아니라 index.ts의 경로로 검사한다.
+ * `fs.existsSync`도 APFS에서는 대소문자를 무시하고 true를 돌려주므로 디렉토리 목록과 정확히 대조한다.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -28,20 +29,21 @@ check(
   `컴포넌트 수가 맞지 않습니다: ${files.length}개 생성 / icon-nodes.json ${canonical.length}개`,
 );
 
-/** 대소문자만 다른 파일 — macOS에서 조용히 덮어쓰기가 일어난 흔적 */
-const byLower = new Map();
-for (const f of files) {
-  const key = f.toLowerCase();
-  if (byLower.has(key)) errors.push(`대소문자 충돌: ${byLower.get(key)} / ${f}`);
-  else byLower.set(key, f);
-}
-
-/** index.ts의 export 이름 중복 — 중복되면 TS2300으로 컴파일이 깨진다 */
 const index = fs.readFileSync(path.join(SRC_DIR, 'index.ts'), 'utf8');
-const exports = [...index.matchAll(/export \{ default as (\w+) \} from '\.\/(\w+)'/g)].map((m) => ({
+const exports = [...index.matchAll(/export \{ default as (\w+) \} from '\.\/([\w-]+)'/g)].map((m) => ({
   name: m[1],
   file: m[2],
 }));
+
+/** 대소문자만 다른 경로 — macOS에서 조용히 덮어쓰기가 일어난다 */
+const byLower = new Map();
+for (const { file } of exports) {
+  const key = file.toLowerCase();
+  if (byLower.has(key)) errors.push(`대소문자 충돌: ${byLower.get(key)} / ${file}`);
+  else byLower.set(key, file);
+}
+
+/** index.ts의 export 이름 중복 — 중복되면 TS2300으로 컴파일이 깨진다 */
 const exportNames = exports.map((e) => e.name);
 check(
   exportNames.length === canonical.length,
@@ -55,10 +57,11 @@ for (const name of exportNames) {
 
 /**
  * index.ts가 가리키는 파일이 실제로 있는가.
- * export 이름(`SearchIcon`)과 파일명(`Search.tsx`)이 다르므로 from 절의 경로로 확인한다.
+ * export 이름(`SearchIcon`)과 파일명(`search.tsx`)이 다르므로 from 절의 경로로 확인한다.
  */
+const fileSet = new Set(files);
 for (const { name, file } of exports) {
-  if (!fs.existsSync(path.join(SRC_DIR, `${file}.tsx`))) {
+  if (!fileSet.has(`${file}.tsx`)) {
     errors.push(`${name}이 없는 파일을 가리킵니다: ${file}.tsx`);
   }
 }

@@ -1,0 +1,20 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgSquareDashedSearch = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M14 3h1M19 3a2 2 0 0 1 2 2M21 21l-1.875-1.875M21 9v1M3 14v1M3 9v1M5 21a2 2 0 0 1-2-2M5 3a2 2 0 0 0-2 2M9 21h1M9 3h1" />
+    <circle cx={17} cy={17} r={3} />
+  </svg>
+);
+export default SvgSquareDashedSearch;

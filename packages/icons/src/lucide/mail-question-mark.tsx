@@ -1,0 +1,20 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgMailQuestionMark = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M22 10.35V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12.3" />
+    <path d="m22 7-8.97 5.7a2 2 0 0 1-2.06 0L2 7M20 18.5c.5-1 2-1 2-2.5a2 2 0 0 0-2-2 2.5 2.5 0 0 0-2 1M20 22h.01" />
+  </svg>
+);
+export default SvgMailQuestionMark;
