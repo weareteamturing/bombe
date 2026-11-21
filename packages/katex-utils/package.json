@@ -12,9 +12,12 @@
     "iife"
   ],
   "exports": {
-    "require": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "import": "./esm/index.js"
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./esm/index.js"
+    },
+    "./mathking-katex.css": "./esm/mathking-katex.css"
   },
   "repository": {
     "type": "git",
